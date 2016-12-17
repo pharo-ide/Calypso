@@ -23,5 +23,5 @@ Pharo system browser
   - variable view as special mode for method group view.  
   - and more
 
-Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/Calypso. 
+Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/Calypso/. 
 Here I want to manage todo, collect issues and missing features
