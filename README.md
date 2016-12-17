@@ -24,4 +24,5 @@ Pharo system browser
   - and more
 
 Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/Calypso/. 
+
 Here I want to manage todo, collect issues and missing features
