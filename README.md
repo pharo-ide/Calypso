@@ -22,3 +22,6 @@ Pharo system browser
   - methods inherited from traits are not shown by default
   - variable view as special mode for method group view.  
   - and more
+
+Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/Calypso/settings. 
+Here I want to manage todo, collect issues and missing features
