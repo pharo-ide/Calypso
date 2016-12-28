@@ -23,8 +23,9 @@ Pharo system browser
   - variable view as special mode for method group view.  
   - and more
 
-Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/Calypso.
-Currently Calypso depends on few fixes which are waiting integration into Pharo. Use following script to load all them together:
+Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/Calypso. Here I want to manage todo, collect issues and missing features.
+
+Now Calypso depends on few fixes which are waiting integration into Pharo 6. Use following script to load all them together:
 
 
 
@@ -50,4 +51,3 @@ And to open browser evaluate:
 
 
 
-Here I want to manage todo, collect issues and missing features
