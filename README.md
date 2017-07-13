@@ -27,10 +27,10 @@ Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/
 
 ## Installation
 ```Smalltalk
-Gofer it
-  smalltalkhubUser: 'Pharo' project: 'Calypso';
-  configuration;
-  loadStable.
+Metacello new
+  baseline: 'Calypso';
+  repository: 'github://dionisiydk/Calypso';
+  load
 ```
 And to open browser evaluate: 
 ```Smalltalk
