@@ -8,7 +8,7 @@ baseline: spec
 			baseline: 'Commander' with: [
 				spec repository: 'github://dionisiydk/Commander:v0.2.x' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://dionisiydk/SystemCommander:v0.2.x' ].			
+				spec repository: 'github://dionisiydk/SystemCommands:v0.2.x' ].			
 		spec 
 			package: #'Calypso-Environment-Core';
 			package: #'Calypso-Environment-System' with: [
