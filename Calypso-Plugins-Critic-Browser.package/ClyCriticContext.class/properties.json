@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserContext",
+	"category" : "Calypso-Plugins-Critic-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"analyzedObject"
+	],
+	"name" : "ClyCriticContext",
+	"type" : "normal"
+}

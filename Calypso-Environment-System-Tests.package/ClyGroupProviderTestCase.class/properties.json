@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Calypso-Environment-System-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"groupProvider",
+		"builtItems",
+		"builtGroups"
+	],
+	"name" : "ClyGroupProviderTestCase",
+	"type" : "normal"
+}

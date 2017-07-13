@@ -1,0 +1,3 @@
+running
+targetVarName
+	^#writtenVar1

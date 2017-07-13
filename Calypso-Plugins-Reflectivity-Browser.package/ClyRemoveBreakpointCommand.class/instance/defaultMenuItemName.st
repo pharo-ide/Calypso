@@ -1,0 +1,3 @@
+execution
+defaultMenuItemName 
+	^'remove breakpoint'

@@ -1,0 +1,3 @@
+accessing
+itemScope
+	^environmentCursor observedItemScope

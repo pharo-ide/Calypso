@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdCommand",
+	"category" : "Calypso-Plugins-FileOut-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"codeObjects"
+	],
+	"name" : "ClyFileOutCommand",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdCommand",
+	"category" : "Calypso-Plugins-Critic-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"critique",
+		"analyzedObject"
+	],
+	"name" : "ClyCritiqueCommand",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RubSmalltalkCodeMode",
+	"category" : "Calypso-Tools-CoreBrowser-TextEditors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isForScripting",
+		"browserTool"
+	],
+	"name" : "ClyTextEditingMode",
+	"type" : "normal"
+}

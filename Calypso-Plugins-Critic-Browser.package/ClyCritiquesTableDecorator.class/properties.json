@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTableDecorator",
+	"category" : "Calypso-Plugins-Critic-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyCritiquesTableDecorator",
+	"type" : "normal"
+}

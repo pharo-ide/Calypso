@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentContentTestCase",
+	"category" : "Calypso-Plugins-Critic-Environment-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySortedCritiquesTests",
+	"type" : "normal"
+}

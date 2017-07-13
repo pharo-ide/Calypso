@@ -1,0 +1,3 @@
+testing
+isProjectSelected
+	^self hasSelectedItems

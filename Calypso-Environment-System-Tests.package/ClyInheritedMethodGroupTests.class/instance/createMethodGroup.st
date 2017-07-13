@@ -1,0 +1,3 @@
+running
+createMethodGroup
+	^ ClyInheritedMethodGroup new

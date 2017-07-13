@@ -1,0 +1,3 @@
+public
+restoreBrowserState
+	self subclassResponsibility 

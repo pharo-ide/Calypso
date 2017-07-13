@@ -1,0 +1,3 @@
+accessing
+history
+	^ browser navigationHistory

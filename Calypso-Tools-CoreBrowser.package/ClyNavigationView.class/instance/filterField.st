@@ -1,0 +1,3 @@
+accessing
+filterField
+	^ table filterField

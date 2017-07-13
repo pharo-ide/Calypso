@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/9/2017 11:26",
+	"super" : "ClyEnvironmentItemSimpleTag",
+	"category" : "Calypso-Environment-System-Properties",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTraitUserTag",
+	"type" : "normal"
+}

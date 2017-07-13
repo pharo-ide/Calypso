@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTextMorphTool",
+	"category" : "Calypso-Tools-CoreBrowser-TextEditors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"wrapModeLabel"
+	],
+	"name" : "ClyTextWrapModeSwitch",
+	"type" : "normal"
+}

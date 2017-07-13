@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroupTestCase",
+	"category" : "Calypso-Plugins-Critic-Environment-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"critic",
+		"analyzedClass"
+	],
+	"name" : "ClyCriticMethodGroupTestCase",
+	"type" : "normal"
+}

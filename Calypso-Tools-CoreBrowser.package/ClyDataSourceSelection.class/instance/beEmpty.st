@@ -1,0 +1,4 @@
+controlling
+beEmpty
+
+	self selectItems: { }

@@ -1,0 +1,4 @@
+controlling
+detachFromSystem
+
+	SystemAnnouncer uniqueInstance unsubscribe: self

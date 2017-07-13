@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 4/19/2017 17:30",
+	"super" : "ClyDataSource",
+	"category" : "Calypso-Tools-CoreBrowser-DataSource",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"collapsedItems"
+	],
+	"name" : "ClyExpandedDataSource",
+	"type" : "normal"
+}

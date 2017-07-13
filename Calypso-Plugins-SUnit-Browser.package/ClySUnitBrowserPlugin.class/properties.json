@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserPlugin",
+	"category" : "Calypso-Plugins-SUnit-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySUnitBrowserPlugin",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+testing
+hasSubgroups
+	^variables notEmpty

@@ -1,0 +1,3 @@
+public
+lastSelectedPackageGroup
+	^self lastSelectedObjectIn: self selectedPackageGroups

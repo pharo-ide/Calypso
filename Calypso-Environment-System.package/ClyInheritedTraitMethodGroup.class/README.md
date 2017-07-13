@@ -1,0 +1,1 @@
+I am group of methods which are inherited by given classes from all used traits. I not include methods of traits which are inherited by superclasses

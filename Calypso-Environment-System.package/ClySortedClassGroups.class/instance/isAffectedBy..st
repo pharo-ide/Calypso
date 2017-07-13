@@ -1,0 +1,4 @@
+system changes
+isAffectedBy: aSystemAnnouncement
+	
+	^environmentScope includesClassGroupsAffectedBy: aSystemAnnouncement

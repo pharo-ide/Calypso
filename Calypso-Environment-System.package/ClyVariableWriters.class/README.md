@@ -1,0 +1,1 @@
+I am a query to retrieve writers of given variables set

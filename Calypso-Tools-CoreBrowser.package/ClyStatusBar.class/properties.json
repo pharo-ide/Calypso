@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Calypso-Tools-CoreBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contextBar",
+		"commandBar"
+	],
+	"name" : "ClyStatusBar",
+	"type" : "normal"
+}

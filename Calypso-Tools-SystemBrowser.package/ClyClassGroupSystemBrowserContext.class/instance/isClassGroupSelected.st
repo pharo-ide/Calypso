@@ -1,0 +1,3 @@
+testing
+isClassGroupSelected
+	^self hasSelectedItems 

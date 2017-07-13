@@ -1,0 +1,4 @@
+navigation
+prepareInitialStateBy: aBlock
+
+	navigationHistory ignoreNavigationDuring: aBlock

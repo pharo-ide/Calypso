@@ -1,0 +1,3 @@
+installing
+handlesMouseOver: evt
+	^true

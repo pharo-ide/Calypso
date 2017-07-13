@@ -1,0 +1,4 @@
+decoration
+wantsDecorateTableCellOf: aDataSourceItem
+	
+	^true

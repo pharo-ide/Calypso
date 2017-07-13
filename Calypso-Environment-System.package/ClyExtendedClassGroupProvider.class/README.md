@@ -1,0 +1,1 @@
+I provide "extensions" class group. I add this group only when package has extensions.

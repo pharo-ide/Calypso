@@ -1,0 +1,4 @@
+testing
+isBuiltInEmptyScope
+
+	^environmentScope isBasedOnEmptyBasis

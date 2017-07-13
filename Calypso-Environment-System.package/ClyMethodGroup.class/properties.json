@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 2/13/2017 11:09",
+	"super" : "ClyGroup",
+	"category" : "Calypso-Environment-System-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classes"
+	],
+	"name" : "ClyMethodGroup",
+	"type" : "normal"
+}

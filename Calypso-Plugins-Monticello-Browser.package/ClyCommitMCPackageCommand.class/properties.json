@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SycPackageCommand",
+	"category" : "Calypso-Plugins-Monticello-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyCommitMCPackageCommand",
+	"type" : "normal"
+}

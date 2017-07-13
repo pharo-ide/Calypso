@@ -1,0 +1,4 @@
+testing
+isBuiltInScopeOfSingleObject
+
+	^environmentScope isBasedOnSingleBasis

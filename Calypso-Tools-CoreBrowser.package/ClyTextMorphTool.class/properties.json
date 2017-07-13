@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Calypso-Tools-CoreBrowser-TextEditors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"textMorph"
+	],
+	"name" : "ClyTextMorphTool",
+	"type" : "normal"
+}

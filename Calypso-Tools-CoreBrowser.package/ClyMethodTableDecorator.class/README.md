@@ -1,0 +1,1 @@
+I am a root of method table decorators

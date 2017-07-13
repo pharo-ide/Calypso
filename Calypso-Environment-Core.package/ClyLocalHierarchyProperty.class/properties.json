@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 2/9/2017 11:53",
+	"super" : "ClyEnvironmentItemProperty",
+	"category" : "Calypso-Environment-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"subtreeSize"
+	],
+	"name" : "ClyLocalHierarchyProperty",
+	"type" : "normal"
+}

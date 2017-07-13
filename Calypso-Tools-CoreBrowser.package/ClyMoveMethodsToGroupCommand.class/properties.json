@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SycMethodCommand",
+	"category" : "Calypso-Tools-CoreBrowser-Commands-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodGroup"
+	],
+	"name" : "ClyMoveMethodsToGroupCommand",
+	"type" : "normal"
+}

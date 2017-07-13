@@ -1,0 +1,4 @@
+system changes
+isAffectedByMethodChange: aMethodAnnouncement
+
+	^aMethodAnnouncement affectsMethodsDefinedInPackage: package

@@ -1,0 +1,4 @@
+testing
+isAboutEmptyView
+	
+	^dataSource isEmpty

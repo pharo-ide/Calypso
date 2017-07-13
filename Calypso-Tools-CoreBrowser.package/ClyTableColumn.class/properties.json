@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 4/20/2017 18:46",
+	"super" : "FTColumn",
+	"category" : "Calypso-Tools-CoreBrowser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"displayBlock"
+	],
+	"name" : "ClyTableColumn",
+	"type" : "normal"
+}

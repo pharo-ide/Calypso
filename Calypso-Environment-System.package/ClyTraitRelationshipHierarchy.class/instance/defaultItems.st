@@ -1,0 +1,3 @@
+initialization
+defaultItems
+	^OrderedCollection new

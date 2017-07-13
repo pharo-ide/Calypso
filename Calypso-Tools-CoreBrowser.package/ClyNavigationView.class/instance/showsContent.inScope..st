@@ -1,0 +1,4 @@
+testing
+showsContent: anEnvironmentContentClass inScope: anEnvironmentScopeClass
+
+	^self dataSource isBasedOn: anEnvironmentContentClass inScope: anEnvironmentScopeClass

@@ -1,0 +1,4 @@
+controlling
+delayClassCritiquesAnalysis
+
+	classCritiquesDelayed := true

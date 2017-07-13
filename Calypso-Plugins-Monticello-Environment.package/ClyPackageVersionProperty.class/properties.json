@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentItemProperty",
+	"category" : "Calypso-Plugins-Monticello-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"versionName",
+		"isModified"
+	],
+	"name" : "ClyPackageVersionProperty",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+activation
+activationContextClass
+	^ClyPackageSystemBrowserContext 

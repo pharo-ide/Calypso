@@ -1,0 +1,4 @@
+accessing
+getMetaProperty: anEnvironmentPropertyClass
+
+	^self metadata getProperty: anEnvironmentPropertyClass

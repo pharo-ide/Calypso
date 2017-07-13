@@ -1,0 +1,3 @@
+controlling
+removeFromBrowser
+	containerTab delete

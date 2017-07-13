@@ -1,0 +1,3 @@
+accessing
+observedItemScope
+	^ metadata itemScope

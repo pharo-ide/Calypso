@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroupCommand",
+	"category" : "Calypso-Tools-CoreBrowser-Commands-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetClass"
+	],
+	"name" : "ClyMoveMethodGroupToClassCommand",
+	"type" : "normal"
+}

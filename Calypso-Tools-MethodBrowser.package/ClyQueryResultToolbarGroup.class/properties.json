@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdMenuGroup",
+	"category" : "Calypso-Tools-MethodBrowser-Toolbar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyQueryResultToolbarGroup",
+	"type" : "normal"
+}

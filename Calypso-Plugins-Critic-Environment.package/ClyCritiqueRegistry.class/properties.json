@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Plugins-Critic-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contents",
+		"containerClass"
+	],
+	"name" : "ClyCritiqueRegistry",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+getProperty: anEnvironmentPropertyClass
+	^environmentItem getProperty: anEnvironmentPropertyClass

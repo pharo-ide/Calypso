@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Calypso-Tools-CoreBrowser-Toolbar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyToolbarSeparatorMorph",
+	"type" : "normal"
+}

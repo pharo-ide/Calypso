@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserTool",
+	"category" : "Calypso-Tools-CoreBrowser-TextEditors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"textModel",
+		"textMorph",
+		"changesCancelRequested",
+		"applyingChanges"
+	],
+	"name" : "ClyTextEditorTool",
+	"type" : "normal"
+}

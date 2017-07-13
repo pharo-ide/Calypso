@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyCriticMethodGroup",
+	"category" : "Calypso-Plugins-Critic-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ruleGroupName",
+		"ruleSeverity"
+	],
+	"name" : "ClyConcreteCritiqueMethodGroup",
+	"type" : "normal"
+}

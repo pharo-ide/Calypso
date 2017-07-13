@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/13/2017 11:52",
+	"super" : "ClyMethodGroup",
+	"category" : "Calypso-Plugins-InheritanceAnalyzer-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyOverriddenMethodGroup",
+	"type" : "normal"
+}

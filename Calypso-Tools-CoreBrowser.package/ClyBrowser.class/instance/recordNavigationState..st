@@ -1,0 +1,3 @@
+navigation
+recordNavigationState: aBrowserNavigationState
+	navigationHistory recordState: aBrowserNavigationState 

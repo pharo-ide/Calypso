@@ -1,0 +1,5 @@
+activation
+systemBrowserToolbarActivator2
+	<commandActivator>
+	
+	^ClyToolbarCommandActivator byItemOf: ClyPackageToolbarGroup for: ClyClassGroupSystemBrowserContext

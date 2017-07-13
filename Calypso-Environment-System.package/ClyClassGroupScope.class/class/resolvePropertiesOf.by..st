@@ -1,0 +1,3 @@
+items resolving
+resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
+	anEnvironmentPlugin resolvePropertiesOfClassGroup: anEnvironmentItem

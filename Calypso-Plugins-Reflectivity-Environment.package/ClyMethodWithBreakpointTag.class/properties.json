@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentItemSimpleTag",
+	"category" : "Calypso-Plugins-Reflectivity-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMethodWithBreakpointTag",
+	"type" : "normal"
+}

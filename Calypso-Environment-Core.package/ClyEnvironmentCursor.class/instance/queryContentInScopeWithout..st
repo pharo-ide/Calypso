@@ -1,0 +1,4 @@
+queries
+queryContentInScopeWithout: existingBasisObject
+
+	^observedContent queryInScopeWithout: existingBasisObject

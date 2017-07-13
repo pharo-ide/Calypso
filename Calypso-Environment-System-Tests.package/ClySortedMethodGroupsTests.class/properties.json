@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentContentTestCase",
+	"category" : "Calypso-Environment-System-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySortedMethodGroupsTests",
+	"type" : "normal"
+}

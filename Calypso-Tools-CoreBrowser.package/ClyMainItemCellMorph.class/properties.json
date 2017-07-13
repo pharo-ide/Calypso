@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "DenisKudryashov 4/25/2017 11:26",
+	"super" : "FTCellMorph",
+	"category" : "Calypso-Tools-CoreBrowser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"item",
+		"nameMorph",
+		"definitionMorph",
+		"extraToolMorphs",
+		"itemDepth",
+		"fullIndentation"
+	],
+	"name" : "ClyMainItemCellMorph",
+	"type" : "normal"
+}

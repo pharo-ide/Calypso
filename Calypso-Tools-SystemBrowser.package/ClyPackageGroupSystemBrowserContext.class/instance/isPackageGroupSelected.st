@@ -1,0 +1,3 @@
+testing
+isPackageGroupSelected
+	^self hasSelectedItems

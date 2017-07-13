@@ -1,0 +1,3 @@
+activation
+activationContextClass
+	self subclassResponsibility 

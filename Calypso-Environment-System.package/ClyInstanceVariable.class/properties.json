@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 2/9/2017 15:22",
+	"super" : "Object",
+	"category" : "Calypso-Environment-System-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"slot",
+		"declaringClass"
+	],
+	"name" : "ClyInstanceVariable",
+	"type" : "normal"
+}

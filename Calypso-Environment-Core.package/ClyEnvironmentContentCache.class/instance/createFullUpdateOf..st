@@ -1,0 +1,4 @@
+controlling
+createFullUpdateOf: anEnvironmentContent
+
+	^anEnvironmentContent createUpdateWithItemsStartingAt: startPosition count: sizeLimit

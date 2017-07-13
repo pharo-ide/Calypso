@@ -1,0 +1,4 @@
+testing
+isAnalysisComplete
+
+	^analysis isComplete

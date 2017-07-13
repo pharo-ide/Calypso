@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Environment-System-Tests-P5WithTags-Tag1",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClass7WithTag1FromP5",
+	"type" : "normal"
+}

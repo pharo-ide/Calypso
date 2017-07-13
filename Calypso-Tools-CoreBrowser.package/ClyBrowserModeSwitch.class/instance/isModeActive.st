@@ -1,0 +1,3 @@
+testing
+isModeActive
+	^activator isCommandAppliedToBrowser

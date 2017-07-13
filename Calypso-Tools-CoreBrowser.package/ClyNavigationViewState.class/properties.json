@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Tools-CoreBrowser-NavigationHistory",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"dataSource",
+		"selection"
+	],
+	"name" : "ClyNavigationViewState",
+	"type" : "normal"
+}

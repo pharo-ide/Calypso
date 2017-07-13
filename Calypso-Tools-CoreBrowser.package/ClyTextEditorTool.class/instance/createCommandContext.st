@@ -1,0 +1,3 @@
+operations
+createCommandContext
+	^self createTextContext

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 7/12/2017 10:04",
+	"super" : "ClyEnvironmentQuery",
+	"category" : "Calypso-Environment-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyAllItemsQuery",
+	"type" : "normal"
+}

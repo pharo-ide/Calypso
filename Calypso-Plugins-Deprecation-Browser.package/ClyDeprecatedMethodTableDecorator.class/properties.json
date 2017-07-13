@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodTableDecorator",
+	"category" : "Calypso-Plugins-Deprecation-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyDeprecatedMethodTableDecorator",
+	"type" : "normal"
+}

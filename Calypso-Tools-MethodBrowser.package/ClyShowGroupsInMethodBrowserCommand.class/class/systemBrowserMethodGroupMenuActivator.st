@@ -1,0 +1,5 @@
+activation
+systemBrowserMethodGroupMenuActivator
+	<commandActivator>
+	
+	^CmdContextMenuCommandActivator byRootGroupItemFor: ClyMethodGroupSystemBrowserContext 

@@ -1,0 +1,3 @@
+testing
+observesEmptyScope
+	^metadata isBuiltInEmptyScope

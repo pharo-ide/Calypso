@@ -1,0 +1,3 @@
+context
+createContextOfSingleItem: aDataSourceItem 
+	^browser createContextOfSingleItem: aDataSourceItem

@@ -1,0 +1,5 @@
+activation
+systemBrowserClassGroupTableIconActivator
+	<commandActivator>
+	
+	^ClyTableIconCommandActivator for: ClyClassGroupSystemBrowserContext 

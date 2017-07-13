@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySubclassMOfClass1FromP2",
+	"category" : "Calypso-Environment-System-Tests-P3WithSubclassFromP2",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySubclassLOfSubclassMFromP3",
+	"type" : "normal"
+}

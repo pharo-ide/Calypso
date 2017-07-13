@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 6/2/2017 11:25",
+	"super" : "WeakValueDictionary",
+	"category" : "Calypso-Plugins-Critic-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyWeakIdentityValueDictionary",
+	"type" : "normal"
+}

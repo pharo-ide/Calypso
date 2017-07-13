@@ -1,0 +1,3 @@
+accessing
+contentClass
+	^buildingQuery requestedContent

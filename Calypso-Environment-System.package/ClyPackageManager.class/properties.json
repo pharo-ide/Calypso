@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 4/24/2017 10:26",
+	"super" : "Object",
+	"category" : "Calypso-Environment-System-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"systemEnvironment"
+	],
+	"name" : "ClyPackageManager",
+	"type" : "normal"
+}

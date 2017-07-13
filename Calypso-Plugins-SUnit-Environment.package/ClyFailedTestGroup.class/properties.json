@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/13/2017 11:51",
+	"super" : "ClyMethodGroup",
+	"category" : "Calypso-Plugins-SUnit-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyFailedTestGroup",
+	"type" : "normal"
+}

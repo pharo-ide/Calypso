@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentItemProperty",
+	"category" : "Calypso-Plugins-Critic-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"start",
+		"stop"
+	],
+	"name" : "ClySourceNodeCritiqueInterval",
+	"type" : "normal"
+}

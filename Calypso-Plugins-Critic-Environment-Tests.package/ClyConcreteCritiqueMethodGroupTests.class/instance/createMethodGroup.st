@@ -1,0 +1,3 @@
+running
+createMethodGroup
+	^ClyConcreteCritiqueMethodGroup new

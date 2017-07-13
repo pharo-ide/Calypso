@@ -1,0 +1,3 @@
+system changes
+includesMethodsAffectedBy: aSystemAnnouncement 
+	^systemPackage includesMethodsAffectedBy: aSystemAnnouncement

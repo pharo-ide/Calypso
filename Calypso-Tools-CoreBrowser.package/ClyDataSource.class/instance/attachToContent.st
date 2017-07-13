@@ -1,0 +1,3 @@
+controlling
+attachToContent
+	environmentCursor attachContentTo: self

@@ -1,0 +1,4 @@
+*Calypso-Environment-System
+includesMethodsAffectedBy: aSystemAnnouncement
+
+	^aSystemAnnouncement affectsMethodsDefinedInPackage: self

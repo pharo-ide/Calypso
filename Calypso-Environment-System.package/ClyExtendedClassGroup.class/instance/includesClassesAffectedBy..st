@@ -1,0 +1,4 @@
+system changes
+includesClassesAffectedBy: aSystemAnnouncement
+
+	^aSystemAnnouncement affectsClassesExtendedInPackage: package

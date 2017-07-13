@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowser",
+	"category" : "Calypso-Tools-MethodBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"DefaultResultContent"
+	],
+	"instvars" : [
+		"methodView",
+		"methodQuery",
+		"queryScopes",
+		"activeScope"
+	],
+	"name" : "ClyMethodBrowser",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+public
+lastSelectedClass
+
+	^self selectedClass

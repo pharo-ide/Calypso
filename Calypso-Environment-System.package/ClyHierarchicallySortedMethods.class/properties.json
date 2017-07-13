@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 1/10/2017 14:28",
+	"super" : "ClyMethodsContent",
+	"category" : "Calypso-Environment-System-Content",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyHierarchicallySortedMethods",
+	"type" : "normal"
+}

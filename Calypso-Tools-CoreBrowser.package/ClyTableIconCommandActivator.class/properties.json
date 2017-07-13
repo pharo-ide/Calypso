@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 4/20/2017 15:22",
+	"super" : "CmdCommandActivator",
+	"category" : "Calypso-Tools-CoreBrowser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTableIconCommandActivator",
+	"type" : "normal"
+}

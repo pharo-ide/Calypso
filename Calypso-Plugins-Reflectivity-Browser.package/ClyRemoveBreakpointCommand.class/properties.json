@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SycMethodCommand",
+	"category" : "Calypso-Plugins-Reflectivity-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyRemoveBreakpointCommand",
+	"type" : "normal"
+}

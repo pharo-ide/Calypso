@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyGroup",
+	"category" : "Calypso-Environment-System-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"project"
+	],
+	"name" : "ClyPackageGroup",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+queries
+withNewBasisObjects: newBasisObjects
+
+	^self

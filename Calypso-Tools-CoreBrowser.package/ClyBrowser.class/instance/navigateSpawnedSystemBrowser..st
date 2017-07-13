@@ -1,0 +1,2 @@
+navigation
+navigateSpawnedSystemBrowser: aSystemBrowser

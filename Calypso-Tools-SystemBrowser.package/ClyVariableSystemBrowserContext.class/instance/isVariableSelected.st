@@ -1,0 +1,3 @@
+testing
+isVariableSelected
+	^self hasSelectedItems 

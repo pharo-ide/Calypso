@@ -1,0 +1,4 @@
+queries
+retrieveAll
+
+	^observedContent resolveAllItems

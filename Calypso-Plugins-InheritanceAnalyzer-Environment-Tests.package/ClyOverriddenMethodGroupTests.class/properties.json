@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroupTestCase",
+	"category" : "Calypso-Plugins-InheritanceAnalyzer-Environment-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyOverriddenMethodGroupTests",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+beComplete
+	isComplete := true

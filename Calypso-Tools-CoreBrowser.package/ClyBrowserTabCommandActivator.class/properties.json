@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdMenuCommandActivator",
+	"category" : "Calypso-Tools-CoreBrowser-Tabs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyBrowserTabCommandActivator",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+I represent sorted collection of classes

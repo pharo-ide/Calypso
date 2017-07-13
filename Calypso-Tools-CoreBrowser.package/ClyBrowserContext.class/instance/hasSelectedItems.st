@@ -1,0 +1,3 @@
+testing
+hasSelectedItems
+	^selectedItems notEmpty

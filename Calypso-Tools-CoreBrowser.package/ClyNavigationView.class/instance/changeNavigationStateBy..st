@@ -1,0 +1,3 @@
+controlling
+changeNavigationStateBy: aBlock
+	browser changeNavigationStateBy: aBlock

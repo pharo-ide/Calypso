@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 4/20/2017 14:49",
+	"super" : "Object",
+	"category" : "Calypso-Tools-CoreBrowser-DataSource",
+	"classinstvars" : [
+		"default"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyNullItemsView",
+	"type" : "normal"
+}

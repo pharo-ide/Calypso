@@ -1,0 +1,3 @@
+testing
+isBuiltInScope: anEnvironmentScopeClass
+	^queryScope includesBehavior: anEnvironmentScopeClass

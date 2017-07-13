@@ -1,0 +1,4 @@
+tests
+testCheckFullAnalysisCompleteWhenNothingWasAnalyzed
+	
+	self assert: critic isAnalysisComplete 

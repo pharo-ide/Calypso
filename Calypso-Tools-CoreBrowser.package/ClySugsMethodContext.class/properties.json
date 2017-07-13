@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SugsAbstractContext",
+	"category" : "Calypso-Tools-CoreBrowser-MethodEditors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySugsMethodContext",
+	"type" : "normal"
+}

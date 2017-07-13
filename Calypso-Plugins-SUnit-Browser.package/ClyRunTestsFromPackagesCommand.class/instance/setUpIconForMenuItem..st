@@ -1,0 +1,3 @@
+initialization
+setUpIconForMenuItem: aMenuItemMorph
+

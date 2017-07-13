@@ -1,0 +1,3 @@
+accessing
+methods
+	^superclass localMethods

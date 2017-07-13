@@ -1,0 +1,4 @@
+controlling
+warnUserAboutMyContext
+
+	self setUpDefaultIcon

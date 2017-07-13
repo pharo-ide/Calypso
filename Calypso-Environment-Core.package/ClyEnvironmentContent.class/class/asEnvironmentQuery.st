@@ -1,0 +1,3 @@
+converting
+asEnvironmentQuery
+	^ClyAllItemsQuery requestedContent: self

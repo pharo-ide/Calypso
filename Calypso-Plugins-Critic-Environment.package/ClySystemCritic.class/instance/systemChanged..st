@@ -1,0 +1,4 @@
+updating
+systemChanged: aSystemAnnouncement
+
+	self updateAllCritiques

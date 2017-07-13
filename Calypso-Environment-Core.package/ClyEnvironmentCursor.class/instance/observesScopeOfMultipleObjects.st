@@ -1,0 +1,3 @@
+testing
+observesScopeOfMultipleObjects
+	^metadata isBuiltInScopeOfMultipleObjects

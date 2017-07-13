@@ -1,0 +1,3 @@
+accessing
+getProperty: anEnvironmentPropertyClass ifAbsent: absentBlock
+	^environmentItem getProperty: anEnvironmentPropertyClass ifAbsent: absentBlock

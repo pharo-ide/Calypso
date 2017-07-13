@@ -1,0 +1,4 @@
+system changes
+isResultCanBeAffectedBy: aSystemAnnouncement
+
+	^aSystemAnnouncement canAffectResultsOfMethodQuery: self

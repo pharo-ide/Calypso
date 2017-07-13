@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySystemBrowserContext",
+	"category" : "Calypso-Tools-SystemBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMethodGroupSystemBrowserContext",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+testing
+isNameAffectedByClassChange: aClassAnnouncement
+	^false

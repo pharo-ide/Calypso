@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodQueryTestCase",
+	"category" : "Calypso-Environment-System-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"referencedVar1",
+		"readVar1",
+		"writtenVar1"
+	],
+	"name" : "ClyVariableReferencesTestCase",
+	"type" : "normal"
+}

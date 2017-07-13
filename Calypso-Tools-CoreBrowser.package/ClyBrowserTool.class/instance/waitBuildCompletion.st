@@ -1,0 +1,3 @@
+controlling
+waitBuildCompletion
+	containerTab waitReadyMorphFor: 50 milliSeconds

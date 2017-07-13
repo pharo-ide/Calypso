@@ -1,0 +1,4 @@
+building
+buildFromClassHierarchy: aClassHierarchyScope
+
+	self buildFromClasses: aClassHierarchyScope allClasses

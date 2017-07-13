@@ -1,0 +1,2 @@
+*Calypso-Environment-System
+resolveMetadataOfClasses: anEnvironmentContent

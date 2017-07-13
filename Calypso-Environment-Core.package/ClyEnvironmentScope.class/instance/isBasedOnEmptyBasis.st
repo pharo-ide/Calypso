@@ -1,0 +1,3 @@
+testing
+isBasedOnEmptyBasis
+	^basisObjects isEmpty

@@ -1,0 +1,1 @@
+I am a query to retrieve senders of given selectors set

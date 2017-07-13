@@ -1,0 +1,3 @@
+controlling
+detachFromContent
+	environmentCursor detachContentFrom: self

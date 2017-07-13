@@ -1,0 +1,4 @@
+testing
+isBasedOn: anEnvironmentContentClass
+
+	^environmentCursor observesContent: anEnvironmentContentClass

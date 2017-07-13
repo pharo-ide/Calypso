@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTestCommand",
+	"category" : "Calypso-Plugins-SUnit-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"testItems"
+	],
+	"name" : "ClyRunTestsFromSelectedItemsCommand",
+	"type" : "normal"
+}

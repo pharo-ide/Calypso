@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/8/2017 18:43",
+	"super" : "ClyVariableReferences",
+	"category" : "Calypso-Environment-System-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyVariableWriters",
+	"type" : "normal"
+}

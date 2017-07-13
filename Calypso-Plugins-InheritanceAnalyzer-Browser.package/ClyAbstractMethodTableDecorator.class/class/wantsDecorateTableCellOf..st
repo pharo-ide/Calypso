@@ -1,0 +1,3 @@
+testing
+wantsDecorateTableCellOf: aDataSourceItem
+	^aDataSourceItem isMarkedWith: ClyAbstractItemTag

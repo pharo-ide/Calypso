@@ -1,0 +1,3 @@
+accessing
+numberOfMethods
+	^methodView dataSource numberOfRows

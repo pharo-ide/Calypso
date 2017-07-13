@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "DenisKudryashov 2/1/2017 17:42",
+	"super" : "Object",
+	"category" : "Calypso-Environment-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"position",
+		"name",
+		"depth",
+		"properties",
+		"isResolved",
+		"actualObject"
+	],
+	"name" : "ClyEnvironmentItem",
+	"type" : "normal"
+}

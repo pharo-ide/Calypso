@@ -1,0 +1,3 @@
+testing
+isTabSelected
+	^containerTab selected

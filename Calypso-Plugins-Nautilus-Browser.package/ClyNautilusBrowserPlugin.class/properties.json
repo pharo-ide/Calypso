@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserPlugin",
+	"category" : "Calypso-Plugins-Nautilus-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nautilusMethodWidget",
+		"emptyActionIcon"
+	],
+	"name" : "ClyNautilusBrowserPlugin",
+	"type" : "normal"
+}

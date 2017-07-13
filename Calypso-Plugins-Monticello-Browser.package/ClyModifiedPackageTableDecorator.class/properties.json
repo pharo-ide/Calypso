@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyPackageTableDecorator",
+	"category" : "Calypso-Plugins-Monticello-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyModifiedPackageTableDecorator",
+	"type" : "normal"
+}

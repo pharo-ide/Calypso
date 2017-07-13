@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdToolContext",
+	"category" : "Calypso-Tools-CoreBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedItems"
+	],
+	"name" : "ClyBrowserContext",
+	"type" : "normal"
+}

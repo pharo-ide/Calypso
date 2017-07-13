@@ -1,0 +1,3 @@
+helpers
+lastSelectedItem
+	^selectedItems first

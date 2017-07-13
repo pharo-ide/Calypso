@@ -1,0 +1,4 @@
+queries
+query: anEnvironmentQueryOrContent inNewScope: anEnvironmentScope
+
+	^environmentCursor query: anEnvironmentQueryOrContent inNewScope: anEnvironmentScope

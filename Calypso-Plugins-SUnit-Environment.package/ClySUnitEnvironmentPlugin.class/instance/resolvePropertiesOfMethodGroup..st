@@ -1,0 +1,2 @@
+items resolving
+resolvePropertiesOfMethodGroup: anItem

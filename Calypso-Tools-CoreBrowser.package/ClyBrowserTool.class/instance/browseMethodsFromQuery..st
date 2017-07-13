@@ -1,0 +1,3 @@
+operations
+browseMethodsFromQuery: anEnvironmentQuery 
+	^browser browseMethodsFromQuery: anEnvironmentQuery

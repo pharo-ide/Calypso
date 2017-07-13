@@ -1,0 +1,2 @@
+*Calypso-Tools-CoreBrowser
+decorateToolbarButton: aBrowserButton

@@ -1,0 +1,3 @@
+testing
+observesScopeOfSingleObject
+	^metadata isBuiltInScopeOfSingleObject

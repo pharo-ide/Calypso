@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroup",
+	"category" : "Calypso-Plugins-Reflectivity-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyBreakMethodGroup",
+	"type" : "normal"
+}

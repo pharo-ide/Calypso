@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GroupWindowMorph",
+	"category" : "Calypso-Tools-CoreBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyGroupWindowMorph",
+	"type" : "normal"
+}

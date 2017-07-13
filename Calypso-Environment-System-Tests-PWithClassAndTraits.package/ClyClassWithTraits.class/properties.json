@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "ClyTraitChild1 classTrait + ClyTraitChild2Child classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassWithTraits",
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "ClyTraitChild1 + ClyTraitChild2Child",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Calypso-Environment-System-Tests-PWithClassAndTraits"
+}

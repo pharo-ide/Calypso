@@ -1,0 +1,3 @@
+accessing
+tagsForClasses
+	^systemPackage tagsForClasses

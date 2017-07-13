@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Plugins-Critic-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"critic",
+		"processes",
+		"mainProcess",
+		"processingPriority",
+		"guard"
+	],
+	"name" : "ClyCriticAnalysis",
+	"type" : "normal"
+}

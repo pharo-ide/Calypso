@@ -1,0 +1,2 @@
+tools support
+decorateMethodEditor: aMethodEditor

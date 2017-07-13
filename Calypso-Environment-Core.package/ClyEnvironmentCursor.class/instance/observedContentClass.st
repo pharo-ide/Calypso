@@ -1,0 +1,3 @@
+accessing
+observedContentClass
+	^ metadata contentClass

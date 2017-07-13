@@ -1,0 +1,3 @@
+testing
+isAppliedToBrowser
+	self subclassResponsibility 

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 7/10/2017 16:39",
+	"super" : "Object",
+	"category" : "Calypso-Environment-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"metadata",
+		"itemCache"
+	],
+	"name" : "ClyEnvironmentContentUpdate",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+I am group of abstract methods defined in given classes. I include all methods which send #shouldBeImplemented message

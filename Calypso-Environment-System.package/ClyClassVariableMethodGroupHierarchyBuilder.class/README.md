@@ -1,0 +1,1 @@
+I am builder of class variables hierarchy. Look at my superclass comment for details

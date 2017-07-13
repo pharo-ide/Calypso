@@ -1,0 +1,3 @@
+system changes
+isResultCanBeAffectedBy: aSystemAnnouncement
+	self subclassResponsibility 

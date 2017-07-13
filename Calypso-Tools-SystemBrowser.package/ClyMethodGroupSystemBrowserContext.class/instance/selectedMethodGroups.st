@@ -1,0 +1,3 @@
+public
+selectedMethodGroups
+	^self selectedObjects

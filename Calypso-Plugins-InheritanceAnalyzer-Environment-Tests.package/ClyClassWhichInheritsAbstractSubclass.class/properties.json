@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyAbstractSubclassExample",
+	"category" : "Calypso-Plugins-InheritanceAnalyzer-Environment-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassWhichInheritsAbstractSubclass",
+	"type" : "normal"
+}

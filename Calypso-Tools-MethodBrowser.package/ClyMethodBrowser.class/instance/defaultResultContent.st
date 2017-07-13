@@ -1,0 +1,3 @@
+accessing
+defaultResultContent
+	^self class defaultResultContent

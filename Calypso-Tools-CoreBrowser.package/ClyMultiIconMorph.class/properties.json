@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Calypso-Tools-CoreBrowser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contents",
+		"multiIconForm"
+	],
+	"name" : "ClyMultiIconMorph",
+	"type" : "normal"
+}

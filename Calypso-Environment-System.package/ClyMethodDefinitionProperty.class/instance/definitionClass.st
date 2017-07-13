@@ -1,0 +1,3 @@
+accessing
+definitionClass
+	^ self actualObject

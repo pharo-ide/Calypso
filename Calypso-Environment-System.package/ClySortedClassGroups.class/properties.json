@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 1/4/2017 17:30",
+	"super" : "ClySortedGroupItems",
+	"category" : "Calypso-Environment-System-Content",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySortedClassGroups",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+selectedClassGroups
+	^packageView selection asSelectedItemsOf: ClyClassGroupScope 

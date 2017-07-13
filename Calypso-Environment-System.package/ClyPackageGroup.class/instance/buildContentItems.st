@@ -1,0 +1,3 @@
+accessing
+buildContentItems
+	self subclassResponsibility 

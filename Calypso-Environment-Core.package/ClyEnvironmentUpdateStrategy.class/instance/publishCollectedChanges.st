@@ -1,0 +1,3 @@
+updating
+publishCollectedChanges
+	self subclassResponsibility 

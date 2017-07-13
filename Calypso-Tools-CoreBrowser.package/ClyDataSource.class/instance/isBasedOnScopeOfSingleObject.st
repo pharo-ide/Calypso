@@ -1,0 +1,4 @@
+testing
+isBasedOnScopeOfSingleObject
+
+	^environmentCursor observesScopeOfSingleObject
