@@ -25,20 +25,17 @@ Pharo system browser
 
 Source code is currently on smalltalkhub repo http://smalltalkhub.com/#!/~Pharo/Calypso. Here I want to manage todo, collect issues and missing features.
 
-Use following script to load code:
-
-
-
-
-    Gofer it
-     smalltalkhubUser: 'Pharo' project: 'Calypso';
-     configuration;
-     loadStable.
-
+## Installation
+```Smalltalk
+Gofer it
+  smalltalkhubUser: 'Pharo' project: 'Calypso';
+  configuration;
+  loadStable.
+```
 And to open browser evaluate: 
-
-    
-    ClySystemBrowser open.
+```Smalltalk
+ClySystemBrowser open.
+```
 
 
 
