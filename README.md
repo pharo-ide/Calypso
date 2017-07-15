@@ -1,4 +1,6 @@
 # Calypso
+[![Build Status](https://travis-ci.org/dionisiydk/Calypso.svg?branch=master)](https://travis-ci.org/dionisiydk/Calypso)
+
 Pharo system browser
 
 - new navigation model
