@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"critic"
+		"critic",
+		"analysisResult"
 	],
 	"name" : "ClySystemCriticTests",
 	"type" : "normal"

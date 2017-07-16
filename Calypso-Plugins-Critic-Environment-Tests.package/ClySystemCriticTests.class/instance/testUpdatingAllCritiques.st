@@ -4,7 +4,7 @@ testUpdatingAllCritiques
 	class := ClyAnalyzedClassStub new.
 	class foundClassCritiques: (#critique1).
 	class analyzedClassSideSelectors: #(methodWithHalt).
-	critic analyze: class.
+	analysisResult := critic analyze: class.
 	self waitAnalysisComplete.	
 	self assert: (critic doesObjectHaveCritiques: ClyAnalyzedClassStub class >> #methodWithHalt).
 
