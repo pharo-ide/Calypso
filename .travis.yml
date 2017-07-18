@@ -7,3 +7,4 @@ smalltalk_edge:
   branch: dev
 smalltalk:
   - Pharo-6.0
+  - Pharo-7.0
