@@ -1,4 +1,4 @@
 testing
 isBrowserStillExists
 
-	^browser notNil
+	^self browser notNil

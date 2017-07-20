@@ -1,6 +1,6 @@
 operations
 restoreBrowserInstance
-	browser ifNotNil: [ ^self ].
+	self browser ifNotNil: [ ^self ].
 	
 	browser := self createBrowser.	
 	self applyToBrowser 

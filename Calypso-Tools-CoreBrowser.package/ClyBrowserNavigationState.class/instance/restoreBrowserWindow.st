@@ -2,8 +2,8 @@ operations
 restoreBrowserWindow
 	window isInWorld ifFalse: [ 
 		"Closed browser window is always cleaned from browser. Look at ClyBrowser>>windowIsClosing"
-		window addMorph: browser frame: (0@0 extent: 1@1).
-		window model: browser].
+		window addMorph: self browser frame: (0@0 extent: 1@1).
+		window model: self browser].
 	windowGroup 
 		ifNil: [
 			window isInWorld 

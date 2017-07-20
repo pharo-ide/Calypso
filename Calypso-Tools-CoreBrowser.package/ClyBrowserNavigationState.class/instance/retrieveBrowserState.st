@@ -1,6 +1,6 @@
 operations
 retrieveBrowserState
-	(window := browser window) ifNotNil: [
+	(window := self browser window) ifNotNil: [
 		windowGroup := window ownerThatIsA: GroupWindowMorph].
-	viewStates := browser navigationViews collect: [ :each | each snapshotNavigationState ].
-	selectedTabs := browser tabManager selectedTools collect: [ :each | each copyForBrowserState ]
+	viewStates := self browser navigationViews collect: [ :each | each snapshotNavigationState ].
+	selectedTabs := self browser tabManager selectedTools collect: [ :each | each copyForBrowserState ]

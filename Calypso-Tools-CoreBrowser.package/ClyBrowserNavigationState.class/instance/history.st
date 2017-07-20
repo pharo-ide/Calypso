@@ -1,3 +1,3 @@
 accessing
 history
-	^ browser navigationHistory
+	^ self browser navigationHistory
