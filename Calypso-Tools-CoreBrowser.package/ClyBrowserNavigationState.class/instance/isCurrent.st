@@ -1,5 +1,7 @@
 testing
 isCurrent
 
-	^(viewStates allSatisfy: [ :each | each isCurrent])
-		and: [ browser tabManager selectsTools: selectedTabs ]
+	browser navigationViews with: viewStates do: [:view :state | 
+		(state isCurrentStateOf: view) ifFalse: [ ^false]].
+	
+	^browser tabManager selectsTools: selectedTabs

@@ -1,3 +1,3 @@
 testing
 belongsTo: aBrowser
-	^browser == aBrowser
+	^window == aBrowser window

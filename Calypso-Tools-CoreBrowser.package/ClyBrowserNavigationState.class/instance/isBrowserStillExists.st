@@ -1,0 +1,4 @@
+testing
+isBrowserStillExists
+
+	^browser notNil
