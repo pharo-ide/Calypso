@@ -1,4 +1,4 @@
 controlling
-packageModified: aPackageModified
+systemChanged: aPackageModified
 
 	environment systemChanged: aPackageModified

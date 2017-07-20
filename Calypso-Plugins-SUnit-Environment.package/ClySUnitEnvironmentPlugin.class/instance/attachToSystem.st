@@ -2,4 +2,4 @@ controlling
 attachToSystem
 
 	TestCase historyAnnouncer 
-		when: TestSuiteEnded send: #testRan: to: self
+		weak when: TestSuiteEnded send: #testRan: to: self
