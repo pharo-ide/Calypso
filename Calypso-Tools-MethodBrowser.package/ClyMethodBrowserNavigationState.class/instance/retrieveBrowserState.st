@@ -2,5 +2,5 @@ operations
 retrieveBrowserState
 	super retrieveBrowserState.
 	
-	activeScope := browser activeScope.
-	methodQuery := browser methodQuery
+	activeScope := self browser activeScope.
+	methodQuery := self browser methodQuery

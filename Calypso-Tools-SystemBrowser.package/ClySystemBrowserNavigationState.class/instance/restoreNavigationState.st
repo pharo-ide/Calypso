@@ -2,5 +2,5 @@ operations
 restoreNavigationState
 	super restoreNavigationState.
 	
-	browser metaLevelScope: metaLevelScope.
-	browser methodGroupContent: methodGroupContent
+	self browser metaLevelScope: metaLevelScope.
+	self browser methodGroupContent: methodGroupContent

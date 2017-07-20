@@ -2,5 +2,5 @@ operations
 retrieveBrowserState
 	super retrieveBrowserState.
 	
-	metaLevelScope := browser metaLevelScope.
-	methodGroupContent := browser methodGroupContent
+	metaLevelScope := self browser metaLevelScope.
+	methodGroupContent := self browser methodGroupContent

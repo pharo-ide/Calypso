@@ -2,5 +2,5 @@ operations
 restoreNavigationState
 	super restoreNavigationState.
 	
-	browser activeScope: activeScope.
-	browser methodQuery: methodQuery
+	self browser activeScope: activeScope.
+	self browser methodQuery: methodQuery
