@@ -1,4 +1,4 @@
-operations
+private
 restoreBrowserWindow
 	window isInWorld ifFalse: [ 
 		"Closed browser window is always cleaned from browser. Look at ClyBrowser>>windowIsClosing"

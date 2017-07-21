@@ -1,6 +1,7 @@
 operations
 applyToBrowser
-	self browser changeNavigationStateBy: [ 
-		self restoreNavigationState].
+	self restoreBrowserState.
+	
+	self restoreNavigationState.
 	
 	self browser tabManager restoreBrowserState: self

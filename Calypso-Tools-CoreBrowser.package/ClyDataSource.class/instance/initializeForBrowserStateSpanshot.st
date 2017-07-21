@@ -1,3 +1,3 @@
 copying
-prepareInternalSnapshot
+initializeForBrowserStateSpanshot
 	self subclassResponsibility 

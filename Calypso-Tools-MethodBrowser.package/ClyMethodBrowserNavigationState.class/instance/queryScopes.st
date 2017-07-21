@@ -1,3 +1,3 @@
 accessing
 queryScopes
-	^queryScopes
+	^ queryScopes

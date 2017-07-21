@@ -73,12 +73,20 @@ baseline: spec
 				spec requires: #(#'Calypso-Environment-System' 'Commander' 'SystemCommands' ). ];
 			package: #'Calypso-Tools-CoreBrowser-Tests' with: [
 				spec requires: #(#'Calypso-Tools-CoreBrowser' ). ];
+
+			package: #'Calypso-Tools-SystemBrowser' with: [
+				spec requires: #(#'Calypso-Tools-CoreBrowser' ). ];
+			package: #'Calypso-Tools-SystemBrowser-Tests' with: [
+				spec requires: #(#'Calypso-Tools-SystemBrowser' ). ];
+			
 			package: #'Calypso-Tools-MethodBrowser' with: [
 				spec requires: #(#'Calypso-Tools-SystemBrowser' ). ];
+			package: #'Calypso-Tools-MethodBrowser-Tests' with: [
+				spec requires: #(#'Calypso-Tools-MethodBrowser' ). ];			
+			
 			package: #'Calypso-Tools-OldToolCompatibillity' with: [
-				spec requires: #(#'Calypso-Tools-MethodBrowser' ). ];
-			package: #'Calypso-Tools-SystemBrowser' with: [
-				spec requires: #(#'Calypso-Tools-CoreBrowser' ). ].
+				spec requires: #(#'Calypso-Tools-MethodBrowser' ). ].
+
 		spec 
 			group: 'Browser' with: #(#'Calypso-Tools-SystemBrowser' #'Calypso-Tools-MethodBrowser' );
 			group: 'Core' with: #('Environment' 'Browser' );

@@ -3,7 +3,7 @@ applyTo: aNavigationView
 
 	| newDataSource |
 	(aNavigationView dataSource isInSameStateAs: dataSource) ifFalse: [ 
-		newDataSource := dataSource snapshotCopy.
+		newDataSource := dataSource copyForBrowserStateSnapshot.
 		newDataSource updateItems.
 		newDataSource attachToContent.
 		aNavigationView dataSource: newDataSource].

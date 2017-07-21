@@ -10,7 +10,9 @@
 		"viewStates",
 		"selectedTabs",
 		"window",
-		"windowGroup"
+		"windowGroup",
+		"navigationEnvironment",
+		"plugins"
 	],
 	"name" : "ClyBrowserNavigationState",
 	"type" : "normal"

@@ -1,5 +1,9 @@
 operations
 restoreNavigationState
 	
-	self browser navigationViews with: viewStates do: [:view :state |
-		state applyTo: view]
+	self browser changeNavigationStateBy: [ 
+		
+		self browser navigationViews with: viewStates do: [:view :state |
+			state applyTo: view]
+		
+	]

@@ -2,5 +2,6 @@ operations
 restoreBrowserInstance
 	self browser ifNotNil: [ ^self ].
 	
-	browser := self createBrowser.	
+	browser := WeakArray with: self createBrowser.	
+	
 	self applyToBrowser 

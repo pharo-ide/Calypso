@@ -7,7 +7,7 @@ changeNavigationStateBy: aBlock
 	state := self snapshotNavigationState.
 	^aBlock ensure: [ 
 		navigationStarted := false.
-		state isCurrent ifFalse: [ 
+		state isCurrentState ifFalse: [ 
 			self recordNavigationState: state.
 			self updateWindowTitle.				
 			self rebuildAllTools]]

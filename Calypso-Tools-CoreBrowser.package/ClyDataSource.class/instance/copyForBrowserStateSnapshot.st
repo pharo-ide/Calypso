@@ -1,7 +1,8 @@
 copying
-snapshotCopy
+copyForBrowserStateSnapshot
+
 	| copy |
 	copy := self copy.
 	copy table: nil; itemsView: nil.
-	copy prepareInternalSnapshot.
+	copy initializeForBrowserStateSpanshot.
 	^copy
