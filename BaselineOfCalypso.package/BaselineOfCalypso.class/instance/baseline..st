@@ -82,7 +82,7 @@ baseline: spec
 			package: #'Calypso-Tools-MethodBrowser' with: [
 				spec requires: #(#'Calypso-Tools-SystemBrowser' ). ];
 			package: #'Calypso-Tools-MethodBrowser-Tests' with: [
-				spec requires: #(#'Calypso-Tools-MethodBrowser' ). ];			
+				spec requires: #(#'Calypso-Tools-MethodBrowser' #'Calypso-Tools-SystemBrowser-Tests' ). ];			
 			
 			package: #'Calypso-Tools-OldToolCompatibillity' with: [
 				spec requires: #(#'Calypso-Tools-MethodBrowser' ). ].
@@ -93,5 +93,5 @@ baseline: spec
 			group: 'Environment' with: #(#'Calypso-Environment-System' #'Calypso-Environment-Core' );
 			group: 'FullBrowser' with: #('Browser' #'Calypso-Plugins-Monticello-Browser' #'Calypso-Plugins-SUnit-Browser' #'Calypso-Plugins-Nautilus-Browser' #'Calypso-Tools-OldToolCompatibillity' #'Calypso-Plugins-Critic-Browser' 'Calypso-Plugins-InheritanceAnalyzer-Browser' #'Calypso-Plugins-FileOut-Browser' #'Calypso-Plugins-MethodDiffTool' #'Calypso-Plugins-Deprecation-Browser' #'Calypso-Plugins-Reflectivity-Browser' );
 			group: 'FullEnvironment' with: #(#'Calypso-Plugins-Monticello-Environment' #'Calypso-Plugins-SUnit-Environment' 'Environment' 'Calypso-Plugins-InheritanceAnalyzer-Environment' #'Calypso-Plugins-FileOut-Environment' #'Calypso-Plugins-Deprecation-Environment' #'Calypso-Plugins-Reflectivity-Environment' #'Calypso-Plugins-Critic-Environment' );
-			group: 'Tests' with: #(#'Calypso-Environment-System-Tests' #'Calypso-Tools-CoreBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' );
+			group: 'Tests' with: #(#'Calypso-Environment-System-Tests' #'Calypso-Tools-CoreBrowser-Tests' #'Calypso-Tools-SystemBrowser-Tests' #'Calypso-Tools-MethodBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' );
 			group: 'default' with: #('FullEnvironment' 'FullBrowser' 'Tests' ). ].
