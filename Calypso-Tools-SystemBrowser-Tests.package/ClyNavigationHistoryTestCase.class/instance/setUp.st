@@ -6,4 +6,5 @@ setUp
 	environment detachFromSystem "to ensure no subscriptions".
 	
 	browser := self createBrowser.
+	browser navigationEnvironment: environment.
 	browser plugins removeAll.
