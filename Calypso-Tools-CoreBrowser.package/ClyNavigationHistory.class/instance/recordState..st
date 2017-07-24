@@ -1,6 +1,6 @@
 operations
 recordState: aBrowserNavigationState
-	aBrowserNavigationState isAboutEmptyBrowser ifTrue: [ ^self ]. 
+	aBrowserNavigationState representsConcreteContent ifTrue: [ ^self ]. 
 	waitingNewState ifFalse: [ ^self ].
 	
 	undoExecuting | redoExecuting ifTrue: [ 

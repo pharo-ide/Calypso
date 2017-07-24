@@ -2,6 +2,6 @@ controlling
 collapse: aDataSourceItem
 	itemsView changeNavigationStateBy: [ 
 		expandedItems remove: aDataSourceItem.
-		aDataSourceItem childrenDataSource detachFromContent.	
+		aDataSourceItem childrenDataSource close.	
 
 		self expansionChanged]

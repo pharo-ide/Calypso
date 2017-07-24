@@ -1,4 +1,4 @@
 controlling
 toolWasRemoved
 
-	criticView ifNotNil: [ criticView detachFromDataSource ]
+	criticView ifNotNil: [ criticView closeDataSource ]

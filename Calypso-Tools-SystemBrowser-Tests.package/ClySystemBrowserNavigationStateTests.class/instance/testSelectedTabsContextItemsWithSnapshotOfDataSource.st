@@ -10,3 +10,4 @@ testSelectedTabsContextItemsWithSnapshotOfDataSource
 	self deny: contextItem ownerDataSource == browser packageView dataSource.
 	self assert: contextItem ownerDataSource table isNil.
 	self assert: contextItem ownerDataSource itemsView isNil.
+	self assert: contextItem ownerDataSource isClosed.

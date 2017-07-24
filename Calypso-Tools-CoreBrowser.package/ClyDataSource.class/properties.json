@@ -8,6 +8,7 @@
 	"instvars" : [
 		"depth",
 		"environmentCursor",
+		"metadata",
 		"childrenStructure",
 		"parentItem",
 		"itemsView"

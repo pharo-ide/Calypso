@@ -1,3 +1,3 @@
 controlling
 windowIsClosing
-	self detachFromDataSource
+	self closeDataSource

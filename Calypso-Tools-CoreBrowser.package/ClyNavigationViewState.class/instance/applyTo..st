@@ -4,8 +4,7 @@ applyTo: aNavigationView
 	| newDataSource |
 	(aNavigationView dataSource isInSameStateAs: dataSource) ifFalse: [ 
 		newDataSource := dataSource copyForBrowserStateSnapshot.
-		newDataSource updateItems.
-		newDataSource attachToContent.
+		newDataSource open.
 		aNavigationView dataSource: newDataSource].
 	
 	selection restoreCurrentSelection: aNavigationView selection.

@@ -5,6 +5,6 @@ openOn: anEnvironmentQuery inScope: anEnvironmentScope withTitle: dialogTitle
 	self title: dialogTitle.
 
 	browser openModal: self.
-	itemsView detachFromDataSource.
+	itemsView closeDataSource.
 
 	self cancelled ifTrue: [ CmdCommandAborted signal ]

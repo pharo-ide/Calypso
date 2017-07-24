@@ -1,4 +1,4 @@
 testing
 isBasedOn: anEnvironmentContentClass
 
-	^environmentCursor observesContent: anEnvironmentContentClass
+	^metadata isAboutContent: anEnvironmentContentClass

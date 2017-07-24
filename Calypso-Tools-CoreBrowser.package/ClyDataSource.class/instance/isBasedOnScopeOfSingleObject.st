@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeOfSingleObject
 
-	^environmentCursor observesScopeOfSingleObject
+	^metadata isBuiltInScopeOfSingleObject 

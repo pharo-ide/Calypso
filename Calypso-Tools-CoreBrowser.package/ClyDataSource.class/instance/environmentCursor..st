@@ -1,4 +1,5 @@
 accessing
-environmentCursor: anObject
-	environmentCursor := anObject.
+environmentCursor: anEnvironmentCursor
+	environmentCursor := anEnvironmentCursor.
+	metadata := environmentCursor metadata.
 	self attachToContent

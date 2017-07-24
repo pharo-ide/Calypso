@@ -1,3 +1,5 @@
 copying
 initializeForBrowserStateSpanshot
-	self subclassResponsibility 
+	table := nil.
+	itemsView := nil.	
+	environmentCursor := ClyClosedDataSourceCursor instance.	
