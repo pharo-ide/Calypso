@@ -1,0 +1,3 @@
+accessing
+itemCount
+	^0
