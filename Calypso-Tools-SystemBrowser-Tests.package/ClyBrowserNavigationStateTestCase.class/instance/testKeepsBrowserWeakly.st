@@ -1,6 +1,6 @@
 tests
 testKeepsBrowserWeakly
-
+	self timeLimit: 10 seconds.
 	self snapshotNavigationState.
 	self assert: navigationState browser equals: browser.
 	browser windowIsClosing. "we should simulate browser closing"
