@@ -2,7 +2,7 @@ initialization
 initialize
 	super initialize.
 	navigationStarted := false.
-	navigationHistory := ClyNavigationHistory of: self.
+	navigationHistory := ClyNavigationHistory new.
 	plugins := SortedCollection sortBlock: [ :a :b | a priority <= b priority ].
 	self extent: self initialExtent.
 	self changeProportionalLayout.

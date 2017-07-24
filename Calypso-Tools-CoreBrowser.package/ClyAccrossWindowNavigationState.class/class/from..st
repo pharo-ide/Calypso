@@ -1,4 +1,4 @@
 instance creation
-of: aBrowser
+from: aBrowser
 	^self new 
 		retrieveStateFrom: aBrowser

@@ -6,9 +6,14 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"viewStates",
-		"selectedTabs"
+		"windowGroup",
+		"window",
+		"browser",
+		"browserState",
+		"browserPlugins",
+		"navigationEnvironment",
+		"navigationHistory"
 	],
-	"name" : "ClyBrowserNavigationState",
+	"name" : "ClyAccrossWindowNavigationState",
 	"type" : "normal"
 }

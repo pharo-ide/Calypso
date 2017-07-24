@@ -1,0 +1,2 @@
+private
+restoreStateOf: aBrowser

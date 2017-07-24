@@ -3,4 +3,4 @@ restoreBrowserInstance
 
 	self snapshotNavigationState.
 	
-	navigationState applyTo: browser
+	browser := navigationState createBrowser

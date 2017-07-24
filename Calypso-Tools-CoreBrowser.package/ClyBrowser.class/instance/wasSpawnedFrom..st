@@ -1,4 +1,4 @@
 navigation
 wasSpawnedFrom: aBrowser
 	
-	self recordNavigationState: aBrowser snapshotNavigationState
+	self recordNavigationState:  (ClyAccrossWindowNavigationState from: aBrowser).
