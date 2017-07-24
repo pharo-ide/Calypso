@@ -7,4 +7,5 @@ applyTo: aBrowser byUndo: undoExecuting
 	navigationHistory recordAcrossWindowNavigationFrom: aBrowser byUndo: undoExecuting. 
 	undoExecuting ifTrue: [ aBrowser close].	
 		
-	self restoreBrowserWindow
+	self restoreBrowserWindow.
+	window model focusActiveTab 

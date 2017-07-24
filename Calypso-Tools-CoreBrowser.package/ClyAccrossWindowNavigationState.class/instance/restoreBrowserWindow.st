@@ -5,7 +5,8 @@ restoreBrowserWindow
 		"Closed browser window is always cleaned from browser. Look at ClyBrowser>>windowIsClosing"
 		newBrowser := self createBrowser.
 		window addMorph: newBrowser frame: (0@0 extent: 1@1).
-		window model: newBrowser].
+		window model: newBrowser.
+		browserState applyTo: newBrowser].
 	windowGroup 
 		ifNil: [
 			window isInWorld 
