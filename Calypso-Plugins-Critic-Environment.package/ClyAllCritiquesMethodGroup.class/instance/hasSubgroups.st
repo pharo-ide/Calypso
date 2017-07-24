@@ -1,7 +1,11 @@
 testing
 hasSubgroups
-
+	| fullAnalysisComplete hasSubgroups |
+	fullAnalysisComplete := true.
+	hasSubgroups := false.
 	self classAndCritiquesDo: [ :class :analysisResult | 
-		(analysisResult isComplete and: [ critic doesClassHaveMethodWithCritiques: class])
-			ifTrue: [^true]].
-	^false
+		fullAnalysisComplete := fullAnalysisComplete & analysisResult isComplete.
+		fullAnalysisComplete ifFalse: [ ^false ].
+		hasSubgroups := hasSubgroups or: [critic doesClassHaveMethodWithCritiques: class]].
+	classAnalysisResults := nil. "now we reset strong reference to critiques. So they can be garbage collected if not used"
+	^hasSubgroups
