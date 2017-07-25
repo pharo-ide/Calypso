@@ -1,10 +1,10 @@
 event handling
 selectionChanged
-	self isFiltered ifTrue: [ ^self selectionChangedOnFilteredTable ].
+	self isFilterChangedAndSelectionReset 
+		ifTrue: [ ^self selectionWasResetByFilter ].
 	
 	self changeNavigationStateBy: [ 
-		self updateSelection.
-	
+		self updateSelection.	
 		navigationSelector ifNotNil: [
 			browser perform: navigationSelector with: self selection].
 	]

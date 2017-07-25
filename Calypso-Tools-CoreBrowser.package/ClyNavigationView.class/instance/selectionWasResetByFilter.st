@@ -1,5 +1,5 @@
 event handling
-selectionChangedOnFilteredTable
+selectionWasResetByFilter
 	self initiateUIChangeBy: [ 
 		self updateSelection.
 		self changeNavigationStateBy: [

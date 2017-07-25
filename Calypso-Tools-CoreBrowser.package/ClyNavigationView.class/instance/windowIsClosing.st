@@ -1,3 +1,4 @@
 controlling
 windowIsClosing
-	self closeDataSource
+	self closeDataSource.
+	table cleanupFilter
