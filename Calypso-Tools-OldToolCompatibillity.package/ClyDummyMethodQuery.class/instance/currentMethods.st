@@ -2,5 +2,5 @@ execution
 currentMethods
 
 	^methods, extraMethods 
-		removeAllSuchThat: [ :each | each package isNil or: [ each isInstalled not] ];
-		yourself
+		collect: [ :each | each origin localMethodNamed: each selector ifAbsent: [nil] ]
+		thenReject: [ :each | each isNil or: [each package isNil or: [ each isInstalled not]]]

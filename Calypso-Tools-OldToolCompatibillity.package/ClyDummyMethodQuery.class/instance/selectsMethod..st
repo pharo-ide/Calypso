@@ -1,11 +1,13 @@
 testing
 selectsMethod: aMethod
 	| result |
-	(methods includes: aMethod) ifTrue: [ ^true ].
+	(methods anySatisfy: [ :each | 
+		ClyMethodScope checkBasisObject: each isEqualTo: aMethod])
+			ifTrue: [ ^true ].
 	criteriaBlock ifNil: [ ^false ].
 
 	extraMethods removeAllSuchThat: [ :each | 
-		each origin == aMethod origin and: [ each selector == aMethod selector]].
+		ClyMethodScope checkBasisObject: each isEqualTo: aMethod].
 
 	result := criteriaBlock value: aMethod.
 	result ifTrue: [ extraMethods add: aMethod ].
