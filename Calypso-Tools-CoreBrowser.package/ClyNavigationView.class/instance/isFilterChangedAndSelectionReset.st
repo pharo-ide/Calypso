@@ -6,6 +6,6 @@ isFilterChangedAndSelectionReset
 	selection isEmpty ifTrue: [ ^false ].
 
 	(selection rootDataSource isSameAs: self dataSource) 
-		ifTrue: [ ^true ].
+		ifTrue: [ ^false ].
 		
 	^selection rootDataSource isBasedOnFilter or: [self dataSource isBasedOnFilter]
