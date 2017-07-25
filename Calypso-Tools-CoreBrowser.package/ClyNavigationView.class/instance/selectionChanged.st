@@ -1,5 +1,7 @@
 event handling
 selectionChanged
+	self isFiltered ifTrue: [ ^self selectionChangedOnFilteredTable ].
+	
 	self changeNavigationStateBy: [ 
 		self updateSelection.
 	
