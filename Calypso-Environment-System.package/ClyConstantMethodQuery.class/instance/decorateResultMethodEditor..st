@@ -1,0 +1,2 @@
+tools decoration
+decorateResultMethodEditor: aMethodEditor
