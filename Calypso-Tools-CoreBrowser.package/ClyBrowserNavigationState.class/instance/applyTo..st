@@ -1,7 +1,8 @@
 operations
 applyTo: aBrowser
 
-	self restoreStateOf: aBrowser.	
-	self restoreNavigationStateOf: aBrowser.
-	
-	aBrowser tabManager restoreBrowserState: self
+	aBrowser changeNavigationStateBy: [ 
+		self restoreStateOf: aBrowser.	
+		self restoreNavigationStateOf: aBrowser.
+		aBrowser tabManager restoreBrowserState: self
+	]
