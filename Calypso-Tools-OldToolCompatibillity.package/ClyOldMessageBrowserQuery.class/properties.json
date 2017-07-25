@@ -1,17 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyMethodQuery",
+	"super" : "ClyConstantMethodQuery",
 	"category" : "Calypso-Tools-OldToolCompatibillity",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"description",
-		"methods",
+		"extraMethods",
 		"criteriaString",
-		"criteriaBlock",
-		"extraMethods"
+		"criteriaBlock"
 	],
-	"name" : "ClyDummyMethodQuery",
+	"name" : "ClyOldMessageBrowserQuery",
 	"type" : "normal"
 }

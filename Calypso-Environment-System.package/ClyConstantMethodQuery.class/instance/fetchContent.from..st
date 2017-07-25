@@ -1,4 +1,4 @@
 execution
 fetchContent: anEnvironmentContent from: anEnvironmentScope
 
-	anEnvironmentContent buildFromMethods: self currentMethods
+	anEnvironmentContent buildFromMethods: self installedMethods
