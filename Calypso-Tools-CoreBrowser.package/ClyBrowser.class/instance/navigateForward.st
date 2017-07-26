@@ -1,3 +1,3 @@
 navigation
 navigateForward
-	navigationHistory redoNavigation
+	navigationHistory redoNavigationOf: self

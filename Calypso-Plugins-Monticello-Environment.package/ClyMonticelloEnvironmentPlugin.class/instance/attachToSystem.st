@@ -1,5 +1,4 @@
 controlling
 attachToSystem
 
-	SystemAnnouncer uniqueInstance
-		when: MCPackageModified send: #packageModified: to: self
+	environment systemEnvironment subscribe: self for: MCPackageModified

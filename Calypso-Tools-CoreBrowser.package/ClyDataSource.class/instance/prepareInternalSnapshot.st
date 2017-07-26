@@ -1,3 +1,0 @@
-copying
-prepareInternalSnapshot
-	self subclassResponsibility 

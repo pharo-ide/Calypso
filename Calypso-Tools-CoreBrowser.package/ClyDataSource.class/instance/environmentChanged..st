@@ -2,5 +2,6 @@ system changes
 environmentChanged: anEnvironmentChanged
 
 	self updateItems.
-	[itemsView itemsOf: self wereUpdatedBy: anEnvironmentChanged.
-	self tableRefresh] updateCalypsoUI
+	[self isClosed ifFalse: [ 
+		itemsView itemsOf: self wereUpdatedBy: anEnvironmentChanged.
+		self tableRefresh]] updateCalypsoUI

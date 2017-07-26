@@ -1,4 +1,4 @@
 events handling
 defaultFocusMorph
 
-	^itemsView filterField
+	^itemsView filterField ifNil: [ itemsView dataSource table ]

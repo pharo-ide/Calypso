@@ -1,3 +1,3 @@
 accessing
 itemScope
-	^environmentCursor observedItemScope
+	^metadata itemScope

@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeOf: basisObject
 
-	^environmentCursor observesScopeOf: basisObject
+	^metadata isBuiltInScopeOf: basisObject

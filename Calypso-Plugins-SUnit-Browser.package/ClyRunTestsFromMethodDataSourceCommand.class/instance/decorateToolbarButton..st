@@ -2,5 +2,5 @@ toolbar decoration
 decorateToolbarButton: aBrowserButton
 
 	| testResult |
-	testResult := methodDataSource metadata getProperty: ClyTestResultProperty.
+	testResult := methodDataSource getMetaProperty: ClyTestResultProperty.
 	aBrowserButton addMorphFront: testResult resultsIcon asMorph

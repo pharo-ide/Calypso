@@ -6,11 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"browser",
 		"viewStates",
-		"selectedTabs",
-		"window",
-		"windowGroup"
+		"selectedTabs"
 	],
 	"name" : "ClyBrowserNavigationState",
 	"type" : "normal"

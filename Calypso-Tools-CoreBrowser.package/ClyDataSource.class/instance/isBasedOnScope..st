@@ -1,4 +1,4 @@
 testing
 isBasedOnScope: anEnvironmentScopeClass
 
-	^environmentCursor observesScope: anEnvironmentScopeClass
+	^metadata isBuiltInScope: anEnvironmentScopeClass

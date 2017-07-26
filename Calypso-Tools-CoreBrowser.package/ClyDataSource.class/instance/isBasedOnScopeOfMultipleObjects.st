@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeOfMultipleObjects
 
-	^environmentCursor observesScopeOfMultipleObjects
+	^metadata isBuiltInScopeOfMultipleObjects 

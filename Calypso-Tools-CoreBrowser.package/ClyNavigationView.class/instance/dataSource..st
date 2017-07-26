@@ -2,7 +2,7 @@ accessing
 dataSource: aDataSource
 
 	self changeNavigationStateBy: [ 
-		self dataSource detachFromContent.	
+		self closeDataSource.	
 		self setUpDataSource: aDataSource.	
 		self refreshTable
 	]

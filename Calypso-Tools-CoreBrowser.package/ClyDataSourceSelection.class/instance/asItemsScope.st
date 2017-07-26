@@ -1,6 +1,3 @@
 converting
 asItemsScope
-	| actualItems |
-	actualItems := self uniformActualObjects.
-	
-	^self itemScope basis: actualItems
+	^self asItemsScope: self itemScope

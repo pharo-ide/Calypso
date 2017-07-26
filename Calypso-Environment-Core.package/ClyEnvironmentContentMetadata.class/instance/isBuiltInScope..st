@@ -1,3 +1,3 @@
 testing
 isBuiltInScope: anEnvironmentScopeClass
-	^queryScope includesBehavior: anEnvironmentScopeClass
+	^queryScopeClass includesBehavior: anEnvironmentScopeClass

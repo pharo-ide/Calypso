@@ -1,4 +1,4 @@
 focus management
 focusActiveTab
 
-	self mainTool takeKeyboardFocus
+	self mainTool ifNotNil: [ :tool | tool takeKeyboardFocus]

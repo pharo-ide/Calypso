@@ -1,3 +1,5 @@
 *Calypso-Tools-CoreBrowser
 filterField
-	^function field
+	^(function isKindOf: FTFilterFunction )
+		ifTrue: [ function field]
+		ifFalse: [ nil ]

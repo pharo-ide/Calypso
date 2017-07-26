@@ -1,4 +1,4 @@
 testing
 hasMetaProperty: anEnvironmentPropertyClass
 
-	^self metadata hasProperty: anEnvironmentPropertyClass
+	^metadata hasProperty: anEnvironmentPropertyClass

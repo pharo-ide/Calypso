@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"view",
 		"dataSource",
 		"selection"
 	],

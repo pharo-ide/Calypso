@@ -1,6 +1,6 @@
 execution
 fetchContent: anEnvironmentContent from: anEnvironmentScope
 
-	self ensureVariableAreActualClassBindings.
+	self ensureVariableAreActualBindingsIn: anEnvironmentScope systemEnvironment.
 
 	super fetchContent: anEnvironmentContent from: anEnvironmentScope

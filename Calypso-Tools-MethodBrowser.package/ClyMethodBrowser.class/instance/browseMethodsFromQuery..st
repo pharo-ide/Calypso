@@ -3,7 +3,7 @@ browseMethodsFromQuery: aMethodQuery
 	
 	| methodBrowser |
 	
-	methodBrowser := ClyMethodBrowser on: navigationEnvironment scopes: self queryScopes.	
+	methodBrowser := ClyMethodBrowser on: navigationEnvironment scopes: self allQueryScopes.	
 	methodBrowser disablePluginsWhichAreNotIn: self.
 	
 	methodBrowser show: aMethodQuery inScope: activeScope.

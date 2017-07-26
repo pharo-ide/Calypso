@@ -1,3 +1,3 @@
 testing
 observesScopeOf: basisObject
-	^observedContent isBuiltInScopeOf: basisObject
+	^metadata isBuiltInScopeOf: basisObject

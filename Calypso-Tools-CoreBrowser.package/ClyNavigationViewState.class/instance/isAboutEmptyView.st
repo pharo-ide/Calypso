@@ -1,4 +1,0 @@
-testing
-isAboutEmptyView
-	
-	^dataSource isEmpty

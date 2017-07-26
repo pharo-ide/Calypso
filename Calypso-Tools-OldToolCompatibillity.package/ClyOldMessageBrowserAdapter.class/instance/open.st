@@ -5,9 +5,8 @@ open
 		select: [:each | (each isRingObject and: [ each isMethod ]) or: [ each isCompiledMethod  ] ]
 		thenCollect: [ :each | each compiledMethod ].
 	
-	query := ClyDummyMethodQuery new 
-		methods: methods asIdentitySet;
-		description: title;
+	query := ClyOldMessageBrowserQuery named: title with: methods.
+	query
 		criteriaString: autoSelect;
 		criteriaBlock: refreshingBlock.
 	browser := ClyMethodBrowser on: ClySystemNavigationEnvironment currentImage.

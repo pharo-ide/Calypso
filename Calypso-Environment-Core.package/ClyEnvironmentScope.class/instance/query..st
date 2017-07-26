@@ -2,6 +2,7 @@ queries
 query: anEnvironmentQueryOrCompatible
 
 	| result query |
+	self cleanGarbageInCache.
 	query := anEnvironmentQueryOrCompatible asEnvironmentQuery.
 	result := queryCache at: query ifAbsent: [nil]. "cache is weak dict where ifAbsentPut: not works"
 	result ifNil: [ 

@@ -1,10 +1,11 @@
 query
 query: anEnvironmentContentClass inScope: anEnvironmentScopeClass
-	| actualItems |
-	self isEmpty ifTrue: [^(anEnvironmentContentClass emptyInScopeOf: self itemScope) newCursor].
 
-	actualItems := self uniformActualObjects.
-	
+	self isEmpty ifTrue: [
+		"to avoid extra communication in remote scenario in trivial case
+		we just return local empty content" 
+		^(anEnvironmentContentClass emptyInScopeOf: anEnvironmentScopeClass) newCursor].
+
 	^self lastSelectedItem ownerDataSource
 			query: anEnvironmentContentClass 
-			inNewScope: (anEnvironmentScopeClass basis: actualItems)
+			inNewScope: (self asItemsScope: anEnvironmentScopeClass)

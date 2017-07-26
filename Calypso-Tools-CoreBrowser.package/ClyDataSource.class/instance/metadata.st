@@ -1,3 +1,3 @@
 accessing
 metadata
-	^environmentCursor metadata
+	^metadata

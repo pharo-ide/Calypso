@@ -1,4 +1,4 @@
 controlling
 detachFromSystem
 
-	SystemAnnouncer uniqueInstance unsubscribe: self
+	environment systemEnvironment unsubscribe: self
