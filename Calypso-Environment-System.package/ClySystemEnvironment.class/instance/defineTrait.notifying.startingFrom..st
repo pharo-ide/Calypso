@@ -8,7 +8,7 @@ defineTrait: defString notifying: aController startingFrom: aClass
 	keywdIx := defTokens findFirst: [:x | x = 'named:'].
 	newTraitName := (defTokens at: keywdIx+1) copyWithoutAll: '#()'.
 	((oldTrait isNil or: [oldTrait baseTrait name asString ~= newTraitName])
-		and: [self systemEnvironment includesClassNamed: newTraitName asSymbol]) ifTrue:
+		and: [self includesClassNamed: newTraitName asSymbol]) ifTrue:
 			["Attempting to define new class/trait over existing one when
 				not looking at the original one in this browser..."
 			(self confirm: ((newTraitName , ' is an existing class/trait in this system.
@@ -16,7 +16,7 @@ Redefining it might cause serious problems.
 Is this really what you want to do?') asText makeBoldFrom: 1 to: newTraitName size))
 				ifFalse: [^ nil ]].
 
-	trait := self systemEnvironment defaultClassCompiler
+	trait := self defaultClassCompiler
 		source: defString; requestor: aController; 
 		logged: true; 
 		evaluate.
