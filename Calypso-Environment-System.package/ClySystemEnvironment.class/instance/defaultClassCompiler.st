@@ -1,3 +1,3 @@
-class management
+class compilation
 defaultClassCompiler
 	^self class compiler
