@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentContentTestCase",
+	"category" : "Calypso-Environment-Processor-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"process"
+	],
+	"name" : "ClyProcessStackTests",
+	"type" : "normal"
+}
