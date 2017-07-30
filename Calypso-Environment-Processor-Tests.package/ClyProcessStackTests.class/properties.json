@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"process"
+		"process",
+		"contexts"
 	],
 	"name" : "ClyProcessStackTests",
 	"type" : "normal"
