@@ -29,7 +29,7 @@ Is this really what you want to do?') asText makeBoldFrom: 1 to: newClassName si
 	since oldClass superclass knows the definerClass of oldClass."
 	
 	oldClass
-		ifNil: [ classCompiler := self systemEnvironment defaultClassCompiler]
+		ifNil: [ classCompiler := self defaultClassCompiler]
 		ifNotNil: [ classCompiler := oldClass superclass subclassDefinerClass new].
 	class := classCompiler
 				source: aString;
