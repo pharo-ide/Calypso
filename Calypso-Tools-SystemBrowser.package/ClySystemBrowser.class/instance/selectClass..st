@@ -11,7 +11,9 @@ selectClass: aClass
 			(self isPackageSelected: classDefinition definitionPackage) 
 				ifTrue: [ ^self selectedClasses selectItems: foundItems ]].
 		
-		self selectPackage: aClass package.
+		aClass tags 
+			ifEmpty: [ self selectPackage: aClass package]
+			ifNotEmpty: [:tags | self selectPackage: aClass package atClassTag: tags anyOne].
 		self selectedPackages isEmpty ifTrue: [ ^self ].
 		self selectedClasses selectItemsWith: { aClass instanceSide }
 	]
