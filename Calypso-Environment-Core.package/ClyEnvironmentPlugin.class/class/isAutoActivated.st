@@ -1,3 +1,3 @@
 initialization
 isAutoActivated
-	^true
+	^isAutoActivated ifNil: [ true ]
