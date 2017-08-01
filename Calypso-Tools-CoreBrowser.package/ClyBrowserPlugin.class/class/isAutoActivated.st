@@ -1,3 +1,3 @@
 testing
 isAutoActivated
-	^true
+	^isAutoActivated ifNil: [ true ]

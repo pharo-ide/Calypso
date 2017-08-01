@@ -1,0 +1,3 @@
+initialization
+disable
+	isAutoActivated := false

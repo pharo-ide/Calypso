@@ -2,11 +2,14 @@
 	"commentStamp" : "",
 	"super" : "ClyEnvironmentPlugin",
 	"category" : "Calypso-Plugins-Critic-Environment",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"providesMethodGroupByDefault"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"systemCritic"
+		"systemCritic",
+		"providesMethodGroup"
 	],
 	"name" : "ClyCriticEnvironmentPlugin",
 	"type" : "normal"
