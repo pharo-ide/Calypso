@@ -2,7 +2,9 @@
 	"commentStamp" : "",
 	"super" : "Object",
 	"category" : "Calypso-Tools-CoreBrowser-UI",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"isAutoActivated"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [

@@ -2,4 +2,6 @@ initialization
 initialize
 	super initialize.
 	
-	systemCritic := ClySystemCritic new
+	providesMethodGroup := self class providesMethodGroupByDefault.
+	systemCritic := ClySystemCritic new.
+	
