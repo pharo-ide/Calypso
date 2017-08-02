@@ -2,7 +2,9 @@
 	"commentStamp" : "DenisKudryashov 2/9/2017 15:14",
 	"super" : "Object",
 	"category" : "Calypso-Environment-Core",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"isAutoActivated"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
