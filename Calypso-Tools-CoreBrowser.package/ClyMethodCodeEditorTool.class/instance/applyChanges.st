@@ -13,6 +13,5 @@ applyChanges
 	browser selectMethod: currentMethod.
 	newMethodWasCreated & (browser isMethodSelected: currentMethod)
 		ifTrue: [ self removeFromBrowser. browser tabManager selectMainTool ]
-		ifFalse: [ editingMethod := currentMethod.
-			context lastSelectedItem actualObject: editingMethod ].
+		ifFalse: [ self editingMethod: currentMethod].
 	^true
