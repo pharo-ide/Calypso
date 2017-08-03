@@ -1,6 +1,8 @@
 testing
 belongsToRemovedBrowserContext
-	editingMethod := editingMethod origin 
+	| actualMethod |
+	actualMethod := editingMethod origin 
 		localMethodNamed: editingMethod selector ifAbsent: [^true].
-	context lastSelectedItem actualObject: editingMethod. 
+		
+	self editingMethod: actualMethod.
 	^false
