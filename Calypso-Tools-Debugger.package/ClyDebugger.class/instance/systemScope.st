@@ -1,0 +1,3 @@
+accessing
+systemScope
+	^navigationEnvironment systemScope
