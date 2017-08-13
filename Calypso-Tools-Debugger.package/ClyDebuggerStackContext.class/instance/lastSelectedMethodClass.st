@@ -1,0 +1,3 @@
+public
+lastSelectedMethodClass
+	^tool lastSelectedObject receiverClass

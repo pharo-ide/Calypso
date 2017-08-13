@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowser",
+	"category" : "Calypso-Tools-Debugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stackView"
+	],
+	"name" : "ClyDebugger",
+	"type" : "normal"
+}

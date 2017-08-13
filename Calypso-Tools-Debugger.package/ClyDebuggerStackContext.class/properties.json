@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserContext",
+	"category" : "Calypso-Tools-Debugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyDebuggerStackContext",
+	"type" : "normal"
+}
