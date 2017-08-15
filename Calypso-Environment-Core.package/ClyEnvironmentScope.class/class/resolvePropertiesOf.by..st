@@ -1,3 +1,3 @@
 item resolving
 resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
-	self subclassResponsibility 
+	anEnvironmentPlugin resolvePropertiesOfProcess: anEnvironmentItem
