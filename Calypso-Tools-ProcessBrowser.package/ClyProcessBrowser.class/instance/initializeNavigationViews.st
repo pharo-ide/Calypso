@@ -14,7 +14,7 @@ initializeNavigationViews
 	stackView allowsDeselection: false.	
 	stackView mainColumn 
 		width: 200;
-		displayItemPropertyBy: [:contextItem | self printReceiverClassOf: contextItem].
+		displayItemPropertyBy: [:contextItem | self printReceiverOf: contextItem].
 	(stackView addColumn: #method) 
 		width: 250;
 		displayItemName.

@@ -1,3 +1,3 @@
-controlling
+accessing
 selectClassForEditorOfMethod: aMethod
 	^aMethod origin

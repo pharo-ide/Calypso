@@ -1,3 +1,7 @@
 initialization
 printContextDetailsOf: contextItem
-	^contextItem actualObject closure ifNil: [ '' ] ifNotNil: [ :c | c printString ]
+	| definition |
+	definition := contextItem getProperty: ClyMethodContextDefinitionProperty.
+	^definition closureItem 
+		ifNil: [ '' ] 
+		ifNotNil: [ :closureItem | closureItem name ]
