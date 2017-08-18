@@ -1,0 +1,3 @@
+accessing
+selectedProcessStack
+	^tool selectedProcessStack

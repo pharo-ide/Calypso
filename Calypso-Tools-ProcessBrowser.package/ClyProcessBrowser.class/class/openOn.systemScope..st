@@ -1,4 +1,4 @@
-instance creation
+opening
 openOn: aNavigationEnvironment systemScope: aSystemScope
 	| browser |
 	browser := self new.
