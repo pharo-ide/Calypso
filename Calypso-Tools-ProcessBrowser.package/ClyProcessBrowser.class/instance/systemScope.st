@@ -1,3 +1,3 @@
 accessing
 systemScope
-	^navigationEnvironment systemScope
+	^systemScope ifNil: [systemScope := navigationEnvironment systemScope]
