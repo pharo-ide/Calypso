@@ -1,0 +1,3 @@
+testing
+isProcessSelected
+	^self hasSelectedItems 
