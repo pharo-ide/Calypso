@@ -1,3 +1,0 @@
-accessing
-activatingTags
-	^ #(systemBrowser methodGroups)

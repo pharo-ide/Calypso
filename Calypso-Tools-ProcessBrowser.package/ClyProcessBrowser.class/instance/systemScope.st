@@ -1,3 +1,3 @@
 accessing
 systemScope
-	self shouldBeImplemented
+	^navigationEnvironment systemScope
