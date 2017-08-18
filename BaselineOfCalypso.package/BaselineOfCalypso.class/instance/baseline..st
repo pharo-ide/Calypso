@@ -94,7 +94,7 @@ baseline: spec
 				spec requires: #(#'Calypso-Tools-MethodBrowser' ). ];
 
 			package: #'Calypso-Tools-Debugger' with: [
-				spec requires: #(#'Calypso-Environment-Processor' #'Calypso-Tools-CoreBrowser' ). ];
+				spec requires: #(#'Calypso-Environment-Processor' #'Calypso-Tools-MethodBrowser' ). ];
 			
 			package: #'Calypso-Tools-ProcessBrowser' with: [
 				spec requires: #(#'Calypso-Environment-Processor' #'Calypso-Tools-Debugger' ). ].
