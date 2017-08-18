@@ -1,4 +1,4 @@
-*Calypso-Tools-MethodBrowser
+navigation
 browseMethodsFromQuery: aMethodQuery
 	
 	| queryScopes |
