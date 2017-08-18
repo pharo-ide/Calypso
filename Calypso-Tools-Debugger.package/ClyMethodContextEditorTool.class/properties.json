@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodCodeEditorTool",
+	"category" : "Calypso-Tools-Debugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMethodContextEditorTool",
+	"type" : "normal"
+}

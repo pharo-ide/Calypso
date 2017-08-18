@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdCommand",
+	"category" : "Calypso-Tools-ProcessBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"processes"
+	],
+	"name" : "ClyProcessComand",
+	"type" : "normal"
+}

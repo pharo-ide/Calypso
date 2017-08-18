@@ -1,0 +1,3 @@
+accessing
+selectedContexts
+	^self selectedObjects

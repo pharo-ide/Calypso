@@ -1,0 +1,3 @@
+building
+doItReceiver
+	^context lastSelectedObject receiver
