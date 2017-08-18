@@ -1,3 +1,4 @@
 context
 createContextOfSingleItem: aDataSourceItem
-	self shouldBeImplemented
+	^aDataSourceItem environmentScope 
+		processBrowserContextClass of: {aDataSourceItem} for: self

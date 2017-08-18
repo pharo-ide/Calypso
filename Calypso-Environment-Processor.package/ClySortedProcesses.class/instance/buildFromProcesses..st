@@ -1,6 +1,6 @@
 building
 buildFromProcesses: processes 
 	| processItem |
-	processes do: [ :each | 
+	processes reject: #isTerminated thenDo: [ :each | 
 		processItem := ClyEnvironmentItem named: each name with: each.
 		items add: processItem ]

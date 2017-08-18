@@ -1,25 +1,23 @@
 initialization
 initializeNavigationViews
 	processView := self newNavigationView.
-	processView mainColumn 
-		width: 20;
+	(processView addColumn: #priority) 
+		width: 15;
 		displayItemPropertyBy: [:processItem | (self processPriorityOf: processItem) asString].
-	(processView addColumn: #name) 
-		width: 100;
-		displayItemName.
-	(processView addColumn: #currentContext) 
-		width: 200;
-		displayItemPropertyBy: [:processItem | self printCurrentContextOf: processItem].
+	processView moveMainColumnAtTheEnd.	
+	(processView mainColumn)
+		width: 400;
+		displayItemPropertyBy: [:processItem | self printProcessPreview: processItem].
 	processView requestNavigationBy: #showStackOfProcesses:.
 	
 	stackView := self newNavigationView.
 	stackView allowsDeselection: false.	
 	stackView mainColumn 
-		width: 250;
+		width: 200;
 		displayItemPropertyBy: [:contextItem | self printReceiverClassOf: contextItem].
 	(stackView addColumn: #method) 
-		width: 400;
+		width: 250;
 		displayItemName.
 	(stackView addColumn: #details) 
-		width: 50;
+		width: 100;
 		displayItemPropertyBy: [:contextItem | self printContextDetailsOf: contextItem]

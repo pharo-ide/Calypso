@@ -1,3 +1,3 @@
 context
 createContextOf: aSelection
-	self shouldBeImplemented
+	^aSelection createProcessBrowserContextFor: self

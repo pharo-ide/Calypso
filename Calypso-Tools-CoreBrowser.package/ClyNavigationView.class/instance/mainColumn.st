@@ -1,3 +1,3 @@
 accessing
 mainColumn
-	^table columns first
+	^table columns detect: [:each | each isKindOf: ClyMainTableColumn]
