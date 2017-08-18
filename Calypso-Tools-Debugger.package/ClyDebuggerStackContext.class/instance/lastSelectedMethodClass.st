@@ -1,3 +1,8 @@
 public
 lastSelectedMethodClass
-	^tool lastSelectedObject receiverClass
+	| contextDefinition methodDefinition |
+	contextDefinition := self lastSelectedItem 
+		getProperty: ClyMethodContextDefinitionProperty.
+	
+	methodDefinition := contextDefinition definitionMethodItem getProperty: ClyMethodDefinitionProperty.
+	^methodDefinition definitionClass

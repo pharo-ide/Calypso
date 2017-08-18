@@ -1,3 +1,6 @@
 public
 selectedMethods
-	^tool selectedContexts actualObjects collect: #method
+	| contextDefinition |
+	^selectedItems collect: [:contextItem | 
+		contextDefinition := contextItem getProperty: ClyMethodContextDefinitionProperty.
+		contextDefinition definitionMethod]

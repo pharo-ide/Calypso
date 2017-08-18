@@ -1,0 +1,3 @@
+accessing
+selectedProcesses
+	^self selectedObjects
