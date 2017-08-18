@@ -1,8 +1,3 @@
 instance creation
 openOn: aNavigationEnvironment
-	| browser |
-	browser := self new.
-	browser setUpAvailablePlugins.
-	browser showProcessesIn: aNavigationEnvironment.
-	browser open.
-	^browser
+	^self openOn: aNavigationEnvironment systemScope: aNavigationEnvironment systemScope.
