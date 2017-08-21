@@ -1,0 +1,3 @@
+accessing
+lastSelectedContext
+	^self lastSelectedObject
