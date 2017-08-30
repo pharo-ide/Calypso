@@ -1,4 +1,4 @@
 opening
 open
 	<script>
-	^ self openOn: ClySystemNavigationEnvironment currentImage
+	^ self openOn: ClyNavigationEnvironment currentImage

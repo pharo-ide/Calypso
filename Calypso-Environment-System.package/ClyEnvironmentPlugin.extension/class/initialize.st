@@ -3,4 +3,4 @@ initialize
 	self == ClyEnvironmentPlugin ifTrue: [ ^self ].
 	self isAutoActivated ifFalse: [ ^self ].
 	
-	ClySystemNavigationEnvironment currentImage addPlugin: self new
+	ClyNavigationEnvironment installNewPlugin: self new

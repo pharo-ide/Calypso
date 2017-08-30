@@ -2,7 +2,7 @@
 browseClassNamed: aString
 	
 	| classBinding browser |
-	classBinding := self systemEnvironment bindingOf: aString.
+	classBinding := self system bindingOf: aString.
 	classBinding ifNil: [ ^self ].
 	
 	browser := ClySystemBrowser on: navigationEnvironment systemScope: self systemScope.

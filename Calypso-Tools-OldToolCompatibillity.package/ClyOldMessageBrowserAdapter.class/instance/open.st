@@ -9,6 +9,6 @@ open
 	query
 		criteriaString: autoSelect;
 		criteriaBlock: refreshingBlock.
-	browser := ClyMethodBrowser on: ClySystemNavigationEnvironment currentImage.
-	browser show: query inScope: ClySystemNavigationEnvironment currentImageScope.
+	browser := ClyMethodBrowser on: ClyNavigationEnvironment currentImage.
+	browser show: query inScope: ClyNavigationEnvironment currentImageScope.
 	^browser open

@@ -1,4 +1,4 @@
 controlling
 attachToSystem
 
-	environment systemEnvironment subscribe: self for: MCPackageModified
+	environment system subscribe: self for: MCPackageModified

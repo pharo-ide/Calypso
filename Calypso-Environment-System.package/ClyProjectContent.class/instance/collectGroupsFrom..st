@@ -2,6 +2,6 @@ building
 collectGroupsFrom: aProject 
 		
 	| providers |
-	providers := environment collectPackageGroupProvidersFor: aProject.
-	
-	providers do: [ :each | each buildGroupItemsOn: items]
+	environment pluginsDo: [ :plugin |
+		providers := plugin collectPackageGroupProvidersFor: aProject.
+		providers do: [ :each | each buildGroupItemsOn: items]]
