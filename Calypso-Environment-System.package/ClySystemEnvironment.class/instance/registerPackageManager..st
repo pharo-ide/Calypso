@@ -1,4 +1,4 @@
 package management
 registerPackageManager: aPackageManager
-	aPackageManager system: self.
+	aPackageManager systemEnvironment: self.
 	projectManager registerPackageManager: aPackageManager

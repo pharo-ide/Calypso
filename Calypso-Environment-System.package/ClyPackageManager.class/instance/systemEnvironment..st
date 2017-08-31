@@ -1,3 +1,3 @@
 accessing
-system: anObject
+systemEnvironment: anObject
 	systemEnvironment := anObject
