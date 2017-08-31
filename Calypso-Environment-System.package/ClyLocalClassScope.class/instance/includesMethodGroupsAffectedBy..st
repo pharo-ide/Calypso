@@ -4,5 +4,7 @@ includesMethodGroupsAffectedBy: aSystemAnnouncement
 	| providers |
 	environment pluginsDo: [ :plugin |
 		providers := plugin collectMethodGroupProvidersFor: basisObjects.
-		^providers anySatisfy: [ :eachProvider | 
-			eachProvider providesGroupsAffectedBy: aSystemAnnouncement]]
+		providers do: [ :eachProvider | 
+			(eachProvider providesGroupsAffectedBy: aSystemAnnouncement)
+				ifTrue: [^true]]].
+	^false
