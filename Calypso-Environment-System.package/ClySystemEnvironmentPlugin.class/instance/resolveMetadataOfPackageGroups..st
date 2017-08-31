@@ -1,2 +1,2 @@
-*Calypso-Environment-System
+items resolving
 resolveMetadataOfPackageGroups: anEnvironmentContent

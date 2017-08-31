@@ -1,4 +1,4 @@
-*Calypso-Environment-System
+items resolving
 resolvePropertiesOfMethod: anEnvironmentItem
 
 	

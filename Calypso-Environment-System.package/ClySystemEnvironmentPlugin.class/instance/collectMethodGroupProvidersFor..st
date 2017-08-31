@@ -1,3 +1,3 @@
-*Calypso-Environment-System
+groups collecting
 collectMethodGroupProvidersFor: classes
 	^#()

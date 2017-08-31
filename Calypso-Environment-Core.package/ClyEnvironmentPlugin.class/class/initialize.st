@@ -1,6 +1,6 @@
-*Calypso-Environment-System
+initialization
 initialize
-	self == ClyEnvironmentPlugin ifTrue: [ ^self ].
+	self isAbstract ifTrue: [ ^self ].
 	self isAutoActivated ifFalse: [ ^self ].
 	
 	ClyNavigationEnvironment installNewPlugin: self new

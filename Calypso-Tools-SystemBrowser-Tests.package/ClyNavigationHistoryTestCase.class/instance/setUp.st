@@ -2,7 +2,7 @@ running
 setUp
 	super setUp.
 	
-	environment := ClyNavigationEnvironment over: ClySystemEnvironment currentImage.
+	environment := ClyNavigationEnvironment overSystemEnvironment: ClySystemEnvironment currentImage.
 	environment detachFromSystem "to ensure no subscriptions".
 	
 	browser := self createBrowser.
