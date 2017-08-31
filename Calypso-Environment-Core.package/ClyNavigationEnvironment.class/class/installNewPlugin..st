@@ -1,6 +1,6 @@
 default
-installNewPlugin: anEnvironmentPlugin
+installNewPlugin: anEnvironmentPluginClass
 
 	defaultGlobalEnvironments do: [ :each | 
-		(anEnvironmentPlugin canBeInstalledIntoGlobalEnvironment: each)
-			ifTrue: [ each addPlugin: anEnvironmentPlugin]]
+		(anEnvironmentPluginClass canBeInstalledIntoGlobalEnvironment: each)
+			ifTrue: [ each addPlugin: anEnvironmentPluginClass new]]
