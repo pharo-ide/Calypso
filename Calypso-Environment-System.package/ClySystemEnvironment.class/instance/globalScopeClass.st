@@ -1,3 +1,3 @@
 accessing
 globalScopeClass
-	^ClySystemScope
+	^ClySystemEnvironmentScope

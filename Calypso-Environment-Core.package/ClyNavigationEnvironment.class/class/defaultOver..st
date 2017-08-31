@@ -1,8 +1,8 @@
 default
-defaultOver: aGlobalScopeClass of: aSystem
+defaultOver: aSystem
 	defaultGlobalEnvironments ifNil: [ defaultGlobalEnvironments := IdentityDictionary new ].
 	
 	^defaultGlobalEnvironments at: aSystem ifAbsentPut: [ 
-		(ClyNavigationEnvironment over: aGlobalScopeClass of: aSystem)
+		(ClyNavigationEnvironment over: aSystem)
 			setUpAvailablePlugins;
 			attachToSystem ]

@@ -1,0 +1,3 @@
+building
+buildFromSystemEnvironment: aSystemEnvironment 
+	self buildFromClasses: aSystemEnvironment classes
