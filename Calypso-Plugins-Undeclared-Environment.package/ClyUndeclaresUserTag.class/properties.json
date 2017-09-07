@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentItemSimpleTag",
+	"category" : "Calypso-Plugins-Undeclared-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUndeclaresUserTag",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroupProviderTestCase",
+	"category" : "Calypso-Plugins-Undeclared-Environment-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUndeclaredMethodGroupProviderTests",
+	"type" : "normal"
+}
