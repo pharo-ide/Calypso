@@ -6,4 +6,4 @@ testMethods
 	
 	selectors := (group methods collect: #selector) sorted.
 	
-	self assert: selectors equals: #(#undeclaresMethod1 #undeclaresMethod2)
+	self assert: selectors equals: #(#method1WithUndeclares #method2WithUndeclares)

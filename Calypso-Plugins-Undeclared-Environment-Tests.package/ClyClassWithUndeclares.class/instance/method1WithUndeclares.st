@@ -1,3 +1,3 @@
 with undeclares
-undeclaresMethod1
+method1WithUndeclares
 	^instVar1 printString

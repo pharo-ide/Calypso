@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyUndeclaresMethodTableDecorator",
+	"name" : "ClyUndeclaredMethodTableDecorator",
 	"type" : "normal"
 }

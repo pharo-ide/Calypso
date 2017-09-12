@@ -1,3 +1,3 @@
 with undeclares
-undeclaresMethod2
+method2WithUndeclares
 	instVar2 := 100
