@@ -75,6 +75,15 @@ baseline: spec
 				spec requires: #(#'Calypso-Plugins-SUnit-Environment' #'Calypso-Tools-SystemBrowser' ). ];
 			package: #'Calypso-Plugins-SUnit-Environment' with: [
 				spec requires: #(#'Calypso-Environment-System' ). ];
+			
+			package: #'Calypso-Plugins-Undeclared-Environment' with: [
+				spec requires: #(#'Calypso-Environment-System' ). ];
+			package: #'Calypso-Plugins-Undeclared-Environment-Tests' with: [
+				spec requires: #(#'Calypso-Environment-System-Tests' #'Calypso-Plugins-Undeclared-Environment' ). ];
+			package: #'Calypso-Plugins-Undeclared-Browser' with: [
+				spec requires: #(#'Calypso-Plugins-Undeclared-Environment' #'Calypso-Tools-SystemBrowser' ). ];
+			
+			
 			package: #'Calypso-Tools-CoreBrowser' with: [
 				spec requires: #(#'Calypso-Environment-System' 'Commander' 'SystemCommands' ). ];
 			package: #'Calypso-Tools-CoreBrowser-Tests' with: [
@@ -104,7 +113,7 @@ baseline: spec
 			group: 'Browser' with: #(#'Calypso-Tools-SystemBrowser' #'Calypso-Tools-MethodBrowser' 'Calypso-Tools-ProcessBrowser');
 			group: 'Core' with: #('Environment' 'Browser' );
 			group: 'Environment' with: #(#'Calypso-Environment-System' #'Calypso-Environment-Core' #'Calypso-Environment-Processor' );
-			group: 'FullBrowser' with: #('Browser' #'Calypso-Plugins-Monticello-Browser' #'Calypso-Plugins-SUnit-Browser' #'Calypso-Plugins-Nautilus-Browser' #'Calypso-Tools-OldToolCompatibillity' #'Calypso-Plugins-Critic-Browser' 'Calypso-Plugins-InheritanceAnalyzer-Browser' #'Calypso-Plugins-FileOut-Browser' #'Calypso-Plugins-MethodDiffTool' #'Calypso-Plugins-Deprecation-Browser' #'Calypso-Plugins-Reflectivity-Browser' );
-			group: 'FullEnvironment' with: #(#'Calypso-Plugins-Monticello-Environment' #'Calypso-Plugins-SUnit-Environment' 'Environment' 'Calypso-Plugins-InheritanceAnalyzer-Environment' #'Calypso-Plugins-FileOut-Environment' #'Calypso-Plugins-Deprecation-Environment' #'Calypso-Plugins-Reflectivity-Environment' #'Calypso-Plugins-Critic-Environment' );
-			group: 'Tests' with: #(#'Calypso-Environment-System-Tests' #'Calypso-Environment-Processor-Tests' #'Calypso-Tools-CoreBrowser-Tests' #'Calypso-Tools-SystemBrowser-Tests' #'Calypso-Tools-MethodBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' );
+			group: 'FullBrowser' with: #('Browser' #'Calypso-Plugins-Monticello-Browser' #'Calypso-Plugins-SUnit-Browser' #'Calypso-Plugins-Nautilus-Browser' #'Calypso-Tools-OldToolCompatibillity' #'Calypso-Plugins-Critic-Browser' 'Calypso-Plugins-InheritanceAnalyzer-Browser' #'Calypso-Plugins-FileOut-Browser' #'Calypso-Plugins-MethodDiffTool' #'Calypso-Plugins-Deprecation-Browser' #'Calypso-Plugins-Reflectivity-Browser' #'Calypso-Plugins-Undeclared-Browser');
+			group: 'FullEnvironment' with: #(#'Calypso-Plugins-Monticello-Environment' #'Calypso-Plugins-SUnit-Environment' 'Environment' 'Calypso-Plugins-InheritanceAnalyzer-Environment' #'Calypso-Plugins-FileOut-Environment' #'Calypso-Plugins-Deprecation-Environment' #'Calypso-Plugins-Reflectivity-Environment' #'Calypso-Plugins-Critic-Environment' #'Calypso-Plugins-Undeclared-Environment' );
+			group: 'Tests' with: #(#'Calypso-Environment-System-Tests' #'Calypso-Environment-Processor-Tests' #'Calypso-Tools-CoreBrowser-Tests' #'Calypso-Tools-SystemBrowser-Tests' #'Calypso-Tools-MethodBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' 'Calypso-Plugins-Undeclared-Environment-Tests');
 			group: 'default' with: #('FullEnvironment' 'FullBrowser' 'Tests' ). ].

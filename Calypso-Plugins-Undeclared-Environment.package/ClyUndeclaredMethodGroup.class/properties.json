@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroup",
+	"category" : "Calypso-Plugins-Undeclared-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUndeclaredMethodGroup",
+	"type" : "normal"
+}
