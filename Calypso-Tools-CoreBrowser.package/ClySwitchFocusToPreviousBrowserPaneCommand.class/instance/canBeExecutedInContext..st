@@ -1,0 +1,3 @@
+testing
+canBeExecutedInContext: aBrowserContext
+	^aBrowserContext browser isNavigationPanelFocused
