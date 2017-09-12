@@ -2,4 +2,4 @@
 systemBrowserMenuActivator
 	<commandActivator>
 	
-	^CmdContextMenuCommandActivator byRootGroupItemOrder: 1 for: ClyMethodGroupSystemBrowserContext 
+	^CmdContextMenuCommandActivator byRootGroupItemOrder: 2 for: ClyMethodGroupSystemBrowserContext 
