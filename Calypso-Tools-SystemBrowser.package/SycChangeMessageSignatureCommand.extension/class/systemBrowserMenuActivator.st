@@ -1,5 +1,6 @@
 *Calypso-Tools-SystemBrowser
 systemBrowserMenuActivator
 	<commandActivator>
-	
-	^CmdContextMenuCommandActivator byRootGroupItemFor: ClyMethodSystemBrowserContext 
+
+	^CmdContextMenuCommandActivator 
+		byRootGroupItemOrder: self systemBrowserMenuOrder for: ClyMethodSystemBrowserContext 

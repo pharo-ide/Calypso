@@ -2,4 +2,4 @@ activation
 browserMenuActivator
 	<commandActivator>
 	
-	^CmdContextMenuCommandActivator byRootGroupItemOrder: 20000 for: ClyBrowserContext
+	^CmdContextMenuCommandActivator byItemOf: CmdExtraMenuGroup for: ClyBrowserContext
