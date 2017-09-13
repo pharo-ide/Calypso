@@ -1,6 +1,6 @@
 initialization
 setUpAvailablePlugins
 
-	ClySystemEnvironmentPlugin allSubclasses 
+	ClyEnvironmentPlugin allSubclasses 
 		select: [ :each | each isAutoActivated ]
 		thenDo: [ :each | self addPlugin: each new ]
