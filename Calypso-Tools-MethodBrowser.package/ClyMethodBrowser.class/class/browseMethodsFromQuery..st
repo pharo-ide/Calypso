@@ -1,6 +1,6 @@
 opening
 browseMethodsFromQuery: aMethodQuery
 	| browser |
-	browser := self on: ClySystemNavigationEnvironment currentImage.
-	browser show: aMethodQuery inScope: ClySystemNavigationEnvironment currentImageScope.
+	browser := self on: ClyNavigationEnvironment currentImage.
+	browser show: aMethodQuery inScope: ClyNavigationEnvironment currentImageScope.
 	^browser open

@@ -1,0 +1,3 @@
+testing
+canBeInstalledIntoGlobalEnvironment: aNavigationEnvironment
+	^aNavigationEnvironment == ClyNavigationEnvironment currentImage

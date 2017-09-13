@@ -1,7 +1,4 @@
 items resolving
-resolvePropertiesOfMethod: anItem
+resolvePropertiesOfMethod: anEnvironmentItem
 
-	| method |
-	method := anItem actualObject.
 	
-	anItem addProperty: (ClyMethodDefinitionProperty of: method)

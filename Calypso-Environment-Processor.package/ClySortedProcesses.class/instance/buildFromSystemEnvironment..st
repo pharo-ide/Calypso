@@ -1,0 +1,4 @@
+building
+buildFromSystemEnvironment: aSystemEnvironment 
+
+	self buildFromProcesses: aSystemEnvironment allProcesses

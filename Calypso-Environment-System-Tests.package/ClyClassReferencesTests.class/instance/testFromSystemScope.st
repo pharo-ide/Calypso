@@ -2,7 +2,7 @@ tests
 testFromSystemScope
 
 	| allMethods selectors |
-	allMethods := self executeQueryInScope: ClySystemScope of: { ClySystemEnvironment currentImage}.
+	allMethods := self executeQueryInScope: ClySystemEnvironmentScope of: { ClySystemEnvironment currentImage}.
 	
 	self assert: allMethods size equals: 3.
 	selectors := allMethods collect: #selector as: Array.

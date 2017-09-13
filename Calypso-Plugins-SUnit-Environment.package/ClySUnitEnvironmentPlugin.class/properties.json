@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/13/2017 13:37",
-	"super" : "ClyEnvironmentPlugin",
+	"super" : "ClySystemEnvironmentPlugin",
 	"category" : "Calypso-Plugins-SUnit-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],

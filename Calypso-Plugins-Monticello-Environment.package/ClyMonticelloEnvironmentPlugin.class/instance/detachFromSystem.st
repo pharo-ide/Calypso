@@ -1,4 +1,4 @@
 controlling
 detachFromSystem
 
-	environment systemEnvironment unsubscribe: self
+	environment system unsubscribe: self
