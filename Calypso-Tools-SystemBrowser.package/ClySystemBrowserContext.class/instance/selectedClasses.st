@@ -1,3 +1,3 @@
-public
+accessing
 selectedClasses
-	^tool selectedClasses actualObjects
+	self subclassResponsibility 

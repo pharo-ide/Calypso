@@ -1,0 +1,3 @@
+accessing
+lastSelectedPackage
+	^self lastSelectedObjectIn: self selectedPackages

@@ -1,0 +1,3 @@
+public
+selectedMethods
+	^tool selectedMethods actualObjects

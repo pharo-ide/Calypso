@@ -1,4 +1,3 @@
 *Calypso-Tools-MethodBrowser
-of: selectedItems forMethodBrowser: aBrowser
-	^self new
-		prepareForMethodBrowser: aBrowser of: selectedItems
+of: selectedItems forMethodBrowser: aMethodBrowser
+	^self of: selectedItems for: aMethodBrowser 

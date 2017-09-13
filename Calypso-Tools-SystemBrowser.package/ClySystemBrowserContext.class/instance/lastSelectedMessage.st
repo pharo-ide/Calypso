@@ -1,0 +1,3 @@
+accessing
+lastSelectedMessage
+	^SycMessageDescription ofMethod: self lastSelectedMethod

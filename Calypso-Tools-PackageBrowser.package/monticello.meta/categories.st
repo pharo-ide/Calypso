@@ -1,0 +1,10 @@
+SystemOrganization addCategory: #'Calypso-Tools-PackageBrowser'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-Commands-Classes'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-Commands-Hierarchy'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-Commands-MetaLevel'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-Commands-MethodGroups'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-Commands-Packages'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-Table'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-TextEditors'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-Toolbar'!
+SystemOrganization addCategory: 'Calypso-Tools-PackageBrowser-UI'!

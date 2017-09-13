@@ -1,10 +1,6 @@
 SystemOrganization addCategory: #'Calypso-Tools-SystemBrowser'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Commands-Classes'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Commands-Hierarchy'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Commands-MetaLevel'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Commands-MethodGroups'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Commands-Packages'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Table'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-TextEditors'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Toolbar'!
-SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-UI'!
+SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Commands-Methods'!
+SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Commands-Queries'!
+SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Contexts'!
+SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-Editors-Methods'!
+SystemOrganization addCategory: 'Calypso-Tools-SystemBrowser-TableDecorators'!

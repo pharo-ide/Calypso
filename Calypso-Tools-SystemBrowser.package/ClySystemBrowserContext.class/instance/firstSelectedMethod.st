@@ -1,0 +1,3 @@
+accessing
+firstSelectedMethod
+	^self firstSelectedObjectIn: self selectedMethods

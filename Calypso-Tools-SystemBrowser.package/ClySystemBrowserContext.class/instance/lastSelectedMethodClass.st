@@ -1,6 +1,3 @@
-public
+accessing
 lastSelectedMethodClass
-	
-	| definition |
-	definition := self lastSelectedItem getProperty: ClyMethodDefinitionProperty.
-	^definition definitionClass
+	^self subclassResponsibility

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTableDecorator",
+	"category" : "Calypso-Tools-PackageBrowser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyPackageTableDecorator",
+	"type" : "normal"
+}

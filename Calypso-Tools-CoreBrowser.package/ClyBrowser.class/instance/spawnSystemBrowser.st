@@ -2,7 +2,7 @@ navigation
 spawnSystemBrowser
 	
 	| browser |
-	browser := ClySystemBrowser on: navigationEnvironment systemScope: self systemScope.
+	browser := ClyPackageBrowser on: navigationEnvironment systemScope: self systemScope.
 	browser disablePluginsWhichAreNotIn: self.
 	
 	browser prepareInitialStateBy: [

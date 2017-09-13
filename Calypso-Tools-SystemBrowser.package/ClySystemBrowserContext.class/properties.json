@@ -1,13 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "ClyBrowserContext",
-	"category" : "Calypso-Tools-SystemBrowser-UI",
+	"category" : "Calypso-Tools-SystemBrowser-Contexts",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"metaLevelScope"
-	],
+	"instvars" : [ ],
 	"name" : "ClySystemBrowserContext",
 	"type" : "normal"
 }

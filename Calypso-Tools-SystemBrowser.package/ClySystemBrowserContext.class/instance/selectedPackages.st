@@ -1,3 +1,3 @@
-public
+accessing
 selectedPackages
-	^tool selectedPackages actualObjects
+	self subclassResponsibility 

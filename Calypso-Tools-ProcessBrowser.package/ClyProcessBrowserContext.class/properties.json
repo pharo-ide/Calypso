@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowserContext",
+	"super" : "ClySystemBrowserContext",
 	"category" : "Calypso-Tools-ProcessBrowser",
 	"classinstvars" : [ ],
 	"pools" : [ ],

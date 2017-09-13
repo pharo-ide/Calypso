@@ -1,3 +1,3 @@
 activation
 activationContextClass
-	^ClyMethodGroupSystemBrowserContext 
+	^ClyPackageBrowserContextOfMethodGroups 

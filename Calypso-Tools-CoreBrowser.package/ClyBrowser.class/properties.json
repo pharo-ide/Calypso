@@ -6,15 +6,16 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"plugins",
 		"navigationPanel",
 		"navigationViews",
+		"toolPanel",
 		"toolbar",
-		"navigationEnvironment",
+		"tabManager",
 		"navigationHistory",
 		"navigationStarted",
-		"tabManager",
-		"toolPanel"
+		"plugins",
+		"navigationEnvironment",
+		"systemScope"
 	],
 	"name" : "ClyBrowser",
 	"type" : "normal"

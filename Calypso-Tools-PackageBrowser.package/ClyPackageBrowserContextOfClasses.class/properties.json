@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyPackageBrowserContext",
+	"category" : "Calypso-Tools-PackageBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyPackageBrowserContextOfClasses",
+	"type" : "normal"
+}
