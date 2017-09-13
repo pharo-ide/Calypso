@@ -3,5 +3,5 @@ installNewPlugin: anEnvironmentPluginClass
 	defaultGlobalEnvironments ifNil: [ ^self ].
 	
 	defaultGlobalEnvironments do: [ :each | 
-		(anEnvironmentPluginClass canBeInstalledIntoGlobalEnvironment: each)
+		(anEnvironmentPluginClass isAutoActivatedOn: each)
 			ifTrue: [ each addPlugin: anEnvironmentPluginClass new]]
