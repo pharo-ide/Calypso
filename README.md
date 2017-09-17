@@ -45,4 +45,4 @@ ClySystemBrowser open.
 
 ## What is a "Project" (as opposed to a "Package")?
 While project mode will become the default view in the future, for now it is more like a stub. 
-Some of the current directions are integration with a new package management Cargo (Christophe is working on it) and a possible Metacello backend.
+Some of the current directions are integration with a new package management [Cargo](https://github.com/demarey/cargo) (Christophe is working on it) and a possible Metacello backend.
