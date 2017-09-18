@@ -3,4 +3,4 @@ systemBrowserMenuActivator
 	<commandActivator>
 
 	^CmdContextMenuCommandActivator 
-		byRootGroupItemOrder: self systemBrowserMenuOrder for: ClyMethodSystemBrowserContext 
+		byRootGroupItemOrder: self systemBrowserMenuOrder for: ClyPackageBrowserContextOfMethods 

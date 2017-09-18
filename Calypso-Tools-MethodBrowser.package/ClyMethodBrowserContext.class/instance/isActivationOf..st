@@ -1,4 +1,4 @@
 testing
 isActivationOf: aToolContextClass
 	^(super isActivationOf: aToolContextClass)
-		or: [ aToolContextClass includesBehavior: ClyMethodSystemBrowserContext ]
+		or: [ aToolContextClass includesBehavior: ClyPackageBrowserContextOfMethods ]

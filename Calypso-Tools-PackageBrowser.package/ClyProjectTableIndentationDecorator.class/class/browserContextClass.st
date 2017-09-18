@@ -1,3 +1,3 @@
 decoration
 browserContextClass
-	^ClyBrowserContext 
+	^ClySystemBrowserContext 

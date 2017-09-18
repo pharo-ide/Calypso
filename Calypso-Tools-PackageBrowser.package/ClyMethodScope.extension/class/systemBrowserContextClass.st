@@ -1,3 +1,3 @@
 *Calypso-Tools-PackageBrowser
 systemBrowserContextClass
-	^ClyMethodSystemBrowserContext 
+	^ClyPackageBrowserContextOfMethods 

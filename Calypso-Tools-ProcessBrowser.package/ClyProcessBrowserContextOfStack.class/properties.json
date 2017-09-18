@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyProcessBrowserStackContext",
+	"name" : "ClyProcessBrowserContextOfStack",
 	"type" : "normal"
 }

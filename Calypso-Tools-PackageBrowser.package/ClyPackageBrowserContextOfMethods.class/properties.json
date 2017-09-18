@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyMethodSystemBrowserContext",
+	"name" : "ClyPackageBrowserContextOfMethods",
 	"type" : "normal"
 }

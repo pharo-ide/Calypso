@@ -2,4 +2,4 @@
 browserTabActivator
 	<commandActivator>
 	
-	^ClyBrowserTabCommandActivator for: ClyMethodSystemBrowserContext 
+	^ClyBrowserTabCommandActivator for: ClyPackageBrowserContextOfMethods 

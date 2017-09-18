@@ -1,3 +1,3 @@
 *Calypso-Tools-ProcessBrowser
 processBrowserContextClass
-	^ClyProcessBrowserProcessContext 
+	^ClyProcessBrowserContextOfProcesses 

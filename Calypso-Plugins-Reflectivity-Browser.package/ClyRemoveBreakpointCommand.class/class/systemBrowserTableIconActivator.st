@@ -2,5 +2,5 @@ activation
 systemBrowserTableIconActivator
 	<commandActivator>
 	
-	^ClyTableIconCommandActivator for: ClyMethodSystemBrowserContext
+	^ClyTableIconCommandActivator for: ClyPackageBrowserContextOfMethods
 	
