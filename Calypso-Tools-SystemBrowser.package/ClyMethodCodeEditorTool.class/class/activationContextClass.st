@@ -1,3 +1,3 @@
 accessing
 activationContextClass
-	^ClyPackageBrowserContextOfMethods
+	^ClySystemBrowserContext
