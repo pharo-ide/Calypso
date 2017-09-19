@@ -1,3 +1,3 @@
-accessing
+private
 selectedMethodItems
 	^tool selectedMethods items

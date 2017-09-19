@@ -1,3 +1,3 @@
-accessing
+accessing-methods
 selectedMethods
-	self subclassResponsibility 
+	^self actualSelectionFrom: self selectedMethodItems

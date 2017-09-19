@@ -1,3 +1,3 @@
-accessing
+accessing-packages
 selectedPackages
-	self subclassResponsibility 
+	^self actualSelectionFrom: self selectedPackageItems

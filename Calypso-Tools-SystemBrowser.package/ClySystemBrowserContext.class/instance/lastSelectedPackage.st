@@ -1,3 +1,3 @@
-accessing
+accessing-packages
 lastSelectedPackage
 	^self lastSelectedObjectIn: self selectedPackages

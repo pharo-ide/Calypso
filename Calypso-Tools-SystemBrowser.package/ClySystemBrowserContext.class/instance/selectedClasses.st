@@ -1,3 +1,3 @@
-accessing
+accessing-classes
 selectedClasses
-	self subclassResponsibility 
+	^self actualSelectionFrom: self selectedClassItems 

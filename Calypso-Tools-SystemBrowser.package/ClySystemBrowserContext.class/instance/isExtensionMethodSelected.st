@@ -1,4 +1,4 @@
-testing
+accessing-methods
 isExtensionMethodSelected
 	| definition |
 	self isMethodSelected ifFalse: [ ^false].

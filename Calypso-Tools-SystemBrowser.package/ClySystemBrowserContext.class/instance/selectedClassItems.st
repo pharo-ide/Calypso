@@ -1,3 +1,3 @@
 private
-selectedMethodItems
+selectedClassItems
 	self subclassResponsibility 
