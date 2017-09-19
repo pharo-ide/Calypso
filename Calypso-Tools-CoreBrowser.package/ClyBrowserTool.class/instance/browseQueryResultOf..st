@@ -1,0 +1,3 @@
+operations
+browseQueryResultOf: anEnvironmentQuery 
+	^browser browseQueryResultOf: anEnvironmentQuery

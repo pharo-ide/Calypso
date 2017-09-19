@@ -1,3 +1,4 @@
 instance creation
 package: aPackage
-	^self definitionItem: (ClyEnvironmentItem named: aPackage name with: aPackage)
+	^self new 
+		definitionPackage: aPackage

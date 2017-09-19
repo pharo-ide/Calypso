@@ -3,4 +3,4 @@ methodClass
 
 	self belongsToCurrentBrowserContext ifFalse: [ ^editingMethod origin ].
 	
-	^browser selectClassForEditorOfMethod: editingMethod
+	^browser chooseClassForEditorOfMethod: editingMethod

@@ -1,7 +1,7 @@
 operations
 selectClassForNewMethodIfNone: aBlock
 	| methodClass targetClasses |
-	targetClasses := browser selectClassesForNewMethod: self editingMethod.
+	targetClasses := browser chooseClassesForNewMethod: self editingMethod.
 	
 	methodClass := targetClasses first.
 	targetClasses size > 1 ifTrue: [

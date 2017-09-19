@@ -2,4 +2,4 @@ testing
 canBeUsedInContext: aBrowserContext
 	
 	^(super canBeUsedInContext: aBrowserContext)
-		or: [ aBrowserContext isActivationOf: ClyMethodBrowserContext]
+		or: [ aBrowserContext isActivationOf: ClySystemQueryBrowserContext]

@@ -1,3 +1,3 @@
 opening
 browseSendersOf: aSymbol 
-	^ClyMethodBrowser browseSendersOf: aSymbol 
+	^ClySystemQueryBrowser browseSendersOf: aSymbol 

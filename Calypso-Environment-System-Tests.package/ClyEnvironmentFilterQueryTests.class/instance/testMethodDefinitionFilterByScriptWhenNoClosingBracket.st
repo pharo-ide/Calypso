@@ -5,7 +5,7 @@ testMethodDefinitionFilterByScriptWhenNoClosingBracket
 	scope := environment selectScope: ClyLocalClassScope of: {ClyClass1FromP1}.
 	allMethods := scope query: ClySortedMethods.
 	filteredMethods := allMethods filterItemsBy: (
-		ClyMethodDefinitionFilter pattern: '[:each | each methodClass traits isEmpty').
+		ClyQueryResultFilter pattern: '[:each | each methodClass traits isEmpty').
 	
 	items := filteredMethods retrieveAll.
 	

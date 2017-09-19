@@ -1,4 +1,4 @@
 testing
 canBeExecutedInContext: aBrowserContext
 
-	^aBrowserContext browser methodView dataSource hasMetaProperty: ClyTestResultProperty 
+	^aBrowserContext browser resultView dataSource hasMetaProperty: ClyTestResultProperty 

@@ -1,13 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyItemDefinitionProperty",
+	"super" : "ClyDefinitionProperty",
 	"category" : "Calypso-Environment-Processor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"receiverItem",
-		"closureItem"
+		"closureItem",
+		"definitionMethodItem"
 	],
 	"name" : "ClyMethodContextDefinitionProperty",
 	"type" : "normal"
