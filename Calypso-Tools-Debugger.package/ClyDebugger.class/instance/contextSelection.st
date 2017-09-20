@@ -1,3 +1,3 @@
 accessing
-selectedContexts
+contextSelection
 	^stackView selection

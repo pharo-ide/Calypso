@@ -1,3 +1,3 @@
-accessing
+selection-contexts
 selectedContexts
-	^self selectedObjects
+	^self actualSelectionFrom: self selectedContextItems

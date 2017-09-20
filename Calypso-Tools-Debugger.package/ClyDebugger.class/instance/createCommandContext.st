@@ -1,3 +1,3 @@
 context
 createCommandContext
-	^self createContextOf: self selectedContexts
+	^self createContextOf: self contextSelection

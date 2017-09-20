@@ -1,3 +1,3 @@
-accessing
+selection-processes
 selectedProcesses
-	^tool selectedProcesses actualObjects
+	^self actualSelectionFrom: self selectedProcessItems 

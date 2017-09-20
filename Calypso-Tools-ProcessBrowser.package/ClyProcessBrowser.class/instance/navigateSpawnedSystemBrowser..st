@@ -1,8 +1,8 @@
 navigation
 navigateSpawnedSystemBrowser: aSystemBrowser
 	| context |
-	self selectedContexts isEmpty ifTrue: [ ^self ].
+	self contextSelection isEmpty ifTrue: [ ^self ].
 	
-	context := self createContextOfSingleItem: self selectedContexts lastSelectedItem.
+	context := self createContextOfSingleItem: self contextSelection lastSelectedItem.
 	
 	aSystemBrowser selectMethod: context lastSelectedMethod

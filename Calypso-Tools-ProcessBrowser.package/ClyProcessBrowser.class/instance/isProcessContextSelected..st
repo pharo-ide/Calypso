@@ -1,3 +1,3 @@
 testing
 isProcessContextSelected: aContext 
-	^self selectedContexts includesActualObject: aContext
+	^self contextSelection includesActualObject: aContext

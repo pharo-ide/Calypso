@@ -1,3 +1,3 @@
-operations
+browser state
 updateBrowser
 	self browser update

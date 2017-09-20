@@ -1,0 +1,3 @@
+selection-contexts
+selectedContextItems
+	^tool contextSelection items

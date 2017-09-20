@@ -1,4 +1,4 @@
 testing
 isProcessContextSelected: aMethodContext
 
-	^self selectedContexts includesActualObject: aMethodContext 	
+	^self contextSelection includesActualObject: aMethodContext 	
