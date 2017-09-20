@@ -1,0 +1,3 @@
+selection-contexts
+selectedContexts
+	^self actualSelectionFrom: self selectedContextItems

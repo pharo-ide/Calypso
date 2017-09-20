@@ -1,0 +1,5 @@
+updating
+browserContextWasChanged
+	self updateMethodTagsAndPackage.
+	
+	super browserContextWasChanged

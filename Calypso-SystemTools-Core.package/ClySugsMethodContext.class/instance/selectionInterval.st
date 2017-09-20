@@ -1,0 +1,3 @@
+selection
+selectionInterval
+	^self selectedInterval 

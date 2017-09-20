@@ -1,0 +1,4 @@
+public
+selectedClasses
+
+	^{self selectedClass}

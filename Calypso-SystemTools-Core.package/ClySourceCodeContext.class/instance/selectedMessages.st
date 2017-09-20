@@ -1,0 +1,4 @@
+public
+selectedMessages
+
+	^{self selectedMessage}
