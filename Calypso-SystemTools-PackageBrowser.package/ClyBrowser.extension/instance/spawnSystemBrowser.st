@@ -1,4 +1,4 @@
-navigation
+*Calypso-SystemTools-PackageBrowser
 spawnSystemBrowser
 	
 	| browser |

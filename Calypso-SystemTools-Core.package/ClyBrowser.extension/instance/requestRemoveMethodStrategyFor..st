@@ -1,4 +1,4 @@
-commands support
+*Calypso-SystemTools-Core
 requestRemoveMethodStrategyFor: methods
 	| selectors result strategies caption senders |
 	selectors := methods collect: [ :each | each selector ] as: IdentitySet.	
