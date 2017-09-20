@@ -1,3 +1,3 @@
-accessing-packages
+selection-packages
 isPackageSelected
 	^self selectedPackageItems notEmpty

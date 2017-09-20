@@ -1,3 +1,3 @@
-public
+browser state
 restoreBrowserState
 	self subclassResponsibility 

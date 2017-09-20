@@ -1,3 +1,3 @@
-accessing-classes
+selection-classes
 lastSelectedClass
 	^self lastSelectedObjectIn: self selectedClasses

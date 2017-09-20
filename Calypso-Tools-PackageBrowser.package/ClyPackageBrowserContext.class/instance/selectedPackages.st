@@ -1,3 +1,0 @@
-public
-selectedPackages
-	^tool packageSelection actualObjects

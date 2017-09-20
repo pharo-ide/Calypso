@@ -1,3 +1,0 @@
-testing
-isClassSelected
-	^self hasSelectedItems

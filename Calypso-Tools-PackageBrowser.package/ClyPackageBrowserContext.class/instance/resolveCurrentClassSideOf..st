@@ -1,3 +1,3 @@
-public
+accessing
 resolveCurrentClassSideOf: aClass
 	^metaLevelScope resolveClass: aClass

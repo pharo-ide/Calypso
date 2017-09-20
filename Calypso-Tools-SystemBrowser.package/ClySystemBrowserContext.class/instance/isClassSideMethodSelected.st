@@ -1,4 +1,4 @@
-accessing-methods
+selection-methods
 isClassSideMethodSelected
 	| definition |
 	self isMethodSelected ifFalse: [ ^false].

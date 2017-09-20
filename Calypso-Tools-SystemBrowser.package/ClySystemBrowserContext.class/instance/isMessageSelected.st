@@ -1,3 +1,3 @@
-accessing-messages
+selection-messages
 isMessageSelected
 	^self isMethodSelected 

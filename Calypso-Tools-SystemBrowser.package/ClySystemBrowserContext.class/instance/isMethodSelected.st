@@ -1,3 +1,3 @@
-accessing-methods
+selection-methods
 isMethodSelected
 	^self selectedMethodItems notEmpty

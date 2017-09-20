@@ -1,3 +1,3 @@
-private
+selection-methods
 selectedMethodItems
 	self subclassResponsibility 

@@ -1,3 +1,3 @@
-public
+selection-method groups
 selectedMethodGroups
-	^tool methodGroupSelection actualObjects
+	^self actualSelectionFrom: self selectedMethodGroupItems 

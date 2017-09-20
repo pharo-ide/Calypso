@@ -1,3 +1,3 @@
-accessing-classes
+selection-classes
 selectedClasses
 	^self actualSelectionFrom: self selectedClassItems 

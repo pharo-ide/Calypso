@@ -1,3 +1,3 @@
-accessing-classes
+selection-classes
 isClassSelected
 	^self selectedClassItems notEmpty

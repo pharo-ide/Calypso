@@ -1,3 +1,0 @@
-testing
-isPackageSelected
-	^self hasSelectedItems 

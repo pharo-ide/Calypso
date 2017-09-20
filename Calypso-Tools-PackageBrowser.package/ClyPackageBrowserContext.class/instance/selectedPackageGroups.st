@@ -1,3 +1,3 @@
-public
+selection-package groups
 selectedPackageGroups
-	^tool packageGroupSelection actualObjects
+	^self actualSelectionFrom: self selectedPackageGroupItems 

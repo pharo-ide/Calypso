@@ -1,3 +1,3 @@
-accessing-methods
+selection-methods
 selectedMethods
 	^self actualSelectionFrom: self selectedMethodItems

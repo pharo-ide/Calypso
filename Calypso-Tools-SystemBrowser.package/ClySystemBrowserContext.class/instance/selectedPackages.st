@@ -1,3 +1,3 @@
-accessing-packages
+selection-packages
 selectedPackages
 	^self actualSelectionFrom: self selectedPackageItems

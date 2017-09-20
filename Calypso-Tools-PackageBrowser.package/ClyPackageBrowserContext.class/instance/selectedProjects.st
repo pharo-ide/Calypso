@@ -1,3 +1,3 @@
-public
+selection-projects
 selectedProjects
-	^tool projectSelection actualObjects
+	^self actualSelectionFrom: self selectedProjectItems

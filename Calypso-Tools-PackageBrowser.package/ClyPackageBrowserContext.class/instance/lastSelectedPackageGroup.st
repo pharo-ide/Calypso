@@ -1,3 +1,3 @@
-public
+selection-package groups
 lastSelectedPackageGroup
 	^self lastSelectedObjectIn: self selectedPackageGroups

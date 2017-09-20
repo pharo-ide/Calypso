@@ -1,3 +1,3 @@
-testing
+selection-variables
 isVariableSelected
 	^self hasSelectedItems 

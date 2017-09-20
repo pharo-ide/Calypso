@@ -1,3 +1,3 @@
-testing
+selection-method groups
 isMethodGroupSelected
-	^tool methodGroupSelection isEmpty not
+	^self selectedMethodGroupItems notEmpty

@@ -1,4 +1,4 @@
-accessing-methods
+selection-methods
 lastSelectedMethodClass
 	| lastMethodItem |
 	lastMethodItem := self lastSelectedObjectIn: self selectedMethodItems.
