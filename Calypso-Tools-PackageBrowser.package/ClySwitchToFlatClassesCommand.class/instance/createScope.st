@@ -1,4 +1,4 @@
 execution
 createScope
 
-	^browser selectedPackages asItemsScope
+	^browser packageSelection asItemsScope

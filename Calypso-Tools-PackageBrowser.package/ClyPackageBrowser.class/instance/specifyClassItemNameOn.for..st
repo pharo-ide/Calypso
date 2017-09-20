@@ -5,7 +5,7 @@ specifyClassItemNameOn: nameMorph for: classItem
 	
 	definition := classItem getProperty: ClyClassDefinitionProperty.
 	
-	self selectedPackages isMultipleSelected ifTrue: [
+	self packageSelection isMultipleSelected ifTrue: [
 		nameMorph contents: (definition printFullNameOf: classItem)].
 	(self isPackagePartOfSelection: definition definitionPackage) 
-		ifFalse: [nameMorph color: Smalltalk ui theme classExtensionColor].
+		ifFalse: [nameMorph color: Smalltalk ui theme classExtensionColor]

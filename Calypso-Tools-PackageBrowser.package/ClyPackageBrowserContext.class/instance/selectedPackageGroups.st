@@ -1,3 +1,3 @@
 public
 selectedPackageGroups
-	^tool selectedPackageGroups actualObjects
+	^tool packageGroupSelection actualObjects

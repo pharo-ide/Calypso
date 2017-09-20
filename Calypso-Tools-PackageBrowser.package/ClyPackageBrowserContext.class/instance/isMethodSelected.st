@@ -1,3 +1,3 @@
 testing
 isMethodSelected
-	^tool selectedMethods isEmpty not
+	^tool methodSelection isEmpty not

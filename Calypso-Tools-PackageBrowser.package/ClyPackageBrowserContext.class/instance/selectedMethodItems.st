@@ -1,3 +1,3 @@
 private
 selectedMethodItems
-	^tool selectedMethods items
+	^tool methodSelection items

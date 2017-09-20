@@ -1,3 +1,3 @@
 testing
 isClassSelected
-	^tool selectedClasses isEmpty not
+	^tool classSelection isEmpty not

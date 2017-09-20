@@ -1,3 +1,3 @@
 testing
 isPackageSelected
-	^tool selectedPackages isEmpty not
+	^tool packageSelection isEmpty not

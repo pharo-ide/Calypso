@@ -1,3 +1,3 @@
 public
 selectedClasses
-	^tool selectedClasses actualObjects
+	^tool classSelection actualObjects

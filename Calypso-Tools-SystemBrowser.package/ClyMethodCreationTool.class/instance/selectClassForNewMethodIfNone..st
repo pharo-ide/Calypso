@@ -1,7 +1,7 @@
 operations
 selectClassForNewMethodIfNone: aBlock
 	| targetClasses selectedClass |
-	targetClasses := browser selectClassesForNewMethod.
+	targetClasses := browser chooseClassesForNewMethod.
 	(targetClasses includes: methodClass) ifFalse: [ 
 		targetClasses := {methodClass}, targetClasses ].
 	

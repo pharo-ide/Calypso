@@ -2,7 +2,7 @@ tests
 testSelectedTabsContextItemsWithSnapshotOfDataSource
 
 	| tab contextItem |
-	browser selectedPackages selectItems: {browser packageView dataSource elementAt: 1}.
+	browser packageSelection selectItems: {browser packageView dataSource elementAt: 1}.
 	self snapshotNavigationState.
 	
 	tab := navigationState selectedTabs first.

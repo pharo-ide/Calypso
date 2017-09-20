@@ -2,5 +2,5 @@ navigation
 selectPackage: aPackage
 
 	self changeNavigationStateBy: [
-		self selectedPackages selectItemsWith: { aPackage }
+		self packageSelection selectItemsWith: { aPackage }
 	]

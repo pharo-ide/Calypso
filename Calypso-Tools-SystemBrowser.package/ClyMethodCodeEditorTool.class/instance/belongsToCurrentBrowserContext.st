@@ -1,5 +1,5 @@
 testing
 belongsToCurrentBrowserContext
-	^browser selectedMethods isEmpty 
+	^browser methodSelection isEmpty 
 		ifTrue: [ browser isClassSelected: context lastSelectedMethodClass ]
 		ifFalse: [ browser isMethodSelected: context lastSelectedMethod]

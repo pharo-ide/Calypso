@@ -7,7 +7,7 @@ specifyMethodItemNameOn: nameMorph for: methodItem
 	(self isPackagePartOfSelection: definition definitionPackage) ifFalse: [
 		nameMorph color: Smalltalk ui theme classExtensionColor].
 	
-	self selectedClasses isMultipleSelected ifTrue: [
+	self classSelection isMultipleSelected ifTrue: [
 		^nameMorph contents: (definition printFullNameOf: methodItem)].
 	
 	highlightMainMethods := methodGroupView dataSource isBasedOnScopeOfMultipleObjects.

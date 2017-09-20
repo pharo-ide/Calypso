@@ -1,3 +1,3 @@
 public
 selectedProjects
-	^tool selectedProjects actualObjects
+	^tool projectSelection actualObjects

@@ -1,3 +1,3 @@
 public
 selectedMethods
-	^tool selectedMethods actualObjects
+	^tool methodSelection actualObjects

@@ -1,4 +1,4 @@
 testing
 isPackageSelected: aPackage
 
-	^self selectedPackages includesActualObject: aPackage
+	^self packageSelection includesActualObject: aPackage

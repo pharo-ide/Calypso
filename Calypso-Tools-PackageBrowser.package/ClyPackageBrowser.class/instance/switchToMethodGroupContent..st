@@ -6,4 +6,4 @@ switchToMethodGroupContent: contentClass
 		methodGroupContent := contentClass.
 		newDS := methodGroupView dataSource withNewContent: methodGroupContent.
 		methodGroupView dataSource: newDS.
-		self showMethodsForGroups: self selectedMethodGroups]
+		self showMethodsForGroups: self methodGroupSelection]

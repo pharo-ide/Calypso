@@ -1,11 +1,11 @@
 navigation
 navigateSpawnedSystemBrowser: aSystemBrowser
 
-	self selectedMethods isEmpty ifFalse: [ 
-		^aSystemBrowser selectMethod: self selectedMethods lastSelectedItem actualObject].
+	self methodSelection isEmpty ifFalse: [ 
+		^aSystemBrowser selectMethod: self methodSelection lastSelectedItem actualObject].
 	
-	self selectedClasses isEmpty ifFalse: [ 
-		^aSystemBrowser selectClass: self selectedClasses lastSelectedItem actualObject].
+	self classSelection isEmpty ifFalse: [ 
+		^aSystemBrowser selectClass: self classSelection lastSelectedItem actualObject].
 	
-	self selectedPackages isEmpty ifFalse: [ 
-		^aSystemBrowser selectPackage: self selectedPackages lastSelectedItem actualObject]
+	self packageSelection isEmpty ifFalse: [ 
+		^aSystemBrowser selectPackage: self packageSelection lastSelectedItem actualObject]

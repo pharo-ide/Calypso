@@ -1,3 +1,3 @@
 accessing
-selectedMethods
+methodSelection
 	^methodView selection

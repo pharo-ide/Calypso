@@ -9,4 +9,4 @@ showMethodsForClasses: selectedClasses
 	dataSource childrenStructure: { ClyMethodGroupScope -> ClySortedMethodGroups }.
 	methodGroupView dataSource: dataSource.
 	
-	self showMethodsForGroups: self selectedMethodGroups
+	self showMethodsForGroups: self methodGroupSelection

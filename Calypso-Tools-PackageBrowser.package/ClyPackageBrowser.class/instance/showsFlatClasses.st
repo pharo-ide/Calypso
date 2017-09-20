@@ -1,4 +1,4 @@
 testing
 showsFlatClasses
-	^self selectedPackages isEmpty not 
+	^self packageSelection isEmpty not 
 		and: [ (classView showsContentInScope: ClyClassHierarchyScope) not]

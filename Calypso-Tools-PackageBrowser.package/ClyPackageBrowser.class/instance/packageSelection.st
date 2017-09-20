@@ -1,3 +1,3 @@
 accessing
-selectedPackages
+packageSelection
 	^packageView selection asSelectedParentsOf: ClyPackageScope

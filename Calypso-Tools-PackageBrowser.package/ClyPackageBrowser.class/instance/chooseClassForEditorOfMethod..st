@@ -2,8 +2,8 @@ accessing
 chooseClassForEditorOfMethod: aMethod
 
 	| selectedClass |
-	self selectedClasses isSingleSelected ifTrue: [ 
-		selectedClass := self selectedClasses lastSelectedItem actualObject.
+	self classSelection isSingleSelected ifTrue: [ 
+		selectedClass := self classSelection lastSelectedItem actualObject.
 		^self resolveCurrentClassSideOf: selectedClass ].
 	
 	^aMethod origin

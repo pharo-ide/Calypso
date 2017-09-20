@@ -4,7 +4,7 @@ selectPackage: aPackage atClassTag: tagName
 	| packageItem targetClassGroup |
 	self changeNavigationStateBy: [
 		self selectPackage: aPackage.
-		packageItem := self selectedPackages lastSelectedItem.
+		packageItem := self packageSelection lastSelectedItem.
 		packageItem expand.
 		targetClassGroup := packageItem childrenItems detect: [:each | each name = tagName ].
 	

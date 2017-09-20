@@ -1,4 +1,4 @@
 execution
 createScope
 
-	^self classViewScopeClass basis: {browser selectedClasses lastSelectedItem actualObject}
+	^self classViewScopeClass basis: {browser classSelection lastSelectedItem actualObject}

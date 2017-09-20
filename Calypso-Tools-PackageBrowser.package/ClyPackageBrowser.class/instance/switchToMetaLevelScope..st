@@ -7,4 +7,4 @@ switchToMetaLevelScope: scopeClass
 		metaLevelScope := scopeClass.	
 		newDS := methodGroupView dataSource withNewScope: metaLevelScope.
 		methodGroupView dataSource: newDS.	
-		self showMethodsForGroups: self selectedMethodGroups]
+		self showMethodsForGroups: self methodGroupSelection]
