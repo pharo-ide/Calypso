@@ -1,0 +1,3 @@
+private
+createBrowser
+	^ClySystemQueryBrowser new

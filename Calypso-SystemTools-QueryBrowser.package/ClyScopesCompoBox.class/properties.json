@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserToolbarItemMorph",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dropList",
+		"browser"
+	],
+	"name" : "ClyScopesCompoBox",
+	"type" : "normal"
+}

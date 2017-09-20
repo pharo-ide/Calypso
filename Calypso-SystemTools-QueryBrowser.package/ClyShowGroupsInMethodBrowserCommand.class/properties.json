@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroupCommand",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyShowGroupsInMethodBrowserCommand",
+	"type" : "normal"
+}

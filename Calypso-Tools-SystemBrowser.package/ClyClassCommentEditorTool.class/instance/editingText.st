@@ -1,0 +1,3 @@
+accessing
+editingText
+	^editingClass comment

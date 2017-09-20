@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Calypso-SystemTools-PackageBrowser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodGroupItem",
+		"label"
+	],
+	"name" : "ClyMethodVisibilityMorph",
+	"type" : "normal"
+}
