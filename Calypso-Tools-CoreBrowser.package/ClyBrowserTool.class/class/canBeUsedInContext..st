@@ -3,4 +3,4 @@ canBeUsedInContext: aBrowserContext
 	
 	self isAbstract ifTrue: [ ^false ].
 	
-	^aBrowserContext isActivationOf: self activationContextClass
+	^aBrowserContext isActivationOf: self contextClass

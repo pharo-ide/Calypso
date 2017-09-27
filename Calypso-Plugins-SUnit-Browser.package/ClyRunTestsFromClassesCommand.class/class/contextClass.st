@@ -1,3 +1,3 @@
 activation
-activationContextClass
+contextClass
 	^ClyPackageBrowserContextOfClasses 

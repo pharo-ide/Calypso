@@ -2,4 +2,4 @@ activation
 systemBrowserMenuActivator
 	<commandActivator>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: self activationContextClass
+	^CmdContextMenuCommandActivation byRootGroupItemFor: self contextClass
