@@ -2,4 +2,4 @@ activation
 processBrowserToolbarActivator
 	<commandActivator>
 	
-	^ClyToolbarCommandActivator byRootGroupItemFor: ClyProcessBrowserContextOfProcesses
+	^ClyToolbarCommandActivation byRootGroupItemFor: ClyProcessBrowserContextOfProcesses

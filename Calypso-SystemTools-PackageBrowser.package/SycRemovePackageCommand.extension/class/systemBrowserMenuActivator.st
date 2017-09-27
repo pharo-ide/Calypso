@@ -2,4 +2,4 @@
 systemBrowserMenuActivator
 	<commandActivator>
 	
-	^CmdContextMenuCommandActivator byRootGroupItemFor: ClyPackageBrowserContextOfPackages 
+	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyPackageBrowserContextOfPackages 

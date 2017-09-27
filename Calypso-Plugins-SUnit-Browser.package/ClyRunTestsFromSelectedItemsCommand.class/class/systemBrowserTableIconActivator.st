@@ -2,4 +2,4 @@ activation
 systemBrowserTableIconActivator
 	<commandActivator>
 	
-	^ClyTableIconCommandActivator for: self activationContextClass
+	^ClyTableIconCommandActivation for: self activationContextClass

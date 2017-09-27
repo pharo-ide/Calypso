@@ -3,4 +3,4 @@ createDragPassengerFor: aSelection
 	| context |
 	context := browser createContextOf: aSelection. 
 	
-	^CmdDragAndDropCommandActivator createDragPassengerInContext: context
+	^CmdDragAndDropCommandActivation createDragPassengerInContext: context

@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyTableIconCommandActivator",
+	"name" : "ClyTableIconCommandActivation",
 	"type" : "normal"
 }

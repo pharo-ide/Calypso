@@ -2,4 +2,4 @@ activation
 textEditorShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator by: self defaultShortcut for: ClyTextEditorContext
+	^CmdShortcutCommandActivation by: self defaultShortcut for: ClyTextEditorContext

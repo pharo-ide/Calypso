@@ -2,4 +2,4 @@ activation
 criticTableIconActivator
 	<commandActivator>
 	
-	^ClyTableIconCommandActivator for: ClyCriticContext
+	^ClyTableIconCommandActivation for: ClyCriticContext

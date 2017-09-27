@@ -2,4 +2,4 @@
 sourceCodeShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator renamingFor: ClySourceCodeContext 
+	^CmdShortcutCommandActivation renamingFor: ClySourceCodeContext 

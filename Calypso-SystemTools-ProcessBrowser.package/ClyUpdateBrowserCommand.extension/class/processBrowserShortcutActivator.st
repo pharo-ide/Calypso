@@ -2,4 +2,4 @@
 processBrowserShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator by: $r command for: ClyProcessBrowserContext
+	^CmdShortcutCommandActivation by: $r command for: ClyProcessBrowserContext

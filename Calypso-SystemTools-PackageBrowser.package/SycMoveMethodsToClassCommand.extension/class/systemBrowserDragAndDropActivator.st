@@ -2,5 +2,5 @@
 systemBrowserDragAndDropActivator
 	<commandActivator>
 	
-	^CmdDragAndDropCommandActivator 
+	^CmdDragAndDropCommandActivation 
 		for: ClyPackageBrowserContextOfMethods toDropIn: ClyPackageBrowserContextOfClasses

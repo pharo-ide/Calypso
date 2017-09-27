@@ -2,4 +2,4 @@
 methodBrowserToolbarActivator
 	<commandActivator>
 	
-	^ClyToolbarCommandActivator byItemOf: ClyButtonToolbarGroup for: ClySystemQueryBrowserContext 
+	^ClyToolbarCommandActivation byItemOf: ClyButtonToolbarGroup for: ClySystemQueryBrowserContext 

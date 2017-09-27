@@ -2,4 +2,4 @@ activation
 systemBrowserShortcut
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator by: $s meta for: ClyGlobalPackageBrowserContext 
+	^CmdShortcutCommandActivation by: $s meta for: ClyGlobalPackageBrowserContext 

@@ -1,4 +1,4 @@
-tab actions
+*Calypso-Tools-CoreBrowser
 buildBrowserTabActions
 
 	self canExecuteCommand ifFalse: [ ^#() ].

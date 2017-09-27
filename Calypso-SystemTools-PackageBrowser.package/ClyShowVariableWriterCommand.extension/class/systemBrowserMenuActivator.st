@@ -2,4 +2,4 @@
 systemBrowserMenuActivator
 	<commandActivator>
 	
-	^CmdContextMenuCommandActivator byItemOf: ClyQueryMenuGroup order: 2001 for: ClyPackageBrowserContextOfVariables 
+	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup order: 2001 for: ClyPackageBrowserContextOfVariables 

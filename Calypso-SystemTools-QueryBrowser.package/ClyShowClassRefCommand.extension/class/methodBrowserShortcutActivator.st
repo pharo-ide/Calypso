@@ -2,4 +2,4 @@
 methodBrowserShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator by: $c meta, $n meta for: ClySystemQueryBrowserContext
+	^CmdShortcutCommandActivation by: $c meta, $n meta for: ClySystemQueryBrowserContext

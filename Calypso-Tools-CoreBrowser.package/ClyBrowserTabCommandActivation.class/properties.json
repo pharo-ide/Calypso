@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "CmdMenuCommandActivationStrategy",
-	"category" : "Calypso-Tools-CoreBrowser-Toolbar",
+	"category" : "Calypso-Tools-CoreBrowser-Tabs",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyToolbarCommandActivator",
+	"name" : "ClyBrowserTabCommandActivation",
 	"type" : "normal"
 }

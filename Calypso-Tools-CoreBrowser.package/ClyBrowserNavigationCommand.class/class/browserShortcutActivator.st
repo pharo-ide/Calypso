@@ -2,4 +2,4 @@ activation
 browserShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator by: self defaultShortcut for: ClyBrowserContext
+	^CmdShortcutCommandActivation by: self defaultShortcut for: ClyBrowserContext

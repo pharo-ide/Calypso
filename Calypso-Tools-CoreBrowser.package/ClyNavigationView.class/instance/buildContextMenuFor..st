@@ -4,4 +4,4 @@ buildContextMenuFor: aSelection
 	| context |
 	context := browser createContextOf: aSelection.
 	
-	^CmdContextMenuCommandActivator buildMenuFor: self inContext: context
+	^CmdContextMenuCommandActivation buildMenuFor: self inContext: context

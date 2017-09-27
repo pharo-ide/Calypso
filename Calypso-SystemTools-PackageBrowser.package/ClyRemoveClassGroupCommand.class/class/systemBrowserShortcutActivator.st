@@ -2,4 +2,4 @@ activation
 systemBrowserShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator removalFor: ClyPackageBrowserContextOfClassGroups 
+	^CmdShortcutCommandActivation removalFor: ClyPackageBrowserContextOfClassGroups 

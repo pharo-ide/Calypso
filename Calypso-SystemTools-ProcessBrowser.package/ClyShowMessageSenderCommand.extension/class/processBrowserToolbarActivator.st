@@ -2,4 +2,4 @@
 processBrowserToolbarActivator
 	<commandActivator>
 	
-	^ClyToolbarCommandActivator byItemOf: ClyButtonToolbarGroup for: ClyProcessBrowserContextOfStack 
+	^ClyToolbarCommandActivation byItemOf: ClyButtonToolbarGroup for: ClyProcessBrowserContextOfStack 

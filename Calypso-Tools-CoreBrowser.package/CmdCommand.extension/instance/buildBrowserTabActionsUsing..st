@@ -1,9 +1,9 @@
 *Calypso-Tools-CoreBrowser
-buildBrowserTabActionsUsing: anActivator
+buildBrowserTabActionsUsing: aCommandActivator
 
 	^{
 		TabAction 
-			action: [ anActivator executeCommand ]
+			action: [ aCommandActivator executeCommand ]
 			icon: (Smalltalk ui iconNamed: self browserTabActionIconName)
-			label: anActivator menuItemName
+			label: aCommandActivator menuItemName
 	}

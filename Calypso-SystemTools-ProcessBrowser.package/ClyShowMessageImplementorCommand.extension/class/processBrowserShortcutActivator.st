@@ -2,4 +2,4 @@
 processBrowserShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator by: $m meta for: ClyProcessBrowserContextOfStack
+	^CmdShortcutCommandActivation by: $m meta for: ClyProcessBrowserContextOfStack

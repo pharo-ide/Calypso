@@ -2,4 +2,4 @@ as yet unclassified
 systemBrowserShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator renamingFor: ClyPackageBrowserContextOfMethodGroups
+	^CmdShortcutCommandActivation renamingFor: ClyPackageBrowserContextOfMethodGroups

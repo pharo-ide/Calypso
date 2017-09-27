@@ -2,5 +2,5 @@ activation
 methodBrowserToolbarActivator
 	<commandActivator>
 	
-	^ClyToolbarCommandActivator 
+	^ClyToolbarCommandActivation 
 		byItemOf: ClyButtonToolbarGroup order: self menuOrder for: ClySystemQueryBrowserContext

@@ -2,5 +2,5 @@
 systemBrowserMenuActivator
 	<commandActivator>
 
-	^CmdContextMenuCommandActivator 
+	^CmdContextMenuCommandActivation 
 		byRootGroupItemOrder: self systemBrowserMenuOrder for: ClyPackageBrowserContextOfMethods 

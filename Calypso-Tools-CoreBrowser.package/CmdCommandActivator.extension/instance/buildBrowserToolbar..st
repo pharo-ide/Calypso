@@ -1,4 +1,4 @@
-building toolbar items
+*Calypso-Tools-CoreBrowser
 buildBrowserToolbar: toolbarMorph
 
 	self canExecuteCommand ifFalse: [ ^self ].

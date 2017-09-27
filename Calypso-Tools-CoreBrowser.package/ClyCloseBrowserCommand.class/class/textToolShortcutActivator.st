@@ -2,4 +2,4 @@ activation
 textToolShortcutActivator
 	<commandActivator>
 	
-	^CmdShortcutCommandActivator by: $w command for: ClyTextEditorContext
+	^CmdShortcutCommandActivation by: $w command for: ClyTextEditorContext

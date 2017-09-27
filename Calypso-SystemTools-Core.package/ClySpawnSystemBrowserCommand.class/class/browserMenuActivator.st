@@ -2,4 +2,4 @@ activation
 browserMenuActivator
 	<commandActivator>
 	
-	^CmdContextMenuCommandActivator byItemOf: ClyQueryMenuGroup for: ClySystemBrowserContext 
+	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClySystemBrowserContext 
