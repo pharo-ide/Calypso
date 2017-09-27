@@ -1,0 +1,5 @@
+*Calypso-SystemTools-QueryBrowser
+queryBrowserMenuActivation
+	<classMetaAnnotation>
+	
+	^CmdContextMenuCommandActivation byRootGroupItemFor: ClySystemQueryBrowserContext 

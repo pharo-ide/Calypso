@@ -1,5 +1,0 @@
-activation
-systemBrowserMethodGroupMenuActivator
-	<commandActivator>
-	
-	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyPackageBrowserContextOfMethodGroups 

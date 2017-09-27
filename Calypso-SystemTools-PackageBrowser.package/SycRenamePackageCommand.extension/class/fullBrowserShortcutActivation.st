@@ -1,0 +1,5 @@
+*Calypso-SystemTools-PackageBrowser
+fullBrowserShortcutActivation
+	<classMetaAnnotation>
+	
+	^CmdShortcutCommandActivation renamingFor: ClyPackageBrowserContextOfPackages

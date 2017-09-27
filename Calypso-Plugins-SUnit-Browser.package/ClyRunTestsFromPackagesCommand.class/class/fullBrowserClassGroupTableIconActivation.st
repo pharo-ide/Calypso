@@ -1,0 +1,5 @@
+activation
+fullBrowserClassGroupTableIconActivation
+	<classMetaAnnotation>
+	
+	^ClyTableIconCommandActivation for: ClyPackageBrowserContextOfClassGroups 

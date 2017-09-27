@@ -1,5 +1,0 @@
-activation
-systemBrowserMenuActivator
-	<commandActivator>
-	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyPackageBrowserContextOfClassGroups 

@@ -1,5 +1,0 @@
-activation
-systemBrowserVariableMenuActivator
-	<commandActivator>
-	
-	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyPackageBrowserContextOfVariables 

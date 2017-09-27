@@ -1,5 +1,0 @@
-activation
-systemBrowserToolbarActivator
-	<commandActivator>
-	
-	^ClyToolbarCommandActivation byItemOf: ClyClassHierarchyToolbarGroup for: ClyPackageBrowserContextOfClasses 

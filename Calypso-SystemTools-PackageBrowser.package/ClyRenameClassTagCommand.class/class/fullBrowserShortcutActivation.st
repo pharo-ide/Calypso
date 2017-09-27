@@ -1,0 +1,5 @@
+activation
+fullBrowserShortcutActivation
+	<classMetaAnnotation>
+	
+	^CmdShortcutCommandActivation renamingFor: ClyPackageBrowserContextOfClassGroups

@@ -1,0 +1,5 @@
+activation
+fullBrowserMenuActivation
+	<classMetaAnnotation>
+	
+	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyPackageBrowserContextOfClassGroups 
