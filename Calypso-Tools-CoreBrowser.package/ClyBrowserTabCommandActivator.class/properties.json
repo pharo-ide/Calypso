@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "CmdMenuCommandActivator",
+	"super" : "CmdMenuCommandActivationStrategy",
 	"category" : "Calypso-Tools-CoreBrowser-Tabs",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 4/20/2017 15:22",
-	"super" : "CmdCommandActivator",
+	"super" : "CmdCommandActivationStrategy",
 	"category" : "Calypso-Tools-CoreBrowser-Table",
 	"classinstvars" : [ ],
 	"pools" : [ ],
