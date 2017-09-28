@@ -1,5 +1,5 @@
 activation
 textEditorShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: self defaultShortcut for: ClyTextEditorContext

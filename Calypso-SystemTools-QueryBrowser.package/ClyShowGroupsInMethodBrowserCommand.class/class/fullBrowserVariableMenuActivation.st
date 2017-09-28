@@ -1,5 +1,5 @@
 activation
 fullBrowserVariableMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyPackageBrowserContextOfVariables 

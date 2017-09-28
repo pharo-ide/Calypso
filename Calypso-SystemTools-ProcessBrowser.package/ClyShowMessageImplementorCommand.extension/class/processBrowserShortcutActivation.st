@@ -1,5 +1,5 @@
 *Calypso-SystemTools-ProcessBrowser
 processBrowserShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: $m meta for: ClyProcessBrowserContextOfStack

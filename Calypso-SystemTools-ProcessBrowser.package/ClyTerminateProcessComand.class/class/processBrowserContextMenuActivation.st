@@ -1,5 +1,5 @@
 activation
 processBrowserContextMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyProcessBrowserContextOfProcesses

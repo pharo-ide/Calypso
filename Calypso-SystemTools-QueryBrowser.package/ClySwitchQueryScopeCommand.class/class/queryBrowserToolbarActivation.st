@@ -1,5 +1,5 @@
 activation
 queryBrowserToolbarActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyToolbarCommandActivation byItemOf: ClyQueryResultToolbarGroup order: -5 for: ClySystemQueryBrowserContext 

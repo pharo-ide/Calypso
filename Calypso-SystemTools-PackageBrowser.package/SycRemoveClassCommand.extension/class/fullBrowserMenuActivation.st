@@ -1,5 +1,5 @@
 *Calypso-SystemTools-PackageBrowser
 fullBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyPackageBrowserContextOfClasses 

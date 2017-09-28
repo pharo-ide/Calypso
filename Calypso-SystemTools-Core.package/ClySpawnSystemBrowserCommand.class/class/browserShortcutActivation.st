@@ -1,5 +1,5 @@
 activation
 browserShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: $b meta for: ClySystemBrowserContext

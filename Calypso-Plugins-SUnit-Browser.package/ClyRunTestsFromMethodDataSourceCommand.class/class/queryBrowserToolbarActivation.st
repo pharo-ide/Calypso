@@ -1,6 +1,6 @@
 activation
 queryBrowserToolbarActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyToolbarCommandActivation 
 		byItemOf: ClyButtonToolbarGroup order: self menuOrder for: ClySystemQueryBrowserContext

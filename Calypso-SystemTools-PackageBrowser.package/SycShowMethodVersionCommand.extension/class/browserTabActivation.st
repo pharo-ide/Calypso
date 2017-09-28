@@ -1,5 +1,5 @@
 *Calypso-SystemTools-PackageBrowser
 browserTabActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyBrowserTabCommandActivation for: ClyPackageBrowserContextOfMethods 

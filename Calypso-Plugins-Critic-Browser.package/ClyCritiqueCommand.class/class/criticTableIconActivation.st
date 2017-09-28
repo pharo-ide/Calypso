@@ -1,5 +1,5 @@
 activation
 criticTableIconActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyTableIconCommandActivation for: ClyCriticContext

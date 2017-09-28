@@ -1,5 +1,5 @@
 *Calypso-SystemTools-QueryBrowser
 queryBrowserShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: $w command for: ClySystemQueryBrowserContext

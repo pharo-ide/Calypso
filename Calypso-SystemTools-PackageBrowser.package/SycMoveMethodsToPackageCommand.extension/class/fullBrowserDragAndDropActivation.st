@@ -1,6 +1,6 @@
 *Calypso-SystemTools-PackageBrowser
 fullBrowserDragAndDropActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdDragAndDropCommandActivation 
 		for: ClyPackageBrowserContextOfMethods toDropIn: ClyPackageBrowserContextOfPackages

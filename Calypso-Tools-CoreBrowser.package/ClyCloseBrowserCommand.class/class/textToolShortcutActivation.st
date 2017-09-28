@@ -1,5 +1,5 @@
 activation
 textToolShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: $w command for: ClyTextEditorContext

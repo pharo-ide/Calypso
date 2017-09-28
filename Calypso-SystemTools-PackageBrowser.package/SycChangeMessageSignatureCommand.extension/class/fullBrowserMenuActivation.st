@@ -1,6 +1,6 @@
 *Calypso-SystemTools-PackageBrowser
 fullBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 
 	^CmdContextMenuCommandActivation 
 		byRootGroupItemOrder: self systemBrowserMenuOrder for: ClyPackageBrowserContextOfMethods 

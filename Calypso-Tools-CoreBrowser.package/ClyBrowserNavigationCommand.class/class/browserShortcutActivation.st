@@ -1,5 +1,5 @@
 activation
 browserShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: self defaultShortcut for: ClyBrowserContext

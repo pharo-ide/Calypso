@@ -1,5 +1,5 @@
 activation
 fullBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemFor: self contextClass

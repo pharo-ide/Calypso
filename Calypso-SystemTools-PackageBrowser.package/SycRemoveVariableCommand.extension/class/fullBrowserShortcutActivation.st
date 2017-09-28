@@ -1,5 +1,5 @@
 *Calypso-SystemTools-PackageBrowser
 fullBrowserShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation removalFor: ClyPackageBrowserContextOfVariables

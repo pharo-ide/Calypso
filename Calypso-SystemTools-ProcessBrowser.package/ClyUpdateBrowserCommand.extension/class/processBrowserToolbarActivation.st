@@ -1,5 +1,5 @@
 *Calypso-SystemTools-ProcessBrowser
 processBrowserToolbarActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyToolbarCommandActivation byRootGroupItemOrder: 1 for: ClyProcessBrowserContextOfProcesses

@@ -1,5 +1,5 @@
 *Calypso-SystemTools-PackageBrowser
 fullBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup order: 2001 for: ClyPackageBrowserContextOfVariables 

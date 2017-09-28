@@ -1,5 +1,5 @@
 activation
 browserTabActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyBrowserTabCommandActivation for: ClyBrowserContext

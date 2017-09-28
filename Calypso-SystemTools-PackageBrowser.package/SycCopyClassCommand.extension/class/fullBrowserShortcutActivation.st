@@ -1,5 +1,5 @@
 *Calypso-SystemTools-PackageBrowser
 fullBrowserShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: $c meta for: ClyPackageBrowserContextOfClasses 

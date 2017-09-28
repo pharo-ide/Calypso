@@ -1,5 +1,5 @@
 activation
 fullBrowserTableIconActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyTableIconCommandActivation for: self contextClass

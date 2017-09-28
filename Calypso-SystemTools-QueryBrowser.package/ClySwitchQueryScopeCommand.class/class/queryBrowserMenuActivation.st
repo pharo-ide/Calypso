@@ -1,5 +1,5 @@
 activation
 queryBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byItemOf: ClySwitchScopeMenuGroup for: ClySystemQueryBrowserContext 

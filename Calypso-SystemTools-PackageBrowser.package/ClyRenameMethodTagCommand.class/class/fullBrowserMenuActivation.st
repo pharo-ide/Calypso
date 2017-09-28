@@ -1,5 +1,5 @@
 as yet unclassified
 fullBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemOrder: 2.2 for: ClyPackageBrowserContextOfMethodGroups 

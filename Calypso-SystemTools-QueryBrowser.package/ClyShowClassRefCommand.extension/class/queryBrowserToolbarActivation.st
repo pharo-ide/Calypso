@@ -1,5 +1,5 @@
 *Calypso-SystemTools-QueryBrowser
 queryBrowserToolbarActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^ClyToolbarCommandActivation byItemOf: ClyButtonToolbarGroup for: ClySystemQueryBrowserContext

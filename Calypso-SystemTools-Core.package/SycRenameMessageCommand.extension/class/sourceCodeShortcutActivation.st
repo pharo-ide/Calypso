@@ -1,5 +1,5 @@
 *Calypso-SystemTools-Core
 sourceCodeShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation renamingFor: ClySourceCodeContext

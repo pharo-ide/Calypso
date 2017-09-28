@@ -1,5 +1,5 @@
 *Calypso-SystemTools-ProcessBrowser
 processBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyProcessBrowserContextOfStack 

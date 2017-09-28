@@ -1,5 +1,5 @@
 as yet unclassified
 fullBrowserShortcutActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdShortcutCommandActivation removalFor: ClyPackageBrowserContextOfMethodGroups

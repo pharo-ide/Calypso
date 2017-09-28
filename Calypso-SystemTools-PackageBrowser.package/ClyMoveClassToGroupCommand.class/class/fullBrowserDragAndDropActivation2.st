@@ -1,6 +1,6 @@
 activation
 fullBrowserDragAndDropActivation2
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdDragAndDropCommandActivation 
 		for: ClyPackageBrowserContextOfClasses toDropIn: ClyPackageBrowserContextOfClassGroups

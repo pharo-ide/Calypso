@@ -1,5 +1,5 @@
 activation
 fullBrowserMenuActivation
-	<classMetaAnnotation>
+	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemOrder: 10000 for: ClyPackageBrowserContextOfPackages 
