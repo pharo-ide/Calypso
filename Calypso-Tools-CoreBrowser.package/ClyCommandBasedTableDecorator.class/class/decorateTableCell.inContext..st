@@ -2,6 +2,6 @@ decoration
 decorateTableCell: anItemCellMorph inContext: itemContext
 
 	ClyTableIconCommandActivation 
-		forExecutableCommandsInContext: itemContext 
-		doWithActivator: [:commandActivator | 
+		activateAllInContext: itemContext 
+		by: [:commandActivator | 
 			commandActivator decorateTableCell: anItemCellMorph ]
