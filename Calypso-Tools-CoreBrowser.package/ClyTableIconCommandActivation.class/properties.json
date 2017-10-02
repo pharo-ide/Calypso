@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "DenisKudryashov 4/20/2017 15:22",
+	"commentStamp" : "DenisKudryashov 10/2/2017 11:09",
 	"super" : "CmdCommandActivationStrategy",
 	"category" : "Calypso-Tools-CoreBrowser-Table",
 	"classinstvars" : [ ],
