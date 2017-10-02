@@ -1,5 +1,0 @@
-as yet unclassified
-systemBrowserShortcutActivator
-	<commandActivator>
-	
-	^CmdShortcutCommandActivator removalFor: ClyPackageBrowserContextOfMethodGroups

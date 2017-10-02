@@ -1,5 +1,0 @@
-*Calypso-SystemTools-PackageBrowser
-systemBrowserMenuActivator
-	<commandActivator>
-	
-	^CmdContextMenuCommandActivator byRootGroupItemFor: ClyPackageBrowserContextOfPackages 
