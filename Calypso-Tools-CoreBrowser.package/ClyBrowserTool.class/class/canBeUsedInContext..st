@@ -1,6 +1,7 @@
 testing
 canBeUsedInContext: aBrowserContext
 	
-	self isAbstract ifTrue: [ ^false ].
+	self classAnnotationsDo: [ :each | 
+		(each isVisibleInContext: aBrowserContext) ifTrue: [ ^true ] ].
 	
-	^aBrowserContext isActivationOf: self contextClass
+	^false
