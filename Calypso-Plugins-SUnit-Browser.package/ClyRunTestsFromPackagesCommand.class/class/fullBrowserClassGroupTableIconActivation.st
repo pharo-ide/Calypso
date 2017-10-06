@@ -2,4 +2,4 @@ activation
 fullBrowserClassGroupTableIconActivation
 	<classAnnotation>
 	
-	^ClyTableIconCommandActivation for: ClyPackageBrowserContextOfClassGroups 
+	^ClyTableIconCommandActivation for: ClyClassGroupContextOfFullBrowser 

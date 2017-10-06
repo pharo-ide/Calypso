@@ -2,5 +2,5 @@ activation
 fullBrowserTableIconActivation
 	<classAnnotation>
 	
-	^ClyTableIconCommandActivation for: ClyPackageBrowserContextOfMethods
+	^ClyTableIconCommandActivation for: ClyMethodContextOfFullBrowser
 	

@@ -2,4 +2,4 @@
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation renamingFor: ClyPackageBrowserContextOfVariables
+	^CmdShortcutCommandActivation renamingFor: ClyVariableContextOfFullBrowser

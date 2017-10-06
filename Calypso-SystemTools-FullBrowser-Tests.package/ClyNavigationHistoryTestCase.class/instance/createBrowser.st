@@ -1,3 +1,3 @@
 running
 createBrowser
-	^ClyPackageBrowser new
+	^ClyFullBrowser new

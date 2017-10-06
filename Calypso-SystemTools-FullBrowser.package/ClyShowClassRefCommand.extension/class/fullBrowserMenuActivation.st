@@ -2,4 +2,4 @@
 fullBrowserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyPackageBrowserContextOfClasses 
+	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyClassContextOfFullBrowser 

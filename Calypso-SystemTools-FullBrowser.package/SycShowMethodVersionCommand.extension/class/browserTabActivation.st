@@ -2,4 +2,4 @@
 browserTabActivation
 	<classAnnotation>
 	
-	^ClyBrowserTabCommandActivation for: ClyPackageBrowserContextOfMethods 
+	^ClyBrowserTabCommandActivation for: ClyMethodContextOfFullBrowser 

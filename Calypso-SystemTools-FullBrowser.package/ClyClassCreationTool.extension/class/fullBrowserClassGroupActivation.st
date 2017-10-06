@@ -2,4 +2,4 @@
 fullBrowserClassGroupActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyPackageBrowserContextOfClassGroups
+	^ClyTabActivationStrategy for: ClyClassGroupContextOfFullBrowser

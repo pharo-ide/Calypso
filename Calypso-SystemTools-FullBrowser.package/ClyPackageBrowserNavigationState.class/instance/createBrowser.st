@@ -1,3 +1,3 @@
 private
 createBrowser
-	^ClyPackageBrowser new
+	^ClyFullBrowser new

@@ -2,4 +2,4 @@ activation
 processBrowserContextMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyProcessBrowserContextOfProcesses
+	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyProcessContextOfProcessBrowser

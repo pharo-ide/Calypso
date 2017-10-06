@@ -3,4 +3,4 @@ fullBrowserDragAndDropActivation
 	<classAnnotation>
 	
 	^CmdDragAndDropCommandActivation 
-		for: ClyPackageBrowserContextOfMethods toDropIn: ClyPackageBrowserContextOfPackages
+		for: ClyMethodContextOfFullBrowser toDropIn: ClyPackageContextOfFullBrowser

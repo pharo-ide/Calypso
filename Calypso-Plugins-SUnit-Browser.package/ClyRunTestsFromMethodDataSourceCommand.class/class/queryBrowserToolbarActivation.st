@@ -3,4 +3,4 @@ queryBrowserToolbarActivation
 	<classAnnotation>
 	
 	^ClyToolbarCommandActivation 
-		byItemOf: ClyButtonToolbarGroup order: self menuOrder for: ClySystemQueryBrowserContext
+		byItemOf: ClyButtonToolbarGroup order: self menuOrder for: ClyQueryBrowserContext

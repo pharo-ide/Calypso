@@ -1,3 +1,3 @@
 activation
 contextClass
-	^ClyPackageBrowserContextOfPackages 
+	^ClyPackageContextOfFullBrowser 

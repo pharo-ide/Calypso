@@ -2,4 +2,4 @@
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: Character arrowLeft asShortcut for: ClyPackageBrowserContext
+	^CmdShortcutCommandActivation by: Character arrowLeft asShortcut for: ClyFullBrowserContext

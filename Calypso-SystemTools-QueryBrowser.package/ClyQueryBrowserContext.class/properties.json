@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySystemBrowserContext",
+	"category" : "Calypso-SystemTools-QueryBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyQueryBrowserContext",
+	"type" : "normal"
+}

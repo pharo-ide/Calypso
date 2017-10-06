@@ -2,4 +2,4 @@ activation
 fullBrowserToolbarActivation2
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byItemOf: ClyPackageToolbarGroup for: ClyPackageBrowserContextOfClassGroups
+	^ClyToolbarCommandActivation byItemOf: ClyPackageToolbarGroup for: ClyClassGroupContextOfFullBrowser

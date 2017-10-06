@@ -1,7 +1,7 @@
 running
 createBrowser
 
-	^ClySystemQueryBrowser 
+	^ClyQueryBrowser 
 		on: environment 
 		scopes: {
 			ClyLocalClassScope basis: {ClyClass1FromP1}.

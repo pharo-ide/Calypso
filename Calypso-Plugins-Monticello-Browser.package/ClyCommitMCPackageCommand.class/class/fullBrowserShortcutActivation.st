@@ -2,4 +2,4 @@ activation
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $s meta for: ClyGlobalPackageBrowserContext 
+	^CmdShortcutCommandActivation by: $s meta for: ClyGlobalContextOfFullBrowser 

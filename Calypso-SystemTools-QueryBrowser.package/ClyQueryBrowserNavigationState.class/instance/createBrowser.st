@@ -1,3 +1,3 @@
 private
 createBrowser
-	^ClySystemQueryBrowser new
+	^ClyQueryBrowser new

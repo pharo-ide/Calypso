@@ -2,4 +2,4 @@ activation
 fullBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byItemOf: ClyMetaLevelToolbarGroup order: self toolbarOrder for: ClyPackageBrowserContextOfClasses 
+	^ClyToolbarCommandActivation byItemOf: ClyMetaLevelToolbarGroup order: self toolbarOrder for: ClyClassContextOfFullBrowser 

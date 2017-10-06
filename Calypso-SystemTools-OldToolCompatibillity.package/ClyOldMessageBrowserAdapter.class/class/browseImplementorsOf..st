@@ -1,3 +1,3 @@
 opening
 browseImplementorsOf: aSymbol 
-	^ClySystemQueryBrowser browseImplementorsOf: aSymbol 
+	^ClyQueryBrowser browseImplementorsOf: aSymbol 
