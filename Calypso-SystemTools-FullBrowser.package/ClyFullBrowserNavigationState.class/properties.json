@@ -9,6 +9,6 @@
 		"metaLevelScope",
 		"methodGroupContent"
 	],
-	"name" : "ClyPackageBrowserNavigationState",
+	"name" : "ClyFullBrowserNavigationState",
 	"type" : "normal"
 }

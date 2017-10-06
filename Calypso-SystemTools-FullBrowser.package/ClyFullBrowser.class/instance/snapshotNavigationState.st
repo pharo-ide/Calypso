@@ -1,4 +1,4 @@
 navigation
 snapshotNavigationState
 	
-	^ClyPackageBrowserNavigationState of: self
+	^ClyFullBrowserNavigationState of: self
