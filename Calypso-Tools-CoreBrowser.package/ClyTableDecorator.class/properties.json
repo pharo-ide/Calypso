@@ -4,9 +4,7 @@
 	"category" : "Calypso-Tools-CoreBrowser-Table",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [
-		"SortedDecorators"
-	],
+	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "ClyTableDecorator",
 	"type" : "normal"
