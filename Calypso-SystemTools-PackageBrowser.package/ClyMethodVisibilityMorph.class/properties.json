@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Morph",
-	"category" : "Calypso-SystemTools-PackageBrowser-Table",
+	"category" : "Calypso-SystemTools-PackageBrowser-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

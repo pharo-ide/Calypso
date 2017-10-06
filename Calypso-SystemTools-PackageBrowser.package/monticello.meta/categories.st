@@ -6,6 +6,6 @@ SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-Commands-Met
 SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-Commands-MethodGroups'!
 SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-Commands-Methods'!
 SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-Commands-Packages'!
-SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-Table'!
+SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-Contexts'!
 SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-Toolbar'!
 SystemOrganization addCategory: 'Calypso-SystemTools-PackageBrowser-UI'!

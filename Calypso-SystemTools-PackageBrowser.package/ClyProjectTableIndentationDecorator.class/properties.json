@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "ClyTableDecorator",
-	"category" : "Calypso-SystemTools-PackageBrowser-Table",
+	"category" : "Calypso-SystemTools-PackageBrowser-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyClassGroupTableDecorator",
+	"name" : "ClyProjectTableIndentationDecorator",
 	"type" : "normal"
 }
