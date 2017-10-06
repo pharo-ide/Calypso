@@ -1,4 +1,5 @@
 testing
 isAboutEnvironmentScope: anEnvironmentScopeClass
 
-	^selectedItems anySatisfy: [ :each | each belongsToScope: anEnvironmentScopeClass ]
+	^selectedItems anySatisfy: [ :each | 
+		each environmentScope includesBehavior: anEnvironmentScopeClass ]
