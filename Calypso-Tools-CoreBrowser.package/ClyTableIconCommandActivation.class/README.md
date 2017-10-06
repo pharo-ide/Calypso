@@ -17,4 +17,9 @@ By default the icon is added as cell definition morph:
 But command subclasses can define it as extra tool:
 	anItemCellMorph addExtraTool: aMorph
 
-Command subclasses can redefine default decoration logic and build completally different UI items instead of iconic button. They should override first method
+Command subclasses can redefine default decoration logic and build completally different UI items instead of iconic button. They should override first method.
+
+Because multiple commands decorate table they can override UI elements ofeach others. To manage overrides you can specify priority when annotate command.
+	^ClyTableIconCommandActivation priority: 100 for: ClyMethodScope.
+The command with most priority will decorate table at last order which means that their UI elements will present in table.
+To implement correct order of my instances in registry I provide special sorted container for this. It manages instances in opposite order then default one
