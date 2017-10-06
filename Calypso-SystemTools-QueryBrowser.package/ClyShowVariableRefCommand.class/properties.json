@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SycVariableCommand",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyShowVariableRefCommand",
+	"type" : "normal"
+}

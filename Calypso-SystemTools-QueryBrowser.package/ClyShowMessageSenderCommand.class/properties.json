@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SycMessageCommand",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyShowMessageSenderCommand",
+	"type" : "normal"
+}

@@ -6,6 +6,7 @@ SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-Commands-MetaLe
 SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-Commands-MethodGroups'!
 SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-Commands-Methods'!
 SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-Commands-Packages'!
+SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-Commands-Queries'!
 SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-Contexts'!
 SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-Toolbar'!
 SystemOrganization addCategory: 'Calypso-SystemTools-FullBrowser-UI'!
