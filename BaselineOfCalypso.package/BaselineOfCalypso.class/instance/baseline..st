@@ -83,8 +83,8 @@ baseline: spec
 				spec requires: #(#'Calypso-Plugins-Undeclared-Environment' #'Calypso-SystemTools-FullBrowser' ). ];
 			
 			
-			package: #'Calypso-SystemTools-Core' with: [
-				spec requires: #(#'Calypso-Environment' 'Commander' ). ];
+			package: #'Calypso-Tools-CoreBrowser' with: [
+				spec requires: #(#'Calypso-Environment-Core' 'Commander' ). ];
 
 			package: #'Calypso-SystemTools-Core' with: [
 				spec requires: #(#'Calypso-Environment-System' #'Calypso-Tools-CoreBrowser' 'SystemCommands' ). ];
