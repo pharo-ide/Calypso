@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySwitchPackageViewModeCommand",
+	"category" : "Calypso-SystemTools-FullBrowser-Commands-Packages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySwitchToProjectsCommand",
+	"type" : "normal"
+}

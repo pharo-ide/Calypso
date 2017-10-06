@@ -1,0 +1,3 @@
+*Calypso-SystemTools-FullBrowser
+systemBrowserContextClass
+	self subclassResponsibility 

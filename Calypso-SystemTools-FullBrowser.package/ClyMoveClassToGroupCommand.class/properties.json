@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SycClassCommand",
+	"category" : "Calypso-SystemTools-FullBrowser-Commands-Classes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classGroup"
+	],
+	"name" : "ClyMoveClassToGroupCommand",
+	"type" : "normal"
+}
