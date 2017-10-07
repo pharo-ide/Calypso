@@ -1,0 +1,3 @@
+selection-classes
+selectedClassItems
+	^self selectedItemsWhichBelongsTo: ClyLocalClassScope

@@ -1,3 +1,3 @@
 context
 createContextOfSingleItem: aDataSourceItem 
-	^browser createContextOfSingleItem: aDataSourceItem
+	^contextClass of: {aDataSourceItem} for: browser

@@ -1,3 +1,3 @@
 context
 createContextOf: aSelection 
-	^browser createContextOf: aSelection
+	^contextClass of: aSelection detachedItems for: browser

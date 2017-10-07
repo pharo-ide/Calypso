@@ -1,3 +1,3 @@
 commands support
 searchDialog
-	^ClyBrowserSearchDialog for: self
+	^ClyBrowserSearchDialog for: self withContext: ClySystemSearchDialogContext
