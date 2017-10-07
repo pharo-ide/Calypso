@@ -2,4 +2,4 @@ activation
 queryBrowserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyQueryBrowserContext 
+	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyQueryBrowserContext 
