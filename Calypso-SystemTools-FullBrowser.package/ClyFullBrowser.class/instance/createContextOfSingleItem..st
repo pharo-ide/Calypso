@@ -1,4 +1,4 @@
 context
 createContextOfSingleItem: aDataSourceItem
 	^aDataSourceItem environmentScope 
-		systemBrowserContextClass of: {aDataSourceItem} for: self
+		fullBrowserContextClass of: {aDataSourceItem} for: self

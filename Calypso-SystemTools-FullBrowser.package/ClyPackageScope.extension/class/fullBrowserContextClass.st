@@ -1,3 +1,3 @@
 *Calypso-SystemTools-FullBrowser
-systemBrowserContextClass
+fullBrowserContextClass
 	^ClyPackageContextOfFullBrowser 

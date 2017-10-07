@@ -1,3 +1,3 @@
 context
 createContextOf: aSelection
-	^aSelection createSystemBrowserContextFor: self
+	^aSelection createFullBrowserContextFor: self

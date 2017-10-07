@@ -1,3 +1,3 @@
 accessing
 definitionClass
-	^self definitionClassItem
+	^self definitionClassItem actualObject
