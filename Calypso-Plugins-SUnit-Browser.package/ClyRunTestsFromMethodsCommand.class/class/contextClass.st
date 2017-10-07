@@ -1,3 +1,3 @@
 activation
 contextClass
-	^ClyMethodContextOfFullBrowser 
+	^ClyMethodScope 

@@ -1,3 +1,3 @@
 *Calypso-SystemTools-FullBrowser
-systemBrowserMenuOrder
-	^2.1
+browserMenuOrder
+	^2

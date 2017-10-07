@@ -3,4 +3,4 @@ fullBrowserMenuActivation
 	<classAnnotation>
 
 	^CmdContextMenuCommandActivation 
-		byRootGroupItemOrder: self systemBrowserMenuOrder for: ClyMethodContextOfFullBrowser 
+		byRootGroupItemOrder: self browserMenuOrder for: ClyMethodScope 
