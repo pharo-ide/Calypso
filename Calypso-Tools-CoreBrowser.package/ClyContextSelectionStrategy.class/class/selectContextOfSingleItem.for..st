@@ -5,4 +5,4 @@ selectContextOfSingleItem: aDataSourceItem for: aBrowser
 		(strategy shouldBeAppliedFor: aDataSourceItem environmentScope) ifTrue: [ 
 			^strategy createBrowserContextOfSingleItem: aDataSourceItem for: aBrowser]].
 	
-	^ClyUnknownBrowserContext of: { aDataSourceItem } for: aBrowser
+	^ClyUnknownBrowserContext for: aBrowser

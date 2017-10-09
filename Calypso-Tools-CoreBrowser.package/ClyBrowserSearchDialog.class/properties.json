@@ -7,8 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"browser",
-		"itemsView",
-		"contextClass"
+		"itemsView"
 	],
 	"name" : "ClyBrowserSearchDialog",
 	"type" : "normal"

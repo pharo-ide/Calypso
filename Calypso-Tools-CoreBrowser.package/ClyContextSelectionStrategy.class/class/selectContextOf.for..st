@@ -5,4 +5,4 @@ selectContextOf: aSelection for: aBrowser
 		(strategy shouldBeAppliedFor: aSelection itemScope) ifTrue: [ 
 			^strategy createBrowserContextOf: aSelection for: aBrowser]].
 	
-	^ClyUnknownBrowserContext ofSelection: aSelection for: aBrowser
+	^ClyUnknownBrowserContext for: aBrowser

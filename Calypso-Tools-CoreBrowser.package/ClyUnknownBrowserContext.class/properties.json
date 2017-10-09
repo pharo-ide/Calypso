@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "",
-	"super" : "ClyBrowserContext",
+	"commentStamp" : "DenisKudryashov 10/9/2017 15:46",
+	"super" : "CmdToolContext",
 	"category" : "Calypso-Tools-CoreBrowser-Contexts",
 	"classinstvars" : [ ],
 	"pools" : [ ],

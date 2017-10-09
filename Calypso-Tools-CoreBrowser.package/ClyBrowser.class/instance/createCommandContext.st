@@ -5,4 +5,4 @@ createCommandContext
 	They should override this method returning appropriate global context instance.
 	But by default it is undefined unknown context"
 	
-	^ClyUnknownBrowserContext of: #() for: self
+	^ClyUnknownBrowserContext for: self
