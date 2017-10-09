@@ -1,0 +1,3 @@
+accessing
+targetItemScope
+	^ targetItemScope

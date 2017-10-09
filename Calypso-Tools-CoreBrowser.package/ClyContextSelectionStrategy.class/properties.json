@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 10/9/2017 12:08",
+	"super" : "ClassAnnotation",
+	"category" : "Calypso-Tools-CoreBrowser-Contexts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetItemScope"
+	],
+	"name" : "ClyContextSelectionStrategy",
+	"type" : "normal"
+}
