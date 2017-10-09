@@ -1,4 +1,4 @@
 *Calypso-SystemTools-FullBrowser
-selectionStrategy
+selectionStrategyForFullBrowser
 	<classAnnotation>
 	^ClyContextSelectionStrategy for: (ClyBrowserDialogContext ofSearchIn: ClyFullBrowser)
