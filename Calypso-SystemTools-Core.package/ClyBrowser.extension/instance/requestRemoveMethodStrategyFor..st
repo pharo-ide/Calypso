@@ -8,10 +8,7 @@ requestRemoveMethodStrategyFor: methods
 	(self allowSilentlyRemoveMethods: methods whichHaveSenders: senders)
 		ifTrue: [ ^SycSilentlyRemoveMethodStrategy new ].
 
-	strategies := {	SycSilentlyRemoveMethodStrategy new. 
-		ClyRemoveAndShowSendersMethodStrategy by: self.
-		ClyNotRemoveAndShowSendersMethodStrategy by: self. 
-		SycNotRemoveMethodStrategy new}.	
+	strategies := SycRemoveMethodStrategy createAllForBrowser: self.
 	caption := selectors size > 1 
 		ifTrue: [ 'There are ', senders itemCount asString, ' senders']
 		ifFalse: ['The message ', selectors anyOne printString ,' has ' , senders itemCount asString , ' sender'].	

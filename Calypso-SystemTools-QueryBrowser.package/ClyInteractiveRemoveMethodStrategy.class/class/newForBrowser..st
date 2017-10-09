@@ -1,4 +1,5 @@
 instance creation
-by: aBrowser
+newForBrowser: aBrowser
+
 	^self new 
 		browser: aBrowser

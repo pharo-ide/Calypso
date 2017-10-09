@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ClyMethodGroupCommand",
-	"category" : "Calypso-SystemTools-QueryBrowser-Commands",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "CmdMenuGroup",
-	"category" : "Calypso-SystemTools-QueryBrowser-Commands",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Controlling",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

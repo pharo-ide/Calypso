@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ClyInteractiveRemoveMethodStrategy",
-	"category" : "Calypso-SystemTools-Core-Commands-Methods",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Methods",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
