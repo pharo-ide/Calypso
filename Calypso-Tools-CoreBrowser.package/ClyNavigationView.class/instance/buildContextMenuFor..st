@@ -2,6 +2,6 @@ menu building
 buildContextMenuFor: aSelection
 
 	| context |
-	context := browser createContextOf: aSelection.
+	context := self createSelectionContextOf: aSelection.
 	
 	^CmdContextMenuCommandActivation buildMenuFor: self inContext: context

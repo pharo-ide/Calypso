@@ -1,3 +1,0 @@
-*Calypso-SystemTools-FullBrowser
-fullBrowserContextClass
-	^ClyMethodGroupContextOfFullBrowser 

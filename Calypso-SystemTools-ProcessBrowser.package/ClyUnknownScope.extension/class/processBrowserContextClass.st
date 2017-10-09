@@ -1,3 +1,0 @@
-*Calypso-SystemTools-ProcessBrowser
-processBrowserContextClass 
-	^ClyUnknownBrowserContext 

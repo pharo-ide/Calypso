@@ -1,3 +1,3 @@
 accessing
 createSelectionContext
-	^browser createContextOf: selection
+	^self createSelectionContextOf: self selection
