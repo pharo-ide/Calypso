@@ -2,4 +2,4 @@ activation
 browserActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyDebuggerStackContext 
+	^ClyTabActivationStrategy for: ClyContextScope
