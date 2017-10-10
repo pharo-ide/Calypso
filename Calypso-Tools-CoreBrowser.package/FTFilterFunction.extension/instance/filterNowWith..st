@@ -2,4 +2,6 @@
 filterNowWith: patternString
 	pattern := patternString.
 	self field setText: pattern.
-	self filter
+	self filterWith: pattern.
+	self filter.
+	
