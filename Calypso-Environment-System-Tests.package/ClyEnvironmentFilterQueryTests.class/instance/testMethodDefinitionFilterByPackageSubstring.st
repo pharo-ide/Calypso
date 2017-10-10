@@ -4,7 +4,7 @@ testMethodDefinitionFilterByPackageSubstring
 	| scope allMethods filteredMethods items |
 	scope := environment selectScope: ClyLocalClassScope of: {ClyClass1FromP1. ClyClassWithTraits }.
 	allMethods := scope query: ClySortedMethods.
-	filteredMethods := allMethods filterItemsBy: (ClyQueryResultFilter pattern: 'AndTraits').
+	filteredMethods := allMethods filterItemsBy: (ClyQueryResultFilter substringPattern: 'AndTraits').
 	
 	items := filteredMethods retrieveAll.
 	
