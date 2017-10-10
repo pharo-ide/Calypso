@@ -2,5 +2,5 @@ controlling
 selectItemsWith: actualObjects
 
 	| newItems |
-	newItems := rootDataSource findItemsWith: actualObjects.
+	newItems := rootDataSource itemsView findItemsWith: actualObjects.
 	self selectItems: newItems

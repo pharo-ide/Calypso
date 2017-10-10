@@ -3,7 +3,7 @@ selectClass: aClass
 	| foundItems classDefinition |
 	self changeNavigationStateBy: [ 
 		self switchToMetaLevelScope: aClass metaLevelScope.	
-		foundItems := classView dataSource findItemsWith: { aClass instanceSide }.
+		foundItems := classView findItemsWith: { aClass instanceSide }.
 		foundItems ifNotEmpty: [ 
 			"we want ensure that selected package is the package of found class.
 			If it is not then we will select required package"

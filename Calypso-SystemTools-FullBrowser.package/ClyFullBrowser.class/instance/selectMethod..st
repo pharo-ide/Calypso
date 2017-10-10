@@ -3,7 +3,7 @@ selectMethod: aMethod
 
 	| foundItems |
 	self changeNavigationStateBy: [
-		foundItems := methodView dataSource findItemsWith: { aMethod }.
+		foundItems := methodView findItemsWith: { aMethod }.
 		foundItems ifNotEmpty: [ ^self methodSelection selectItems: foundItems ].
 	
 		self selectClass: aMethod origin.
