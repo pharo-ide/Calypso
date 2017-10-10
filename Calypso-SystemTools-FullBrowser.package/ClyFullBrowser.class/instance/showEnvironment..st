@@ -3,4 +3,7 @@ showEnvironment: aNavigationEnvironment
 
 	navigationEnvironment := aNavigationEnvironment.
 
-	self switchToPackages
+	self switchToPackages.
+	
+	DefaultPackageFilter ifNotNil: [ 
+		packageView activateFilterWith: DefaultPackageFilter]

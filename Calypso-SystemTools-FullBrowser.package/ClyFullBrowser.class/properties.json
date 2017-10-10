@@ -4,7 +4,9 @@
 	"category" : "Calypso-SystemTools-FullBrowser-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"DefaultPackageFilter"
+	],
 	"instvars" : [
 		"packageView",
 		"classView",

@@ -3,6 +3,7 @@ initializeNavigationViews
 
 	packageView := self newNavigationView.
 	packageView enableFilterUsing: ClyRegexPattern new.
+	packageView filterField announcer when: RubTextChanged send: #updateDefaultPackageFilter to: self.
 	packageView requestNavigationBy: #showClassesForPackages:.
 	
 	classView := self newNavigationView.
