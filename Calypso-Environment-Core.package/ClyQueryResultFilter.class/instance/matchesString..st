@@ -1,4 +1,4 @@
 testing
 matchesString: aString
 
-	^aString includesSubstring: pattern caseSensitive: false
+	^pattern matches: aString

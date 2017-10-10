@@ -1,9 +1,9 @@
 private
 createBlockFromPattern
 
-	(pattern endsWith: ']') ifFalse: [
+	(pattern value endsWith: ']') ifFalse: [
 		badScript := true.
 		^self].
 
-	[scriptBlock := self class compiler evaluate: pattern logged: false] 
+	[scriptBlock := self class compiler evaluate: pattern value logged: false] 
 		on: Exception do: [:err | badScript := true ]

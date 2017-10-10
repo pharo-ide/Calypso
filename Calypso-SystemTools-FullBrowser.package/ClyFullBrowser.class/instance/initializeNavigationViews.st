@@ -2,7 +2,7 @@ initialization
 initializeNavigationViews
 
 	packageView := self newNavigationView.
-	packageView enableFilter.
+	packageView enableFilterUsing: ClyRegexPattern new.
 	packageView requestNavigationBy: #showClassesForPackages:.
 	
 	classView := self newNavigationView.

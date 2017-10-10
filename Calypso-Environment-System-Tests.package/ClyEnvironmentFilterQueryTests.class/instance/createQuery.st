@@ -2,6 +2,6 @@ tests-general
 createQuery
 
 	| filter |
-	filter := ClyItemNameSubstringFilter pattern: testSelector.
+	filter := ClyItemNameFilter substringPattern: testSelector.
 	
 	^ClyEnvironmentFilterQuery for: ClySortedMethods asEnvironmentQuery by: filter

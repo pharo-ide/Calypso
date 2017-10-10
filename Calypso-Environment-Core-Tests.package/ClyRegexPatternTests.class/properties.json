@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyStringPatternTestCase",
+	"category" : "Calypso-Environment-Core-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyRegexPatternTests",
+	"type" : "normal"
+}

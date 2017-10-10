@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "DenisKudryashov 2/9/2017 15:29",
-	"super" : "ClyItemNameFilter",
+	"commentStamp" : "",
+	"super" : "ClyStringPattern",
 	"category" : "Calypso-Environment-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyItemNameSubstringFilter",
+	"name" : "ClyRegexPattern",
 	"type" : "normal"
 }

@@ -1,7 +1,6 @@
 testing
 matches: anEnvironmentItem
-	(pattern beginsWith: '[') ifTrue: [ 
+	(pattern value beginsWith: '[') ifTrue: [ 
 			^self matchesByScript: anEnvironmentItem].
 
 	^anEnvironmentItem actualObject matchesQueryResultFilter: self
-	
