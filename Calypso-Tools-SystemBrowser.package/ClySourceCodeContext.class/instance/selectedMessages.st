@@ -1,4 +1,0 @@
-public
-selectedMessages
-
-	^{self selectedMessage}

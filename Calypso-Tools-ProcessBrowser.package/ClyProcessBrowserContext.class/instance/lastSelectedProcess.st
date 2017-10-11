@@ -1,3 +1,0 @@
-selection-processes
-lastSelectedProcess
-	^self lastSelectedObjectIn: self selectedProcesses

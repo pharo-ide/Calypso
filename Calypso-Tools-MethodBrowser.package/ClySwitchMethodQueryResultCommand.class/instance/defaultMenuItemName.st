@@ -1,3 +1,0 @@
-accessing
-defaultMenuItemName
-	^self queryResultClass shortName

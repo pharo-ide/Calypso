@@ -1,4 +1,0 @@
-public
-selectedVariables
-
-	^{self selectedVariable}

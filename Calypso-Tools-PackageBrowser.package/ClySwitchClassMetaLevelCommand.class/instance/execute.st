@@ -1,3 +1,0 @@
-execution
-execute
-	browser switchToMetaLevelScope: self metaLevelScope

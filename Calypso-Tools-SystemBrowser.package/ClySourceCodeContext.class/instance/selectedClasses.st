@@ -1,4 +1,0 @@
-public
-selectedClasses
-
-	^{self selectedClass}

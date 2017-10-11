@@ -1,4 +1,0 @@
-navigation
-navigateSpawnedSystemBrowser: aSystemBrowser
-
-	aSystemBrowser selectMethod: self selectedMethods lastSelectedItem actualObject

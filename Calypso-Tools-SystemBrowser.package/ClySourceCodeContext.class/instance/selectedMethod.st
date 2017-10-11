@@ -1,3 +1,0 @@
-public
-selectedMethod
-	^tool editingMethod

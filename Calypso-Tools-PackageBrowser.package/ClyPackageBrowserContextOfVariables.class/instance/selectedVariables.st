@@ -1,3 +1,0 @@
-selection-variables
-selectedVariables
-	^self selectedObjects

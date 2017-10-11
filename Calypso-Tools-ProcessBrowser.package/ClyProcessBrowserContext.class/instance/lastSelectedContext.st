@@ -1,3 +1,0 @@
-selection-contexts
-lastSelectedContext
-	^self lastSelectedObjectIn: self selectedContexts

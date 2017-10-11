@@ -1,3 +1,0 @@
-activation
-toolbarOrder
-	^1

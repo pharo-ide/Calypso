@@ -1,3 +1,0 @@
-selection-processes
-selectedProcessStack
-	^tool selectedProcessStack

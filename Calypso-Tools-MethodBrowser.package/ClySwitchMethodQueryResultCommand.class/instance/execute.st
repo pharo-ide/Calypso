@@ -1,3 +1,0 @@
-execution
-execute
-	browser switchToResultContent: self queryResultClass

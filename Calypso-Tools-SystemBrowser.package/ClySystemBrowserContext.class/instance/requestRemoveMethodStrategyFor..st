@@ -1,3 +1,0 @@
-user requests
-requestRemoveMethodStrategyFor: methods
-	^tool requestRemoveMethodStrategyFor: methods

@@ -1,3 +1,0 @@
-rubric interaction model
-selectedClassOrMetaClass
-	^editingClass

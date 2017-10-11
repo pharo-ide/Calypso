@@ -1,3 +1,0 @@
-testing
-isMethodSelected
-	^self hasSelectedItems 

@@ -1,3 +1,0 @@
-public
-selectedMethods
-	^{self selectedMethod}
