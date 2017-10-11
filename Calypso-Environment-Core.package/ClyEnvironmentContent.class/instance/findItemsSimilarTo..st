@@ -6,7 +6,7 @@ findItemsSimilarTo: sampleEnvironmentItems
 	found := OrderedCollection new.	
 	items do: [ :existing |
 		rest
-			detect: [ :sample | self checkItem: sample isSimilarTo: existing]
+			detect: [ :sample | sample isSimilarTo: existing]
 			ifFound: [ :sample | 
 				environment resolveItem: existing of: self.
 				found add: existing. 

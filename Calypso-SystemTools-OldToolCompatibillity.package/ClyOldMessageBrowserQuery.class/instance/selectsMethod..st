@@ -5,7 +5,7 @@ selectsMethod: aMethod
 	criteriaBlock ifNil: [ ^false ].
 
 	extraMethods removeAllSuchThat: [ :each | 
-		ClyMethodScope checkBasisObject: each isEqualTo: aMethod].
+		each calypsoEnvironmentType checkCalypsoItem: each isEqualTo: aMethod].
 
 	result := criteriaBlock value: aMethod.
 	result ifTrue: [ extraMethods add: aMethod ].

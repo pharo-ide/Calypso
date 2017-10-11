@@ -1,4 +1,4 @@
 testing
 isBasedOn: someBasisObject
 	^basisObjects anySatisfy: [ :each |
-		self class checkBasisObject: each isSameAs: someBasisObject]
+		each calypsoEnvironmentType checkCalypsoItem: each isSameAs: someBasisObject]

@@ -8,7 +8,7 @@ findItemsWith: actualObjects
 	self rebuildIfNeeded.
 	result := actualObjects collect: [ :eachObject |
 		items 
-			detect: [ :item | self itemScope checkBasisObject: item actualObject isEqualTo: eachObject ] 
+			detect: [ :item | item representsObjectEqualTo: eachObject ] 
 			ifNone: nil].
 	
 	result select: #notNil thenDo: [ :each | 

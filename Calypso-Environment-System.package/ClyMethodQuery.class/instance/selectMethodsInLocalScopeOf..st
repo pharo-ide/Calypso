@@ -1,5 +1,5 @@
 execution
-selectMethodsInClasses: classes
+selectMethodsInLocalScopeOf: classes
 
 	^classes flatCollect: [ :eachClass | 
 		(self selectMethodsInClass: eachClass instanceSide)

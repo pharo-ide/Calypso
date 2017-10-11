@@ -1,0 +1,3 @@
+item resolving
+resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
+	anEnvironmentPlugin resolvePropertiesOfProcess: anEnvironmentItem

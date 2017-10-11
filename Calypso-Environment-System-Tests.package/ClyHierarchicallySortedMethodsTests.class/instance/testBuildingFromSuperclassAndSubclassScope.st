@@ -2,7 +2,7 @@ tests
 testBuildingFromSuperclassAndSubclassScope
 	| methods |
 	methods := environment 
-		selectScope: ClyLocalClassScope of: {ClyClass1FromP1. ClySubclassN1OfClass1FromP1}.
+		selectScope: ClyInstanceSideScope of: {ClyClass1FromP1. ClySubclassN1OfClass1FromP1}.
 		
 	self retrieveContentFrom: methods.
 

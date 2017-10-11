@@ -3,6 +3,6 @@ fetchContent: anEnvironmentContent fromPackages: packages
 
 	| methods |
 	methods := packages flatCollect: [ :each | 
-		self selectMethodsInClasses: each definedClasses  ].
+		self selectMethodsInLocalScopeOf: each definedClasses  ].
 	
 	anEnvironmentContent buildFromMethods: methods

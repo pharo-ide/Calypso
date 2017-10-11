@@ -2,6 +2,7 @@ execution
 fetchContent: anEnvironmentContent fromClasses: classes
 
 	| methods |
-	methods := self selectMethodsInClasses: classes.
+	methods := classes flatCollect: [ :eachClass | 
+		self selectMethodsInClass: eachClass].
 	
 	anEnvironmentContent buildFromMethods: methods

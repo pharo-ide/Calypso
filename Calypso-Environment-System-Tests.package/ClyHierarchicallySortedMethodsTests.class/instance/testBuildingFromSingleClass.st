@@ -1,7 +1,7 @@
 tests
 testBuildingFromSingleClass
 	| classes |
-	classes := environment selectScope: ClyLocalClassScope of: { ClyClass1FromP1}.
+	classes := environment selectScope: ClyInstanceSideScope of: { ClyClass1FromP1}.
 
 	self retrieveContentFrom: classes.
 

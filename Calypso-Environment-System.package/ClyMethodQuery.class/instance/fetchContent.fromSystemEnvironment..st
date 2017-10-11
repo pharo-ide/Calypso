@@ -3,6 +3,6 @@ fetchContent: anEnvironmentContent fromSystemEnvironment: aSystemEnvironment
 
 	| methods |
 	
-	methods := self selectMethodsInClasses: aSystemEnvironment classes.
+	methods := self selectMethodsInLocalScopeOf: aSystemEnvironment classes.
 	
 	anEnvironmentContent buildFromMethods: methods

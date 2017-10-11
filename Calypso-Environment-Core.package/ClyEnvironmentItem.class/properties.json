@@ -11,7 +11,8 @@
 		"depth",
 		"properties",
 		"isResolved",
-		"actualObject"
+		"actualObject",
+		"type"
 	],
 	"name" : "ClyEnvironmentItem",
 	"type" : "normal"

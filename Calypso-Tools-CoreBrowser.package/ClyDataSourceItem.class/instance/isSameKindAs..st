@@ -1,3 +1,3 @@
 testing
 isSameKindAs: anotherItem
-	^self environmentScope isCompatibleWith: anotherItem environmentScope
+	^self type = anotherItem type

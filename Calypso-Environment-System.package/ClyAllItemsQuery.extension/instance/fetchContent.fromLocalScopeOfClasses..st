@@ -1,0 +1,3 @@
+*Calypso-Environment-System
+fetchContent: anEnvironmentContent fromLocalScopeOfClasses: classes
+	anEnvironmentContent buildFromClasses: classes

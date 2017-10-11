@@ -3,4 +3,4 @@ fetchContent: anEnvironmentContent fromClassHierarchy: aClassHierarchyScope
 
 	self 
 		fetchContent: anEnvironmentContent 
-		fromClasses: aClassHierarchyScope allClasses
+		fromLocalScopeOfClasses: aClassHierarchyScope allClasses
