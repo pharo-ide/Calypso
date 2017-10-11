@@ -1,3 +1,3 @@
 *Calypso-Tools-CoreBrowser
-calypsoToolbarColor
+calypsoStatusbarColor
 	^self windowColor 
