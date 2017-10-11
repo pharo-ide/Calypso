@@ -2,4 +2,4 @@
 processBrowserMenuActivator
 	<commandActivator>
 	
-	^CmdContextMenuCommandActivator byRootGroupItemFor: ClyProcessBrowserStackContext 
+	^CmdContextMenuCommandActivator byRootGroupItemFor: ClyProcessBrowserContextOfStack 

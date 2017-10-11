@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyProcessBrowserContext",
+	"category" : "Calypso-Tools-ProcessBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyProcessBrowserContextOfStack",
+	"type" : "normal"
+}

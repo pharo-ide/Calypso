@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySwitchPackageViewModeCommand",
+	"category" : "Calypso-Tools-PackageBrowser-Commands-Packages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySwitchToPackagesCommand",
+	"type" : "normal"
+}

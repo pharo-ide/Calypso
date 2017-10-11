@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowser",
+	"category" : "Calypso-Tools-PackageBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"packageView",
+		"classView",
+		"methodGroupView",
+		"methodView",
+		"metaLevelScope",
+		"methodGroupContent"
+	],
+	"name" : "ClyPackageBrowser",
+	"type" : "normal"
+}

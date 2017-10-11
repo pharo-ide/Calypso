@@ -1,3 +1,0 @@
-accessing
-packageItem
-	^ packageItem

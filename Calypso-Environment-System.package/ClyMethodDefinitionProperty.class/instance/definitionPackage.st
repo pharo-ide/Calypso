@@ -1,3 +1,0 @@
-accessing
-definitionPackage
-	^ packageItem actualObject

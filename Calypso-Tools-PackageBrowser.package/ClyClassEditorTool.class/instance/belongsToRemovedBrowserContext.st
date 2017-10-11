@@ -1,0 +1,3 @@
+testing
+belongsToRemovedBrowserContext
+	^editingClass isObsolete 

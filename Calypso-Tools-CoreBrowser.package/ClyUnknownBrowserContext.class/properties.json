@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "",
-	"super" : "ClyBrowserContext",
-	"category" : "Calypso-Tools-CoreBrowser-UI",
+	"commentStamp" : "DenisKudryashov 10/9/2017 15:46",
+	"super" : "CmdToolContext",
+	"category" : "Calypso-Tools-CoreBrowser-Contexts",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

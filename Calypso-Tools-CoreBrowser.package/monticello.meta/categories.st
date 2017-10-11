@@ -1,9 +1,8 @@
 SystemOrganization addCategory: #'Calypso-Tools-CoreBrowser'!
-SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-Commands-BrowserControlling'!
-SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-Commands-Methods'!
-SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-Commands-Queries'!
+SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-Commands'!
+SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-Contexts'!
 SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-DataSource'!
-SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-MethodEditors'!
+SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-MenuGroups'!
 SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-NavigationHistory'!
 SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-Table'!
 SystemOrganization addCategory: 'Calypso-Tools-CoreBrowser-Tabs'!

@@ -1,5 +1,5 @@
 accessing
 defaultMenuItemName
-	self hasTestResult ifFalse: [ ^'Run failed' ].
+	self hasTestResult ifFalse: [ ^super defaultMenuItemName ].
 	
 	^'Run failed (', self testResult brokenCount asString, ')'

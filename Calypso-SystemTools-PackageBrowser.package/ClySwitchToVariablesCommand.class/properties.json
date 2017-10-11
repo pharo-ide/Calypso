@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySwitchMethodViewModeCommand",
+	"category" : "Calypso-SystemTools-PackageBrowser-Commands-MethodGroups",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySwitchToVariablesCommand",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-testing
-isProjectSelected
-	^self hasSelectedItems

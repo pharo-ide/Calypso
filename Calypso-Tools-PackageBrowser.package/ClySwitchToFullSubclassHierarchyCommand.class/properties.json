@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySwitchClassHierarchyModeCommand",
+	"category" : "Calypso-Tools-PackageBrowser-Commands-Hierarchy",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySwitchToFullSubclassHierarchyCommand",
+	"type" : "normal"
+}

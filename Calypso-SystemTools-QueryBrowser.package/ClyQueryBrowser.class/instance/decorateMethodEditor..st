@@ -1,0 +1,4 @@
+tools support
+decorateMethodEditor: aMethodEditor
+
+	systemQuery decorateResultMethodEditor: aMethodEditor

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyDebugProcessComand",
+	"category" : "Calypso-SystemTools-ProcessBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyOpenProcessDebuggerComand",
+	"type" : "normal"
+}

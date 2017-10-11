@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClassAnnotation",
+	"category" : "Calypso-Tools-CoreBrowser-Tabs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTabActivationStrategy",
+	"type" : "normal"
+}

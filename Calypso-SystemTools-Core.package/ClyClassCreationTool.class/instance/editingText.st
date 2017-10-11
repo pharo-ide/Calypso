@@ -1,0 +1,3 @@
+building
+editingText
+	^self classTemplate 

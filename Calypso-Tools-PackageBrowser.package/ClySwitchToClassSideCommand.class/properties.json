@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySwitchClassMetaLevelCommand",
+	"category" : "Calypso-Tools-PackageBrowser-Commands-MetaLevel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySwitchToClassSideCommand",
+	"type" : "normal"
+}

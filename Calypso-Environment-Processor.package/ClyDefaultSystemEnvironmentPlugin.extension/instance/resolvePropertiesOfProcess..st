@@ -4,6 +4,6 @@ resolvePropertiesOfProcess: anEnvironmentItem
 	| processDefinition |
 	processDefinition := ClyProcessDefinitionProperty of: anEnvironmentItem actualObject.
 
-	self resolvePropertiesOfContext: processDefinition definitionItem.
+	self resolvePropertiesOfContext: processDefinition activeContextItem.
 
 	anEnvironmentItem addProperty: processDefinition.

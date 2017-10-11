@@ -1,0 +1,4 @@
+public
+lastSelectedVariable
+
+	^self selectedVariable 

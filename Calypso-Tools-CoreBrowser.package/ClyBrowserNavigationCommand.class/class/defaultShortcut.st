@@ -1,0 +1,3 @@
+activation
+defaultShortcut
+	self subclassResponsibility 

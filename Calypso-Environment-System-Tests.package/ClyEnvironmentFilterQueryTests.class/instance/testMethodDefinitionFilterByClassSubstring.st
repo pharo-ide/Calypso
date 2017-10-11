@@ -4,7 +4,7 @@ testMethodDefinitionFilterByClassSubstring
 	| scope allMethods filteredMethods items |
 	scope := environment selectScope: ClyLocalClassScope of: self class superclass subclasses.
 	allMethods := scope query: ClySortedMethods.
-	filteredMethods := allMethods filterItemsBy: (ClyMethodDefinitionFilter pattern: self class name).
+	filteredMethods := allMethods filterItemsBy: (ClyQueryResultFilter substringPattern: self class name).
 	
 	items := filteredMethods retrieveAll.
 	

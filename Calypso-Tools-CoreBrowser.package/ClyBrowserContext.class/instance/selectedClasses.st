@@ -1,3 +1,0 @@
-public
-selectedClasses
-	self subclassResponsibility 

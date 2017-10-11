@@ -1,0 +1,3 @@
+public
+selectedClassGroups
+	^self selectedObjects

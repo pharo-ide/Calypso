@@ -1,3 +1,0 @@
-*Calypso-Tools-SystemBrowser
-systemBrowserContextClass
-	^ClyVariableSystemBrowserContext 

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTextEditorContext",
+	"category" : "Calypso-Tools-SystemBrowser-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedSourceNode"
+	],
+	"name" : "ClySourceCodeContext",
+	"type" : "normal"
+}

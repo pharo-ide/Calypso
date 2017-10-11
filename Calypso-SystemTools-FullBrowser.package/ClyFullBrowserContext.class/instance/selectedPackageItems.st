@@ -1,0 +1,3 @@
+selection-packages
+selectedPackageItems
+	^tool packageSelection items

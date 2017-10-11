@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ClyClassEditorTool",
-	"category" : "Calypso-Tools-SystemBrowser-TextEditors",
+	"category" : "Calypso-Tools-SystemBrowser-Editors-Classes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

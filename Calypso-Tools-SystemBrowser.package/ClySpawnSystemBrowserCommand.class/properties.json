@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "CmdCommand",
-	"category" : "Calypso-Tools-SystemBrowser-Commands-Classes",
+	"category" : "Calypso-Tools-SystemBrowser-Commands-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

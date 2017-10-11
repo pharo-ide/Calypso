@@ -1,0 +1,3 @@
+accessing
+methodGroupView
+	^ methodGroupView

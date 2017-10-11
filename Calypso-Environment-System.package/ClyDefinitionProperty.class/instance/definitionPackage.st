@@ -1,0 +1,3 @@
+accessing
+definitionPackage
+	^self definitionPackageItem actualObject

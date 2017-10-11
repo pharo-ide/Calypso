@@ -1,0 +1,3 @@
+public
+lastSelectedMethod
+	^self selectedMethod

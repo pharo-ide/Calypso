@@ -1,3 +1,3 @@
 accessing
 analyzedObject
-	^ analyzedObject
+	^ tool analyzedObject

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTextEditorTool",
+	"category" : "Calypso-Tools-SystemBrowser-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodTags",
+		"extendingPackage"
+	],
+	"name" : "ClyMethodEditorTool",
+	"type" : "normal"
+}

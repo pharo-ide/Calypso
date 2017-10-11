@@ -4,7 +4,7 @@ testFilteringContentBySmartAPI
 	| scope allMethods filteredMethods items |
 	scope := environment selectScope: ClyLocalClassScope of: { self class }.
 	allMethods := scope query: ClySortedMethods.
-	filteredMethods := allMethods filterItemsBy: (ClyItemNameSubstringFilter pattern: testSelector).
+	filteredMethods := allMethods filterItemsBy: (ClyItemNameFilter substringPattern: testSelector).
 	
 	items := filteredMethods retrieveAll.
 	

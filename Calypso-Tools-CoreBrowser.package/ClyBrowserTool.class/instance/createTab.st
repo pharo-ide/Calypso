@@ -1,7 +1,7 @@
 building
 createTab
 	| menu |
-	menu := CmdMenu activatedBy: ClyBrowserTabCommandActivator.
+	menu := CmdMenu activatedBy: ClyBrowserTabCommandActivation.
 	menu buildInContext: context.
 	
 	containerTab := TabMorph

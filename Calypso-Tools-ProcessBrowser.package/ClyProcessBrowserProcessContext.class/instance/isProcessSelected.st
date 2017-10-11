@@ -1,3 +1,0 @@
-testing
-isProcessSelected
-	^self hasSelectedItems 

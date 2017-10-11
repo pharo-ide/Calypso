@@ -1,3 +1,0 @@
-public
-selectedMethodGroups
-	^tool selectedMethodGroups actualObjects

@@ -1,0 +1,3 @@
+*Calypso-Tools-PackageBrowser
+systemBrowserContextClass
+	^ClyPackageBrowserContextOfPackages 

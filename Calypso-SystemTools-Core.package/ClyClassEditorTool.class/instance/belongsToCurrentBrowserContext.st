@@ -1,0 +1,4 @@
+testing
+belongsToCurrentBrowserContext
+
+	^browser isClassSelected: context lastSelectedClass

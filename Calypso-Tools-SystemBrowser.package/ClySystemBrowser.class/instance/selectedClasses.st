@@ -1,3 +1,0 @@
-accessing
-selectedClasses
-	^classView selection

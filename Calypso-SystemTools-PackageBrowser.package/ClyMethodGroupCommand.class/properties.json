@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdCommand",
+	"category" : "Calypso-SystemTools-PackageBrowser-Commands-MethodGroups",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodGroups"
+	],
+	"name" : "ClyMethodGroupCommand",
+	"type" : "normal"
+}
