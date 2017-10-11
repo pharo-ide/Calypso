@@ -2,7 +2,7 @@ initialization
 initialize
 	super initialize.
 	self 
-		color: self theme calypsoToolbarColor;
+		color: self theme windowColor;
 		changeTableLayout;
 		height: self defaultHeight;	
 		layoutInset: 2@0; 

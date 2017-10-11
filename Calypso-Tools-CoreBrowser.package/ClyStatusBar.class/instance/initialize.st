@@ -2,7 +2,7 @@ initialization
 initialize
 	super initialize.	
 	self 
-		color: self theme calypsoStatusbarColor;
+		color: self theme windowColor;
 		changeTableLayout;
 		listDirection: #leftToRight;
 		hResizing: #spaceFill;
