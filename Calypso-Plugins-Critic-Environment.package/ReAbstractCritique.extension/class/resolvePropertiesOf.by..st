@@ -1,3 +1,3 @@
-item resolving
+*Calypso-Plugins-Critic-Environment
 resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
 	anEnvironmentPlugin resolvePropertiesOfCritique: anEnvironmentItem

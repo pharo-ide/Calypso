@@ -1,0 +1,2 @@
+item resolving
+resolvePropertiesOfObject: anItem

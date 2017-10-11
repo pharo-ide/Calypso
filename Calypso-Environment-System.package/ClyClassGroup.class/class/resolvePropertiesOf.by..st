@@ -1,3 +1,4 @@
 items resolving
 resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
-	anEnvironmentPlugin resolvePropertiesOfMethod: anEnvironmentItem
+
+	^anEnvironmentPlugin resolvePropertiesOfClassGroup: anEnvironmentItem

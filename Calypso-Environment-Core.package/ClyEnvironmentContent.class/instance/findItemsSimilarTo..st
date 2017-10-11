@@ -8,7 +8,7 @@ findItemsSimilarTo: sampleEnvironmentItems
 		rest
 			detect: [ :sample | sample isSimilarTo: existing]
 			ifFound: [ :sample | 
-				environment resolveItem: existing of: self.
+				environment resolveItem: existing.
 				found add: existing. 
 				rest remove: sample.
 				rest ifEmpty: [ ^found ] ]].	

@@ -1,0 +1,4 @@
+*Calypso-Environment-System
+resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
+
+	^anEnvironmentPlugin resolvePropertiesOfPackage: anEnvironmentItem

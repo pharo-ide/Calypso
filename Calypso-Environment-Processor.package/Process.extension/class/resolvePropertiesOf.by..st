@@ -1,3 +1,3 @@
-item resolving
+*Calypso-Environment-Processor
 resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
 	anEnvironmentPlugin resolvePropertiesOfProcess: anEnvironmentItem
