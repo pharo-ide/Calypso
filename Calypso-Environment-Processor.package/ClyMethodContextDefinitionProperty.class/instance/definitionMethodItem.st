@@ -1,3 +1,3 @@
 accessing
 definitionMethodItem
-	^definitionItem
+	^definitionMethodItem

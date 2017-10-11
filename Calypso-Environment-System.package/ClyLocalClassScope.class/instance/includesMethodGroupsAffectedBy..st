@@ -2,6 +2,9 @@ system changes
 includesMethodGroupsAffectedBy: aSystemAnnouncement
 
 	| providers |
-	providers := environment collectMethodGroupProvidersFor: basisObjects.
-	^providers anySatisfy: [ :eachProvider | 
-		eachProvider providesGroupsAffectedBy: aSystemAnnouncement]
+	environment pluginsDo: [ :plugin |
+		providers := plugin collectMethodGroupProvidersFor: basisObjects.
+		providers do: [ :eachProvider | 
+			(eachProvider providesGroupsAffectedBy: aSystemAnnouncement)
+				ifTrue: [^true]]].
+	^false

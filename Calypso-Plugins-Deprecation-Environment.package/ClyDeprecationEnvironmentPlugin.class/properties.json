@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 5/20/2017 10:32",
-	"super" : "ClyEnvironmentPlugin",
+	"super" : "ClySystemEnvironmentPlugin",
 	"category" : "Calypso-Plugins-Deprecation-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],

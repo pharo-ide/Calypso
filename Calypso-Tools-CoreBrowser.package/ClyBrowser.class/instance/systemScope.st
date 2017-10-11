@@ -1,3 +1,3 @@
 accessing
 systemScope
-	self subclassResponsibility 
+	^systemScope ifNil: [systemScope := navigationEnvironment systemScope]

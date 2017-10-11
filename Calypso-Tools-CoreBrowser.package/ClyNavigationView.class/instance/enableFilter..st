@@ -1,4 +1,4 @@
 controlling
 enableFilter: anItemStringFilterClass
 
-	table enableFilter: anItemStringFilterClass; explicitFunction
+	self enableFilterWithFactory: (ClyTableFilterFactory of: anItemStringFilterClass)

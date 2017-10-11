@@ -1,0 +1,3 @@
+accessing
+methodSelection
+	^resultView selection

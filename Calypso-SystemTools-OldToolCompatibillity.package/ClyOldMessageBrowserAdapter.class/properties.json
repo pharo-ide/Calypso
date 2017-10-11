@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-SystemTools-OldToolCompatibillity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"messages",
+		"title",
+		"autoSelect",
+		"refreshingBlock"
+	],
+	"name" : "ClyOldMessageBrowserAdapter",
+	"type" : "normal"
+}

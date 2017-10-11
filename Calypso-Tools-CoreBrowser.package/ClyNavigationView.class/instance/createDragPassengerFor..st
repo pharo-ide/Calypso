@@ -1,6 +1,6 @@
 drag and drop support
 createDragPassengerFor: aSelection
 	| context |
-	context := browser createContextOf: aSelection. 
+	context := self createSelectionContextOf: aSelection. 
 	
-	^CmdDragAndDropCommandActivator createDragPassengerInContext: context
+	^CmdDragAndDropCommandActivation createDragPassengerInContext: context

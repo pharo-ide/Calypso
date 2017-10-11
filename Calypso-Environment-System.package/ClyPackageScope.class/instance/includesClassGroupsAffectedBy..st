@@ -2,7 +2,10 @@ system changes
 includesClassGroupsAffectedBy: aSystemAnnouncement
 
 	| providers |
-	^basisObjects anySatisfy: [ :eachPackage | 
-		providers := environment collectClassGroupProvidersFor: eachPackage.
-		providers anySatisfy: [ :eachProvider | 
-			eachProvider providesGroupsAffectedBy: aSystemAnnouncement]]
+	basisObjects do: [ :eachPackage | 
+		environment pluginsDo: [ :plugin |
+			providers := plugin collectClassGroupProvidersFor: eachPackage.
+			providers do: [ :eachProvider | 
+				(eachProvider providesGroupsAffectedBy: aSystemAnnouncement)
+					ifTrue: [^true]]]].
+	^false

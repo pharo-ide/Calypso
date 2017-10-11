@@ -1,3 +1,0 @@
-public
-selectedClasses
-	^tool selectedClasses actualObjects

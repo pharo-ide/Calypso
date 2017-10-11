@@ -1,0 +1,3 @@
+selection-packages
+lastSelectedPackage
+	^self lastSelectedObjectIn: self selectedPackages

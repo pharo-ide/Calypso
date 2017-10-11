@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 10/5/2017 17:25",
+	"super" : "AnnotationContext",
+	"category" : "Calypso-Tools-CoreBrowser-Contexts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scopeClass"
+	],
+	"name" : "ClyEnvironmentScopeContext",
+	"type" : "normal"
+}

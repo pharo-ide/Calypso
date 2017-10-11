@@ -1,1 +1,0 @@
-I am a simple filter which check item name for pattern substring

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyClassEditorTool",
+	"category" : "Calypso-SystemTools-Core-Editors-Classes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassDefinitionEditorTool",
+	"type" : "normal"
+}

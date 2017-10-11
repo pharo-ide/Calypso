@@ -1,7 +1,6 @@
 event handling
 selectionChanged
-	self isFilterChangedAndSelectionReset 
-		ifTrue: [ ^self selectionWasResetByFilter ].
+	self isFilterChanged ifTrue: [ ^self selectionWasResetByFilter ].
 	
 	self changeNavigationStateBy: [ 
 		self updateSelection.	

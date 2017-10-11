@@ -1,3 +1,0 @@
-activation
-activationContextClass
-	^ClyMethodGroupSystemBrowserContext 

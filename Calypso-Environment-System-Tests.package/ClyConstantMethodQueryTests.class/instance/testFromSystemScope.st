@@ -1,7 +1,7 @@
 tests
 testFromSystemScope
 	| allMethods |
-	allMethods := self executeQueryInScope: ClySystemScope of: { ClySystemEnvironment currentImage}.
+	allMethods := self executeQueryInScope: ClySystemEnvironmentScope of: { ClySystemEnvironment currentImage}.
 	
 	self assert: allMethods size equals: 2.
 	allMethods := allMethods asIdentitySet.

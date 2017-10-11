@@ -1,3 +1,0 @@
-testing
-isMethodGroupSelected
-	^self hasSelectedItems 

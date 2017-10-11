@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SycRemoveMethodStrategy",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyInteractiveRemoveMethodStrategy",
+	"type" : "normal"
+}

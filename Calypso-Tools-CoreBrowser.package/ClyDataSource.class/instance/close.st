@@ -1,5 +1,6 @@
 controlling
 close
-	environmentCursor detachContentFrom: self.
+	lastFilteredDataSource ifNotNil: [ lastFilteredDataSource close ].
 	
+	environmentCursor detachContentFrom: self.	
 	environmentCursor := ClyClosedDataSourceCursor instance

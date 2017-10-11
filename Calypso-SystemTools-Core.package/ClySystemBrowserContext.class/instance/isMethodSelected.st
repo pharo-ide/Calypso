@@ -1,0 +1,3 @@
+selection-methods
+isMethodSelected
+	^self selectedMethodItems notEmpty

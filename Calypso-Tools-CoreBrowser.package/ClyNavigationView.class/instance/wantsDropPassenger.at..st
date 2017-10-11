@@ -1,6 +1,6 @@
 drag and drop support
 wantsDropPassenger: aPassenger at: aDataSourceItem
 	| context |
-	context := browser createContextOf: aDataSourceItem asSelection.
+	context := self createSelectionContextOf: aDataSourceItem asSelection.
 	
 	^aPassenger canBeDroppedInContext: context

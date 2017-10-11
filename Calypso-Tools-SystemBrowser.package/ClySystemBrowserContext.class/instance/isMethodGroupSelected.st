@@ -1,3 +1,0 @@
-testing
-isMethodGroupSelected
-	^tool selectedMethodGroups isEmpty not

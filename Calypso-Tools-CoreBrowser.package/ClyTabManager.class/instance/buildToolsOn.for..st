@@ -1,8 +1,8 @@
 private
 buildToolsOn: toolsList for: aBrowserContext
 	| tool |
-	ClyBrowserTool
-		allToolsFor: aBrowserContext
-		do: [ :toolClass | 
-			tool := toolClass for: aBrowserContext of: browser.
+	ClyTabActivationStrategy 
+		activeInstancesInContext: aBrowserContext
+		do: [ :strategy | 
+			tool := strategy createToolFor: aBrowserContext of: browser.
 			toolsList add: tool ]

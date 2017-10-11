@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "DenisKudryashov 6/12/2017 23:51",
 	"super" : "CmdCommand",
-	"category" : "Calypso-Tools-CoreBrowser-Commands-BrowserControlling",
+	"category" : "Calypso-Tools-CoreBrowser-Commands",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

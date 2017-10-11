@@ -1,4 +1,4 @@
 controlling
 enableFilter
 
-	self enableFilter: ClyItemNameSubstringFilter
+	self enableFilter: ClyItemNameFilter

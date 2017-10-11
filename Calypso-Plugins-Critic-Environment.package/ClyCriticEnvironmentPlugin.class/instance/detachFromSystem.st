@@ -2,5 +2,5 @@ controlling
 detachFromSystem
 	super detachFromSystem.
 	
-	systemCritic detachFromSystem: environment systemEnvironment.
+	systemCritic detachFromSystem: environment system.
 	systemCritic unsubscribe: self

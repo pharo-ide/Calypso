@@ -1,0 +1,3 @@
+activation
+toolbarOrder
+	self subclassResponsibility 

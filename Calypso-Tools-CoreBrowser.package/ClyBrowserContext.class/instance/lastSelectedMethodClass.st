@@ -1,3 +1,0 @@
-public
-lastSelectedMethodClass
-	^self subclassResponsibility

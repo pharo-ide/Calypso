@@ -7,5 +7,6 @@ of: aProcess
 			ifTrue: [ context := thisContext sender ] 
 			ifFalse: [ self error: 'should not happen' ] ].
 		
-	^(self definitionItem: (ClyEnvironmentItem named: context selector with: context)) 
+	^self new
+		activeContext: context;
 		priority: aProcess priority

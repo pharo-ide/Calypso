@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyInteractiveRemoveMethodStrategy",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyNotRemoveAndShowSendersMethodStrategy",
+	"type" : "normal"
+}

@@ -1,4 +1,4 @@
 instance creation
-pattern: aString
+pattern: aStringPattern
 	^self new 
-		pattern: aString
+		pattern: aStringPattern

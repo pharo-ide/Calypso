@@ -1,3 +1,0 @@
-context
-createContextOfSingleItem: aDataSourceItem
-	self subclassResponsibility 

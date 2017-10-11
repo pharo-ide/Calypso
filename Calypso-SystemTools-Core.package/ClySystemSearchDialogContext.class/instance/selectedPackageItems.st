@@ -1,0 +1,3 @@
+selection-packages
+selectedPackageItems
+	^self selectedItemsWhichBelongsTo: ClyPackageScope

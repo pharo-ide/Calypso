@@ -3,12 +3,11 @@ baseline: spec
    <baseline>
 
 	spec for: #'common' do: [
-		spec postLoadDoIt: #initializeDecorators.
 		spec 
 			baseline: 'Commander' with: [
-				spec repository: 'github://dionisiydk/Commander:v0.2.x' ];
+				spec repository: 'github://dionisiydk/Commander:dev' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://dionisiydk/SystemCommands:v0.2.x' ].			
+				spec repository: 'github://dionisiydk/SystemCommands:calypsoEnvironmentRefactoring' ].			
 		spec 
 			package: #'Calypso-Environment-Core';
 			package: #'Calypso-Environment-System' with: [
@@ -37,42 +36,42 @@ baseline: spec
 				spec requires: #(#'Calypso-Environment-Processor')];
 			
 			package: #'Calypso-Plugins-Critic-Browser' with: [
-				spec requires: #(#'Calypso-Tools-SystemBrowser' #'Calypso-Plugins-Critic-Environment' ). ];
+				spec requires: #(#'Calypso-SystemTools-FullBrowser' #'Calypso-Plugins-Critic-Environment' ). ];
 			package: #'Calypso-Plugins-Critic-Environment' with: [
 				spec requires: #(#'Calypso-Environment-System' ). ];
 			package: 'Calypso-Plugins-Critic-Environment-Tests' with: [
 				spec requires: #(#'Calypso-Plugins-Critic-Environment' #'Calypso-Environment-System-Tests' ). ];
 			package: #'Calypso-Plugins-Deprecation-Browser' with: [
-				spec requires: #(#'Calypso-Plugins-Deprecation-Environment' #'Calypso-Tools-SystemBrowser' ). ];
+				spec requires: #(#'Calypso-Plugins-Deprecation-Environment' #'Calypso-SystemTools-FullBrowser' ). ];
 			package: #'Calypso-Plugins-Deprecation-Environment' with: [
 				spec requires: #(#'Calypso-Environment-System' ). ];
 			package: #'Calypso-Plugins-Deprecation-Environment-Tests' with: [
 				spec requires: #(#'Calypso-Plugins-Deprecation-Environment' ). ];
 			package: #'Calypso-Plugins-FileOut-Browser' with: [
-				spec requires: #(#'Calypso-Plugins-FileOut-Environment' #'Calypso-Tools-CoreBrowser' ). ];
+				spec requires: #(#'Calypso-Plugins-FileOut-Environment' #'Calypso-SystemTools-Core' ). ];
 			package: #'Calypso-Plugins-FileOut-Environment';
 			package: 'Calypso-Plugins-InheritanceAnalyzer-Browser' with: [
-				spec requires: #('Calypso-Plugins-InheritanceAnalyzer-Environment' #'Calypso-Tools-SystemBrowser' ). ];
+				spec requires: #('Calypso-Plugins-InheritanceAnalyzer-Environment' #'Calypso-SystemTools-FullBrowser' ). ];
 			package: 'Calypso-Plugins-InheritanceAnalyzer-Environment' with: [
 				spec requires: #(#'Calypso-Environment-System' ). ];
 			package: 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' with: [
 				spec requires: #('Calypso-Plugins-InheritanceAnalyzer-Environment' ). ];
 			package: #'Calypso-Plugins-MethodDiffTool' with: [
-				spec requires: #(#'Calypso-Tools-CoreBrowser' ). ];
+				spec requires: #(#'Calypso-SystemTools-Core' ). ];
 			package: #'Calypso-Plugins-Monticello-Browser' with: [
-				spec requires: #(#'Calypso-Plugins-Monticello-Environment' #'Calypso-Tools-SystemBrowser' ). ];
+				spec requires: #(#'Calypso-Plugins-Monticello-Environment' #'Calypso-SystemTools-FullBrowser' ). ];
 			package: #'Calypso-Plugins-Monticello-Environment' with: [
 				spec requires: #(#'Calypso-Environment-System' ). ];
 			package: #'Calypso-Plugins-Nautilus-Browser' with: [
-				spec requires: #(#'Calypso-Tools-CoreBrowser' ). ];
+				spec requires: #(#'Calypso-SystemTools-Core' ). ];
 			package: #'Calypso-Plugins-Reflectivity-Browser' with: [
-				spec requires: #(#'Calypso-Plugins-Reflectivity-Environment' #'Calypso-Tools-SystemBrowser' ). ];
+				spec requires: #(#'Calypso-Plugins-Reflectivity-Environment' #'Calypso-SystemTools-FullBrowser' ). ];
 			package: #'Calypso-Plugins-Reflectivity-Environment' with: [
 				spec requires: #(#'Calypso-Environment-System' ). ];
 			package: #'Calypso-Plugins-Reflectivity-Environment-Tests' with: [
 				spec requires: #(#'Calypso-Environment-System-Tests' #'Calypso-Plugins-Reflectivity-Environment' ). ];
 			package: #'Calypso-Plugins-SUnit-Browser' with: [
-				spec requires: #(#'Calypso-Plugins-SUnit-Environment' #'Calypso-Tools-SystemBrowser' ). ];
+				spec requires: #(#'Calypso-Plugins-SUnit-Environment' #'Calypso-SystemTools-FullBrowser' ). ];
 			package: #'Calypso-Plugins-SUnit-Environment' with: [
 				spec requires: #(#'Calypso-Environment-System' ). ];
 			
@@ -81,39 +80,40 @@ baseline: spec
 			package: #'Calypso-Plugins-Undeclared-Environment-Tests' with: [
 				spec requires: #(#'Calypso-Environment-System-Tests' #'Calypso-Plugins-Undeclared-Environment' ). ];
 			package: #'Calypso-Plugins-Undeclared-Browser' with: [
-				spec requires: #(#'Calypso-Plugins-Undeclared-Environment' #'Calypso-Tools-SystemBrowser' ). ];
+				spec requires: #(#'Calypso-Plugins-Undeclared-Environment' #'Calypso-SystemTools-FullBrowser' ). ];
 			
 			
 			package: #'Calypso-Tools-CoreBrowser' with: [
-				spec requires: #(#'Calypso-Environment-System' 'Commander' 'SystemCommands' ). ];
-			package: #'Calypso-Tools-CoreBrowser-Tests' with: [
-				spec requires: #(#'Calypso-Tools-CoreBrowser' ). ];
+				spec requires: #(#'Calypso-Environment-Core' 'Commander' ). ];
 
-			package: #'Calypso-Tools-SystemBrowser' with: [
-				spec requires: #(#'Calypso-Tools-CoreBrowser' ). ];
-			package: #'Calypso-Tools-SystemBrowser-Tests' with: [
-				spec requires: #(#'Calypso-Tools-SystemBrowser' ). ];
+			package: #'Calypso-SystemTools-Core' with: [
+				spec requires: #(#'Calypso-Environment-System' #'Calypso-Tools-CoreBrowser' 'SystemCommands' ). ];
 			
-			package: #'Calypso-Tools-MethodBrowser' with: [
-				spec requires: #(#'Calypso-Tools-SystemBrowser' ). ];
-			package: #'Calypso-Tools-MethodBrowser-Tests' with: [
-				spec requires: #(#'Calypso-Tools-MethodBrowser' #'Calypso-Tools-SystemBrowser-Tests' ). ];		
+			package: #'Calypso-SystemTools-FullBrowser' with: [
+				spec requires: #(#'Calypso-SystemTools-Core' ). ];
+			package: #'Calypso-SystemTools-FullBrowser-Tests' with: [
+				spec requires: #(#'Calypso-SystemTools-FullBrowser' ). ];
 			
-			package: #'Calypso-Tools-OldToolCompatibillity' with: [
-				spec requires: #(#'Calypso-Tools-MethodBrowser' ). ];
+			package: #'Calypso-SystemTools-QueryBrowser' with: [
+				spec requires: #(#'Calypso-SystemTools-FullBrowser' ). ];
+			package: #'Calypso-SystemTools-QueryBrowser-Tests' with: [
+				spec requires: #(#'Calypso-SystemTools-QueryBrowser' #'Calypso-SystemTools-FullBrowser-Tests' ). ];		
+			
+			package: #'Calypso-SystemTools-OldToolCompatibillity' with: [
+				spec requires: #(#'Calypso-SystemTools-QueryBrowser' ). ];
 
-			package: #'Calypso-Tools-Debugger' with: [
-				spec requires: #(#'Calypso-Environment-Processor' #'Calypso-Tools-MethodBrowser' ). ];
+			package: #'Calypso-SystemTools-Debugger' with: [
+				spec requires: #(#'Calypso-Environment-Processor' #'Calypso-SystemTools-QueryBrowser' ). ];
 			
-			package: #'Calypso-Tools-ProcessBrowser' with: [
-				spec requires: #(#'Calypso-Environment-Processor' #'Calypso-Tools-Debugger' ). ].
+			package: #'Calypso-SystemTools-ProcessBrowser' with: [
+				spec requires: #(#'Calypso-Environment-Processor' #'Calypso-SystemTools-Debugger' ). ].
 
 
 		spec 
-			group: 'Browser' with: #(#'Calypso-Tools-SystemBrowser' #'Calypso-Tools-MethodBrowser' 'Calypso-Tools-ProcessBrowser');
+			group: 'Browser' with: #(#'Calypso-SystemTools-FullBrowser' #'Calypso-SystemTools-QueryBrowser' 'Calypso-SystemTools-ProcessBrowser');
 			group: 'Core' with: #('Environment' 'Browser' );
 			group: 'Environment' with: #(#'Calypso-Environment-System' #'Calypso-Environment-Core' #'Calypso-Environment-Processor' );
-			group: 'FullBrowser' with: #('Browser' #'Calypso-Plugins-Monticello-Browser' #'Calypso-Plugins-SUnit-Browser' #'Calypso-Plugins-Nautilus-Browser' #'Calypso-Tools-OldToolCompatibillity' #'Calypso-Plugins-Critic-Browser' 'Calypso-Plugins-InheritanceAnalyzer-Browser' #'Calypso-Plugins-FileOut-Browser' #'Calypso-Plugins-MethodDiffTool' #'Calypso-Plugins-Deprecation-Browser' #'Calypso-Plugins-Reflectivity-Browser' #'Calypso-Plugins-Undeclared-Browser');
+			group: 'FullBrowser' with: #('Browser' #'Calypso-Plugins-Monticello-Browser' #'Calypso-Plugins-SUnit-Browser' #'Calypso-Plugins-Nautilus-Browser' #'Calypso-SystemTools-OldToolCompatibillity' #'Calypso-Plugins-Critic-Browser' 'Calypso-Plugins-InheritanceAnalyzer-Browser' #'Calypso-Plugins-FileOut-Browser' #'Calypso-Plugins-MethodDiffTool' #'Calypso-Plugins-Deprecation-Browser' #'Calypso-Plugins-Reflectivity-Browser' #'Calypso-Plugins-Undeclared-Browser');
 			group: 'FullEnvironment' with: #(#'Calypso-Plugins-Monticello-Environment' #'Calypso-Plugins-SUnit-Environment' 'Environment' 'Calypso-Plugins-InheritanceAnalyzer-Environment' #'Calypso-Plugins-FileOut-Environment' #'Calypso-Plugins-Deprecation-Environment' #'Calypso-Plugins-Reflectivity-Environment' #'Calypso-Plugins-Critic-Environment' #'Calypso-Plugins-Undeclared-Environment' );
-			group: 'Tests' with: #(#'Calypso-Environment-System-Tests' #'Calypso-Environment-Processor-Tests' #'Calypso-Tools-CoreBrowser-Tests' #'Calypso-Tools-SystemBrowser-Tests' #'Calypso-Tools-MethodBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' 'Calypso-Plugins-Undeclared-Environment-Tests');
+			group: 'Tests' with: #(#'Calypso-Environment-System-Tests' #'Calypso-Environment-Processor-Tests' #'Calypso-SystemTools-FullBrowser-Tests' #'Calypso-SystemTools-QueryBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' 'Calypso-Plugins-Undeclared-Environment-Tests');
 			group: 'default' with: #('FullEnvironment' 'FullBrowser' 'Tests' ). ].

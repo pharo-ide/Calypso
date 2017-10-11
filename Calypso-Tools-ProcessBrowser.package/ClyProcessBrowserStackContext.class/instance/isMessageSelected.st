@@ -1,3 +1,0 @@
-testing
-isMessageSelected
-	^self isMethodSelected

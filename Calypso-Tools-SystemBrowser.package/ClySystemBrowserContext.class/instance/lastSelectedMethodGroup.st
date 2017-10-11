@@ -1,3 +1,0 @@
-public
-lastSelectedMethodGroup
-	^self lastSelectedObjectIn: self selectedMethodGroups

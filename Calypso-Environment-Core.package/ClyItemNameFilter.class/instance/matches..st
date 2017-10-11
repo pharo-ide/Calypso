@@ -1,4 +1,4 @@
 testing
 matches: anEnvironmentItem
 
-	^self matchesName: anEnvironmentItem name
+	^pattern matches: anEnvironmentItem name

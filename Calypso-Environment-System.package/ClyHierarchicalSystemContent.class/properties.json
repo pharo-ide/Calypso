@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentContent",
+	"category" : "Calypso-Environment-System-Content",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyHierarchicalSystemContent",
+	"type" : "normal"
+}

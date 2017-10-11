@@ -1,3 +1,0 @@
-private
-createBrowser
-	^ClyMethodBrowser new

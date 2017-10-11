@@ -1,3 +1,0 @@
-public
-selectedVariables
-	^self selectedObjects

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 10/10/2017 17:58",
+	"super" : "Object",
+	"category" : "Calypso-Environment-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value"
+	],
+	"name" : "ClyStringPattern",
+	"type" : "normal"
+}

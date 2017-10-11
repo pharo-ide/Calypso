@@ -1,3 +1,3 @@
-accessing
+context
 createCommandContext
 	^self createSelectionContext

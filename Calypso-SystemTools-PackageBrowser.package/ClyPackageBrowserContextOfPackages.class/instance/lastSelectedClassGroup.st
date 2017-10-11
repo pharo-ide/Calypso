@@ -1,0 +1,3 @@
+public
+lastSelectedClassGroup
+	^self lastSelectedObject

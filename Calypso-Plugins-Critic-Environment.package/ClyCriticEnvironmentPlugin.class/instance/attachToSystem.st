@@ -2,5 +2,5 @@ controlling
 attachToSystem
 	super attachToSystem.
 	
-	systemCritic attachToSystem: environment systemEnvironment.
+	systemCritic attachToSystem: environment system.
 	systemCritic whenAnalysisDoneSend: #criticAnalysisDone: to: self

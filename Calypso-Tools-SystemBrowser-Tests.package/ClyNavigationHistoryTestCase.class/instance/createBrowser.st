@@ -1,3 +1,0 @@
-running
-createBrowser
-	^ClySystemBrowser new

@@ -1,4 +1,4 @@
 testing
 isMethodSelected: aMethod
 
-	^self selectedMethods includesActualObject: aMethod
+	^self methodSelection includesActualObject: aMethod

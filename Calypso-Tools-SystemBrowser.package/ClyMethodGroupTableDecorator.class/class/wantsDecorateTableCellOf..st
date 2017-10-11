@@ -1,4 +1,0 @@
-decoration
-wantsDecorateTableCellOf: aDataSourceItem
-	
-	^true

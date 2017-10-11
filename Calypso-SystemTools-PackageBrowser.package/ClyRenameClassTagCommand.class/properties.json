@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdCommand",
+	"category" : "Calypso-SystemTools-PackageBrowser-Commands-Class groups",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classGroup",
+		"newName"
+	],
+	"name" : "ClyRenameClassTagCommand",
+	"type" : "normal"
+}

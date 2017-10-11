@@ -1,0 +1,3 @@
+selection-method groups
+isMethodGroupSelected
+	^self selectedMethodGroupItems notEmpty

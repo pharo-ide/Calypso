@@ -1,3 +1,0 @@
-public
-lastSelectedVariable
-	^self lastSelectedObject

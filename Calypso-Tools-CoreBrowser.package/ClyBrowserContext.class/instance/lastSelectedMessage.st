@@ -1,3 +1,0 @@
-public
-lastSelectedMessage
-	^SycMessageDescription ofMethod: self lastSelectedMethod
