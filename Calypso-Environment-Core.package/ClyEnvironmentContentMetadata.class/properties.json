@@ -10,7 +10,6 @@
 		"queryScope",
 		"queryScopeClass",
 		"queryScopeSize",
-		"itemScope",
 		"properties"
 	],
 	"name" : "ClyEnvironmentContentMetadata",

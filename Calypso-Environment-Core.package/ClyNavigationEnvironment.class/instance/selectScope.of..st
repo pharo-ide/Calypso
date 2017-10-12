@@ -1,9 +1,12 @@
 queries
 selectScope: anEnvironmentScopeClass of: basisObjects
 
-	| existingScopes preparedBasis |
+	| existingScopes preparedBasis scopeType |
 	self cleanGarbageInCache.
-	existingScopes := scopeCache at: anEnvironmentScopeClass ifAbsentPut: [ WeakValueDictionary new ].
+	scopeType := basisObjects 
+		ifEmpty: [ Object ]  
+		ifNotEmpty: [ basisObjects anyOne calypsoEnvironmentType ].
+	existingScopes := scopeCache at: anEnvironmentScopeClass -> scopeType ifAbsentPut: [ WeakValueDictionary new ].
 	
 	preparedBasis := anEnvironmentScopeClass prepareBasisFrom: basisObjects.
 	^existingScopes 

@@ -1,0 +1,3 @@
+execution
+resolveMetadataOf: aQueryResult by: anEnvironmentPlugin
+	self subclassResponsibility

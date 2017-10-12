@@ -1,4 +1,4 @@
 queries
 resolveMetadataBy: anEnvironmentPlugin
 
-	self itemScope resolveMetadataOf: self by: anEnvironmentPlugin
+	self metadata resolvePropertiesOf: self by: anEnvironmentPlugin

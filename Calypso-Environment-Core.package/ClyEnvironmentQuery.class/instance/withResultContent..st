@@ -1,4 +1,4 @@
-convertion
+converting
 withResultContent: contentClass
 	| copy |
 	copy := self copy.

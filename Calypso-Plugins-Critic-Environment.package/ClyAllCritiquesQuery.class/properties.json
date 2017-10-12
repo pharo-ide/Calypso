@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyEnvironmentQuery",
+	"category" : "Calypso-Plugins-Critic-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyAllCritiquesQuery",
+	"type" : "normal"
+}
