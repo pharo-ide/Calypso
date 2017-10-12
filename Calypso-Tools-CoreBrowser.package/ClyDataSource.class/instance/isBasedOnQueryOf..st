@@ -1,4 +1,4 @@
 testing
-isBasedOnItemType: aClass
+isBasedOnQueryOf: aClass
 
 	^metadata isBuiltByQueryOf: aClass
