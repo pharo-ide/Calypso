@@ -5,9 +5,9 @@ printOn: aStream
 	aStream 
 		nextPut: $(;
 		nextPutAll: annotatedClass name.
-	targetItemScope ifNotNil: [ 
+	targetItemType ifNotNil: [ 
 		aStream
 			nextPutAll: '; ';
-			nextPutAll: targetItemScope name].
+			nextPutAll: targetItemType name].
 	aStream
 		nextPut: $)

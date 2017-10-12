@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"targetItemScope"
+		"targetItemType"
 	],
 	"name" : "ClyContextSelectionStrategy",
 	"type" : "normal"

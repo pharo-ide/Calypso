@@ -1,8 +1,8 @@
 testing
-shouldBeAppliedFor: selectionScopeClass
+shouldBeAppliedFor: aSelectionOrItem
 
-	targetItemScope ifNil: [ 
+	targetItemType ifNil: [ 
 	"if no scope specified strategy will be applied to any selection independently from it kind"	
 		^true ].
 	
-	^selectionScopeClass = targetItemScope
+	^aSelectionOrItem = targetItemType
