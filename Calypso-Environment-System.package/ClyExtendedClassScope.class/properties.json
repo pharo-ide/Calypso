@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyClassScope",
+	"name" : "ClyExtendedClassScope",
 	"type" : "normal"
 }

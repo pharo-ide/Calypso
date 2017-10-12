@@ -1,3 +1,4 @@
 accessing
-environment: anObject
-	environment := anObject
+environment: aNavigationEnvironment
+	environment := aNavigationEnvironment.
+	basisObjects ifNotEmpty: [ basisType := basisObjects anyOne calypsoEnvironmentType ]

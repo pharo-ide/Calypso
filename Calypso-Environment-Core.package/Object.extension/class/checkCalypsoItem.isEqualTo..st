@@ -1,3 +1,3 @@
 *Calypso-Environment-Core
-checkCalypsoItem: anObject isEqualAs: anObject2
+checkCalypsoItem: anObject isEqualTo: anObject2
 	^anObject = anObject2

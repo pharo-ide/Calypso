@@ -1,3 +1,3 @@
 activation
 contextClass
-	^ClyClassScope 
+	^ClyExtendedClassScope 
