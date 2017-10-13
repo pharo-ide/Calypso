@@ -6,7 +6,7 @@ resolvePropertiesOfClass: anItem
 	
 	anItem addProperty: (ClyClassDefinitionProperty of: class).
 	
-	class localSelectors ifNotEmpty: [ anItem markWithChildrenOf: ClyMethodScope].
+	class localSelectors ifNotEmpty: [ anItem markWithChildrenOf: ClyMethod].
 
 	class organization hasComment ifFalse: [ anItem markWith: ClyNotCommentedClassTag].
 	

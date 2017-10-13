@@ -4,8 +4,8 @@ switchToProjects
 	cursor := navigationEnvironment querySystemFor: ClySortedProjects.	
 	dataSource := ClyCollapsedDataSource on: cursor.
 	dataSource childrenStructure: { 
-		ClyProjectScope -> ClyProjectContent. 
-		ClyPackageGroupScope -> ClyProjectContent.
-		ClyPackageScope -> ClySortedClassGroups } .	
+		ClyManagedProject -> ClyProjectContent. 
+		ClyPackageGroup -> ClyProjectContent.
+		RPackage -> ClySortedClassGroups } .	
 	
 	packageView dataSource: dataSource

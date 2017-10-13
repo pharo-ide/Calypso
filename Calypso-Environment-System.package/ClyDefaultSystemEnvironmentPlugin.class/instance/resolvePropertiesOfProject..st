@@ -5,4 +5,4 @@ resolvePropertiesOfProject: anItem
 	project := anItem actualObject.
 	
 	project isEmpty ifFalse: [ 
-		anItem markWithChildrenOf: ClyPackageGroupScope]
+		anItem markWithChildrenOf: ClyPackageGroup]

@@ -5,10 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [
-		"Scopes"
+		"Types"
 	],
 	"instvars" : [
-		"childrenScope"
+		"childrenType"
 	],
 	"name" : "ClyChildrenTag",
 	"type" : "normal"

@@ -7,4 +7,5 @@ doesItemHaveChildren: aDataSourceItem
 
 	childQuery := self queryToExpand: aDataSourceItem ifAbsent: [^false].
 	
-	^aDataSourceItem environmentItem hasChildrenOf: childQuery itemScope
+	^aDataSourceItem environmentItem hasChildrenWhich: [:childType | 
+		childQuery retrievesItemsOfType: childType ]

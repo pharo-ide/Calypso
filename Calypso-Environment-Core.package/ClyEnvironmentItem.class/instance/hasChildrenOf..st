@@ -1,5 +1,4 @@
 testing
-hasChildrenOf: anEnvironmentScopeClass
+hasChildrenOf: itemTypeClass
 
-	^properties anySatisfy: [ :each | 
-		(each isKindOf: ClyChildrenTag) and: [ each childrenScope = anEnvironmentScopeClass ] ] 
+	^self hasChildrenWhich: [ :childType | childType = itemTypeClass]

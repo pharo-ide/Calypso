@@ -1,4 +1,4 @@
 query
 query: anEnvironmentContentClass	
 
-	^self query: anEnvironmentContentClass inScope: self itemScope
+	^self query: anEnvironmentContentClass inScope: ClyEnvironmentScope

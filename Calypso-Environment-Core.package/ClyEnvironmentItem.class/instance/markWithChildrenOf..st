@@ -1,3 +1,3 @@
 accessing
 markWithChildrenOf: anEnvironmentScopeClass
-	self addProperty: (ClyChildrenTag childrenScope: anEnvironmentScopeClass)
+	self addProperty: (ClyChildrenTag childrenType: anEnvironmentScopeClass)

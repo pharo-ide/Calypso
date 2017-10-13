@@ -3,4 +3,4 @@ resolvePropertiesOf: myEnvironmentItem
 	super resolvePropertiesOf: myEnvironmentItem.
 		
 	"we think any class group have classes".
-	myEnvironmentItem markWithChildrenOf: ClyLocalClassScope
+	myEnvironmentItem markWithChildrenOf: Behavior

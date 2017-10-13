@@ -2,5 +2,5 @@ printing
 printOn: aStream
 	super printOn: aStream.
 	aStream nextPut: $(.
-	childrenScope printOn: aStream.
+	childrenType printOn: aStream.
 	aStream nextPut: $).

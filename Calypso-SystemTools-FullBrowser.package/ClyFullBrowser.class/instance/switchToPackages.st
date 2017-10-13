@@ -3,6 +3,6 @@ switchToPackages
 	| cursor dataSource |
 	cursor := navigationEnvironment querySystemFor: ClySortedPackages.	
 	dataSource := ClyCollapsedDataSource on: cursor.
-	dataSource childrenStructure: {ClyPackageScope -> ClySortedClassGroups }.	
+	dataSource childrenStructure: {RPackage -> ClySortedClassGroups }.	
 	
 	packageView dataSource: dataSource
