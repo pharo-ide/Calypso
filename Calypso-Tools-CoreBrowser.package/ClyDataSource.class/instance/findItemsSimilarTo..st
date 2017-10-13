@@ -3,7 +3,7 @@ findItemsSimilarTo: dataSourceItems
 
 	| foundItems relatedItems |
 	relatedItems := dataSourceItems 
-		select: [ :each | each belongsToScope: metadata itemScope ]
+		select: [ :each | self isBasedOnQueryOf: each type ]
 		thenCollect: [ :each | each environmentItem ].
 	foundItems := environmentCursor findItemsSimilarTo: relatedItems.
 
