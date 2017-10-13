@@ -3,4 +3,5 @@ fullBrowserDragAndDropActivation
 	<classAnnotation>
 	
 	^CmdDragAndDropCommandActivation 
-		for: ClyMethodContextOfFullBrowser toDropIn: ClyMethodGroupContextOfFullBrowser
+		for: ClyMethod asCalypsoItemContext 
+		toDropIn: ClyMethodGroup asCalypsoItemContext

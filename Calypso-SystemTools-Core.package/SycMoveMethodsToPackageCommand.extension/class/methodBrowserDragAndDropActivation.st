@@ -2,4 +2,6 @@
 methodBrowserDragAndDropActivation
 	<classAnnotation>
 	
-	^CmdDragAndDropCommandActivation for: ClyMethodScope toDropIn: ClyPackageScope
+	^CmdDragAndDropCommandActivation 
+		for: ClyMethod asCalypsoItemContext 
+		toDropIn: RPackage asCalypsoItemContext

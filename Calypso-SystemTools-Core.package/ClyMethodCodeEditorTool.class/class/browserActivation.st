@@ -2,4 +2,4 @@ activation
 browserActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyMethodScope
+	^ClyTabActivationStrategy for: ClyMethod asCalypsoItemContext

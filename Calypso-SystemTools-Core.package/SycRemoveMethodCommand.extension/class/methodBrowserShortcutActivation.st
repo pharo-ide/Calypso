@@ -2,4 +2,4 @@
 methodBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation removalFor: ClyMethodScope
+	^CmdShortcutCommandActivation removalFor: ClyMethod asCalypsoItemContext

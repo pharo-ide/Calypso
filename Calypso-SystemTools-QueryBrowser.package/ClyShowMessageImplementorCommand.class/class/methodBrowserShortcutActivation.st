@@ -2,4 +2,4 @@ activation
 methodBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $m meta for: ClyMethodScope
+	^CmdShortcutCommandActivation by: $m meta for: ClyMethod asCalypsoItemContext

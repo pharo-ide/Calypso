@@ -2,4 +2,4 @@ activation
 classScopeActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyExtendedClassScope
+	^ClyTabActivationStrategy for: Behavior

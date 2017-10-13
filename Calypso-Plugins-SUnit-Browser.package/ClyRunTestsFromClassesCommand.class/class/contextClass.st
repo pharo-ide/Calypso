@@ -1,3 +1,3 @@
 activation
 contextClass
-	^ClyExtendedClassScope 
+	^Behavior asCalypsoItemContext 

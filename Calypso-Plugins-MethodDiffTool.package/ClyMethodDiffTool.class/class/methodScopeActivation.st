@@ -2,4 +2,4 @@ activation
 methodScopeActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyMethodScope
+	^ClyTabActivationStrategy for: ClyMethod asCalypsoItemContext

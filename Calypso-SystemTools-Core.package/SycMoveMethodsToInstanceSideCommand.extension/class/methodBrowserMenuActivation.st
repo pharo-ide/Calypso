@@ -2,4 +2,4 @@
 methodBrowserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyMethodScope
+	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyMethod asCalypsoItemContext

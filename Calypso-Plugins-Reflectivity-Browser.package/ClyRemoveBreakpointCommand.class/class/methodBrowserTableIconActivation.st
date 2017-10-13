@@ -2,4 +2,4 @@ activation
 methodBrowserTableIconActivation
 	<classAnnotation>
 	
-	^ClyTableIconCommandActivation for: ClyMethodScope
+	^ClyTableIconCommandActivation for: ClyMethod asCalypsoItemContext
