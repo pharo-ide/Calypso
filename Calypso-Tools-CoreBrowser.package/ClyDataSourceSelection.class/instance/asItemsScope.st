@@ -1,3 +1,3 @@
 converting
 asItemsScope
-	^self asItemsScope: self itemScope
+	^self asItemsScope: ClyEnvironmentScope

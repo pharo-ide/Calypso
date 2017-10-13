@@ -1,3 +1,3 @@
 *Calypso-Tools-CoreBrowser
 asAnnotationContext
-	^ClyEnvironmentScopeContext scopeClass: self
+	^ClyEnvironmentItemContext itemType: self

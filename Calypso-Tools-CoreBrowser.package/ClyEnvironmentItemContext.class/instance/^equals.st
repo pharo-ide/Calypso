@@ -6,4 +6,4 @@ comparing
 		ifTrue: [ ^ true ].
 	self class = anObject class
 		ifFalse: [ ^ false ].
-	^ scopeClass = anObject scopeClass
+	^ itemType = anObject itemType

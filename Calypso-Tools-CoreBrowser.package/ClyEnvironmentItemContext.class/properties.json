@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"scopeClass"
+		"itemType"
 	],
-	"name" : "ClyEnvironmentScopeContext",
+	"name" : "ClyEnvironmentItemContext",
 	"type" : "normal"
 }
