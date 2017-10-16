@@ -1,4 +1,6 @@
 accessing
 withCachedQueriesDo: aBlock
 
-	queryCache select: [ :each | each notNil ] thenDo: aBlock
+	queryCache associations 
+		select: [ :each | each value notNil ] 
+		thenDo: [:each | aBlock value: each key]

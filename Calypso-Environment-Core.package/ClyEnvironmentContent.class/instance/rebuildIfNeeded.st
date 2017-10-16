@@ -2,7 +2,7 @@ building
 rebuildIfNeeded
 
 	accessGuard critical: [
-		items ifNotNil: [ ^self ].
+		self isBuilt ifTrue: [ ^self ].
 	 
 		items := self defaultItems.
 		buildingQuery fetchContent: self from: environmentScope.

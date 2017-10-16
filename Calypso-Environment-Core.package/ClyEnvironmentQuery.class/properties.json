@@ -6,6 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"scope",
 		"requestedContent"
 	],
 	"name" : "ClyEnvironmentQuery",

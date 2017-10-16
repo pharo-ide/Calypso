@@ -1,4 +1,3 @@
 system changes
 isResult: items affectedBy: aSystemAnnouncement
-
-	^self subclassResponsibility 
+	self shouldBeImplemented
