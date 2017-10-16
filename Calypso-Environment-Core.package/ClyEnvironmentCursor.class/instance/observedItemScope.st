@@ -1,3 +1,0 @@
-accessing
-observedItemScope
-	^ metadata itemScope

@@ -1,4 +1,4 @@
 testing
-includesItemsOf: itemsScopeClass
+includesItemsOf: itemTypeClass
 
-	^items anySatisfy: [ :each | each environmentScope = itemsScopeClass ]
+	^items anySatisfy: [ :each | each isBasedOnItemType: itemTypeClass ]

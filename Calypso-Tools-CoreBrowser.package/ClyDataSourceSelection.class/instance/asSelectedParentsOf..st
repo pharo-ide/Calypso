@@ -1,13 +1,13 @@
 converting
-asSelectedParentsOf: itemsScopeClass
+asSelectedParentsOf: itemTypeClass
 
 	| parents resultItems currentItems resultSet lastSelectedItem |
 	self isEmpty ifTrue: [ ^self ].
-	currentItems := items select: [ :each | each belongsToScope: itemsScopeClass].
+	currentItems := items select: [ :each | each isBasedOnItemType: itemTypeClass].
 	currentItems = items ifTrue: [ ^self ].
 	parents := items 
-		reject: [:each | each belongsToScope: itemsScopeClass ] 
-		thenCollect: [ :each |each parentItemBelongingTo: itemsScopeClass ].
+		reject: [:each | each isBasedOnItemType: itemTypeClass ] 
+		thenCollect: [ :each |each findParentItemOf: itemTypeClass ].
 	resultSet := parents asSet.
 	resultSet remove: nil ifAbsent: [].
 	resultSet addAll: currentItems.
