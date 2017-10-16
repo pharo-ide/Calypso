@@ -1,0 +1,4 @@
+execution
+fetchContent: aQueryResult fromClassHierarchy: aClassHierarchyScope
+
+	aQueryResult buildFromClassHierarchy: aClassHierarchyScope 

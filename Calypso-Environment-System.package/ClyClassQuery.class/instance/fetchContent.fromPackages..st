@@ -1,8 +1,4 @@
 execution
-fetchContent: anEnvironmentContent fromPackages: packages
+fetchContent: aQueryResult fromPackages: packages
 
-	| methods |
-	methods := packages flatCollect: [ :each | 
-		self selectMethodsInLocalScopeOf: each definedClasses  ].
-	
-	anEnvironmentContent buildFromMethods: methods
+	self fetchContent: aQueryResult fromClassGroups: packages

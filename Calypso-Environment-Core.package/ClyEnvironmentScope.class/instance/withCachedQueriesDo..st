@@ -3,4 +3,4 @@ withCachedQueriesDo: aBlock
 
 	queryCache associations 
 		select: [ :each | each value notNil ] 
-		thenDo: [:each | aBlock value: each key]
+		thenDo: [:each | aBlock value: each key value: each value]
