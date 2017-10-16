@@ -1,4 +1,0 @@
-execution
-fetchContent: anEnvironmentContent
-
-	anEnvironmentContent buildFromMethods: self installedMethods

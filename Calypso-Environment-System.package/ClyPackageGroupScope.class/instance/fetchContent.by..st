@@ -1,3 +1,0 @@
-queries
-fetchContent: anEnvironmentContent by: anEnvironmentQuery
-	anEnvironmentQuery fetchContent: anEnvironmentContent fromPackageGroups: basisObjects

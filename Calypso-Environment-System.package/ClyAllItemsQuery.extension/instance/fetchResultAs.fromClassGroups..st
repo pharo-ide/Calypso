@@ -1,0 +1,3 @@
+*Calypso-Environment-System
+fetchResultAs: anEnvironmentContent fromClassGroups: classGroups
+	anEnvironmentContent buildFromClassGroups: classGroups

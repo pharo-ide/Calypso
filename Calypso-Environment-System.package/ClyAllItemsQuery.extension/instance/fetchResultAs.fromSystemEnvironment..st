@@ -1,0 +1,3 @@
+*Calypso-Environment-System
+fetchResultAs: anEnvironmentContent fromSystemEnvironment: aSystemEnvironment
+	anEnvironmentContent buildFromSystemEnvironment: aSystemEnvironment
