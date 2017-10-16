@@ -1,3 +1,3 @@
 helpers
 createQuery
-	^ClyAllMethodQuery new
+	^ClyAllMethods new

@@ -1,4 +1,4 @@
 system changes
 isResultCanBeAffectedBy: aSystemAnnouncement
 
-	^aSystemAnnouncement canAffectResultsOfMethodQuery: self
+	^aSystemAnnouncement canAffectResultOfMethodQuery: self

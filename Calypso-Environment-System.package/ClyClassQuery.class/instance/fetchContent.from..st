@@ -1,3 +1,0 @@
-execution
-fetchContent: anEnvironmentContent from: anEnvironmentScope
-	self shouldBeImplemented

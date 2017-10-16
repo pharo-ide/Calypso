@@ -1,7 +1,7 @@
 execution
-fetchContent: anEnvironmentContent from: anEnvironmentScope
+fetchContent: anEnvironmentContent
 	| originalContent filteredItems |
-	originalContent := (anEnvironmentScope query: originalQuery) observedContent.
+	originalContent := (scope query: originalQuery) observedContent.
 	
 	filteredItems := originalContent items 
 		select: [ :each | itemFilter matches: each ] thenCollect: [ :each | each copy].

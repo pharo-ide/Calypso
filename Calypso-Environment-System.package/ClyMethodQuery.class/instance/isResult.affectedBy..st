@@ -1,5 +1,5 @@
 system changes
 isResult: items affectedBy: aSystemAnnouncement
 	
-	^(aSystemAnnouncement canAffectResultsOfMethodQuery: self)
+	^(aSystemAnnouncement canAffectResultOfMethodQuery: self)
 		and: [ scope includesMethodsAffectedBy: aSystemAnnouncement]

@@ -5,7 +5,7 @@ rebuildIfNeeded
 		self isBuilt ifTrue: [ ^self ].
 	 
 		items := self defaultItems.
-		buildingQuery fetchContent: self from: environmentScope.
+		buildingQuery fetchContent: self.
 		self buildIndexes.
 		self metadata reset. 
 		environment resolveMetadataOf: self
