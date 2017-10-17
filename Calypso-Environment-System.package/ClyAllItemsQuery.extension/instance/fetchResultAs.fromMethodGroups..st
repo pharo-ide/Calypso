@@ -1,3 +1,3 @@
 *Calypso-Environment-System
-fetchContent: anEnvironmentContent fromMethodGroups: methodGroups
+fetchResultAs: anEnvironmentContent fromMethodGroups: methodGroups
 	anEnvironmentContent buildFromMethodGroups: methodGroups

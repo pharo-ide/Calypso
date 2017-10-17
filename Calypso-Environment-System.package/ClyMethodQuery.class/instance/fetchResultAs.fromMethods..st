@@ -1,6 +1,6 @@
 execution
 fetchResultAs: aQueryResult fromMethods: methods
-	| senders |
-	senders := methods select: [ :each | self selectsMethod: each ].
+	| filteredMethods |
+	filteredMethods := methods select: [ :each | self selectsMethod: each ].
 	
-	aQueryResult buildFromMethods: senders
+	aQueryResult buildFromMethods: filteredMethods
