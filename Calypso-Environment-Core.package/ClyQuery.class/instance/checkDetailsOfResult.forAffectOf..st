@@ -11,5 +11,4 @@ checkDetailsOfResult: items forAffectOf: aSystemAnnouncement
 	And they implement this described method with required logic to check every result item.
 	By default I return false because detailes of the result are not defined at my level.
 	And therefore they are not affected by any event"
-
 	^false

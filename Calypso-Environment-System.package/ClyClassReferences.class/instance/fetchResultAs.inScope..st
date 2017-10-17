@@ -1,0 +1,4 @@
+execution
+fetchResultAs: anEnvironmentContent inScope: anEnvironmentScope
+	self ensureVariableAreActualBindingsIn: anEnvironmentScope system.
+	super fetchResultAs: anEnvironmentContent inScope: anEnvironmentScope
