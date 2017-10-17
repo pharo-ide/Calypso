@@ -1,6 +1,6 @@
 execution
-fetchResultAs: anEnvironmentContent fromClassHierarchy: aClassHierarchyScope
+fetchResultAs: aQueryResult fromClassHierarchy: aClassHierarchyScope
 
 	self 
-		fetchResultAs: anEnvironmentContent 
+		fetchResultAs: aQueryResult 
 		fromLocalScopeOfClasses: aClassHierarchyScope allClasses

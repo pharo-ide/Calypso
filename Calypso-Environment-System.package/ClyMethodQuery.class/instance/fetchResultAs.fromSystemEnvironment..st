@@ -1,8 +1,8 @@
 execution
-fetchResultAs: anEnvironmentContent fromSystemEnvironment: aSystemEnvironment
+fetchResultAs: aQueryResult fromSystemEnvironment: aSystemEnvironment
 
 	| methods |
 	
 	methods := self selectMethodsInLocalScopeOf: aSystemEnvironment classes.
 	
-	anEnvironmentContent buildFromMethods: methods
+	aQueryResult buildFromMethods: methods

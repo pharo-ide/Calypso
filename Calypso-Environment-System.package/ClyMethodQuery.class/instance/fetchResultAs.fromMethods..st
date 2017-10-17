@@ -1,6 +1,6 @@
 execution
-fetchResultAs: anEnvironmentContent fromMethods: methods
+fetchResultAs: aQueryResult fromMethods: methods
 	| senders |
 	senders := methods select: [ :each | self selectsMethod: each ].
 	
-	anEnvironmentContent buildFromMethods: senders
+	aQueryResult buildFromMethods: senders

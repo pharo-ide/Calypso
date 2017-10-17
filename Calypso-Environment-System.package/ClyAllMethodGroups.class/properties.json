@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyMethodGroupQuery",
+	"name" : "ClyAllMethodGroups",
 	"type" : "normal"
 }
