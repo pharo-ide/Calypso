@@ -4,4 +4,4 @@ createQuery
 	| filter |
 	filter := ClyItemNameFilter substringPattern: testSelector.
 	
-	^ClyEnvironmentFilterQuery for: ClySortedMethods asEnvironmentQuery by: filter
+	^ClyFilteringQuery for: ClySortedMethods asEnvironmentQuery by: filter

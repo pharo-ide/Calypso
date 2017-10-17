@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 7/12/2017 10:04",
-	"super" : "ClyEnvironmentQuery",
+	"super" : "ClyQuery",
 	"category" : "Calypso-Environment-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

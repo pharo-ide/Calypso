@@ -1,5 +1,5 @@
 instance creation
 empty
 	| cursor |
-	cursor := ClyUnknownEnvironmentContent default newCursor.
+	cursor := ClyUnknownQueryResult default newCursor.
 	^ClyCollapsedDataSource on: cursor

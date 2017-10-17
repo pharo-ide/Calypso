@@ -1,5 +1,5 @@
 description
 metadata
 	^metadata ifNil: [ 
-		metadata := ClyEnvironmentContentMetadata 
+		metadata := ClyQueryMetadata 
 			forContentBuiltBy: buildingQuery from: environmentScope ]

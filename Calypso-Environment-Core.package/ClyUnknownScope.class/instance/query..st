@@ -1,3 +1,3 @@
 queries
 query: anEnvironmentContentClass
-	^ClyUnknownEnvironmentContent default newCursor
+	^ClyUnknownQueryResult default newCursor

@@ -1,4 +1,4 @@
 testing
 isBasedOnFilter
 
-	^metadata buildingQuery isKindOf: ClyEnvironmentFilterQuery
+	^metadata buildingQuery isKindOf: ClyFilteringQuery

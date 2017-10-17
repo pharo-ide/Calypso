@@ -1,17 +1,19 @@
 {
-	"commentStamp" : "DenisKudryashov 7/24/2017 11:16",
+	"commentStamp" : "DenisKudryashov 7/12/2017 10:12",
 	"super" : "Object",
 	"category" : "Calypso-Environment-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"announcer",
+		"environment",
+		"environmentScope",
+		"items",
 		"buildingQuery",
-		"queryScope",
-		"queryScopeClass",
-		"queryScopeSize",
-		"properties"
+		"accessGuard",
+		"metadata"
 	],
-	"name" : "ClyEnvironmentContentMetadata",
+	"name" : "ClyQueryResult",
 	"type" : "normal"
 }
