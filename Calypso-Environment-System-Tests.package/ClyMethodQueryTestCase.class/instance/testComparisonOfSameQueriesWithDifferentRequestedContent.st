@@ -2,8 +2,8 @@ tests
 testComparisonOfSameQueriesWithDifferentRequestedContent
 
 	| query2 |
-	query requestedContent: #contentClass1.
+	query requiredResult: #contentClass1.
 	query2 := self createQuery.
-	query2 requestedContent: #contentClass2.
+	query2 requiredResult: #contentClass2.
 		
 	self deny: query = query2

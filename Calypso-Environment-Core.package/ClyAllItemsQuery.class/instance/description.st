@@ -1,3 +1,3 @@
 printing
 description
-	^'all ', requestedContent itemName
+	^'all ', requiredResult itemName

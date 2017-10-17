@@ -1,3 +1,3 @@
 accessing
 contentClass
-	^buildingQuery requestedContent
+	^buildingQuery requiredResult

@@ -2,5 +2,5 @@ converting
 withResultContent: contentClass
 	| copy |
 	copy := self copy.
-	copy requestedContent: contentClass.
+	copy requiredResult: contentClass.
 	^copy

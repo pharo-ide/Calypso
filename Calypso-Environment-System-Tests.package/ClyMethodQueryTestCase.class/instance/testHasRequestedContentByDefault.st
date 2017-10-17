@@ -1,4 +1,4 @@
 tests
 testHasRequestedContentByDefault
 
-	self assert: query requestedContent = ClySortedMethods
+	self assert: query requiredResult = ClySortedMethods

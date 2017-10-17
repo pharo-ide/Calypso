@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	requestedContent := ClySortedMethods
+	requiredResult := ClySortedMethods

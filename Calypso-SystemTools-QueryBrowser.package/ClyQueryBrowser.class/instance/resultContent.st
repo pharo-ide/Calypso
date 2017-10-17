@@ -2,4 +2,4 @@ accessing
 resultContent
 	^systemQuery 
 		ifNil: [self class defaultResultContent]
-		ifNotNil: [ systemQuery requestedContent  ]
+		ifNotNil: [ systemQuery requiredResult  ]

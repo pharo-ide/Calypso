@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"scope",
-		"requestedContent"
+		"environment",
+		"requiredResult"
 	],
 	"name" : "ClyQuery",
 	"type" : "normal"

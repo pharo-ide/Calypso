@@ -1,5 +1,5 @@
 instance creation
 for: originalQuery by: aClyItemFilter
-	^(self requestedContent: originalQuery requestedContent)
+	^(self requiredResult: originalQuery requiredResult)
 		originalQuery: originalQuery;
 		itemFilter: aClyItemFilter 

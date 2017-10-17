@@ -1,3 +1,3 @@
 printing
 description
-	^requestedContent name, ' filtered by ', itemFilter printCriteria
+	^requiredResult name, ' filtered by ', itemFilter printCriteria

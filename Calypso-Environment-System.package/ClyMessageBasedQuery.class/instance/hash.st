@@ -2,4 +2,4 @@ comparing
 hash
 	"Answer an integer value that is related to the identity of the receiver."
 
-	^ requestedContent hash bitXor: selectors hash
+	^ requiredResult hash bitXor: selectors hash
