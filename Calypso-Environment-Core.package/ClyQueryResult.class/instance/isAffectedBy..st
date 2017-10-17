@@ -1,4 +1,10 @@
 system changes
 isAffectedBy: aSystemAnnouncement
-
-	self subclassResponsibility 
+		
+	(buildingQuery isAffectedBy: aSystemAnnouncement inScope: environmentScope)
+			ifTrue: [ ^true ].
+	
+	(buildingQuery requiresDetailedCheckForAffectOf: aSystemAnnouncement inScope: environmentScope)
+		ifFalse: [ ^false ].
+		
+	^buildingQuery checkDetailsOfResult: items forAffectOf: aSystemAnnouncement

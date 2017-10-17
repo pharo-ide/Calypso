@@ -1,5 +1,5 @@
 system changes
-isResult: items affectedBy: aSystemAnnouncement
+checkDetailsOfResult: items forAffectOf: aSystemAnnouncement
 	
 	^(aSystemAnnouncement canAffectResultOfMethodQuery: self)
 		and: [ scope includesMethodsAffectedBy: aSystemAnnouncement]
