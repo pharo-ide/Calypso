@@ -1,4 +1,4 @@
 execution
-fetchResultAs: anEnvironmentContent inScope: anEnvironmentScope
+fetchResultAs: aQueryResult inScope: anEnvironmentScope
 
-	anEnvironmentContent buildFromMethods: self installedMethods
+	aQueryResult buildFromMethods: self installedMethods

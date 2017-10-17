@@ -1,7 +1,7 @@
 execution
-fetchResultAs: anEnvironmentContent fromLocalScopeOfClasses: classes
+fetchResultAs: aQueryResult fromLocalScopeOfClasses: classes
 
 	| methods |
 	methods := self selectMethodsInLocalScopeOf: classes.
 	
-	anEnvironmentContent buildFromMethods: methods
+	aQueryResult buildFromMethods: methods
