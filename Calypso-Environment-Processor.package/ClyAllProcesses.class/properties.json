@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyQuery",
+	"category" : "Calypso-Environment-Processor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyAllProcesses",
+	"type" : "normal"
+}
