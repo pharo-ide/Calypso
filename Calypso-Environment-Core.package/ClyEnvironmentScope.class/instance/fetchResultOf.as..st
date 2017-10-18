@@ -1,4 +1,4 @@
 queries
 fetchResultOf: aQuery as: aQueryResult
 
-	self subclassResponsibility 
+	self basisType asCalypsoScopeOf: basisObjects query: aQuery as: aQueryResult
