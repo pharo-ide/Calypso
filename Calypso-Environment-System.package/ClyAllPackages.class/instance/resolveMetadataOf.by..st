@@ -1,0 +1,3 @@
+execution
+resolveMetadataOf: aQueryResult by: anEnvironmentPlugin
+	anEnvironmentPlugin resolveMetadataOfPackages: aQueryResult

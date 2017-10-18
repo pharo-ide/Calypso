@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyPackageQuery",
+	"name" : "ClyAllPackages",
 	"type" : "normal"
 }
