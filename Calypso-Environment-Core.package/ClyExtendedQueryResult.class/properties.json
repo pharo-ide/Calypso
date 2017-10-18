@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyExtendedQueryResult",
-	"category" : "Calypso-Environment-Processor",
+	"super" : "ClyQueryResult",
+	"category" : "Calypso-Environment-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyProcessStack",
+	"name" : "ClyExtendedQueryResult",
 	"type" : "normal"
 }

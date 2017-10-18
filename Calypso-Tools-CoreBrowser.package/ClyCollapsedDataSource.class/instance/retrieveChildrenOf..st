@@ -5,7 +5,7 @@ retrieveChildrenOf: aDataSourceItem
 		queryToExpand: aDataSourceItem 
 		ifAbsent: [self error: 'cant retrieve children from ', aDataSourceItem printString].
 	
-	childScope := ClyEnvironmentScope basis: { aDataSourceItem actualObject }.
+	childScope := ClyEnvironmentScope of: { aDataSourceItem actualObject }.
 	childrenCursor := environmentCursor query: childrenContent inNewScope: childScope.	
 		
 	dataSourceClass := (childrenStructure size = 1 and: [ childrenContent isExpandedHierarchy])

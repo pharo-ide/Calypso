@@ -6,4 +6,4 @@ classScopeOfSelectedItems
 		definition := methodItem getProperty: ClyDefinitionProperty.
 		definition definitionClass].
 	
-	^ClyLocalClassScope basis: classes asIdentitySet
+	^ClyLocalClassScope of: classes asIdentitySet

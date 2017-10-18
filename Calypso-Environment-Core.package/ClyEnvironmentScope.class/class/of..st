@@ -1,5 +1,5 @@
 instance creation
-basis: basisObjects
+of: basisObjects
 
 	^self new 
 		basisObjects: basisObjects

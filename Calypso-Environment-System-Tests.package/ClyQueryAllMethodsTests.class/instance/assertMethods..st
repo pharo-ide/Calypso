@@ -1,7 +1,8 @@
 helpers
 assertMethods: selectors
 	
-	self assert: actualObjects size equals: selectors size.
+	| actualSelectors |
+	self assert: result size equals: selectors size.
 	
-	actualObjects with: selectors do: [ :actualMethod :expectedSelector | 
-		self assert: actualMethod selector equals: expectedSelector ]
+	actualSelectors := resultItems collect: #selector as: Set.
+	self assert: actualSelectors equals: selectors asSet

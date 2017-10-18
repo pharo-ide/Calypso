@@ -2,9 +2,6 @@ comparing
 = anObject
 	"Answer whether the receiver and anObject represent the same object."
 
-	self == anObject
-		ifTrue: [ ^ true ].
-	self class = anObject class
-		ifFalse: [ ^ false ].
-	^ requiredResult = anObject requiredResult
-		and: [ methods = anObject methods ]
+	self == anObject ifTrue: [ ^ true ].
+	super = anObject ifFalse: [ ^ false ].	
+	^ methods = anObject methods

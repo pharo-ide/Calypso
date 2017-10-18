@@ -3,4 +3,4 @@ asItemsScope: anEnvironmentScopeClass
 	| actualItems |
 	actualItems := self uniformActualObjects.
 	
-	^anEnvironmentScopeClass basis: actualItems
+	^anEnvironmentScopeClass of: actualItems

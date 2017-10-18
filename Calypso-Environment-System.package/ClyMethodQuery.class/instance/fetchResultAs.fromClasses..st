@@ -5,4 +5,4 @@ fetchResultAs: aQueryResult fromClasses: classes
 	methods := classes flatCollect: [ :eachClass | 
 		self selectMethodsInClass: eachClass].
 	
-	aQueryResult buildFromMethods: methods
+	aQueryResult buildOn: methods

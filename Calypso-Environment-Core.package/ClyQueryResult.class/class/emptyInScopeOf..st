@@ -3,6 +3,6 @@ emptyInScopeOf: anEnvironmentScopeClass
 	| env content |
 	env := ClyNavigationEnvironment new.
 	
-	content := self of: ClyNavigationEnvironment new inScope:  (anEnvironmentScopeClass emptyOf: env).
+	content := self of: ClyNavigationEnvironment new inScope:  (anEnvironmentScopeClass emptyIn: env).
 	content items: #().
 	^content

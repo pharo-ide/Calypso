@@ -1,5 +1,4 @@
 initialization
 initialize
 	super initialize.
-	
-	requiredResult := ClySortedMethods
+	requiredResult := ClyRawQueryResult 

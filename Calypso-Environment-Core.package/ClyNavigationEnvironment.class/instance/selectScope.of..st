@@ -11,4 +11,4 @@ selectScope: anEnvironmentScopeClass of: basisObjects
 	preparedBasis := anEnvironmentScopeClass prepareBasisFrom: basisObjects.
 	^existingScopes 
 		at: preparedBasis 
-		ifAbsentPut: [anEnvironmentScopeClass of: self basis: preparedBasis]
+		ifAbsentPut: [anEnvironmentScopeClass of: preparedBasis in: self]

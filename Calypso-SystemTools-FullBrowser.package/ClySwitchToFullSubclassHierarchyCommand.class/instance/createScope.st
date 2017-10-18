@@ -1,4 +1,4 @@
 execution
 createScope
 
-	^self classViewScopeClass basis: browser classSelection actualObjects
+	^self classViewScopeClass of: browser classSelection actualObjects

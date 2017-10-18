@@ -5,6 +5,6 @@ executeQueryInScope: scopeClass of: basisObjects
 	scope := environment selectScope: scopeClass of: basisObjects.
 	
 	cursor := scope query: query.
-	resultContent := cursor observedContent.
+	result := cursor observedContent.
 	
 	^cursor retrieveAllActualObjects

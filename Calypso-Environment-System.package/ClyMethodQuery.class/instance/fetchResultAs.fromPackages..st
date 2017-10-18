@@ -5,4 +5,4 @@ fetchResultAs: aQueryResult fromPackages: packages
 	methods := packages flatCollect: [ :each | 
 		self selectMethodsInLocalScopeOf: each definedClasses  ].
 	
-	aQueryResult buildFromMethods: methods
+	aQueryResult buildOn: methods

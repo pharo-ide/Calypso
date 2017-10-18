@@ -6,4 +6,4 @@ packageScopeOfSelectedItems
 		definition := methodItem getProperty: ClyDefinitionProperty. 
 		definition definitionPackage].
 	
-	^ClyPackageScope basis: packages asIdentitySet
+	^ClyPackageScope of: packages asIdentitySet

@@ -5,4 +5,4 @@ fetchResultAs: aQueryResult fromSystemEnvironment: aSystemEnvironment
 	
 	methods := self selectMethodsInLocalScopeOf: aSystemEnvironment classes.
 	
-	aQueryResult buildFromMethods: methods
+	aQueryResult buildOn: methods

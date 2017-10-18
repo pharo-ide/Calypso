@@ -1,4 +1,4 @@
 *Calypso-Plugins-Critic-Browser
 criticAnalysisScope
 
-	^ClyLocalClassScope basis: {editingClass}
+	^ClyLocalClassScope of: {editingClass}
