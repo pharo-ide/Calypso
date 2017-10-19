@@ -1,5 +1,5 @@
 controlling
-selectItemsWhich: conditionBlock
+selectItemsWhere: conditionBlock
 
 	| newItems |
 	newItems := rootDataSource findItemsWhere: conditionBlock.

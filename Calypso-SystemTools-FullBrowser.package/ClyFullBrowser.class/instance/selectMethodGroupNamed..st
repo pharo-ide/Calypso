@@ -2,5 +2,5 @@ navigation
 selectMethodGroupNamed: tagName
 
 	self changeNavigationStateBy: [ 
-		self methodGroupSelection selectItemsWhich: [ :each | each name = tagName ]
+		self methodGroupSelection selectItemsWhere: [ :each | each name = tagName ]
 	]
