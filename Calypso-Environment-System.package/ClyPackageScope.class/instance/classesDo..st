@@ -1,4 +1,3 @@
 queries
 classesDo: aBlock
-	self definedClassesDo: aBlock.
-	self extendedClassesDo: aBlock.
+	self definedClassesDo: aBlock

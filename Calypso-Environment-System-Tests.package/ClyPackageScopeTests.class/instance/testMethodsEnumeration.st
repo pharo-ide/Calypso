@@ -2,7 +2,7 @@ tests
 testMethodsEnumeration
 
 	scope := ClyPackageScope of: { ClyClass1FromP1 package }.
-	scope methodsDo: [ :each | result add: each selector].
+	scope methodsDo: [ :each | result add: each].
 	
 	self assert: (result includesAll: ClyClass1FromP1 localMethods).
 	self assert: (result includesAll: ClyClass2FromP1 localMethods).
