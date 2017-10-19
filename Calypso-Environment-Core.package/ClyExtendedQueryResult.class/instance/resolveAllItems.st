@@ -1,4 +1,4 @@
 queries
 resolveAllItems
 
-	^self resolveItemsStartingAt: 1 count: self size
+	^self itemsStartingAt: 1 count: self size

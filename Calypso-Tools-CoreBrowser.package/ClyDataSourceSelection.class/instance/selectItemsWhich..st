@@ -2,5 +2,5 @@ controlling
 selectItemsWhich: conditionBlock
 
 	| newItems |
-	newItems := rootDataSource findItemsWhich: conditionBlock.
+	newItems := rootDataSource findItemsWhere: conditionBlock.
 	self selectItems: newItems

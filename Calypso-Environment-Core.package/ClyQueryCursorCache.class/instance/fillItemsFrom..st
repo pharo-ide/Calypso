@@ -1,4 +1,4 @@
 private
 fillItemsFrom: anEnvironmentContent
 
-	items := anEnvironmentContent resolveItemsStartingAt: startPosition count: sizeLimit
+	items := anEnvironmentContent itemsStartingAt: startPosition count: sizeLimit
