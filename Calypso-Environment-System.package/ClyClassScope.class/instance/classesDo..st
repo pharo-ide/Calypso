@@ -1,4 +1,3 @@
 queries
 classesDo: aBlock
-
-	basisObjects do: aBlock
+	basisObjects collect: [ :each | self resolveClass: each ] thenDo: aBlock
