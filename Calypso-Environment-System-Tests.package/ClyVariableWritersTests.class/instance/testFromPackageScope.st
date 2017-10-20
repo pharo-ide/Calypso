@@ -1,10 +1,7 @@
 tests
 testFromPackageScope
 
-	| allMethods selectors |
-	allMethods := self executeQueryInScope: ClyPackageScope of: { self class package }.
+	self queryInScope: ClyPackageScope of: { self class package }.
 	
-	self assert: allMethods size equals: 3.
-	selectors := allMethods collect: #selector as: Array.
-	
-	self assert: selectors equals: #(supeclassWriterOfVar1 writer1OfVar1 writer2OfVar1)
+	self assert: resultItems size equals: 3.	
+	self assert: foundSelectors equals: #(supeclassWriterOfVar1 writer1OfVar1 writer2OfVar1)

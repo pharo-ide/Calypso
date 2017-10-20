@@ -1,11 +1,10 @@
 tests
 testForGlobalVariable
 
-	| allMethods |
 	query variables: { self class environment bindingOf: #Smalltalk }.
-	allMethods := self 
-		executeQueryInScope: ClyMethodScope
+	self 
+		queryInScope: ClyMethodScope
 		of: { self class >> #referenceOfSmalltalk}.
 	
-	self assert: allMethods size equals: 1.
-	self assert: allMethods first == (self class >> #referenceOfSmalltalk)
+	self assert: resultItems size equals: 1.
+	self assert: resultItems first == (self class >> #referenceOfSmalltalk)

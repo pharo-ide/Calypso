@@ -1,10 +1,7 @@
 tests
 testFromSystemScope
 
-	| allMethods selectors |
-	allMethods := self executeQueryInScope: ClySystemEnvironmentScope of: { ClySystemEnvironment currentImage}.
+	self queryInScope: ClySystemEnvironmentScope of: { ClySystemEnvironment currentImage}.
 	
-	self assert: allMethods size equals: 3.
-	selectors := allMethods collect: #selector as: Array.
-	
-	self assert: selectors equals: #(classSideReference1OfClass reference1OfClass reference2OfClass)
+	self assert: resultItems size equals: 3.	
+	self assert: foundSelectors equals: #(classSideReference1OfClass reference1OfClass reference2OfClass)
