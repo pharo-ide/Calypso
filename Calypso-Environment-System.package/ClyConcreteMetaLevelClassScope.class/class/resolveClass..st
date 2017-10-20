@@ -1,3 +1,3 @@
 items resolving
 resolveClass: aClass
-	^aClass
+	self subclassResponsibility 

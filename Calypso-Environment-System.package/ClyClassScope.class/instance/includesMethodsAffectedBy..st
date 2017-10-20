@@ -1,6 +1,6 @@
 system changes
 includesMethodsAffectedBy: aSystemAnnouncement
 
-	self allClassesDo: [ :each | 
+	self classesDo: [ :each | 
 		(each includesMethodsAffectedBy: aSystemAnnouncement) ifTrue: [ ^true ]].
 	^false

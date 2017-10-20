@@ -2,4 +2,4 @@ queries
 methodsDo: aBlock
 
 	self classesDo: [ :eachClass | 
-		eachClass localMethods do: aBlock ]
+		self methodsOf: eachClass do: aBlock ]

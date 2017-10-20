@@ -2,4 +2,4 @@ running
 setUp
 	super setUp.
 	
-	result := OrderedCollection new
+	result := IdentitySet new

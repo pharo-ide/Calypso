@@ -1,5 +1,5 @@
 accessing
-allClassesDo: aBlock
+classesDo: aBlock
 
 	basisObjects do: [ :each | 
 		self parentsOf: each do: aBlock.

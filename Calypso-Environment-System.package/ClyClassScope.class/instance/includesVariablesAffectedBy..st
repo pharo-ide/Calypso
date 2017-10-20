@@ -1,5 +1,7 @@
 system changes
 includesVariablesAffectedBy: aSystemAnnouncement
 
-	^basisObjects anySatisfy: [ :class | 
-		aSystemAnnouncement affectsVariablesOf: (self resolveClass: class)]
+	self classesDo: [ :class | 
+		(aSystemAnnouncement affectsVariablesOf: class) ifTrue: [^true]].
+	
+	^false

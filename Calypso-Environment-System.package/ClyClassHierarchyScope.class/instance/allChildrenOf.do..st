@@ -1,4 +1,4 @@
-accessing
+private
 allChildrenOf: aClass do: aBlock
 
 	self childrenOf: aClass do: [:each | 

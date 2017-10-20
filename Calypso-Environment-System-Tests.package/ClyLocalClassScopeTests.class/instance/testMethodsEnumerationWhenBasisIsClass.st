@@ -1,5 +1,5 @@
 tests
-testMethodsEnumeration
+testMethodsEnumerationWhenBasisIsClass
 
 	scope := ClyLocalClassScope of: { ClyClass1FromP1 }.
 	

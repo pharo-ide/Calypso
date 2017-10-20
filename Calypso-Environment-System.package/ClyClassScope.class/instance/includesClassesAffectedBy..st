@@ -1,6 +1,6 @@
 system changes
 includesClassesAffectedBy: aSystemAnnouncement
 
-	self allClassesDo: [ :each | 
+	self classesDo: [ :each | 
 		(aSystemAnnouncement affectsClass: each) ifTrue: [ ^true ]].
 	^false
