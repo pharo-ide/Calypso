@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyAllMethods new
+	^ClyAllClasses new

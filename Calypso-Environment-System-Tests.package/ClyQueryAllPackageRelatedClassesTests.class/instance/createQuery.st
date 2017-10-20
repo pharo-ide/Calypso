@@ -1,0 +1,3 @@
+running
+createQuery
+	^ClyAllPackageRelatedClasses new
