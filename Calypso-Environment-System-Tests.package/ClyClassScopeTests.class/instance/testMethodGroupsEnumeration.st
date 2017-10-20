@@ -8,7 +8,7 @@ testMethodGroupsEnumeration
 	
 	scope methodGroupsDo: [ :each | result add: each].
 	
-	self assert: (result collect: #class) equals: { ClyInheritedMethodGroup. ClyNoTagMethodGroup. ClyTaggedMethodGroup} asSet.
+	self assert: (result collect: #class) equals: { ClyInheritedMethodGroup. ClyTaggedMethodGroup} asSet.
 	self 
-		assert: (result select: #isBasedOnMethodTag thenCollect: #tagName)
-		equals: #(tag1 tag2) asSet
+		assert: (result select:[:each | each class isBasedOnMethodTag] thenCollect: #tag)
+		equals: ClyClass1FromP1 tagsForMethods asSet
