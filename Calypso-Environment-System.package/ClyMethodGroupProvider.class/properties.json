@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/13/2017 12:03",
-	"super" : "ClyGroupProvider",
+	"super" : "Object",
 	"category" : "Calypso-Environment-System-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],
