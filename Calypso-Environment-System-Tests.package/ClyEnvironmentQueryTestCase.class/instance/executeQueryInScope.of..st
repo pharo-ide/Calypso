@@ -1,4 +1,4 @@
-tests
+running
 executeQueryInScope: scopeClass of: basisObjects
 
 	| scope cursor |

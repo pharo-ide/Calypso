@@ -1,4 +1,4 @@
-tests
+running
 queryInScope: scopeClass of: basisObjects
 
 	| resultCursor scope |
