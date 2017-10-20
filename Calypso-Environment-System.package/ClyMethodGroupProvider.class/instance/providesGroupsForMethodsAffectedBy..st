@@ -1,4 +1,0 @@
-system changes
-providesGroupsForMethodsAffectedBy: aMethodAnnouncement
-
-	^classes includes: aMethodAnnouncement classAffected

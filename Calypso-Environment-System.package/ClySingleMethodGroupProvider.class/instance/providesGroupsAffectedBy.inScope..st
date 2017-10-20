@@ -1,4 +1,4 @@
 system changes
-providesGroupsAffectedBy: aSystemAnnouncement
+providesGroupsAffectedBy: aSystemAnnouncement inScope: aClassScope
 
 	^aSystemAnnouncement affectsMethodGroup: self createMethodGroup
