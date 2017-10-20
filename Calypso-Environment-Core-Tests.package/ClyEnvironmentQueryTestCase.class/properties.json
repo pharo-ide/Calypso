@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyNavigationEnvironment2Tests",
+	"instvars" : [
+		"environment",
+		"query",
+		"result",
+		"resultItems"
+	],
+	"name" : "ClyEnvironmentQueryTestCase",
 	"type" : "normal"
 }

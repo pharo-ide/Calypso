@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ClyEnvironmentScopeTestCase",
-	"category" : "Calypso-Environment-System-Tests",
+	"category" : "Calypso-Environment-System-Tests-Scopes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

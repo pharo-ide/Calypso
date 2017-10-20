@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyEnvironmentScopeTests",
+	"instvars" : [
+		"scope",
+		"result"
+	],
+	"name" : "ClyEnvironmentScopeTestCase",
 	"type" : "normal"
 }
