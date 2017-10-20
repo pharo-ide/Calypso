@@ -10,5 +10,5 @@ testMethodGroupsEnumeration
 	
 	self assert: (result collect: #class) equals: { ClyInheritedMethodGroup. ClyTaggedMethodGroup} asSet.
 	self 
-		assert: (result select:[:each | each class isBasedOnMethodTag] thenCollect: #tag)
+		assert: (result select:[:each | each class = ClyTaggedMethodGroup] thenCollect: #tag)
 		equals: ClyClass1FromP1 tagsForMethods asSet
