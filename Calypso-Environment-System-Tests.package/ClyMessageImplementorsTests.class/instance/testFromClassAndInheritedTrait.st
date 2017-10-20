@@ -1,8 +1,8 @@
 tests
 testFromClassAndInheritedTrait
-	| allMethods |
-	query := ClyMessageImplementors of: #(methodFromRoot1).
-	allMethods := self executeQueryInScope: ClyLocalClassScope of: { ClyClassWithTraits. ClyTraitRoot1 }.
 	
-	self assert: allMethods size equals: 1.
-	self assert: allMethods first == (ClyTraitRoot1 >> #methodFromRoot1)
+	query := ClyMessageImplementors of: #(methodFromRoot1).
+	self queryInScope: ClyLocalClassScope of: { ClyClassWithTraits. ClyTraitRoot1 }.
+	
+	self assert: resultItems size equals: 1.
+	self assert: resultItems first == (ClyTraitRoot1 >> #methodFromRoot1)
