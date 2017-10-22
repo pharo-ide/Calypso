@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "DenisKudryashov 2/9/2017 15:33",
 	"super" : "ClyItemStringFilter",
-	"category" : "Calypso-Environment-Core",
+	"category" : "Calypso-Environment-System-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
@@ -9,6 +9,6 @@
 		"scriptBlock",
 		"badScript"
 	],
-	"name" : "ClyQueryResultFilter",
+	"name" : "ClyQueryBrowserFilter",
 	"type" : "normal"
 }

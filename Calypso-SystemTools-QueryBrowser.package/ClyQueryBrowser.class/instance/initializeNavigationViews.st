@@ -1,7 +1,7 @@
 initialization
 initializeNavigationViews
 	resultView := self newNavigationView.
-	resultView enableFilter: ClyQueryResultFilter.
+	resultView enableFilter: ClyQueryBrowserFilter.
 	resultView allowsDeselection: false.
 	resultView mainColumn 
 		width: 250;

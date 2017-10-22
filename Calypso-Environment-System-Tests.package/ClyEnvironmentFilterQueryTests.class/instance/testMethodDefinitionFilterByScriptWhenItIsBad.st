@@ -5,7 +5,7 @@ testMethodDefinitionFilterByScriptWhenItIsBad
 	scope := environment selectScope: ClyLocalClassScope of: {ClyClass1FromP1}.
 	allMethods := scope query: ClySortedMethods.
 	filteredMethods := allMethods filterItemsBy: (
-		ClyQueryResultFilter pattern: '[:each | each methodClass 123traits]').
+		ClyQueryBrowserFilter pattern: '[:each | each methodClass 123traits]').
 	
 	items := filteredMethods retrieveAll.
 	
