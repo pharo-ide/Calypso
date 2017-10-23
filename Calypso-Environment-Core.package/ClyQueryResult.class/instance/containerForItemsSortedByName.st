@@ -1,3 +1,3 @@
 initialization
 containerForItemsSortedByName
-	^SortedCollection sortBlock:  [ :a :b | a name < b name ]
+	^SortedCollection sortBlock: #name ascending

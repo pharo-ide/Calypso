@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyExtendedQueryResult",
+	"name" : "ClyFormattedQueryResult",
 	"type" : "normal"
 }

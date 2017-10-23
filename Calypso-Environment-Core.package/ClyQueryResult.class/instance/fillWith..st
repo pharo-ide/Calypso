@@ -1,3 +1,3 @@
 building
-buildOn: queriedObjects
+fillWith: queriedObjects
 	self subclassResponsibility 

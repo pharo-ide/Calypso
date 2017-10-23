@@ -1,5 +1,5 @@
 execution
-fetchResultAs: aQueryResult inScope: anEnvironmentScope
+buildResult: aQueryResult fromScope: anEnvironmentScope
 	| originalContent filteredItems |
 	originalContent := (anEnvironmentScope query: originalQuery) observedContent.
 	

@@ -2,4 +2,4 @@ building
 rebuild
 	
 	items := self defaultItems.
-	buildingQuery fetchResultAs: self inScope: environmentScope
+	buildingQuery buildResult: self fromScope: environmentScope

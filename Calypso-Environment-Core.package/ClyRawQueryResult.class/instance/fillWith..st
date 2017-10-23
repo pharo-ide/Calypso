@@ -1,5 +1,5 @@
 building
-buildOn: queriedObjects
+fillWith: queriedObjects
 
 	| all |
 	items ifNil: [ items := queriedObjects].
