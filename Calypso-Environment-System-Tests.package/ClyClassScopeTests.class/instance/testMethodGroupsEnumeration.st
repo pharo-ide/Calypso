@@ -6,7 +6,7 @@ testMethodGroupsEnumeration
 	environment addPlugin: ClyDefaultSystemEnvironmentPlugin new.
 	scope := ClyClassScope of: { ClyClass1FromP1 } in: environment.
 	
-	scope methodGroupsDo: [ :each | result add: each].
+	scope methodGroupsDo: [ :each | result add: each actualObject].
 	
 	self assert: (result collect: #class) equals: { ClyInheritedMethodGroup. ClyTaggedMethodGroup} asSet.
 	self 

@@ -2,4 +2,5 @@ queries
 methodGroupsDo: aBlock
 
 	self methodGroupProvidersDo: [ :groupProvider |
-		groupProvider methodGroupsIn: self do: aBlock ]
+		groupProvider methodGroupsIn: self do: [:group | 
+			aBlock value: group asEnvironmentItem] ]

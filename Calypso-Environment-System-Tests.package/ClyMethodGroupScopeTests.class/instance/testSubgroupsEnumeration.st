@@ -7,4 +7,4 @@ testSubgroupsEnumeration
 	scope methodGroupsDo: [ :each | result add: each].
 	
 	self assert: result size equals: 1.
-	self assert: result first class equals: ClyExternalPackageMethodGroup.
+	self assert: result anyOne actualObject class equals: ClyExternalPackageMethodGroup.
