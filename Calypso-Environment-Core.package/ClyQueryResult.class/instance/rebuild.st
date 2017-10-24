@@ -1,5 +1,5 @@
 building
 rebuild
 	
-	items := self defaultItems.
+	self initializeItems.
 	buildingQuery buildResult: self fromScope: environmentScope

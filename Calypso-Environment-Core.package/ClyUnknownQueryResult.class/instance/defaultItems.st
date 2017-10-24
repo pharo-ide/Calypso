@@ -1,3 +1,3 @@
 initialization
 defaultItems
-	^OrderedCollection new
+	^#()
