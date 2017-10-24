@@ -11,6 +11,6 @@
 		"result",
 		"resultItems"
 	],
-	"name" : "ClyEnvironmentQueryTestCase",
+	"name" : "ClyQueryTestCase",
 	"type" : "normal"
 }
