@@ -1,5 +1,5 @@
 queries
-queryInNewScope: anEnvironmentScopeClass
+rebuildInScopeClass: anEnvironmentScopeClass
 
 	| newScope |
 	newScope := environmentScope asScope: anEnvironmentScopeClass.

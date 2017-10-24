@@ -1,5 +1,5 @@
 queries
-queryInTransformedScopeBy: aBlockWithScopeArg
+rebuildInTransformedScopeBy: aBlockWithScopeArg
 
 	| newScope |
 	newScope := aBlockWithScopeArg value: environmentScope.

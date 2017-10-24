@@ -1,5 +1,5 @@
 queries
-queryInScopeWithout: basisObject
+rebuildInScopeWithout: basisObject
 
 	| newScope |
 	newScope := environmentScope withoutBasisObject: basisObject.

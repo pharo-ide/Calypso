@@ -1,5 +1,5 @@
 queries
-queryInScopeOf: newBasisObjects
+rebuildInScopeOf: newBasisObjects
 
 	| newScope |
 	newScope := environmentScope withNewBasisObjects: newBasisObjects.
