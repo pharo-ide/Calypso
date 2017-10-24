@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	requiredResult := ClyRawQueryResult 
+	requiredResult := ClyRawQueryResult new
