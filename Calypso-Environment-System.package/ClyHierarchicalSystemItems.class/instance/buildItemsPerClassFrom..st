@@ -4,7 +4,7 @@ buildItemsPerClassFrom: systemObjects
 	itemsPerClass := IdentityDictionary new.
 
 	systemObjects do: [ :each |
-		item := each asSystemEnvironmentItem.
+		item := each formatForSystemQuery.
 		localItems := itemsPerClass
 			at: item systemDefinitionClass ifAbsentPut: [self containerForItemsSortedByName ].
 		localItems add: item].
