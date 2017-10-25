@@ -1,8 +1,8 @@
 helpers
 assertItems: itemValueWithDepthArray withValue: aBlockToGetValue
 	| i actualItem valueOfItem |
-	self assert: items size equals: itemValueWithDepthArray size / 2.
-	
+	self assert: queryResult size equals: itemValueWithDepthArray size / 2.
+	items := queryResult items.
 	i := 1.
 	itemValueWithDepthArray pairsDo: [ :expectedValue :expectedDepth |
 		actualItem := items at: i.

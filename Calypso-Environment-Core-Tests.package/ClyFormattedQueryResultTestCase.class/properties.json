@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyNavigationEnvironmentTestCase",
-	"category" : "Calypso-Environment-System-Tests",
+	"super" : "ClyQueryResultTestCase",
+	"category" : "Calypso-Environment-Core-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
@@ -10,6 +10,6 @@
 		"items",
 		"actualObjects"
 	],
-	"name" : "ClyEnvironmentContentTestCase",
+	"name" : "ClyFormattedQueryResultTestCase",
 	"type" : "normal"
 }

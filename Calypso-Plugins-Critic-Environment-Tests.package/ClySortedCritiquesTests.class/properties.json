@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyEnvironmentContentTestCase",
-	"category" : "Calypso-Plugins-Critic-Environment-Tests",
+	"super" : "ClyFormattedQueryResultTestCase",
+	"category" : "Calypso-Plugins-Critic-Environment-Tests-Results",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
