@@ -1,8 +1,6 @@
 instance creation
 package: aPackage class: aClass
 	
-	^self new 
-		definitionClass: aClass instanceSide;
+	^(super package: aPackage class: aClass)
 		isInstanceSide: aClass isInstanceSide;
-		definitionPackage: aPackage;
 		isExtension: aClass package ~~ aPackage

@@ -1,15 +1,13 @@
 {
 	"commentStamp" : "DenisKudryashov 2/9/2017 13:32",
-	"super" : "ClyDefinitionProperty",
+	"super" : "ClySystemDefinitionProperty",
 	"category" : "Calypso-Environment-System-Properties",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"isInstanceSide",
-		"isExtension",
-		"definitionPackageItem",
-		"definitionClassItem"
+		"isExtension"
 	],
 	"name" : "ClyMethodDefinitionProperty",
 	"type" : "normal"

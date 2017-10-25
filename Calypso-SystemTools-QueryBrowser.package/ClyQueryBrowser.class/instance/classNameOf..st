@@ -2,5 +2,5 @@ initialization
 classNameOf: anEnvironmentItem
 
 	| definition |
-	definition := anEnvironmentItem getProperty: ClyDefinitionProperty.
+	definition := anEnvironmentItem getProperty: ClySystemDefinitionProperty.
 	^definition definitionClassItem name

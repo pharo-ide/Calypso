@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyDefinitionProperty",
+	"instvars" : [
+		"definitionPackageItem",
+		"definitionClassItem"
+	],
+	"name" : "ClySystemDefinitionProperty",
 	"type" : "normal"
 }

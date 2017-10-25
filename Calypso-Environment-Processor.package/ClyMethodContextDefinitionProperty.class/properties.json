@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyDefinitionProperty",
+	"super" : "ClySystemDefinitionProperty",
 	"category" : "Calypso-Environment-Processor",
 	"classinstvars" : [ ],
 	"pools" : [ ],

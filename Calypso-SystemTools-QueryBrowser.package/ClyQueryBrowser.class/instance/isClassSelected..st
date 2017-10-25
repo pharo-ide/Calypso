@@ -2,5 +2,5 @@ testing
 isClassSelected: aClass
 
 	^self selection items anySatisfy: [ :methodItem |
-		(methodItem getProperty: ClyDefinitionProperty) 
+		(methodItem getProperty: ClySystemDefinitionProperty) 
 			definitionClass == aClass ]

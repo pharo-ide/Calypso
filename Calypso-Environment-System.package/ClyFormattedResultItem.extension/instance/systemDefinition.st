@@ -2,5 +2,5 @@
 systemDefinition
 	
 	^self 
-		getProperty: ClyDefinitionProperty 
+		getProperty: ClySystemDefinitionProperty 
 		ifAbsent: [ self error: 'No system definition is specified for item' ].
