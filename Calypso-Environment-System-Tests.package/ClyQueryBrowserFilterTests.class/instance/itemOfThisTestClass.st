@@ -1,3 +1,3 @@
 helpers
 itemOfThisTestClass
-	^ClyEnvironmentItem with: self class
+	^ClyFormattedResultItem with: self class

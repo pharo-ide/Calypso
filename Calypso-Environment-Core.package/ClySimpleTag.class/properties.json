@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/9/2017 11:15",
-	"super" : "ClyEnvironmentItemProperty",
+	"super" : "ClyExtendedItemProperty",
 	"category" : "Calypso-Environment-Core",
 	"classinstvars" : [
 		"instance"
@@ -8,6 +8,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyEnvironmentItemSimpleTag",
+	"name" : "ClySimpleTag",
 	"type" : "normal"
 }

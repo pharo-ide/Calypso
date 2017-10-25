@@ -2,6 +2,6 @@
 asSystemEnvironmentItem
 
 	| item |
-	item := ClyEnvironmentItem named: self selector with: self.
+	item := ClyFormattedResultItem named: self selector with: self.
 	item addProperty: (ClyMethodDefinitionProperty of: self).
 	^item

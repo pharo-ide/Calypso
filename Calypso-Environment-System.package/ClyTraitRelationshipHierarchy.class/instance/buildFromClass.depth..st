@@ -2,7 +2,7 @@ building
 buildFromClass: aClass depth: currentDepth
 
 	| item sortedChildren |
-	item := ClyEnvironmentItem named: aClass name with: aClass.
+	item := ClyFormattedResultItem named: aClass name with: aClass.
 	item depth: currentDepth.
 	items add: item.
 	

@@ -4,4 +4,4 @@ testUsingBadScriptWhichNotReturnBoolean
 	filter := ClyQueryBrowserFilter substringPattern: '[:each | each selector]'.
 	
 	self assert: (filter matches: self itemOfThisTestMethod).
-	self assert: (filter matches: (ClyEnvironmentItem with: Object >> #printString)).
+	self assert: (filter matches: (ClyFormattedResultItem with: Object >> #printString)).

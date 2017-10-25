@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyEnvironmentItemProperty",
+	"super" : "ClyExtendedItemProperty",
 	"category" : "Calypso-Plugins-Monticello-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],

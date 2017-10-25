@@ -1,3 +1,0 @@
-helpers
-createQuery
-	^ClyAllMethods new

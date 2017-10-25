@@ -7,6 +7,6 @@ buildFromProcess: aProcess
 			ifTrue: [thisContext sender]
 			ifFalse: [ self error: 'should not happen' ]].
 	[ sender notNil ] whileTrue: [ 
-		items add: (ClyEnvironmentItem named: sender method selector with: sender).
+		items add: (ClyFormattedResultItem named: sender method selector with: sender).
 		sender := sender sender
 	 ] 

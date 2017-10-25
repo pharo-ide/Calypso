@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyEnvironmentItemSimpleTag",
+	"super" : "ClySimpleTag",
 	"category" : "Calypso-Plugins-Reflectivity-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],

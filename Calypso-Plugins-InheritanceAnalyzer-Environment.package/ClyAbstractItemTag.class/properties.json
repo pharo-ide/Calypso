@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/9/2017 11:15",
-	"super" : "ClyEnvironmentItemSimpleTag",
+	"super" : "ClySimpleTag",
 	"category" : "Calypso-Plugins-InheritanceAnalyzer-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,3 +1,3 @@
 helpers
 itemOfThisTestMethod
-	^ClyEnvironmentItem with: self class >> testSelector
+	^ClyFormattedResultItem with: self class >> testSelector

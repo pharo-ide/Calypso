@@ -1,5 +1,5 @@
 tests
-testFillingWithThreeClassesFromOneHierarchy
+testFillingWithClassesFromOneHierarchy
 
 	queryResult fillWith: { ClySubclassN1OfClass1FromP1. ClySubclassLOfSubclassMFromP3. ClyClass1FromP1. ClySubclassN2OfClass1FromP1 }.
 
