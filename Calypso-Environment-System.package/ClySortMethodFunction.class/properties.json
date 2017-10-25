@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySortFunction",
+	"category" : "Calypso-Environment-System-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySortMethodFunction",
+	"type" : "normal"
+}
