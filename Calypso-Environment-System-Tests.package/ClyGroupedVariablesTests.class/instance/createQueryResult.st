@@ -1,0 +1,3 @@
+helpers
+createQueryResult
+	^ClyGroupedVariables new

@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClySortedVariablesTests",
+	"name" : "ClyGroupedVariablesTests",
 	"type" : "normal"
 }

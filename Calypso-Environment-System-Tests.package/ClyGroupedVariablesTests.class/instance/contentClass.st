@@ -1,3 +1,3 @@
 helpers
 contentClass
-	^ClySortedVariables
+	^ClyGroupedVariables
