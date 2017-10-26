@@ -1,13 +1,14 @@
 building
 fillWith: classes
-	| item localSubclasses rootClasses |
+	| item localSubclasses rootClasses classFilter |
+	classFilter := classes asIdentitySet.
 	rootClasses := self containerForItemsSortedByName.
 	localSubclasses := IdentityDictionary new.
 
 	classes do: [ :each |			
 		item := self 
 			buildItemFrom: each withSuperclassesOn: localSubclasses 
-			which: [:superclass |	classes includes: superclass].		
+			which: [:superclass |	classFilter includes: superclass].		
 		
 		item isRoot ifTrue: [ rootClasses add: item]].
 

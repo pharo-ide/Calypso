@@ -3,7 +3,7 @@ buildFromMethods: methods
 	
 	| classMethodItems classItems methodItems |
 	classMethodItems := self buildMethodItemsPerClassFrom: methods.
-	classItems := self buildHierarchicalClassItemsFrom: classMethodItems.
+	classItems := ClyHierarchicallySortedClasses buildItemsOn: classMethodItems keys.
 	
 	items := OrderedCollection new: methods size.
 	classItems do: [ :classItem |
