@@ -6,7 +6,7 @@ fillWithVariablesPerClass: varsPerClass
 	classItems do: [ :classItem |
 		vars := varsPerClass at: classItem actualObject.
 		declarationGroup := ClyVarsDeclarationMethodGroup
-			variables: vars declaredIn: classItem actualObject classes: environmentScope basisObjects.
+			variables: vars declaredIn: classItem actualObject classes: self basisClasses.
 		items add: declarationGroup asEnvironmentItem.
 		vars do: [:each | 
 			varItem := each asEnvironmentItem.

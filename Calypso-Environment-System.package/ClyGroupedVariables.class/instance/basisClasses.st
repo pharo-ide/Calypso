@@ -1,0 +1,3 @@
+building
+basisClasses
+	^environmentScope basisObjects

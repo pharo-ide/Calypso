@@ -5,5 +5,5 @@ addClassVariableGroupFrom: varsPerClass
 	classVars := OrderedCollection new. 
 	varsPerClass do: [ :vars | classVars addAll: vars]. 
 	
-	group := ClyClassVariablesMethodGroup classes: environmentScope basisObjects variables: classVars.
+	group := ClyClassVariablesMethodGroup classes: self basisClasses variables: classVars.
 	items add: group asEnvironmentItem
