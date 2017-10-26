@@ -1,4 +1,5 @@
 instance creation
-classes: classes variable: aSlot
+classes: classes variable: aVariable
 	^(self classes: classes)
-		variable: aSlot
+		variable: aVariable;
+		declarationClass: aVariable declaringClass

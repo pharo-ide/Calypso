@@ -2,7 +2,10 @@ building
 fillWith: variables
 
 	| varsPerClass classItems vars declarationGroup varItem |
-	varsPerClass := self buildInstVarItemsPerClassFrom: variables.
+	items add: (ClyInheritedMethodGroup classes: environmentScope basisObjects) asEnvironmentItem.
+	varsPerClass := self groupInstVarsPerClassFrom: variables.
+	(variables size = (varsPerClass sumNumbers: #size)) ifFalse: [ 
+		 items add: (ClyClassVariablesMethodGroup classes: environmentScope basisObjects) asEnvironmentItem].
 	classItems := ClyHierarchicallySortedClasses buildItemsOn: varsPerClass keys.
 	
 	classItems do: [ :classItem |
