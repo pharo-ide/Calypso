@@ -1,10 +1,17 @@
 building
 fillWith: variables
-	| builder classes |
-	classes := variables collect: #declaringClass.
-	builder := ClyInstanceVariableMethodGroupHierarchyBuilder on: classes.
+
+	| varsPerClass classItems vars declarationGroup varItem |
+	varsPerClass := self buildInstVarItemsPerClassFrom: variables.
+	classItems := ClyHierarchicallySortedClasses buildItemsOn: varsPerClass keys.
 	
-	builder buildHierarchicalItems.
-	
-	items := builder items.
-	items do: [ :each | each actualObject classes: environmentScope basisObjects ]
+	classItems do: [ :classItem |
+		vars := varsPerClass at: classItem actualObject.
+		declarationGroup := ClyVarsDeclarationMethodGroup
+			variables: vars declaredIn: classItem actualObject classes: environmentScope basisObjects.
+		items add: declarationGroup asEnvironmentItem.
+		vars do: [:each | 
+			varItem := each asEnvironmentItem.
+			varItem depth: 1.
+			items add: varItem] 
+	].
