@@ -1,4 +1,4 @@
 *Calypso-SystemTools-Core
 asCalypsoVariableOf: declarationClass
 
-	^ClyInstanceVariable slot: slot declaredIn: declarationClass 
+	^ClyInstanceVariable on: slot declaredIn: declarationClass 

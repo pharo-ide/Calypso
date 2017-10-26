@@ -1,3 +1,3 @@
 *Calypso-SystemTools-Core
-createRefactoring: variableRefactoringClass for: declarationClass
-	^slot createRefactoring: variableRefactoringClass for: declarationClass
+createRefactoring: variableRefactoringClass for: aClass
+	^actualVariable createRefactoring: variableRefactoringClass for: aClass

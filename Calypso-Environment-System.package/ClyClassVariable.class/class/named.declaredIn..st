@@ -1,5 +1,5 @@
 instance creation
 named: aSymbol declaredIn: aClass
 	^self 
-		on: (aClass slotNamed: aSymbol)
+		on: (aClass classVarNamed: aSymbol)
 		declaredIn: aClass

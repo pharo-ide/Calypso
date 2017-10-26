@@ -3,4 +3,4 @@ isWrittenIn: aMethod
 	
 	(self isAccessibleFrom: aMethod origin)	ifFalse: [ ^false ].
 		
-	^slot isWrittenIn: aMethod 
+	^actualVariable isWrittenIn: aMethod 

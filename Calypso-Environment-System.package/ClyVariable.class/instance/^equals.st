@@ -6,5 +6,5 @@ comparing
 		ifTrue: [ ^ true ].
 	self class = anObject class
 		ifFalse: [ ^ false ].
-	^ slot = anObject slot
-		and: [ declaringClass = anObject declaringClass ]
+	^ declaringClass = anObject declaringClass
+		and: [ actualVariable = anObject actualVariable ]

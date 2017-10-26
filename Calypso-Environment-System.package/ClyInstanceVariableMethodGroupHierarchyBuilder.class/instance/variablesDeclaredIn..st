@@ -1,3 +1,3 @@
 building
 variablesDeclaredIn: aClass
-	^aClass slots collect: [:each | ClyInstanceVariable slot: each declaredIn: aClass ]
+	^aClass slots collect: [:each | ClyInstanceVariable on: each declaredIn: aClass ]
