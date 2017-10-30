@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserQueryResult",
+	"category" : "Calypso-Environment-Core-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyBrowserQueryResultExample",
+	"type" : "normal"
+}

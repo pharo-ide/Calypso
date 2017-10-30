@@ -6,13 +6,13 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"depth",
+		"itemCursor",
 		"metadata",
 		"childrenStructure",
+		"depth",
 		"parentItem",
 		"itemsView",
-		"lastFilteredDataSource",
-		"itemCursor"
+		"lastFilteredDataSource"
 	],
 	"name" : "ClyDataSource",
 	"type" : "normal"

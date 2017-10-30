@@ -1,7 +1,6 @@
 tests
 testExecutionOverExistingQueryResult
 
-	| resultCursor |
 	query := ClySimpleQueryExampleReturningScopeBasis new.
 
 	self queryInScope: ClyEnvironmentScope of: { self class superclass. self class }.
