@@ -1,0 +1,1 @@
+I represent class scope where I see all  basis classes + all their supeclasses
