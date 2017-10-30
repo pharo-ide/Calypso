@@ -1,5 +1,4 @@
 instance creation
 for: anItemsView on: aQueryResult
-	^self new 
-		itemsView: anItemsView;
-		itemCursor: aQueryResult openBrowserCursor
+	^(self on: aQueryResult) 
+		itemsView: anItemsView

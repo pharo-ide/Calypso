@@ -3,4 +3,4 @@ subscribe: anObject
 
 	announcer ifNil: [ announcer := Announcer new].
 	
-	announcer when: ClyEnvironmentChanged send: #environmentChanged: to: anObject
+	announcer when: ClyEnvironmentChanged send: #itemsChanged to: anObject

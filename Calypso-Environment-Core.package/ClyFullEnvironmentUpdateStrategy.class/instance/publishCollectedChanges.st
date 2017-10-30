@@ -1,5 +1,4 @@
 updating
 publishCollectedChanges
-	changes keysAndValuesDo: [ :content :changeEvent |
-		content notifyChange: changeEvent ].
+	changes do: [ :queryResult | queryResult notifyChanges ].
 	changes removeAll

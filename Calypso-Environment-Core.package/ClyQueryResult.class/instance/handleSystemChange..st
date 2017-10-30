@@ -5,4 +5,4 @@ handleSystemChange: aSystemAnnouncement
 	
 	accessGuard critical: [
 		(self isAffectedBy: aSystemAnnouncement)
-			ifTrue: [ self changedBy: aSystemAnnouncement ]]
+			ifTrue: [ self itemsChanged]]

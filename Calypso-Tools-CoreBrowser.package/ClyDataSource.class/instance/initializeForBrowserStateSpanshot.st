@@ -2,4 +2,4 @@ copying
 initializeForBrowserStateSpanshot
 	table := nil.
 	itemsView := nil.	
-	itemCursor := ClyClosedDataSourceCursor instance.	
+	itemCursor := ClyClosedBrowserCursor instance.	

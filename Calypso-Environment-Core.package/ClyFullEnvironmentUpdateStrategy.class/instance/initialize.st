@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	changes := IdentityDictionary new
+	changes := IdentitySet new

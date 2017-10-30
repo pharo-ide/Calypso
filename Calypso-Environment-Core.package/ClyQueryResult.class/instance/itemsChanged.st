@@ -1,8 +1,8 @@
 system changes
-changedBy: aSystemAnnouncement
+itemsChanged
 
 	accessGuard critical: [ 	
 		items := nil].
 	
 	announcer ifNil: [ ^self ].	
-	environment content: self wasChangedBy: aSystemAnnouncement
+	environment announceChangesOf: self

@@ -1,4 +1,4 @@
 controlling
 forceFullUpdate
 
-	itemCursor queryResult changedBy: nil
+	itemCursor queryResult itemsChanged

@@ -1,4 +1,4 @@
 controlling
 open
 	
-	self itemCursor: metadata newCursor
+	self queryResult: metadata repeatQuery

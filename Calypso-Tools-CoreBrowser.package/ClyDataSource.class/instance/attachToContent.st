@@ -1,3 +1,0 @@
-controlling
-attachToContent
-	itemCursor attachContentTo: self
