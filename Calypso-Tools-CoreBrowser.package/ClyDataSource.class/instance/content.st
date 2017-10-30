@@ -1,3 +1,3 @@
 accessing
 content
-	^environmentCursor observedContent
+	^environmentCursor queryResult

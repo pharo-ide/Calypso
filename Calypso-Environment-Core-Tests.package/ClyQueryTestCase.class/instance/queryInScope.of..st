@@ -5,5 +5,5 @@ queryInScope: scopeClass of: basisObjects
 	scope := environment selectScope: scopeClass of: basisObjects.
 	
 	resultCursor := scope query: query.
-	result := resultCursor observedContent.
+	result := resultCursor queryResult.
 	resultItems := result items

@@ -1,4 +1,4 @@
 queries
 queryContentInScopeWith: extraBasisObject
 
-	^observedContent rebuildInScopeWith: extraBasisObject
+	^queryResult rebuildInScopeWith: extraBasisObject

@@ -1,4 +1,4 @@
 queries
 retrieveAllActualObjects
 
-	^observedContent actualObjects
+	^queryResult actualObjects

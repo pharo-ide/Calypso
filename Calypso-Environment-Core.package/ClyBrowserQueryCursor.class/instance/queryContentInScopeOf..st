@@ -1,4 +1,4 @@
 queries
 queryContentInScopeOf: newBasisObjects
 
-	^observedContent rebuildInScopeOf: newBasisObjects
+	^queryResult rebuildInScopeOf: newBasisObjects

@@ -1,4 +1,4 @@
 controlling
 detachContentFrom: anObject
 
-	observedContent unsubscribe: anObject
+	queryResult unsubscribe: anObject

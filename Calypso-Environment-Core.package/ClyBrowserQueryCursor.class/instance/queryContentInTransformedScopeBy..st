@@ -1,4 +1,4 @@
 queries
 queryContentInTransformedScopeBy: aBlockWithScopeArg
 
-	^observedContent rebuildInTransformedScopeBy: aBlockWithScopeArg
+	^queryResult rebuildInTransformedScopeBy: aBlockWithScopeArg

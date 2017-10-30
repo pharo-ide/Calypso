@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"metadata",
-		"observedContent",
 		"cache",
-		"position"
+		"position",
+		"queryResult"
 	],
 	"name" : "ClyBrowserQueryCursor",
 	"type" : "normal"

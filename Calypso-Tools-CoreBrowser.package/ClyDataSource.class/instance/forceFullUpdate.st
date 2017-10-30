@@ -1,4 +1,4 @@
 controlling
 forceFullUpdate
 
-	environmentCursor observedContent changedBy: nil
+	environmentCursor queryResult changedBy: nil

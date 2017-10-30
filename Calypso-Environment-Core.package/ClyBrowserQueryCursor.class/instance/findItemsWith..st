@@ -6,4 +6,4 @@ findItemsWith: actualObjects
 	We always try to find items in cache and then ask content for it"
 	
 	^cache findItemsWith: actualObjects forAbsentDo: [ 
-		^observedContent findItemsWith: actualObjects]
+		^queryResult findItemsWith: actualObjects]

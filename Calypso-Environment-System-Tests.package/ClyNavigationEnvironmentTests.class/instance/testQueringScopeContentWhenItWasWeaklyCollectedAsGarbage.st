@@ -8,7 +8,7 @@ testQueringScopeContentWhenItWasWeaklyCollectedAsGarbage
 	cache := scope cachedResultOf: ClySortedMethods.
 	self assert: cache equals: nil.
 	
-	content := (scope query: ClySortedMethods) observedContent.
+	content := (scope query: ClySortedMethods) queryResult.
 	self assert: content class equals: ClySortedMethods.
-	content2 := (scope query: ClySortedMethods) observedContent.
+	content2 := (scope query: ClySortedMethods) queryResult.
 	self assert: content == content2

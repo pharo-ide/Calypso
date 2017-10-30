@@ -1,4 +1,4 @@
 queries
 retrieveAll
 
-	^observedContent allItems
+	^queryResult allItems

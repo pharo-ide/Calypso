@@ -1,4 +1,4 @@
 controlling
 attachContentTo: anObject
 
-	observedContent subscribe: anObject
+	queryResult subscribe: anObject

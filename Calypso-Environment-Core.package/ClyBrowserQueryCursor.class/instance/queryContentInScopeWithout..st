@@ -1,4 +1,4 @@
 queries
 queryContentInScopeWithout: existingBasisObject
 
-	^observedContent rebuildInScopeWithout: existingBasisObject
+	^queryResult rebuildInScopeWithout: existingBasisObject

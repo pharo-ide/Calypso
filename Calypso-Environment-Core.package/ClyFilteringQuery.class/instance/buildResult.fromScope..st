@@ -1,7 +1,7 @@
 execution
 buildResult: aQueryResult fromScope: anEnvironmentScope
 	| originalContent filteredItems |
-	originalContent := (anEnvironmentScope query: originalQuery) observedContent.
+	originalContent := (anEnvironmentScope query: originalQuery) queryResult.
 	
 	filteredItems := originalContent items 
 		select: [ :each | itemFilter matches: each ] 

@@ -6,6 +6,6 @@ testOpeningBrowserCursor
 	cursor := queryResult openBrowserCursor.
 
 	self assert: cursor class equals: ClyBrowserQueryCursor.
-	resultAdapter := cursor observedContent.
+	resultAdapter := cursor queryResult.
 	self assert: resultAdapter class equals: ClyQueryResultBrowserAdapter.
 	self assert: resultAdapter actualResult equals: queryResult
