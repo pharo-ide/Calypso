@@ -10,6 +10,6 @@
 		"items",
 		"actualObjects"
 	],
-	"name" : "ClyFormattedQueryResultTestCase",
+	"name" : "ClyBrowserQueryResultTestCase",
 	"type" : "normal"
 }
