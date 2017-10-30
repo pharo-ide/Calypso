@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "DenisKudryashov 6/12/2017 15:14",
-	"super" : "ClyExtendedClassScope",
+	"commentStamp" : "DenisKudryashov 10/30/2017 13:14",
+	"super" : "ClyClassScope",
 	"category" : "Calypso-Environment-System-Scopes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"metaLevelScope"
+	],
 	"name" : "ClyClassHierarchyScope",
 	"type" : "normal"
 }

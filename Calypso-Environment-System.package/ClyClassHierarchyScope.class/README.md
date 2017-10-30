@@ -4,3 +4,8 @@ My subclasses define concrete kind of hierarchy: subclass relationship, traits, 
 - parentsOf:do: (empty by default)
 
 My actual classes are hierarchy of each basis object
+
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	metaLevelScope:		<ClyClassScope class>

@@ -1,4 +1,5 @@
 private
 methodsOf: aClass do: aBlock
 
-	aClass localMethods do: aBlock 
+	self metaLevelsOf: aClass do: [ :concreteMetaLevelClass |
+		concreteMetaLevelClass localMethods do: aBlock ]
