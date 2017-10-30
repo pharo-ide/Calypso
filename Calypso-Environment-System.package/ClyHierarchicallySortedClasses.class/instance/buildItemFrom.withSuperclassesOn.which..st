@@ -2,7 +2,7 @@ private
 buildItemFrom: aClass withSuperclassesOn: localSubclasses which: aBlock
 	| item superclass sortedSubclasses |		
 			
-	item := ClyFormattedResultItem named: aClass name with: aClass.
+	item := ClyBrowserItem named: aClass name with: aClass.
 	item depth: (self computeDepthOf: aClass forSuperclassesWhich: aBlock).
 	
 	superclass := self superclassOf: aClass which: aBlock ifAbsent: [^item].

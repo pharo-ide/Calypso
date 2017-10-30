@@ -7,6 +7,6 @@ buildMethodItemsPerClassFrom: methods
 		methodClass := each methodClass.
 		classMethods := groupedMethods 
 			at: methodClass ifAbsentPut: [self containerForItemsSortedByName ].
-		classMethods add: (ClyFormattedResultItem named: each selector with: each)].
+		classMethods add: (ClyBrowserItem named: each selector with: each)].
 	
 	^groupedMethods

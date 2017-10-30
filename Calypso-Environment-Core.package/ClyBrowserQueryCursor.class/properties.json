@@ -11,6 +11,6 @@
 		"cache",
 		"position"
 	],
-	"name" : "ClyQueryCursor",
+	"name" : "ClyBrowserQueryCursor",
 	"type" : "normal"
 }

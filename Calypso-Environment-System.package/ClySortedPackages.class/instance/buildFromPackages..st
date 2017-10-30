@@ -4,6 +4,6 @@ buildFromPackages: packages
 	
 	packages do: [ :each | 
 		
-		item := ClyFormattedResultItem named: each name with: each.		
+		item := ClyBrowserItem named: each name with: each.		
 		items add: item.
 	]

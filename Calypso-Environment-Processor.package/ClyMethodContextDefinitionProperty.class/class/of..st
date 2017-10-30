@@ -2,6 +2,6 @@ instance creation
 of: aContext
 
 	^self new
-		definitionMethodItem: (ClyFormattedResultItem named: aContext selector with: aContext method);
-		receiverItem: (ClyFormattedResultItem named: aContext receiver class name with: aContext receiver);
-		closureItem: (aContext closure ifNotNil: [:c | ClyFormattedResultItem named: c printString with: c]) 
+		definitionMethodItem: (ClyBrowserItem named: aContext selector with: aContext method);
+		receiverItem: (ClyBrowserItem named: aContext receiver class name with: aContext receiver);
+		closureItem: (aContext closure ifNotNil: [:c | ClyBrowserItem named: c printString with: c]) 

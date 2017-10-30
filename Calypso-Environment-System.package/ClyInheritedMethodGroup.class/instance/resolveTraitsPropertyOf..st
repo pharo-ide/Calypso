@@ -5,7 +5,7 @@ resolveTraitsPropertyOf: myEnvironmentItem
 	self isRootsUseTraits ifFalse: [^self].
 	 
 	traitsGroup := ClyInheritedTraitMethodGroup classes: classes.
-	traitsGroupItem := ClyFormattedResultItem named: 'traitsGroup' with: traitsGroup.
+	traitsGroupItem := ClyBrowserItem named: 'traitsGroup' with: traitsGroup.
 	traitsGroup isMethodsVisible ifTrue: [ 
 		traitsGroupItem markWith: ClyMethodsAreVisibleTag].
 		

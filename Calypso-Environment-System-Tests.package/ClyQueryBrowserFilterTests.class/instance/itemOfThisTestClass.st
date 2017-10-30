@@ -1,3 +1,3 @@
 helpers
 itemOfThisTestClass
-	^ClyFormattedResultItem with: self class
+	^ClyBrowserItem with: self class

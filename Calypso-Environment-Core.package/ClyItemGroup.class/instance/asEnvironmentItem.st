@@ -1,3 +1,3 @@
 converting
 asEnvironmentItem
-	^ClyFormattedResultItem named: self name with: self
+	^ClyBrowserItem named: self name with: self

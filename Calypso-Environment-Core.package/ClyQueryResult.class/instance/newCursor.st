@@ -2,6 +2,6 @@ accessing
 newCursor
 
 	| cursor |
-	cursor := ClyQueryCursor for: self.
+	cursor := ClyBrowserQueryCursor for: self.
 	cursor moveToStart.
 	^cursor.

@@ -7,6 +7,6 @@ buildFromObject: anObject
 	result isComplete ifFalse: [ ^self].
 	
 	result critiques do: [:each |
-		item := ClyFormattedResultItem named: each title with: each.
+		item := ClyBrowserItem named: each title with: each.
 		items add: item
 	]

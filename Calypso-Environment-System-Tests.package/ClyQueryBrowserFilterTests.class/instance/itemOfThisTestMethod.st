@@ -1,3 +1,3 @@
 helpers
 itemOfThisTestMethod
-	^ClyFormattedResultItem with: self class >> testSelector
+	^ClyBrowserItem with: self class >> testSelector

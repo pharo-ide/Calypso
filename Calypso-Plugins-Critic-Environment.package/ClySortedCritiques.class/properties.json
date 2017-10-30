@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyFormattedQueryResult",
+	"super" : "ClyBrowserQueryResult",
 	"category" : "Calypso-Plugins-Critic-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],
