@@ -1,8 +1,8 @@
 navigation
 showProcessesIn: aNavigationEnvironment
-	| cursor |
+	| processes |
 	navigationEnvironment := aNavigationEnvironment.
 	
-	cursor := navigationEnvironment querySystemFor: ClySortedProcesses.
+	processes := navigationEnvironment querySystemFor: ClySortedProcesses.
 
-	processView dataSource: (ClyCollapsedDataSource on: cursor).
+	processView dataSource: (ClyCollapsedDataSource on: processes).

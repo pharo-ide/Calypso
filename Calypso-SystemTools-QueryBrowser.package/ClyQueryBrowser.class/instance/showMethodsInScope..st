@@ -1,11 +1,11 @@
 navigation
 showMethodsInScope: anEnvironmentScope
-	| cursor newDS |
+	| result newDS |
 	(queryScopes includes: anEnvironmentScope) ifFalse: [ queryScopes add: anEnvironmentScope ].	
 		
 	self changeNavigationStateBy: [
 		activeScope := anEnvironmentScope.
-		cursor := navigationEnvironment query: systemQuery inScope: activeScope.
-		newDS := ClyCollapsedDataSource on: cursor.	 	
+		result := navigationEnvironment query: systemQuery inScope: activeScope.
+		newDS := ClyCollapsedDataSource on: result.	 	
 		resultView dataSource: newDS.
 		self ensureSelectedItem]

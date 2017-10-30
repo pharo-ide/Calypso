@@ -1,10 +1,12 @@
 running
 setUp
-	| cursor package |
+	| packages |
 	super setUp.
-	package := ClyClass7WithTag1FromP5 package.  "it is P5WithTag package which allow items expansion"
-	cursor := environment query: ClySortedPackages inScope: (ClyPackageScope of: { package }).
-	viewDataSource := ClyCollapsedDataSource on: cursor.
+	packages := environment 
+		query: ClySortedPackages 
+		inScope: (ClyPackageScope of: { ClyClass7WithTag1FromP5 package }).
+		"it is P5WithTag package which allow items expansion"
+	viewDataSource := ClyCollapsedDataSource on: packages.
 	viewDataSource childrenStructure: { RPackage -> ClySortedClassGroups }.
 	navigationView := ClyNavigationView for: browser.
 	navigationView dataSource: viewDataSource.

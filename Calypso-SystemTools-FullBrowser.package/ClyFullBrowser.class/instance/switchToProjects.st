@@ -1,8 +1,8 @@
 navigation
 switchToProjects
-	| cursor dataSource |
-	cursor := navigationEnvironment querySystemFor: ClySortedProjects.	
-	dataSource := ClyCollapsedDataSource on: cursor.
+	| projects dataSource |
+	projects := navigationEnvironment querySystemFor: ClySortedProjects.	
+	dataSource := ClyCollapsedDataSource on: projects.
 	dataSource childrenStructure: { 
 		ClyManagedProject -> ClyProjectContent. 
 		ClyPackageGroup -> ClyProjectContent.

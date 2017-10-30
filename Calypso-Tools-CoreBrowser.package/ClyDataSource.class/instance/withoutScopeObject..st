@@ -2,5 +2,5 @@ queries
 withoutScopeObject: existingBasisObject
 
 	| newCursor |
-	newCursor := environmentCursor queryContentInScopeWithout: existingBasisObject.
+	newCursor := itemCursor queryContentInScopeWithout: existingBasisObject.
 	^self createSameOn: newCursor

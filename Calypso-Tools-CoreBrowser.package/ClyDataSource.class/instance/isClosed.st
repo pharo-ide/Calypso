@@ -1,3 +1,3 @@
 testing
 isClosed
-	^environmentCursor == ClyClosedDataSourceCursor instance
+	^itemCursor == ClyClosedDataSourceCursor instance

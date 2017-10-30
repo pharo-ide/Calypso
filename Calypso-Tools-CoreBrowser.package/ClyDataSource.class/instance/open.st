@@ -1,4 +1,4 @@
 controlling
 open
 	
-	self environmentCursor: metadata newCursor
+	self itemCursor: metadata newCursor

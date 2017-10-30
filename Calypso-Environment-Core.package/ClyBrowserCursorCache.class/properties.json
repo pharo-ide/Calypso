@@ -11,6 +11,6 @@
 		"sizeLimit",
 		"totalContentSize"
 	],
-	"name" : "ClyQueryCursorCache",
+	"name" : "ClyBrowserCursorCache",
 	"type" : "normal"
 }

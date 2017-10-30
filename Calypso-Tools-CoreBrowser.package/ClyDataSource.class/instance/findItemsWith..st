@@ -2,7 +2,7 @@ queries
 findItemsWith: actualObjects
 
 	| foundItems |
-	foundItems := environmentCursor findItemsWith: actualObjects.
+	foundItems := itemCursor findItemsWith: actualObjects.
 
 	^foundItems select: #notNil thenCollect: [:each | 
 		self createElementWith: each ]

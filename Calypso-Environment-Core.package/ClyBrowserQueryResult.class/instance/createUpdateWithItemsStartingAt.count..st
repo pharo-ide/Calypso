@@ -4,8 +4,8 @@ createUpdateWithItemsStartingAt: startPosition count: cacheSize
 	In this case all required properties of metadata and cache will be transferred in one request using update instance"
 	
 	| itemCache |
-	itemCache := ClyQueryCursorCache 
+	itemCache := ClyBrowserCursorCache 
 		filledBy: self 
 		startingAt: startPosition
 		size: cacheSize.
-	^ClyQueryCursorUpdate of: self withItems: itemCache
+	^ClyBrowserCursorUpdate of: self withItems: itemCache

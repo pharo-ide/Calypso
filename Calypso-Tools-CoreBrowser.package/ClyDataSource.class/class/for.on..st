@@ -1,5 +1,5 @@
 instance creation
-for: anItemsView on: anEnvironmentCursor
+for: anItemsView on: aQueryResult
 	^self new 
 		itemsView: anItemsView;
-		environmentCursor: anEnvironmentCursor 
+		itemCursor: aQueryResult openBrowserCursor

@@ -1,5 +1,5 @@
 controlling
 updateItems
-	environmentCursor updateItemCache.	
-	metadata := environmentCursor metadata.
+	itemCursor updateItemCache.	
+	metadata := itemCursor metadata.
 	self updateExpandingItems

@@ -7,7 +7,7 @@ newDataSourceMatching: anItemFilter
 	And to close retrieved data source together with originl one (self) it will keep reference to it.
 	And every new filter request will close existing filtered data source"
 	| filteredContentCursor newDataSource |
-	filteredContentCursor := environmentCursor filterItemsBy: anItemFilter.
+	filteredContentCursor := itemCursor filterItemsBy: anItemFilter.
 	
 	newDataSource := self createSameOn: filteredContentCursor.
 	lastFilteredDataSource ifNotNil: [lastFilteredDataSource close].

@@ -7,12 +7,12 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"depth",
-		"environmentCursor",
 		"metadata",
 		"childrenStructure",
 		"parentItem",
 		"itemsView",
-		"lastFilteredDataSource"
+		"lastFilteredDataSource",
+		"itemCursor"
 	],
 	"name" : "ClyDataSource",
 	"type" : "normal"

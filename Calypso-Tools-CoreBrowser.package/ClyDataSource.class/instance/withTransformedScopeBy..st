@@ -2,5 +2,5 @@ queries
 withTransformedScopeBy: aBlockWithScopeArg
 
 	| newCursor |
-	newCursor := environmentCursor queryContentInTransformedScopeBy: aBlockWithScopeArg.
+	newCursor := itemCursor queryContentInTransformedScopeBy: aBlockWithScopeArg.
 	^self createSameOn: newCursor

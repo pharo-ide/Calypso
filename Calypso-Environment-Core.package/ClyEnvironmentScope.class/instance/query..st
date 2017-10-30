@@ -9,4 +9,4 @@ query: anEnvironmentQueryOrCompatible
 		result := query prepareResultOn: environment inScope: self.
 		queryCache at: query put: result].
 	result rebuildIfNeeded.
-	^result newCursor
+	^result

@@ -1,10 +1,10 @@
 navigation
 showStackOfProcesses: processes
 
-	| cursor |
-	cursor := processes isEmpty 
+	| processStack |
+	processStack := processes isEmpty 
 		ifTrue: [ processes query: ClyProcessStack ]
 		ifFalse: [ processes lastSelectedItem asSelection query: ClyProcessStack].
 	self changeNavigationStateBy: [ 
-		stackView dataSource: (ClyCollapsedDataSource on: cursor)		
+		stackView dataSource: (ClyCollapsedDataSource on: processStack)		
 	]

@@ -2,6 +2,6 @@ queries
 findItemsWhere: conditionBlock
 
 	| foundItems |
-	foundItems := environmentCursor findItemsWhere: conditionBlock.
+	foundItems := itemCursor findItemsWhere: conditionBlock.
 
 	^foundItems collect: [:each | self createElementWith: each ]

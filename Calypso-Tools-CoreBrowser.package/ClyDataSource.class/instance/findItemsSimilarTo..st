@@ -5,6 +5,6 @@ findItemsSimilarTo: dataSourceItems
 	relatedItems := dataSourceItems 
 		select: [ :each | self isBasedOnQueryOf: each type ]
 		thenCollect: [ :each | each environmentItem ].
-	foundItems := environmentCursor findItemsSimilarTo: relatedItems.
+	foundItems := itemCursor findItemsSimilarTo: relatedItems.
 
 	^foundItems collect: [:each | 	self createElementWith: each  ]

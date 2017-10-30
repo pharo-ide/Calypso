@@ -2,5 +2,5 @@ queries
 withNewContent: anEnvironmentContentClass
 
 	| newCursor |
-	newCursor := environmentCursor query: anEnvironmentContentClass.
+	newCursor := itemCursor query: anEnvironmentContentClass.
 	^self createSameOn: newCursor

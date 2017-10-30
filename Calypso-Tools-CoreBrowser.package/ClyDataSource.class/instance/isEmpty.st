@@ -1,3 +1,3 @@
 testing
 isEmpty
-	^environmentCursor itemCount = 0
+	^itemCursor itemCount = 0

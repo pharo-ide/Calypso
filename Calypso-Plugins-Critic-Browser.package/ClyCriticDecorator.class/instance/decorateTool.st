@@ -1,12 +1,12 @@
 decoration
 decorateTool
-	| cursor dataSource newScope |	
+	| critiques dataSource newScope |	
 	criticView ifNil: [ self prepare].	
 	newScope := browserTool criticAnalysisScope.
 	(analysisScope isNil or: [ newScope basisObjects ~= analysisScope basisObjects]) ifTrue: [ 
 		analysisScope := newScope.
-		cursor := self browserEnvironment query: ClySortedCritiques inScope: analysisScope.
-		dataSource := ClyCollapsedDataSource on: cursor.
+		critiques := self browserEnvironment query: ClySortedCritiques inScope: analysisScope.
+		dataSource := ClyCollapsedDataSource on: critiques.
 		criticView dataSource: dataSource].
 	
 	self refreshCritiques

@@ -1,9 +1,9 @@
 execution
 buildResult: aQueryResult fromScope: anEnvironmentScope
-	| originalContent filteredItems |
-	originalContent := (anEnvironmentScope query: originalQuery) queryResult.
+	| originalResult filteredItems |
+	originalResult := anEnvironmentScope query: originalQuery.
 	
-	filteredItems := originalContent items 
+	filteredItems := originalResult items 
 		select: [ :each | itemFilter matches: each ] 
 		thenCollect: [ :each | each adoptForNewCalypsoQuery].
 		

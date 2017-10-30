@@ -1,11 +1,11 @@
 navigation
 showMethodsForClasses: selectedClasses
 		
-	| cursor dataSource |
+	| groups dataSource |
 	self selectHierarchyPackageOf: selectedClasses.
 	
-	cursor := selectedClasses query: methodGroupContent inScope: metaLevelScope.	
-	dataSource := ClyCollapsedDataSource on: cursor.
+	groups := selectedClasses query: methodGroupContent inScope: metaLevelScope.	
+	dataSource := ClyCollapsedDataSource on: groups.
 	dataSource childrenStructure: { ClyMethodGroup -> ClySortedMethodGroups }.
 	methodGroupView dataSource: dataSource.
 	

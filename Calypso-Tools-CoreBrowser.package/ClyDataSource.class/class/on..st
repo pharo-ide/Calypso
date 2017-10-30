@@ -1,4 +1,4 @@
 instance creation
-on: anEnvironmentCursor
+on: aQueryResult
 	^self new 
-		environmentCursor: anEnvironmentCursor 
+		itemCursor: aQueryResult openBrowserCursor 

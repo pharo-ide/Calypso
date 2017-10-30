@@ -1,12 +1,11 @@
 private
-showItemsOf: anEnvironmentQuery inScope: anEnvironmentScope
+showItemsOf: aQuery inScope: anEnvironmentScope
 
-	| cursor dataSource |
-	cursor := browser navigationEnvironment query: anEnvironmentQuery inScope: anEnvironmentScope.
+	| result dataSource |
+	result := browser navigationEnvironment query: aQuery inScope: anEnvironmentScope.
 	
-	cursor itemCount < 10
+	dataSource := ClyCollapsedDataSource on: result.
+	dataSource numberOfRows < 10
 		ifTrue: [ itemsView height: 100 ]
 		ifFalse: [ itemsView height: 300; enableFilter ].
-
-	dataSource := ClyCollapsedDataSource on: cursor.
 	itemsView dataSource: dataSource.

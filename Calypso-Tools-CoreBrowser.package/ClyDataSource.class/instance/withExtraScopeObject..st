@@ -2,5 +2,5 @@ queries
 withExtraScopeObject: newBasisObject
 
 	| newCursor |
-	newCursor := environmentCursor queryContentInScopeWith: newBasisObject.
+	newCursor := itemCursor queryContentInScopeWith: newBasisObject.
 	^self createSameOn: newCursor

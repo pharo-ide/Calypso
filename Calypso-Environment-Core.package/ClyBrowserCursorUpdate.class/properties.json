@@ -9,6 +9,6 @@
 		"metadata",
 		"itemCache"
 	],
-	"name" : "ClyQueryCursorUpdate",
+	"name" : "ClyBrowserCursorUpdate",
 	"type" : "normal"
 }

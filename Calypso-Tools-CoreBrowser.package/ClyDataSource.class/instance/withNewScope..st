@@ -2,5 +2,5 @@ queries
 withNewScope: anEnvironmentScopeClass
 
 	| newCursor |
-	newCursor := environmentCursor queryContentInNewScope: anEnvironmentScopeClass.
+	newCursor := itemCursor queryContentInNewScope: anEnvironmentScopeClass.
 	^self createSameOn: newCursor

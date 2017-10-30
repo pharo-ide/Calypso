@@ -6,10 +6,10 @@ elementAt: rowIndex
 	collapsedItems do: [:each | 
 		each position = localIndex ifTrue: [ ^each ].
 		(each isAfter: localIndex) ifTrue: [
-			environmentCursor moveTo: localIndex.
-			^ ClyDataSourceItem of: self value: environmentCursor currentItem ].
+			itemCursor moveTo: localIndex.
+			^ ClyDataSourceItem of: self value: itemCursor currentItem ].
 		localIndex := localIndex + each childrenCount.
 	].
 
-	environmentCursor moveTo: localIndex.
-	^ClyDataSourceItem of: self value: environmentCursor currentItem
+	itemCursor moveTo: localIndex.
+	^ClyDataSourceItem of: self value: itemCursor currentItem
