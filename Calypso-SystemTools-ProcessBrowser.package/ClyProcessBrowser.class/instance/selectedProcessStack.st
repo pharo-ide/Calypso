@@ -1,3 +1,3 @@
 accessing
 selectedProcessStack
-	^stackView dataSource content
+	^stackView dataSource queryResult

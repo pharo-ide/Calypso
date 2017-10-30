@@ -1,4 +1,4 @@
 execution
 buildTestSuite
 	
-	^methodDataSource content buildFailedTestSuite
+	^methodDataSource queryResult buildFailedTestSuite

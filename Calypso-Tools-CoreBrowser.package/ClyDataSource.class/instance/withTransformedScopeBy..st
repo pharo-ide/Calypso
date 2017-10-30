@@ -1,6 +1,6 @@
 queries
 withTransformedScopeBy: aBlockWithScopeArg
 
-	| newCursor |
-	newCursor := itemCursor queryContentInTransformedScopeBy: aBlockWithScopeArg.
-	^self createSameOn: newCursor
+	| newQueryResult |
+	newQueryResult := itemCursor queryContentInTransformedScopeBy: aBlockWithScopeArg.
+	^self createSameOn: newQueryResult

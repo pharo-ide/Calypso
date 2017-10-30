@@ -1,4 +1,4 @@
 queries
-query: anEnvironmentQueryOrContent inNewScope: anEnvironmentScope
+query: aQuery inNewScope: anEnvironmentScope
 
-	^itemCursor query: anEnvironmentQueryOrContent inNewScope: anEnvironmentScope
+	^itemCursor query: aQuery inNewScope: anEnvironmentScope

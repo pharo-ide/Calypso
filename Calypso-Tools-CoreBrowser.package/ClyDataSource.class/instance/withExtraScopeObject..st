@@ -1,6 +1,6 @@
 queries
 withExtraScopeObject: newBasisObject
 
-	| newCursor |
-	newCursor := itemCursor queryContentInScopeWith: newBasisObject.
-	^self createSameOn: newCursor
+	| newQueryResult |
+	newQueryResult := itemCursor queryContentInScopeWith: newBasisObject.
+	^self createSameOn: newQueryResult

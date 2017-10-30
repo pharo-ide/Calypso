@@ -1,6 +1,6 @@
 queries
-createSameOn: newCursor
+createSameOn: newQueryResult
 	| newDataSource |
-	newDataSource := self class for: itemsView on: newCursor.
+	newDataSource := self class for: itemsView on: newQueryResult.
 	newDataSource childrenStructure: childrenStructure.
 	^newDataSource

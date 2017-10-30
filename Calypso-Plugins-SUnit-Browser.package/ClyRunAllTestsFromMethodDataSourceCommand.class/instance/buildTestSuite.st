@@ -1,4 +1,4 @@
 execution
 buildTestSuite
 	
-	^methodDataSource content buildTestSuite
+	^methodDataSource queryResult buildTestSuite

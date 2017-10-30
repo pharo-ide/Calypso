@@ -1,6 +1,6 @@
 queries
 withoutScopeObject: existingBasisObject
 
-	| newCursor |
-	newCursor := itemCursor queryContentInScopeWithout: existingBasisObject.
-	^self createSameOn: newCursor
+	| newQueryResult |
+	newQueryResult := itemCursor queryContentInScopeWithout: existingBasisObject.
+	^self createSameOn: newQueryResult
