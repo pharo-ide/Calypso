@@ -6,7 +6,7 @@ testNotifyingItemObserver
 	cursor := result openBrowserCursor.
 	
 	observer := ClyItemsObserverExample new.
-	cursor itemsObserver: observer.
+	cursor itemObserver: observer.
 	
 	result itemsChanged.
 	self assert: observer wasNotified

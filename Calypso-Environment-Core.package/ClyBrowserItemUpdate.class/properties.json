@@ -1,16 +1,14 @@
 {
-	"commentStamp" : "DenisKudryashov 7/10/2017 16:41",
+	"commentStamp" : "DenisKudryashov 7/10/2017 16:39",
 	"super" : "Object",
 	"category" : "Calypso-Environment-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"startPosition",
-		"items",
-		"sizeLimit",
-		"totalContentSize"
+		"metadata",
+		"itemCache"
 	],
-	"name" : "ClyBrowserCursorCache",
+	"name" : "ClyBrowserItemUpdate",
 	"type" : "normal"
 }

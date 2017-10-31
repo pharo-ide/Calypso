@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "DenisKudryashov 7/10/2017 16:39",
+	"commentStamp" : "DenisKudryashov 2/2/2017 13:27",
 	"super" : "Object",
 	"category" : "Calypso-Environment-Core",
 	"classinstvars" : [ ],
@@ -7,8 +7,11 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"metadata",
-		"itemCache"
+		"cache",
+		"position",
+		"queryResult",
+		"itemObserver"
 	],
-	"name" : "ClyBrowserCursorUpdate",
+	"name" : "ClyBrowserItemCursor",
 	"type" : "normal"
 }

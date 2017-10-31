@@ -3,5 +3,5 @@ queryResult: aQueryResult
 	itemCursor ifNotNil: [ itemCursor close ].
 	
 	itemCursor := aQueryResult openBrowserCursor.
-	itemCursor itemsObserver: self.
+	itemCursor itemObserver: self.
 	metadata := itemCursor metadata

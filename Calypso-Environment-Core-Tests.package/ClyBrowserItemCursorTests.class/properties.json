@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyBrowserQueryCursorTests",
+	"name" : "ClyBrowserItemCursorTests",
 	"type" : "normal"
 }

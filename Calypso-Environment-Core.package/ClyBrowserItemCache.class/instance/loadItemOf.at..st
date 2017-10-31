@@ -1,6 +1,6 @@
 controlling
-loadItemOf: anEnvironmentContent at: position
+loadItemOf: aBrowserQueryResult at: position
 	(self includesItemAt: position) ifTrue: [ ^ self ].
 	
 	startPosition := position.
-	self fillItemsFrom: anEnvironmentContent
+	self fillItemsFrom: aBrowserQueryResult
