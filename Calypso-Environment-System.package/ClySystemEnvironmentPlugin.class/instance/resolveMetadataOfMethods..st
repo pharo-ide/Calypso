@@ -1,2 +1,2 @@
 browser items preparation
-resolveMetadataOfMethods: anEnvironmentContent
+resolveMetadataOfMethods: aQueryResult

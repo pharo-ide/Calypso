@@ -1,5 +1,3 @@
-description
+accessing
 metadata
-	^metadata ifNil: [ 
-		metadata := ClyQueryMetadata 
-			forContentBuiltBy: buildingQuery from: environmentScope ]
+	^metadata ifNil: [ self collectMetadata. metadata ]

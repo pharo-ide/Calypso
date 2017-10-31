@@ -1,5 +1,5 @@
 items resolving
-resolveMetadataOfMethods: anEnvironmentContent
+resolveMetadataOfMethods: aQueryResult
 	| property |
 	property := 	ClyTestResultProperty 
 			count: 0
@@ -7,7 +7,7 @@ resolveMetadataOfMethods: anEnvironmentContent
 			failures: 0
 			errors: 0.
 
-	anEnvironmentContent items do: [ :methodItem | | eachMethod |
+	aQueryResult items do: [ :methodItem | | eachMethod |
 		eachMethod := methodItem actualObject.
 		eachMethod isTestMethod ifTrue: [ 
 			property 
@@ -16,4 +16,4 @@ resolveMetadataOfMethods: anEnvironmentContent
 				failuresCount: property failuresCount + eachMethod isFailedTest asBit;
 				errorsCount: property errorsCount + eachMethod isErrorTest asBit]].
 	
-	property allCount > 0 ifTrue: [ anEnvironmentContent addMetaProperty: property ]
+	property allCount > 0 ifTrue: [ aQueryResult addMetaProperty: property ]

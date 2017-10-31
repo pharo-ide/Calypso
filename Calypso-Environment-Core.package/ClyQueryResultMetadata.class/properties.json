@@ -12,6 +12,6 @@
 		"queryScopeSize",
 		"properties"
 	],
-	"name" : "ClyQueryMetadata",
+	"name" : "ClyQueryResultMetadata",
 	"type" : "normal"
 }

@@ -1,4 +1,0 @@
-operations
-resolvePropertiesOf: anEnvironmentContent by: anEnvironmentPlugin
-
-	buildingQuery resolveMetadataOf: anEnvironmentContent by: anEnvironmentPlugin
