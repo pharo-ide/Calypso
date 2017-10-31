@@ -6,10 +6,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"metadata",
+		"queryResult",
 		"cache",
 		"position",
-		"queryResult",
+		"metadata",
 		"itemObserver"
 	],
 	"name" : "ClyBrowserItemCursor",
