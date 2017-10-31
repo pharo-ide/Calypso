@@ -1,7 +1,7 @@
 navigation
 switchToPackages
 	| packages dataSource |
-	packages := navigationEnvironment querySystemFor: ClySortedPackages.	
+	packages := navigationEnvironment querySystemFor: ClyAllPackages sorted.	
 	dataSource := ClyCollapsedDataSource on: packages.
 	dataSource childrenStructure: {RPackage -> ClySortedClassGroups }.	
 	
