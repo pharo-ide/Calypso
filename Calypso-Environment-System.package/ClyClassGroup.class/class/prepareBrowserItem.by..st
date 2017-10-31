@@ -1,4 +1,5 @@
 items resolving
 prepareBrowserItem: aBrowserItem by: anEnvironmentPlugin
-
-	^anEnvironmentPlugin resolvePropertiesOfClassGroup: aBrowserItem
+	^ anEnvironmentPlugin
+		prepareBrowserItem: aBrowserItem
+		ofClassGroup: aBrowserItem actualObject

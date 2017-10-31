@@ -1,2 +1,2 @@
-items resolving
+browser items preparation
 resolveMetadataOfProjects: anEnvironmentContent

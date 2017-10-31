@@ -1,3 +1,5 @@
 *Calypso-Plugins-Critic-Environment
 prepareBrowserItem: aBrowserItem by: anEnvironmentPlugin
-	anEnvironmentPlugin resolvePropertiesOfCritique: aBrowserItem
+	anEnvironmentPlugin
+		prepareBrowserItem: aBrowserItem
+		ofCritique: aBrowserItem actualObject
