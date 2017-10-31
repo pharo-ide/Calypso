@@ -1,9 +1,10 @@
 commands support
-allowSilentlyRemoveMethods: methods whichHaveSenders: sendersCursor
+allowSilentlyRemoveMethods: methods whichHaveSenders: senders
 
-	| singleSender |
-	sendersCursor itemCount = 0 ifTrue: [ ^true].
-	methods size = 1 & (sendersCursor itemCount = 1) ifFalse: [^false].
+	| singleSender sendersCount |
+	sendersCount := senders size.
+	sendersCount = 0 ifTrue: [ ^true].
+	methods size = 1 & (sendersCount = 1) ifFalse: [^false].
 	 
-	singleSender := sendersCursor currentItem actualObject.
+	singleSender := senders itemAt: 1.
 	^singleSender == methods first

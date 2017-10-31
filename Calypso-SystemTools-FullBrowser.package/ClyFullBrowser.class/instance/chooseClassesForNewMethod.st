@@ -1,5 +1,5 @@
 accessing
 chooseClassesForNewMethod
 
-	^self classSelection actualObjects collect: [ :each | 
+	^self classSelection rawItems collect: [ :each | 
 		metaLevelScope resolveClass: each]

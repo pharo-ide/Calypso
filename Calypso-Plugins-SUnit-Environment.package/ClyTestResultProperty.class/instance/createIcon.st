@@ -1,11 +1,11 @@
 presentation
-resultsIcon
+createIcon
 
-	allCount = successesCount
+	allCount = successCount
 		ifTrue: [ ^Smalltalk ui icons iconNamed: #testGreenIcon ].
-	errorsCount = 0 & (failuresCount > 0)
+	errorCount = 0 & (failureCount > 0)
 		ifTrue: [ ^Smalltalk ui icons iconNamed: #testYellowIcon ].
-	errorsCount > 0
+	errorCount > 0
 		ifTrue: [ ^Smalltalk ui icons iconNamed: #testRedIcon ].
 		
 	^Smalltalk ui icons iconNamed: #testNotRunIcon.

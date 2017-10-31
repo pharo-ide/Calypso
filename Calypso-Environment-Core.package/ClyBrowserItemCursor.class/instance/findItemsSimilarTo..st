@@ -1,7 +1,7 @@
 queries
-findItemsSimilarTo: sampleEnvironmentItems
+findItemsSimilarTo: sampleBrowserItems
 
 	^cache 
-		findItemsWith: (sampleEnvironmentItems collect: #actualObject)
+		findItemsWith: (sampleBrowserItems collect: #actualObject)
 		forAbsentDo: [ 
-			^queryResult findItemsSimilarTo: sampleEnvironmentItems]
+			^queryResult findItemsSimilarTo: sampleBrowserItems]

@@ -4,4 +4,4 @@ buildResultIcon
 	| testResult |
 	testResult := testItems first getProperty: ClyTestResultProperty.
 	
-	^testResult resultsIcon
+	^testResult createIcon

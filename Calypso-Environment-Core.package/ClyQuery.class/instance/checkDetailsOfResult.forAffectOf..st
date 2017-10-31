@@ -1,5 +1,5 @@
 system changes
-checkDetailsOfResult: items forAffectOf: aSystemAnnouncement
+checkDetailsOfResult: aQueryResult forAffectOf: aSystemAnnouncement
 	"By default queries should be able detect affect on result 
 	by using only given scope and announcement without check of actual result items. 
 	This logic is defined in the method:
@@ -9,6 +9,6 @@ checkDetailsOfResult: items forAffectOf: aSystemAnnouncement
 	In that cases they return true from the method 
 		requiresResultCheckForAffectOf: aSystemAnnoucement inScope: anEnvironmentScope
 	And they implement this described method with required logic to check every result item.
-	By default I return false because detailes of the result are not defined at my level.
+	By default I return false because details of the result are not defined at my level.
 	And therefore they are not affected by any event"
 	^false

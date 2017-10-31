@@ -7,4 +7,4 @@ isAffectedBy: aSystemAnnouncement
 	(buildingQuery requiresDetailedCheckForAffectOf: aSystemAnnouncement inScope: environmentScope)
 		ifFalse: [ ^false ].
 		
-	^buildingQuery checkDetailsOfResult: items forAffectOf: aSystemAnnouncement
+	^buildingQuery checkDetailsOfResult: self forAffectOf: aSystemAnnouncement

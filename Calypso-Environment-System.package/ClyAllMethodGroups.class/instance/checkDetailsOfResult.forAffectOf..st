@@ -1,5 +1,7 @@
 system changes
-checkDetailsOfResult: items forAffectOf:  aSystemAnnouncement
+checkDetailsOfResult: aQueryResult forAffectOf:  aSystemAnnouncement
 	
-	^items anySatisfy: [ :each | 
-		aSystemAnnouncement affectsMethodGroup: each actualObject ]
+	aQueryResult rawItemsDo: [ :each | 
+		(aSystemAnnouncement affectsMethodGroup: each) ifTrue: [^true]].
+	
+	^false

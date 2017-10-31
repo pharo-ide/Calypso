@@ -1,8 +1,8 @@
 testing
-matchesByScript: anEnvironmentItem
+matchesByScript: aBrowserItem
 
 	badScript ifTrue: [ ^true ].
 	scriptBlock ifNil: [ self createBlockFromPattern].
 	badScript ifTrue: [ ^true ].	
 	
-	^[(scriptBlock value: anEnvironmentItem actualObject) ~~ false] ifError: [ false ]
+	^[(scriptBlock value: aBrowserItem actualObject) ~~ false] ifError: [ false ]

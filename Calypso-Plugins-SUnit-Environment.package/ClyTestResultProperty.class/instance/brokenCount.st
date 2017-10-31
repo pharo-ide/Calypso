@@ -1,3 +1,3 @@
 accessing
 brokenCount
-	^failuresCount + errorsCount 
+	^failureCount + errorCount 

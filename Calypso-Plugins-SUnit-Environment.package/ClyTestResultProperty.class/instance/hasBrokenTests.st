@@ -1,3 +1,3 @@
 testing
 hasBrokenTests
-	^failuresCount > 0 | (errorsCount > 0)
+	^failureCount > 0 | (errorCount > 0)

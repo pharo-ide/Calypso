@@ -10,7 +10,8 @@
 		"queryScope",
 		"queryScopeClass",
 		"queryScopeSize",
-		"properties"
+		"properties",
+		"itemCount"
 	],
 	"name" : "ClyQueryResultMetadata",
 	"type" : "normal"

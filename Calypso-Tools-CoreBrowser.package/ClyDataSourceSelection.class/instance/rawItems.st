@@ -1,3 +1,3 @@
 accessing
-actualObjects
+rawItems
 	^items collect: [:each | each actualObject]

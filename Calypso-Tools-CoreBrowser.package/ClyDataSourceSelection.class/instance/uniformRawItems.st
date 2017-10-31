@@ -1,5 +1,5 @@
 accessing
-uniformActualObjects
+uniformRawItems
 
 	| lastItem |
 	self isEmpty ifTrue: [ ^#() ].

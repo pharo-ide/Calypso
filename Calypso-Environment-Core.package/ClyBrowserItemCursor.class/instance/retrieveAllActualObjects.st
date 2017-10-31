@@ -1,4 +1,4 @@
 queries
 retrieveAllActualObjects
 
-	^queryResult actualObjects
+	^queryResult rawItems

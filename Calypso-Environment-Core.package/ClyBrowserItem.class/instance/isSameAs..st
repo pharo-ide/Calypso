@@ -1,6 +1,6 @@
 testing
-isSameAs: anotherEnvironmentItem
+isSameAs: anotherBrowserItem
 
-	type = anotherEnvironmentItem type ifFalse: [ ^false ].
+	type = anotherBrowserItem type ifFalse: [ ^false ].
 	
-	^type checkCalypsoItem: actualObject isSameAs: anotherEnvironmentItem actualObject
+	^type checkCalypsoItem: actualObject isSameAs: anotherBrowserItem actualObject

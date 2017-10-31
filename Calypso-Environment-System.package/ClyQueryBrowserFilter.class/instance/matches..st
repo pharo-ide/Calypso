@@ -1,6 +1,6 @@
 testing
-matches: anEnvironmentItem
+matches: aBrowserItem
 	(pattern value beginsWith: '[') ifTrue: [ 
-			^self matchesByScript: anEnvironmentItem].
+			^self matchesByScript: aBrowserItem].
 
-	^anEnvironmentItem actualObject matchesQueryBrowserFilter: self
+	^aBrowserItem actualObject matchesQueryBrowserFilter: self

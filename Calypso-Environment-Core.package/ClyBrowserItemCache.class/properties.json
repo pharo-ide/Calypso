@@ -8,8 +8,7 @@
 	"instvars" : [
 		"startPosition",
 		"items",
-		"sizeLimit",
-		"totalContentSize"
+		"sizeLimit"
 	],
 	"name" : "ClyBrowserItemCache",
 	"type" : "normal"

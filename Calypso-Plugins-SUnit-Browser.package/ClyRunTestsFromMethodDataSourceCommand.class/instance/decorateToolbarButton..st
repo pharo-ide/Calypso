@@ -3,4 +3,4 @@ decorateToolbarButton: aBrowserButton
 
 	| testResult |
 	testResult := methodDataSource getMetaProperty: ClyTestResultProperty.
-	aBrowserButton addMorphFront: testResult resultsIcon asMorph
+	aBrowserButton addMorphFront: testResult createIcon asMorph

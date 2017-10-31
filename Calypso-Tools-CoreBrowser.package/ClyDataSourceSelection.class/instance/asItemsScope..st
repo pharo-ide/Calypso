@@ -1,6 +1,6 @@
 converting
 asItemsScope: anEnvironmentScopeClass
 	| actualItems |
-	actualItems := self uniformActualObjects.
+	actualItems := self uniformRawItems.
 	
 	^anEnvironmentScopeClass of: actualItems

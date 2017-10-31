@@ -1,6 +1,6 @@
 instance creation
-filledBy: anEnvironmentContent startingAt: startPosition size: cacheSize
+filledBy: aBrowserQueryResult startingAt: startPosition size: cacheSize
 
-	^(self initialFor: anEnvironmentContent size: cacheSize)
+	^(self withSize: cacheSize)
 		startPosition: startPosition;
-		fillItemsFrom: anEnvironmentContent
+		fillItemsFrom: aBrowserQueryResult

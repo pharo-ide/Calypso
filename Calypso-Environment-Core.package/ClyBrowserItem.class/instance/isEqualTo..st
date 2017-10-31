@@ -1,6 +1,6 @@
 testing
-isEqualTo: anotherEnvironmentItem
+isEqualTo: anotherBrowserItem
 
-	type = anotherEnvironmentItem type ifFalse: [ ^false ].
+	type = anotherBrowserItem type ifFalse: [ ^false ].
 	
-	^type checkCalypsoItem: actualObject isEqualTo: anotherEnvironmentItem actualObject
+	^type checkCalypsoItem: actualObject isEqualTo: anotherBrowserItem actualObject

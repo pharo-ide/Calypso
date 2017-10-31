@@ -1,4 +1,4 @@
 accessing
-actualObjects
+rawItems
 
 	^items collect: #actualObject

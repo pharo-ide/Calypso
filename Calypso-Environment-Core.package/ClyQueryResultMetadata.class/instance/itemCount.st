@@ -1,3 +1,3 @@
 accessing
 itemCount
-	^metadata itemCount
+	^ itemCount

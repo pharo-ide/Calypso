@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"allCount",
-		"errorsCount",
-		"failuresCount",
-		"successesCount"
+		"errorCount",
+		"failureCount",
+		"successCount"
 	],
 	"name" : "ClyTestResultProperty",
 	"type" : "normal"

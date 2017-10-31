@@ -3,16 +3,13 @@ prepareOwnBrowserItem: myItem
 	| property |
 	super prepareOwnBrowserItem: myItem.
 
-	property := 	ClyTestResultProperty count: 0 successes: 0 failures: 0 errors: 0.
+	property := 	ClyTestResultProperty new.
 
 	classes do: [:testCase | | failures errors |
 		(testCase isTestCase and: [testCase isAbstract not]) ifTrue: [ 
 			failures := (testCase history at: #failures) size.
 			errors := (testCase history at: #errors) size.
-			property 
-				failuresCount: property failuresCount + failures;
-				errorsCount: property errorsCount + errors;
-				allCount: property allCount + failures + errors]
+			property accumulateFailures: failures andErrors: errors]
 	].
 	
 	myItem addProperty: property

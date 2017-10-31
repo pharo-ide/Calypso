@@ -7,4 +7,4 @@ requestMultipleObjects: dialogTitle from: anEnvironmentQuery inScope: anEnvironm
 		withTitle: dialogTitle
 		thenDo: [ 
 			itemsView selection isEmpty ifTrue: [ ^self findObjectsSameAsFilter ].
-			^itemsView selection actualObjects]
+			^itemsView selection rawItems]

@@ -1,3 +1,3 @@
 helpers
-actualSelectionFrom: environmentItemCollection
-	^environmentItemCollection collect: [ :each | each actualObject ]
+actualSelectionFrom: browserItemCollection
+	^browserItemCollection collect: [ :each | each actualObject ]
