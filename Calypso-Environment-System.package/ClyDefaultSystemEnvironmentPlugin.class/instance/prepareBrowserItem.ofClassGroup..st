@@ -1,4 +1,4 @@
 items resolving
 prepareBrowserItem: anItem ofClassGroup: aClassGroup
 	
-	aClassGroup resolvePropertiesOf: anItem
+	aClassGroup prepareOwnBrowserItem: anItem

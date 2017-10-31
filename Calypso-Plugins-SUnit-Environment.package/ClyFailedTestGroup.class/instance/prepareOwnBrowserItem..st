@@ -1,7 +1,7 @@
 items resolving
-resolvePropertiesOf: myEnvironmentItem
+prepareOwnBrowserItem: myItem
 	| property |
-	super resolvePropertiesOf: myEnvironmentItem.
+	super prepareOwnBrowserItem: myItem.
 
 	property := 	ClyTestResultProperty count: 0 successes: 0 failures: 0 errors: 0.
 
@@ -15,4 +15,4 @@ resolvePropertiesOf: myEnvironmentItem
 				allCount: property allCount + failures + errors]
 	].
 	
-	myEnvironmentItem addProperty: property
+	myItem addProperty: property

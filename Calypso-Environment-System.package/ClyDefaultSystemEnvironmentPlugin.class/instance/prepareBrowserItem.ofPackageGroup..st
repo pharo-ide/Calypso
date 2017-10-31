@@ -1,4 +1,4 @@
 items resolving
 prepareBrowserItem: anItem ofPackageGroup: aPackageGroup
 	
-	aPackageGroup resolvePropertiesOf: anItem
+	aPackageGroup prepareOwnBrowserItem: anItem

@@ -1,5 +1,5 @@
 items resolving
-resolveTraitsPropertyOf: myEnvironmentItem
+collectTraitInformationInto: myEnvironmentItem
 	
 	| traitsGroup traitsGroupItem |
 	self isRootsUseTraits ifFalse: [^self].
