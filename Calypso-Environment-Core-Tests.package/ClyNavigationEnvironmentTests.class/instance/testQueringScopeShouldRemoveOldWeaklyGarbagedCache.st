@@ -2,12 +2,12 @@ tests
 testQueringScopeShouldRemoveOldWeaklyGarbagedCache
 
 	| scope result |
-	scope := environment selectScope: ClyLocalClassScope of: { self class }.
-	scope query: ClySortedClasses.
+	scope := environment selectScope: ClyEnvironmentScope of: { self class }.
+	scope query: ClySimpleQueryExampleReturningScopeBasis new.
 	Smalltalk garbageCollectMost; garbageCollectMost.
-	result := scope cachedResultOf: ClySortedClasses asEnvironmentQuery.
+	result := scope cachedResultOf: ClySimpleQueryExampleReturningScopeBasis new.
 	self assert: result equals: nil.
 	
-	result := scope query: ClyHierarchicallySortedClasses.
+	result := scope query: ClySimpleQueryExampleReturningScopeBasis2 new.
 	
-	self deny: (scope queryCache includesKey: ClySortedClasses asEnvironmentQuery)
+	self deny: (scope queryCache includesKey: ClySimpleQueryExampleReturningScopeBasis new)

@@ -2,10 +2,10 @@ tests
 testScopeQueryCacheShouldBeWeak
 
 	| cache scope |
-	scope := environment selectScope: ClyLocalClassScope of: { self class }.
-	scope query: ClySortedMethods.
+	scope := environment selectScope: ClyEnvironmentScope of: { self class }.
+	scope query: ClySimpleQueryExampleReturningScopeBasis new.
 	
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
-	cache := scope cachedResultOf: ClySortedMethods.
+	cache := scope cachedResultOf: ClySimpleQueryExampleReturningScopeBasis new.
 	self assert: cache equals: nil

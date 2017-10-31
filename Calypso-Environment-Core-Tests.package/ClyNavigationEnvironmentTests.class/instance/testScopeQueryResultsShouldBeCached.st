@@ -1,9 +1,9 @@
 tests
 testScopeQueryResultsShouldBeCached
 
-	| content content2 scope |
-	scope := environment selectScope: ClyLocalClassScope of: { self class }.
-	content := (scope query: ClySortedMethods) queryResult.
-	content2 := (scope query: ClySortedMethods) queryResult.
+	| scope result result2 |
+	scope := environment selectScope: ClyEnvironmentScope of: { self class }.
+	result := scope query: ClySimpleQueryExampleReturningScopeBasis new.
+	result2 := scope query: ClySimpleQueryExampleReturningScopeBasis new.
 	
-	self assert: content == content2
+	self assert: result == result2

@@ -2,7 +2,7 @@ tests
 testProcessingScopeCacheWhenSomeWasCollectedAsGarbage
 
 	| evaluated |
-	environment selectScope: ClyLocalClassScope of: { self class }.
+	environment selectScope: ClyEnvironmentScope of: { self class }.
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
 	evaluated := false.

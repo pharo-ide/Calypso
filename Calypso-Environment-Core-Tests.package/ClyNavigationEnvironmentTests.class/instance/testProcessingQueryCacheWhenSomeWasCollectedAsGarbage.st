@@ -2,8 +2,8 @@ tests
 testProcessingQueryCacheWhenSomeWasCollectedAsGarbage
 
 	| evaluated scope |
-	scope := environment selectScope: ClyLocalClassScope of: { self class }.
-	scope query: ClySortedMethods.
+	scope := environment selectScope: ClyEnvironmentScope of: { self class }.
+	scope query: ClySimpleQueryExampleReturningScopeBasis new.
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
 	evaluated := false.
