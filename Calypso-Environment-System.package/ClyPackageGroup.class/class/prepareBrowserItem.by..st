@@ -1,0 +1,4 @@
+item resolving
+prepareBrowserItem: aBrowserItem by: anEnvironmentPlugin
+
+	^anEnvironmentPlugin resolvePropertiesOfPackageGroup: aBrowserItem

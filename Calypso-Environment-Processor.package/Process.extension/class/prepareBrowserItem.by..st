@@ -1,0 +1,3 @@
+*Calypso-Environment-Processor
+prepareBrowserItem: aBrowserItem by: anEnvironmentPlugin
+	anEnvironmentPlugin resolvePropertiesOfProcess: aBrowserItem

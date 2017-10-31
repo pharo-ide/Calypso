@@ -12,5 +12,5 @@ findItemsWith: actualObjects
 			ifNone: nil].
 	
 	result select: #notNil thenDo: [ :each | 
-		environment resolveItem: each ].
+		each prepareIn: environment ].
 	^result

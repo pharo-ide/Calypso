@@ -1,3 +1,3 @@
-accessing
-addProperty: anEnvironmentItemProperty
-	properties add: anEnvironmentItemProperty
+preparation
+addProperty: aBrowserItemProperty
+	properties add: aBrowserItemProperty

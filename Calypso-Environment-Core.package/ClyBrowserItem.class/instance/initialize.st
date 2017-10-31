@@ -4,4 +4,4 @@ initialize
 	
 	depth := 0.
 	properties := OrderedCollection new.
-	isResolved := false
+	isPrepared := false
