@@ -4,7 +4,7 @@ fillWith: filteredChildren startingAt: rootClass depth: rootDepth
 	| item sortedChildren currentDepth |
 	currentDepth := rootDepth.
 	(filteredChildren includes: rootClass) ifTrue: [  
-		item := rootClass formatForSystemQuery.
+		item := rootClass asCalypsoBrowserItem.
 		item depth: currentDepth.
 		items add: item.
 		currentDepth := currentDepth + 1].

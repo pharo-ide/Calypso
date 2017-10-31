@@ -1,3 +1,3 @@
-as yet unclassified
+subscription
 subscribe: aBrowserQueryCursor
 	actualResult subscribe: aBrowserQueryCursor

@@ -1,5 +1,5 @@
 formatting items
-formatForSystemQuery: aMethod
+convertToCalypsoBrowserItem: aMethod
 
 	| item |
 	item := ClyBrowserItem named: aMethod selector with: aMethod.

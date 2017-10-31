@@ -1,5 +1,5 @@
 *Calypso-Environment-System
-formatForSystemQuery: aClass
+convertToCalypsoBrowserItem: aClass
 
 	| item |
 	item := ClyBrowserItem named: aClass name with: aClass.

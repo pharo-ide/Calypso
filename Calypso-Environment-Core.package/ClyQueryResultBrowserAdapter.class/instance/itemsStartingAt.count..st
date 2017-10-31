@@ -1,5 +1,4 @@
 queries
 itemsStartingAt: startIndex count: size
 
-	^actualResult itemsStartingAt: startIndex count: size.
-	
+	^self wrapRawItems: (actualResult itemsStartingAt: startIndex count: size)

@@ -4,7 +4,7 @@ buildItemsPerClassFrom: systemObjects
 	itemsPerClass := IdentityDictionary new.
 
 	systemObjects do: [ :each |
-		item := each formatForSystemQuery.
+		item := each asCalypsoBrowserItem.
 		localItems := itemsPerClass
 			at: item systemDefinitionClass ifAbsentPut: [self containerForItemsSortedByName ].
 		localItems add: item].
