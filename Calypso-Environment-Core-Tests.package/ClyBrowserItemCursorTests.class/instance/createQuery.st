@@ -1,4 +1,0 @@
-running
-createQuery
-
-	^ClySimpleQueryExampleReturningScopeBasis requiredResult: ClyBrowserQueryResultExample new

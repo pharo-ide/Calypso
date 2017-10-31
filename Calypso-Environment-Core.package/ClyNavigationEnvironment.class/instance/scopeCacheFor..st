@@ -1,3 +1,3 @@
 accessing
-scopeCacheFor: scopeAndType
-	^scopeCache at: scopeAndType
+scopeCacheFor: anEnvironmentScopeClass
+	^scopeCache at: anEnvironmentScopeClass
