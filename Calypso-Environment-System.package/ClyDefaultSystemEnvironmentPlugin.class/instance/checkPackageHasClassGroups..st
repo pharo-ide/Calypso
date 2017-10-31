@@ -1,4 +1,4 @@
-items resolving
+browser items
 checkPackageHasClassGroups: aPackage
 	| providers items |
 		

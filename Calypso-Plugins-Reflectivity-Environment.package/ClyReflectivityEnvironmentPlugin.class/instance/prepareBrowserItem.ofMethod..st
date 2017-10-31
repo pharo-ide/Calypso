@@ -1,4 +1,4 @@
-method groups
+browser items
 prepareBrowserItem: anItem ofMethod: aMethod
 
 	aMethod hasBreakpoint ifTrue: [ anItem markWith: ClyMethodWithBreakpointTag ].

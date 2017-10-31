@@ -1,5 +1,5 @@
-items resolving
-resolveMetadataOfMethods: aQueryResult
+query metadata
+collectMetadataOfMethods: aQueryResult
 	| property |
 	property := 	ClyTestResultProperty new.
 		

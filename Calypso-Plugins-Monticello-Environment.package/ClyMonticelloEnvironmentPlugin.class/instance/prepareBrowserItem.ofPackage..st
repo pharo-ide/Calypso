@@ -1,4 +1,4 @@
-items resolving
+browser items
 prepareBrowserItem: anItem ofPackage: aPackage
 
 	| workingCopy versionName isModified |

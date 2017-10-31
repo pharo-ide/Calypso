@@ -1,4 +1,4 @@
-items resolving
+browser items
 prepareBrowserItem: anItem ofPackage: aPackage
 	
 	aPackage classes ifNotEmpty: [ anItem markWithChildrenOf: Behavior ].

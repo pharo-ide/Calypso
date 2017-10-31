@@ -1,4 +1,4 @@
-items resolving
+browser items
 prepareBrowserItem: anItem ofPackage: aPackage
 	"this can be slow and proper implementation will require recomputing for every test run
 	which slow down running of big test suite. 

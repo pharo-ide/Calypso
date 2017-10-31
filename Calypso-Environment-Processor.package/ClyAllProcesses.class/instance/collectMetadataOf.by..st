@@ -1,3 +1,3 @@
 execution
 collectMetadataOf: aQueryResult by: anEnvironmentPlugin
-	anEnvironmentPlugin resolveMetadataOfProcesses: aQueryResult
+	anEnvironmentPlugin collectMetadataOfProcesses: aQueryResult

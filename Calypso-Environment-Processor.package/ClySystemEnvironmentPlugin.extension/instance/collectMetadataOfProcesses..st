@@ -1,0 +1,2 @@
+*Calypso-Environment-Processor
+collectMetadataOfProcesses: anEnvironmentContent

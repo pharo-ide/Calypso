@@ -1,2 +1,2 @@
-browser items preparation
+browser items 
 prepareBrowserItem: anItem ofClassGroup: aClassGroup

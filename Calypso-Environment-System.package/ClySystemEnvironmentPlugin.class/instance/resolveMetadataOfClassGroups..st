@@ -1,2 +1,0 @@
-browser items preparation
-resolveMetadataOfClassGroups: aQueryResult

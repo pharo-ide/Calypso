@@ -1,4 +1,4 @@
-browser items preparation
+browser items 
 prepareBrowserItem: anEnvironmentItem ofMethod: aMethod
 
 	

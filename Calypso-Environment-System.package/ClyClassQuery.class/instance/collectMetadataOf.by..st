@@ -1,3 +1,3 @@
 execution
 collectMetadataOf: aQueryResult by: anEnvironmentPlugin
-	anEnvironmentPlugin resolveMetadataOfClasses: aQueryResult 
+	anEnvironmentPlugin collectMetadataOfClasses: aQueryResult 
