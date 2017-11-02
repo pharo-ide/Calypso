@@ -5,4 +5,4 @@ shouldBeAppliedFor: aSelectionOrItem
 	"if no scope specified strategy will be applied to any selection independently from it kind"	
 		^true ].
 	
-	^aSelectionOrItem = targetItemType
+	^aSelectionOrItem isBasedOnItemType: targetItemType

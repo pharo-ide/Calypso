@@ -2,4 +2,4 @@ selection strategy
 selectionStrategy
 	<classAnnotation>
 	
-	^ClyContextSelectionStrategy for: ClyFullBrowser selectionType: ClyMethodScope
+	^ClyContextSelectionStrategy for: ClyFullBrowser selectionType: ClyMethod
