@@ -10,10 +10,12 @@ baseline: spec
 				spec repository: 'github://dionisiydk/SystemCommands:calypsoEnvironmentRefactoring' ].			
 		spec 
 			package: #'Calypso-Environment-Core';
+			package: #'Calypso-Environment-Core-Tests' with: [
+				spec requires: #(#'Calypso-Environment-Core' )];
 			package: #'Calypso-Environment-System' with: [
 				spec requires: #(#'Calypso-Environment-Core' ). ];
 			package: #'Calypso-Environment-System-Tests' with: [
-				spec requires: #(#'Calypso-Environment-System' #'Calypso-Environment-System-Tests-PWithSingleClass' #'Calypso-Environment-System-Tests-PExtendedByP1' #'Calypso-Environment-System-Tests-P1WithHierarchy' #'Calypso-Environment-System-Tests-P2WithSubclassFromP1' #'Calypso-Environment-System-Tests-P3WithSubclassFromP2' #'Calypso-Environment-System-Tests-PExtendedByP5' #'Calypso-Environment-System-Tests-P5WithTags' #'Calypso-Environment-System-Tests-PWithClassAndTraits' #'Calypso-Environment-System-Tests-PExtendingTrait' ). ];
+				spec requires: #(#'Calypso-Environment-Core-Tests' #'Calypso-Environment-System' #'Calypso-Environment-System-Tests-PWithSingleClass' #'Calypso-Environment-System-Tests-PExtendedByP1' #'Calypso-Environment-System-Tests-P1WithHierarchy' #'Calypso-Environment-System-Tests-P2WithSubclassFromP1' #'Calypso-Environment-System-Tests-P3WithSubclassFromP2' #'Calypso-Environment-System-Tests-PExtendedByP5' #'Calypso-Environment-System-Tests-P5WithTags' #'Calypso-Environment-System-Tests-PWithClassAndTraits' #'Calypso-Environment-System-Tests-PExtendingTrait' ). ];
 			package: #'Calypso-Environment-System-Tests-P1WithHierarchy' with: [
 				spec requires: #(#'Calypso-Environment-System-Tests-PExtendedByP1' ). ];
 			package: #'Calypso-Environment-System-Tests-P2WithSubclassFromP1' with: [
@@ -115,5 +117,5 @@ baseline: spec
 			group: 'Environment' with: #(#'Calypso-Environment-System' #'Calypso-Environment-Core' #'Calypso-Environment-Processor' );
 			group: 'FullBrowser' with: #('Browser' #'Calypso-Plugins-Monticello-Browser' #'Calypso-Plugins-SUnit-Browser' #'Calypso-Plugins-Nautilus-Browser' #'Calypso-SystemTools-OldToolCompatibillity' #'Calypso-Plugins-Critic-Browser' 'Calypso-Plugins-InheritanceAnalyzer-Browser' #'Calypso-Plugins-FileOut-Browser' #'Calypso-Plugins-MethodDiffTool' #'Calypso-Plugins-Deprecation-Browser' #'Calypso-Plugins-Reflectivity-Browser' #'Calypso-Plugins-Undeclared-Browser');
 			group: 'FullEnvironment' with: #(#'Calypso-Plugins-Monticello-Environment' #'Calypso-Plugins-SUnit-Environment' 'Environment' 'Calypso-Plugins-InheritanceAnalyzer-Environment' #'Calypso-Plugins-FileOut-Environment' #'Calypso-Plugins-Deprecation-Environment' #'Calypso-Plugins-Reflectivity-Environment' #'Calypso-Plugins-Critic-Environment' #'Calypso-Plugins-Undeclared-Environment' );
-			group: 'Tests' with: #(#'Calypso-Environment-System-Tests' #'Calypso-Environment-Processor-Tests' #'Calypso-SystemTools-FullBrowser-Tests' #'Calypso-SystemTools-QueryBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' 'Calypso-Plugins-Undeclared-Environment-Tests');
+			group: 'Tests' with: #(#'Calypso-Environment-Core-Tests' #'Calypso-Environment-System-Tests' #'Calypso-Environment-Processor-Tests' #'Calypso-SystemTools-FullBrowser-Tests' #'Calypso-SystemTools-QueryBrowser-Tests' 'Calypso-Plugins-InheritanceAnalyzer-Environment-Tests' #'Calypso-Plugins-Deprecation-Environment-Tests' #'Calypso-Plugins-Reflectivity-Environment-Tests' 'Calypso-Plugins-Critic-Environment-Tests' 'Calypso-Plugins-Undeclared-Environment-Tests');
 			group: 'default' with: #('FullEnvironment' 'FullBrowser' 'Tests' ). ].
