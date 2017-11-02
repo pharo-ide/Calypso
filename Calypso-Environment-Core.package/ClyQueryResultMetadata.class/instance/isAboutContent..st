@@ -1,3 +1,3 @@
 testing
 isAboutContent: anEnvironmentContentClass
-	^self contentClass includesBehavior: anEnvironmentContentClass
+	^self contentClass isKindOf: anEnvironmentContentClass

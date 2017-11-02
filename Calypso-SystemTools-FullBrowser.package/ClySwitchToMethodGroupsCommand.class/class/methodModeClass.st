@@ -1,3 +1,3 @@
 accessing
 methodModeClass
-	^ClySortedMethodGroups
+	^ClyAllMethodGroups new

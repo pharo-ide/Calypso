@@ -1,3 +1,6 @@
 default
 default
-	^default ifNil: [ default := self of: nil inScope: ClyUnknownScope default  ]
+	^default ifNil: [ 
+		default := self new
+			environmentScope: ClyUnknownScope new;
+			buildingQuery: ClyUnknownQuery new  ]
