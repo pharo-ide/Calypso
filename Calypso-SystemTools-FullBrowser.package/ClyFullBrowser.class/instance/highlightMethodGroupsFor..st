@@ -2,7 +2,7 @@ navigation
 highlightMethodGroupsFor: selectedMethods
 
 	| actualMethods |
-	actualMethods := selectedMethods rawItems.
+	actualMethods := selectedMethods actualObjects.
 	
 	methodGroupView highlightItemsWhich: [ :eachGroup | 
 		actualMethods anySatisfy: [:eachMethod | 

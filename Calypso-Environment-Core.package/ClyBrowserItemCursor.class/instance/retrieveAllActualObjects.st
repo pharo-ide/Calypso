@@ -1,4 +1,0 @@
-queries
-retrieveAllActualObjects
-
-	^queryResult rawItems
