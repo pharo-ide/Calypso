@@ -5,7 +5,7 @@ testSelectingScopeShouldRemoveOldWeaklyGarbagedCache
 	environment selectScope: ClyEnvironmentScope of: { self class }.	
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	cache := environment scopeCacheFor: ClyEnvironmentScope.
-	self assert: (cache at: {self class}) equals: nil.
+	self assert: (cache clyIncludesCleanedKey: {self class}).
 	
 	scope := environment selectScope: ClyEnvironmentScope of: { self class superclass }.
 	

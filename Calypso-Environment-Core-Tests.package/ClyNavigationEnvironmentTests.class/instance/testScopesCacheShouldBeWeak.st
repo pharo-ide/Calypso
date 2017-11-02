@@ -7,4 +7,5 @@ testScopesCacheShouldBeWeak
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
 	cache := environment scopeCacheFor: ClyEnvironmentScope.
-	self assert: (cache at: {self class}) equals: nil
+
+	self assert: (cache clyIncludesCleanedKey: {self class}) 

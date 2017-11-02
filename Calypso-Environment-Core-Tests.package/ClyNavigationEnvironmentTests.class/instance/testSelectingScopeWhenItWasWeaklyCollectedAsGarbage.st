@@ -6,7 +6,7 @@ testSelectingScopeWhenItWasWeaklyCollectedAsGarbage
 	
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	cache := environment scopeCacheFor: ClyEnvironmentScope.
-	self assert: (cache at: {self class}) equals: nil.
+	self assert: (cache clyIncludesCleanedKey: {self class}).
 	
 	scope := environment selectScope: ClyEnvironmentScope of: { self class }.
 	self assert: scope class equals: ClyEnvironmentScope.
