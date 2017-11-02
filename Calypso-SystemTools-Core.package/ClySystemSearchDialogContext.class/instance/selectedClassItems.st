@@ -1,3 +1,3 @@
 selection-classes
 selectedClassItems
-	^self selectedItemsOfType: Behavior
+	^self selectedItemsOfType: ClyClass

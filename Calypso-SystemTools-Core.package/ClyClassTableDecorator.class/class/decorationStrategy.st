@@ -2,4 +2,4 @@ decoration
 decorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: Behavior 
+	^ClyTableDecorationStrategy for: ClyClass 

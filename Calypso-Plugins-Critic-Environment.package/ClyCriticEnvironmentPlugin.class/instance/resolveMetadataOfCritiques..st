@@ -1,6 +1,6 @@
 items resolving
-resolveMetadataOfCritiques: aClySortedCritiques
-	super resolveMetadataOfCritiques: aClySortedCritiques.
+resolveMetadataOfCritiques: aQueryResult
+	super resolveMetadataOfCritiques: aQueryResult.
 	
-	aClySortedCritiques isComputationComplete ifFalse: [ 
-		aClySortedCritiques addMetaProperty: ClyBackgroundProcessingTag instance]
+	aQueryResult buildingQuery isComputationComplete ifFalse: [ 
+		aQueryResult addMetaProperty: ClyBackgroundProcessingTag instance]

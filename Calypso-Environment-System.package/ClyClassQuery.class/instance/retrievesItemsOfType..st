@@ -1,3 +1,3 @@
 testing
 retrievesItemsOfType: itemTypeClass
-	^itemTypeClass = Behavior
+	^itemTypeClass = ClyClass
