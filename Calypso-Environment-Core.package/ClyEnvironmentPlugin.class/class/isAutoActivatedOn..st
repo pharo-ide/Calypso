@@ -1,4 +1,4 @@
 testing
 isAutoActivatedOn: aNavigationEnvironment
-	^self isAutoActivated 
+	^self isAbstract not & self isAutoActivated 
 		and: [ self isRelatedTo: aNavigationEnvironment system ]
