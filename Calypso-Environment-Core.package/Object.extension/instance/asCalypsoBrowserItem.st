@@ -1,4 +1,4 @@
-*Calypso-Environment-System
+*Calypso-Environment-Core
 asCalypsoBrowserItem
 
 	^self calypsoEnvironmentType convertToCalypsoBrowserItem: self 

@@ -1,4 +1,4 @@
-*Calypso-Environment-System
+formatting items
 convertToCalypsoBrowserItem: aClass
 
 	| item |

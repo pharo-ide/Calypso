@@ -1,4 +1,4 @@
-*Calypso-Environment-System
+items resolving
 prepareBrowserItem: aBrowserItem by: anEnvironmentPlugin
 	^ anEnvironmentPlugin
 		prepareBrowserItem: aBrowserItem

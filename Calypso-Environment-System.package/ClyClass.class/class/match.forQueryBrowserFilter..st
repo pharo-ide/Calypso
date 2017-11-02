@@ -1,4 +1,4 @@
-*Calypso-Environment-System
+testing
 match: aClass forQueryBrowserFilter: aQueryBrowserFilter
 
 	(aQueryBrowserFilter matchesString: aClass name) ifTrue: [ ^true ].
