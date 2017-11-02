@@ -1,4 +1,7 @@
 private
 wrapRawItems: objects
 
-	^objects collect: #asCalypsoBrowserItem
+	| result |
+	result := objects collect: #asCalypsoBrowserItem.
+	result do: [ :each | each prepareIn: self environment ].
+	^result

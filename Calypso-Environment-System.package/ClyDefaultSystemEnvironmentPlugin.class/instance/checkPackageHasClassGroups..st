@@ -6,7 +6,6 @@ checkPackageHasClassGroups: aPackage
 	
 	environment pluginsDo: [ :plugin |
 		providers := plugin collectClassGroupProvidersFor: aPackage. 
-		providers do: [ :each | each buildGroupItemsOn: items].
-		items ifNotEmpty: [^true]].
+		providers do: [ :each | each classGroupsDo: [:group | ^true]]].
 	
 	^false
