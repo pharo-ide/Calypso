@@ -3,8 +3,8 @@ testFindItemsWhichIsNotInCache
 	
 	| allItems |
 	self deny: (queryResult rawItems includes: Class).
-	queryResult items: OrderedCollection new.
-	queryResult fillWith: {Object. Class. Array }.
+	queryResult environmentScope basisObjects: {Object. Class. Array }.
+	queryResult rebuild.
 	
 	allItems := cursor findItemsWhere: [:each | each actualObject = Class].
 	
