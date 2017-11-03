@@ -1,0 +1,3 @@
+queries
+rebuildInTransformedScopeBy: aBlockWithScopeArg
+	^actualResult rebuildInTransformedScopeBy: aBlockWithScopeArg
