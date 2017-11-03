@@ -1,4 +1,0 @@
-testing
-observesContent: anEnvironmentContentClass
-
-	^metadata isAboutContent: anEnvironmentContentClass

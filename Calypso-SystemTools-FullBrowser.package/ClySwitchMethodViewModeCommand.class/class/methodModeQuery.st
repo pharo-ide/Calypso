@@ -1,3 +1,3 @@
 accessing
-methodModeClass
+methodModeQuery
 	self subclassResponsibility 

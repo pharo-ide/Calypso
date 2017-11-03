@@ -1,3 +1,3 @@
 controling
 execute
-	browser switchToMethodGroupContent: self methodModeClass
+	browser switchToMethodGroupContent: self methodModeQuery

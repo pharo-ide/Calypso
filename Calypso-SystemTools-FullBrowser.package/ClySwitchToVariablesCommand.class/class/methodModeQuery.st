@@ -1,3 +1,3 @@
 accessing
-methodModeClass
+methodModeQuery
 	^ClyAllVariables requiredResult: ClyGroupedVariables new

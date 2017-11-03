@@ -1,3 +1,0 @@
-testing
-isAboutContent: anEnvironmentContentClass
-	^self contentClass isKindOf: anEnvironmentContentClass

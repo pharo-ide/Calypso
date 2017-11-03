@@ -1,4 +1,4 @@
 testing
-isBasedOn: aQuery
+observesResultOf: aQuery
 
 	^metadata isAboutQuery: aQuery

@@ -1,3 +1,3 @@
 testing
 isAppliedToBrowser
-	^browser methodGroupView showsContent: self methodModeClass
+	^browser methodGroupView showsResultOf: self methodModeQuery

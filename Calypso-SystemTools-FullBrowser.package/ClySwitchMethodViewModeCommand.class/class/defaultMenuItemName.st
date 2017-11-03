@@ -1,3 +1,3 @@
 accessing
 defaultMenuItemName
-	^self methodModeClass shortName
+	^self methodModeQuery shortName
