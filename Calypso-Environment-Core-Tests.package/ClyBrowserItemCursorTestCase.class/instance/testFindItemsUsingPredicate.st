@@ -1,5 +1,5 @@
 tests
-testFindItemsUsingPredicateBlock
+testFindItemsUsingPredicate
 	
 	| allItems |
 	allItems := cursor findItemsWhere: [:each | each actualObject = Array].
