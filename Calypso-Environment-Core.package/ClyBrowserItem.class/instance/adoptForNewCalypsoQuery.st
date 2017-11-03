@@ -1,4 +1,4 @@
-accessing
+preparation
 adoptForNewCalypsoQuery
 
 	^self copy

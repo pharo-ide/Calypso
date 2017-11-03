@@ -1,7 +1,11 @@
 evaluating
-collate: aGroup1 with: aGroup2
+collate: aGroupItem1 with: aGroupItem2
 
-	aGroup1 priority = aGroup2 priority ifTrue: [ 
-		^aGroup1 name threeWayCompareTo: aGroup2 name].
+	| group1 group2 |
+	group1 := aGroupItem1 actualObject.
+	group2 := aGroupItem2 actualObject.
 	
-	^aGroup1 priority threeWayCompareTo: aGroup2 priority
+	group1 priority = group2 priority ifTrue: [ 
+		^group1 name threeWayCompareTo: group2 name].
+	
+	^group1 priority threeWayCompareTo: group2 priority

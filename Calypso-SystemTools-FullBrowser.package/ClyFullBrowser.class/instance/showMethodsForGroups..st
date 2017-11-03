@@ -1,12 +1,13 @@
 navigation
 showMethodsForGroups: selectedMethodGroups
 		
-	| parentItems methods dataSource |
-	parentItems := selectedMethodGroups. 
-	parentItems isEmpty ifTrue: [ 
-		parentItems := selectedMethodGroups rootDataSource itemCursor ].
-	
-	methods := parentItems query: ClyAllMethods sorted.	
-	dataSource := ClyCollapsedDataSource for: self on: methods.
+	| methods dataSource methodQuery scope |
+	methodQuery := ClyAllMethods sorted.
+	selectedMethodGroups isEmpty 
+		ifTrue: [ dataSource := selectedMethodGroups rootDataSource withNewContent: methodQuery]
+		ifFalse: [ 
+			scope := selectedMethodGroups asItemsScope: ClyMethodGroupScope.
+			methods := navigationEnvironment query: methodQuery inScope: scope.	
+			dataSource := ClyCollapsedDataSource for: self on: methods].
 	
 	methodView dataSource: dataSource

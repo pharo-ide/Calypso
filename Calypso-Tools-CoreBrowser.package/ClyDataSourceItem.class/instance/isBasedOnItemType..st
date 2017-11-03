@@ -1,3 +1,3 @@
 testing
 isBasedOnItemType: aClass
-	^self type = aClass
+	^self type includesBehavior: aClass
