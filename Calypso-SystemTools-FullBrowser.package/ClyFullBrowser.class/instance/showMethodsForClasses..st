@@ -6,7 +6,9 @@ showMethodsForClasses: selectedClasses
 	
 	groups := selectedClasses query: methodGroupContent inScope: metaLevelScope.	
 	dataSource := ClyCollapsedDataSource on: groups.
-	dataSource childrenStructure: { ClyMethodGroup -> ClyAllMethodGroups sorted}.
+	dataSource childrenStructure: { 
+		ClyMethodGroup -> {ClyMethodGroupScope. ClyAllMethodGroups sorted}
+	}.
 	methodGroupView dataSource: dataSource.
 	
 	self showMethodsForGroups: self methodGroupSelection

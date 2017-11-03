@@ -1,4 +1,4 @@
 instance creation
 sorted
 	
-	^self requiredResult: (ClySortedQueryResult using: ClySortItemGroupFunction ascend)
+	^self requiredResult: (ClySortedQueryResult using: ClySortItemGroupFunction descend)

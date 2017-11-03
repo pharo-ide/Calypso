@@ -1,8 +1,8 @@
 testing
 queryToExpand: aDataSourceItem ifAbsent: absentBlock
 	
-	| scopeAndQuery |
-	scopeAndQuery := childrenStructure 
+	| typeAndScopeAndQuery |
+	typeAndScopeAndQuery := childrenStructure 
 		detect: [:each | aDataSourceItem type includesBehavior: each key ] 
 		ifNone: absentBlock.
-	^scopeAndQuery value asEnvironmentQuery
+	^typeAndScopeAndQuery value

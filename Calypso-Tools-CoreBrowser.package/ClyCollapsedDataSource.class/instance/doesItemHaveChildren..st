@@ -1,11 +1,11 @@
 testing
 doesItemHaveChildren: aDataSourceItem
-	| childQuery |
+	| scopeAndQuery |
 	aDataSourceItem childrenDataSource ifNotNil: [:children | ^children isEmpty not].
 	
 	self definesChildren ifFalse: [ ^false ].
 
-	childQuery := self queryToExpand: aDataSourceItem ifAbsent: [^false].
+	scopeAndQuery := self queryToExpand: aDataSourceItem ifAbsent: [^false].
 	
 	^aDataSourceItem environmentItem hasChildrenWhich: [:childType | 
-		childQuery retrievesItemsOfType: childType ]
+		scopeAndQuery last retrievesItemsOfType: childType ]

@@ -4,5 +4,4 @@ query: aQuery inNewScope: anEnvironmentScope
 	(which supposed to be based on basis of some of my items)"
 	| scope |
 	self flag: #todo. "should be removed"
-	scope := anEnvironmentScope asNewScopeIn: environment.
-	^scope query: aQuery
+	^actualResult query: aQuery inNewScope: anEnvironmentScope
