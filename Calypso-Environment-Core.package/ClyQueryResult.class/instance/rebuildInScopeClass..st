@@ -4,4 +4,4 @@ rebuildInScopeClass: anEnvironmentScopeClass
 	| newScope |
 	newScope := environmentScope asScope: anEnvironmentScopeClass.
 
-	^newScope query: self class
+	^newScope query: buildingQuery

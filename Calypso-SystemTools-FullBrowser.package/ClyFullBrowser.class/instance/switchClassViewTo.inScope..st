@@ -1,7 +1,9 @@
 navigation
-switchClassViewTo: aClassQuery inScope: anEnvironmentScope
+switchClassViewTo: queryResultClass inScope: anEnvironmentScope
 	| classes dataSource |
-	classes := navigationEnvironment query: aClassQuery inScope: anEnvironmentScope.
+	classes := navigationEnvironment 
+		query: (ClyAllClasses requiredResult: queryResultClass new) 
+		inScope: anEnvironmentScope.
 	
 	dataSource := ClyCollapsedDataSource on: classes.
 	
