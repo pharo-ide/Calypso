@@ -1,6 +1,7 @@
 queries
 findItemsSimilarTo: sampleEnvironmentItems
 	| rest found existingItem |
+	actualResult rebuildIfNeeded.
 	rest := sampleEnvironmentItems as: OrderedCollection.
 	found := OrderedCollection new.	
 	actualResult items doWithIndex: [ :existing :index |

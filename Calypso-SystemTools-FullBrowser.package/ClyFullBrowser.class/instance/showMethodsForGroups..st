@@ -9,5 +9,5 @@ showMethodsForGroups: selectedMethodGroups
 			scope := selectedMethodGroups asItemsScope: ClyMethodGroupScope.
 			methods := navigationEnvironment query: methodQuery inScope: scope.	
 			dataSource := ClyCollapsedDataSource for: self on: methods].
-	
+	dataSource childrenStructure: #().
 	methodView dataSource: dataSource

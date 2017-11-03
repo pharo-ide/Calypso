@@ -5,6 +5,7 @@ findItemsWith: actualObjects
 	If some object is absent in content then it will return nil in place of it.
 	All returned items will be resilved"
 	| found result foundIndex |
+	actualResult rebuildIfNeeded.
 	result := actualObjects collect: [ :eachObject |
 		foundIndex := actualResult items findFirst: [ :item | 
 			item calypsoEnvironmentType checkCalypsoItem: item isEqualTo: eachObject ].

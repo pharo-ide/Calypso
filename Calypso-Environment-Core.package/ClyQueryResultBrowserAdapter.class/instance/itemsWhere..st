@@ -1,6 +1,7 @@
 queries
 itemsWhere: aBlockClosure 
 	| found item |
+	actualResult rebuildIfNeeded.
 	found := OrderedCollection new.
 	actualResult items doWithIndex: [ :each :i | 
 		item := each asCalypsoBrowserItem.
