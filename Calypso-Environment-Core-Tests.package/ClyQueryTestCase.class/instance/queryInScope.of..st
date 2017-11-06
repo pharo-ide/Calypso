@@ -2,7 +2,8 @@ running
 queryInScope: scopeClass of: basisObjects
 
 	| scope |
-	scope := environment selectScope: scopeClass of: basisObjects.
+	scope := scopeClass of: basisObjects.	
 	
-	result := scope query: query.
+	result := environment query: query inScope: scope.
+	
 	resultItems := result items

@@ -2,5 +2,5 @@ tests
 createQuery
 
 	^ClyFilteringQuery 
-		for: ClySimpleQueryExampleReturningScopeBasis new
+		for: (ClySimpleQueryExampleReturningScopeBasis from: (ClyScope of: { self class }))
 		by: (ClyItemNameFilter substringPattern: 'FilteringQueryTests').

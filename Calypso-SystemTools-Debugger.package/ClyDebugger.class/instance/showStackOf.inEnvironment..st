@@ -1,8 +1,9 @@
 navigation
 showStackOf: aProcess inEnvironment: aNavigationEnvironment
-	| processScope processStack |
+
+	| processStack |
 	navigationEnvironment := aNavigationEnvironment.
-	processScope := navigationEnvironment selectScope: ClyProcessScope of: { aProcess}.
-	processStack := processScope query: ClyProcessStack.
+	processStack := navigationEnvironment 
+		query: ClyProcessStack new inScope: (ClyProcessScope of: { aProcess}).
 	self changeNavigationStateBy: [ 
 		stackView dataSource: (ClyCollapsedDataSource on: processStack)]

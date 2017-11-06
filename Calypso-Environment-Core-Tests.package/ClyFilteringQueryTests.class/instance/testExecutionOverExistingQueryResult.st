@@ -1,10 +1,12 @@
 tests
 testExecutionOverExistingQueryResult
 
+	| originalResult |
 	query := ClySimpleQueryExampleReturningScopeBasis new.
 
-	self queryInScope: ClyScope of: { self class superclass. self class }.
-	result := result filterItemsBy: (ClyItemNameFilter substringPattern: 'FilteringQueryTests').
+	originalResult := environment 
+		query: query inScope: (ClyScope of: { self class superclass. self class }).
+	result := originalResult filterItemsBy: (ClyItemNameFilter substringPattern: 'FilteringQueryTests').
 	resultItems := result items.
 	
 	self assert: resultItems size equals: 1.

@@ -1,8 +1,7 @@
 queries
-query: aQuery inNewScope: anEnvironmentScope
+query: aQuery inNewScope: aScope
 	"executes new query from new scope
 	(which supposed to be based on basis of some of my items)"
 	| scope |
 	self flag: #todo. "should be removed"
-	scope := anEnvironmentScope asNewScopeIn: environment.
-	^scope query: aQuery
+	^environment query: aQuery inScope: aScope

@@ -1,5 +1,6 @@
 queries
-query: anEnvironmentQueryOfContentClass inScope: anEnvironmentScope
-	| existingScope |
-	existingScope := self selectScope: anEnvironmentScope class of: anEnvironmentScope basisObjects.
-	^existingScope query: anEnvironmentQueryOfContentClass
+query: aScopedQuery inScope: aScope
+	
+	aScopedQuery scope: aScope.
+	
+	^self query: aScopedQuery 

@@ -1,3 +1,3 @@
 queries
 systemScope
-	^self selectScope: system globalScopeClass of: {system}
+	^system globalScopeClass of: {system}

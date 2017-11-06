@@ -5,4 +5,4 @@ repeatQuery
 		we just return local empty content" 
 		^ClyUnknownQueryResult inEmptyScope: queryScopeClass].
 	
-	^queryScope query: buildingQuery
+	^environment query: buildingQuery

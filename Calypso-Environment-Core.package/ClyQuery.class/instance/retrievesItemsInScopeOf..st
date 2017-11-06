@@ -1,0 +1,3 @@
+testing
+retrievesItemsInScopeOf: basisObject
+	self subclassResponsibility 

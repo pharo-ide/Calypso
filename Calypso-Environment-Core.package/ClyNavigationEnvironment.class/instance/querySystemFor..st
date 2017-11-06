@@ -1,3 +1,3 @@
 queries
-querySystemFor: anEnvironmentQueryOfContentClass 
-	^self systemScope query: anEnvironmentQueryOfContentClass
+querySystemFor: aScopedQuery 
+	^self query: aScopedQuery inScope: self systemScope

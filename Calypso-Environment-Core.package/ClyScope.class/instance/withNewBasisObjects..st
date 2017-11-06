@@ -1,4 +1,4 @@
 queries
 withNewBasisObjects: newBasisObjects
 
-	^environment selectScope: self class of: newBasisObjects
+	^self class of: newBasisObjects
