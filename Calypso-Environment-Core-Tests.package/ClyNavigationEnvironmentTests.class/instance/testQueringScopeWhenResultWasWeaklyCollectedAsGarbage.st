@@ -2,7 +2,7 @@ tests
 testQueringScopeWhenResultWasWeaklyCollectedAsGarbage
 
 	| cache scope result result2 |
-	scope := environment selectScope: ClyEnvironmentScope of: { self class }.
+	scope := environment selectScope: ClyScope of: { self class }.
 	scope query: ClySimpleQueryExampleReturningScopeBasis new.
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	cache := scope cachedResultOf: ClySimpleQueryExampleReturningScopeBasis new.

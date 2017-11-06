@@ -6,6 +6,4 @@ comparing
 		ifTrue: [ ^ true ].
 	self class = anObject class
 		ifFalse: [ ^ false ].
-	self basisType = anObject basisType
-		ifFalse: [ ^ false ].
 	^ basisObjects = anObject basisObjects

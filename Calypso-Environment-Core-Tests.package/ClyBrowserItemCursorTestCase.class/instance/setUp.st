@@ -5,6 +5,6 @@ setUp
 	
 	query := ClySimpleQueryExampleReturningScopeBasis requiredResult: self createQueryResult.
 	queryResult := environment 
-		query: query inScope: (ClyEnvironmentScope of: { Object. Array. String }).
+		query: query inScope: (ClyScope of: { Object. Array. String }).
 	
 	cursor := queryResult openBrowserCursor

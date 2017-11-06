@@ -1,4 +1,4 @@
 query
 query: anEnvironmentContentClass	
 
-	^self query: anEnvironmentContentClass inScope: ClyEnvironmentScope
+	^self query: anEnvironmentContentClass inScope: ClyScope

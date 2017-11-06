@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyScope",
+	"category" : "Calypso-Environment-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyCompositeScope",
+	"type" : "normal"
+}

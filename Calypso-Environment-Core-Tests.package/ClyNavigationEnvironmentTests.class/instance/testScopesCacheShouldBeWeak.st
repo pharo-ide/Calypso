@@ -2,10 +2,10 @@ tests
 testScopesCacheShouldBeWeak
 
 	| cache |
-	environment selectScope: ClyEnvironmentScope of: { self class }.
+	environment selectScope: ClyScope of: { self class }.
 	
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
-	cache := environment scopeCacheFor: ClyEnvironmentScope.
+	cache := environment scopeCacheFor: ClyScope.
 
 	self assert: (cache clyIncludesCleanedKey: {self class}) 

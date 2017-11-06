@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyEnvironmentScope",
+	"super" : "ClyScope",
 	"category" : "Calypso-Plugins-Critic-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -10,6 +10,6 @@
 		"basisObjects",
 		"queryCache"
 	],
-	"name" : "ClyEnvironmentScope",
+	"name" : "ClyScope",
 	"type" : "normal"
 }
