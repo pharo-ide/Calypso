@@ -1,3 +1,3 @@
 default
 defaultResultContent
-	^DefaultResultContent ifNil: [ DefaultResultContent := ClySortedMethods ]
+	^DefaultResultContent ifNil: [ DefaultResultContent := ClySortedQueryResult using: ClySortMethodFunction ascend ]

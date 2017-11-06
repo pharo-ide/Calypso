@@ -1,4 +1,4 @@
 testing
 showsMethodsAs: contentClass
 
-	^systemQuery requiredResult == contentClass.
+	^systemQuery requiredResult = contentClass
