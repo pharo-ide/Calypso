@@ -1,7 +1,7 @@
 execution
-buildResult: aQueryResult fromScope: anEnvironmentScope
+buildResult: aQueryResult in: aNavigationEnvironment
 	| originalResult filteredItems |
-	originalResult := anEnvironmentScope query: originalQuery.
+	originalResult := aNavigationEnvironment query: originalQuery.
 	
 	filteredItems := originalResult items 
 		select: [ :each | itemFilter matches: each ] 

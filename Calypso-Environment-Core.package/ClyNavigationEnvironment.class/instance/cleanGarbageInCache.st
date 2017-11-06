@@ -1,4 +1,4 @@
 cleaning
 cleanGarbageInCache
 
-	scopeCache do: [ :eachCache | eachCache clyCleanGarbage]
+	queryCache clyCleanGarbage

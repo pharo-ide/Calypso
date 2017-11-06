@@ -1,4 +1,4 @@
 execution
-buildResult: aQueryResult fromScope: anEnvironmentScope
+buildResult: aQueryResult in: aNavigationEnvironment
 
 	aQueryResult fillWith: self installedMethods

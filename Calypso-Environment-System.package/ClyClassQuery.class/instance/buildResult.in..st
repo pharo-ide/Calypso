@@ -1,9 +1,9 @@
 execution
-buildResult: aQueryResult fromScope: anEnvironmentScope
+buildResult: aQueryResult in: aNavigationEnvironment
 	| filteredClasses |
 	filteredClasses := OrderedCollection new.
 	
-	anEnvironmentScope classesDo: [ :each | 
+	scope classesDo: [ :each | 
 		(self selectsClass: each) ifTrue: [filteredClasses add: each]].
 	
 	aQueryResult fillWith: filteredClasses

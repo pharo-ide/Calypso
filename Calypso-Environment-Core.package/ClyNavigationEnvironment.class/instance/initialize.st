@@ -4,5 +4,5 @@ initialize
 	
 	accessGuard := Mutex new.
 	plugins := OrderedCollection new.
-	scopeCache := Dictionary new.
+	queryCache := WeakValueDictionary new.
 	updateStrategy := ClyInstantEnvironmentUpdateStrategy new

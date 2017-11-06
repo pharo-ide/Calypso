@@ -3,7 +3,7 @@ selectScope: anEnvironmentScopeClass of: basisObjects
 
 	| existingScopes preparedBasis |
 	self cleanGarbageInCache.
-	existingScopes := scopeCache at: anEnvironmentScopeClass ifAbsentPut: [ WeakValueDictionary new ].
+	existingScopes := queryCache at: anEnvironmentScopeClass ifAbsentPut: [ WeakValueDictionary new ].
 	preparedBasis := anEnvironmentScopeClass prepareBasisFrom: basisObjects.
 	^existingScopes 
 		at: preparedBasis 

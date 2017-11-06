@@ -1,3 +1,3 @@
 accessing
 scopeCacheFor: anEnvironmentScopeClass
-	^scopeCache at: anEnvironmentScopeClass
+	^queryCache at: anEnvironmentScopeClass

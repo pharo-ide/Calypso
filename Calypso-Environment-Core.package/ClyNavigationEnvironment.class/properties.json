@@ -9,10 +9,10 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"plugins",
-		"scopeCache",
 		"updateStrategy",
 		"accessGuard",
-		"system"
+		"system",
+		"queryCache"
 	],
 	"name" : "ClyNavigationEnvironment",
 	"type" : "normal"

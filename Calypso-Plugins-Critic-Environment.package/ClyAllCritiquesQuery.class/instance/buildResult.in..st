@@ -1,11 +1,11 @@
 execution
-buildResult: aQueryResult fromScope: anEnvironmentScope
+buildResult: aQueryResult in: aNavigationEnvironment
 	"I must keep strongly analysis results of requested objects to prevent cleaning of critiques cache when they are still used by me"
 	| critic |
 	objectAnalysisResults := OrderedCollection new.
-	critic := anEnvironmentScope environment systemCritic.
+	critic := aNavigationEnvironment environment systemCritic.
 
-	anEnvironmentScope basisObjects do: [ :each | | result |
+	scope basisObjects do: [ :each | | result |
 		result := critic analyze: each.
 		objectAnalysisResults add: result ].
 

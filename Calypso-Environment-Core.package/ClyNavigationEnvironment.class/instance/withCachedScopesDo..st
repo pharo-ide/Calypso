@@ -1,6 +1,6 @@
 accessing
 withCachedScopesDo: aBlock
 
-	scopeCache do: [ :eachKind | 
+	queryCache do: [ :eachKind | 
 		eachKind do: [ :eachScope |
 			eachScope ifNotNil: aBlock]]
