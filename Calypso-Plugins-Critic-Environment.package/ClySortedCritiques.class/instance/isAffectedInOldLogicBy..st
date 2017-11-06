@@ -1,5 +1,5 @@
 system changes
-isAffectedBy: aSystemAnnouncement
+isAffectedInOldLogicBy: aSystemAnnouncement
 	"system critics recompute critiques after any system change"
 	
 	aSystemAnnouncement class = ClyCriticAnalysisDone ifFalse: [ ^false ].

@@ -1,8 +1,7 @@
 system changes
 isAffectedBy: aSystemAnnouncement
 		
-	(buildingQuery isAffectedBy: aSystemAnnouncement inScope: environmentScope)
-			ifTrue: [ ^true ].
+	(buildingQuery isAffectedBy: aSystemAnnouncement)	ifTrue: [ ^true ].
 	
 	(buildingQuery requiresDetailedCheckForAffectOf: aSystemAnnouncement)
 		ifFalse: [ ^false ].

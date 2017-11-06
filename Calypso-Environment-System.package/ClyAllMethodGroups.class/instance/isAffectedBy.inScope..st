@@ -1,4 +1,0 @@
-system changes
-isAffectedBy: aSystemAnnouncement inScope: anEnvironmentScope
-	
-	^anEnvironmentScope includesMethodGroupsAffectedBy: aSystemAnnouncement

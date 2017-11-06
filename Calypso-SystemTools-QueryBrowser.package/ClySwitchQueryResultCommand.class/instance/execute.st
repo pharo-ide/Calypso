@@ -1,3 +1,3 @@
 execution
 execute
-	browser switchToResultContent: self queryResultClass
+	browser switchToResult: self queryResultClass

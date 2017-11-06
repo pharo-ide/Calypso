@@ -1,5 +1,5 @@
 accessing
-resultContent
+requiredQueryResult
 	^systemQuery 
-		ifNil: [self class defaultResultContent]
+		ifNil: [self class defaultQueryResult]
 		ifNotNil: [ systemQuery requiredResult  ]

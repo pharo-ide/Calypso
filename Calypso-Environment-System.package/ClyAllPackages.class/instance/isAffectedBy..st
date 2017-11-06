@@ -5,8 +5,7 @@ isAffectedBy: aSystemAnnouncement
 	But generally it should be responsibility of plugin to know
 	that package items are marked by dirty tag.
 	
-	Also we don't care that there is possibility 
-	to build sorted packages from specific objects instead of packages themselves.
+	Also right now we don't care that there is possibility to query packages from other objects than from packages themselves or general system environment.
 	So any package change is related to my items"
 	
 	^aSystemAnnouncement affectsPackages

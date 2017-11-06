@@ -1,4 +1,4 @@
 system changes
 isAffectedBy: aSystemAnnouncement
-	"temp solution"
+	self flag: #todo.
 	^false

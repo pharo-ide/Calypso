@@ -1,5 +1,5 @@
 system changes
-isAffectedBy: aSystemAnnouncement
+isAffectedInOldLogicBy: aSystemAnnouncement
 
 	(environmentScope includesMethodGroupsAffectedBy: aSystemAnnouncement) ifTrue: [ ^true ].
 	

@@ -1,4 +1,4 @@
 system changes
 isAffectedBy: aSystemAnnouncement
-	
-	^true
+	self flag: #todo.
+	^false

@@ -1,4 +1,4 @@
 system changes
-isAffectedBy: aSystemAnnouncement
+isAffectedInOldLogicBy: aSystemAnnouncement
 
 	^environmentScope includesMethodsAffectedBy: aSystemAnnouncement

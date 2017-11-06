@@ -1,5 +1,5 @@
 system changes
-isAffectedBy: aSystemAnnouncement
+isAffectedInOldLogicBy: aSystemAnnouncement
 
 	(environmentScope includesClassesAffectedBy: aSystemAnnouncement) ifTrue: [ ^true ].
 

@@ -1,4 +1,4 @@
 system changes
 isAffectedBy: aSystemAnnouncement
-	
-	^false
+
+	^self subclassResponsibility 
