@@ -1,3 +1,3 @@
 execution
 collectMetadataOf: aQueryResult by: anEnvironmentPlugin
-	self shouldBeImplemented
+	subqueries do: [ :each | each collectMetadataOf: aQueryResult by: anEnvironmentPlugin ]

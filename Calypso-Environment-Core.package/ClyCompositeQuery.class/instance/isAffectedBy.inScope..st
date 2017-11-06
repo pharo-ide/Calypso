@@ -1,3 +1,5 @@
 system changes
 isAffectedBy: aSystemAnnouncement inScope: anEnvironmentScope
-	self shouldBeImplemented
+	
+	^subqueries anySatisfy: [ :each | 
+		each isAffectedBy: aSystemAnnouncement inScope: anEnvironmentScope]

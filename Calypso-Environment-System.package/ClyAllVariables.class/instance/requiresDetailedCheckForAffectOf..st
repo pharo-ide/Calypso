@@ -1,4 +1,4 @@
 system changes
-requiresDetailedCheckForAffectOf: aSystemAnnouncement inScope: anEnvironmentScope 
+requiresDetailedCheckForAffectOf: aSystemAnnouncement 
 	"I am always check all retrieved groups for the given event affect"
 	^true

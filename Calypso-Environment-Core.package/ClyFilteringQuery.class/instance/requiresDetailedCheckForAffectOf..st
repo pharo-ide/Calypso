@@ -1,0 +1,3 @@
+system changes
+requiresDetailedCheckForAffectOf: aSystemAnnouncement
+	^ originalQuery requiresDetailedCheckForAffectOf: aSystemAnnouncement

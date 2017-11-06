@@ -1,3 +1,0 @@
-system changes
-requiresDetailedCheckForAffectOf: aSystemAnnouncement inScope: anEnvironmentScope
-	^originalQuery requiresDetailedCheckForAffectOf: aSystemAnnouncement inScope: anEnvironmentScope

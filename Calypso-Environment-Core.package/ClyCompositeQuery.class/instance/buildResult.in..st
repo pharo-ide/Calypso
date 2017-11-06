@@ -1,3 +1,9 @@
 execution
 buildResult: aQueryResult in: aNavigationEnvironment
-	self shouldBeImplemented
+	
+	| subResult allItems |
+	allItems := subqueries flatCollect: [ :each | 
+		subResult := aNavigationEnvironment query: each.
+		subResult rawItems].
+	
+	aQueryResult fillWith: allItems

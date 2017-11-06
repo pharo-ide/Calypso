@@ -1,7 +1,7 @@
 system changes
-requiresDetailedCheckForAffectOf: aSystemAnnouncement inScope: anEnvironmentScope
+requiresDetailedCheckForAffectOf: aSystemAnnouncement
 	"By default queries should be able detect affect on result 
-	by using only given scope and announcement without check of actual result items. 
+	by using only their scope and announcement without check of actual result items. 
 	This logic is defined in the method:
 		isAffectedBy: aSystemAnnouncement inScope: anEnvironmentScope
 	But in some cases event and scope information can be not enough 
