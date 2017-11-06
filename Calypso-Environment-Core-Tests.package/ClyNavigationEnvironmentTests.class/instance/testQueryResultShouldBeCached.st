@@ -1,4 +1,4 @@
-new tests
+tests
 testQueryResultShouldBeCached
 
 	| result1 result2 |

@@ -1,4 +1,4 @@
-new tests
+tests
 testQueryExecutionShouldRemoveOldWeaklyGarbagedCache
 
 	| result query |

@@ -1,4 +1,4 @@
-new tests
+tests
 testQueryCacheShouldBeWeak
 
 	| cache query |

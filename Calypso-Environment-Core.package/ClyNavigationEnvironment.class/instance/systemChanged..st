@@ -2,6 +2,6 @@ system changes
 systemChanged: aSystemAnnouncement
 
 	self updateUsing: ClyFullEnvironmentUpdateStrategy new by: [
-		queryCache do: [ :eachResult | 
+		self withCachedQueriesDo: [:eachResult | 
 			eachResult handleSystemChange: aSystemAnnouncement ]
 	]

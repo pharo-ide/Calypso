@@ -1,12 +1,11 @@
 tests
 testProcessingQueryCacheWhenSomeWasCollectedAsGarbage
 
-	| evaluated scope |
-	scope := environment selectScope: ClyScope of: { self class }.
-	scope query: ClySimpleQueryExampleReturningScopeBasis new.
+	| evaluated |
+	environment query: (self createQueryInScopeOf: {self class}).
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
 	evaluated := false.
-	scope withCachedQueriesDo: [ :each | evaluated := true ].
+	environment withCachedQueriesDo: [ :each | evaluated := true ].
 	
 	self deny: evaluated
