@@ -1,13 +1,10 @@
 new tests
 testQueryCacheShouldBeWeak
 
-	| cache |
-	environment 
-		query: ClySimpleQueryExampleReturningScopeBasis new 
-		from: (ClyScope of: { self class }).
-	
+	| cache query |
+	query := self createQueryInScopeOf: {self class}.
+	environment query: query.	
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
-	cache := environment cachedResultOf: (ClySimpleQueryExampleReturningScopeBasis 
-		from: (ClyScope of: { self class })).
+	cache := environment cachedResultOf: query.
 	self assert: cache equals: nil
