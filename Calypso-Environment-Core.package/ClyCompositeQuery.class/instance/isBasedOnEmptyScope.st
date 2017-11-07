@@ -1,0 +1,3 @@
+testing
+isBasedOnEmptyScope
+	self shouldBeImplemented

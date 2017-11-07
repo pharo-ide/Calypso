@@ -1,3 +1,0 @@
-converting
-asEnvironmentQuery
-	^ClyAllItemsQuery requiredResult: self

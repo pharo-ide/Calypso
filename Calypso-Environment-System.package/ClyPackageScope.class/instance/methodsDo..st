@@ -1,6 +1,6 @@
 queries
 methodsDo: aBlock
-	self definedClassesDo: [:class | 
+	self classesDo: [:class | 
 		class localMethods do: aBlock.
 		class classSide localMethods do: aBlock].
 	

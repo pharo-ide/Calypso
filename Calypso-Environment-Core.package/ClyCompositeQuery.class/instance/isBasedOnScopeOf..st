@@ -1,0 +1,3 @@
+testing
+isBasedOnScopeOf: basisObject
+	self shouldBeImplemented

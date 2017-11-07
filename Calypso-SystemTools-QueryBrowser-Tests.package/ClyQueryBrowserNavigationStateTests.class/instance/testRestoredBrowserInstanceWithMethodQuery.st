@@ -2,7 +2,7 @@ tests
 testRestoredBrowserInstanceWithMethodQuery
 
 	| query |
-	query := ClySortedMethods asEnvironmentQuery.
+	query := ClyAllMethods sorted.
 	browser systemQuery: query.
 	
 	self restoreBrowserInstance.

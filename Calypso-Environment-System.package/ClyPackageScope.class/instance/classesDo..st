@@ -1,3 +1,4 @@
 queries
 classesDo: aBlock
-	self definedClassesDo: aBlock
+	self packagesDo: [ :package | 
+		package definedClasses do: aBlock]

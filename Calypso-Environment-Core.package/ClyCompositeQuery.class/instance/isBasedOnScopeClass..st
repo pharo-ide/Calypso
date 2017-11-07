@@ -1,0 +1,3 @@
+testing
+isBasedOnScopeClass: aScopeClass
+	self shouldBeImplemented

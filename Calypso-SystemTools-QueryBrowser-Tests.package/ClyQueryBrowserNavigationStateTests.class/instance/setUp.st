@@ -2,4 +2,4 @@ running
 setUp
 	super setUp.
 	
-	browser show: ClySortedMethods asEnvironmentQuery inScope: browser queryScopes first.
+	browser show: ClyAllMethods sorted inScope: browser queryScopes first.

@@ -1,4 +1,4 @@
 queries
-extendedClassesDo: aBlock 
+classesDo: aBlock 
 	self packagesDo: [ :package | 
 		package extendedClasses do: aBlock]
