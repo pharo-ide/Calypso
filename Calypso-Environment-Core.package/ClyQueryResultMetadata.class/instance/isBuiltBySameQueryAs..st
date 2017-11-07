@@ -1,3 +1,3 @@
 testing
 isBuiltBySameQueryAs: anotherMetadata
-	^buildingQuery = anotherMetadata queryScope
+	^buildingQuery = anotherMetadata buildingQuery

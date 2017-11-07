@@ -7,9 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"buildingQuery",
-		"queryScope",
-		"queryScopeClass",
-		"queryScopeSize",
 		"properties",
 		"itemCount",
 		"environment"
