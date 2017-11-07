@@ -1,0 +1,3 @@
+testing
+isBasedOnScopeOfSingleObject
+	self subclassResponsibility 
