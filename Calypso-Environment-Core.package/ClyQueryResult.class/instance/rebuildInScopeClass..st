@@ -1,7 +1,7 @@
 queries
 rebuildInScopeClass: anEnvironmentScopeClass
 
-	| newScope |
-	newScope := environmentScope asScope: anEnvironmentScopeClass.
-
-	^newScope query: buildingQuery
+	| newQuery |
+	newQuery := buildingQuery withScopeClass: anEnvironmentScopeClass.
+	
+	^environment query: newQuery

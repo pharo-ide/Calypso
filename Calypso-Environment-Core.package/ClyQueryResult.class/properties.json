@@ -6,13 +6,12 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"announcer",
 		"environment",
-		"environmentScope",
-		"items",
 		"buildingQuery",
+		"metadata",
+		"items",
 		"accessGuard",
-		"metadata"
+		"announcer"
 	],
 	"name" : "ClyQueryResult",
 	"type" : "normal"

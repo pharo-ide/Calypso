@@ -1,7 +1,7 @@
 queries
 rebuildInScopeOf: newBasisObjects
 
-	| newScope |
-	newScope := environmentScope withNewBasisObjects: newBasisObjects.
-
-	^newScope query: self class
+	| newQuery |
+	newQuery := buildingQuery withScopeOf: newBasisObjects.
+	
+	^environment query: newQuery

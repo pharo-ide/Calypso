@@ -10,6 +10,6 @@ fillWith: filteredChildren startingAt: rootClass depth: rootDepth
 		currentDepth := currentDepth + 1].
 	
 	sortedChildren := self containerForItemsSortedByName.
-	environmentScope childrenOf: rootClass do: [:each | sortedChildren add: each].
+	buildingQuery scope childrenOf: rootClass do: [:each | sortedChildren add: each].
 	sortedChildren do: [ :each | 
 		self fillWith: filteredChildren startingAt: each depth: currentDepth ]

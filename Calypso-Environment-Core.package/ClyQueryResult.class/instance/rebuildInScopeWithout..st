@@ -1,7 +1,7 @@
 queries
 rebuildInScopeWithout: basisObject
 
-	| newScope |
-	newScope := environmentScope withoutBasisObject: basisObject.
-
-	^newScope query: self class
+	| newQuery |
+	newQuery := buildingQuery withScopeWithout: basisObject.
+	
+	^environment query: newQuery

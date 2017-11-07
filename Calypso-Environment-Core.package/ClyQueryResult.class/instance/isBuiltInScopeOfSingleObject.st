@@ -1,4 +1,4 @@
 testing
 isBuiltInScopeOfSingleObject
 
-	^environmentScope isBasedOnSingleBasis
+	^buildingQuery isBasedOnScopeOfSingleObject 

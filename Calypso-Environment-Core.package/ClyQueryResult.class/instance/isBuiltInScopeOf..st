@@ -1,4 +1,4 @@
 testing
 isBuiltInScopeOf: basisObject
 
-	^environmentScope isBasedOn: basisObject
+	^buildingQuery isBasedOnScopeOf: basisObject

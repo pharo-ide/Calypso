@@ -1,7 +1,7 @@
 tests
 testFillingWithTraitAndItsUsers
 
-	queryResult environmentScope: (ClyTraitUserScope of: {ClyTraitRoot1}).
+	self setUpScope: (ClyTraitUserScope of: {ClyTraitRoot1}).
 	
 	queryResult fillWith: {
 		ClyTraitRoot1. ClyTraitChild1. ClyClassWithTraits. ClyTraitChild2. ClyTraitChild2Child}.

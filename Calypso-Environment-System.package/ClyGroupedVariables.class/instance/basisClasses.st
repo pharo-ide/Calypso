@@ -1,3 +1,3 @@
 building
 basisClasses
-	^environmentScope basisObjects
+	^buildingQuery scope basisObjects

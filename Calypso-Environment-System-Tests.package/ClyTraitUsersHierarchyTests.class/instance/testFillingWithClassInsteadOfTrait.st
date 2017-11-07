@@ -1,7 +1,7 @@
 tests
 testFillingWithClassInsteadOfTrait
 
-	queryResult environmentScope: (ClyTraitUserScope of: {ClyClass1FromP1}).
+	self setUpScope: (ClyTraitUserScope of: {ClyClass1FromP1}).
 	
 	queryResult fillWith: {ClyClass1FromP1}.
 		

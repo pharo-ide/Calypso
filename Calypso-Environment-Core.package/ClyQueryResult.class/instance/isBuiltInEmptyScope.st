@@ -1,4 +1,4 @@
 testing
 isBuiltInEmptyScope
 
-	^environmentScope isBasedOnEmptyBasis
+	^buildingQuery isBasedOnEmptyScope

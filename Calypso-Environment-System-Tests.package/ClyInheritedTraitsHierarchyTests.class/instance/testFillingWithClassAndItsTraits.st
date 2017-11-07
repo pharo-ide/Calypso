@@ -1,7 +1,7 @@
 tests
 testFillingWithClassAndItsTraits
 	
-	queryResult environmentScope: (ClyInheritedTraitScope of: {ClyClassWithTraits}).
+	self setUpScope: (ClyInheritedTraitScope of: {ClyClassWithTraits}).
 	queryResult fillWith: {
 		ClyClassWithTraits. ClyTraitChild1. ClyTraitChild2. ClyTraitRoot1. ClyTraitChild2Child }.
 		

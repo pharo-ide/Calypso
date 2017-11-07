@@ -1,4 +1,4 @@
 testing
 isBuiltInScopeOfMultipleObjects
 
-	^environmentScope isBasedOnMultipleBasis
+	^buildingQuery isBasedOnScopeOfMultipleObjects

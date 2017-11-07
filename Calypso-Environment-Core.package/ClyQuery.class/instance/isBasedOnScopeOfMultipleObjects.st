@@ -1,3 +1,3 @@
 testing
-retrievesItemsInScopeOf: basisObject
+isBasedOnScopeOfMultipleObjects
 	self subclassResponsibility 

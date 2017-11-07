@@ -1,7 +1,7 @@
 tests
 testFillingWithClassAndItsTraitsWhenSomeMiddleTraitIsMissing
 	
-	queryResult environmentScope: (ClyInheritedTraitScope of: {ClyClassWithTraits}).
+	self setUpScope: (ClyInheritedTraitScope of: {ClyClassWithTraits}).
 	queryResult fillWith: {
 		ClyClassWithTraits. ClyTraitChild1. ClyTraitRoot1. ClyTraitChild2Child }.
 		

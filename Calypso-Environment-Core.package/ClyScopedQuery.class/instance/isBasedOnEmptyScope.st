@@ -1,0 +1,4 @@
+testing
+isBasedOnEmptyScope
+
+	^scope isBasedOnEmptyBasis
