@@ -1,6 +1,6 @@
 queries
-withNewContent: anEnvironmentContentClass
+withNewContent: aQuery
 
 	| newQueryResult |
-	newQueryResult := itemCursor query: anEnvironmentContentClass.
+	newQueryResult := itemCursor query: aQuery.
 	^self createSameOn: newQueryResult

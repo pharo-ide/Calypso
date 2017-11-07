@@ -1,4 +1,6 @@
 queries
-rebuildForQuery: anEnvironmentQuery
+rebuildForQuery: aQuery
 
-	^environment query: anEnvironmentQuery
+	aQuery beLike: buildingQuery.
+	
+	^environment query: aQuery
