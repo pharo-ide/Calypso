@@ -1,3 +1,3 @@
 testing
 isBasedOnScopeClass: aScopeClass
-	self shouldBeImplemented
+	^subqueries anySatisfy: [ :each | each isBasedOnScopeClass: aScopeClass ]

@@ -1,4 +1,5 @@
 running
 createQuery
 	^ClyCompositeQuery with: { 
-		ClySimpleQueryExampleReturningScopeBasis from: (ClyScope of: { self class }) }
+		self subqueryInScopeOf:  { self class }.
+		self subqueryInScopeOf:  { self class superclass }}

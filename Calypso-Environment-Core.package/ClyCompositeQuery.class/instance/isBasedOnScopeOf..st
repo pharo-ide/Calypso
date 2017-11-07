@@ -1,3 +1,3 @@
 testing
 isBasedOnScopeOf: basisObject
-	self shouldBeImplemented
+	^subqueries anySatisfy: [ :each | each isBasedOnScopeOf: basisObject ]

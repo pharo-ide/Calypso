@@ -1,3 +1,3 @@
 testing
 isBasedOnEmptyScope
-	self shouldBeImplemented
+	^subqueries allSatisfy: [ :each | each isBasedOnEmptyScope ]
