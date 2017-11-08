@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeClass: aScopeClass
 
-	self subclassResponsibility 
+	^scope isKindOf: aScopeClass 

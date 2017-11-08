@@ -1,4 +1,0 @@
-testing
-isBasedOnEmptyScope
-
-	^scope isBasedOnEmptyBasis

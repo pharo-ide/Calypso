@@ -1,3 +1,3 @@
 testing
 isBasedOnScopeOfMultipleObjects
-	self subclassResponsibility 
+	^scope isBasedOnMultipleBasis

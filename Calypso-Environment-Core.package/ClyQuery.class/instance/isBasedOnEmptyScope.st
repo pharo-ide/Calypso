@@ -1,4 +1,4 @@
 testing
 isBasedOnEmptyScope
 
-	self subclassResponsibility 
+	^scope isBasedOnEmptyBasis

@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeOf: basisObject
 
-	self subclassResponsibility 
+	^scope isBasedOn: basisObject 

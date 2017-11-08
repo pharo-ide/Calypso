@@ -1,3 +1,3 @@
 testing
 isBasedOnScopeOfSingleObject
-	self subclassResponsibility 
+	^scope isBasedOnSingleBasis 

@@ -1,6 +1,6 @@
 queries
 rebuildForQuery: aQuery
 
-	aQuery beLike: buildingQuery.
+	aQuery scope: buildingQuery scope.
 	
 	^environment query: aQuery

@@ -1,3 +1,0 @@
-testing
-isBasedOnScopeOfSingleObject
-	^scope isBasedOnSingleBasis 

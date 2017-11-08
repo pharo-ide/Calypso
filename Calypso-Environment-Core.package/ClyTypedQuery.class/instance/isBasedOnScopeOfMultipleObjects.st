@@ -1,3 +1,0 @@
-testing
-isBasedOnScopeOfMultipleObjects
-	^scope isBasedOnMultipleBasis
