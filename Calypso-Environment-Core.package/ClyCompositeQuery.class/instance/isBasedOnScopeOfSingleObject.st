@@ -1,3 +1,0 @@
-testing
-isBasedOnScopeOfSingleObject
-	self subclassResponsibility 
