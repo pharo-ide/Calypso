@@ -6,4 +6,4 @@ buildResult: aQueryResult in: aNavigationEnvironment
 		subResult := aNavigationEnvironment query: each.
 		subResult rawItems].
 	
-	aQueryResult fillWith: allItems
+	self buildResult: aQueryResult with: allItems

@@ -1,3 +1,0 @@
-system changes
-checkDetailsOfResult: aQueryResult forAffectOf: aSystemAnnouncement
-	^originalQuery checkDetailsOfResult: aQueryResult forAffectOf: aSystemAnnouncement

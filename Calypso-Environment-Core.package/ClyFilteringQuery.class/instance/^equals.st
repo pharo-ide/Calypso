@@ -4,5 +4,4 @@ comparing
 
 	self == anObject ifTrue: [ ^ true ].
 	super = anObject ifFalse: [ ^ false ].
-	^ originalQuery = anObject originalQuery
-		and: [ itemFilter = anObject itemFilter ]
+	^ itemFilter = anObject itemFilter
