@@ -1,12 +1,11 @@
 tests
 testBasedOnMultipleBasis
 
-	scope := self createSampleScope.
-	scope basisObjects: #(basisObject1 basisObject2).
+	scope := self multipleScopeSample.
 	self assert: scope isBasedOnMultipleBasis.
 
-	scope basisObjects: #(basisObject).	
+	scope := self singleScopeSample.
 	self deny: scope isBasedOnMultipleBasis.
 		
-	scope basisObjects: #().
+	scope := self emptyScopeSample.
 	self deny: scope isBasedOnMultipleBasis

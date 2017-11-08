@@ -1,3 +1,3 @@
 class selection
 resolveClass: aClass
-	^aClass instanceSide
+	^self class resolveClass: aClass

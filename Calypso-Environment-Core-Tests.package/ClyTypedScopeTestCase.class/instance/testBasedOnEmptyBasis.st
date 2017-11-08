@@ -1,9 +1,11 @@
 tests
 testBasedOnEmptyBasis
 
-	scope := self createSampleScope.
-	scope basisObjects: #(basisObject).
+	scope := self multipleScopeSample.
+	self deny: scope isBasedOnEmptyBasis.
+
+	scope := self singleScopeSample.
 	self deny: scope isBasedOnEmptyBasis.
 	
-	scope basisObjects: #().
+	scope := self emptyScopeSample.
 	self assert: scope isBasedOnEmptyBasis

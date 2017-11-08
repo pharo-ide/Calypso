@@ -1,3 +1,3 @@
 running
-createScope
+scopeClass
 	self subclassResponsibility 

@@ -1,12 +1,11 @@
 tests
 testBasedOnSingleBasis
 
-	scope := self createSampleScope.
-	scope basisObjects: #(basisObject).
+	scope := self singleScopeSample.
 	self assert: scope isBasedOnSingleBasis.
 
-	scope basisObjects: #(basisObject1 basisObject2).
+	scope := self multipleScopeSample.
 	self deny: scope isBasedOnSingleBasis.
 		
-	scope basisObjects: #().
+	scope := self emptyScopeSample.
 	self deny: scope isBasedOnSingleBasis

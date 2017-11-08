@@ -6,4 +6,4 @@ testConvertingToAnotherScopeClass
 	convertedScope := scope asScope: ClyScopeExample.
 	
 	self assert: convertedScope class equals: ClyScopeExample.
-	self assert: convertedScope basisObjects asSet equals: scope basisObjects asSet.
+	self assert: convertedScope basisObjects asIdentitySet equals: scope basisObjects asIdentitySet.

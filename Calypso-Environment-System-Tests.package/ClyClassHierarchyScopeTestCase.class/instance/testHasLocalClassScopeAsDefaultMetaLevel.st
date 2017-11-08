@@ -1,7 +1,7 @@
 tests
 testHasLocalClassScopeAsDefaultMetaLevel
 
-	scope := self createScope.
+	scope := self createSampleScope.
 	
 	self assert: scope metaLevelScope equals: ClyLocalClassScope 
 	
