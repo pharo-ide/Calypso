@@ -1,0 +1,3 @@
+testing
+isBasedOn: someBasisObject
+	self shouldBeImplemented

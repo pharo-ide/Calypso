@@ -1,3 +1,3 @@
 accessing
 basisSize
-	^ basisObjects size
+	self subclassResponsibility 

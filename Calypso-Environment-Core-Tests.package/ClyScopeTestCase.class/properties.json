@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Calypso-Environment-Core-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scope",
+		"result"
+	],
+	"name" : "ClyScopeTestCase",
+	"type" : "normal"
+}

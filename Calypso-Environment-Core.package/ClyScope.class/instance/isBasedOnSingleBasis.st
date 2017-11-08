@@ -1,3 +1,3 @@
 testing
 isBasedOnSingleBasis
-	^basisObjects size = 1
+	^self basisSize = 1

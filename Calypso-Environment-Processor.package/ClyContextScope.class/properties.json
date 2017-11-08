@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyScope",
+	"super" : "ClyTypedScope",
 	"category" : "Calypso-Environment-Processor",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,4 +1,0 @@
-cleaning
-cleanGarbageInCache
-
-	queryCache clyCleanGarbage

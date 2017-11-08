@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyScope",
+	"super" : "ClyTypedScope",
 	"category" : "Calypso-Environment-System-Scopes",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,3 +1,4 @@
 testing
 isBasedOnEmptyBasis
-	^basisObjects isEmpty
+	
+	^self basisSize = 0
