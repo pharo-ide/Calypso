@@ -4,6 +4,6 @@ testNotBasedOnSingleBasisWhenAllSubscopesHaveEmptyBasis
 	subscope1 := ClyScopeExample of: #().
 	subscope2 := ClyScopeExample of: #().
 	
-	scope := ClyCompositeScope of: {subscope1. subscope2}.
+	scope := ClyCompositeScope on: {subscope1. subscope2}.
 	
 	self deny: scope isBasedOnSingleBasis

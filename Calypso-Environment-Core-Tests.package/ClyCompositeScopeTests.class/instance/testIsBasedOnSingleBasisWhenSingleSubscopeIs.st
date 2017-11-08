@@ -2,6 +2,6 @@ tests
 testIsBasedOnSingleBasisWhenSingleSubscopeIs
 	| subscope |
 	subscope := ClyScopeExample of: #(basisObject).
-	scope := ClyCompositeScope of: {subscope}.
+	scope := ClyCompositeScope on: {subscope}.
 	
 	self assert: scope isBasedOnSingleBasis

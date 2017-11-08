@@ -1,6 +1,6 @@
 tests
 testIsBasedOnEmptyBasisWhenNoSubscopesExist
 	
-	scope := ClyCompositeScope of: #().
+	scope := ClyCompositeScope on: #().
 	
 	self assert: scope isBasedOnEmptyBasis

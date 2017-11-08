@@ -1,4 +1,4 @@
-queries
+converting
 withExtraBasisObject: newBasisObject
 
 	(basisObjects includes: newBasisObject) ifTrue: [ ^self ].

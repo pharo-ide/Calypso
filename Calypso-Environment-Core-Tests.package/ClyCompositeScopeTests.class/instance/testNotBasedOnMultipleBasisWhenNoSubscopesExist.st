@@ -1,6 +1,6 @@
 tests
 testNotBasedOnMultipleBasisWhenNoSubscopesExist
 	
-	scope := ClyCompositeScope of: #().
+	scope := ClyCompositeScope on: #().
 	
 	self deny: scope isBasedOnMultipleBasis
