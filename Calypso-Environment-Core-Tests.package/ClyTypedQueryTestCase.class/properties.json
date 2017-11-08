@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyScopedQueryTestCase",
+	"name" : "ClyTypedQueryTestCase",
 	"type" : "normal"
 }
