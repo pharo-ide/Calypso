@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAllClassesTests",
+	"name" : "ClyTaggedClassesTests",
 	"type" : "normal"
 }
