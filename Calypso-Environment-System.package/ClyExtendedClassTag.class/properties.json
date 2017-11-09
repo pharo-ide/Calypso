@@ -1,13 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowserQueryResult",
+	"super" : "ClySimpleTag",
 	"category" : "Calypso-Environment-System-Content",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"baseQueryResult"
-	],
-	"name" : "ClyExtensionLastSortedClasses",
+	"instvars" : [ ],
+	"name" : "ClyExtendedClassTag",
 	"type" : "normal"
 }

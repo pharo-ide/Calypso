@@ -5,7 +5,7 @@ showClassesForPackages: selectedPackages
 	classQueries := OrderedCollection new.
 	selectedPackages groupItemsByTypeAndDo: [ :typeClass :items | 
 		classQueries addAll: (typeClass prepareClassQueriesFrom: items)].
-	fullQuery := ClyCompositeQuery with: classQueries as: ClyExtensionLastSortedClasses new.
+	fullQuery := ClyCompositeQuery with: classQueries as: ClyExtensionLastSortedClasses hierarchical.
 
 	classes := navigationEnvironment query: fullQuery.	
 	dataSource := ClyCollapsedDataSource on: classes.	

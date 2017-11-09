@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClyExtensionLastSortedClasses new
+	^ClyExtensionLastSortedClasses simple

@@ -2,11 +2,11 @@ building
 fillWith: classes
 
 	| definedClasses extensions |
-	definedClasses := classes asIdentitySet.
+	definedClasses := IdentitySet withAll: classes.
 	extensions := OrderedCollection new.
 	classes do: [ :each | 
 		(self isQueryScopeDefinesClass: each) ifFalse: [ 
 			definedClasses remove: each.
 			extensions add: each]].
-	items := ClyHierarchicallySortedClasses buildItemsOn: definedClasses.
-	items addAll: (ClyHierarchicallySortedClasses buildItemsOn: extensions)
+	items := self buildItemsOn: definedClasses.
+	items addAll: (self buildExtensionItemsOn: extensions)
