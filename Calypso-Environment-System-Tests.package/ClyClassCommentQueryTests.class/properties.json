@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 10/10/2017 13:21",
-	"super" : "ClyTypedQueryTestCase",
+	"super" : "ClyClassQueryTestCase",
 	"category" : "Calypso-Environment-System-Tests-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
