@@ -1,4 +1,4 @@
 *Calypso-Environment-System
 canAffectResultOfMethodQuery: aMethodQuery
 
-	^aMethodQuery selectsMethod: self methodAffected
+	^aMethodQuery isAffectedByChangedMethod: self methodAffected

@@ -1,5 +1,5 @@
 accessing
-methodsToImplementAt: aClass
+methodsToImplementIn: aClass
 	| result implementor |
 	result := OrderedCollection new.
 	aClass allSuperclassesDo: [ :superclass | 

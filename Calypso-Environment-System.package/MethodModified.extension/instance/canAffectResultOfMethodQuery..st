@@ -1,5 +1,5 @@
 *Calypso-Environment-System
 canAffectResultOfMethodQuery: aMethodQuery
 
-	^(aMethodQuery selectsMethod: self oldMethod) 
-		or: [ aMethodQuery selectsMethod: self newMethod]
+	^(aMethodQuery isAffectedByChangedMethod: self oldMethod) 
+		or: [ aMethodQuery isAffectedByChangedMethod: self newMethod]
