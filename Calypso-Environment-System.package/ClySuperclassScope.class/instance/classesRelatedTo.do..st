@@ -1,3 +1,3 @@
 accessing
-parentsOf: aClass do: aBlock
+classesRelatedTo: aClass do: aBlock
 	aClass allSuperclassesDo: aBlock

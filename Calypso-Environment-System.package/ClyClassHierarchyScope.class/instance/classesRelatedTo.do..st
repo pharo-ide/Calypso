@@ -1,3 +1,3 @@
 private
-childrenOf: aClass do: aBlock
+classesRelatedTo: aClass do: aBlock
 	self subclassResponsibility 

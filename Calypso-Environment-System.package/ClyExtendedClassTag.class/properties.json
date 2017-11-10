@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ClySimpleTag",
-	"category" : "Calypso-Environment-System-Content",
+	"category" : "Calypso-Environment-System-Properties",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

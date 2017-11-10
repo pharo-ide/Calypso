@@ -1,3 +1,3 @@
 accessing
-childrenOf: aClass do: aBlock
+classesRelatedTo: aClass do: aBlock
 	aClass subclassesDo: aBlock

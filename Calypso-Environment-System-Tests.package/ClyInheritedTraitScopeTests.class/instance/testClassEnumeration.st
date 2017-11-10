@@ -6,5 +6,5 @@ testClassEnumeration
 	
 	scope classesDo: [ :each | result add: each].
 	
-	expected := { ClyClassWithTraits }, ClyClassWithTraits traitComposition allTraits.
+	expected := ClyClassWithTraits traitComposition allTraits.
 	self assert: result asSet equals: expected asSet
