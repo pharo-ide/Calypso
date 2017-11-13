@@ -1,13 +1,11 @@
 building groups
 methodGroupsIn: aClassScope do: aBlock
-	| testCases |
-	
-	testCases := OrderedCollection new.
+	| failuresExist |
+	failuresExist := false.
 	aClassScope classesDo: [ :each | 
 		(each isTestCase and: [each isAbstract not
 			and: [ each hasFailedTest or: [ each hasErrorTest ] ]])
-				ifTrue: [ testCases add: each ]].
-	
-	testCases ifEmpty: [^self].
+				ifTrue: [ failuresExist := true ]].
+	failuresExist ifFalse: [^self].
 
-	aBlock value: (ClyFailedTestGroup classes: testCases)
+	aBlock value: (ClyFailedTestGroup fromClasses: aClassScope)

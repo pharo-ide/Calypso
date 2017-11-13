@@ -5,7 +5,7 @@ methodGroupsIn: aClassScope do: aBlock
 	methodGroups := Dictionary new.
 
 	aClassScope methodsDo: [ :method |
-		self buildMethodGroupsFor: method on: methodGroups].
+		self buildMethodGroupsFor: method fromScope: aClassScope on: methodGroups].
 	self addMissingGroupsOn: methodGroups inScope: aClassScope.
 		
 	methodGroups do: aBlock
