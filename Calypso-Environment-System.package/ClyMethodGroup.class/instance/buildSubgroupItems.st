@@ -1,3 +1,3 @@
 accessing
 buildSubgroupItems
-	^self subgroups collect: #asEnvironmentItem as: Array
+	^self subgroups collect: #asCalypsoBrowserItem as: Array

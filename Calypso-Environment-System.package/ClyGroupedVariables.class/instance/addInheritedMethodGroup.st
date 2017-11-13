@@ -3,4 +3,4 @@ addInheritedMethodGroup
 
 	| group |
 	group := ClyInheritedMethodGroup classes: self basisClasses.
-	items add: group asEnvironmentItem
+	items add: group asCalypsoBrowserItem

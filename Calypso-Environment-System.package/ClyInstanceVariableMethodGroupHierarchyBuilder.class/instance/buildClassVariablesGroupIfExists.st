@@ -8,4 +8,4 @@ buildClassVariablesGroupIfExists
 			vars addAll: parent classVariables]].
 	
 	vars ifEmpty: [ ^self ].
-	items add: (ClyClassVariablesMethodGroup classes: rootClasses variables: vars) asEnvironmentItem
+	items add: (ClyClassVariablesMethodGroup classes: rootClasses variables: vars) asCalypsoBrowserItem

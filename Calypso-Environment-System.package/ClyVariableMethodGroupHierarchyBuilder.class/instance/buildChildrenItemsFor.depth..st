@@ -6,7 +6,7 @@ buildChildrenItemsFor: aClass depth: hierarchyDepth
 		ClyVariableMethodGroup variable: each declaredIn: aClass classes: rootClasses].
 	vars := vars asSortedCollection: [ :a :b | a name <= b name ].
 	vars do: [ :each | 
-		item := each asEnvironmentItem.
+		item := each asCalypsoBrowserItem.
 		item depth: 1. "We not expose hierarchy of classes. And variables are child ident as children of declaration class"
 		items add: item ].
 	

@@ -3,4 +3,4 @@ methodGroupsDo: aBlock
 
 	self methodGroupProvidersDo: [ :groupProvider |
 		groupProvider methodGroupsIn: self do: [:group | 
-			aBlock value: group asEnvironmentItem] ]
+			aBlock value: group asCalypsoBrowserItem] ]

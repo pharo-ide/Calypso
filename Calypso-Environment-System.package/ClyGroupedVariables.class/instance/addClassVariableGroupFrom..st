@@ -6,4 +6,4 @@ addClassVariableGroupFrom: varsPerClass
 	varsPerClass do: [ :vars | classVars addAll: vars]. 
 	
 	group := ClyClassVariablesMethodGroup classes: self basisClasses variables: classVars.
-	items add: group asEnvironmentItem
+	items add: group asCalypsoBrowserItem

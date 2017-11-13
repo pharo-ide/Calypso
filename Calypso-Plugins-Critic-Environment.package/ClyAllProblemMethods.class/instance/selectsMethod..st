@@ -1,3 +1,3 @@
 testing
 selectsMethod: aMethod
-	^scope systemCritic doesObjectHaveCritiques: aMethod
+	^self systemCritic doesObjectHaveCritiques: aMethod
