@@ -1,0 +1,3 @@
+initialization
+defaultItems
+	^SortedCollection sortBlock: ClySortItemGroupFunction ascend

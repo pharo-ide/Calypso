@@ -1,0 +1,3 @@
+running
+meaningfullObjectToAssert: resultItem
+	^resultItem actualObject package
