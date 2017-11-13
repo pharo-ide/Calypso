@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyProblemMethodQuery",
+	"super" : "ClyMethodQuery",
 	"category" : "Calypso-Plugins-Critic-Environment",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAllProblemMethods",
+	"name" : "ClyProblemMethodQuery",
 	"type" : "normal"
 }

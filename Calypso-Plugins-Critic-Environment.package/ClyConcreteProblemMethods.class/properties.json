@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyAllProblemMethods",
+	"instvars" : [
+		"critiqueGroupName"
+	],
+	"name" : "ClyConcreteProblemMethods",
 	"type" : "normal"
 }

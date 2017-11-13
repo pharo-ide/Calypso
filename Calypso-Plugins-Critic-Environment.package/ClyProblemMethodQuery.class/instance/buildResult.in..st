@@ -7,7 +7,7 @@ buildResult: aQueryResult in: aNavigationEnvironment
 	scope methodsDo: [ :each | 	
 		result := scope systemCritic analyze: each.
 		result isComplete 
-			ifTrue: [ result includesCritiques ifTrue: [ problemMethods add: each ] ]
+			ifTrue: [ (self selectsMethod: each) ifTrue: [ problemMethods add: each ] ]
 			ifFalse: [ allDone := false ]].
 	allDone ifFalse: [ aQueryResult addMetaProperty: ClyBackgroundProcessingTag instance].
 	aQueryResult fillWith: problemMethods.
