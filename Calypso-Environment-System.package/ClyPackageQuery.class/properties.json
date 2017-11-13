@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyPackageQuery",
+	"super" : "ClyTypedQuery",
 	"category" : "Calypso-Environment-System-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAllPackages",
+	"name" : "ClyPackageQuery",
 	"type" : "normal"
 }

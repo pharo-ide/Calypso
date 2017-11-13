@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyPackageQueryTestCase",
+	"super" : "ClyTypedQueryTestCase",
 	"category" : "Calypso-Environment-System-Tests-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAllPackagesTests",
+	"name" : "ClyPackageQueryTestCase",
 	"type" : "normal"
 }

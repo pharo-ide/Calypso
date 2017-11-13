@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAllPackagesTests",
+	"name" : "ClyExtendingPackagesTests",
 	"type" : "normal"
 }
