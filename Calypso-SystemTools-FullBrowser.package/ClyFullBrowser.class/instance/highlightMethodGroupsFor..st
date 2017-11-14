@@ -6,4 +6,4 @@ highlightMethodGroupsFor: selectedMethods
 	
 	methodGroupView highlightItemsWhich: [ :eachGroup | 
 		actualMethods anySatisfy: [:eachMethod | 
-			eachGroup actualObject includesMethod: eachMethod]]
+			eachGroup actualObject includesItem: eachMethod]]

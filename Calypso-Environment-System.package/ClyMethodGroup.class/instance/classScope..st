@@ -1,3 +1,3 @@
 accessing
-classScope: anObject
-	classScope := anObject
+classScope: aClassScope
+	classScope := aClassScope

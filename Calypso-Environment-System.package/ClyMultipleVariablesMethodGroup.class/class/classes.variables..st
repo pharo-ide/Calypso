@@ -1,4 +1,4 @@
 instance creation
-classes: classes variables: vars
-	^(self classScope: classes)
+classes: aClassScope variables: vars
+	^(self fromClasses: aClassScope)
 		variables: vars

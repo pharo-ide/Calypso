@@ -5,5 +5,5 @@ addClassVariableGroupFrom: varsPerClass
 	classVars := OrderedCollection new. 
 	varsPerClass do: [ :vars | classVars addAll: vars]. 
 	
-	group := ClyClassVariablesMethodGroup classes: self basisClasses variables: classVars.
+	group := ClyClassVariablesMethodGroup classes: self queryScope variables: classVars.
 	items add: group asCalypsoBrowserItem

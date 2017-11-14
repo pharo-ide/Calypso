@@ -6,7 +6,7 @@ fillWithVariablesPerClass: varsPerClass
 	classItems do: [ :classItem |
 		vars := varsPerClass at: classItem actualObject.
 		declarationGroup := ClyVarsDeclarationMethodGroup
-			variables: vars declaredIn: classItem actualObject classes: self basisClasses.
+			variables: vars declaredIn: classItem actualObject classes: self queryScope.
 		items add: declarationGroup asCalypsoBrowserItem.
 		vars do: [:each | 
 			varItem := each asCalypsoBrowserItem.

@@ -1,5 +1,5 @@
 instance creation
-classes: classes variable: aVariable
-	^(self classScope: classes)
+classes: aClassScope variable: aVariable
+	^(self fromClasses: aClassScope)
 		variable: aVariable;
 		declarationClass: aVariable declaringClass

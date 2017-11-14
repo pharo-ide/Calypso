@@ -1,4 +1,4 @@
 instance creation
-variables: vars declaredIn: declarationClass classes: methodClasses
-	^(self classes: methodClasses variables: vars)
+variables: vars declaredIn: declarationClass classes: aClassScope
+	^(self classes: aClassScope variables: vars)
 		declarationClass: declarationClass 

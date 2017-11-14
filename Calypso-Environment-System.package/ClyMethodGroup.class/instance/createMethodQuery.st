@@ -1,0 +1,3 @@
+initialization
+createMethodQuery
+	self subclassResponsibility 
