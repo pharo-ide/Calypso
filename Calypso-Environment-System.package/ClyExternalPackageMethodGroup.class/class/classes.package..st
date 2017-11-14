@@ -1,5 +1,4 @@
 instance creation
 classes: classes package: aPackage
-	^(self classScope: classes) 
+	^(self fromClasses: classes) 
 		package: aPackage
-	

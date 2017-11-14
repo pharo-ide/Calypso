@@ -4,5 +4,5 @@ buildMethodGroupWithCritique: aCritique on: resultDictionary
 	
 	critiqueGroupName := aCritique rule group.
 	group := resultDictionary at: critiqueGroupName ifAbsentPut: [ 
-		ClyConcreteCritiqueMethodGroup named: critiqueGroupName].
+		ClyConcreteCritiqueMethodGroup named: critiqueGroupName fromClasses: self scope].
 	group addCritique: aCritique
