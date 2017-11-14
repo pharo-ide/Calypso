@@ -5,7 +5,7 @@ testSubgroupsWhenTwoClassesHasMethodsWithSameCritique
 	analyzedClass analyzedClassSideSelectors: #(methodWithHalt).
 	analyzedClass2 := ClyAnalyzedClassStub new.
 	analyzedClass2 analyzedClassSideSelectors: #(methodWithHalt2).
-	group classes: { analyzedClass. analyzedClass2 }.
+	group classScope: { analyzedClass. analyzedClass2 }.
 	self analyzeGroupClasses.
 	
 	actual := group subgroups.

@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"classes"
+		"classScope"
 	],
 	"name" : "ClyMethodGroup",
 	"type" : "normal"

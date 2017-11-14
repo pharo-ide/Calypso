@@ -1,4 +1,4 @@
 accessing
 classAnalysisResults
 	^classAnalysisResults ifNil: [ 
-		classAnalysisResults := classes collect: [ :each | self critic analyzeMethodsOf: each ] ]
+		classAnalysisResults := classScope collect: [ :each | self critic analyzeMethodsOf: each ] ]

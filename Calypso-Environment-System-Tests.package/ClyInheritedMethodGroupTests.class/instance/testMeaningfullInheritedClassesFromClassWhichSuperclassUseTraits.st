@@ -2,7 +2,7 @@ tests
 testMeaningfullInheritedClassesFromClassWhichSuperclassUseTraits
 
 	| actual |
-	group classes: { ClySubclassWithTraitsOfClassWithTraits }.
+	group classScope: { ClySubclassWithTraitsOfClassWithTraits }.
 
 	actual := group meaningfullInheritedClasses asSet.
 	self assert: actual equals: { ClyTraitChild3. ClyTraitChild1. ClyTraitChild2. ClyTraitChild2Child. 

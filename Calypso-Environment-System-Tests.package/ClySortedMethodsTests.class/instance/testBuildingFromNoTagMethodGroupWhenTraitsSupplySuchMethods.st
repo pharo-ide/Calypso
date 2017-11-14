@@ -1,7 +1,7 @@
 tests-untagged methods
 testBuildingFromNoTagMethodGroupWhenTraitsSupplySuchMethods
 	| group |
-	group := ClyNoTagMethodGroup classes: {ClySubclassWithTraitsOfClassWithTraits }.
+	group := ClyNoTagMethodGroup classScope: {ClySubclassWithTraitsOfClassWithTraits }.
 		
 	self retrieveFromGroup: group.
 

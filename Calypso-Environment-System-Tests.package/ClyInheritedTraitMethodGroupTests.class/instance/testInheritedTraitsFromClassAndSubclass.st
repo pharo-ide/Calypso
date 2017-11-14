@@ -2,7 +2,7 @@ tests
 testInheritedTraitsFromClassAndSubclass
 
 	| actual |
-	group classes: { ClyClassWithTraits. ClySubclassWithTraitsOfClassWithTraits}.
+	group classScope: { ClyClassWithTraits. ClySubclassWithTraitsOfClassWithTraits}.
 	actual := group inheritedTraits asSet.
 	
 	self assert: actual equals: { ClyTraitChild3. ClyTraitChild1. ClyTraitChild2. ClyTraitChild2Child. 

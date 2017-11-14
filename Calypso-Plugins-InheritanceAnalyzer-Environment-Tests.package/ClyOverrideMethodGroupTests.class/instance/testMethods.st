@@ -2,7 +2,7 @@ tests
 testMethods
 
 	| selectors |
-	group classes: { ClyClassWhichInheritsAbstractClass }.	
+	group classScope: { ClyClassWhichInheritsAbstractClass }.	
 	
 	selectors := (group methods collect: #selector) sorted.
 	

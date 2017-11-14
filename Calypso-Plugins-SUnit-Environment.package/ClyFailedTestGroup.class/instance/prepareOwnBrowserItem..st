@@ -5,7 +5,7 @@ prepareOwnBrowserItem: myItem
 
 	property := 	ClyTestResultProperty new.
 
-	classes do: [:testCase | | failures errors |
+	classScope do: [:testCase | | failures errors |
 		(testCase isTestCase and: [testCase isAbstract not]) ifTrue: [ 
 			failures := (testCase history at: #failures) size.
 			errors := (testCase history at: #errors) size.

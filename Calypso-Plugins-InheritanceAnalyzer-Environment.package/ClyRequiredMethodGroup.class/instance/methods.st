@@ -1,3 +1,3 @@
 accessing
 methods
-	^classes flatCollect: [ :eachClass |	self methodsToImplementIn: eachClass]
+	^classScope flatCollect: [ :eachClass |	self methodsToImplementIn: eachClass]

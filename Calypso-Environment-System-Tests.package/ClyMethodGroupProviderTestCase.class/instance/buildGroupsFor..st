@@ -1,6 +1,6 @@
 running
 buildGroupsFor: classes
 
-	groupProvider classes: classes.
+	groupProvider classScope: classes.
 	self buildGroups
 	

@@ -1,7 +1,7 @@
 tests-inherited methods
 testBuildingFromInheritedMethodGroupOfObject
 	| group |
-	group := ClyInheritedMethodGroup classes: {Object}.
+	group := ClyInheritedMethodGroup classScope: {Object}.
 		
 	self retrieveFromGroup: group.
 

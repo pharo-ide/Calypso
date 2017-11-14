@@ -4,7 +4,7 @@ canIncludeMethod: aMethod
 	selector := aMethod selector.
 	methodClass := aMethod origin.
 	
-	(classes anySatisfy: [ :each | each == methodClass or: [each inheritsFrom: methodClass]])
+	(classScope anySatisfy: [ :each | each == methodClass or: [each inheritsFrom: methodClass]])
 		 ifFalse: [ ^false ].
 	
 	^(self isAbstractMethod: aMethod) or: [self isClass: methodClass shouldImplement: selector]

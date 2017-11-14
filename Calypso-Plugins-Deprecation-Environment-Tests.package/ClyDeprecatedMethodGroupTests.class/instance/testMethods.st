@@ -2,7 +2,7 @@ tests
 testMethods
 
 	| selectors |
-	group classes: { ClyClassWithDeprecatedMethods }.	
+	group classScope: { ClyClassWithDeprecatedMethods }.	
 	
 	selectors := (group methods collect: #selector) sorted.
 	

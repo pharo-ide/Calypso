@@ -1,6 +1,6 @@
 tests
 testCanNotIncludeAbstractMethodOfNotRelatedClass
 
-	group classes: { ClyClassWhichInheritsAbstractSubclass }.	
+	group classScope: { ClyClassWhichInheritsAbstractSubclass }.	
 	
 	self deny: (group canIncludeMethod: ClyMethodGroup >> #methods)

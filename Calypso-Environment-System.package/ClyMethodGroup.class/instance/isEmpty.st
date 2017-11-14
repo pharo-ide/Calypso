@@ -1,4 +1,5 @@
 testing
 isEmpty
-	^(classes anySatisfy: [ :eachClass | 
-		eachClass localMethods anySatisfy:  [:method | self includesMethod: method ] ]) not
+	classScope methodsDo: [ :method | 
+		(self includesMethod: method) ifTrue: [ ^false ]].
+	^true

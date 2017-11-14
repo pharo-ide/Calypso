@@ -8,6 +8,6 @@ buildTraitItemsFor: classes depth: hierarchyDepth
 	traitsBuilder processedClasses: processedClasses.
 	traitsBuilder buildHierarchicalItems.
 	
-	traitsBuilder items do: [ :each | each actualObject classes: rootClasses ].	
+	traitsBuilder items do: [ :each | each actualObject classScope: rootClasses ].	
 	items addAll: traitsBuilder items.	
 	^processedClasses last: processedClasses size - currentClassesCount

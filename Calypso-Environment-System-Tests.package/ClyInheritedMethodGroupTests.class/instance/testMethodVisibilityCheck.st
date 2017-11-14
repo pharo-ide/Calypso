@@ -1,8 +1,8 @@
 tests
 testMethodVisibilityCheck
 
-	group classes: { Object }.
+	group classScope: { Object }.
 	self deny: group isMethodsVisible.
 
-	group classes: { Object. ProtoObject }.
+	group classScope: { Object. ProtoObject }.
 	self assert: group isMethodsVisible

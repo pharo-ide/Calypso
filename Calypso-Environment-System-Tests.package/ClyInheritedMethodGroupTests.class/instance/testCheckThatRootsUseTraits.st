@@ -1,8 +1,8 @@
 tests
 testCheckThatRootsUseTraits
 
-	group classes: { Object }.
+	group classScope: { Object }.
 	self deny: group isRootsUseTraits.
 
-	group classes: { ClyClassWithTraits }.
+	group classScope: { ClyClassWithTraits }.
 	self assert: group isRootsUseTraits

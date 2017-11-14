@@ -1,7 +1,7 @@
 printing
 printClassesOn: aStream
 	aStream nextPutAll: ruleGroupName.
-	classes ifNotEmpty: [ aStream nextPutAll: ': '].
+	classScope ifNotEmpty: [ aStream nextPutAll: ': '].
 	
 	super printClassesOn: aStream.
 	

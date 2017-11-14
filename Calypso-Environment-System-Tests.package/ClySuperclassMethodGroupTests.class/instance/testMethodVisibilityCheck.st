@@ -3,8 +3,8 @@ testMethodVisibilityCheck
 
 	group superclass: Object.
 	
-	group classes: { ClyClassWithTraits }.	
+	group classScope: { ClyClassWithTraits }.	
 	self deny: group isMethodsVisible.
 
-	group classes: { ClyClassWithTraits. Object }.
+	group classScope: { ClyClassWithTraits. Object }.
 	self assert: group isMethodsVisible

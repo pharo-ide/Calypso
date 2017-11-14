@@ -1,4 +1,4 @@
 testing
 isEmpty
-	^(classes anySatisfy: [ :eachClass |
+	^(classScope anySatisfy: [ :eachClass |
 		self isClassHasToBeImplemented: eachClass]) not

@@ -1,5 +1,5 @@
 instance creation
 variable: aSlot declaredIn: declarationClass classes: classes 
-	^(self classes: classes)
+	^(self classScope: classes)
 		variable: aSlot;
 		declarationClass: declarationClass 

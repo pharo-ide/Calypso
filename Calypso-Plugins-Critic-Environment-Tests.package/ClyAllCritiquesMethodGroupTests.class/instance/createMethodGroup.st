@@ -1,4 +1,4 @@
 running
 createMethodGroup
 	analyzedClass := ClyAnalyzedClassStub new.
-	^ClyAllCritiquesMethodGroup classes: { analyzedClass }
+	^ClyAllCritiquesMethodGroup classScope: { analyzedClass }

@@ -2,7 +2,7 @@ tests
 testMethods
 
 	| selectors |
-	group classes: { ClyAbstractClassExample }.	
+	group classScope: { ClyAbstractClassExample }.	
 	
 	selectors := (group methods collect: #selector) sorted.
 	

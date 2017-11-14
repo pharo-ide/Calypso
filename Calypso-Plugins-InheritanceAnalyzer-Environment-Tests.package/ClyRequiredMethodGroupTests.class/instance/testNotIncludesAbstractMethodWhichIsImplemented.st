@@ -1,6 +1,6 @@
 tests
 testNotIncludesAbstractMethodWhichIsImplemented
 
-	group classes: { ClyClassWhichInheritsAbstractSubclass }.	
+	group classScope: { ClyClassWhichInheritsAbstractSubclass }.	
 	
 	self deny: (group includesMethod: ClyAbstractClassExample >> #abstractMethod1)

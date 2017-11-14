@@ -2,7 +2,7 @@ tests
 testInheritedTraitsFromObjectWithTraits
 
 	| actual |
-	group classes: { ClyClassWithTraits }.
+	group classScope: { ClyClassWithTraits }.
 	
 	actual := group inheritedTraits asArray.
 	

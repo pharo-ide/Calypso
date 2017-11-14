@@ -1,6 +1,6 @@
 tests
 testIncludesOverriddenMethod
 
-	group classes: { ClyAbstractClassExample }.	
+	group classScope: { ClyAbstractClassExample }.	
 	
 	self assert: (group includesMethod: ClyAbstractClassExample>>#overriddenMethod)

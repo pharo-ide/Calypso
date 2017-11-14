@@ -1,6 +1,6 @@
 tests
 testNotIncludesNotAbstractMethod
 
-	group classes: { Point }.	
+	group classScope: { Point }.	
 	
 	self deny: (group includesMethod: Point >> #x)

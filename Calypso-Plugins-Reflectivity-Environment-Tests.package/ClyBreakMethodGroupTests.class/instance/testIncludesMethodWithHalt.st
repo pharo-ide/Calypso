@@ -1,6 +1,6 @@
 tests
 testIncludesMethodWithHalt
 
-	group classes: { ClyClassWithHaltMethods }.	
+	group classScope: { ClyClassWithHaltMethods }.	
 	
 	self assert: (group includesMethod: ClyClassWithHaltMethods>>#haltMethod1)

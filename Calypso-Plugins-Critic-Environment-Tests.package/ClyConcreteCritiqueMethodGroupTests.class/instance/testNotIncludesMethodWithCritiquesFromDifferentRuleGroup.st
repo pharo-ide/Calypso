@@ -1,7 +1,7 @@
 tests
 testNotIncludesMethodWithCritiquesFromDifferentRuleGroup
 	| method result |
-	group classes: { ClyAnalyzedClassStub classSide }.
+	group classScope: { ClyAnalyzedClassStub classSide }.
 	method := ClyAnalyzedClassStub classSide >> #methodWithHalt.
 	result := critic analyze: method.
 	self waitAnalysisComplete.

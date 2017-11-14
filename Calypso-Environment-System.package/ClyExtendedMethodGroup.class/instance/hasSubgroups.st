@@ -1,7 +1,7 @@
 testing
 hasSubgroups
 	| classPackage |
-	^classes anySatisfy: [ :eachClass | 
+	^classScope anySatisfy: [ :eachClass | 
 		classPackage := eachClass package.
 		eachClass localMethods anySatisfy: [:eachMethod | 
 			(eachMethod isDefinedInPackage: classPackage) not]]

@@ -1,4 +1,4 @@
 system changes
 isAffectedByClassChange: aClassAnnouncement
 
-	^classes anySatisfy: [ :each | aClassAnnouncement affectsVariablesOf: each ]
+	^classScope anySatisfy: [ :each | aClassAnnouncement affectsVariablesOf: each ]

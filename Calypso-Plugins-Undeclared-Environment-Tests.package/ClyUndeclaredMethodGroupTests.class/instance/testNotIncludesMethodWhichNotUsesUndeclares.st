@@ -1,6 +1,6 @@
 tests
 testNotIncludesMethodWhichNotUsesUndeclares
 
-	group classes: { Array }.	
+	group classScope: { Array }.	
 	
 	self deny: (group includesMethod: Array>>#asArray)

@@ -1,5 +1,5 @@
 accessing
 methods
-	^classes flatCollect: [ :eachClass | 
+	^classScope flatCollect: [ :eachClass | 
 		(package extensionSelectorsForClass: eachClass) collect: [ :selector |
 				eachClass >> selector ] as: Array ]

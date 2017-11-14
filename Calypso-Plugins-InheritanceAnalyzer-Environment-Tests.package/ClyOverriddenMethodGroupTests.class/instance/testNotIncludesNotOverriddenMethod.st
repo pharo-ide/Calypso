@@ -1,6 +1,6 @@
 tests
 testNotIncludesNotOverriddenMethod
 
-	group classes: { ClyClassWhichInheritsAbstractClass }.	
+	group classScope: { ClyClassWhichInheritsAbstractClass }.	
 	
 	self deny: (group includesMethod: ClyClassWhichInheritsAbstractClass>>#notOverriddenMethod)

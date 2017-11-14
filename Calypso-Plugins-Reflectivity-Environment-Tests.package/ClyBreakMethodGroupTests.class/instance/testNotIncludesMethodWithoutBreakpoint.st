@@ -1,6 +1,6 @@
 tests
 testNotIncludesMethodWithoutBreakpoint
 
-	group classes: { ClyClassWithBreakMethods }.	
+	group classScope: { ClyClassWithBreakMethods }.	
 	
 	self deny: (group includesMethod: ClyClassWithBreakMethods>>#notBreakMethod)

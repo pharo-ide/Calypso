@@ -1,4 +1,4 @@
 instance creation
 classes: classes tag: aString
-	^(self classes: classes)
+	^(self classScope: classes)
 		tag: aString

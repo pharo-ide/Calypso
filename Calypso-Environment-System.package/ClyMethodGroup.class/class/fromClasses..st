@@ -1,4 +1,4 @@
 instance creation
 fromClasses: aClassScope
 	^self new 
-		classes: aClassScope
+		classScope: aClassScope

@@ -6,5 +6,5 @@ comparing
 		ifTrue: [ ^ true ].
 	self class = anObject class
 		ifFalse: [ ^ false ].
-	^ classes size = anObject classes size
-		and: [ classes includesAll: anObject classes ]
+	^ classScope = anObject classScope
+		and: [ classScope includesAll: anObject classes ]

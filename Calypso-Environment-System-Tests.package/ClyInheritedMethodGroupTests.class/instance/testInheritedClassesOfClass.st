@@ -2,7 +2,7 @@ tests
 testInheritedClassesOfClass
 
 	| actual |
-	group classes: { ClyClassWithTraits }.
+	group classScope: { ClyClassWithTraits }.
 
 	actual := group inheritedClasses asArray.
 	self assert: (actual includes: ClyTraitChild1).

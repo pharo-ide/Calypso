@@ -6,4 +6,4 @@ isAffectedByClassChange: aClassAnnouncement
 	modifiedClass := aClassAnnouncement classAffected.
 	superclass isClassSide ifTrue: [ modifiedClass := modifiedClass classSide ].
 	
-	^(classes includes: modifiedClass) or: [ superclass = modifiedClass ]
+	^(classScope includes: modifiedClass) or: [ superclass = modifiedClass ]

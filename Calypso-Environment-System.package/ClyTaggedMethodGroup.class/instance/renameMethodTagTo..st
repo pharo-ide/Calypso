@@ -5,7 +5,7 @@ renameMethodTagTo: newTag
 		each tagWith: newTag.
 		each untagFrom: tag].
 	
-	classes do: [ :each | 
+	classScope do: [ :each | 
 		(each tagsForMethods includes: newTag) 
 			ifFalse: [ each addMethodTag: newTag ].
 		each removeMethodTag: tag]

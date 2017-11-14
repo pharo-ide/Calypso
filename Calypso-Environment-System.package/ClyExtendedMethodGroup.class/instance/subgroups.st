@@ -3,7 +3,7 @@ subgroups
 	| subgroups subgroup classPackage |
 	subgroups := Dictionary new.
 	
-	classes do: [ :eachClass | 
+	classScope do: [ :eachClass | 
 		classPackage := eachClass package.
 		eachClass localMethods 
 			reject: [:eachMethod | eachMethod isDefinedInPackage: classPackage] 

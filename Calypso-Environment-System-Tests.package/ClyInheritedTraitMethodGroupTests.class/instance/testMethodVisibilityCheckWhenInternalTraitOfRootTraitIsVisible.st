@@ -1,6 +1,6 @@
 tests
 testMethodVisibilityCheckWhenInternalTraitOfRootTraitIsVisible
 
-	group classes: { ClySubclassWithTraitsOfClassWithTraits. ClyTraitRoot1 }.
+	group classScope: { ClySubclassWithTraitsOfClassWithTraits. ClyTraitRoot1 }.
 	
 	self assert: group isMethodsVisible

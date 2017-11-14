@@ -1,3 +1,3 @@
 testing
 isBasedOn: aClass
-	^classes includes: aClass
+	^classScope isBasedOn: aClass

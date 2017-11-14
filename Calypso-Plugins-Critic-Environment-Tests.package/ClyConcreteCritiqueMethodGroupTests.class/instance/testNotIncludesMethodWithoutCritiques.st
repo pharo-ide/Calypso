@@ -1,7 +1,7 @@
 tests
 testNotIncludesMethodWithoutCritiques
 	| method result |
-	group classes: { ClyAnalyzedClassStub classSide }.
+	group classScope: { ClyAnalyzedClassStub classSide }.
 	method := ClyAnalyzedClassStub classSide >> #methodWithoutCritiques.
 	result := critic analyze: method.
 	self waitAnalysisComplete.

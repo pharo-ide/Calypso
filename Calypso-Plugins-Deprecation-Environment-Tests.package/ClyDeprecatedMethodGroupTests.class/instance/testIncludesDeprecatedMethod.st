@@ -1,6 +1,6 @@
 tests
 testIncludesDeprecatedMethod
 
-	group classes: { ClyClassWithDeprecatedMethods }.	
+	group classScope: { ClyClassWithDeprecatedMethods }.	
 	
 	self assert: (group includesMethod: ClyClassWithDeprecatedMethods>>#deprecatedMethod1)

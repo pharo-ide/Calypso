@@ -1,6 +1,6 @@
 accessing
 buildSubgroupItems 
 	| builder |
-	builder := ClyClassVariableMethodGroupHierarchyBuilder on: classes.
+	builder := ClyClassVariableMethodGroupHierarchyBuilder on: classScope.
 	builder buildHierarchicalItems.
 	^builder items

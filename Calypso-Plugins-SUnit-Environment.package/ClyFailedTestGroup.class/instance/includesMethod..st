@@ -1,5 +1,5 @@
 testing
 includesMethod: aMethod
-	(classes includes: aMethod origin) ifFalse: [ ^false ].
+	(classScope includes: aMethod origin) ifFalse: [ ^false ].
 	
 	^aMethod isPassedTest not

@@ -2,5 +2,5 @@ building
 addInheritedMethodGroup
 
 	| group |
-	group := ClyInheritedMethodGroup classes: self basisClasses.
+	group := ClyInheritedMethodGroup classScope: self basisClasses.
 	items add: group asCalypsoBrowserItem

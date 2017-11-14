@@ -1,4 +1,4 @@
 testing
 isRootsUseTraits
 
-	^classes anySatisfy: [ :each | each traits notEmpty ]
+	^classScope anySatisfy: [ :each | each traits notEmpty ]

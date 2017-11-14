@@ -2,7 +2,7 @@ tests
 testMethods
 	| selectors |
 	Breakpoint new node: (ClyClassWithBreakMethods >> #breakMethod) ast; always; install.
-	group classes: { ClyClassWithHaltMethods. ClyClassWithBreakMethods }.	
+	group classScope: { ClyClassWithHaltMethods. ClyClassWithBreakMethods }.	
 
 	selectors := (group methods collect: #selector) sorted.
 	

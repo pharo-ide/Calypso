@@ -2,7 +2,7 @@ tests
 testMeaningfullSuperclassesOfClass
 
 	| actual |
-	group classes: { Class }.
+	group classScope: { Class }.
 
 	actual := group meaningfullInheritedClasses asArray.
 	self assert: actual isEmpty

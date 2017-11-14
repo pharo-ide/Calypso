@@ -2,7 +2,7 @@ tests
 testMeaningfullSuperclassesOfObject
 
 	| actual |
-	group classes: { Object }.
+	group classScope: { Object }.
 	
 	actual := group meaningfullInheritedClasses asArray.
 	self assert: actual equals: { ProtoObject }

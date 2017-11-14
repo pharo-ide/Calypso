@@ -1,14 +1,14 @@
 tests
 testCheckThatRootsInheritInterestingClasses
 
-	group classes: { Object }.
+	group classScope: { Object }.
 	self assert: group isRootsInheritInterestingClasses.
 
-	group classes: { ClyClass1FromP1 }.
+	group classScope: { ClyClass1FromP1 }.
 	self deny: group isRootsInheritInterestingClasses.
 
-	group classes: { ClySubclassN1OfClass1FromP1 }.
+	group classScope: { ClySubclassN1OfClass1FromP1 }.
 	self assert: group isRootsInheritInterestingClasses.
 
-	group classes: { ClyTraitChild1  }.
+	group classScope: { ClyTraitChild1  }.
 	self deny: group isRootsInheritInterestingClasses

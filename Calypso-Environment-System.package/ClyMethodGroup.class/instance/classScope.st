@@ -1,3 +1,3 @@
 accessing
-classes
+classScope
 	^ classScope

@@ -1,6 +1,6 @@
 tests
 testIncludesMethodWhichUsesUndeclares
 
-	group classes: { ClyClassWithUndeclares }.	
+	group classScope: { ClyClassWithUndeclares }.	
 	
 	self assert: (group includesMethod: ClyClassWithUndeclares>>#method1WithUndeclares)

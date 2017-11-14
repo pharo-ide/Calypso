@@ -1,4 +1,4 @@
 instance creation
 classes: classes superclass: aClass
-	^(self classes: classes)
+	^(self classScope: classes)
 		superclass: aClass

@@ -2,7 +2,7 @@ tests
 testMethods
 
 	| selectors |
-	group classes: { ClyClassWithUndeclares }.	
+	group classScope: { ClyClassWithUndeclares }.	
 	
 	selectors := (group methods collect: #selector) sorted.
 	

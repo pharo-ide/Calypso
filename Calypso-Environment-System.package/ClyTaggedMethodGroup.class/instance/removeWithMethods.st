@@ -1,4 +1,4 @@
 operations
 removeWithMethods
 	super removeWithMethods.
-	classes do: [ :each | each removeMethodTag: tag ]
+	classScope do: [ :each | each removeMethodTag: tag ]

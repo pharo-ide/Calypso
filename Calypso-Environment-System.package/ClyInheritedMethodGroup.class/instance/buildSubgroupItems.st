@@ -1,6 +1,6 @@
 accessing
 buildSubgroupItems
 	| builder |
-	builder := ClyInheritedMethodGroupSuperclassHierarchyBuilder on: classes.
+	builder := ClyInheritedMethodGroupSuperclassHierarchyBuilder on: classScope.
 	builder buildHierarchicalItems.
 	^builder items

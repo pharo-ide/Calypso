@@ -1,7 +1,7 @@
 tests-extended methods
 testBuildingFromExtendedMethodGroupWhereOnlyTraitSupplyExtentions
 	| group |
-	group := ClyExtendedMethodGroup classes: {ClyClassWithTraits}.
+	group := ClyExtendedMethodGroup classScope: {ClyClassWithTraits}.
 		
 	self retrieveFromGroup: group.
 

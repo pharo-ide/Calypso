@@ -1,3 +1,3 @@
 testing
 canIncludeMethod: aMethod
-	^classes includes: aMethod origin
+	^classScope includes: aMethod origin

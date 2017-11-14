@@ -1,4 +1,4 @@
 system changes
 isAffectedByClassChange: aClassAnnouncement
-	^(classes includes: aClassAnnouncement classAffected)
+	^(classScope includesClassesAffectedBy: aClassAnnouncement)
 		and: [ aClassAnnouncement affectsMethods]

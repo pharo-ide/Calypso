@@ -2,7 +2,7 @@ tests
 testInheritedTraitsFromObjectWithoutTraits
 
 	| actual |
-	group classes: { Object }.
+	group classScope: { Object }.
 	
 	actual := group inheritedTraits asArray.
 	

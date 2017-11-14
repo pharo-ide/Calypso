@@ -1,4 +1,4 @@
 testing
 includesMethod: aMethod
-	^(classes includes: aMethod origin)
+	^(classScope includes: aMethod origin)
 		and: [critic doesObjectHaveCritiques: aMethod]

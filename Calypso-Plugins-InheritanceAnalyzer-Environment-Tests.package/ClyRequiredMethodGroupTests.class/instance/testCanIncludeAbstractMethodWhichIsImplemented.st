@@ -1,6 +1,6 @@
 tests
 testCanIncludeAbstractMethodWhichIsImplemented
 
-	group classes: { ClyClassWhichInheritsAbstractSubclass }.	
+	group classScope: { ClyClassWhichInheritsAbstractSubclass }.	
 	
 	self assert: (group canIncludeMethod: ClyAbstractClassExample >> #abstractMethod1)

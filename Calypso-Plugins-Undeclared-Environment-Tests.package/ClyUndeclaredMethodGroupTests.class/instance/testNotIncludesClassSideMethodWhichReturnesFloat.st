@@ -1,6 +1,6 @@
 tests
 testNotIncludesClassSideMethodWhichReturnesFloat
 
-	group classes: { ClyClassWithUndeclares class }.	
+	group classScope: { ClyClassWithUndeclares class }.	
 	
 	self deny: (group includesMethod: ClyClassWithUndeclares class>>#withFloatReturn)

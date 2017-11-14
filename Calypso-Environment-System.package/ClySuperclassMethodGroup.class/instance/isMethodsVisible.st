@@ -1,3 +1,3 @@
 testing
 isMethodsVisible
-	^classes includes: superclass
+	^classScope includes: superclass

@@ -1,5 +1,5 @@
 testing
 isMethodsVisible
 
-	^classes anySatisfy: [ :each |
-		classes includesAny: each traitComposition allTraits ]
+	^classScope anySatisfy: [ :each |
+		classScope includesAny: each traitComposition allTraits ]

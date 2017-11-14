@@ -2,7 +2,7 @@ tests
 testSubgroupsEnumeration
 
 	scope := ClyMethodGroupScope 
-		of: { ClyExtendedMethodGroup classes: {ClySubclassLOfClass0FromPExtendedByP1}}.
+		of: { ClyExtendedMethodGroup classScope: {ClySubclassLOfClass0FromPExtendedByP1}}.
 	
 	scope methodGroupsDo: [ :each | result add: each].
 	

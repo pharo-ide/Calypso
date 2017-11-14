@@ -1,7 +1,7 @@
 tests-untagged methods
 testBuildingFromNoTagMethodGroup
 	| group |
-	group := ClyNoTagMethodGroup classes: {ClySubclassN1OfClass1FromP1 }.
+	group := ClyNoTagMethodGroup classScope: {ClySubclassN1OfClass1FromP1 }.
 		
 	self retrieveFromGroup: group.
 
