@@ -1,3 +1,4 @@
 accessing
 classesRelatedTo: aClass do: aBlock
-	aClass allSuperclassesDo: aBlock
+	aClass isRootInEnvironment ifTrue: [ ^self ].
+	aBlock value: aClass superclass
