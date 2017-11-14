@@ -1,5 +1,6 @@
-items resolving
+browser item preparation
 prepareOwnBrowserItem: myItem
 	super prepareOwnBrowserItem: myItem.
 	
-	self hasSubgroups ifTrue: [myItem markWithChildrenOf: ClyMethodGroup]
+	myItem markWithChildrenOf: ClyMethod. "There are no groups without methods"
+	self markItemWithSubgroups: myItem

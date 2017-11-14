@@ -1,4 +1,4 @@
-items resolving
+browser item preparation
 collectTraitInformationInto: myEnvironmentItem
 	
 	| traitsGroup traitsGroupItem |

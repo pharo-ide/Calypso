@@ -1,4 +1,4 @@
 testing
 isAppliedToBrowser
 
-	^browser packageView showsResultOf: ClySortedPackages 
+	^browser packageView showsResultOf: ClyAllPackages new

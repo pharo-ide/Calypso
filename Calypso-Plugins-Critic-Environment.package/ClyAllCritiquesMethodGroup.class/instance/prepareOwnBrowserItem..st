@@ -1,4 +1,4 @@
-testing
+browser item preparation
 prepareOwnBrowserItem: myItem
 	super prepareOwnBrowserItem: myItem.
 	

@@ -1,4 +1,4 @@
 testing
 showsResultOf: aQuery
 
-	^self dataSource isBasedOn: aQuery
+	^self dataSource isBasedOnQueryClass: aQuery class

@@ -1,4 +1,4 @@
-items resolving
+browser item preparation
 prepareOwnBrowserItem: myItem
 	| property |
 	super prepareOwnBrowserItem: myItem.
