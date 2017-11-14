@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyPackageExtensionMethods of: package from: classScope
+	^ClyPackageExtensionMethods of: package from: classScope

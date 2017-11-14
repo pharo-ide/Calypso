@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyAbstractMethods from: classScope
+	^ClyAbstractMethods from: classScope

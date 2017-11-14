@@ -1,3 +1,3 @@
 accessing
 methodQuery
-	^methodQuery ifNil: [ self createMethodQuery. methodQuery ]
+	^methodQuery ifNil: [ methodQuery := self createMethodQuery ]

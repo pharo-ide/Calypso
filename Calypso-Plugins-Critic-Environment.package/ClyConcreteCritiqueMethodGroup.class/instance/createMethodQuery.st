@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyConcreteProblemMethods critiqueGroup: ruleGroupName from: classScope
+	^ClyConcreteProblemMethods critiqueGroup: ruleGroupName from: classScope

@@ -1,4 +1,4 @@
-items resolving
+browser item preparation
 prepareBrowserItem: aBrowserItem by: anEnvironmentPlugin
 	^ anEnvironmentPlugin
 		prepareBrowserItem: aBrowserItem

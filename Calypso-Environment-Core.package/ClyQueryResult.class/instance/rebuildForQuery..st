@@ -1,6 +1,7 @@
 queries
 rebuildForQuery: aQuery
 
-	aQuery scope: buildingQuery scope.
+	aQuery scope ifNil: [ 
+		aQuery scope: buildingQuery scope].
 	
 	^environment query: aQuery

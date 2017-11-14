@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyVariableReferences of: { variable } from: classScope
+	^ClyVariableReferences of: { variable } from: classScope

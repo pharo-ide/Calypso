@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyVariableWriters of: { variable } from: classScope
+	^ClyVariableWriters of: { variable } from: classScope

@@ -1,3 +1,3 @@
 accessing
 createMethodQuery
-	methodQuery := ClyUntaggedMethods from: classScope
+	^ClyUntaggedMethods from: classScope

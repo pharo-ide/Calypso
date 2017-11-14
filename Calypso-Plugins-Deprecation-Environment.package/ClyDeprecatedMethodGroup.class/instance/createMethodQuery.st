@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyDeprecatedMethods from: classScope
+	^ClyDeprecatedMethods from: classScope

@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyOverriddenMethods from: classScope
+	^ClyOverriddenMethods from: classScope

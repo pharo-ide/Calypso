@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyUnimplementedMethods from: classScope
+	^ClyUnimplementedMethods from: classScope

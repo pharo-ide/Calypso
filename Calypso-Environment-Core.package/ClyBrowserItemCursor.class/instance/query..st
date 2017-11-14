@@ -1,5 +1,5 @@
 queries
-query: anEnvironmentQueryOrContentClass
+query: aQuery
 	"execute new query from same environment scope"
 
-	^queryResult rebuildForQuery: anEnvironmentQueryOrContentClass
+	^queryResult rebuildForQuery: aQuery

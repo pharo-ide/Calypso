@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyAllExtensionMethods from: classScope
+	^ClyAllExtensionMethods from: classScope

@@ -1,3 +1,3 @@
 accessing
 createMethodQuery
-	methodQuery := ClyTaggedMethods by: tag from: classScope
+	^ClyTaggedMethods by: tag from: classScope

@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyActiveBreakpoints from: classScope
+	^ClyActiveBreakpoints from: classScope

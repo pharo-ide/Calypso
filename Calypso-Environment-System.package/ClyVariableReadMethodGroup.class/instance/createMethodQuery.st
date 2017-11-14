@@ -1,3 +1,3 @@
 initialization
 createMethodQuery
-	methodQuery := ClyVariableReaders of: { variable } from: classScope
+	^ClyVariableReaders of: { variable } from: classScope
