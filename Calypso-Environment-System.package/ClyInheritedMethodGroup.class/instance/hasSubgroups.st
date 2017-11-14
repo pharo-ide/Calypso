@@ -1,4 +1,6 @@
 testing
 hasSubgroups
-	^classScope anySatisfy: [ :each | 
-		each isRootInEnvironment not or: [ each traits notEmpty ] ]
+	classScope classesDo: [ :each | 
+		(each isRootInEnvironment not or: [ each traits notEmpty ])
+			ifTrue: [ ^true ] ].
+	^false

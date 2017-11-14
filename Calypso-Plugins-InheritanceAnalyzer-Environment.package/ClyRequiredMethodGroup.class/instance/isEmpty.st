@@ -1,4 +1,5 @@
 testing
 isEmpty
-	^(classScope anySatisfy: [ :eachClass |
-		self isClassHasToBeImplemented: eachClass]) not
+	classScope classesDo: [ :eachClass |
+		(self isClassHasToBeImplemented: eachClass) ifTrue: [ ^false ]].
+	^true

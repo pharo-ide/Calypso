@@ -1,4 +1,5 @@
 accessing
 classAnalysisResults
 	^classAnalysisResults ifNil: [ 
-		classAnalysisResults := classScope collect: [ :each | self critic analyzeMethodsOf: each ] ]
+		classAnalysisResults := Array streamContents: [ :s |
+			classScope classesDo: [ :each | s nextPut: (self critic analyzeMethodsOf: each) ] ]]

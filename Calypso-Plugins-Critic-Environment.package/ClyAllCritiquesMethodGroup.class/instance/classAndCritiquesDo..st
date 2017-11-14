@@ -1,3 +1,3 @@
 accessing
 classAndCritiquesDo: twoArgsBlock
-	self classes with: self classAnalysisResults do: twoArgsBlock
+	classScope collectAllClasses with: self classAnalysisResults do: twoArgsBlock
