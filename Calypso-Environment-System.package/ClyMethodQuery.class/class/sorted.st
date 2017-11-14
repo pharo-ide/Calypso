@@ -1,4 +1,4 @@
 instance creation
 sorted
 	
-	^self requiredResult: (ClySortedQueryResult using: ClySortMethodFunction ascend)
+	^self sortedBy: ClySortMethodFunction ascend
