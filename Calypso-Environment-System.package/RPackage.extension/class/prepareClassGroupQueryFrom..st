@@ -1,3 +1,3 @@
 *Calypso-Environment-System
 prepareClassGroupQueryFrom: aPackage
-	^ClyAllClassGroups from: ClyPackageScope of: {aPackage}
+	^ClyAllClassGroups sortedFrom: ClyPackageScope of: {aPackage}
