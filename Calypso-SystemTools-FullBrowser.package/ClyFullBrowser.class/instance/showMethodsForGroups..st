@@ -7,7 +7,7 @@ showMethodsForGroups: selectedMethodGroups
 	methodQueries := selectedMethodGroups actualObjects 
 		collect: [ :eachGroup | eachGroup methodQuery].
 	fullQuery := ClyCompositeQuery 
-		with: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascent).
+		with: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascend).
 	methods := navigationEnvironment query: fullQuery.
 	dataSource := ClyCollapsedDataSource for: self on: methods.
 	methodView dataSource: dataSource
