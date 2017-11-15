@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"superclass"
+		"visibleClass"
 	],
-	"name" : "ClySuperclassMethodGroup",
+	"name" : "ClyVisibilityMethodGroup",
 	"type" : "normal"
 }

@@ -1,7 +1,7 @@
 tests-superclass methods
 testBuildingFromSuperclassMethodGroup
 	| group |
-	group := ClySuperclassMethodGroup classes: {ClySubclassN1OfClass1FromP1 } superclass: ClyClass1FromP1.
+	group := ClyVisibilityMethodGroup forScope: {ClySubclassN1OfClass1FromP1 } toShow: ClyClass1FromP1.
 		
 	self retrieveFromGroup: group.
 

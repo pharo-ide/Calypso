@@ -1,3 +1,3 @@
 running
 createMethodGroup
-	^ClySuperclassMethodGroup new
+	^ClyVisibilityMethodGroup new

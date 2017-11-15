@@ -1,3 +1,3 @@
 running
 meaningfullObjectToAssert: resultItem
-	^resultItem actualObject superclass
+	^resultItem actualObject visibleClass

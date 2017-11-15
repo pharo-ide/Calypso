@@ -1,7 +1,9 @@
 building
 fillWith: classes
-	| group |
+	| group actualClassScope |
+	actualClassScope := self scope asScope: ClyClassScope.
+	
 	items := ClyHierarchicallySortedClasses buildItemsOn: classes.
 	items do: [ :each | 
-		group := ClySuperclassMethodGroup classes: self scope superclass: each actualObject.
+		group := ClyVisibilityMethodGroup forScope: actualClassScope toShow: each actualObject.
 		each actualObject: group]

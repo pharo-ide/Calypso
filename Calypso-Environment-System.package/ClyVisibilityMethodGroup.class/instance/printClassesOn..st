@@ -1,4 +1,4 @@
 printing
 printClassesOn: aStream
-	aStream nextPutAll: superclass name; nextPutAll: ': '.
+	aStream nextPutAll: visibleClass name; nextPutAll: ': '.
 	super printClassesOn: aStream.

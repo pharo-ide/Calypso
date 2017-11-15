@@ -1,0 +1,3 @@
+accessing
+methods
+	^visibleClass localMethods

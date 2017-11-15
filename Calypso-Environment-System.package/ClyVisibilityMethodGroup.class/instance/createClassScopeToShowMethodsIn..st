@@ -1,4 +1,4 @@
 operations
 createClassScopeToShowMethodsIn: currentClassScope
 
-	^currentClassScope withExtraBasisObject: superclass
+	^currentClassScope withExtraBasisObject: visibleClass

@@ -1,4 +1,4 @@
 operations
 createClassScopeToHideMethodsIn: currentClassScope
 
-	^currentClassScope withoutBasisObject: superclass
+	^currentClassScope withoutBasisObject: visibleClass

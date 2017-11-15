@@ -1,8 +1,8 @@
 tests-superclass methods
 testBuildingFromSuperclassMethodGroupWhenItUsesTrait
 		| group |
-	group := ClySuperclassMethodGroup 
-		classes: {ClySubclassWithTraitsOfClassWithTraits } superclass: ClyClassWithTraits.
+	group := ClyVisibilityMethodGroup 
+		forScope: {ClySubclassWithTraitsOfClassWithTraits } toShow: ClyClassWithTraits.
 		
 	self retrieveFromGroup: group.
 

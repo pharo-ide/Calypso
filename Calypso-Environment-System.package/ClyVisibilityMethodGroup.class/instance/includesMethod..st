@@ -1,3 +1,3 @@
 testing
 includesMethod: aMethod
-	^aMethod origin == superclass
+	^aMethod origin == visibleClass

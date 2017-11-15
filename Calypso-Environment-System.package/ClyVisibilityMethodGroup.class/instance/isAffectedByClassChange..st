@@ -4,6 +4,6 @@ isAffectedByClassChange: aClassAnnouncement
 	Here we need to carefully analyze class or instance sides depending on what group is represents"
 	| modifiedClass |
 	modifiedClass := aClassAnnouncement classAffected.
-	superclass isClassSide ifTrue: [ modifiedClass := modifiedClass classSide ].
+	visibleClass isClassSide ifTrue: [ modifiedClass := modifiedClass classSide ].
 	
-	^(classScope includes: modifiedClass) or: [ superclass = modifiedClass ]
+	^(classScope includes: modifiedClass) or: [ visibleClass = modifiedClass ]
