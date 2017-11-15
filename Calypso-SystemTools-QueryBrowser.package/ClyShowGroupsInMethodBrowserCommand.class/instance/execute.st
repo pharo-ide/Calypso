@@ -1,7 +1,8 @@
 execution
 execute
 
-	| scope |
-	scope := ClyMethodGroupScope of: methodGroups.
+	| queries fullQuery |
+	queries := methodGroups collect: [:each | each methodQuery].
+	fullQuery := ClyCompositeQuery with: queries.
 	
-	browser browseMethodsFromQuery: ClyAllItemsQuery new inScopes: {scope}
+	browser browseQueryResultOf: fullQuery
