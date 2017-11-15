@@ -1,4 +1,4 @@
-accessing
+execution
 buildResult: aQueryResult in: aNavigationEnvironment
 	
 	| methods |

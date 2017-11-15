@@ -1,4 +1,4 @@
-accessing
+execution
 methodsToImplementIn: aClass
 	| result implementor |
 	result := OrderedCollection new.

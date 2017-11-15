@@ -1,3 +1,6 @@
 building groups
 createMethodGroupInScope: aClassScope
-	^self methodGroupClass fromClasses: aClassScope
+	| methodQuery |
+	methodQuery := self createMethodQueryInScope: aClassScope.
+	
+	^self createMethodGroupInScope: aClassScope for: methodQuery

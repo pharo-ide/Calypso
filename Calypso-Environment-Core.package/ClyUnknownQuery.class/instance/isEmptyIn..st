@@ -1,0 +1,3 @@
+execution
+isEmptyIn: aNavigationEnvironment
+	^true

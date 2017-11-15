@@ -1,3 +1,0 @@
-*Calypso-Environment-System
-fetchResultAs: anEnvironmentContent fromClassHierarchy: aClassHierarchyScope
-	anEnvironmentContent buildFromClassHierarchy: aClassHierarchyScope

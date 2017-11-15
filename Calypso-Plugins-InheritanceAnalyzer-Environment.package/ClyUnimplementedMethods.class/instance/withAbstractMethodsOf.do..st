@@ -1,4 +1,4 @@
-accessing
+execution
 withAbstractMethodsOf: aClass do: aBlock
 
 	aClass localMethods 

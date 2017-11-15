@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"environment",
-		"queryCache",
 		"basisObjects"
 	],
 	"name" : "ClyScope",
