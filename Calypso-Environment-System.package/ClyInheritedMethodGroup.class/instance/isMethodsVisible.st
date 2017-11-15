@@ -1,13 +1,15 @@
 testing
 isMethodsVisible
-
-	classScope do: [ :each |
+	| allClasses |
+	allClasses := classScope collectAllClasses asIdentitySet.
+	
+	classScope classesDo: [ :each |
 		self allTraitsOf: each do: [:user :trait | 
-			(classScope includes: trait) ifTrue: [^true]].
+			(allClasses includes: trait) ifTrue: [^true]].
 		each allSuperclassesDo: [ :superclass | 
-			(classScope includes: superclass) ifTrue: [^true].
+			(allClasses includes: superclass) ifTrue: [^true].
 			self allTraitsOf: superclass do: [:user :trait | 
-				(classScope includes: trait) ifTrue: [^true]].
+				(allClasses includes: trait) ifTrue: [^true]].
 		]
 	].
 	
