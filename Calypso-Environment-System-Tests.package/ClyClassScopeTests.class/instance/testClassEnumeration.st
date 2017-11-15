@@ -5,4 +5,4 @@ testClassEnumeration
 	
 	scope classesDo: [ :each | result add: each].
 	
-	self assert: result equals: scope basisObjects asSet
+	self assert: result asArray equals: scope basisObjects asArray
