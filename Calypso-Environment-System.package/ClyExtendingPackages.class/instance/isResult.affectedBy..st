@@ -1,4 +1,4 @@
 system changes
-isAffectedBy: aSystemAnnouncement
+isResult: aQueryResult affectedBy: aSystemAnnouncement
 	
 	^scope includesMethodsAffectedBy: aSystemAnnouncement 

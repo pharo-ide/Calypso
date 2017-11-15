@@ -1,5 +1,5 @@
 system changes
-isAffectedBy: aSystemAnnouncement
+isResult: aQueryResult affectedBy: aSystemAnnouncement
 	"system critics recompute critiques after any system change"
 	
 	aSystemAnnouncement class = ClyCriticAnalysisDone ifFalse: [ ^false ].

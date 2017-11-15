@@ -1,5 +1,5 @@
 system changes
-isAffectedBy: aSystemAnnouncement
+isResult: aQueryResult affectedBy: aSystemAnnouncement
 	"Normally system shows dirty state of package after any system change.
 	It means that we think that any system change affects packages.
 	But generally it should be responsibility of plugin to know
