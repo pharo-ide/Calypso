@@ -1,3 +1,3 @@
 method groups
-collectMethodGroupProvidersFor: classes
+collectMethodGroupProviders
 	^{ClyBreakMethodGroupProvider new}

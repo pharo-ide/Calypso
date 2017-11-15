@@ -1,4 +1,4 @@
 converting
 withNewBasisObjects: newBasisObjects
 
-	^self class of: newBasisObjects
+	^self class of: newBasisObjects in: environment

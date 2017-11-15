@@ -8,4 +8,5 @@ retrieveChildrenOf: aDataSourceItem
 	queryResult := itemCursor query: query.		
 	children := ClyCollapsedDataSource for: itemsView on: queryResult.
 	children childrenStructure: childrenStructure.
+	children table: table.
 	^children

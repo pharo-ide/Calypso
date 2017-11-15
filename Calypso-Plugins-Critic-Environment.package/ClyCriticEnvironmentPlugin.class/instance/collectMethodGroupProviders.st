@@ -1,5 +1,5 @@
 method groups
-collectMethodGroupProvidersFor: classes
+collectMethodGroupProviders
 	providesMethodGroup ifFalse: [ ^#() ].
 	
 	^{ClyCriticMethodGroupProvider critic: systemCritic}

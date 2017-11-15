@@ -1,4 +1,4 @@
 method groups
-collectMethodGroupProvidersFor: classes 
+collectMethodGroupProviders 
 
 	^{ClyFailedTestGroupProvider new}

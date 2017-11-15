@@ -1,4 +1,4 @@
 method groups
-collectMethodGroupProvidersFor: classes
+collectMethodGroupProviders
 	^{ClyAbstractMethodGroupProvider. ClyOverrideMethodGroupProvider. ClyOverriddenMethodGroupProvider. ClyRequiredMethodGroupProvider}
 		collect: [ :each | each new]

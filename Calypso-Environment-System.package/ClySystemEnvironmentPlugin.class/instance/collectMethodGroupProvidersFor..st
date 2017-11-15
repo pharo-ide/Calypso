@@ -1,3 +1,0 @@
-groups collecting
-collectMethodGroupProvidersFor: classes
-	^#()

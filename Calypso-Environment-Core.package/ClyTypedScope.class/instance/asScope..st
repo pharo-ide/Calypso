@@ -1,4 +1,4 @@
 converting
 asScope: anotherTypedScopeClass
 
-	^anotherTypedScopeClass of: basisObjects
+	^anotherTypedScopeClass of: basisObjects in: environment

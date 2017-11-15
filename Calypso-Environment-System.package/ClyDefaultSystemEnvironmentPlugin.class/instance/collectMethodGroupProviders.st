@@ -1,5 +1,5 @@
 method groups
-collectMethodGroupProvidersFor: classes 
+collectMethodGroupProviders 
 
 	^{ClyInheritedMethodGroupProvider. ClyTaggedMethodGroupProvider. ClyExtendedMethodGroupProvider}
 		collect: [ :each | each new ]
