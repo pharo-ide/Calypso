@@ -1,3 +1,3 @@
 initialization
 createSubgroupsQuery
-	^ClyAllClasses from: (classScope asScope: ClySuperclassScope) as: ClyHierarchicallySortedClasses new
+	^ClyAllClasses from: (classScope asScope: ClySuperclassScope) as: ClyMethodVisibilityGroups new

@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"queryResult"
+		"queryResult",
+		"query"
 	],
 	"name" : "ClyQueryResultTestCase",
 	"type" : "normal"

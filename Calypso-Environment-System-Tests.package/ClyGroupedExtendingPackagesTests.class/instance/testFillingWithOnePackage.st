@@ -6,4 +6,5 @@ testFillingWithOnePackage
 	
 	group := queryResult items first actualObject.
 	self assert: group class equals: ClyExternalPackageMethodGroup.
-	self assert: group package equals: ClyClass1FromP1 package
+	self assert: group package equals: ClyClass1FromP1 package.
+	self assert: group classScope equals: query scope.
