@@ -7,4 +7,4 @@ assertItems: itemValueWithDepthArray
 	and not just from classes which declares given variables "
 
 	queryResult items do: [ :each |
-		self assert: each actualObject classes equals: queryResult buildingQuery scope basisObjects ]
+		self assert: each actualObject classScope equals: queryResult buildingQuery scope ]

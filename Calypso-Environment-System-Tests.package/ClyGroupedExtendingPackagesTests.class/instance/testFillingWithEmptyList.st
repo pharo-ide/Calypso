@@ -3,4 +3,4 @@ testFillingWithEmptyList
 
 	queryResult fillWith: #().
 	
-	self assertItems: #()
+	self assert: queryResult size equals: 0

@@ -8,4 +8,4 @@ fillWith: methods
 			analysisResult critiques do: [ :eachCritique |
 				self buildMethodGroupWithCritique: eachCritique on: groups ]]].
 	
-	groups do: [ :each | items add: each asCalypsoBrowserItem  ]
+	groups do: [ :each | items add: each  ]

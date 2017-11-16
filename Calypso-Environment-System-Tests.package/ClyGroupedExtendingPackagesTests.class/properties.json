@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowserQueryResultTestCase",
+	"super" : "ClyQueryResultTestCase",
 	"category" : "Calypso-Environment-System-Tests-Results",
 	"classinstvars" : [ ],
 	"pools" : [ ],

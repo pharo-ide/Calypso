@@ -3,8 +3,8 @@ testAscending
 
 	function := ClySortItemGroupFunction ascend.
  
-	self deny: (function value: ClyInheritedMethodGroup new value: (ClyTaggedMethodGroup tag: #some) ).
-	self assert: (function value: (ClyTaggedMethodGroup tag: #some) value: ClyInheritedMethodGroup new).
+	self assert: (function value: ClyInheritedMethodGroup new value: (ClyTaggedMethodGroup tag: #some) ).
+	self deny: (function value: (ClyTaggedMethodGroup tag: #some) value: ClyInheritedMethodGroup new).
 	self assert: (function value: ClyInheritedMethodGroup new value: ClyInheritedMethodGroup new).
 	
 	self deny: (function 
