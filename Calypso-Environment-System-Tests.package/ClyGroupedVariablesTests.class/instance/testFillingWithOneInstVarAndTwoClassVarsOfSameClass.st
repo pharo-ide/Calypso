@@ -1,5 +1,5 @@
 tests
-testFillingWithSingleClassInstVarAndTwoClassVars
+testFillingWithOneInstVarAndTwoClassVarsOfSameClass
 
 	queryResult fillWith: { 
 		ClyInstanceVariable named: #instVar declaredIn: ClyClass2FromP1.

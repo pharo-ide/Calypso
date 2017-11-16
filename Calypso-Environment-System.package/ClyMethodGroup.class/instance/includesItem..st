@@ -1,3 +1,3 @@
 testing
 includesItem: aMethod
-	^methodQuery retrievesItem: aMethod
+	^self methodQuery retrievesItem: aMethod
