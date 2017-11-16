@@ -6,4 +6,4 @@ isQueryEmpty: aQuery
 	result ifNotNil: [ 
 		result items ifNotNil: [ :items | ^items isEmpty ] ].
 	
-	aQuery isEmptyIn: self
+	^aQuery isEmptyIn: self
