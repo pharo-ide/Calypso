@@ -6,7 +6,7 @@ buildItemsPerClassFrom: systemObjects
 	systemObjects do: [ :each |
 		item := each asCalypsoBrowserItem.
 		localItems := itemsPerClass
-			at: item systemDefinitionClass ifAbsentPut: [self containerForItemsSortedByName ].
+			at: item systemDefinitionClass ifAbsentPut: [self containerForItemsOfClass ].
 		localItems add: item].
 	
 	^itemsPerClass
