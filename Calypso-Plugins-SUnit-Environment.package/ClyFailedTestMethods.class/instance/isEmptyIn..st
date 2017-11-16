@@ -5,4 +5,4 @@ isEmptyIn: aNavigationEnvironment
 		(each isTestCase and: [each isAbstract not
 			and: [ each hasFailedTest or: [ each hasErrorTest ] ]])
 				ifTrue: [ ^false ]].
-	^false
+	^true
