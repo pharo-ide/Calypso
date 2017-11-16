@@ -1,0 +1,3 @@
+*Calypso-Environment-System
+defaultSortFunctionForCalypso
+	^ClySortByNameFunction ascend
