@@ -41,8 +41,22 @@ And to open browser evaluate:
 ClySystemBrowser open.
 ```
 
-### FAQ
+## Problems
+If you will find many processes hanging in the image it can be caused by some issue of critic plugin implementation. Some people report it in the past. It should be fixed now but there is always possibility that fix is not complete.
 
-## What is a "Project" (as opposed to a "Package")?
+Following line should be enough to disable critic method group with all related computation. It is the main reason of that kind of problems:
+```Smalltalk
+ClyCriticEnvironmentPlugin disableMethodGroup.
+```
+It is not full critic disable. If it not helps then turn off it completely:
+```Smalltalk
+ClyCriticBrowserPlugin disable.
+ClyCriticEnvironmentPlugin disable.
+ClySystemNavigationEnvironment reset.
+```
+And please report this problem on issue tracker or with direct mail to me or Pharo mailing list.
+## FAQ
+
+### What is a "Project" (as opposed to a "Package")?
 While project mode will become the default view in the future, for now it is more like a stub. 
 Some of the current directions are integration with a new package management [Cargo](https://github.com/demarey/cargo) (Christophe is working on it) and a possible Metacello backend.
