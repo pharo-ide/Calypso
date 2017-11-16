@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyConcreteProblemMethods critiqueGroup: ruleGroupName from: classScope

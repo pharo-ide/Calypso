@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyAllProblemMethods from: classScope

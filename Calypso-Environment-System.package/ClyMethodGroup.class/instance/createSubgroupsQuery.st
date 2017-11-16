@@ -1,3 +1,0 @@
-initialization
-createSubgroupsQuery
-	^ClyUnknownQuery new

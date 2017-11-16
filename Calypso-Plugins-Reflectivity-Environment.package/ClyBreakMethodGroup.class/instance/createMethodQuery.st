@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyActiveBreakpoints from: classScope

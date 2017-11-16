@@ -2,5 +2,5 @@ system changes
 providesGroupsAffectedBy: aSystemAnnouncement inScope: aClassScope
 
 	| query |
-	query := self createMethodQueryInScope: aClassScope.
+	query := self createMethodQueryFrom: aClassScope.
 	^query isResult: ClyUnknownQueryResult default affectedBy: aSystemAnnouncement

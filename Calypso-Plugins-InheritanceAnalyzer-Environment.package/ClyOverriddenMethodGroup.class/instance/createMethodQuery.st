@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyOverriddenMethods from: classScope

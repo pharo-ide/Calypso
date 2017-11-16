@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyUndeclaredMethods from: classScope

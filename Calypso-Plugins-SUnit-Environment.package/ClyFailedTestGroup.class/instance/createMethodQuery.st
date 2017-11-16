@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyFailedTestMethods from: classScope

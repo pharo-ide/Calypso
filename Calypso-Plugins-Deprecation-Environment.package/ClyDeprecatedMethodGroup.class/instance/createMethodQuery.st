@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyDeprecatedMethods from: classScope

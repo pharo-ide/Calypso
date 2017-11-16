@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyAllExtensionMethods from: classScope

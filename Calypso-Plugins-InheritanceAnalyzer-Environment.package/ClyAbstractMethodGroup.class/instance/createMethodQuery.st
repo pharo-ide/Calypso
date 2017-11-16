@@ -1,3 +1,0 @@
-initialization
-createMethodQuery
-	^ClyAbstractMethods from: classScope

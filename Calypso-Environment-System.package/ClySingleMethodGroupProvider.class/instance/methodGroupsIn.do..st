@@ -2,7 +2,7 @@ building groups
 methodGroupsIn: aClassScope do: aBlock
 
 	| methodQuery |
-	methodQuery := self createMethodQueryInScope: aClassScope.
+	methodQuery := self createMethodQueryFrom: aClassScope.
 	(aClassScope environment isQueryEmpty: methodQuery) ifTrue: [ ^self ].
 		
-	aBlock value: (self createMethodGroupInScope: aClassScope for: methodQuery)
+	aBlock value: (self createMethodGroupFor: methodQuery from: aClassScope)

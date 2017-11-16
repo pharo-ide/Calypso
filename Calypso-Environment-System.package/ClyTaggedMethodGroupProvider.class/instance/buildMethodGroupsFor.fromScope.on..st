@@ -7,4 +7,4 @@ buildMethodGroupsFor: aMethod fromScope: aClassScope on: groups
 
 	tags reject: [ :eachTag | eachTag beginsWith: '*' ] thenDo: [ :eachTag | 
 		group := groups at: eachTag ifAbsentPut: [ 	
-				ClyTaggedMethodGroup fromClasses: aClassScope tag: eachTag ]]
+			ClyTaggedMethodGroup on: (ClyTaggedMethods by: eachTag from: aClassScope) ]]

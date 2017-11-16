@@ -1,3 +1,3 @@
 accessing
 queryResultClass
-	^ClyHierarchicallySortedMethods new
+	^ClyHierarchicalSystemItems new

@@ -1,3 +1,0 @@
-building groups
-methodGroupClass
-	^ClyDeprecatedMethodGroup
