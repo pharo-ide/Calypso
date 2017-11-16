@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"classes"
-	],
+	"instvars" : [ ],
 	"name" : "ClyMethodGroupProvider",
 	"type" : "normal"
 }
