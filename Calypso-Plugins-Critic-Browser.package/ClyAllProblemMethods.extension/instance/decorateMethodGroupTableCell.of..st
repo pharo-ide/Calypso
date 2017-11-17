@@ -1,7 +1,7 @@
 *Calypso-Plugins-Critic-Browser
-decorateTableCell: anItemCellMorph of: groupItem
+decorateMethodGroupTableCell: anItemCellMorph of: groupItem
 	| icon |
-	super decorateTableCell: anItemCellMorph of: groupItem.
+	super decorateMethodGroupTableCell: anItemCellMorph of: groupItem.
 	
 	(groupItem isMarkedWith: ClyBackgroundProcessingTag) 
 		ifTrue: [ 

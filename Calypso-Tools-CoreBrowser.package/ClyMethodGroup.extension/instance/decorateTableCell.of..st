@@ -1,5 +1,5 @@
-*Calypso-Plugins-Deprecation-Browser
+*Calypso-Tools-CoreBrowser
 decorateTableCell: anItemCellMorph of: groupItem
 	super decorateTableCell: anItemCellMorph of: groupItem.
 	
-	anItemCellMorph nameMorph addEmphasis: TextEmphasis struckOut 
+	methodQuery decorateMethodGroupTableCell: anItemCellMorph of: groupItem

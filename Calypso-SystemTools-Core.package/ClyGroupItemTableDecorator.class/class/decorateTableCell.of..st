@@ -1,4 +1,4 @@
 decoration
 decorateTableCell: anItemCellMorph of: groupItem
 
-	groupItem type decorateTableCell: anItemCellMorph of: groupItem
+	groupItem actualObject decorateTableCell: anItemCellMorph of: groupItem
