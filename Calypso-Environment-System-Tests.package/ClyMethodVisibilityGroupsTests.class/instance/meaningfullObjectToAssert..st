@@ -1,3 +1,3 @@
 running
 meaningfullObjectToAssert: resultItem
-	^resultItem actualObject visibleClass
+	^resultItem actualObject methodQuery scope basisObjects anyOne

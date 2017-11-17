@@ -1,4 +1,4 @@
 queries
-queryContentInNewScope: anEnvironmentScopeClass
+queryContentInNewScope: aScope
 
-	^queryResult rebuildInScopeClass: anEnvironmentScopeClass
+	^queryResult rebuildInNewScope: aScope

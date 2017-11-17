@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"methodGroupItem",
-		"label"
+		"browser",
+		"label",
+		"visibilityLevel"
 	],
 	"name" : "ClyMethodVisibilityMorph",
 	"type" : "normal"

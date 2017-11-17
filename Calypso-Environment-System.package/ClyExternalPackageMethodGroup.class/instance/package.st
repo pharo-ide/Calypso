@@ -1,3 +1,3 @@
 accessing
 package
-	^ package
+	^ methodQuery package

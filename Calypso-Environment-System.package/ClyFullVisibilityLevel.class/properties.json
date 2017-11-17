@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodVisibilityLevel",
+	"category" : "Calypso-Environment-System-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyFullVisibilityLevel",
+	"type" : "normal"
+}

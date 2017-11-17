@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyAbstractMethodGroup on: aMethodQuery
+	^ClyAbstractMethodGroup named: 'abstract' on: aMethodQuery

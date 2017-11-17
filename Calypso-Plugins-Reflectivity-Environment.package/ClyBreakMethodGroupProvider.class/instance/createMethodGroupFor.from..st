@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyBreakMethodGroup on: aMethodQuery 
+	^ClyBreakMethodGroup named: 'breakpoints' on: aMethodQuery 

@@ -5,6 +5,6 @@ switchToMetaLevelScope: scopeClass
 	
 	self changeNavigationStateBy: [
 		metaLevelScope := scopeClass.	
-		newDS := methodGroupView dataSource withNewScope: metaLevelScope.
+		newDS := methodGroupView dataSource withNewScopeClass: metaLevelScope.
 		methodGroupView dataSource: newDS.	
 		self showMethodsForGroups: self methodGroupSelection]

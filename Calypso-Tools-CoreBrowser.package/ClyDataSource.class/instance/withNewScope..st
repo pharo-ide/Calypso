@@ -1,6 +1,6 @@
 queries
-withNewScope: anEnvironmentScopeClass
+withNewScope: aScope
 
 	| newQueryResult |
-	newQueryResult := itemCursor queryContentInNewScope: anEnvironmentScopeClass.
+	newQueryResult := itemCursor queryContentInNewScope: aScope.
 	^self createSameOn: newQueryResult

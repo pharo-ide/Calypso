@@ -5,4 +5,4 @@ createMethodGroupFor: aMethodQuery from: aClassScope
 	subgroupsQuery := ClyExtendingPackages 
 		from: aClassScope 
 		as: ClyGroupedExtendingPackages new.		
-	^ClyExtendedMethodGroup on: aMethodQuery withSubgroupsFrom: subgroupsQuery
+	^ClyExtendedMethodGroup named: 'extensions' on: aMethodQuery withSubgroupsFrom: subgroupsQuery

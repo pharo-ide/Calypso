@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyRequiredMethodGroup on: aMethodQuery 
+	^ClyRequiredMethodGroup named: 'should be implemented'on: aMethodQuery 
