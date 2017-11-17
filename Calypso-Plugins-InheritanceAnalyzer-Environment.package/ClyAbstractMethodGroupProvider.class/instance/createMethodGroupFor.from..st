@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyAbstractMethodGroup named: 'abstract' on: aMethodQuery
+	^ClyMethodGroup named: 'abstract' priority: -10 on: aMethodQuery

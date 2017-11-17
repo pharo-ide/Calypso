@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyOverriddenMethodGroup named: 'overridden' on: aMethodQuery 
+	^ClyMethodGroup named: 'overridden' priority: -10 on: aMethodQuery 

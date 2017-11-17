@@ -1,3 +1,3 @@
 accessing
 priority
-	^self class priority
+	^priority ifNil: [ self class priority ]

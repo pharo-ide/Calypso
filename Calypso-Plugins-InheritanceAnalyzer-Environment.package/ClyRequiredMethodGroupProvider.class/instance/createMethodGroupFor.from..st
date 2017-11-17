@@ -1,3 +1,4 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyRequiredMethodGroup named: 'should be implemented'on: aMethodQuery 
+
+	^ClyMethodGroup named: 'should be implemented' priority: 8.5 on: aMethodQuery 

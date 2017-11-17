@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"name"
+		"name",
+		"priority"
 	],
 	"name" : "ClyItemGroup",
 	"type" : "normal"

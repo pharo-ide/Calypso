@@ -5,5 +5,5 @@ forAllMethods: aMethodQuery from: aClassScope
 		from: (aClassScope asScope: ClySuperclassScope) 
 		as: ClyMethodVisibilityGroups new.		
 				
-	^(self named: 'inherited methods' on: aMethodQuery withSubgroupsFrom: subgroupsQuery)
+	^(self named: 'inherited methods' priority: 10 on: aMethodQuery withSubgroupsFrom: subgroupsQuery)
 		visibilityLevels: { ClyFullVisibilityLevel of: aClassScope }

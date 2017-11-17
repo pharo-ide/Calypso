@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyBreakMethodGroup named: 'breakpoints' on: aMethodQuery 
+	^ClyMethodGroup named: 'breakpoints' priority: 8.4 on: aMethodQuery 

@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyUndeclaredMethodGroup named: 'undeclared' on: aMethodQuery 
+	^ClyMethodGroup named: 'undeclared' priority: 8.4 on: aMethodQuery 

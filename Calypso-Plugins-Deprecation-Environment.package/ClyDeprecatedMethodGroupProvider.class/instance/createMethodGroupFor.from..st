@@ -1,3 +1,3 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
-	^ClyDeprecatedMethodGroup named: 'deprecated' on: aMethodQuery 
+	^ClyMethodGroup named: 'deprecated' priority: -9 on: aMethodQuery 
