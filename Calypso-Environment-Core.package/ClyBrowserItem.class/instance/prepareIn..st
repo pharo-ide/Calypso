@@ -3,7 +3,7 @@ prepareIn: aNavigationEnvironment
 	isPrepared ifTrue: [ ^self ].
 	
 	aNavigationEnvironment pluginsDo: [ :each | 
-		self prepareBy: each].
+		self decorateBy: each].
 	
 	isPrepared := true
 	

@@ -1,3 +1,3 @@
-browser item preparation
+decoration
 markItemWithSubgroups: myItem
 	self hasSubgroups ifTrue: [myItem markWithChildrenOf: ClyClass]

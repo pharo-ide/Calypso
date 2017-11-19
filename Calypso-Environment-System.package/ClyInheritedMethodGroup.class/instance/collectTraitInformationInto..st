@@ -1,4 +1,4 @@
-browser item preparation
+decoration
 collectTraitInformationInto: myEnvironmentItem
 	
 	| traitsGroup traitsGroupItem |

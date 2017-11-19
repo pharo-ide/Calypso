@@ -1,4 +1,4 @@
-browser item preparation
+item convertation
 convertToCalypsoBrowserItem: aClass
 
 	| item |

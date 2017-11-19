@@ -1,2 +1,0 @@
-browser item preparation
-prepareOwnBrowserItem: myItem

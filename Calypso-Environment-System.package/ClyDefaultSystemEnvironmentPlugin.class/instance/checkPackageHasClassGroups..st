@@ -1,4 +1,4 @@
-browser items
+item decoration
 checkPackageHasClassGroups: aPackage
 	| providers items |
 		

@@ -1,4 +1,0 @@
-browser items
-prepareBrowserItem: anItem ofMethod: aMethod
-
-	aMethod isAbstract ifTrue: [ anItem markWith: ClyAbstractItemTag ]

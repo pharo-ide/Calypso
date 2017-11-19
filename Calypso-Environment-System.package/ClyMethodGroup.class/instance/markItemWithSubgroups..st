@@ -1,4 +1,4 @@
-browser item preparation
+decoration
 markItemWithSubgroups: myItem
 
 	

@@ -4,7 +4,7 @@ prepareBrowserItem: anItem ofContext: aContext
 	contextDefinition := ClyMethodContextDefinitionProperty of: aContext.
 	
 	self
-		prepareBrowserItem: contextDefinition definitionMethodItem
+		decorateBrowserItem: contextDefinition definitionMethodItem
 		ofMethod: aContext method.
 		
 	anItem addProperty: contextDefinition
