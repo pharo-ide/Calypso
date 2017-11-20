@@ -1,0 +1,4 @@
+running
+classSampleWhichHasGroup
+
+	^ClyClassWhichInheritsAbstractSubclass

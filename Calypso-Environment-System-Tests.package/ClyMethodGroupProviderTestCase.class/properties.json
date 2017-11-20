@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyGroupProviderTestCase",
-	"category" : "Calypso-Environment-System-Tests",
+	"super" : "ClyItemGroupProviderTestCase",
+	"category" : "Calypso-Environment-System-Tests-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

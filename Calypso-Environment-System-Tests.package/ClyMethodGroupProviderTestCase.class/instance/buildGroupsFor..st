@@ -1,6 +1,8 @@
 running
-buildGroupsFor: classes
+buildGroupsFor: aClass
 
-	groupProvider classScope: classes.
-	self buildGroups
+	| classScope |
 	
+	classScope := ClyClassScope of: { aClass } in: environment.
+	
+	groupProvider methodGroupsIn: classScope do: [ :each | builtGroups add: each ]

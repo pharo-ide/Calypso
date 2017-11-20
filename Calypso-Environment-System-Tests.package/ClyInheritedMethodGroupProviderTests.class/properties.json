@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyMethodGroupTestCase",
+	"super" : "ClyMethodGroupProviderTestCase",
 	"category" : "Calypso-Environment-System-Tests-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClySuperclassMethodGroupTests",
+	"name" : "ClyInheritedMethodGroupProviderTests",
 	"type" : "normal"
 }
