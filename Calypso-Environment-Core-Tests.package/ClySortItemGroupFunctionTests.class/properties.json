@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ClySortFunctionTestCase",
-	"category" : "Calypso-Environment-System-Tests-Queries",
+	"category" : "Calypso-Environment-Core-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

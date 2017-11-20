@@ -1,5 +1,5 @@
 method groups
 collectClassGroupProviders
 
-	^{ClyExtendedClassGroupProvider. ClyTaggedClassGroupProvider}
+	^{ClyExtendedClassGroupProvider. ClyNoTagClassGroupProvider. ClyTaggedClassGroupProvider}
 		collect: [ :each | each new ]

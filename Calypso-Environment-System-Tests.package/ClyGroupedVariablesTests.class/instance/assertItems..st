@@ -6,5 +6,5 @@ assertItems: itemValueWithDepthArray
 	Basis is required to get methods from built groups which are visible only from these classes
 	and not just from classes which declares given variables "
 
-	queryResult items do: [ :each |
-		self assert: each actualObject classScope equals: queryResult buildingQuery scope ]
+	"queryResult items do: [ :each |
+		self assert: each actualObject methodQuery scope equals: queryResult buildingQuery scope ]"
