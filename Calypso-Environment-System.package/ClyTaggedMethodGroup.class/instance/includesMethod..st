@@ -1,3 +1,3 @@
 testing
 includesMethod: aMethod
-	^aMethod tags includes: tag
+	^aMethod tags includes: self tag

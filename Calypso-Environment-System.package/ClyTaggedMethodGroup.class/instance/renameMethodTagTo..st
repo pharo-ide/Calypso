@@ -3,9 +3,9 @@ renameMethodTagTo: newTag
 	
 	self methods do: [ :each |
 		each tagWith: newTag.
-		each untagFrom: tag].
+		each untagFrom: self tag].
 	
 	classScope do: [ :each | 
 		(each tagsForMethods includes: newTag) 
 			ifFalse: [ each addMethodTag: newTag ].
-		each removeMethodTag: tag]
+		each removeMethodTag: self tag]

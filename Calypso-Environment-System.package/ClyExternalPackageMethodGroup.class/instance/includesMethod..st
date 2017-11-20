@@ -1,4 +1,4 @@
 testing
 includesMethod: aMethod
 
-	^aMethod package = package
+	^aMethod package = self package

@@ -2,5 +2,5 @@ operations
 importMethod: aMethod 
 	super importMethod: aMethod.
 	
-	package addMethod: aMethod.	
-	aMethod tagWith: ('*', package name) asSymbol
+	self package addMethod: aMethod.	
+	aMethod tagWith: ('*', self package name) asSymbol

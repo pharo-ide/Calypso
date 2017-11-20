@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"tag"
-	],
+	"instvars" : [ ],
 	"name" : "ClyTaggedMethodGroup",
 	"type" : "normal"
 }

@@ -1,5 +1,5 @@
 printing
 printClassesOn: aStream
 
-	aStream nextPutAll: tag; nextPutAll: ': '.
+	aStream nextPutAll: self tag; nextPutAll: ': '.
 	super printClassesOn: aStream

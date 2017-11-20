@@ -1,4 +1,4 @@
 printing
 printClassesOn: aStream
-	aStream nextPutAll: package name; nextPutAll: ': '.
+	aStream nextPutAll: self package name; nextPutAll: ': '.
 	super printClassesOn: aStream.
