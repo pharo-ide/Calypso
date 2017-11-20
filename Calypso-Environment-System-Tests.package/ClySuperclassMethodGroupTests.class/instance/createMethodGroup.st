@@ -1,3 +1,0 @@
-running
-createMethodGroup
-	^ClyVisibilityMethodGroup new

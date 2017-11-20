@@ -1,4 +1,0 @@
-operations
-createClassScopeToShowMethodsIn: currentClassScope
-
-	^currentClassScope withExtraBasisObject: visibleClass

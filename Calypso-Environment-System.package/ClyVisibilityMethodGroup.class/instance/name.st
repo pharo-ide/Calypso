@@ -1,3 +1,0 @@
-accessing
-name
-	^visibleClass name
