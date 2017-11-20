@@ -1,0 +1,3 @@
+running
+packageSampleWhichHasGroup
+	^ClyClass1FromP1 package

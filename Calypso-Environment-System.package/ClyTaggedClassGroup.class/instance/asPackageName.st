@@ -1,3 +1,3 @@
 converting
 asPackageName
-	^package name , '-', tag
+	^package name , '-', self tag

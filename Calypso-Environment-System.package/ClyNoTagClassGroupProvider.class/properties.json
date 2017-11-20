@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySingleClassGroupProvider",
+	"category" : "Calypso-Environment-System-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyNoTagClassGroupProvider",
+	"type" : "normal"
+}

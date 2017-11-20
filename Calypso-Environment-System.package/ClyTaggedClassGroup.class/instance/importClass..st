@@ -3,4 +3,4 @@ importClass: aClass
 	super importClass: aClass.
 	
 	package = aClass package ifFalse: [ package addClass: aClass ].
-	aClass tagWith: tag
+	aClass tagWith: self tag

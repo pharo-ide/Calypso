@@ -1,10 +1,7 @@
 queries
 classGroupProvidersDo: aBlock
-
-	| package providers |
-	basisObjects size > 1 ifTrue: [ self error: 'Multiple packages is not supported!' ].	
-	package := basisObjects anyOne.
 	
+	| providers |
 	environment pluginsDo: [ :plugin |
-		providers := plugin collectClassGroupProvidersFor: package.
+		providers := plugin collectClassGroupProviders.
 		providers do: aBlock]

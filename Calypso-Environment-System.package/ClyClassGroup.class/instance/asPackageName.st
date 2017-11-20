@@ -1,3 +1,0 @@
-converting
-asPackageName
-	^package name

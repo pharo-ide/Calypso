@@ -1,4 +1,4 @@
 *Calypso-Plugins-FileOut-Environment
 fileOut
 
-	(package classTagNamed: tag) fileOut
+	(package classTagNamed: self tag) fileOut

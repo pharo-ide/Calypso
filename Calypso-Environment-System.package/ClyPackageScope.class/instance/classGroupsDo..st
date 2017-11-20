@@ -2,5 +2,5 @@ queries
 classGroupsDo: aBlock
 
 	self classGroupProvidersDo: [ :groupProvider |
-		groupProvider classGroupsDo: [:group | 
+		groupProvider classGroupsIn: self do: [:group | 
 			aBlock value: group] ]

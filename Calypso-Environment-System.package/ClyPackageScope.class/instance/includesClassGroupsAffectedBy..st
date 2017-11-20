@@ -4,8 +4,8 @@ includesClassGroupsAffectedBy: aSystemAnnouncement
 	| providers |
 	basisObjects do: [ :eachPackage | 
 		environment pluginsDo: [ :plugin |
-			providers := plugin collectClassGroupProvidersFor: eachPackage.
+			providers := plugin collectClassGroupProviders.
 			providers do: [ :eachProvider | 
-				(eachProvider providesGroupsAffectedBy: aSystemAnnouncement)
+				(eachProvider providesGroupsAffectedBy: aSystemAnnouncement inScope: self)
 					ifTrue: [^true]]]].
 	^false

@@ -1,0 +1,3 @@
+running
+packageSampleWhichHasGroup
+	^ClyClass7WithTag1FromP5 package "P5WithTags"

@@ -2,4 +2,4 @@ operations
 removeWithClasses
 
 	super removeWithClasses.
-	package removeClassTag: tag
+	package removeClassTag: self tag

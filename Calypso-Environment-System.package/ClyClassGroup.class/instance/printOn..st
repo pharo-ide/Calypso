@@ -2,5 +2,5 @@ printing
 printOn: aStream
 	super printOn: aStream.
 	aStream nextPut: $(.
-	self printPackageOn: aStream.
+	classQuery printOn: aStream.
 	aStream nextPut: $).

@@ -2,8 +2,8 @@ operations
 renameClassTagTo: newTag
 	self definedClasses do: [ :each |
 		each tagWith: newTag.
-		each untagFrom: tag].
+		each untagFrom: self tag].
 	
 	(package tagsForClasses includes: newTag) 
 		ifFalse: [ package addClassTag: newTag ].
-	package removeClassTag: tag
+	package removeClassTag: self tag

@@ -1,4 +1,4 @@
 accessing
 prepareClassQueriesFrom: classGroups
 
-	^ classGroups collect: [ :each | each createClassQuery ]
+	^ classGroups collect: [ :each | each classQuery ]
