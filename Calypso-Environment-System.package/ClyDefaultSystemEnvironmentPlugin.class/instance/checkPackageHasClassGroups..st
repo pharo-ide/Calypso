@@ -1,7 +1,7 @@
 item decoration
 checkPackageHasClassGroups: aPackage
 	| providers packageScope |
-	packageScope := ClyPackageScope of: { aPackage }.
+	packageScope := ClyPackageScope of: { aPackage } in: environment.
 	
 	environment pluginsDo: [ :plugin |
 		providers := plugin collectClassGroupProviders.
