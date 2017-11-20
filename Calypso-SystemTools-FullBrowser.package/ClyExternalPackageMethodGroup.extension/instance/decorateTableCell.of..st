@@ -4,9 +4,7 @@ decorateTableCell: anItemCellMorph of: groupItem
 	super decorateTableCell: anItemCellMorph of: groupItem.
 	
 	anItemCellMorph definitionIcon: #protocolExtensionIcon.
-	
-	definition :=  groupItem getProperty: ClyExtendedClassDefinitionProperty.
 		
-	(anItemCellMorph browser isPackagePartOfSelection: definition definitionPackage)
+	(anItemCellMorph browser isPackagePartOfSelection: self package)
 		ifTrue: [ anItemCellMorph nameMorph emphasis: TextEmphasis bold emphasisCode]
 		ifFalse: [ anItemCellMorph nameMorph color: Smalltalk ui theme classExtensionColor].
