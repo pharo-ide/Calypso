@@ -1,7 +1,7 @@
-method group decoration
-decorateMethodGroupItem: methodGroupItem
+item group decoration
+decorateItemGroup: methodGroupItem
 	| property |
-	super decorateMethodGroupItem: methodGroupItem.
+	super decorateItemGroup: methodGroupItem.
 	
 	property := 	ClyTestResultProperty new.
 	scope classesDo: [:testCase | | failures errors |

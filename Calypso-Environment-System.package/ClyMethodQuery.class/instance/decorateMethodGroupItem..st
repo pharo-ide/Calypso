@@ -1,2 +1,0 @@
-method group decoration
-decorateMethodGroupItem: aBrowserItem
