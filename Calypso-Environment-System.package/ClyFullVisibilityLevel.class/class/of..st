@@ -1,4 +1,4 @@
 instance creation
 of: aClassScope
-	^(self of: aClassScope)
+	^(super of: aClassScope)
 		extraClassScope: (aClassScope asScope: ClySuperclassScope)
