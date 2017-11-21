@@ -1,4 +1,4 @@
 printing
 printVariables
 
-	^',' join: (variables collect: #name)
+	^',' join: (variableQuery collect: #name)

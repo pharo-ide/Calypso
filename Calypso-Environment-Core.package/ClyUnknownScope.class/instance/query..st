@@ -1,3 +1,3 @@
 queries
-query: anEnvironmentContentClass
+query: aQuery
 	^ClyUnknownQueryResult default

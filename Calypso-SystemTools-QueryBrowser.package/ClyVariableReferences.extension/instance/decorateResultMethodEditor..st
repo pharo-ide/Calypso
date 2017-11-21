@@ -1,4 +1,4 @@
 *Calypso-SystemTools-QueryBrowser
 decorateResultMethodEditor: aMethodEditor
 
-	aMethodEditor selectAnyVariable: (variables collect: #name)
+	aMethodEditor selectAnyVariable: (variableQuery collect: #name)

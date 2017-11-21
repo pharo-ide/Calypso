@@ -1,3 +1,3 @@
 selection-variables
 selectedVariables
-	^self selectedObjects
+	^self selectedObjects collect: [ :each | each variable ]

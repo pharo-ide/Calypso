@@ -1,6 +1,0 @@
-execution
-isEmptyIn: aNavigationEnvironment
-
-	scope classesDo: [ :eachClass |
-		(self isClassHasToBeImplemented: eachClass) ifTrue: [ ^false ]].
-	^true

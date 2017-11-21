@@ -1,3 +1,3 @@
 accessing
 variables
-	^ variables
+	^ variableQuery

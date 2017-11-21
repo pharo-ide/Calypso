@@ -1,8 +1,7 @@
 tests
 testCheckIfEmpty
-
 	query scope: (ClyMethodScope of: {self class >> self targetSelector}).
-	self deny: (query isEmptyIn: environment).
-
+	self deny: query checkEmptyResult.
+	
 	query scope: (ClyMethodScope of: {self class >> #messageImplementor2}).
-	self assert: (query isEmptyIn: environment)
+	self assert: query checkEmptyResult

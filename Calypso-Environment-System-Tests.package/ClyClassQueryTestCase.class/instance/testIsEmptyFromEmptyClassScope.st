@@ -1,5 +1,5 @@
 tests
 testIsEmptyFromEmptyClassScope
-
 	query scope: (ClyClassScope of: #()).
-	self assert: (query isEmptyIn: environment)
+	
+	self assert: query checkEmptyResult

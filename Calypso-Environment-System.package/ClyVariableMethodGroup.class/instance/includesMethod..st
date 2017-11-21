@@ -1,3 +1,3 @@
 testing
 includesMethod: aMethod
-	^(variable isReadIn: aMethod) or: [ variable isWrittenIn: aMethod]
+	^(self variable isReadIn: aMethod) or: [ self variable isWrittenIn: aMethod]

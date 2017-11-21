@@ -1,6 +1,5 @@
 tests
 testIsEmptyWhenThereAreNoSubqueries
-
 	query subqueries: {}.
 	
-	self assert: (query isEmptyIn: environment)
+	self assert: query checkEmptyResult

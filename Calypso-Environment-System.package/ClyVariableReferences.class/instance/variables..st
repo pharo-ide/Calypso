@@ -1,3 +1,3 @@
 accessing
 variables: anObject
-	variables := anObject
+	variableQuery := anObject

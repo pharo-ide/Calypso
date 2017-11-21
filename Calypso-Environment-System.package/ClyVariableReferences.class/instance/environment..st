@@ -1,0 +1,4 @@
+accessing
+environment: aNavigationEnvironment
+	super environment: aNavigationEnvironment.
+	variableQuery environment: aNavigationEnvironment

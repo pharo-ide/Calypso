@@ -1,8 +1,7 @@
 tests
 testCheckIfEmpty
-
 	query scope: (ClyMethodScope of: {ClyClassWithUndeclares >> #method1WithUndeclares}).
-	self deny: (query isEmptyIn: environment).
-
+	self deny: query checkEmptyResult.
+	
 	query scope: (ClyMethodScope of: {Object >> #printString}).
-	self assert: (query isEmptyIn: environment)
+	self assert: query checkEmptyResult

@@ -4,4 +4,4 @@ comparing
 
 	self == anObject ifTrue: [ ^ true ].
 	super = anObject ifFalse: [ ^ false ].
-	^ variables = anObject variables
+	^ variableQuery = anObject variableQuery

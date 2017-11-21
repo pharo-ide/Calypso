@@ -7,5 +7,5 @@ fillWith: classes
 	items do: [ :each | 
 		group := ClyInheritedMethodGroup 
 			forMethodsOf: each actualObject 
-			from:  actualClassScope.
+			from: actualClassScope.
 		each actualObject: group]

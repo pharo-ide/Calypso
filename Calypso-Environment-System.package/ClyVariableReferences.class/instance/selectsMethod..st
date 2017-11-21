@@ -1,5 +1,7 @@
 testing
 selectsMethod: aMethod
 	
-	^variables anySatisfy: [ :each |
-		self isMethod: aMethod referencedVar: each  ]
+	| vars |
+	vars := scope environment query: variableQuery.
+	
+	^self doesMethod: aMethod useAnyOf: vars items

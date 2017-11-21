@@ -1,9 +1,8 @@
 tests
 testCheckIfEmpty
-
-	query scope: (ClyMethodScope of: {
+	query scope:	(ClyMethodScope of: {
 		ClySubclassLOfClass0FromPExtendedByP1 >> #extentionMethodFromSubclassL}).
-	self deny: (query isEmptyIn: environment).
-
+	self deny: query checkEmptyResult.
+	
 	query scope: (ClyMethodScope of: {ClyClass1FromP1 >> #tag1Method1}).
-	self assert: (query isEmptyIn: environment)
+	self assert: query checkEmptyResult

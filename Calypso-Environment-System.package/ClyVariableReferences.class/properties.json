@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"variables"
+		"variableQuery"
 	],
 	"name" : "ClyVariableReferences",
 	"type" : "normal"

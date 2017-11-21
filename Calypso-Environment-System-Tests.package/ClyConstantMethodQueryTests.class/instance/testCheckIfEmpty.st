@@ -1,4 +1,3 @@
 tests
 testCheckIfEmpty
-
-	self deny: (query isEmptyIn: environment)
+	self deny: query checkEmptyResult
