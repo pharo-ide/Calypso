@@ -1,3 +1,6 @@
 running
 createQuery
-	^ClyUnimplementedMethods from: ClyClassScope of: { ClyClassWhichInheritsAbstractSubclass }
+	^ClyUnimplementedMethods 
+		from: ClyClassScope 
+		of: { ClyClassWhichInheritsAbstractSubclass }
+		in: environment

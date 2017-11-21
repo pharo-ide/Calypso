@@ -3,6 +3,6 @@ testComparisonWithDifferentScope
 
 	| scope2 |
 	scope := self createSampleScope.
-	scope2 := ClyScopeExample of: #(basisObject).
+	scope2 := ClyScopeExample of: #(basisObject) in: environment.
 	
 	self deny: scope = scope2

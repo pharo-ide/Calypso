@@ -3,8 +3,9 @@ setUp
 	| query |
 	super setUp.
 	
-	query := ClyQueryExampleReturningScopeBasis requiredResult: self createQueryResult.
-	queryResult := environment 
-		query: query inScope: (ClyScopeExample of: { Object. Array. String }).
-	
+	query := ClyQueryExampleReturningScopeBasis 
+		from: (ClyScopeExample of: { Object. Array. String } in: environment)
+		as: self createQueryResult.
+		
+	queryResult := query execute.	
 	cursor := queryResult openBrowserCursor
