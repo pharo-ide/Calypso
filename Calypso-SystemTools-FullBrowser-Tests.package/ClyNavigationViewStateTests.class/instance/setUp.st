@@ -7,6 +7,6 @@ setUp
 	viewDataSource := ClyCollapsedDataSource on: packages.
 	viewDataSource childrenStructure: { RPackage -> #queryCreationSelector:in: }.
 	viewDataSource open.
-	navigationView := ClyNavigationView for: browser.
+	navigationView := ClyQueryView for: browser.
 	navigationView dataSource: viewDataSource.
 	navigationView selection selectItems: { self selectedItem }

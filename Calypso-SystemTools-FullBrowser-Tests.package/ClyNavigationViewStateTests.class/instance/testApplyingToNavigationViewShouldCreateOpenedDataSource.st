@@ -3,7 +3,7 @@ testApplyingToNavigationViewShouldCreateOpenedDataSource
 
 	| newView |
 	self snapshotNavigationState.
-	newView := ClyNavigationView for: browser.
+	newView := ClyQueryView for: browser.
 	navigationState applyTo: newView.
 	 
 	self assert: newView dataSource ~~ navigationState dataSource.

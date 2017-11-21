@@ -5,7 +5,7 @@ testApplyingToNavigationViewShouldRestoreExpandedItems
 	self selectedItem expand.
 	
 	self snapshotNavigationState.
-	newView := ClyNavigationView for: browser.
+	newView := ClyQueryView for: browser.
 	navigationState applyTo: newView.
 
 	expandedItem := navigationState dataSource expandedItems first.

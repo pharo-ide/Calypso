@@ -1,6 +1,6 @@
 initialization
 newNavigationView
 	| view |
-	view := ClyNavigationView for: self. 
+	view := ClyQueryView for: self. 
 	navigationViews add: view.
 	^view

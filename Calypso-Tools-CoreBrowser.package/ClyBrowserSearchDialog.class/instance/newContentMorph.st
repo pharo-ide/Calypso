@@ -1,6 +1,6 @@
 initialization
 newContentMorph
-	itemsView := ClyNavigationView for: self.
+	itemsView := ClyQueryView for: self.
 	itemsView width: 250.
 		
 	itemsView whenDoubleClickDo: [:ann | self ok ].

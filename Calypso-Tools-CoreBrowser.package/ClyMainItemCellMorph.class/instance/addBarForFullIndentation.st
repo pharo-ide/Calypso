@@ -1,8 +1,7 @@
 building
 addBarForFullIndentation
 
-	| placeForExpansionRequired mainItemsCount absentItemsCount requiredWidth |
-	placeForExpansionRequired := item rootDataSource definesChildren.
+	| mainItemsCount absentItemsCount requiredWidth |
 	mainItemsCount := 0.
 	absentItemsCount := mainItemsCount - submorphs size.
 
