@@ -1,4 +1,4 @@
 instance creation
-for: anEnvironmentContent
+for: aBrowserQueryResult
 	^self new 
-		queryResult: anEnvironmentContent 
+		queryResult: aBrowserQueryResult 

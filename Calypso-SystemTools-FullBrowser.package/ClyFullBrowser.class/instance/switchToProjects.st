@@ -4,8 +4,8 @@ switchToProjects
 	projects := navigationEnvironment querySystemFor: ClySortedProjects.	
 	dataSource := ClyCollapsedDataSource on: projects.
 	dataSource childrenStructure: { 
-		ClyManagedProject -> #prepareProjectItemsQueryFrom:. 
-		ClyPackageGroup -> #prepareProjectItemsQueryFrom:.
-		RPackage -> #prepareClassGroupQueryFrom: } .	
+		ClyManagedProject -> #prepareProjectItemsQueryFrom:in:. 
+		ClyPackageGroup -> #prepareProjectItemsQueryFrom:in:.
+		RPackage -> #prepareClassGroupQueryFrom:in: } .	
 	
 	packageView dataSource: dataSource

@@ -1,4 +1,4 @@
 instance creation
-on: aQueryResult
+on: aQuery
 	^self new 
-		queryResult: aQueryResult
+		query: aQuery

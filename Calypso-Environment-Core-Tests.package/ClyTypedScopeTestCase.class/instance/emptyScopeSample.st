@@ -1,3 +1,3 @@
 running
 emptyScopeSample
-	^self scopeClass of: #()
+	^self scopeClass of: #() in: environment

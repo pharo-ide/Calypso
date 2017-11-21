@@ -1,4 +1,7 @@
 controlling
 open
 	
-	self queryResult: metadata repeatQuery
+	self isClosed ifFalse: [ self close ].
+	
+	itemCursor := query openBrowserCursor.
+	itemCursor itemObserver: self

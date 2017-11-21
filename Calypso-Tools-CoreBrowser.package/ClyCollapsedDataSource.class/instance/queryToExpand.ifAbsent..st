@@ -8,3 +8,4 @@ queryToExpand: aDataSourceItem ifAbsent: absentBlock
 	^aDataSourceItem type 
 		perform: itemTypeAndQuerySelector value 
 		with: aDataSourceItem actualObject
+		with: self queryEnvironment

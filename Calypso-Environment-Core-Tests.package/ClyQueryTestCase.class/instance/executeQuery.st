@@ -1,5 +1,5 @@
 running
 executeQuery
 
-	result := environment query: query.
+	result := query execute.
 	resultItems := result items

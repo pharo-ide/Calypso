@@ -1,12 +1,12 @@
 controlling
 retrieveChildrenOf: aDataSourceItem
-	| query children queryResult |
-	query := self 
+	| childQuery childDataSource |
+	childQuery := self 
 		queryToExpand: aDataSourceItem 
 		ifAbsent: [self error: 'cant retrieve children from ', aDataSourceItem printString].
 	
-	queryResult := itemCursor query: query.		
-	children := ClyCollapsedDataSource for: itemsView on: queryResult.
-	children childrenStructure: childrenStructure.
-	children table: table.
-	^children
+	childDataSource := ClyCollapsedDataSource on: childQuery for: itemsView.
+	childDataSource childrenStructure: childrenStructure.
+	childDataSource table: table.
+	childDataSource open.
+	^childDataSource

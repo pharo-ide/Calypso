@@ -1,13 +1,12 @@
 navigation
 showMethodsForGroups: selectedMethodGroups
 		
-	| methodQueries fullQuery methods dataSource |
+	| methodQueries fullQuery dataSource |
 	selectedMethodGroups isEmpty ifTrue: [ ^self showAllMethods].
 
 	methodQueries := selectedMethodGroups actualObjects 
 		collect: [ :eachGroup | eachGroup methodQuery].
 	fullQuery := ClyCompositeQuery 
 		with: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascend).
-	methods := navigationEnvironment query: fullQuery.
-	dataSource := ClyCollapsedDataSource for: self on: methods.
+	dataSource := ClyCollapsedDataSource on: fullQuery.
 	methodView dataSource: dataSource

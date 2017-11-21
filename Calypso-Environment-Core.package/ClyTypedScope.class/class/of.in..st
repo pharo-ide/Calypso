@@ -1,5 +1,6 @@
 instance creation
 of: basisObjects in: anEnvironment
 
-	^(self of: basisObjects) 
-		environment: anEnvironment
+	^self new
+		environment: anEnvironment;
+		basisObjects: basisObjects

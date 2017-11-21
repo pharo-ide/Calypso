@@ -1,7 +1,7 @@
 tests
 testExecution
 	| scope mainQuery |
-	scope := ClyScopeExample of: {  self class superclass. self class  }.
+	scope := ClyScopeExample of: {  self class superclass. self class } in: environment.
 	mainQuery := ClyQueryExampleReturningScopeBasis from: scope.
 	query subqueries: {mainQuery}.
 	

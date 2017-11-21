@@ -1,7 +1,7 @@
 tests
 testCreationOnSingleSubscopeOfMultipleObjects
 	| subscope |
-	subscope := ClyScopeExample of: #(basisObject1 basisObject2).
+	subscope := ClyScopeExample of: #(basisObject1 basisObject2) in: environment.
 	
 	scope := ClyCompositeScope on: {subscope}.
 	

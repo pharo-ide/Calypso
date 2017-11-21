@@ -3,7 +3,7 @@ forMethodsOf: aClass from: aClassScope
 	
 	| methodQuery |
 	methodQuery := ClyAllMethods 
-		from: (ClyClassScope of: { aClass } in: aClassScope environment).
+		from: (aClassScope asScope: ClyClassScope of: { aClass }).
 				
 	^(self named: aClass name on: methodQuery)
 		visibilityLevels: { ClySuperclassVisibilityLevel of: aClassScope toShow: aClass }
