@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyOverriddenMethods new
+	^ClyOverriddenMethods from: ClyClassScope of: {Object} in: environment

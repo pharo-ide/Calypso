@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyAllVariables new
+	^ClyAllVariables from: ClyClassScope of: { Object } in: environment

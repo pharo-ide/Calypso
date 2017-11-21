@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyAllMethodGroups new
+	^ClyAllMethodGroups from: ClyClassScope of: { Object } in: environment

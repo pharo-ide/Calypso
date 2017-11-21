@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyRestUntaggedClasses new
+	^ClyRestUntaggedClasses from: ClyPackageScope of: { Object package } in: environment

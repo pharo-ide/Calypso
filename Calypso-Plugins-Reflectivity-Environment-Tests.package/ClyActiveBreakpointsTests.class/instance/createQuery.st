@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyActiveBreakpoints new
+	^ClyActiveBreakpoints from: ClyClassScope of: {ClyClassWithHaltMethods} in: environment

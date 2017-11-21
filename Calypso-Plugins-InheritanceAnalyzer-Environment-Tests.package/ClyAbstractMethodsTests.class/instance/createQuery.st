@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyAbstractMethods new
+	^ClyAbstractMethods from: ClyClassScope of: {ClyAbstractClassExample} in: environment

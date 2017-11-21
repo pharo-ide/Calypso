@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyUndeclaredMethods new 
+	^ClyUndeclaredMethods from: (ClyClassScope of: {ClyClassWithUndeclares} in: environment)

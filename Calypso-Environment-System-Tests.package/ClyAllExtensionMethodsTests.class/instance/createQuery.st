@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyAllExtensionMethods new
+	^ClyAllExtensionMethods from: ClyClassScope of: {Object} in: environment

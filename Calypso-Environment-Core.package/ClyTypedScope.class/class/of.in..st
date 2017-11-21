@@ -1,6 +1,6 @@
 instance creation
-of: basisObjects in: anEnvironment
+of: basisObjects in: aNavigationEnvironment
 
 	^self new
-		environment: anEnvironment;
+		environment: aNavigationEnvironment;
 		basisObjects: basisObjects

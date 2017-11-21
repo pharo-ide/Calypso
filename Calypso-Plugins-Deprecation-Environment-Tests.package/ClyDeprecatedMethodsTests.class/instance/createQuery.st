@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyDeprecatedMethods new
+	^ClyDeprecatedMethods from: ClyClassScope of: {Object} in: environment

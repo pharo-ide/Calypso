@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyExtendingPackages new
+	^ClyExtendingPackages from: (ClyClassScope of: {Object} in: environment)
