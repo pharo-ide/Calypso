@@ -1,7 +1,7 @@
 navigation
 showMethodsForClasses: selectedClasses
 		
-	| dataSource newScope |
+	| dataSource |
 	self selectHierarchyPackageOf: selectedClasses.
 	methodGroupQuery := methodGroupQuery withScopeOf: selectedClasses actualObjects.
 	dataSource := ClyCollapsedDataSource on: methodGroupQuery.

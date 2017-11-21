@@ -1,6 +1,6 @@
 navigation
 showQueryResult
-	| result newDS |
+	| newDS |
 	(queryScopes includes: systemQuery scope) ifFalse: [ 
 		queryScopes add: systemQuery scope ].	
 		

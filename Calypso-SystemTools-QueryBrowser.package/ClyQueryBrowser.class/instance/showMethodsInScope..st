@@ -1,6 +1,6 @@
 navigation
 showMethodsInScope: anEnvironmentScope
-	| result newDS |
+	| newDS |
 	(queryScopes includes: anEnvironmentScope) ifFalse: [ queryScopes add: anEnvironmentScope ].	
 		
 	self changeNavigationStateBy: [

@@ -3,8 +3,7 @@ requestRemoveMethodStrategyFor: methods
 	| selectors result strategies caption  senders |
 	selectors := methods collect: [ :each | each selector ] as: IdentitySet.	
 	selectors := selectors asArray.
-	senders := navigationEnvironment 
-		query: (ClyMessageSenders of: selectors) inScope: self systemScope.
+	senders := (ClyMessageSenders of: selectors from: self systemScope) execute.
 	(self allowSilentlyRemoveMethods: methods whichHaveSenders: senders)
 		ifTrue: [ ^SycSilentlyRemoveMethodStrategy new ].
 

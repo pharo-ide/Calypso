@@ -1,10 +1,9 @@
 private
-showItemsOf: aQuery inScope: anEnvironmentScope
+showItemsOf: aQuery inScope: aScope
 
-	| result dataSource |
-	result := browser navigationEnvironment query: aQuery inScope: anEnvironmentScope.
-	
-	dataSource := ClyCollapsedDataSource on: result.
+	| dataSource |
+	aQuery bindTo: aScope in: browser navigationEnvironment.
+	dataSource := ClyCollapsedDataSource on: aQuery.
 	dataSource numberOfRows < 10
 		ifTrue: [ itemsView height: 100 ]
 		ifFalse: [ itemsView height: 300; enableFilter ].
