@@ -1,4 +1,4 @@
 testing
-hasMetaProperty: anEnvironmentPropertyClass
+hasMetaProperty: aPropertyClass
 
-	^metadata hasProperty: anEnvironmentPropertyClass
+	^itemCursor hasMetaProperty: aPropertyClass

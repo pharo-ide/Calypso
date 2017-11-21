@@ -1,0 +1,4 @@
+testing
+hasMetaProperty: anEnvironmentPropertyClass
+
+	^metadata hasProperty: anEnvironmentPropertyClass

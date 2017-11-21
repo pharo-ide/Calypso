@@ -1,4 +1,4 @@
 testing
 isBasedOn: aQuery
 
-	^metadata isAboutQuery: aQuery
+	^query = aQuery

@@ -1,4 +1,4 @@
 testing
-isBasedOnScope: anEnvironmentScopeClass
+isBasedOnScope: aScope
 
-	^metadata isBuiltInScope: anEnvironmentScopeClass
+	^query isBasedOnScopeClass: aScope

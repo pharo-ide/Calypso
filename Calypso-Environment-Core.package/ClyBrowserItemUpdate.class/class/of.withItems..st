@@ -1,5 +1,5 @@
 instance creation
-of: anEnvironmentContent withItems: anEnvironmentContentCache
+of: aBrowserQueryResult withItems: aBrowserQueryCache
 	^self new 
-		metadata: anEnvironmentContent metadata;
-		itemCache: anEnvironmentContentCache
+		metadata: aBrowserQueryResult metadata;
+		itemCache: aBrowserQueryCache

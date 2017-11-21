@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeOf: basisObject
 
-	^metadata isBuiltInScopeOf: basisObject
+	^query isBasedOnScopeOf: basisObject

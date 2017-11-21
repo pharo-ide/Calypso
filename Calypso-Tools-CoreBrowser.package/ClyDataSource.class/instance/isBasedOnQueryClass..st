@@ -1,4 +1,4 @@
 testing
 isBasedOnQueryClass: aQueryClass
 
-	^metadata buildingQuery class = aQueryClass
+	^query class = aQueryClass

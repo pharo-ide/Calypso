@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeOfSingleObject
 
-	^metadata isBuiltInScopeOfSingleObject 
+	^query isBasedOnScopeOfSingleObject 

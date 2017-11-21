@@ -1,4 +1,4 @@
 testing
 isBasedOnScopeOfMultipleObjects
 
-	^metadata isBuiltInScopeOfMultipleObjects 
+	^query isBasedOnScopeOfMultipleObjects
