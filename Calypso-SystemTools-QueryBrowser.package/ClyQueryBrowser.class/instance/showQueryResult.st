@@ -6,7 +6,6 @@ showQueryResult
 		
 	self changeNavigationStateBy: [
 		activeScope := systemQuery scope.
-		result := navigationEnvironment query: systemQuery.
-		newDS := ClyCollapsedDataSource on: result.	 	
+		newDS := ClyCollapsedDataSource on: systemQuery.	 	
 		resultView dataSource: newDS.
 		self ensureSelectedItem]

@@ -2,7 +2,6 @@ tests
 testConvertingWithNewBasisObjects
 	| convertedScope |
 	scope := self singleScopeSample.
-	scope environment: ClyNavigationEnvironment new.
 	
 	convertedScope := scope withNewBasisObjects: {self extraBasisSample}.
 	
@@ -12,4 +11,4 @@ testConvertingWithNewBasisObjects
 		equals: {self extraBasisSample} asSet.
 	self assert: convertedScope basisSize equals: 1.
 	self assert: convertedScope environment notNil.
-	self assert: convertedScope environment equals: scope environment.
+	self assert: convertedScope environment equals: environment

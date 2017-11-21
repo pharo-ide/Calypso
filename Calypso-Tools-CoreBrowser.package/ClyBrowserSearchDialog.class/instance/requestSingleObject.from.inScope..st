@@ -1,9 +1,9 @@
 requests
-requestSingleObject: dialogTitle from: anEnvironmentQuery inScope: anEnvironmentScope
+requestSingleObject: dialogTitle from: aQuery inScope: aScope
 	
 	self 
-		openOn: anEnvironmentQuery 
-		inScope: anEnvironmentScope 
+		openOn: aQuery 
+		inScope: aScope 
 		withTitle: dialogTitle
 		thenDo: [ 
 			itemsView selection isEmpty ifTrue: [ ^self findObjectsSameAsFilter first].

@@ -1,12 +1,10 @@
 navigation
 showMethodsForClasses: selectedClasses
 		
-	| groups dataSource |
+	| dataSource newScope |
 	self selectHierarchyPackageOf: selectedClasses.
-	
-	groups := selectedClasses query: methodGroupContent inScope: metaLevelScope.	
-	dataSource := ClyCollapsedDataSource on: groups.
+	methodGroupQuery := methodGroupQuery withScopeOf: selectedClasses actualObjects.
+	dataSource := ClyCollapsedDataSource on: methodGroupQuery.
 	dataSource childrenStructure: { ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: }.
-	methodGroupView dataSource: dataSource.
-	
+	methodGroupView dataSource: dataSource.	
 	self showMethodsForGroups: self methodGroupSelection

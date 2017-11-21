@@ -1,7 +1,7 @@
 navigation
 switchToProjects
 	| projects dataSource |
-	projects := navigationEnvironment querySystemFor: ClySortedProjects.	
+	projects := ClyAllProjects sortedFrom: self systemScope.
 	dataSource := ClyCollapsedDataSource on: projects.
 	dataSource childrenStructure: { 
 		ClyManagedProject -> #prepareProjectItemsQueryFrom:in:. 

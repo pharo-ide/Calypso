@@ -1,8 +1,8 @@
 requests
-requestMultipleObjects: dialogTitle from: anEnvironmentQuery inScope: anEnvironmentScope
+requestMultipleObjects: dialogTitle from: aQuery inScope: anEnvironmentScope
 	
 	self 
-		openOn: anEnvironmentQuery 
+		openOn: aQuery 
 		inScope: anEnvironmentScope 
 		withTitle: dialogTitle
 		thenDo: [ 

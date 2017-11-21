@@ -1,3 +1,3 @@
 accessing
 methodGroupContent: anEnvironmentContentClass
-	methodGroupContent := anEnvironmentContentClass
+	methodGroupQuery := anEnvironmentContentClass

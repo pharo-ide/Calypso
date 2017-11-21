@@ -1,4 +1,4 @@
 requests
-requestSingleObject: dialogTitle from: anEnvironmentQuery
+requestSingleObject: dialogTitle from: aQuery
 	
-	^self requestSingleObject: dialogTitle from: anEnvironmentQuery inScope: browser systemScope
+	^self requestSingleObject: dialogTitle from: aQuery inScope: browser systemScope

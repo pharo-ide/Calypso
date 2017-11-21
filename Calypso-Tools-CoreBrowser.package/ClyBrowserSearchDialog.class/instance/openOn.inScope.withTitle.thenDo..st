@@ -1,7 +1,7 @@
 private
-openOn: anEnvironmentQuery inScope: anEnvironmentScope withTitle: dialogTitle thenDo: resultActionBlock
+openOn: aQuery inScope: aScope withTitle: dialogTitle thenDo: resultActionBlock
 
-	self showItemsOf: anEnvironmentQuery inScope: anEnvironmentScope.
+	self showItemsOf: aQuery inScope: aScope.
 	self title: dialogTitle.
 
 	browser openModal: self.

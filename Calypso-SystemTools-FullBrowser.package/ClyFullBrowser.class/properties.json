@@ -13,7 +13,7 @@
 		"methodGroupView",
 		"methodView",
 		"metaLevelScope",
-		"methodGroupContent"
+		"methodGroupQuery"
 	],
 	"name" : "ClyFullBrowser",
 	"type" : "normal"
