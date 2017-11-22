@@ -9,6 +9,6 @@
 		"cursor",
 		"queryResult"
 	],
-	"name" : "ClyBrowserItemCursorTestCase",
+	"name" : "ClyBrowserQueryCursorTestCase",
 	"type" : "normal"
 }

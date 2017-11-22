@@ -2,6 +2,6 @@ event handling
 selectionWasResetByFilter
 	self initiateUIChangeBy: [ 
 		self updateSelection.
-		self changeNavigationStateBy: [
+		self changeStateBy: [
 				navigationSelector ifNotNil: [
 					browser perform: navigationSelector with: self selection]]]

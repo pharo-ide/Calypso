@@ -3,5 +3,5 @@ showStack: aProcessStack
 
 	navigationEnvironment := aProcessStack environment.
 	
-	self changeNavigationStateBy: [ 
+	self changeStateBy: [ 
 		stackView dataSource: (ClyCollapsedDataSource on: aProcessStack)]

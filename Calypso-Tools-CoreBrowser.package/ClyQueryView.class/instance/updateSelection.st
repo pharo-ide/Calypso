@@ -2,10 +2,8 @@ controlling
 updateSelection
 
 	| selectedItems |
-	selectedItems := table selectedRowIndexes 
-		collect: [:each | self dataSource elementAt: each].
-		
-	selection := ClyDataSourceSelection fromRoot: self dataSource items: selectedItems.
+	selectedItems := table selectedRowIndexes collect: [:each | self itemAt: each].
+	selection := self newSelectionWith: selectedItems.
 
 	changesWasInitiatedByUser 
 		ifTrue: [desiredSelection := selection asDesiredSelection]

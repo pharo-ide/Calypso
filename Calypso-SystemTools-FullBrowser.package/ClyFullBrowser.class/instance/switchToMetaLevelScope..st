@@ -3,7 +3,7 @@ switchToMetaLevelScope: scopeClass
 	| newDS |
 	metaLevelScope == scopeClass ifTrue: [ ^self ].
 	
-	self changeNavigationStateBy: [
+	self changeStateBy: [
 		metaLevelScope := scopeClass.	
 		newDS := methodGroupView dataSource withNewScopeClass: metaLevelScope.
 		methodGroupView dataSource: newDS.	

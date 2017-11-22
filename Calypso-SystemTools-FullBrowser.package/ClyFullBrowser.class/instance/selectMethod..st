@@ -2,7 +2,7 @@ navigation
 selectMethod: aMethod
 
 	| foundItems |
-	self changeNavigationStateBy: [
+	self changeStateBy: [
 		foundItems := methodView findItemsWith: { aMethod }.
 		foundItems ifNotEmpty: [ ^self methodSelection selectItems: foundItems ].
 	

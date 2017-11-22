@@ -1,6 +1,6 @@
 controlling
 collapse: aDataSourceItem
-	itemsView changeNavigationStateBy: [ 
+	itemsView changeStateBy: [ 
 		expandedItems remove: aDataSourceItem.
 		aDataSourceItem childrenDataSource close.	
 

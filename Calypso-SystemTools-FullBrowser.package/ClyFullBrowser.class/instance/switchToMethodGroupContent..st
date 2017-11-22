@@ -2,7 +2,7 @@ navigation
 switchToMethodGroupContent: contentClass
 
 	| newDS |
-	self changeNavigationStateBy: [
+	self changeStateBy: [
 		methodGroupQuery := contentClass.
 		newDS := methodGroupView dataSource withNewContent: methodGroupQuery.
 		methodGroupView dataSource: newDS.

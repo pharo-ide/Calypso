@@ -3,7 +3,7 @@ showMethodsInScope: anEnvironmentScope
 	| newDS |
 	(queryScopes includes: anEnvironmentScope) ifFalse: [ queryScopes add: anEnvironmentScope ].	
 		
-	self changeNavigationStateBy: [
+	self changeStateBy: [
 		activeScope := anEnvironmentScope.
 		systemQuery := systemQuery withNewScope: activeScope.
 		newDS := ClyCollapsedDataSource on: systemQuery.	 	

@@ -1,6 +1,6 @@
 controlling
 expand: aDataSourceItem
-	itemsView changeNavigationStateBy: [
+	itemsView changeStateBy: [
 		collapsedItems remove: aDataSourceItem.
 	
 		self expansionChanged]

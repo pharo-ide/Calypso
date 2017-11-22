@@ -1,4 +1,4 @@
 testing
-showsContent: anEnvironmentContentClass inScope: anEnvironmentScopeClass
+showsContent: aQueryResultClass inScope: aScopeClass
 
-	^self dataSource isBasedOn: anEnvironmentContentClass inScope: anEnvironmentScopeClass
+	^self dataSource isBasedOn: aQueryResultClass inScope: aScopeClass

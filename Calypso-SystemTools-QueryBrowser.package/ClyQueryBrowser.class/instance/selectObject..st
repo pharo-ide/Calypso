@@ -1,7 +1,7 @@
 navigation
 selectObject: anObject 
 	| foundItems |
-	self changeNavigationStateBy: [
+	self changeStateBy: [
 		foundItems := resultView findItemsWith: { anObject }.
 	
 		foundItems ifNotEmpty: [ 

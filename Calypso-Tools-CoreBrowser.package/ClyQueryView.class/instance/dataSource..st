@@ -1,7 +1,7 @@
 accessing
 dataSource: aDataSource
 
-	self changeNavigationStateBy: [ 
+	self changeStateBy: [ 
 		self closeDataSource.	
 		self setUpDataSource: aDataSource.	
 		self refreshTable

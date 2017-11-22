@@ -1,6 +1,6 @@
 controlling
 collapse: aDataSourceItem
-	itemsView changeNavigationStateBy: [
+	itemsView changeStateBy: [
 		collapsedItems removeAllSuchThat: [ :each |
 			aDataSourceItem hasChildAt: each position].
 		collapsedItems add: aDataSourceItem.

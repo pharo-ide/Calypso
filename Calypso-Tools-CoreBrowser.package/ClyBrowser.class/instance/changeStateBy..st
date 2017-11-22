@@ -1,5 +1,5 @@
 navigation
-changeNavigationStateBy: aBlock
+changeStateBy: aBlock
 
 	| state navigationFailed |
 	navigationStarted ifTrue: [^aBlock value].

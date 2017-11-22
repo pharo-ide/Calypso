@@ -1,7 +1,7 @@
 navigation
 selectClass: aClass
 	| foundItems classDefinition |
-	self changeNavigationStateBy: [ 
+	self changeStateBy: [ 
 		self switchToMetaLevelScope: aClass metaLevelScope.	
 		foundItems := classView findItemsWith: { aClass instanceSide }.
 		foundItems ifNotEmpty: [ 

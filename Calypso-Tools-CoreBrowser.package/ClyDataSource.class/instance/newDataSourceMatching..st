@@ -6,10 +6,12 @@ newDataSourceMatching: anItemFilter
 	which will be not shared to any other users.
 	And to close retrieved data source together with originl one (self) it will keep reference to it.
 	And every new filter request will close existing filtered data source"
-	| filteredContentCursor newDataSource |
-	filteredContentCursor := itemCursor filterItemsBy: anItemFilter.
+	| newDataSource filteringQuery |
+	filteringQuery := ClyFilteringQuery for: query by: anItemFilter.
 	
-	newDataSource := self createSameOn: filteredContentCursor.
+	newDataSource := self createSameOn: filteringQuery.
 	lastFilteredDataSource ifNotNil: [lastFilteredDataSource close].
-	^lastFilteredDataSource := newDataSource
+	lastFilteredDataSource := newDataSource.
+	lastFilteredDataSource openOn: itemsView.
+	^lastFilteredDataSource
 	

@@ -1,6 +1,6 @@
 queries
-createSameOn: newQueryResult
+createSameOn: aQuery
 	| newDataSource |
-	newDataSource := self class for: itemsView on: newQueryResult.
+	newDataSource := self class on: aQuery.
 	newDataSource childrenStructure: childrenStructure.
 	^newDataSource

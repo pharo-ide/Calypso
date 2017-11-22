@@ -1,7 +1,7 @@
 navigation
 show: aMethodQuery inScope: anEnvironmentScope
 
-	self changeNavigationStateBy: [
+	self changeStateBy: [
 		systemQuery := aMethodQuery withResult: self requiredQueryResult.
 		self showMethodsInScope: anEnvironmentScope
 	]

@@ -1,3 +1,3 @@
 converting
 asSelection
-	^ClyDataSourceSelection fromRoot: self rootDataSource items: {self}
+	^self rootDataSource newSelectionWith: {self}

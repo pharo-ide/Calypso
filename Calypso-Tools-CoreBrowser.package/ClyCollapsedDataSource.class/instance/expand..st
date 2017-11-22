@@ -1,6 +1,6 @@
 controlling
 expand: aDataSourceItem
-	itemsView changeNavigationStateBy: [
+	itemsView changeStateBy: [
 		aDataSourceItem expandChildren.
 	
 		expandedItems add: aDataSourceItem.
