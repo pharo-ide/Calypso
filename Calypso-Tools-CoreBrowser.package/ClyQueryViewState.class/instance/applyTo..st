@@ -1,11 +1,10 @@
 operations
-applyTo: aNavigationView
+applyTo: aQueryView
 
 	| newDataSource |
-	(aNavigationView dataSource isInSameStateAs: dataSource) ifFalse: [ 
+	(aQueryView dataSource isInSameStateAs: dataSource) ifFalse: [ 
 		newDataSource := dataSource copyForBrowserStateSnapshot.
-		newDataSource open.
-		aNavigationView dataSource: newDataSource].
+		aQueryView dataSource: newDataSource].
 	
-	selection restoreCurrentSelection: aNavigationView selection.
-	aNavigationView selection ensureVisibleLastItem
+	selection restoreCurrentSelection: aQueryView selection.
+	aQueryView selection ensureVisibleLastItem
