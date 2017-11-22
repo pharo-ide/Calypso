@@ -5,6 +5,7 @@ switchToMetaLevelScope: scopeClass
 	
 	self changeStateBy: [
 		metaLevelScope := scopeClass.	
-		newDS := methodGroupView dataSource withNewScopeClass: metaLevelScope.
+		methodGroupQuery := methodGroupQuery withMetaLevelScope: metaLevelScope.
+		newDS := ClyCollapsedDataSource on: methodGroupQuery.
 		methodGroupView dataSource: newDS.	
 		self showMethodsForGroups: self methodGroupSelection]
