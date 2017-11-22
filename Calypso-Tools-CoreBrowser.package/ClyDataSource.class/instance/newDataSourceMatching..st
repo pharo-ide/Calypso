@@ -8,6 +8,6 @@ newDataSourceMatching: anItemFilter
 	And every new filter request will close existing filtered data source"
 	lastFilteredDataSource ifNotNil: [lastFilteredDataSource close].
 	
-	lastFilteredDataSource := self createSameOn: (query filteredBy: anItemFilter).
+	lastFilteredDataSource := self class on: (query filteredBy: anItemFilter).
 	lastFilteredDataSource openOn: queryView.
 	^lastFilteredDataSource

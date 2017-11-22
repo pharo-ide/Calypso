@@ -1,3 +1,4 @@
 queries
-querySystemFor: aScopedQuery 
-	^self query: aScopedQuery inScope: self systemScope
+querySystemFor: aTypedQuery 
+	aTypedQuery bindTo: self systemScope in: self.
+	^aTypedQuery execute

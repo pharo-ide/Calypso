@@ -1,3 +1,3 @@
 *Calypso-Environment-System
-queryCurrentImageFor: anEnvironmentContentClass
-	^self currentImageScope query: anEnvironmentContentClass
+queryCurrentImageFor: aQuery
+	^self currentImageScope query: aQuery

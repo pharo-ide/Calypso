@@ -1,4 +1,0 @@
-queries
-queryContentInNewScopeClass: anEnvironmentScopeClass
-
-	^queryResult rebuildInScopeClass: anEnvironmentScopeClass

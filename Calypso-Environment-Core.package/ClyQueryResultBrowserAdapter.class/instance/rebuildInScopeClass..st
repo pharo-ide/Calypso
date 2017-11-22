@@ -1,3 +1,0 @@
-queries
-rebuildInScopeClass: anEnvironmentScopeClass 
-	^actualResult rebuildInScopeClass: anEnvironmentScopeClass

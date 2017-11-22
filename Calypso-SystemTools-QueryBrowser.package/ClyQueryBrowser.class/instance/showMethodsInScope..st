@@ -5,7 +5,7 @@ showMethodsInScope: anEnvironmentScope
 		
 	self changeStateBy: [
 		activeScope := anEnvironmentScope.
-		systemQuery := systemQuery withNewScope: activeScope.
+		systemQuery := systemQuery withScope: activeScope.
 		newDS := ClyCollapsedDataSource on: systemQuery.	 	
 		resultView dataSource: newDS.
 		self ensureSelectedItem]

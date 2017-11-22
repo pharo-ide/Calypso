@@ -1,3 +1,0 @@
-accessing
-methodModeQuery
-	^ClyAllMethodGroups sorted
