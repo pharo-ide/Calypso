@@ -4,14 +4,10 @@ newDataSourceMatching: anItemFilter
 	Problem that filtered data sources are managed out of the application, internally inside FastTable.
 	So this method is supposed to be called by fast table to create filtered data source 
 	which will be not shared to any other users.
-	And to close retrieved data source together with originl one (self) it will keep reference to it.
+	And to close retrieved data source together with original one (self) it will keep reference to it.
 	And every new filter request will close existing filtered data source"
-	| newDataSource filteringQuery |
-	filteringQuery := ClyFilteringQuery for: query by: anItemFilter.
-	
-	newDataSource := self createSameOn: filteringQuery.
 	lastFilteredDataSource ifNotNil: [lastFilteredDataSource close].
-	lastFilteredDataSource := newDataSource.
+	
+	lastFilteredDataSource := self createSameOn: (query filteredBy: anItemFilter).
 	lastFilteredDataSource openOn: queryView.
 	^lastFilteredDataSource
-	

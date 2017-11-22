@@ -1,11 +1,11 @@
 tests
-testExecutionOverExistingQueryResult
+testExecutionOverExistingQuery
 
-	| originalResult scope mainQuery |
+	| scope mainQuery |
 	scope := ClyScopeExample of: { self class superclass. self class } in: environment.
 	mainQuery := ClyQueryExampleReturningScopeBasis from: scope.
-	originalResult := mainQuery execute.
-	result := originalResult filterItemsBy: (ClyItemNameFilter substringPattern: 'FilteringQueryTests').
+	query := mainQuery filteredBy: (ClyItemNameFilter substringPattern: 'FilteringQueryTests').
+	result := query execute.
 	resultItems := result items.
 	
 	self assert: resultItems size equals: 1.
