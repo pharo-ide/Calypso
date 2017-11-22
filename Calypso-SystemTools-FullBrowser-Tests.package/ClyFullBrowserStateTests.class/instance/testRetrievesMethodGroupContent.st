@@ -3,4 +3,4 @@ testRetrievesMethodGroupContent
 
 	self snapshotState.
 	
-	self assert: navigationState methodGroupContent equals: browser methodGroupContent
+	self assert: navigationState methodGroupQuery equals: browser methodGroupQuery

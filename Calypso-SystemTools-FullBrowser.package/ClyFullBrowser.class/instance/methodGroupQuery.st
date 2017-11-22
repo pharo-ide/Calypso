@@ -1,3 +1,3 @@
 accessing
-methodGroupContent
+methodGroupQuery
 	^methodGroupQuery

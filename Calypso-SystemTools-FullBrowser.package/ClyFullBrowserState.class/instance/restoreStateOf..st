@@ -4,4 +4,4 @@ restoreStateOf: aBrowser
 	
 	aBrowser 
 		metaLevelScope: metaLevelScope;
-		methodGroupContent: methodGroupContent
+		methodGroupQuery: methodGroupQuery

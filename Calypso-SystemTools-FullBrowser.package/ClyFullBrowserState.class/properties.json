@@ -7,7 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"metaLevelScope",
-		"methodGroupContent"
+		"methodGroupQuery"
 	],
 	"name" : "ClyFullBrowserState",
 	"type" : "normal"
