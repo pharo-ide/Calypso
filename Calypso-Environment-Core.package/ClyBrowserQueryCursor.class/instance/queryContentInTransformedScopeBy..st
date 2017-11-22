@@ -1,4 +1,0 @@
-queries
-queryContentInTransformedScopeBy: aBlockWithScopeArg
-
-	^queryResult rebuildInTransformedScopeBy: aBlockWithScopeArg

@@ -1,4 +1,0 @@
-queries
-queryContentInScopeWithout: existingBasisObject
-
-	^queryResult rebuildInScopeWithout: existingBasisObject

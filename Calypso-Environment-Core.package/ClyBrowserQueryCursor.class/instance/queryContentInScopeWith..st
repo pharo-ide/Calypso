@@ -1,4 +1,0 @@
-queries
-queryContentInScopeWith: extraBasisObject
-
-	^queryResult rebuildInScopeWith: extraBasisObject
