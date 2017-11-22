@@ -1,11 +1,10 @@
 navigation
 switchToMethodGroups
-	| newDS classScope |
+	| classScope |
 	(methodGroupQuery isKindOf: ClyAllMethodGroups) ifTrue: [^self].
 	
 	self changeStateBy: [
 		classScope := methodGroupQuery scope asScope: metaLevelScope.
 		methodGroupQuery := ClyAllMethodGroups sortedFrom: classScope.
-		newDS := ClyCollapsedDataSource on: methodGroupQuery.
-		methodGroupView dataSource: newDS.
+		methodGroupView showQuery: methodGroupQuery.
 		self showMethodsForGroups: self methodGroupSelection]

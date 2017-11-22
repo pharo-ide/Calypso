@@ -1,6 +1,6 @@
 navigation
 switchToVariables
-	| newDS classScope |
+	| classScope |
 	(methodGroupQuery isKindOf: ClyAllMethodGroups) ifFalse: [^self].
 	
 	self changeStateBy: [
@@ -9,6 +9,5 @@ switchToVariables
 			ClyAllVariables from: classScope.
 			ClyAllVariables from: (classScope asScope: ClySuperclassScope).
 		} as: ClyGroupedVariables new.
-		newDS := ClyCollapsedDataSource on: methodGroupQuery.
-		methodGroupView dataSource: newDS.
+		methodGroupView showQuery: methodGroupQuery.
 		self showMethodsForGroups: self methodGroupSelection]

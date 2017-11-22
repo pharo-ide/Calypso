@@ -1,11 +1,9 @@
 navigation
 switchToMetaLevelScope: scopeClass
-	| newDS |
 	metaLevelScope == scopeClass ifTrue: [ ^self ].
 	
 	self changeStateBy: [
 		metaLevelScope := scopeClass.	
 		methodGroupQuery := methodGroupQuery withMetaLevelScope: metaLevelScope.
-		newDS := ClyCollapsedDataSource on: methodGroupQuery.
-		methodGroupView dataSource: newDS.	
+		methodGroupView showQuery: methodGroupQuery.	
 		self showMethodsForGroups: self methodGroupSelection]

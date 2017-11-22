@@ -1,6 +1,6 @@
 navigation
 switchToPackages
-	| packages dataSource |
+	| packages |
 	packages := ClyAllPackages sortedFrom: self systemScope.
-	dataSource := ClyCollapsedDataSource on: packages.	
-	packageView dataSource: dataSource
+
+	packageView showQuery: packages

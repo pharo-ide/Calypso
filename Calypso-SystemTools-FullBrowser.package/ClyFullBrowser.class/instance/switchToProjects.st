@@ -1,6 +1,6 @@
 navigation
 switchToProjects
-	| projects dataSource |
+	| projects |
 	projects := ClyAllProjects sortedFrom: self systemScope.
-	dataSource := ClyCollapsedDataSource on: projects.	
-	packageView dataSource: dataSource
+
+	packageView showQuery: projects
