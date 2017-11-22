@@ -1,9 +1,9 @@
 navigation
-showMethodsInScope: anEnvironmentScope
-	(queryScopes includes: anEnvironmentScope) ifFalse: [ queryScopes add: anEnvironmentScope ].	
+showMethodsInScope: aScope
+	(queryScopes includes: aScope) ifFalse: [ queryScopes add: aScope ].	
 		
 	self changeStateBy: [
-		activeScope := anEnvironmentScope.
+		activeScope := aScope.
 		systemQuery := systemQuery withScope: activeScope.
 		resultView showQuery: systemQuery.
 		self ensureSelectedItem]
