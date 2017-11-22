@@ -1,3 +1,3 @@
 testing
 definesChildren
-	^childrenStructure notEmpty
+	^queryView definesTree

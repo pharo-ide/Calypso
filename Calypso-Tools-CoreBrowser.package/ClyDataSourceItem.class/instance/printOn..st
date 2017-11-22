@@ -3,7 +3,7 @@ printOn: aStream
 	super printOn: aStream.
 	
 	aStream nextPut: $(.
-	environmentItem 
+	browserItem 
 		ifNil: [ nil printOn: aStream ]
-		ifNotNil: [ aStream nextPutAll: environmentItem name ].
+		ifNotNil: [ aStream nextPutAll: browserItem name ].
 	aStream nextPut: $).

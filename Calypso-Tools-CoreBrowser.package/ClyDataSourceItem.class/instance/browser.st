@@ -1,3 +1,3 @@
 accessing
 browser
-	^self itemsView browser
+	^self queryView browser

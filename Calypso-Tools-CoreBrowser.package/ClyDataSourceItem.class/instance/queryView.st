@@ -1,0 +1,3 @@
+accessing
+queryView
+	^ownerDataSource queryView

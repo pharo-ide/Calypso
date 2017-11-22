@@ -1,5 +1,5 @@
 testing
 isRemoved
-	^environmentItem isNil 
+	^browserItem isNil 
 		or: [ ownerDataSource isParentRemoved 
 				or: [ ownerDataSource isParentCollapsed] ]

@@ -3,4 +3,4 @@ dropElements: aPassenger index: rowIndex
 	| dropTargetItem |
 	dropTargetItem := self elementAt: rowIndex.
 	
-	^itemsView dropPassenger: aPassenger at: dropTargetItem
+	^queryView dropPassenger: aPassenger at: dropTargetItem

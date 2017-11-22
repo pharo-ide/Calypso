@@ -1,6 +1,6 @@
 tests
 testRetrievesNavigationHistory
 	
-	self snapshotNavigationState.
+	self snapshotState.
 	
 	self assert: navigationState navigationHistory equals: browser navigationHistory

@@ -1,3 +1,3 @@
 testing
 isEqualTo: anotherItem
-	^environmentItem isEqualTo: anotherItem environmentItem
+	^browserItem isEqualTo: anotherItem browserItem

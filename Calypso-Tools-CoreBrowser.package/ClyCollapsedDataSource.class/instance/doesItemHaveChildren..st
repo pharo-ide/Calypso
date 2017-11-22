@@ -1,11 +1,11 @@
 testing
 doesItemHaveChildren: aDataSourceItem
-	| query |
+	| childQuery |
 	aDataSourceItem childrenDataSource ifNotNil: [:children | ^children isEmpty not].
 	
 	self definesChildren ifFalse: [ ^false ].
 
-	query := self queryToExpand: aDataSourceItem ifAbsent: [^false].
+	childQuery := queryView queryToExpand: aDataSourceItem ifAbsent: [^false].
 	
-	^aDataSourceItem environmentItem hasChildrenWhich: [:childType | 
-		query retrievesItemsOfType: childType ]
+	^aDataSourceItem browserItem hasChildrenWhich: [:childType | 
+		childQuery retrievesItemsOfType: childType ]

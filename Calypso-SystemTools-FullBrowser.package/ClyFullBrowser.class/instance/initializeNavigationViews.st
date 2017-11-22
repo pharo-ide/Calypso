@@ -1,21 +1,27 @@
 initialization
 initializeNavigationViews
 
-	packageView := self newNavigationView.
-	packageView enableFilterUsing: ClyRegexPattern new.
+	packageView := self newNavigationView
+		treeStructure: 	{ 
+			ClyManagedProject -> #prepareProjectItemsQueryFrom:in:. 
+			ClyPackageGroup -> #prepareProjectItemsQueryFrom:in:.
+			RPackage -> #prepareClassGroupQueryFrom:in: };
+		enableFilterUsing: ClyRegexPattern new;
+		requestNavigationBy: #showClassesForPackages:.
 	packageView filterField announcer when: RubTextChanged send: #updateDefaultPackageFilter to: self.
-	packageView requestNavigationBy: #showClassesForPackages:.
 	
-	classView := self newNavigationView.
-	classView displayMainColumnBy: [ :cell :item | 
-		self specifyClassItemNameOn: cell nameMorph for: item environmentItem].
-	classView enableFilter.
-	classView requestNavigationBy: #showMethodsForClasses:.
+	classView := self newNavigationView
+		displayMainColumnBy: [ :cell :item | 
+			self specifyClassItemNameOn: cell nameMorph for: item browserItem];
+		enableFilter;
+		requestNavigationBy: #showMethodsForClasses:.
 
-	methodGroupView := self newNavigationView.
-	methodGroupView requestNavigationBy: #showMethodsForGroups:.
+	methodGroupView := self newNavigationView
+		treeStructure: { 
+			ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: };
+		requestNavigationBy: #showMethodsForGroups:.
 	
-	methodView := self newNavigationView.
-	methodView displayMainColumnBy: [ :cell :item | 
-		self specifyMethodItemNameOn: cell nameMorph for: item environmentItem].	
-	methodView requestNavigationBy: #highlightMethodGroupsFor:.
+	methodView := self newNavigationView
+		displayMainColumnBy: [ :cell :item | 
+			self specifyMethodItemNameOn: cell nameMorph for: item browserItem];
+		requestNavigationBy: #highlightMethodGroupsFor:.

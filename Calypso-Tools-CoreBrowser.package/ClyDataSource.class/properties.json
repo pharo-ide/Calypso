@@ -8,11 +8,10 @@
 	"instvars" : [
 		"query",
 		"itemCursor",
-		"childrenStructure",
 		"depth",
 		"parentItem",
-		"itemsView",
-		"lastFilteredDataSource"
+		"lastFilteredDataSource",
+		"queryView"
 	],
 	"name" : "ClyDataSource",
 	"type" : "normal"

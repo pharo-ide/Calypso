@@ -1,6 +1,6 @@
 controlling
 expand: aDataSourceItem
-	itemsView changeStateBy: [
+	queryView changeStateBy: [
 		collapsedItems remove: aDataSourceItem.
 	
 		self expansionChanged]

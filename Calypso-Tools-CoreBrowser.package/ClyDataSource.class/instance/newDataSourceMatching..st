@@ -12,6 +12,6 @@ newDataSourceMatching: anItemFilter
 	newDataSource := self createSameOn: filteringQuery.
 	lastFilteredDataSource ifNotNil: [lastFilteredDataSource close].
 	lastFilteredDataSource := newDataSource.
-	lastFilteredDataSource openOn: itemsView.
+	lastFilteredDataSource openOn: queryView.
 	^lastFilteredDataSource
 	

@@ -3,6 +3,6 @@ testPluginsWithoutBrowser
 
 	browser addPlugin: ClyStandardBrowserPlugin new.
 	
-	self snapshotNavigationState.
+	self snapshotState.
 	
 	self assert: navigationState browserPlugins first browser isNil

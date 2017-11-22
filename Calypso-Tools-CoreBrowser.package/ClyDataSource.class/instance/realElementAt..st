@@ -1,4 +1,4 @@
 accessing
 realElementAt: anIndex
 
-	^ (self elementAt: anIndex) environmentItem
+	^ (self elementAt: anIndex) browserItem

@@ -3,5 +3,5 @@ itemsChanged
 	
 	self updateExpandingItems.
 
-	[itemsView itemsOf: self wereUpdatedBy: nil.
+	[queryView itemsOf: self wereUpdatedBy: nil.
 	self tableRefresh] updateCalypsoUI

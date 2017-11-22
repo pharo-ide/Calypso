@@ -1,3 +1,3 @@
 accessing
 updateItemWith: updatedEnvironmentItem
-	environmentItem := updatedEnvironmentItem
+	browserItem := updatedEnvironmentItem

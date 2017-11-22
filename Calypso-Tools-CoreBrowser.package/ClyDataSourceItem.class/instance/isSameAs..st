@@ -1,3 +1,3 @@
 testing
 isSameAs: anotherItem
-	^environmentItem isSameAs: anotherItem environmentItem
+	^browserItem isSameAs: anotherItem browserItem

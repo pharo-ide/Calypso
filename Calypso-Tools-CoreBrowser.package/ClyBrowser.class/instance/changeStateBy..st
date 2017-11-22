@@ -5,7 +5,7 @@ changeStateBy: aBlock
 	navigationStarted ifTrue: [^aBlock value].
 	navigationStarted := true.
 	navigationFailed := false.
-	state := self snapshotNavigationState.
+	state := self snapshotState.
 	^[
 		aBlock on: Error do: [:err | 
 			navigationFailed := true. "this flag prevents any UI update in case of error"

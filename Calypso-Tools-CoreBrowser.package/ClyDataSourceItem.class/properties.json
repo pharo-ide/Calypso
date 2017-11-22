@@ -7,8 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"ownerDataSource",
-		"environmentItem",
-		"childrenDataSource"
+		"childrenDataSource",
+		"browserItem"
 	],
 	"name" : "ClyDataSourceItem",
 	"type" : "normal"

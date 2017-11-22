@@ -1,5 +1,5 @@
 controlling
 expansionChanged
-	itemsView restoreSelectedItems.
+	queryView restoreSelectedItems.
 	self tableRefresh.
 	self table resetFunction

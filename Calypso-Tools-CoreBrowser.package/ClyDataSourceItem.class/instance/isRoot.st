@@ -1,3 +1,3 @@
 testing
 isRoot
-	^ownerDataSource isRoot & environmentItem isRoot
+	^ownerDataSource isRoot & browserItem isRoot

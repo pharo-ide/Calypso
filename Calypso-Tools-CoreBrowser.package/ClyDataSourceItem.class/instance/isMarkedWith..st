@@ -1,3 +1,3 @@
 testing
 isMarkedWith: anEnvironmentPropertyTag
-	^environmentItem isMarkedWith: anEnvironmentPropertyTag
+	^browserItem isMarkedWith: anEnvironmentPropertyTag

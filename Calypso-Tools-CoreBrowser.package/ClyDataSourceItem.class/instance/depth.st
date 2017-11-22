@@ -1,3 +1,3 @@
 accessing
 depth
-	^ownerDataSource depth + environmentItem depth
+	^ownerDataSource depth + browserItem depth

@@ -4,6 +4,6 @@ transferFor: dataSourceItems from: aMorph
 	selection := dataSourceItems first rootDataSource 
 		newSelectionWith: dataSourceItems. "to get selection bound to last selected item. In FastTable last selected item is first in the list"
 
-	passenger := itemsView createDragPassengerFor: selection.
+	passenger := queryView createDragPassengerFor: selection.
 	
 	^super transferFor: passenger from: aMorph

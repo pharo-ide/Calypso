@@ -1,0 +1,3 @@
+running
+snapshotState
+	self subclassResponsibility 

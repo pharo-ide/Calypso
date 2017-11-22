@@ -1,6 +1,6 @@
 running
 restoreBrowserInstance
 
-	self snapshotNavigationState.
+	self snapshotState.
 	
 	browser := navigationState createBrowser

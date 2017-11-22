@@ -1,6 +1,6 @@
 tests
 testRetrievesBrowserEnvironment
 
-	self snapshotNavigationState.
+	self snapshotState.
 	
 	self assert: navigationState navigationEnvironment equals: environment

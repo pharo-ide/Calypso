@@ -1,7 +1,7 @@
 operations
 retrieveStateFrom: aBrowser
 
-	browserState := aBrowser snapshotNavigationState.
+	browserState := aBrowser snapshotState.
 	(window := aBrowser window) ifNotNil: [
 		windowGroup := window ownerThatIsA: GroupWindowMorph].
 	browserPlugins := aBrowser plugins collect: [:each | each copy browser: nil].

@@ -1,3 +1,3 @@
 accessing
 actualObject: anObject
-	^environmentItem actualObject: anObject
+	^browserItem actualObject: anObject

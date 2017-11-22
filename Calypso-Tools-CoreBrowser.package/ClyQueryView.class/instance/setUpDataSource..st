@@ -1,7 +1,7 @@
 initialization
 setUpDataSource: aDataSource
 	
-	aDataSource itemsView: self.
+	aDataSource queryView: self.
 	table dataSource: aDataSource.
 	table initialDataSource: nil. "we should reset possible filter state from old data source"
 	highlighting := ClyHighlightingSelection fromRoot: aDataSource items: #().

@@ -1,3 +1,3 @@
 accessing
 getProperty: anEnvironmentPropertyClass
-	^environmentItem getProperty: anEnvironmentPropertyClass
+	^browserItem getProperty: anEnvironmentPropertyClass

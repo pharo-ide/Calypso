@@ -2,7 +2,5 @@ navigation
 switchToPackages
 	| packages dataSource |
 	packages := ClyAllPackages sortedFrom: self systemScope.
-	dataSource := ClyCollapsedDataSource on: packages.
-	dataSource childrenStructure: {RPackage -> #prepareClassGroupQueryFrom:in: }.	
-	
+	dataSource := ClyCollapsedDataSource on: packages.	
 	packageView dataSource: dataSource

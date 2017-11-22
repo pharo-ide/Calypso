@@ -1,5 +1,5 @@
 controlling
 openOn: aQueryView
 	
-	itemsView := aQueryView.
+	queryView := aQueryView.
 	self open

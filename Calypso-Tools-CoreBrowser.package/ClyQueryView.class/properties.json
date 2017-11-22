@@ -8,6 +8,7 @@
 	"instvars" : [
 		"table",
 		"browser",
+		"treeStructure",
 		"selection",
 		"desiredSelection",
 		"highlighting",

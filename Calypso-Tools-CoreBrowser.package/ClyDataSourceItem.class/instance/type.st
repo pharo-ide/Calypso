@@ -1,3 +1,3 @@
 accessing
 type
-	^environmentItem type
+	^browserItem type

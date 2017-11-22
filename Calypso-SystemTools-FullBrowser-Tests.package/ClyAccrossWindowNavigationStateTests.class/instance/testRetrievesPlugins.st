@@ -3,6 +3,6 @@ testRetrievesPlugins
 
 	browser addPlugin: ClyStandardBrowserPlugin new.
 	
-	self snapshotNavigationState.
+	self snapshotState.
 	
 	self assert: navigationState browserPlugins first class equals: ClyStandardBrowserPlugin

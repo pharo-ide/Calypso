@@ -1,3 +1,3 @@
 testing
 hasProperty: propertyClass
-	^environmentItem hasProperty: propertyClass
+	^browserItem hasProperty: propertyClass
