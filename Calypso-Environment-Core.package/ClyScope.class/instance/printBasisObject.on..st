@@ -1,4 +1,4 @@
 printing
 printBasisObject: anObject on: aStream
 
-	^aStream printOn: anObject
+	^anObject printOn: aStream
