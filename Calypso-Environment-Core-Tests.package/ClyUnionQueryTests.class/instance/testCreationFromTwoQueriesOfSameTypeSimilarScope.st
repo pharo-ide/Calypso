@@ -10,4 +10,4 @@ testCreationFromTwoQueriesOfSameTypeSimilarScope
 	self assert: query class equals: subquery1 class.
 	self deny: query == subquery1.
 	self assert: query scope equals: (ClyScopeExample of: {Array. String} in: environment).
-	self assert: query requiredResult == subquery1
+	self assert: query requiredResult == subquery1 requiredResult

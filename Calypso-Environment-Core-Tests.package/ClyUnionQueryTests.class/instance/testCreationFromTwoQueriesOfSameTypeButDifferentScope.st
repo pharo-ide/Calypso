@@ -9,4 +9,4 @@ testCreationFromTwoQueriesOfSameTypeButDifferentScope
 	
 	self assert: query class equals: self queryClass.
 	self assert: query subqueries equals: {subquery1. subquery2}.
-	self assert: query requiredResult == subquery1
+	self assert: query requiredResult == subquery1 requiredResult
