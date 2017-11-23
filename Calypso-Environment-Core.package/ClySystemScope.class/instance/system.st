@@ -1,3 +1,3 @@
 accessing
 system
-	^basisObjects first
+	^basisObjects anyOne

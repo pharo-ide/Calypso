@@ -1,3 +1,0 @@
-private
-resetScope
-	scope := nil

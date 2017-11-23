@@ -1,4 +1,5 @@
 printing
 printBasis
 
-	^',' join: (basisObjects collect: [:each | self printBasisObject: each])
+	^String streamContents: [ :s | 
+		self printBasisOn: s ]

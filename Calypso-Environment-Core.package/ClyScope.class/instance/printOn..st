@@ -2,5 +2,5 @@ printing
 printOn: aStream
 	super printOn: aStream.
 	aStream nextPut: $(.
-	basisObjects printOn: aStream.
+	self printBasisOn: aStream.
 	aStream nextPut: $).

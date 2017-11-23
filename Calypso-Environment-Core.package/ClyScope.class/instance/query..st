@@ -1,5 +1,5 @@
 queries
 query: aQuery
-	aQuery scope ifNil: [ aQuery scope: self ].
+	aQuery ensureScope: self.
 	
 	^environment query: aQuery

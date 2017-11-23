@@ -1,3 +1,3 @@
 private
 asUnifiedInstance
-	^self withScope: ClyUnknownScope new
+	^self withScope: ClyScope unknown
