@@ -1,5 +1,5 @@
 initialization
 initialize
 	super initialize.
-	scope := ClyUnknownScope instance.
+	self resetScope.
 	requiredResult := ClyRawQueryResult new

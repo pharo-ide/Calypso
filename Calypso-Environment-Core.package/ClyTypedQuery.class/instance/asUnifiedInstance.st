@@ -1,3 +1,4 @@
 private
 asUnifiedInstance
-	^self withScope: ClyScope unknown
+	^self copy 
+		resetScope
