@@ -10,4 +10,4 @@ testCreationOnMultipleScopeOfSameBasis
 	self assert: query subqueries equals: {
 		queryClass from: ClyScopeExample of: { Array } in: environment.
 		queryClass from: ClyScopeExample2 of: { Array } in: environment.
-	}.
+	} asSet.

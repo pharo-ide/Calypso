@@ -9,7 +9,6 @@ testCreationFromAnotherCompositeQueryAndSimilarQuery
 	query := subquery1, subquery2, subquery3.
 	
 	self assert: query class equals: self queryClass.
-	self assert: query subqueries size equals: 2.
-	self assert: query subqueries first equals: (self subqueryInScopeOf: { Array. Object }).
-	self assert: query subqueries last equals: subquery3.
+	self assert: query subqueries equals: { 
+		self subqueryInScopeOf: { Array. Object }. subquery2} asSet.
 	self assert: query requiredResult equals: subquery1 requiredResult

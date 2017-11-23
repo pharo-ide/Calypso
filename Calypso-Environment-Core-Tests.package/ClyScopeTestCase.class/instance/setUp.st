@@ -2,4 +2,5 @@ running
 setUp
 	super setUp.
 	
-	result := OrderedCollection new
+	"For tests we want predictable order or collected items to simplify assertions"
+	result := SortedCollection sortBlock: #printString ascending

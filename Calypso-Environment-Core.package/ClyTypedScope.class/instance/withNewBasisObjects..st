@@ -1,4 +1,6 @@
 converting
 withNewBasisObjects: newBasisObjects
 
-	^self class of: newBasisObjects in: environment
+	^self copy 
+		basisObjects: newBasisObjects;
+		bindTo: environment

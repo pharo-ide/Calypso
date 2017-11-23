@@ -4,7 +4,7 @@ setUp
 	super setUp.
 	
 	query := ClyQueryExampleReturningScopeBasis 
-		from: (ClyScopeExample of: { Object. Array. String } in: environment)
+		from: (ClyScopeExample of: { Array. Object. String } in: environment)
 		as: self createQueryResult.
 		
 	queryResult := query execute.	

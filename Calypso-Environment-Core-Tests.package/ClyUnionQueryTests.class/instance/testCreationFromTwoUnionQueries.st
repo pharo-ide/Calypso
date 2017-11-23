@@ -14,8 +14,8 @@ testCreationFromTwoUnionQueries
 	self assert: query class equals: self queryClass.
 	self assert: query subqueries size equals: 2.
 	self assert: (query subqueries collect: #class as: Set) equals: {subquery1 class} asSet.
-	scopes := query subqueries collect: #scope as: Array.
+	scopes := query subqueries collect: #scope as: Set.
 	self assert: scopes equals: {
 		ClyScopeExample of: {Array. Object}. ClyScopeExample2 of: {String. Class}
-	}.
+	} asSet.
 	self assert: query requiredResult == subquery1 requiredResult

@@ -1,3 +1,3 @@
 merging queries
 mergeOwnInstances: queries
-	^queries first
+	^queries anyOne

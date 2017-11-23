@@ -1,8 +1,6 @@
 tests
 testMethodGroupsEnumeration
 
-	| environment |
-	environment := ClyNavigationEnvironment new.
 	environment addPlugin: ClyDefaultSystemEnvironmentPlugin new.
 	scope := ClyClassScope of: { ClyClass1FromP1 } in: environment.
 	
@@ -10,5 +8,5 @@ testMethodGroupsEnumeration
 	
 	self assert: (result collect: #class as: Set) equals: { ClyInheritedMethodGroup. ClyTaggedMethodGroup} asSet.
 	self 
-		assert: (result select:[:each | each class = ClyTaggedMethodGroup] thenCollect: #tag) sorted
-		equals: ClyClass1FromP1 tagsForMethods sorted
+		assert: (result select: [:each | each class = ClyTaggedMethodGroup] thenCollect: #tag) sorted asArray
+		equals: ClyClass1FromP1 tagsForMethods sorted asArray

@@ -1,3 +1,3 @@
 accessing
 basisObjects: aCollection
-	basisObjects := self prepareBasisFrom: aCollection
+	super basisObjects: (self prepareBasisFrom: aCollection)

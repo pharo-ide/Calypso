@@ -5,4 +5,4 @@ testClassEnumeration
 	
 	scope classesDo: [ :each | result add: each].
 	
-	self assert: result asArray equals: scope basisObjects asArray
+	self assert: result asArray equals:  {ClyClass1FromP1. ClyClass2FromP1}

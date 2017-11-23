@@ -9,5 +9,5 @@ testCreationFromAnotherCompositeQueryAndNewDifferentSubquery
 	query := subquery1, subquery2, subquery3.
 	
 	self assert: query class equals: ClyUnionQuery.
-	self assert: query subqueries equals: {subquery1. subquery2. subquery3}.
+	self assert: query subqueries equals: {subquery1. subquery2. subquery3} asSet.
 	self assert: query requiredResult equals: subquery1 requiredResult

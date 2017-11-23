@@ -1,7 +1,7 @@
 merging queries
 merge: queries
 	| result queryGroups |
-	queries size = 1 ifTrue: [ ^{queries first} ].
+	queries size = 1 ifTrue: [ ^{queries anyOne} ].
 	
 	result := OrderedCollection new.
 	queryGroups := queries groupedBy: [ :each | each class ].

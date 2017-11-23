@@ -1,3 +1,3 @@
 initialization
 prepareBasisFrom: aCollection
-	^aCollection asArray
+	^aCollection

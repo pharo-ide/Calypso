@@ -8,5 +8,5 @@ testCreationFromTwoDifferentTypedQueries
 	query := subquery1, subquery2.
 	
 	self assert: query class equals: self queryClass.
-	self assert: query subqueries equals: {subquery1. subquery2}.
+	self assert: query subqueries equals: {subquery1. subquery2} asSet.
 	self assert: query requiredResult == subquery1 requiredResult

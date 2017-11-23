@@ -1,12 +1,11 @@
 merging queries
 mergeOwnInstances: queries
-	| scopeGroups result mergedBasis mergedScope |
-	scopeGroups := queries groupedBy: [ :each | each scope class ].
+
+	| queryGroups merged |
+	queryGroups := queries groupedBy: [ :each | each asUnifiedInstance ].
 	
-	result := OrderedCollection new.
-	scopeGroups keysAndValuesDo: [ :scopeClass :groupedQueries | 
-		mergedBasis := groupedQueries flatCollect: [:each | each scope basisObjects] as: IdentitySet.
-		mergedScope := scopeClass of: mergedBasis in: groupedQueries first scope environment.
-		result add: (self from: mergedScope as: groupedQueries first requiredResult)].
+	merged := OrderedCollection new.
+	queryGroups keysAndValuesDo: [ :unifiedQuery :groupedQueries |
+		merged addAll: (self mergeOwnInstances: groupedQueries unifiedBy: unifiedQuery)].
 	
-	^result
+	^merged

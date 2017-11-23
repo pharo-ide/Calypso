@@ -1,0 +1,3 @@
+private
+resetScope
+	scope := nil

@@ -1,7 +1,5 @@
 tests
 testClassGroupEnumeration
-	| environment |
-	environment := ClyNavigationEnvironment new.
 	environment addPlugin: ClyDefaultSystemEnvironmentPlugin new.
 	scope := ClyPackageScope of: { ClyClass7WithTag1FromP5 package } in: environment.
 	scope classGroupsDo: [ :each | result add: each].

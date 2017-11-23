@@ -4,4 +4,4 @@ subscopes: aCollection
 	
 	subscopes := aCollection.
 	environment := subscopes anyOne environment.
-	basisObjects := subscopes flatCollect: [ :each | each basisObjects ] as: IdentitySet
+	self basisObjects: (subscopes flatCollect: [ :each | each basisObjects ])
