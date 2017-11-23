@@ -1,7 +1,7 @@
 navigation
-switchMethodScopeTo: aClassScope
+restrictMethodVisibilityBy: aClassScope
 
 	self changeStateBy: [
-		methodGroupQuery := methodGroupQuery withScope: aClassScope.
+		methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope.
 		methodGroupView showQuery: methodGroupQuery.
 		self showMethodsForGroups: self methodGroupSelection]

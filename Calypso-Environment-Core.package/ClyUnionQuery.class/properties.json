@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyCompositeQuery",
+	"category" : "Calypso-Environment-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUnionQuery",
+	"type" : "normal"
+}

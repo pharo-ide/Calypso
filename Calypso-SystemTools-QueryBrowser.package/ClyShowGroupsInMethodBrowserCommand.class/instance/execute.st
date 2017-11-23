@@ -3,6 +3,6 @@ execute
 
 	| queries fullQuery |
 	queries := methodGroups collect: [:each | each methodQuery].
-	fullQuery := ClyCompositeQuery with: queries.
+	fullQuery := ClyQuery unionFrom: queries.
 	
 	browser browseQueryResultOf: fullQuery

@@ -5,7 +5,7 @@ switchToVariables
 	
 	self changeStateBy: [
 		classScope := methodGroupQuery scope asScope: metaLevelScope.
-		methodGroupQuery := ClyCompositeQuery with: {  
+		methodGroupQuery := ClyQuery unionFrom: {  
 			ClyAllVariables from: classScope.
 			ClyAllVariables from: (classScope asScope: ClySuperclassScope).
 		} as: ClyGroupedVariables new.

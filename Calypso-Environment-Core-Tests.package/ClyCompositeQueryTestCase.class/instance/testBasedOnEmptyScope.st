@@ -3,5 +3,5 @@ testBasedOnEmptyScope
 
 	self deny: query isBasedOnEmptyScope.
 	
-	query := ClyCompositeQuery with: { self subqueryInScopeOf: #()}.
+	query := self queryClass with: { self subqueryInScopeOf: #()}.
 	self assert: query isBasedOnEmptyScope

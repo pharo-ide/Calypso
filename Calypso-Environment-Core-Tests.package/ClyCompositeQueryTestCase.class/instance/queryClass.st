@@ -1,3 +1,3 @@
-composition
-, anotherQuery 
+running
+queryClass
 	self subclassResponsibility 

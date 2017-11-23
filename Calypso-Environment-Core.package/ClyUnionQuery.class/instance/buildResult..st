@@ -6,4 +6,4 @@ buildResult: aQueryResult
 		subResult := each execute.
 		subResult rawItems].
 	
-	self buildResult: aQueryResult with: allItems
+	aQueryResult fillWith: allItems asIdentitySet

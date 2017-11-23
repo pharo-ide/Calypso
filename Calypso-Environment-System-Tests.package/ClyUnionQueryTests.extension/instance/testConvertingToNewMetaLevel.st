@@ -8,7 +8,7 @@ testConvertingToNewMetaLevel
 	}.
 	newQuery := query withMetaLevelScope: ClyInstanceSideScope.
 	
-	self assert: newQuery class equals: ClyCompositeQuery.
+	self assert: newQuery class equals: self queryClass.
 	self assert: (newQuery subqueries collect: #class) equals: (query subqueries collect: #class).
 	self assert: newQuery requiredResult == query requiredResult.
 	self assert: newQuery subqueries first scope class equals: ClyInstanceSideScope.
