@@ -1,7 +1,7 @@
 tests
 testForGlobalVariable
 
-	query variables: { self class environment bindingOf: #Smalltalk }.
+	query variableQuery: (ClyConstantQuery returning: {self class environment bindingOf: #Smalltalk}).
 	self 
 		queryInScope: ClyMethodScope
 		of: { self class >> #referenceOfSmalltalk}.

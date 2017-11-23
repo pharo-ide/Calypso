@@ -1,4 +1,4 @@
 instance variables
 of: variables
-	^self new 
-		variables: variables
+	^self new
+		variableQuery: (ClyConstantQuery returning: variables)
