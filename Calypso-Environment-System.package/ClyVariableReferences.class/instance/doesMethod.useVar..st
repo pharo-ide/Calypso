@@ -1,4 +1,4 @@
 testing
-isMethod: aMethod referencedVar: aVariable
+doesMethod: aMethod useVar: aVariable
 
 	^aVariable isReferencedIn: aMethod

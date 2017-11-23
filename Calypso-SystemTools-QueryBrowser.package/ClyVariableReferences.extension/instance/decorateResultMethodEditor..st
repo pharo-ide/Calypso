@@ -1,4 +1,6 @@
 *Calypso-SystemTools-QueryBrowser
 decorateResultMethodEditor: aMethodEditor
-
-	aMethodEditor selectAnyVariable: (variableQuery collect: #name)
+	| vars |
+	vars := variableQuery execute items.
+	
+	aMethodEditor selectAnyVariable: (vars collect: [:each | each name])

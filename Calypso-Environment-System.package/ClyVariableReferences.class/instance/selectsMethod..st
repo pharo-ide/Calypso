@@ -2,6 +2,6 @@ testing
 selectsMethod: aMethod
 	
 	| vars |
-	vars := scope environment query: variableQuery.
+	vars := variableQuery execute.
 	
 	^self doesMethod: aMethod useAnyOf: vars items
