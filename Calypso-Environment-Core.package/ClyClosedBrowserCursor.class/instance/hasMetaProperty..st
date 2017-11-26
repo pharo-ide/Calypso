@@ -1,0 +1,3 @@
+testing
+hasMetaProperty: aPropertyClass 
+	^false
