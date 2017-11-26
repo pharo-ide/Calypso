@@ -5,7 +5,7 @@ decorateTool
 	newScope := browserTool criticAnalysisScope.
 	(analysisScope isNil or: [ newScope basisObjects ~= analysisScope basisObjects]) ifTrue: [ 
 		analysisScope := newScope.
-		critiques := ClyAllCritiquesQuery sortedFrom: analysisScope.
+		critiques := ClyAllCritiquesQuery from: analysisScope.
 		criticView showQuery: critiques].
 	
 	self refreshCritiques
