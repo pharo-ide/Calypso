@@ -7,7 +7,7 @@ testFillingWithTwoInstVarsOfSameClass
 	queryResult fillWith: variables.
 	
 	self assertItems: {ClyInheritedMethodGroup. 0. 
-		ClyVarsDeclarationMethodGroup. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1 }.
+		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1 }.
 	self assertVars: #(#instanceSideVar1 #instanceSideVar2 ).
 	self 
 		assert: items second actualObject variables asSet

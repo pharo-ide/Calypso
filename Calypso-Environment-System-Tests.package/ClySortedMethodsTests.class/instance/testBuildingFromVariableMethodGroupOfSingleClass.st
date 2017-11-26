@@ -1,7 +1,7 @@
 tests-var declaration methods
 testBuildingFromVariableMethodGroupOfSingleClass
 	| group |
-	group := ClyVarsDeclarationMethodGroup 
+	group := ClyVarDefinitionMethodGroup 
 					classes: {ClySubclassN2OfClass1FromP1} 
 					variables: {ClyClass1FromP1 slotNamed: #instanceSideVar1.
 						ClySubclassN2OfClass1FromP1 slotNamed: #subclassN2Var}.

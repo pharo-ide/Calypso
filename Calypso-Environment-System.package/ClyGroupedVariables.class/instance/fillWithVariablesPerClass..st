@@ -5,8 +5,8 @@ fillWithVariablesPerClass: varsPerClass
 	classItems := ClyHierarchicallySortedClasses buildItemsOn: varsPerClass keys.
 	classItems do: [ :classItem |
 		vars := varsPerClass at: classItem actualObject.
-		declarationGroup := ClyVarsDeclarationMethodGroup
-			variables: vars declaredIn: classItem actualObject classes: self queryScope.
+		declarationGroup := ClyVarDefinitionMethodGroup
+			forInstVarsDefinedIn: classItem actualObject from: self queryScope.
 		items add: declarationGroup asCalypsoBrowserItem.
 		vars do: [:each | | varGroup |
 			varGroup := ClyVariableMethodGroup variable: each from: self queryScope.
