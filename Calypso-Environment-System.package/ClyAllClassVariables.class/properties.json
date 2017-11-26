@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAllVariables",
+	"name" : "ClyAllClassVariables",
 	"type" : "normal"
 }
