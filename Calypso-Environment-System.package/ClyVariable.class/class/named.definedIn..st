@@ -1,3 +1,3 @@
 instance creation
-named: aSymbol declaredIn: aClass
+named: aSymbol definedIn: aClass
 	self subclassResponsibility 

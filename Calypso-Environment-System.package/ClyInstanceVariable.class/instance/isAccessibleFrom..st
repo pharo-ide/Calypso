@@ -1,4 +1,4 @@
 testing
 isAccessibleFrom: aClass
 
-	^aClass = declaringClass or: [ aClass inheritsFrom: declaringClass ]
+	^aClass = definingClass or: [ aClass inheritsFrom: definingClass ]

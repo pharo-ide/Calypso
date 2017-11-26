@@ -8,6 +8,6 @@ testInstVarsEnumeration
 	self 
 		assert: (result as: Set)
 		equals: {
-			ClyInstanceVariable named: #instanceSideVar2 declaredIn: ClyClass1FromP1. 
-			ClyInstanceVariable named: #instanceSideVar1 declaredIn: ClyClass1FromP1.
+			ClyInstanceVariable named: #instanceSideVar2 definedIn: ClyClass1FromP1. 
+			ClyInstanceVariable named: #instanceSideVar1 definedIn: ClyClass1FromP1.
 		} asSet

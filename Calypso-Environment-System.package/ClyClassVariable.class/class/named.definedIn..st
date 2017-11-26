@@ -1,5 +1,5 @@
 instance creation
-named: aSymbol declaredIn: aClass
+named: aSymbol definedIn: aClass
 	^self 
 		on: (aClass classVariableNamed: aSymbol)
-		declaredIn: aClass
+		definedIn: aClass

@@ -1,3 +1,3 @@
 *Calypso-SystemTools-Core
 createVariableRefactoring: variableRefactoringClass 
-	^self createRefactoring: variableRefactoringClass for: declaringClass
+	^self createRefactoring: variableRefactoringClass for: definingClass

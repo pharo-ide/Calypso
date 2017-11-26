@@ -2,4 +2,4 @@ comparing
 hash
 	"Answer an integer value that is related to the identity of the receiver."
 
-	^ declaringClass hash bitXor: actualVariable hash
+	^ definingClass hash bitXor: actualVariable hash

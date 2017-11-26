@@ -6,5 +6,5 @@ comparing
 		ifTrue: [ ^ true ].
 	self class = anObject class
 		ifFalse: [ ^ false ].
-	^ declaringClass = anObject declaringClass
+	^ definingClass = anObject definingClass
 		and: [ actualVariable = anObject actualVariable ]

@@ -1,0 +1,3 @@
+queries
+queryClass
+	^ClyAllInstanceVariables

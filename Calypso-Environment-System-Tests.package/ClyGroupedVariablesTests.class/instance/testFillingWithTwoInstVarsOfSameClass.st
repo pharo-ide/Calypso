@@ -2,8 +2,8 @@ tests
 testFillingWithTwoInstVarsOfSameClass
 	| variables |
 	variables := {
-		ClyInstanceVariable named: #instanceSideVar2 declaredIn: ClyClass1FromP1.
-		ClyInstanceVariable named: #instanceSideVar1 declaredIn: ClyClass1FromP1}.
+		ClyInstanceVariable named: #instanceSideVar2 definedIn: ClyClass1FromP1.
+		ClyInstanceVariable named: #instanceSideVar1 definedIn: ClyClass1FromP1}.
 	queryResult fillWith: variables.
 	
 	self assertItems: {ClyInheritedMethodGroup. 0. 

@@ -8,6 +8,6 @@ switchToVariables
 		methodGroupQuery := ClyQuery unionFrom: {  
 			ClyAllVariables from: classScope.
 			ClyAllVariables from: (classScope asScope: ClySuperclassScope).
-		} as: ClyGroupedVariables new.
+		} as: ClyGroupedInstanceVariables new.
 		methodGroupView showQuery: methodGroupQuery.
 		self showMethodsForGroups: self methodGroupSelection]

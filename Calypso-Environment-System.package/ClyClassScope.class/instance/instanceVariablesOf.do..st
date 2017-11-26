@@ -1,6 +1,6 @@
 private
-instanceVariablesOf: declaringClass do: aBlock
+instanceVariablesOf: definingClass do: aBlock
 
-	self metaLevelsOf: declaringClass do: [ :concreteMetaLevelClass |
+	self metaLevelsOf: definingClass do: [ :concreteMetaLevelClass |
 		concreteMetaLevelClass slots do: [:var | 
-			aBlock value: (ClyInstanceVariable on: var declaredIn: declaringClass) ]]
+			aBlock value: (ClyInstanceVariable on: var definedIn: definingClass) ]]

@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"declaringClass",
-		"actualVariable"
+		"actualVariable",
+		"definingClass"
 	],
 	"name" : "ClyVariable",
 	"type" : "normal"

@@ -1,5 +1,5 @@
 instance creation
-on: aVariableOrSlot declaredIn: aClass
+on: aVariableOrSlot definedIn: aClass
 	^self new 
 		actualVariable: aVariableOrSlot;
-		declaringClass: aClass
+		definingClass: aClass

@@ -8,4 +8,4 @@ testClassVarsEnumeration
 	self assert: result size equals: 1.
 	self 
 		assert: result anyOne 
-		equals: (ClyClassVariable on: Object classVariables first declaredIn: Object)
+		equals: (ClyClassVariable on: Object classVariables first definedIn: Object)

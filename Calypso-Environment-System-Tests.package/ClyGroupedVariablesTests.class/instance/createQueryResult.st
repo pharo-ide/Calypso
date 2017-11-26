@@ -1,3 +1,3 @@
 helpers
 createQueryResult
-	^ClyGroupedVariables new
+	^ClyGroupedInstanceVariables new
