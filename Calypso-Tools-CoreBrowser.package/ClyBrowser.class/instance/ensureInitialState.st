@@ -1,4 +1,5 @@
 initialization
 ensureInitialState
 
-	navigationHistory isEmpty ifTrue: [ self prepareInitialState]
+	(navigationViews allSatisfy: [ :each | each showsResultOf: ClyUnknownQuery new ])
+		ifTrue: [ self prepareInitialState]

@@ -1,6 +1,6 @@
 initialization
 prepareInitialStateBy: aBlock
 	
-	self prepareInitialState.
 	navigationHistory ignoreNavigationDuring: [		
+		self prepareInitialState.
 		aBlock valueWithPossibleArgument: self]
