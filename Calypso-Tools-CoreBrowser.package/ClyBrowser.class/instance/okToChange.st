@@ -1,4 +1,4 @@
-events handling
+opening/closing
 okToChange
 
 	^tabManager okToChange

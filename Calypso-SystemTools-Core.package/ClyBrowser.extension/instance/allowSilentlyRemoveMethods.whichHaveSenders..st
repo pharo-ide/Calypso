@@ -1,4 +1,4 @@
-commands support
+*Calypso-SystemTools-Core
 allowSilentlyRemoveMethods: methods whichHaveSenders: senders
 
 	| singleSender sendersCount |

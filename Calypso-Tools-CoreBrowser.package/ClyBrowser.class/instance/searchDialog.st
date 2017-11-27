@@ -1,3 +1,3 @@
-commands support
+tools support
 searchDialog
 	^ClyBrowserSearchDialog for: self

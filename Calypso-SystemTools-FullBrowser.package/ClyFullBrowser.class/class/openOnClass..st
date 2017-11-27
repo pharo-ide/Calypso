@@ -1,7 +1,4 @@
 opening
 openOnClass: aClass
 
-	| browser |
-	browser := self open.	
-	browser selectClass: aClass.
-	^browser
+	^self openWithState: [:browser | browser selectClass: aClass]

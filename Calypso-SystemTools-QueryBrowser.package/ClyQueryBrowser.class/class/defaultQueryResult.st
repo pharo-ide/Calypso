@@ -1,3 +1,4 @@
 default
 defaultQueryResult
-	^DefaultQueryResult ifNil: [ DefaultQueryResult := ClySortedQueryResult using: ClySortMethodFunction ascend ]
+	^DefaultQueryResult ifNil: [ 
+		DefaultQueryResult := ClySortedQueryResult using: ClySortSystemItemFunction ascend]
