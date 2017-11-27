@@ -1,7 +1,7 @@
 building
 fillWith: packages
-	| group query |
+	| group |
 	packages do: [ :each | 
-		query := ClyPackageExtensionMethods of: each from: self scope.
-		group := ClyExternalPackageMethodGroup named: each name on: query.
+		group := ClyExternalPackageMethodGroup 
+			withMethodsFrom: self scope packagedIn: each.
 		items add: group]
