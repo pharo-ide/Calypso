@@ -2,6 +2,7 @@
 browseMethodsFromQuery: aMethodQuery inScopes: queryScopes
 	
 	| methodBrowser |
+	self flag: #todo.
 	aMethodQuery scope ifNil: [ aMethodQuery scope: queryScopes first ].
 	methodBrowser := ClyQueryBrowser on: navigationEnvironment scopes: queryScopes.
 	methodBrowser disablePluginsWhichAreNotIn: self.
