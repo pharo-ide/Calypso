@@ -1,5 +1,5 @@
 instance creation
-withMethodsFrom: aVariableClass referencedAny: definingClass definedIn: aClassScope
+withMethodsFrom: aClassScope referencedAny: aVariableClass definedIn: definingClass
 
 	| variableQuery |
 	variableQuery := aVariableClass queryClass 
