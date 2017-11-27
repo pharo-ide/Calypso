@@ -7,10 +7,11 @@ fillWithVariables: varsPerClass type: varTypeClass
 	classItems do: [ :classItem |
 		vars := varsPerClass at: classItem actualObject.
 		declarationGroup := ClyVarDefinitionMethodGroup
-			for: varTypeClass definedIn: classItem actualObject from: methodQueryScope.
+			withMethodsFrom: methodQueryScope 
+			referencedAny: varTypeClass definedIn: classItem actualObject.
 		items add: declarationGroup asCalypsoBrowserItem.
 		vars do: [:each | | varGroup |
-			varGroup := ClyVariableMethodGroup variable: each from: methodQueryScope.
+			varGroup := ClyVariableMethodGroup withMethodsFrom: methodQueryScope referencedVar: each.
 			varItem := varGroup asCalypsoBrowserItem.
 			varItem depth: 1.
 			items add: varItem] 

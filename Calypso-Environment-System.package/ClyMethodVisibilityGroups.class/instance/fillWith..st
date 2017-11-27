@@ -6,6 +6,5 @@ fillWith: classes
 	items := ClyHierarchicallySortedClasses buildItemsOn: classes.
 	items do: [ :each | 
 		group := ClyInheritedMethodGroup 
-			forMethodsOf: each actualObject 
-			from: actualClassScope.
+			withMethodsOf: each actualObject toShowIn: actualClassScope.
 		each actualObject: group]

@@ -1,3 +1,3 @@
 instance creation
-from: aClassScope tag: tagName
+withMethodsFrom: aClassScope taggedBy: tagName
 	^ClyTaggedMethodGroup named: tagName on: (ClyTaggedMethods by: tagName from: aClassScope)

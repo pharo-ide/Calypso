@@ -1,5 +1,5 @@
 instance creation
-forAllMethods: aMethodQuery from: aClassScope
+withMethodQuery: aMethodQuery andClassesInheritedFrom: aClassScope
 	| subgroupsQuery |
 	subgroupsQuery := ClyAllClasses 
 		from: aClassScope asInheritedScope

@@ -1,4 +1,4 @@
 instance creation
-from: aClassScope
+withMethodsFrom: aClassScope
 
 	^self named: self groupName on: (ClyUntaggedMethods from: aClassScope)

@@ -1,5 +1,5 @@
 instance creation
-forMethodsOf: aClass from: aClassScope
+withMethodsOf: aClass toShowIn: aClassScope
 	
 	| methodQuery |
 	methodQuery := ClyAllMethods 

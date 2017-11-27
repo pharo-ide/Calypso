@@ -1,5 +1,5 @@
 instance creation
-variable: aVariable from: aClassScope
+withMethodsFrom: aVariable referencedVar: aClassScope
 	^self 
 		named: aVariable name 
 		on: (ClyVariableReferences of: {aVariable} from: aClassScope)

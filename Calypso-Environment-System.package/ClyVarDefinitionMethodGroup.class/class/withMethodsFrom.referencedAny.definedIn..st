@@ -1,8 +1,8 @@
 instance creation
-forInstVarsDefinedIn: definingClass from: aClassScope
+withMethodsFrom: aVariableClass referencedAny: definingClass definedIn: aClassScope
 
 	| variableQuery |
-	variableQuery := ClyAllInstanceVariables 
+	variableQuery := aVariableClass queryClass 
 		from: (aClassScope asScope: ClyClassScope of: {definingClass}).
 	^self 
 		named: definingClass name 
