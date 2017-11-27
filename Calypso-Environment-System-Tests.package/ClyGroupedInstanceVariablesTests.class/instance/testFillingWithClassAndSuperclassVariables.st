@@ -10,6 +10,4 @@ testFillingWithClassAndSuperclassVariables
 	self assertItems: {ClyInheritedMethodGroup. 0.
 		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1.
 		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1 }.
-	self assertVars: #(#instanceSideVar1 #instanceSideVar2 #subclassN1Var #subclassSameVar 	).
-	self assertDeclClasses: { ClyClass1FromP1. ClyClass1FromP1	.
-		ClySubclassN1OfClass1FromP1. ClySubclassN1OfClass1FromP1 }
+	self assertVars: #(#instanceSideVar1 #instanceSideVar2 #subclassN1Var #subclassSameVar)

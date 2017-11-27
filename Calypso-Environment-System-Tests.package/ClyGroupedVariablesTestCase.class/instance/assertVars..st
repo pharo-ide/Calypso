@@ -8,5 +8,5 @@ assertVars: varNames
 	i := 1.
 	varNames do: [ :expectedVar |
 		var := vars at: i.
-		self assert: var actualObject variable name equals: expectedVar.
+		self assert: var actualObject name equals: expectedVar.
 		i := i + 1]

@@ -8,7 +8,4 @@ testFillingWithTwoInstVarsOfSameClass
 	
 	self assertItems: {ClyInheritedMethodGroup. 0. 
 		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1 }.
-	self assertVars: #(#instanceSideVar1 #instanceSideVar2 ).
-	self 
-		assert: items second actualObject variables asSet
-		equals: variables asSet
+	self assertVars: #(#instanceSideVar1 #instanceSideVar2 )
