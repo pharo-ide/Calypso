@@ -1,12 +1,12 @@
 building groups
 classGroupsIn: aPackageScope do: aBlock
-	| classGroups query group |
+	| classGroups group |
 	classGroups := Dictionary new.	
 	aPackageScope packagesDo: [ :each |
 		each tagsForClasses do: [ :eachTag |	
 			classGroups at: eachTag ifAbsentPut: [
-				query := ClyTaggedClasses by: eachTag from: aPackageScope.
-				group := ClyTaggedClassGroup named: eachTag on: query.
+				group := ClyTaggedClassGroup 
+					forClassesFrom: aPackageScope taggedBy: eachTag.
 				aBlock value: group.
 				group].				
 	]]
