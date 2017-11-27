@@ -1,4 +1,5 @@
 *Calypso-Plugins-FileOut-Environment
 fileOut
 
-	(package classTagNamed: self tag) fileOut
+	classQuery scope packagesDo: [ :each |
+		(each classTagNamed: self tag) fileOut]

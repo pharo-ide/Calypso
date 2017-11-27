@@ -5,7 +5,7 @@ renameMethodTagTo: newTag
 		each tagWith: newTag.
 		each untagFrom: self tag].
 	
-	classScope do: [ :each | 
+	methodQuery scope classesDo:  [ :each | 
 		(each tagsForMethods includes: newTag) 
 			ifFalse: [ each addMethodTag: newTag ].
 		each removeMethodTag: self tag]

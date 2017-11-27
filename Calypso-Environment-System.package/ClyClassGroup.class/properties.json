@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"package",
 		"classQuery"
 	],
 	"name" : "ClyClassGroup",

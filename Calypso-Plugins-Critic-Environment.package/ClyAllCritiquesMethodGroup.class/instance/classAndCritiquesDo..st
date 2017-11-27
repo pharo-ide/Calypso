@@ -1,3 +1,4 @@
 accessing
 classAndCritiquesDo: twoArgsBlock
-	classScope collectAllClasses with: self classAnalysisResults do: twoArgsBlock
+	methodQuery scope collectAllClasses 
+		with: self classAnalysisResults do: twoArgsBlock

@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"classScope",
 		"methodQuery",
 		"subgroupsQuery"
 	],

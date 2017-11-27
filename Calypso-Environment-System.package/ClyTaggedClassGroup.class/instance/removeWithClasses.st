@@ -2,4 +2,5 @@ operations
 removeWithClasses
 
 	super removeWithClasses.
-	package removeClassTag: self tag
+	classQuery packagesDo: [ :each |
+		each removeClassTag: self tag]

@@ -1,3 +1,3 @@
 testing
 includesMethod: aMethod
-	self subclassResponsibility 
+	^self methodQuery retrievesItem: aMethod
