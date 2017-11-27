@@ -1,4 +1,4 @@
 testing
 canBeExecutedInContext: aToolContext
 
-	^aToolContext isSelectedMethodGroupManagedByUser
+	^aToolContext isSelectedMethodGroupEditable

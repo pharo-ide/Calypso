@@ -1,3 +1,3 @@
 *Calypso-Tools-CoreBrowser
-calypsoVirtualGroupColor
+calypsoFrozenItemColor
 	^Color cyan
