@@ -1,4 +1,0 @@
-system changes
-isAffectedInOldLogicBy: aSystemAnnouncement
-	
-	^environmentScope includesClassGroupsAffectedBy: aSystemAnnouncement

@@ -1,3 +1,3 @@
 helpers
-meaningfullObjectToAssert: anEnvironmentItem
-	^anEnvironmentItem actualObject class
+meaningfullObjectToAssert: aBrowserItem
+	^aBrowserItem actualObject class

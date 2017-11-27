@@ -1,7 +1,8 @@
 building
 fillWith: classes
 
-	| filteredChildren |
+	| filteredChildren sortedRoots |
 	filteredChildren := classes asIdentitySet.
-	buildingQuery scope basisObjects do: [ :eachRoot |
+	sortedRoots := buildingQuery scope basisObjects asSortedCollection: #name ascending.
+	sortedRoots do: [ :eachRoot |
 		self fillWith: filteredChildren startingAt: eachRoot depth: 0]
