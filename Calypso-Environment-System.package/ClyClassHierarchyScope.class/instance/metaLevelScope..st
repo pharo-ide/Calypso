@@ -1,3 +1,4 @@
 accessing
-metaLevelScope: anObject
-	metaLevelScope := anObject
+metaLevelScope: aMetaLevelClassScope
+	metaLevelScope := aMetaLevelClassScope.
+	basisObjects := self prepareBasisFrom: basisObjects.
