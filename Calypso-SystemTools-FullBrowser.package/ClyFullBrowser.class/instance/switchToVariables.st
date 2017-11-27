@@ -5,9 +5,8 @@ switchToVariables
 	
 	self changeStateBy: [
 		classScope := methodGroupQuery scope asScope: metaLevelScope.
-		methodGroupQuery := ClyQuery unionFrom: {  
-			ClyAllVariables from: classScope.
-			ClyAllVariables from: (classScope asScope: ClySuperclassScope).
-		} as: ClyGroupedInstanceVariables new.
+		methodGroupQuery :=ClyAllVariables 
+			from: classScope, classScope asInheritedScope 
+			as: ClyGroupedInstanceVariables new.
 		methodGroupView showQuery: methodGroupQuery.
 		self showMethodsForGroups: self methodGroupSelection]

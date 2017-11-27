@@ -2,4 +2,5 @@ instance creation
 forAllMethodsInheritedFrom: aClassScope
 
 	^self  
-		forAllMethods: (ClyAllMethods from: (aClassScope asScope: ClySuperclassScope)) 		from: (aClassScope asScope: ClyClassScope)
+		forAllMethods: (ClyAllMethods from: aClassScope asInheritedScope)
+		from: aClassScope
