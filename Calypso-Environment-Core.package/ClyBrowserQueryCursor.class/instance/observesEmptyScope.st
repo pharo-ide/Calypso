@@ -1,3 +1,0 @@
-testing
-observesEmptyScope
-	^metadata isBuiltInEmptyScope
