@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "DenisKudryashov 6/12/2017 15:12",
-	"super" : "ClyClassScope",
+	"commentStamp" : "",
+	"super" : "ClyAbstractClassScope",
 	"category" : "Calypso-Environment-System-Scopes",
 	"classinstvars" : [ ],
 	"pools" : [ ],

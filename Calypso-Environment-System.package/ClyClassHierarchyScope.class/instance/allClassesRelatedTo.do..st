@@ -1,4 +1,4 @@
-private
+meta level
 allClassesRelatedTo: aClass do: aBlock
 
 	self classesRelatedTo: aClass do: [:each | 

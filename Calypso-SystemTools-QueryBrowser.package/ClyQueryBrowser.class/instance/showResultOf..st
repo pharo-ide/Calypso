@@ -1,7 +1,7 @@
 navigation
-showResultOf: aMethodQuery
-
+showResultOf: aQuery
+	
 	self changeStateBy: [
-		systemQuery := aMethodQuery withResult: self requiredQueryResult.
+		systemQuery := aQuery withResult: self requiredQueryResult.
 		self showQueryResult
 	]

@@ -1,4 +1,4 @@
 converting
 withMetaLevel: aScopeClass 
 	^self copy 
-		metaLevelScope: aScopeClass
+		localClassScope: aScopeClass

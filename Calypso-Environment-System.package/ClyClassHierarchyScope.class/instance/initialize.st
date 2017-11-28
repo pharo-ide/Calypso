@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	metaLevelScope := ClyLocalClassScope 
+	localClassScope := ClyClassScope "By default we only look at own class meta level"

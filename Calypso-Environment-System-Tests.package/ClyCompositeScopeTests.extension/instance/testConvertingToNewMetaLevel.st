@@ -10,6 +10,6 @@ testConvertingToNewMetaLevel
 	self assert: convertedScope class equals: ClyCompositeScope.
 	self assert: convertedScope subscopes first equals: (ClyInstanceSideScope of: {Object}).
 	self assert: convertedScope subscopes last class equals: ClySubclassScope.
-	self assert: convertedScope subscopes last metaLevelScope equals: ClyInstanceSideScope.
+	self assert: convertedScope subscopes last localClassScope equals: ClyInstanceSideScope.
 	self assert: convertedScope environment equals: environment..
 	self assert: (convertedScope subscopes collect: #environment as: Set) equals: {environment} asSet

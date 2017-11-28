@@ -1,3 +1,3 @@
 context
 resolveCurrentClassSideOf: aClass
-	^metaLevelScope resolveClass: aClass
+	^metaLevelScope metaLevelOf: aClass

@@ -1,9 +1,10 @@
 navigation
 showQueryResult
+	systemQuery isBoundToEnvironment ifFalse: [ 
+		systemQuery := systemScope adoptQuery: systemQuery ].
 	(queryScopes includes: systemQuery scope) ifFalse: [ 
 		queryScopes add: systemQuery scope ].	
-		
-	self changeStateBy: [
-		activeScope := systemQuery scope.	
-		resultView showQuery: systemQuery.
-		self ensureSelectedItem]
+	activeScope := systemQuery scope.	
+	
+	resultView showQuery: systemQuery.
+	self ensureSelectedItem

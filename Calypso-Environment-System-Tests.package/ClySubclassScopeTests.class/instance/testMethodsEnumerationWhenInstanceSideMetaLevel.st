@@ -3,7 +3,7 @@ testMethodsEnumerationWhenInstanceSideMetaLevel
 
 	| subclassMethods |
 	scope := ClySubclassScope of: { ClyClass1FromP1 }.
-	scope metaLevelScope: ClyInstanceSideScope.
+	scope localClassScope: ClyInstanceSideScope.
 	
 	scope methodsDo: [ :each | result add: each].
 	

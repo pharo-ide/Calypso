@@ -10,8 +10,8 @@ testConvertingToInheritedScope
 	self assert: convertedScope class equals: ClyCompositeScope.
 	self 
 		assert: convertedScope subscopes first 
-		equals: (ClySuperclassScope of: {Object} metaLevel: ClyInstanceSideScope).
+		equals: (ClySuperclassScope of: {Object} localScope: ClyInstanceSideScope).
 	self 
 		assert: convertedScope subscopes last
-		equals: (ClySuperclassScope of: {Array} metaLevel: ClyInstanceSideScope).
+		equals: (ClySuperclassScope of: {Array} localScope: ClyInstanceSideScope).
 	self assert: convertedScope environment equals: environment..

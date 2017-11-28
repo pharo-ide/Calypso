@@ -1,11 +1,6 @@
 navigation
 browseQueryResultOf: aSystemQuery
 	
-	| methodBrowser |
-	
-	methodBrowser := ClyQueryBrowser on: navigationEnvironment scopes: self allQueryScopes.	
-	methodBrowser disablePluginsWhichAreNotIn: self.
-	
-	methodBrowser show: aSystemQuery inScope: activeScope.
-	methodBrowser openInCurrentWindowOf: self.
-	methodBrowser wasSpawnedFrom: self
+	self spawnBrowser: ClyQueryBrowser withState: [ :browser | 
+		browser queryScopes: self allQueryScopes.
+		browser show: aSystemQuery inScope: activeScope]

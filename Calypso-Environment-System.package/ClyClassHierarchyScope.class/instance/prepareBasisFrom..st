@@ -1,4 +1,4 @@
 initialization
 prepareBasisFrom: classes
 
-	^metaLevelScope new prepareBasisFrom: classes
+	^localClassScope new prepareBasisFrom: classes
