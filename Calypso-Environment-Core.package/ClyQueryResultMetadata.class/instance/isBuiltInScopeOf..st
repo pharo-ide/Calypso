@@ -1,3 +1,3 @@
 testing
 isBuiltInScopeOf: basisObject
-	^buildingQuery isBasedOnScopeOf: basisObject
+	^buildingQuery executesFromScopeOf: basisObject

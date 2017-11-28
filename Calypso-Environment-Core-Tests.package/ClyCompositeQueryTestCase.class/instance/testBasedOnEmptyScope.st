@@ -1,7 +1,7 @@
 tests
 testBasedOnEmptyScope
 
-	self deny: query isBasedOnEmptyScope.
+	self deny: query executesFromEmptyScope.
 	
 	query := self queryClass with: { self subqueryInScopeOf: #()}.
-	self assert: query isBasedOnEmptyScope
+	self assert: query executesFromEmptyScope

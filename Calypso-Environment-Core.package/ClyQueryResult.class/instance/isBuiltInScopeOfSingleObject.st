@@ -1,4 +1,4 @@
 testing
 isBuiltInScopeOfSingleObject
 
-	^buildingQuery isBasedOnScopeOfSingleObject 
+	^buildingQuery executesFromSingleScope 

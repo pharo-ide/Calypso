@@ -1,4 +1,4 @@
 testing
 isBasedOnScope: aScope
 
-	^query isBasedOnScopeClass: aScope
+	^query executesFromScope: aScope

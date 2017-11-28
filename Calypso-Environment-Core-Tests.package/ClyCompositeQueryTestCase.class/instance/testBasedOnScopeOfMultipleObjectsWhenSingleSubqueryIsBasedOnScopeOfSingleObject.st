@@ -5,4 +5,4 @@ testBasedOnScopeOfMultipleObjectsWhenSingleSubqueryIsBasedOnScopeOfSingleObject
 		self subqueryInScopeOf: { self class }.
 	}.
 	
-	self deny: query isBasedOnScopeOfMultipleObjects
+	self deny: query executesFromMultipleScope

@@ -10,7 +10,7 @@ specifyMethodItemNameOn: nameMorph for: methodItem
 	self classSelection isMultipleSelected ifTrue: [
 		^nameMorph contents: (definition printFullNameOf: methodItem)].
 	
-	highlightMainMethods := methodGroupView dataSource isBasedOnScopeOfMultipleObjects.
+	highlightMainMethods := methodGroupView dataSource executesFromMultipleScope.
 	(self isClassSelected: definition definitionClass) ifTrue: [ 	
 		highlightMainMethods ifTrue: [ nameMorph emphasis: TextEmphasis bold emphasisCode].
 		^self].

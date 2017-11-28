@@ -6,5 +6,5 @@ testBasedOnScopeOfMultipleObjectsWhenSubqueriesAreFromScopesOfDifferentObjects
 		self subqueryInScopeOf: { self class superclass}.
 	}.
 	
-	self assert: query isBasedOnScopeOfMultipleObjects.
+	self assert: query executesFromMultipleScope.
 	

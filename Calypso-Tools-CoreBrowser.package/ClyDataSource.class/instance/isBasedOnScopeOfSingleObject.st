@@ -1,4 +1,0 @@
-testing
-isBasedOnScopeOfSingleObject
-
-	^query isBasedOnScopeOfSingleObject 

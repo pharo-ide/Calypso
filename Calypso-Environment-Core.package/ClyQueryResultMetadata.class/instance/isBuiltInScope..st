@@ -1,3 +1,0 @@
-testing
-isBuiltInScope: anEnvironmentScopeClass
-	^buildingQuery isBasedOnScopeClass: anEnvironmentScopeClass

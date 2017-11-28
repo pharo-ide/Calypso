@@ -1,5 +1,5 @@
 initialization
 ensureInitialState
 
-	(navigationViews allSatisfy: [ :each | each showsResultOf: ClyUnknownQuery new ])
+	(navigationViews allSatisfy: [ :each | each hasRealQuery ])
 		ifTrue: [ self prepareInitialState]

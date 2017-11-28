@@ -1,4 +1,4 @@
 testing
 isBuiltInScopeOfMultipleObjects
 
-	^buildingQuery isBasedOnScopeOfMultipleObjects
+	^buildingQuery executesFromMultipleScope

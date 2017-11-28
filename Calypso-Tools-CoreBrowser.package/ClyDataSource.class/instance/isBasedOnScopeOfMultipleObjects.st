@@ -1,4 +1,0 @@
-testing
-isBasedOnScopeOfMultipleObjects
-
-	^query isBasedOnScopeOfMultipleObjects

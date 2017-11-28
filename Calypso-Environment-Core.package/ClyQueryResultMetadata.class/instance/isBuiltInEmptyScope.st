@@ -1,4 +1,4 @@
 testing
 isBuiltInEmptyScope
 
-	^buildingQuery isBasedOnEmptyScope 
+	^buildingQuery executesFromEmptyScope 

@@ -6,4 +6,4 @@ testBasedOnScopeOfMultipleObjectsWhenSubqueriesAreFromDifferentScopesOfSameObjec
 		self subqueryInScope: ClyScopeExample2 of: { self class }.
 	}.
 	
-	self deny: query isBasedOnScopeOfMultipleObjects
+	self deny: query executesFromMultipleScope

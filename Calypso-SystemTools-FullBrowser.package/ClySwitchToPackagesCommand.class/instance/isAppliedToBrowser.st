@@ -1,4 +1,4 @@
 testing
 isAppliedToBrowser
 
-	^browser packageView showsResultOf: ClyAllPackages new
+	^browser packageView showsItemsFromQuery: ClyAllPackages

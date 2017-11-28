@@ -1,4 +1,4 @@
 testing
 showsItemsOfType: itemTypeClass
 
-	^self dataSource isBasedOnQueryOf: itemTypeClass
+	^self query retrievesItemsOfType: itemTypeClass

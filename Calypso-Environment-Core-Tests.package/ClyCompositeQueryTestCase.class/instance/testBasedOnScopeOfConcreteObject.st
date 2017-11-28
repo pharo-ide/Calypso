@@ -1,7 +1,7 @@
 tests
 testBasedOnScopeOfConcreteObject
 
-	self assert: (query isBasedOnScopeOf: self class).
+	self assert: (query executesFromScopeOf: self class).
 	
-	self deny: (query isBasedOnScopeOf: Array)
+	self deny: (query executesFromScopeOf: Array)
 	

@@ -1,4 +1,4 @@
 testing
-isBasedOnScopeOf: basisObject
+executesFromScopeOf: basisObject
 
 	^scope isBasedOn: basisObject 
