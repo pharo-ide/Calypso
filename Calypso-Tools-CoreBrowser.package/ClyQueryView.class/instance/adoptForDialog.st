@@ -1,5 +1,5 @@
 controlling
 adoptForDialog
-	self dataSource numberOfRows < 10
+	self itemCount < 10
 		ifTrue: [ self height: 100 ]
 		ifFalse: [ self height: 300; enableFilter ].

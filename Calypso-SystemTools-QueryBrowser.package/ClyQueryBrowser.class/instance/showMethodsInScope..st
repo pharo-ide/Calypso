@@ -6,4 +6,4 @@ showMethodsInScope: aScope
 		activeScope := aScope.
 		systemQuery := systemQuery withScope: activeScope.
 		resultView showQuery: systemQuery.
-		self ensureSelectedItem]
+		resultView ensureSelectedItem]
