@@ -1,4 +1,4 @@
 *Calypso-SystemTools-QueryBrowser
 browseSendersOf: aSymbol
 	
-	self browseQueryResultOf: (ClyMessageSenders of: {aSymbol})
+	self browseQuery: (ClyMessageSenders of: {aSymbol})

@@ -3,4 +3,4 @@ execute
 	| vars |
 	vars := variables collect: [:each | each variable].
 	
-	browser browseQueryResultOf: (ClyVariableReferences of: vars)
+	browser browseQuery: (ClyVariableReferences of: vars)

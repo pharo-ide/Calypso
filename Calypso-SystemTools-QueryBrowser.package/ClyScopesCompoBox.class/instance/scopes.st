@@ -1,4 +1,4 @@
 accessing
 scopes
 
-	^browser allQueryScopes 
+	^browser allNavigationScopes 
