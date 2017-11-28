@@ -1,3 +1,3 @@
 testing
-executesFromSingleScope
+isExecutedFromSingleScope
 	^scope isBasedOnSingleBasis 

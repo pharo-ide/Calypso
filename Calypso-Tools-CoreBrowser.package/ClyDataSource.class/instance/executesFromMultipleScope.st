@@ -1,4 +1,0 @@
-testing
-executesFromMultipleScope
-
-	^query executesFromMultipleScope

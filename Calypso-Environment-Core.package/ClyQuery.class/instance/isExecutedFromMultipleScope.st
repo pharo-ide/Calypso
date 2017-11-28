@@ -1,3 +1,3 @@
 testing
-executesFromMultipleScope
+isExecutedFromMultipleScope
 	^scope isBasedOnMultipleBasis

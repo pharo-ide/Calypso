@@ -1,4 +1,4 @@
 testing
-executesFromEmptyScope
+isExecutedFromEmptyScope
 
 	^scope isBasedOnEmptyBasis

@@ -1,4 +1,0 @@
-testing
-executesFromSingleScope
-
-	^query executesFromSingleScope 

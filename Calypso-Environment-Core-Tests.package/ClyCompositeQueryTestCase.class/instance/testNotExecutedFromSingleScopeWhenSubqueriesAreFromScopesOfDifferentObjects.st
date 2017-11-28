@@ -1,10 +1,10 @@
 tests
-testBasedOnScopeOfMultipleObjectsWhenSubqueriesAreFromScopesOfDifferentObjects
+testNotExecutedFromSingleScopeWhenSubqueriesAreFromScopesOfDifferentObjects
 
 	query subqueries: { 
 		self subqueryInScopeOf: { self class }.
 		self subqueryInScopeOf: { self class superclass}.
 	}.
 	
-	self assert: query executesFromMultipleScope.
+	self deny: query isExecutedFromSingleScope.
 	
