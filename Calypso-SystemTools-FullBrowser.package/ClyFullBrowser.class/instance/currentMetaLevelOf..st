@@ -1,3 +1,3 @@
 context
-resolveCurrentClassSideOf: aClass
+currentMetaLevelOf: aClass
 	^metaLevelScope metaLevelOf: aClass

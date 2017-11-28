@@ -1,3 +1,3 @@
 accessing
-resolveCurrentClassSideOf: aClass
+currentMetaLevelOf: aClass
 	^metaLevelScope metaLevelOf: aClass

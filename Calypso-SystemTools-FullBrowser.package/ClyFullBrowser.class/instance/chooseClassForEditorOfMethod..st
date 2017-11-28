@@ -4,6 +4,6 @@ chooseClassForEditorOfMethod: aMethod
 	| selectedClass |
 	self classSelection isSingleSelected ifTrue: [ 
 		selectedClass := self classSelection lastSelectedItem actualObject.
-		^self resolveCurrentClassSideOf: selectedClass ].
+		^self currentMetaLevelOf: selectedClass ].
 	
 	^aMethod origin
