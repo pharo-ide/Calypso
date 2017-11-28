@@ -1,3 +1,3 @@
 testing
 canBeExecutedInContext: aToolContext
-	^aToolContext isClassSelected
+	^aToolContext isPackageSelected

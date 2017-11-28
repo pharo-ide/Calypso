@@ -1,3 +1,3 @@
 execution
-createScope
+traitScopeClass
 	self subclassResponsibility 
