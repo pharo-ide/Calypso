@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"definitionPackageItem",
-		"definitionClassItem"
+		"definingClassItem",
+		"definingPackageItem"
 	],
-	"name" : "ClySystemDefinitionProperty",
+	"name" : "ClyItemDefinitionProperty",
 	"type" : "normal"
 }

@@ -2,5 +2,5 @@ printing
 printDefinition
 
 	^isInstanceSide 
-		ifTrue: [ definitionClassItem name]
-		ifFalse: [ definitionClassItem name, ' class']
+		ifTrue: [ definingClassItem name]
+		ifFalse: [ definingClassItem name, ' class']

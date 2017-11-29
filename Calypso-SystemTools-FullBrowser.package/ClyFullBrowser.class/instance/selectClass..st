@@ -8,7 +8,7 @@ selectClass: aClass
 			"we want ensure that selected package is the package of found class.
 			If it is not then we will select required package"
 			classDefinition := foundItems anyOne getProperty: ClyClassDefinitionProperty.
-			(self isPackageSelected: classDefinition definitionPackage) 
+			(self isPackageSelected: classDefinition definingPackage) 
 				ifTrue: [ ^self classSelection selectItems: foundItems ]].
 		
 		aClass tags 

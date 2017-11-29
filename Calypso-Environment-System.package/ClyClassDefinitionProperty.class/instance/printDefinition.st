@@ -1,3 +1,3 @@
 printing
 printDefinition
-	^definitionPackageItem name
+	^definingPackageItem name

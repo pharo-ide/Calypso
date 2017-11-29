@@ -7,5 +7,5 @@ specifyClassItemNameOn: nameMorph for: classItem
 	
 	self packageSelection isMultipleSelected ifTrue: [
 		nameMorph contents: (definition printFullNameOf: classItem)].
-	(self isPackagePartOfSelection: definition definitionPackage) 
+	(self isPackagePartOfSelection: definition definingPackage) 
 		ifFalse: [nameMorph color: Smalltalk ui theme classExtensionColor]

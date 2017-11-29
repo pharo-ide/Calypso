@@ -3,7 +3,7 @@ classScopeOfSelectedItems
 
 	| definition classes |
 	classes := self selection items collect: [: methodItem |
-		definition := methodItem getProperty: ClySystemDefinitionProperty.
-		definition definitionClass].
+		definition := methodItem getProperty: ClyItemDefinitionProperty.
+		definition definingClass].
 	
-	^ClyBothMetaLevelClassScope of: classes asIdentitySet
+	^ClyBothMetaLevelClassScope of: classes in: navigationEnvironment

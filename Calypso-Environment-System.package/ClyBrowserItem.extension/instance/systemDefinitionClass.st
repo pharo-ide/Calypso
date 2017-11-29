@@ -1,4 +1,4 @@
 *Calypso-Environment-System
 systemDefinitionClass
 	
-	^self systemDefinition definitionClass
+	^self systemDefinition definingClass

@@ -4,14 +4,14 @@ specifyMethodItemNameOn: nameMorph for: methodItem
 	nameMorph contents: methodItem name.
 	
 	definition := methodItem	getProperty: ClyMethodDefinitionProperty.
-	(self isPackagePartOfSelection: definition definitionPackage) ifFalse: [
+	(self isPackagePartOfSelection: definition definingPackage) ifFalse: [
 		nameMorph color: Smalltalk ui theme classExtensionColor].
 	
 	self classSelection isMultipleSelected ifTrue: [
 		^nameMorph contents: (definition printFullNameOf: methodItem)].
 	
 	highlightMainMethods := methodGroupView showsItemsFromMultipleScope.
-	(self isClassSelected: definition definitionClass) ifTrue: [ 	
+	(self isClassSelected: definition definingClass) ifTrue: [ 	
 		highlightMainMethods ifTrue: [ nameMorph emphasis: TextEmphasis bold emphasisCode].
 		^self].
 	
