@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 6/12/2017 15:16",
+	"super" : "ClyClassHierarchyScope",
+	"category" : "Calypso-SystemPlugins-Traits-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTraitUserScope",
+	"type" : "normal"
+}

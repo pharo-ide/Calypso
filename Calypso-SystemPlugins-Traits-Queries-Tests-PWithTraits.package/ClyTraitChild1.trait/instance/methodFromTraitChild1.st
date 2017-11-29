@@ -1,0 +1,2 @@
+tag
+methodFromTraitChild1

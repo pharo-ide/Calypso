@@ -15,7 +15,7 @@ baseline: spec
 			package: #'Calypso-SystemQueries' with: [
 				spec requires: #(#'Calypso-NavigationModel' ). ];
 			package: #'Calypso-SystemQueries-Tests' with: [
-				spec requires: #(#'Calypso-NavigationModel-Tests' #'Calypso-SystemQueries' #'Calypso-SystemQueries-Tests-PWithSingleClass' #'Calypso-SystemQueries-Tests-PExtendedByP1' #'Calypso-SystemQueries-Tests-P1WithHierarchy' #'Calypso-SystemQueries-Tests-P2WithSubclassFromP1' #'Calypso-SystemQueries-Tests-P3WithSubclassFromP2' #'Calypso-SystemQueries-Tests-PExtendedByP5' #'Calypso-SystemQueries-Tests-P5WithTags' #'Calypso-SystemQueries-Tests-PWithClassAndTraits' #'Calypso-SystemQueries-Tests-PExtendingTrait' ). ];
+				spec requires: #(#'Calypso-NavigationModel-Tests' #'Calypso-SystemQueries' #'Calypso-SystemQueries-Tests-PWithSingleClass' #'Calypso-SystemQueries-Tests-PExtendedByP1' #'Calypso-SystemQueries-Tests-P1WithHierarchy' #'Calypso-SystemQueries-Tests-P2WithSubclassFromP1' #'Calypso-SystemQueries-Tests-P3WithSubclassFromP2' #'Calypso-SystemQueries-Tests-PExtendedByP5' #'Calypso-SystemQueries-Tests-P5WithTags' #'Calypso-SystemPlugins-Traits-Queries-Tests-PWithTraits' #'Calypso-SystemPlugins-Traits-Queries-Tests-PExtendingTrait' ). ];
 			package: #'Calypso-SystemQueries-Tests-P1WithHierarchy' with: [
 				spec requires: #(#'Calypso-SystemQueries-Tests-PExtendedByP1' ). ];
 			package: #'Calypso-SystemQueries-Tests-P2WithSubclassFromP1' with: [
@@ -27,10 +27,18 @@ baseline: spec
 			package: #'Calypso-SystemQueries-Tests-PExtendedByP1' with: [
 				spec requires: #(#'Calypso-SystemQueries-Tests-PWithSingleClass' ). ];
 			package: #'Calypso-SystemQueries-Tests-PExtendedByP5';
-			package: #'Calypso-SystemQueries-Tests-PExtendingTrait' with: [
-				spec requires: #(#'Calypso-SystemQueries-Tests-PWithClassAndTraits' ). ];
-			package: #'Calypso-SystemQueries-Tests-PWithClassAndTraits';
 			package: #'Calypso-SystemQueries-Tests-PWithSingleClass';
+			
+			package: #'Calypso-SystemPlugins-Traits-Queries' with: [
+				spec requires: #(#'Calypso-SystemQueries' ). ];
+			package: #'Calypso-SystemPlugins-Traits-Queries-Tests-PWithTraits';
+			package: #'Calypso-SystemPlugins-Traits-Queries-Tests-PExtendingTrait' with: [
+				spec requires: #(#'Calypso-SystemPlugins-Traits-Queries-Tests-PWithTraits' )];			
+			package: 'Calypso-SystemPlugins-Traits-Queries-Tests' with: [
+				spec requires: #(#'Calypso-SystemPlugins-Traits-Queries' #'Calypso-SystemQueries-Tests' 'Calypso-SystemPlugins-Traits-Queries-Tests-PWithTraits' 'Calypso-SystemPlugins-Traits-Queries-Tests-PExtendingTrait') ];
+			package: #'Calypso-SystemPlugins-Traits-Browser' with: [
+				spec requires: #(#'Calypso-SystemTools-FullBrowser' #'Calypso-SystemPlugins-Traits-Queries' ). ];
+			
 			
 			package: #'Calypso-ProcessQueries' with: [
 				spec requires: #(#'Calypso-SystemQueries')];
