@@ -1,5 +1,5 @@
 selection-methods
 isMethodSelected
-	"optimized version without extra colletion copy"
+	"optimized version without extra collection copy"
 	
-	^selectedItems anySatisfy: [ :each | each hasProperty: ClyMethodDefinitionProperty  ]
+	^selectedItems anySatisfy: [ :each | each isBasedOnItemType: ClyMethod  ]

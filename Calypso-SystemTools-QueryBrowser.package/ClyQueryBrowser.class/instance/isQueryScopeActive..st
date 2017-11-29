@@ -1,4 +1,4 @@
 testing
-isQueryScopeActive: anEnvironmentScope
+isQueryScopeActive: aScope
 
-	^self activeScope = anEnvironmentScope 
+	^self activeScope = aScope 

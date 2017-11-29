@@ -1,3 +1,3 @@
 accessing
 methodSelection
-	^resultView selection
+	^self selection asSelectedItemsOf: ClyMethod

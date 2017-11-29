@@ -1,3 +1,3 @@
 selection-methods
 selectedMethodItems
-	^selectedItems select: [ :each | each hasProperty: ClyMethodDefinitionProperty  ]
+	^selectedItems select: [ :each | each isBasedOnItemType: ClyMethod ]
