@@ -1,3 +1,3 @@
 execution
 execute
-	browser showMethodsInScope: queryScope
+	browser switchScopeTo: queryScope

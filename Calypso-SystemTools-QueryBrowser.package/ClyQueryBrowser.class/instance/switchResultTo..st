@@ -1,8 +1,8 @@
 navigation
-switchToResult: aQueryResult
+switchResultTo: aQueryResult
 
 	self changeStateBy: [
 		DefaultQueryResult := aQueryResult.
 		systemQuery := systemQuery withResult: aQueryResult.
-		self showMethodsInScope: activeScope
+		self showQueryResult
 	]

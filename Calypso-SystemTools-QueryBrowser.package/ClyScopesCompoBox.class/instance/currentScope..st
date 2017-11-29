@@ -1,5 +1,5 @@
 accessing
-currentScope: anEnvironmentScope
+currentScope: aScope
 
-	browser showMethodsInScope: anEnvironmentScope.	
-	dropList setBalloonText: anEnvironmentScope printBasis. 
+	browser switchScopeTo: aScope.	
+	dropList setBalloonText: aScope printBasis. 
