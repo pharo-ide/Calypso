@@ -2,5 +2,5 @@ navigation
 switchScopeTo: aScope
 	
 	self changeStateBy: [
-		systemQuery := systemQuery withScope: activeScope.
+		systemQuery := systemQuery withScope: aScope.
 		self showQueryResult]
