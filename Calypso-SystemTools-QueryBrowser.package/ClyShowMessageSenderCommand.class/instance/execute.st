@@ -4,4 +4,4 @@ execute
 	| selectors |
 	selectors := messages collect: [ :each | each selector].
 	
-	browser browseQuery: (ClyMessageSenders of: selectors)
+	browser spawnQueryBrowserOn: (ClyMessageSenders of: selectors)

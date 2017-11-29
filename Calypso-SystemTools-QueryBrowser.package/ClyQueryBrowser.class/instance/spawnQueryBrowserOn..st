@@ -1,7 +1,7 @@
 navigation
-browseQuery: aQuery
+spawnQueryBrowserOn: aQuery
 	
 	| actualQuery |
 	actualQuery := activeScope adoptQuery: aQuery.
 	
-	super browseQuery: actualQuery
+	super spawnQueryBrowserOn: actualQuery

@@ -1,4 +1,4 @@
 execution
 execute
 
-	browser browseQuery: (ClyClassReferences to: classes)
+	browser spawnQueryBrowserOn: (ClyClassReferences to: classes)

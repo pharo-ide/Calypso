@@ -5,6 +5,6 @@ browseReferencesTo: aSymbol
 	aSymbol first isUppercase ifTrue: [ 
 		classBinding := self system bindingOf: aSymbol.
 		classBinding ifNotNil: [ 
-			^self browseQuery: (ClyClassReferences of: {classBinding})]].
+			^self spawnQueryBrowserOn: (ClyClassReferences of: {classBinding})]].
 		
 	self browseSendersOf: aSymbol

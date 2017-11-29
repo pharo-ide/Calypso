@@ -1,5 +1,5 @@
 *Calypso-SystemTools-QueryBrowser
-browseQuery: aQuery
+spawnQueryBrowserOn: aQuery
 	
 	self spawnBrowser: ClyQueryBrowser withState: [ :browser | 
 		browser queryScopes: self allNavigationScopes.
