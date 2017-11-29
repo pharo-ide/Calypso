@@ -1,3 +1,0 @@
-browser state
-restoreBrowserState
-	self subclassResponsibility 

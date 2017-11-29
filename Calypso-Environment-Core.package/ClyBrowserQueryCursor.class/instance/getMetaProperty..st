@@ -1,3 +1,0 @@
-accessing
-getMetaProperty: anEnvironmentPropertyClass
-	^metadata getProperty: anEnvironmentPropertyClass

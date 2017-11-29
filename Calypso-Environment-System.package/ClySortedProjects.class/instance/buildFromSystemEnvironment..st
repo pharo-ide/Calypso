@@ -1,4 +1,0 @@
-building
-buildFromSystemEnvironment: aSystemEnvironment
-	
-	self buildFromProjects: aSystemEnvironment projects

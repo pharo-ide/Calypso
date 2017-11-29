@@ -1,1 +1,0 @@
-I represent point of view on environment from class side of set of classes

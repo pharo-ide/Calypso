@@ -1,3 +1,0 @@
-running
-queryClass
-	^ClyFilteringQuery 

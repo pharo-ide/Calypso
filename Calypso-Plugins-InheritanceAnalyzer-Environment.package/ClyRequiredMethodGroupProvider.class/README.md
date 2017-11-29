@@ -1,1 +1,0 @@
-I provide ClyRequiredMethodGroup only when there are any methods which should be implemented by given classes

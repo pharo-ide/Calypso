@@ -1,3 +1,0 @@
-accessing
-browser
-	^ browserTool browser

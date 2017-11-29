@@ -1,3 +1,0 @@
-execution
-createScope
-	self subclassResponsibility 

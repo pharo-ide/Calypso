@@ -1,1 +1,0 @@
-I provide breakpoints method group when classes include methods with breakpoints or halts

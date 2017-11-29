@@ -1,4 +1,0 @@
-printing
-printVariables
-
-	^variableQuery description

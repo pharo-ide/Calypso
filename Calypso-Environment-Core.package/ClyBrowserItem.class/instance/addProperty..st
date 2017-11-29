@@ -1,3 +1,0 @@
-preparation
-addProperty: aBrowserItemProperty
-	properties add: aBrowserItemProperty

@@ -1,3 +1,0 @@
-selection-package groups
-isPackageGroupSelected
-	^self selectedPackageGroupItems notEmpty

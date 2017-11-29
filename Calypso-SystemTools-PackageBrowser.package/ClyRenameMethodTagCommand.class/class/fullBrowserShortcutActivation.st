@@ -1,5 +1,0 @@
-as yet unclassified
-fullBrowserShortcutActivation
-	<classAnnotation>
-	
-	^CmdShortcutCommandActivation renamingFor: ClyPackageBrowserContextOfMethodGroups

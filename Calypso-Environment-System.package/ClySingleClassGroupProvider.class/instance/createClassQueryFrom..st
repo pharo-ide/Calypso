@@ -1,3 +1,0 @@
-building groups
-createClassQueryFrom: aPackageScope
-	self subclassResponsibility 

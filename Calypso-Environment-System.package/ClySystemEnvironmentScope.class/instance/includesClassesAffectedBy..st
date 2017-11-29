@@ -1,3 +1,0 @@
-system changes
-includesClassesAffectedBy: aSystemAnnouncement
-	^aSystemAnnouncement affectsClasses

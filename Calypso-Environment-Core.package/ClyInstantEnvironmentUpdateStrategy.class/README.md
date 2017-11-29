@@ -1,1 +1,0 @@
-I am default updating strategy for navigation environment. I force content to notify users about changes immediatelly when they wer occured

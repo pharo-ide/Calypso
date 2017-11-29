@@ -1,2 +1,0 @@
-superclassTag1
-superclassTag1Method

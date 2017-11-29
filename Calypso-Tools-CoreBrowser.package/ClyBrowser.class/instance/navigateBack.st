@@ -1,3 +1,0 @@
-navigation
-navigateBack
-	navigationHistory undoNavigationOf: self

@@ -1,3 +1,0 @@
-running
-scopeClass
-	self subclassResponsibility 

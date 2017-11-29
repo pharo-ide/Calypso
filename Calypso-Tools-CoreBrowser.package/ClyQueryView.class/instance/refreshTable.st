@@ -1,3 +1,0 @@
-controlling
-refreshTable
-	table refresh

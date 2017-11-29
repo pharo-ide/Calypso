@@ -1,2 +1,0 @@
-methods for tests
-messageImplementor2

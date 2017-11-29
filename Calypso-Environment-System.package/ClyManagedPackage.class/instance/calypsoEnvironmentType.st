@@ -1,3 +1,0 @@
-accessing
-calypsoEnvironmentType
-	^RPackage

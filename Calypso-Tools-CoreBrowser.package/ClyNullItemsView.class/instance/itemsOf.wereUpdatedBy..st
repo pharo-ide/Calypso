@@ -1,2 +1,0 @@
-updating
-itemsOf: aDataSource wereUpdatedBy: anEnvironmentChanged

@@ -1,3 +1,0 @@
-testing
-wasNotified
-	^wasNotified 

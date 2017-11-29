@@ -1,3 +1,0 @@
-building groups
-createMethodQueryFrom: aClassScope
-	self subclassResponsibility 

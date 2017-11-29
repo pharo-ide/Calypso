@@ -1,3 +1,0 @@
-selection-methods
-selectedMethodItems
-	^selectedItems 

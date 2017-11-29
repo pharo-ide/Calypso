@@ -1,4 +1,0 @@
-accessing
-registerPackageManager: aPackageManager
-
-	self current registerPackageManager: aPackageManager

@@ -1,1 +1,0 @@
-I provide ClyFailedTestGroup only when there are failed tests in given test cases

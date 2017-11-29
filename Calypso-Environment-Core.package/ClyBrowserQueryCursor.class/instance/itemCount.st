@@ -1,3 +1,0 @@
-accessing
-itemCount
-	^metadata itemCount

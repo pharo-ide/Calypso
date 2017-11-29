@@ -1,3 +1,0 @@
-helpers
-createQueryResult
-	^ClyGroupedInstanceVariables new

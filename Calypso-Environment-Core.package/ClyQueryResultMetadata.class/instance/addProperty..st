@@ -1,3 +1,0 @@
-accessing
-addProperty: anEnvironmentItemProperty
-	properties add: anEnvironmentItemProperty

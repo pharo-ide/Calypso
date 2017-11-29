@@ -1,1 +1,0 @@
-I represent kind of null environment content

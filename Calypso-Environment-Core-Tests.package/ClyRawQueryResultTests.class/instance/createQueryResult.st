@@ -1,3 +1,0 @@
-running
-createQueryResult
-	^ClyRawQueryResult new
