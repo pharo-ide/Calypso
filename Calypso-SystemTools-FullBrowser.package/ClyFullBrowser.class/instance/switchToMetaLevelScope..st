@@ -1,9 +1,8 @@
 navigation
-switchToMetaLevelScope: scopeClass
-	metaLevelScope == scopeClass ifTrue: [ ^self ].
+switchToMetaLevelScope: aMetaLevelScopeClass
+	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
 	
-	self changeStateBy: [
-		metaLevelScope := scopeClass.				
-		methodGroupQuery := methodGroupQuery withMetaLevelScope: metaLevelScope.
-		methodGroupView showQuery: methodGroupQuery.	
-		self showMethodsForGroups: self methodGroupSelection]
+	self changeMethodGroupQueryBy: [
+		metaLevelScope := aMetaLevelScopeClass.				
+		methodGroupQuery withMetaLevelScope: metaLevelScope
+	]

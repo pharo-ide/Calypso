@@ -1,8 +1,7 @@
 navigation
 showAllMethods
 		
-	| classScope methodQuery |
-	classScope := methodGroupQuery scope asScope: metaLevelScope.	
-		
-	methodQuery := ClyAllMethods sortedFrom: classScope.	
+	| methodQuery |
+	
+	methodQuery := ClyAllMethods sortedFrom: self classScopeForMethods.	
 	methodView showQuery: methodQuery

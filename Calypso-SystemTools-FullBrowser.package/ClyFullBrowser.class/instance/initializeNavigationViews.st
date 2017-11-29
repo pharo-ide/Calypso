@@ -7,21 +7,21 @@ initializeNavigationViews
 			ClyPackageGroup -> #prepareProjectItemsQueryFrom:in:.
 			RPackage -> #prepareClassGroupQueryFrom:in: };
 		enableFilterUsing: ClyRegexPattern new;
-		requestNavigationBy: #showClassesForPackages:.
+		requestNavigationBy: #packageSelectionChanged.
 	packageView filterField announcer when: RubTextChanged send: #updateDefaultPackageFilter to: self.
 	
 	classView := self newNavigationView
 		displayMainColumnBy: [ :cell :item | 
 			self specifyClassItemNameOn: cell nameMorph for: item browserItem];
 		enableFilter;
-		requestNavigationBy: #showMethodsForClasses:.
+		requestNavigationBy: #classSelectionChanged.
 
 	methodGroupView := self newNavigationView
 		treeStructure: { 
 			ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: };
-		requestNavigationBy: #showMethodsForGroups:.
+		requestNavigationBy: #methodGroupSelectionChanged.
 	
 	methodView := self newNavigationView
 		displayMainColumnBy: [ :cell :item | 
 			self specifyMethodItemNameOn: cell nameMorph for: item browserItem];
-		requestNavigationBy: #highlightMethodGroupsFor:.
+		requestNavigationBy: #methodSelectionChanged.

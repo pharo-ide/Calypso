@@ -1,4 +1,9 @@
 navigation
 switchToFlatClasses
 	
-	self showClassesForPackages: self packageSelection
+	| classQueries |
+	classQueries := OrderedCollection new.
+	self packageSelection groupItemsByTypeAndDo: [ :typeClass :items | 
+		classQueries addAll: (typeClass prepareClassQueriesFrom: items in: navigationEnvironment)].
+	
+	classView showQueries: classQueries as: ClyExtensionLastSortedClasses hierarchical

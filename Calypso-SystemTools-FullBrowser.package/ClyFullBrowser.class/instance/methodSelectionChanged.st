@@ -1,8 +1,8 @@
-navigation
-highlightMethodGroupsFor: selectedMethods
+selection changes
+methodSelectionChanged
 
 	| actualMethods |
-	actualMethods := selectedMethods actualObjects.
+	actualMethods := self methodSelection actualObjects.
 	
 	methodGroupView highlightItemsWhich: [ :eachGroup | 
 		actualMethods anySatisfy: [:eachMethod | 

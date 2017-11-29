@@ -5,5 +5,7 @@ selectionChanged
 	self changeStateBy: [ 
 		self updateSelection.	
 		navigationSelector ifNotNil: [
-			browser perform: navigationSelector with: self selection].
+			browser 
+				perform: navigationSelector 
+				withEnoughArguments: {self selection}].
 	]

@@ -1,0 +1,3 @@
+accessing
+classScopeForMethods
+	^methodGroupQuery scope asScope: metaLevelScope

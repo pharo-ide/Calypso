@@ -1,6 +1,6 @@
 converting
-asItemsScope: anEnvironmentScopeClass
+asItemsScope: aTypedScope
 	| actualItems |
 	actualItems := self uniformActualObjects.
 	
-	^anEnvironmentScopeClass of: actualItems
+	^aTypedScope of: actualItems in: rootDataSource queryEnvironment
