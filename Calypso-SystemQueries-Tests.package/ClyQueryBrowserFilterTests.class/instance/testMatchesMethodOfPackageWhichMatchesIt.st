@@ -1,6 +1,6 @@
 tests-filter methods
 testMatchesMethodOfPackageWhichMatchesIt
 
-	filter := ClyQueryBrowserFilter substringPattern: 'Environment-System-Tests'.
+	filter := ClyQueryBrowserFilter substringPattern: 'SystemQueries-Tests'.
 	
 	self assert: (filter matches: self itemOfThisTestMethod)
