@@ -1,0 +1,4 @@
+testing
+showsItemsFromMultipleScope
+
+	^self query isExecutedFromMultipleScope

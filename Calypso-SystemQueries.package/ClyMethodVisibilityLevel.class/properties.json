@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-SystemQueries-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"visibleClassScope",
+		"extraClassScope"
+	],
+	"name" : "ClyMethodVisibilityLevel",
+	"type" : "normal"
+}

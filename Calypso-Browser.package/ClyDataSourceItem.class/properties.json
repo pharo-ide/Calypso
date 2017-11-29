@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "DenisKudryashov 4/19/2017 17:52",
+	"super" : "Object",
+	"category" : "Calypso-Browser-DataSource",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ownerDataSource",
+		"childrenDataSource",
+		"browserItem"
+	],
+	"name" : "ClyDataSourceItem",
+	"type" : "normal"
+}

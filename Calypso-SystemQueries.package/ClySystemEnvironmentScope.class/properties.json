@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 8/31/2017 14:50",
+	"super" : "ClySystemScope",
+	"category" : "Calypso-SystemQueries-Scopes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySystemEnvironmentScope",
+	"type" : "normal"
+}

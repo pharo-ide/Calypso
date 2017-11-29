@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySystemEnvironmentPlugin",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyReflectivityEnvironmentPlugin",
+	"type" : "normal"
+}

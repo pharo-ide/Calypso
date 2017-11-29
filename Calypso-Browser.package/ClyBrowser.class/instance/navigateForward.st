@@ -1,0 +1,3 @@
+navigation
+navigateForward
+	navigationHistory redoNavigationOf: self

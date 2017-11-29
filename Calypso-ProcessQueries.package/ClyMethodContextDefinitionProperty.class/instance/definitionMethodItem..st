@@ -1,0 +1,3 @@
+accessing
+definitionMethodItem: anEnvironmentItem
+	definitionMethodItem := anEnvironmentItem

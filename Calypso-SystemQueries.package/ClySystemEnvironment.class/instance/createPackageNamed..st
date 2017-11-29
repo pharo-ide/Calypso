@@ -1,0 +1,3 @@
+package management
+createPackageNamed: packageName
+	^packageOrganizer createPackageNamed: packageName

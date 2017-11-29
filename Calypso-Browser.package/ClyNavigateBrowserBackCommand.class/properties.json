@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserNavigationCommand",
+	"category" : "Calypso-Browser-NavigationHistory",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyNavigateBrowserBackCommand",
+	"type" : "normal"
+}

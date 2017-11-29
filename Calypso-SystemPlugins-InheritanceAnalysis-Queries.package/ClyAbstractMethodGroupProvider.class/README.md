@@ -1,0 +1,1 @@
+I provide ClyAbstractMethodGroup only when there are abstract methods in given classes

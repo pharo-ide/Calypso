@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyItemDefinitionProperty",
+	"category" : "Calypso-ProcessQueries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"priority",
+		"activeContextItem"
+	],
+	"name" : "ClyProcessDefinitionProperty",
+	"type" : "normal"
+}

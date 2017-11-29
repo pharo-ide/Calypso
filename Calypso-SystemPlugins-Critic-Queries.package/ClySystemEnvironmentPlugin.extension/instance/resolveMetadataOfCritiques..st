@@ -1,0 +1,2 @@
+*Calypso-SystemPlugins-Critic-Queries
+resolveMetadataOfCritiques: aClySortedCritiques

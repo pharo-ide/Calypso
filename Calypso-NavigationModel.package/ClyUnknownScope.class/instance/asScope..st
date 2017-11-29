@@ -1,0 +1,4 @@
+queries
+asScope: anotherEnvironmentScopeClass
+
+	^self

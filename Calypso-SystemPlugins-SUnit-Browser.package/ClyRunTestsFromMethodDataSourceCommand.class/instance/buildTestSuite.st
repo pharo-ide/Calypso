@@ -1,0 +1,4 @@
+execution
+buildTestSuite
+	
+	self subclassResponsibility 

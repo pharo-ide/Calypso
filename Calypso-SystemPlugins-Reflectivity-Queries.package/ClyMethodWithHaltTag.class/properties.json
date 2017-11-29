@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySimpleTag",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMethodWithHaltTag",
+	"type" : "normal"
+}

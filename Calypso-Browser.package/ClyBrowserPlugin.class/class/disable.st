@@ -1,0 +1,3 @@
+testing
+disable
+	isAutoActivated := false

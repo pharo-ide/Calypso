@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 10/6/2017 15:21",
+	"super" : "ClassAnnotation",
+	"category" : "Calypso-Browser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTableDecorationStrategy",
+	"type" : "normal"
+}

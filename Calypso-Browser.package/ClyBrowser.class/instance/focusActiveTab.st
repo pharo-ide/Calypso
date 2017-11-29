@@ -1,0 +1,3 @@
+tools support
+focusActiveTab
+	tabManager focusActiveTab

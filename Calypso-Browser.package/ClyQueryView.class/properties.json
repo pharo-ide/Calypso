@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "DenisKudryashov 4/25/2017 12:20",
+	"super" : "Morph",
+	"category" : "Calypso-Browser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"table",
+		"browser",
+		"treeStructure",
+		"selection",
+		"desiredSelection",
+		"highlighting",
+		"changesWasInitiatedByUser",
+		"navigationSelector"
+	],
+	"name" : "ClyQueryView",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+scope
+	^buildingQuery scope

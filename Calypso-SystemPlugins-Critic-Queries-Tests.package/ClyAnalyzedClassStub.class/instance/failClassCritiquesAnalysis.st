@@ -1,0 +1,4 @@
+controlling
+failClassCritiquesAnalysis
+
+	classCritiquesFailed := true

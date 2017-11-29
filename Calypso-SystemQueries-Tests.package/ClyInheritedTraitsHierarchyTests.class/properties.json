@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTraitRelationshipHierarchyTestCase",
+	"category" : "Calypso-SystemQueries-Tests-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyInheritedTraitsHierarchyTests",
+	"type" : "normal"
+}

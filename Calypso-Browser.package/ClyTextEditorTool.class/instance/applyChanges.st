@@ -1,0 +1,3 @@
+operations
+applyChanges
+	self subclassResponsibility 

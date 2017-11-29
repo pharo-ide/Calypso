@@ -1,0 +1,1 @@
+I provide deprecated method groups  when given classes define them

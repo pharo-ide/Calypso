@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyQueryResult",
+	"category" : "Calypso-SystemQueries-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyGroupedExtendingPackages",
+	"type" : "normal"
+}

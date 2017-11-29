@@ -1,0 +1,4 @@
+printing
+printCriteria
+
+	^pattern

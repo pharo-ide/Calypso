@@ -1,0 +1,3 @@
+execution
+openBrowserCursor
+	^self execute openBrowserCursor

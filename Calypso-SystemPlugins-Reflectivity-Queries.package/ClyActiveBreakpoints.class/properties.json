@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 11/10/2017 13:49",
+	"super" : "ClyMethodQuery",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyActiveBreakpoints",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+brokenCount
+	^failureCount + errorCount 

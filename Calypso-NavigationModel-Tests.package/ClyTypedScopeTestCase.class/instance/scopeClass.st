@@ -1,0 +1,3 @@
+running
+scopeClass
+	self subclassResponsibility 

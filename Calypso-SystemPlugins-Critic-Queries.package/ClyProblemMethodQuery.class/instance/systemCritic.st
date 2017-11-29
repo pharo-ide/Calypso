@@ -1,0 +1,3 @@
+execution
+systemCritic
+	^scope systemCritic

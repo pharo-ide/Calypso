@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserTool",
+	"category" : "Calypso-SystemPlugins-MethodDiffTool",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"diffMorph"
+	],
+	"name" : "ClyMethodDiffTool",
+	"type" : "normal"
+}

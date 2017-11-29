@@ -1,0 +1,5 @@
+updating
+browserContextWasChanged
+
+	self warnUserAboutChangedContext.
+	self rebuildStatusBar

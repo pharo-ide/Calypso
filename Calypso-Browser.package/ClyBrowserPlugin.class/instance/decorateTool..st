@@ -1,0 +1,2 @@
+tools decoration
+decorateTool: aBrowserTool

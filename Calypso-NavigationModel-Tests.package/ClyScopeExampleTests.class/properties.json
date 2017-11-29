@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTypedScopeTestCase",
+	"category" : "Calypso-NavigationModel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyScopeExampleTests",
+	"type" : "normal"
+}

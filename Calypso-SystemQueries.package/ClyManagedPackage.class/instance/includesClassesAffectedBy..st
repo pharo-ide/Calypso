@@ -1,0 +1,3 @@
+system changes
+includesClassesAffectedBy: aSystemAnnouncement 
+	^systemPackage includesClassesAffectedBy: aSystemAnnouncement

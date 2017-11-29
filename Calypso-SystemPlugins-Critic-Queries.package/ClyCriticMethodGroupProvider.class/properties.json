@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySingleMethodGroupProvider",
+	"category" : "Calypso-SystemPlugins-Critic-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"critic"
+	],
+	"name" : "ClyCriticMethodGroupProvider",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+testing
+supportsExpansion
+	^ownerDataSource definesChildren

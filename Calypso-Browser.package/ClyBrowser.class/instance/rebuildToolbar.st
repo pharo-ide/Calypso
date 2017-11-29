@@ -1,0 +1,4 @@
+updating
+rebuildToolbar
+
+	toolbar updateItems

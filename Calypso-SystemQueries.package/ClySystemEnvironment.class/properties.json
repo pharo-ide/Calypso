@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "DenisKudryashov 1/3/2017 16:23",
+	"super" : "Object",
+	"category" : "Calypso-SystemQueries-Domain",
+	"classinstvars" : [
+		"currentImage"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"globals",
+		"changesAnnouncer",
+		"packageOrganizer",
+		"projectManager"
+	],
+	"name" : "ClySystemEnvironment",
+	"type" : "normal"
+}

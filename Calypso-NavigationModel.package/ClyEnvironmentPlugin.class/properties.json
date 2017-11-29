@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "DenisKudryashov 8/31/2017 15:13",
+	"super" : "Object",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [
+		"isAutoActivated"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"environment"
+	],
+	"name" : "ClyEnvironmentPlugin",
+	"type" : "normal"
+}

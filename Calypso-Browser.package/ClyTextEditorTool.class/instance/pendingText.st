@@ -1,0 +1,3 @@
+accessing
+pendingText
+	^textMorph text

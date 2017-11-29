@@ -1,0 +1,3 @@
+controlling
+activateExtraScope
+	^visibleClassScope withExtraBasisObjects: extraClassScope collectAllClasses

@@ -1,0 +1,11 @@
+SystemOrganization addCategory: #'Calypso-Browser'!
+SystemOrganization addCategory: #'Calypso-Browser-Commands'!
+SystemOrganization addCategory: #'Calypso-Browser-Contexts'!
+SystemOrganization addCategory: #'Calypso-Browser-DataSource'!
+SystemOrganization addCategory: #'Calypso-Browser-MenuGroups'!
+SystemOrganization addCategory: #'Calypso-Browser-NavigationHistory'!
+SystemOrganization addCategory: #'Calypso-Browser-Table'!
+SystemOrganization addCategory: #'Calypso-Browser-Tabs'!
+SystemOrganization addCategory: #'Calypso-Browser-TextEditors'!
+SystemOrganization addCategory: #'Calypso-Browser-Toolbar'!
+SystemOrganization addCategory: #'Calypso-Browser-UI'!

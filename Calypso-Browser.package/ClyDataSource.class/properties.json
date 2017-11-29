@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "DenisKudryashov 4/19/2017 17:20",
+	"super" : "FTDataSource",
+	"category" : "Calypso-Browser-DataSource",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"query",
+		"itemCursor",
+		"depth",
+		"parentItem",
+		"lastFilteredDataSource",
+		"queryView"
+	],
+	"name" : "ClyDataSource",
+	"type" : "normal"
+}

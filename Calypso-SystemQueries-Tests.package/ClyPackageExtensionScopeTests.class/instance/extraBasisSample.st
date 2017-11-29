@@ -1,0 +1,3 @@
+running
+extraBasisSample
+	^ClySubclassMOfClass1FromP2 package 

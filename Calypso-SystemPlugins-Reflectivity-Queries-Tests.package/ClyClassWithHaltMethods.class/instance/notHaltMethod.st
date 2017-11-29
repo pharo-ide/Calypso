@@ -1,0 +1,4 @@
+methods
+notHaltMethod
+
+	self printString

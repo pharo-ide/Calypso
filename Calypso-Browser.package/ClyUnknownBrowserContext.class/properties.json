@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 10/9/2017 15:46",
+	"super" : "CmdToolContext",
+	"category" : "Calypso-Browser-Contexts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUnknownBrowserContext",
+	"type" : "normal"
+}

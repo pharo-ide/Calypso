@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserPlugin",
+	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyInheritanceAnalyzerBrowserPlugin",
+	"type" : "normal"
+}

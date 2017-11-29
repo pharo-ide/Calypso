@@ -1,0 +1,3 @@
+as yet unclassified
+instanceSideClassVar1Reader
+	^ClassVar1

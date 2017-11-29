@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodQueryTestCase",
+	"category" : "Calypso-SystemPlugins-Critic-Queries-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"critic",
+		"analyzedClass"
+	],
+	"name" : "ClyProblemMethodsTestCase",
+	"type" : "normal"
+}

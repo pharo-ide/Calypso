@@ -1,0 +1,5 @@
+execution
+readParametersFromContext: aToolContext
+	super readParametersFromContext: aToolContext.
+	
+	browser := aToolContext browser

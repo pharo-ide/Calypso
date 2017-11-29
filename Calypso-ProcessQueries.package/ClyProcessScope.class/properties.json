@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTypedScope",
+	"category" : "Calypso-ProcessQueries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyProcessScope",
+	"type" : "normal"
+}

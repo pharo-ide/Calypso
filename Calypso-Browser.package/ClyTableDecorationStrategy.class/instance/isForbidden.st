@@ -1,0 +1,3 @@
+testing
+isForbidden
+	^annotatedClass isAbstract

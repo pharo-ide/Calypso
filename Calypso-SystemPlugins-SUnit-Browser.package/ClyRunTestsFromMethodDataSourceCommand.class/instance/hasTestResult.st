@@ -1,0 +1,4 @@
+testing
+hasTestResult
+
+	^methodDataSource hasMetaProperty: ClyTestResultProperty

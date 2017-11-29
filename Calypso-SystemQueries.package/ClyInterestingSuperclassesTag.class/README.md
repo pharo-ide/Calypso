@@ -1,0 +1,1 @@
+I am used to mark classes which have non trivial superclasses. For example subclasses of Object has no interesting superclasses

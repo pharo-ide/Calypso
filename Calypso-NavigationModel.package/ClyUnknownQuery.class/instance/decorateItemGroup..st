@@ -1,0 +1,2 @@
+item group decoration
+decorateItemGroup: groupItem

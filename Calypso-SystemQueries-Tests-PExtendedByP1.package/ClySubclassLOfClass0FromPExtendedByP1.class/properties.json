@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyClass0FromPWithSingleClass",
+	"category" : "Calypso-SystemQueries-Tests-PExtendedByP1",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySubclassLOfClass0FromPExtendedByP1",
+	"type" : "normal"
+}

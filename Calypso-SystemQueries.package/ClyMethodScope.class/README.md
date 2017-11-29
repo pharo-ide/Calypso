@@ -1,0 +1,1 @@
+I represent point of view on environment from set of methods

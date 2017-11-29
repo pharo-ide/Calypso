@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySortFunction",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySortByNameFunction",
+	"type" : "normal"
+}

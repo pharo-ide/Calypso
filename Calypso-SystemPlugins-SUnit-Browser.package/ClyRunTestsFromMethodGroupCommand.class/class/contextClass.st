@@ -1,0 +1,3 @@
+activation
+contextClass
+	^ClyMethodGroup asCalypsoItemContext 

@@ -1,0 +1,4 @@
+accessing
+activeStatusBar
+
+	^tabManager activeStatusBar

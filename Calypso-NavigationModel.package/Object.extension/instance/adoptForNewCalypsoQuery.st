@@ -1,0 +1,4 @@
+*Calypso-NavigationModel
+adoptForNewCalypsoQuery
+
+	^self

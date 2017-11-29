@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Class",
+	"category" : "Calypso-SystemPlugins-Critic-Queries-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classCritiquesDelayed",
+		"classCritiquesFailed",
+		"foundClassCritiques",
+		"analyzedClassSideSelectors"
+	],
+	"name" : "ClyAnalyzedClassStub",
+	"type" : "normal"
+}
