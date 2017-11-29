@@ -1,5 +1,5 @@
 initialization
 ensureInitialState
 
-	(navigationViews allSatisfy: [ :each | each hasRealQuery ])
-		ifTrue: [ self prepareInitialState]
+	(navigationViews anySatisfy: [ :each | each hasRealQuery ])
+		ifFalse: [ self prepareInitialState]
