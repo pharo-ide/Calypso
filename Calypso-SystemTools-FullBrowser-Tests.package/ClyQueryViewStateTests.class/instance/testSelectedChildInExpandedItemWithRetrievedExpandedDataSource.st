@@ -4,7 +4,7 @@ testSelectedChildInExpandedItemWithRetrievedExpandedDataSource
 	| selectedItem retrievedSelectedItem |
 	self selectedItem expand.
 	selectedItem := self selectedItem childrenDataSource elementAt: 1. "some class group".
-	navigationView selection selectItems: { selectedItem }.
+	queryView selection selectItems: { selectedItem }.
 	self snapshotState.
 	
 	retrievedSelectedItem := navigationState selection items first.

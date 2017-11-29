@@ -1,4 +1,4 @@
 running
 snapshotState
 
-	navigationState := navigationView snapshotState.
+	navigationState := queryView snapshotState.

@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"navigationView",
-		"viewDataSource"
+		"viewDataSource",
+		"queryView"
 	],
 	"name" : "ClyQueryViewStateTests",
 	"type" : "normal"
