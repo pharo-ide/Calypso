@@ -1,4 +1,4 @@
-as yet unclassified
+building
 buildItemFrom: aClass withSuperclassesOn: localSubclasses which: aBlock
 	| item superclass sortedSubclasses |		
 			

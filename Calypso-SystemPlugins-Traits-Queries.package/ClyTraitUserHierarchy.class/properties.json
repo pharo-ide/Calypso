@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowserQueryResult",
-	"category" : "Calypso-SystemQueries-Results",
+	"super" : "ClyClassHierarchy",
+	"category" : "Calypso-SystemPlugins-Traits-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyTraitUsersHierarchy2",
+	"name" : "ClyTraitUserHierarchy",
 	"type" : "normal"
 }

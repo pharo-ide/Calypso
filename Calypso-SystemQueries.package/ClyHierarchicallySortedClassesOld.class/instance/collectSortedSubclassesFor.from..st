@@ -1,4 +1,4 @@
-as yet unclassified
+building
 collectSortedSubclassesFor: classItem from: localSubclasses
 
 	| fullHierarchySize size |

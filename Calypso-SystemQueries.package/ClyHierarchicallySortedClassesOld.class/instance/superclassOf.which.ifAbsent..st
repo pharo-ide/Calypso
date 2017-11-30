@@ -1,4 +1,4 @@
-as yet unclassified
+building
 superclassOf: aClass which: aBlock ifAbsent: absentBlock
 
 	| superclass eachClass |

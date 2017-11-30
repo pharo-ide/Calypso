@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyTraitRelationshipHierarchyTestCase",
+	"super" : "ClyBrowserQueryResultTestCase",
 	"category" : "Calypso-SystemPlugins-Traits-Queries-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],

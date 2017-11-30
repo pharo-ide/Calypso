@@ -1,4 +1,4 @@
-as yet unclassified
+building
 computeDepthOf: aClass forSuperclassesWhich: aBlock
 	| resultDepth superclass eachClass |
 	resultDepth := 0.

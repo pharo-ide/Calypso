@@ -1,3 +1,3 @@
-running
-createQueryResult
+execution
+requiredQueryResult
 	^ClyTraitUserHierarchy asQueryResult withInverseHierarchy 

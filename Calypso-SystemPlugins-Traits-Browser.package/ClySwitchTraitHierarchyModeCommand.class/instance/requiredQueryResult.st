@@ -1,3 +1,3 @@
 execution
-queryResultClass
+requiredQueryResult
 	self subclassResponsibility 

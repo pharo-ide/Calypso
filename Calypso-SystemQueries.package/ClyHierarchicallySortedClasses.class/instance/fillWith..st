@@ -7,5 +7,5 @@ fillWith: classes
 		ifTrue: [hierarchy buildInverseFrom: classes]
 		ifFalse: [ hierarchy buildFrom: classes ].
 	
-	hierarchyMap roots do: [ :root | 
+	hierarchyMap rootsDo: [ :root | 
 		self buildItemFor: root from: hierarchyMap depth: 0]
