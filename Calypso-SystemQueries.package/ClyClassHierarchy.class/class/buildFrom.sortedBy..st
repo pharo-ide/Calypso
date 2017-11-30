@@ -1,6 +1,4 @@
-instance creation
+building
 buildFrom: classes sortedBy: aSortFunction
-	^self new
-		classes: classes; 
-		parentMap: (ClyClassHierarchyMap sortedBy: aSortFunction);
-		build
+	^(self sortedBy: aSortFunction)
+		buildFrom: classes

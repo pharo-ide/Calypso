@@ -8,5 +8,5 @@ fillWith: classes
 		(self isQueryScopeDefinesClass: each) ifFalse: [ 
 			definedClasses remove: each.
 			extensions add: each]].
-	items := self buildItemsOn: definedClasses.
-	items addAll: (self buildExtensionItemsOn: extensions)
+	items := self buildItemsFrom: definedClasses.
+	items addAll: (self buildExtensionItemsFrom: extensions)

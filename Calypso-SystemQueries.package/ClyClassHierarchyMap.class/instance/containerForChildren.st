@@ -1,3 +1,3 @@
 accessing
 containerForChildren
-	^SortedCollection sortBlock: childrenSortFunction
+	^hierarchy containerForChildren

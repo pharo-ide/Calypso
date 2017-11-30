@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	parentMap := IdentityDictionary new
+	parentMap := IdentityDictionary new.
+	

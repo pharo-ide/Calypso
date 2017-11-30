@@ -6,9 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"classes",
-		"roots",
-		"parentMap"
+		"sortFunction"
 	],
 	"name" : "ClyClassHierarchy",
 	"type" : "normal"

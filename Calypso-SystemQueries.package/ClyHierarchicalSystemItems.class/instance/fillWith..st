@@ -4,7 +4,7 @@ fillWith: objects
 	It can be classes, methods, variables, class comments and so on"
 	| itemsPerClass localItems classItems |
 	itemsPerClass := self buildItemsPerClassFrom: objects.
-	classItems := ClyHierarchicallySortedClasses buildItemsOn: itemsPerClass keys.
+	classItems := ClyHierarchicallySortedClasses buildItemsFrom: itemsPerClass keys.
 	
 	items := OrderedCollection new: objects size.
 	classItems do: [ :classItem |

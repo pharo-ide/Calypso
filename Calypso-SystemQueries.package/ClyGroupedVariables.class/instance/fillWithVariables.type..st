@@ -3,7 +3,7 @@ fillWithVariables: varsPerClass type: varTypeClass
 
 	| classItems vars declarationGroup varItem methodQueryScope |
 	methodQueryScope := self queryScope asScope: ClyClassScope.
-	classItems := ClyHierarchicallySortedClasses buildItemsOn: varsPerClass keys.
+	classItems := ClyHierarchicallySortedClasses buildItemsFrom: varsPerClass keys.
 	classItems do: [ :classItem |
 		vars := varsPerClass at: classItem actualObject.
 		declarationGroup := ClyVarDefinitionMethodGroup

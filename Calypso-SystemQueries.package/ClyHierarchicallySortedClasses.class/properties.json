@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"hierarchy",
+		"inverse"
+	],
 	"name" : "ClyHierarchicallySortedClasses",
 	"type" : "normal"
 }
