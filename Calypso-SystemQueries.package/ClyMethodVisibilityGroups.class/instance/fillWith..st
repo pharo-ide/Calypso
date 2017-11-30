@@ -1,10 +1,12 @@
 building
 fillWith: classes
-	| group actualClassScope |
+	| group actualClassScope classMap item |
 	actualClassScope := self scope asScope: ClyClassScope.
 	
-	items := ClyHierarchicallySortedClasses buildItemsFrom: classes.
-	items do: [ :each | 
+	classMap := ClySubclassHierarchy buildFrom: classes.
+	classMap doInOrderWithDepth: [ :each :depth | 
 		group := ClyInheritedMethodGroup 
-			withMethodsOf: each actualObject toShowIn: actualClassScope.
-		each actualObject: group]
+			withMethodsOf: each toShowIn: actualClassScope.
+		item := group asCalypsoBrowserItem.
+		item depth: depth.
+		items add: item]

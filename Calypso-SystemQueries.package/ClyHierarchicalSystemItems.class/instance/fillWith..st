@@ -2,12 +2,12 @@ building
 fillWith: objects
 	"System objects supposed to have definition class and package.
 	It can be classes, methods, variables, class comments and so on"
-	| itemsPerClass localItems classItems |
+	| itemsPerClass localItems classMap |
 	itemsPerClass := self buildItemsPerClassFrom: objects.
-	classItems := ClyHierarchicallySortedClasses buildItemsFrom: itemsPerClass keys.
+	classMap := ClySubclassHierarchy buildFrom: itemsPerClass keys.
 	
 	items := OrderedCollection new: objects size.
-	classItems do: [ :classItem |
-		localItems := itemsPerClass at: classItem actualObject.
-		localItems do: [:each | each depth: classItem depth].
+	classMap doInOrderWithDepth: [ :eachClass :depth |
+		localItems := itemsPerClass at: eachClass.
+		localItems do: [:each | each depth: depth].
 		items addAll: localItems].

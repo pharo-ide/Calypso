@@ -1,14 +1,14 @@
 building
 fillWithVariables: varsPerClass type: varTypeClass
 
-	| classItems vars declarationGroup varItem methodQueryScope |
+	| classMap vars declarationGroup varItem methodQueryScope |
 	methodQueryScope := self queryScope asScope: ClyClassScope.
-	classItems := ClyHierarchicallySortedClasses buildItemsFrom: varsPerClass keys.
-	classItems do: [ :classItem |
-		vars := varsPerClass at: classItem actualObject.
+	classMap := ClySubclassHierarchy buildFrom: varsPerClass keys.
+	classMap doInOrder: [ :eachClass |
+		vars := varsPerClass at: eachClass.
 		declarationGroup := ClyVarDefinitionMethodGroup
 			withMethodsFrom: methodQueryScope 
-			referencedAny: varTypeClass definedIn: classItem actualObject.
+			referencedAny: varTypeClass definedIn: eachClass.
 		items add: declarationGroup asCalypsoBrowserItem.
 		vars do: [:each | | varGroup |
 			varGroup := ClyVariableMethodGroup withMethodsFrom: methodQueryScope referencedVar: each.
