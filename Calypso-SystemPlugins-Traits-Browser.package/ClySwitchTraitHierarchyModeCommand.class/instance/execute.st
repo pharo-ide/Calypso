@@ -4,5 +4,5 @@ execute
 	classScope := browser classSelection asItemsScope: ClyClassScope.
 	
 	browser 
-		switchClassViewTo: ClyTraitRelationshipHierarchy new
+		switchClassViewTo: self queryResultClass new
 		inScope: classScope, (classScope asScope: self traitScopeClass)

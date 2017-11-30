@@ -1,7 +1,5 @@
 tests
 testFillingWithTraitAndItsUsersWhenSomeUserInMiddleIsMissing
-
-	self setUpScope: (ClyTraitUserScope of: {ClyTraitRoot1}).
 	
 	queryResult fillWith: {
 		ClyTraitRoot1. ClyTraitChild1. ClyClassWithTraits. ClyTraitChild2}.

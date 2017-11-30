@@ -1,7 +1,5 @@
 tests
 testFillingWithOnlyTraitWithoutUsers
-
-	self setUpScope: (ClyTraitUserScope of: {ClyTraitRoot1}).
 	
 	queryResult fillWith: {ClyTraitRoot1}.
 		

@@ -1,7 +1,5 @@
 tests
 testFillingWithUsersOfTraitWhenRootTraitIsMissingInGivenList
-
-	self setUpScope: (ClyTraitUserScope of: {ClyTraitRoot1}).
 	
 	queryResult fillWith: {
 		ClyTraitChild1. ClyClassWithTraits. ClyTraitChild2}.

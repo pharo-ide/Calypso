@@ -1,0 +1,3 @@
+execution
+queryResultClass
+	^ClyInheritedTraitsHierarchy 
