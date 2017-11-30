@@ -1,3 +1,3 @@
 execution
 requiredQueryResult
-	^ClyTraitUserHierarchy asQueryResult 
+	^ClyTraitUserHierarchy new asQueryResult 

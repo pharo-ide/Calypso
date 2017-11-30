@@ -1,4 +1,4 @@
 converting
 withInverseHierarchy
 	^self copy 
-		invertHierarchy
+		hierarchy: hierarchy inverted

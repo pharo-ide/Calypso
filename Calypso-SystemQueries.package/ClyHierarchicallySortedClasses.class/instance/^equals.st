@@ -5,4 +5,3 @@ comparing
 	self == anObject ifTrue: [ ^ true ].
 	super = anObject ifFalse: [ ^ false ].
 	^ hierarchy = anObject hierarchy
-		and: [ inverse = anObject isInverse]

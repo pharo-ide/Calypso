@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"sortFunction"
+		"sortFunction",
+		"inverse"
 	],
 	"name" : "ClyClassHierarchy",
 	"type" : "normal"

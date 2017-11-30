@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClyTraitUserHierarchy asQueryResult
+	^ClyTraitUserHierarchy new asQueryResult

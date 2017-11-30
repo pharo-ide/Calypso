@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"hierarchy",
-		"inverse"
+		"hierarchy"
 	],
 	"name" : "ClyHierarchicallySortedClasses",
 	"type" : "normal"

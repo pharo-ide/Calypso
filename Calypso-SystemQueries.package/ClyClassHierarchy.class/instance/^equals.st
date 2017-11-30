@@ -7,3 +7,4 @@ comparing
 	self class = anObject class
 		ifFalse: [ ^ false ].
 	^ sortFunction = anObject sortFunction
+		and: [ inverse = anObject isInverse ]
