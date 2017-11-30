@@ -1,3 +1,3 @@
 execution
 queryResultClass
-	^ClyInheritedTraitsHierarchy 
+	^ClyInheritedTraitsHierarchy2 

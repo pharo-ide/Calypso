@@ -1,3 +1,3 @@
 execution
 queryResultClass
-	^ClyTraitUsersHierarchy 
+	^ClyTraitUsersHierarchy2 

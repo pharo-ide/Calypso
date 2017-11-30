@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-SystemQueries-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parentMap",
+		"childrenSortFunction"
+	],
+	"name" : "ClyClassHierarchyMap",
+	"type" : "normal"
+}

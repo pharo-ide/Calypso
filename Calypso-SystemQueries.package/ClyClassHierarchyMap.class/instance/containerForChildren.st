@@ -1,0 +1,3 @@
+accessing
+containerForChildren
+	^SortedCollection sortBlock: childrenSortFunction
