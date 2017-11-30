@@ -1,7 +1,6 @@
 tests
 testFillingWithTraitsOfClassWhichIsMissingInGivenList
 	
-	self setUpScope: (ClyInheritedTraitScope of: {ClyClassWithTraits}).
 	queryResult fillWith: {
 		ClyTraitChild1. ClyTraitChild2. ClyTraitRoot1. ClyTraitChild2Child }.
 		

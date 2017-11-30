@@ -1,7 +1,6 @@
 tests
 testFillingWithClassAndItsDeepTwoTraits
 	
-	self setUpScope: (ClyInheritedTraitScope of: {ClyClassWithTraits. ClyTraitChild2}).
 	queryResult fillWith: {ClyClassWithTraits. ClyTraitChild2. ClyTraitRoot2 }.
 		
 	self assertItems: {
