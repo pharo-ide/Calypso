@@ -1,3 +1,3 @@
 execution
 checkEmptyResult
-	^ subqueries allSatisfy: [ :each | each checkEmptyResult ]
+	^ subqueries allSatisfy: [ :each | each hasEmptyResult ]
