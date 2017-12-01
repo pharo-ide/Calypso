@@ -1,3 +1,3 @@
 converting
 async
-	^self withResult: requiredResult asAsyncResult
+	^ClyAsyncQuery on: self

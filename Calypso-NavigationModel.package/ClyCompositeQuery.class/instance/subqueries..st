@@ -4,3 +4,4 @@ subqueries: aCollection
 	subqueries := aCollection asSet.
 	subscopes := subqueries collect: [:each | each scope].
 	scope := ClyCompositeScope on: subscopes.
+	requiredResult := subqueries anyOne requiredResult 
