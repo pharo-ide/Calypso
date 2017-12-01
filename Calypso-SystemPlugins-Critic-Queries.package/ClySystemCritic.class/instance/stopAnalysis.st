@@ -1,3 +1,0 @@
-controlling
-stopAnalysis
-	analysis stop

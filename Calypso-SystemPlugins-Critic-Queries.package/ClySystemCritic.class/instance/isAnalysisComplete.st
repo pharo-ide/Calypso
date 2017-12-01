@@ -1,4 +1,0 @@
-testing
-isAnalysisComplete
-
-	^analysis isComplete

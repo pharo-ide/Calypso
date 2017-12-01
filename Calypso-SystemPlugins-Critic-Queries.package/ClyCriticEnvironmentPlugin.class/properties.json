@@ -8,7 +8,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"systemCritic",
 		"providesMethodGroup"
 	],
 	"name" : "ClyCriticEnvironmentPlugin",

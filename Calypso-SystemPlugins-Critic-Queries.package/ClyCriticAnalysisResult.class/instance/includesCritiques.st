@@ -1,3 +1,0 @@
-testing
-includesCritiques
-	^critiques notEmpty

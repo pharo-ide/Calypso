@@ -1,3 +1,0 @@
-accessing
-foundClassCritiques
-	^ foundClassCritiques

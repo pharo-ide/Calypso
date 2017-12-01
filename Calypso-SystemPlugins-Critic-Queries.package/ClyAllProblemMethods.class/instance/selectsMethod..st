@@ -3,4 +3,5 @@ selectsMethod: aMethod
 	| critiques |
 	critiques := scope query: critiqueQuery.
 	
-	^aMethod critiques includesAny: critiques items
+	^critiques items 
+		anySatisfy: [ :each | each sourceAnchor entity == aMethod ]

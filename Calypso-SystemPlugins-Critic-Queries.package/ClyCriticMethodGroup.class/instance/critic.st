@@ -1,3 +1,0 @@
-accessing
-critic
-	^ critic

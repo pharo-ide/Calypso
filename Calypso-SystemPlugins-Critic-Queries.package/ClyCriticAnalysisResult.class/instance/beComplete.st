@@ -1,3 +1,0 @@
-accessing
-beComplete
-	isComplete := true

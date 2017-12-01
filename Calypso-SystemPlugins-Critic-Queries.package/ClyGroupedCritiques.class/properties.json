@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyMethodGroup",
+	"super" : "ClyQueryResult",
 	"category" : "Calypso-SystemPlugins-Critic-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyCriticMethodGroup",
+	"name" : "ClyGroupedCritiques",
 	"type" : "normal"
 }

@@ -1,7 +1,7 @@
 instance creation
 withMethods: aMethodQuery from: aClassScope
 	| subgroupsQuery |
-	subgroupsQuery := ClyAllProblemMethods 
-		from: aClassScope as: ClyGroupedProblemMethods new.
+	subgroupsQuery := ClyAllMethodCritiques 
+		from: aClassScope as: ClyGroupedCritiques new.
 	
 	^self named: 'critiques' priority: 8.5 on: aMethodQuery withSubgroupsFrom: subgroupsQuery

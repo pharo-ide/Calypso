@@ -1,4 +1,0 @@
-controlling
-clear
-
-	contents removeAll
