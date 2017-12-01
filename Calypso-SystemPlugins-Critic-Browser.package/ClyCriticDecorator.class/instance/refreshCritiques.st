@@ -6,5 +6,5 @@ refreshCritiques
 		ifTrue: [ self hideCritiques ]
 		ifFalse: [ self showCritiques ].
 	(criticView dataSource hasMetaProperty: ClyBackgroundProcessingTag)
-		ifFalse: [ progressMorph delete ]
+		ifFalse: [ progressMorph delete. browserTool statusBar update ]
 		ifTrue: [ browserTool statusBar addContextItem: progressMorph  ]
