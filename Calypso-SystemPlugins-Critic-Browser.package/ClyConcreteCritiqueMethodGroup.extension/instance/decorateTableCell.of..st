@@ -2,4 +2,4 @@
 decorateTableCell: anItemCellMorph of: groupItem
 	super decorateTableCell: anItemCellMorph of: groupItem.
 		
-	anItemCellMorph definitionIcon: (groupItem getProperty: ClyCritiqueSeverity) iconName
+	anItemCellMorph definitionIcon: ruleSeverity iconName

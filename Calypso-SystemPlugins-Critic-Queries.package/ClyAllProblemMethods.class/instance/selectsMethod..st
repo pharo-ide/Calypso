@@ -1,3 +1,6 @@
 testing
 selectsMethod: aMethod
-	^self systemCritic doesObjectHaveCritiques: aMethod
+	| critiques |
+	critiques := scope query: critiqueQuery.
+	
+	^aMethod critiques includesAny: critiques items
