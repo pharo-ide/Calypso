@@ -4,7 +4,6 @@ setUp
 	
 	query := self createQuery.
 	
-	queryResult := self createQueryResult.
-	queryResult buildingQuery: query.
-	queryResult initializeItems.
+	queryResult := self createQueryResult prepareNewFor: query in: environment.
+	queryResult initializeItems
 	

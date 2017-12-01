@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyCompositeQuery",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyAsyncQuery",
+	"type" : "normal"
+}

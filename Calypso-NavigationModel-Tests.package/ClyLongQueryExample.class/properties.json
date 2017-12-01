@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyQueryExampleReturningScopeBasis",
+	"category" : "Calypso-NavigationModel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"executionSemaphore"
+	],
+	"name" : "ClyLongQueryExample",
+	"type" : "normal"
+}
