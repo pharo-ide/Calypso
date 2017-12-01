@@ -6,6 +6,6 @@ decorateTool
 	(analysisScope isNil or: [ newScope basisObjects ~= analysisScope basisObjects]) ifTrue: [ 
 		analysisScope := newScope.
 		critiques := ClyAllCritiquesQuery from: analysisScope.
-		criticView showQuery: critiques].
+		criticView showQuery: critiques async].
 	
 	self refreshCritiques
