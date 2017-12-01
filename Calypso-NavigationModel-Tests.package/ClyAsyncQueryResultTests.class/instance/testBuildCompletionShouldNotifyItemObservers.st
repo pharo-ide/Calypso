@@ -5,7 +5,7 @@ testBuildCompletionShouldNotifyItemObservers
 	observer := ClyItemsObserverExample new.
 	cursor := queryResult openBrowserCursor.
 	cursor itemObserver: observer.
-	
+
 	queryResult rebuild.
 	query passExecution.
 	self waitBuildComplete.
