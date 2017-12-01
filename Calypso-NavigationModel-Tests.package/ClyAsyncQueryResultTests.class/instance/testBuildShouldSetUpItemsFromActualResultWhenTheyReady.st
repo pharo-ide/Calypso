@@ -1,5 +1,5 @@
 tests
-testBuildingShouldSetUpItemsFromActualResultWhenTheyReady
+testBuildShouldSetUpItemsFromActualResultWhenTheyReady
 
 	queryResult rebuild.
 	query passExecution.

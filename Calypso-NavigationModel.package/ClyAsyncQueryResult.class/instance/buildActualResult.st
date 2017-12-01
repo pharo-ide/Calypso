@@ -5,4 +5,4 @@ buildActualResult
 	items := actualResult items.
 	metadata := actualResult metadata.
 	buildProcess := nil.
-	self changed
+	self notifyObservers

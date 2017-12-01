@@ -1,5 +1,5 @@
 tests
-testBuildingShouldStartBackgroundProcessing
+testBuildShouldStartBackgroundProcessing
 
 	queryResult rebuild.
 	

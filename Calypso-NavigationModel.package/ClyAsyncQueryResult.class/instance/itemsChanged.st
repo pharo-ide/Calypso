@@ -3,5 +3,4 @@ itemsChanged
 
 	actualResult itemsChanged.
 	
-	announcer ifNil: [ ^self ].	
-	environment announceChangesOf: self
+	self notifyObservers 

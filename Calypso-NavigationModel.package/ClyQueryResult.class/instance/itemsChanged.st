@@ -4,5 +4,4 @@ itemsChanged
 	accessGuard critical: [ 	
 		items := nil].
 	
-	announcer ifNil: [ ^self ].	
-	environment announceChangesOf: self
+	self notifyObservers

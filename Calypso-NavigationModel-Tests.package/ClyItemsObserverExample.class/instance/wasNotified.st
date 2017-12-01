@@ -1,3 +1,3 @@
 testing
 wasNotified
-	^wasNotified 
+	^wasNotified ifNil: [ false ]
