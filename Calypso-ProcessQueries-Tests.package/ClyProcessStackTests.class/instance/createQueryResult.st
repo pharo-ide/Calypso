@@ -1,0 +1,3 @@
+running
+createQueryResult
+	^ClyProcessStack new

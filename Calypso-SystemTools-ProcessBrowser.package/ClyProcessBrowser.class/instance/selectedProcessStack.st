@@ -1,3 +1,0 @@
-accessing
-selectedProcessStack
-	^stackView dataSource queryResult

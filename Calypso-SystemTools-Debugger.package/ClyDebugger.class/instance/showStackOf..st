@@ -1,9 +1,8 @@
 navigation
-showStackOfProcesses: processes
-
+showStackOf: aProcess
 	| stackQuery |
 	stackQuery := ClyActiveContextOfProcesses 
-		from: (ClyProcessScope of: processes actualObjects in: navigationEnvironment)
+		from: (ClyProcessScope of: {aProcess} in: navigationEnvironment)
 		as: ClyProcessStack new.
-	
+		
 	stackView showQuery: stackQuery

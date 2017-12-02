@@ -1,8 +1,7 @@
 helpers
 buildStackFrom: processStackSelectors
-	| processScope |
 	
 	self createProcessWith: processStackSelectors.
-	processScope := environment selectScope: ClyProcessScope of: { process}.
-	self retrieveContentFrom: processScope.
-		
+	
+	queryResult fillWith: {process suspendedContext}.
+	actualObjects := queryResult items collect: #actualObject

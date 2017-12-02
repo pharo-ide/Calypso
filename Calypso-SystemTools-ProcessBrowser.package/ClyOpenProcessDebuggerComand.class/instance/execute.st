@@ -1,4 +1,4 @@
 execution
 execute
 
-	ClyDebugger openOn: processStack
+	ClyDebugger openOn: process from: environment

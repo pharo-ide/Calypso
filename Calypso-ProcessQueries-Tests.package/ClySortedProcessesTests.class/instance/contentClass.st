@@ -1,3 +1,0 @@
-helpers
-contentClass
-	^ClySortedProcesses
