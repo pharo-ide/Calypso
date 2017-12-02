@@ -1,7 +1,6 @@
 accessing
 addParent: parentClass to: childClass
  
-	| children |
-	children := parentMap at: parentClass ifAbsentPut: [	self containerForChildren].
-	children add: childClass.
-	roots remove: childClass ifAbsent: nil
+	hierarchy isInverse 
+		ifTrue: [ self addActualParent: childClass to: parentClass ]
+		ifFalse: [ self addActualParent: parentClass to: childClass ]

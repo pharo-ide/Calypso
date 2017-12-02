@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyClassHierarchyMap",
+	"super" : "ClyClassHierarchy",
 	"category" : "Calypso-SystemQueries-Results",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyInverseClassHierarchyMap",
+	"instvars" : [
+		"mergedParts"
+	],
+	"name" : "ClyMergedHierarchy",
 	"type" : "normal"
 }
