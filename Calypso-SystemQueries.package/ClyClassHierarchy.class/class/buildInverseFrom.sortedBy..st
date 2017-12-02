@@ -2,4 +2,5 @@ building
 buildInverseFrom: classes sortedBy: aSortFunction
 
 	^(self sortedBy: aSortFunction)
-		buildInverseFrom: classes
+		inverse: true;
+		buildFrom: classes
