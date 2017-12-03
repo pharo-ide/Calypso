@@ -1,12 +1,13 @@
 building
 fillWith: classes
-	| group actualClassScope classMap item |
+	| actualClassScope classMap |
 	actualClassScope := self scope asScope: ClyClassScope.
-	
+
 	classMap := ClySubclassHierarchy buildInverseFrom: classes.
-	classMap doInOrderWithDepth: [ :each :depth | 
-		group := ClyInheritedMethodGroup 
-			withMethodsOf: each toShowIn: actualClassScope.
-		item := group asCalypsoBrowserItem.
-		item depth: depth.
-		items add: item]
+	classMap rootsDo: [ :eachRoot | | initialDepth |
+		initialDepth := -1.
+		(self scope isBasedOn: eachRoot) ifFalse: [
+			self buildGroupFor: eachRoot depth: initialDepth toShowMethodsFrom: actualClassScope.
+			initialDepth := initialDepth + 1].
+		classMap allChildrenOf: eachRoot depth: initialDepth do: [ :each :depth | 
+			self buildGroupFor: each depth: depth toShowMethodsFrom: actualClassScope]]
