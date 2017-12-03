@@ -6,5 +6,5 @@ buildParentMap: aHierarchyMap for: aClass
 	[eachClass isRootInEnvironment] whileFalse: [ 
 		superclass := eachClass superclass.	
 		(aHierarchyMap includesClass: superclass) ifTrue: [
-			^aHierarchyMap addParent: superclass to: aClass].
+			^aHierarchyMap addChild: aClass to: superclass].
 		eachClass := superclass]

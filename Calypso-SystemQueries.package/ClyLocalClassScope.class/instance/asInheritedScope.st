@@ -1,4 +1,5 @@
 converting
 asInheritedScope
-	^(self asScope: ClySuperclassScope)
-		localClassScope: self class
+	^ClyClassHierarchyScope 
+		createInheritedScopeFrom: self 
+		withLocalScope: self class

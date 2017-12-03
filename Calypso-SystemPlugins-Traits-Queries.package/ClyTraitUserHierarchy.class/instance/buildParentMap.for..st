@@ -6,6 +6,6 @@ buildParentMap: aHierarchyMap for: aClass
 		eachParent := allParents anyOne.
 		allParents remove: eachParent.
 		(aHierarchyMap includesClass: eachParent) 
-			ifTrue: [aHierarchyMap addParent: eachParent to: aClass]
+			ifTrue: [aHierarchyMap addChild: aClass to: eachParent]
 			ifFalse: [ allParents addAll: eachParent traits].
 	]

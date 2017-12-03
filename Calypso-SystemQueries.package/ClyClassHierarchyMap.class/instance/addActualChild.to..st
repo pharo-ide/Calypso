@@ -1,5 +1,5 @@
 private
-addActualParent: parentClass to: childClass
+addActualChild: childClass to: parentClass
  
 	| children |
 	children := parentMap at: parentClass ifAbsentPut: [	self containerForChildren].
