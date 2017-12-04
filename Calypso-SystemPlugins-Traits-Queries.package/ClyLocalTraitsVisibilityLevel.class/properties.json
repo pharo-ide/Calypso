@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodVisibilityLevel",
+	"category" : "Calypso-SystemPlugins-Traits-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyLocalTraitsVisibilityLevel",
+	"type" : "normal"
+}
