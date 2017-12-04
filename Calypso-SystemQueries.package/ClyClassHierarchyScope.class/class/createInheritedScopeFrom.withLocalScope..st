@@ -1,8 +1,10 @@
 inherited scope
 createInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass
-
-	| scopes |
-	scopes := OrderedCollection new.
-	ClyInheritedScopeAnnotation registeredInstancesDo: [ :each | 
-		scopes add: (each createScopeFrom: aClassScope withLocalScope: aLocalScopeClass)].
-	^ClyCompositeScope on: scopes
+	"We just search first most priority annotation 
+	which class defines inherited scope.
+	So plugin packages can introduce and override inherited scope by annotating 
+	factory classes with greater priority value"
+	ClyInheritedScopeFactory registeredInstancesDo: [ :each | 
+		^each createScopeFrom: aClassScope withLocalScope: aLocalScopeClass].
+	
+	self error: 'No scope is found which defines inherited class scope'

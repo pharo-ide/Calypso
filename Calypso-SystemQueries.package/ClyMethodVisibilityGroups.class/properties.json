@@ -2,10 +2,14 @@
 	"commentStamp" : "",
 	"super" : "ClyBrowserQueryResult",
 	"category" : "Calypso-SystemQueries-Results",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"defaultHierarchy"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"hierarchy"
+	],
 	"name" : "ClyMethodVisibilityGroups",
 	"type" : "normal"
 }

@@ -1,6 +1,9 @@
 controlling
 showInheritedMethods: aBoolean
 
+	| newScope |
 	self isMethodsVisible == aBoolean ifTrue: [ ^self ].
 	
-	browser restrictMethodVisibilityBy: visibilityLevel toggleScope
+	newScope := visibilityLevel toggleScope.
+	newScope isBasedOnEmptyBasis ifFalse: [ 
+		browser restrictMethodVisibilityBy: newScope]

@@ -1,4 +1,4 @@
 converting
 inverted
-	self copy 
+	^self copy 
 		inverse: inverse not

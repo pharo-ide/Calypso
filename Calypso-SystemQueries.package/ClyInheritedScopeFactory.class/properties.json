@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyInheritedScopeAnnotation",
+	"name" : "ClyInheritedScopeFactory",
 	"type" : "normal"
 }
