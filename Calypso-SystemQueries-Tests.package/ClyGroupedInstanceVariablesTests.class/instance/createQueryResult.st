@@ -1,3 +1,3 @@
 helpers
 createQueryResult
-	^ClyGroupedInstanceVariables new
+	^ClyGroupedInstanceVariables withHierarchy: ClySubclassHierarchy new

@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClyGroupedClassVariables new
+	^ClyGroupedClassVariables withHierarchy: ClySubclassHierarchy new

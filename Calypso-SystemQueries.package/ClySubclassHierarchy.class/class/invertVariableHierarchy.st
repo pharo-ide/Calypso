@@ -1,4 +1,4 @@
-accessing
+variable hierarchy
 invertVariableHierarchy
 	<script>
-	^defaultForVariables := self defaultForVariables inverted
+	^hierarchyForVariables := self hierarchyForVariables inverted

@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"hierarchy"
+	],
 	"name" : "ClyGroupedVariables",
 	"type" : "normal"
 }

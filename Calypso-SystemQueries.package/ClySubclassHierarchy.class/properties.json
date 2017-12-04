@@ -3,8 +3,8 @@
 	"super" : "ClyClassHierarchy",
 	"category" : "Calypso-SystemQueries-Results",
 	"classinstvars" : [
-		"hierarchyForMethodVisibility",
-		"defaultForVariables"
+		"hierarchyForVariables",
+		"hierarchyForMethodVisibility"
 	],
 	"pools" : [ ],
 	"classvars" : [ ],

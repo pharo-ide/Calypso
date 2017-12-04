@@ -9,3 +9,7 @@ testFillingWithSingleClassVar
 	self assert: classVarGroup methodQuery class  equals: ClyVariableReferences.
 	self assert: classVarGroup methodQuery variableQuery class equals: ClyAllClassVariables.
 	self assert: classVarGroup subgroupsQuery class equals: ClyAllClassVariables.
+	self assert: classVarGroup subgroupsQuery requiredResult class equals: ClyGroupedClassVariables.
+	self 
+		assert: classVarGroup subgroupsQuery requiredResult hierarchy 
+		equals: queryResult hierarchy

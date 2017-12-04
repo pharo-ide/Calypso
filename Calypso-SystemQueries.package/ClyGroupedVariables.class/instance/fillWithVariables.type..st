@@ -3,7 +3,7 @@ fillWithVariables: varsPerClass type: varTypeClass
 
 	| classMap vars declarationGroup varItem methodQueryScope |
 	methodQueryScope := self queryScope asScope: ClyClassScope.
-	classMap := ClySubclassHierarchy buildInverseFrom: varsPerClass keys.
+	classMap := hierarchy buildFrom: varsPerClass keys.
 	classMap doInOrder: [ :eachClass |
 		vars := varsPerClass at: eachClass.
 		declarationGroup := ClyVarDefinitionMethodGroup

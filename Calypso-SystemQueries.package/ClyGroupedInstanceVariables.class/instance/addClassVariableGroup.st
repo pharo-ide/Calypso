@@ -10,5 +10,5 @@ addClassVariableGroup
 	group := ClyMethodGroup 
 		named: 'Class variables' priority: 9 
 		on: methodQuery 
-		withSubgroupsFrom: (variableQuery withResult: ClyGroupedClassVariables new).
+		withSubgroupsFrom: (variableQuery withResult: (ClyGroupedClassVariables withHierarchy: hierarchy)).
 	items add: group asCalypsoBrowserItem
