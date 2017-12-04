@@ -1,4 +1,4 @@
 testing
 isExecutedFromScope: aTypedScopeClass
 
-	self subclassResponsibility 
+	^scope representsScope: aTypedScopeClass
