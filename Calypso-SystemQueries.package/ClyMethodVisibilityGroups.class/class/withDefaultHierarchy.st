@@ -1,4 +1,9 @@
 instance creation
 withDefaultHierarchy
 
-	^self withHierarchy: self defaultHierarchy
+	| hierarchies |
+	hierarchies := OrderedCollection new.
+	ClyMethodVisibilityProvider registeredInstancesDo: [ :each | 
+		hierarchies add: each createHierarchy ].
+	
+	^self withHierarchy: (ClyMergedHierarchy merge: hierarchies)
