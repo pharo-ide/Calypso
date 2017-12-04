@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClyMethodVisibilityGroups withDefaultHierarchy 
+	^ClyMethodVisibilityGroups withHierarchy: ClySubclassHierarchy new 
