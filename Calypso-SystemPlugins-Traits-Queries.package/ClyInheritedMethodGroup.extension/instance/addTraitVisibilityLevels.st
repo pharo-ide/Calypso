@@ -3,6 +3,6 @@ addTraitVisibilityLevels
 
 	| traitLevels |
 	traitLevels := visibilityLevels 
-		collect: [:each | each asTraitVisibility] thenSelect: [:each | each isRedundant not].
+		collect: [:each | each asTraitVisibility] thenReject: [:each | each isRedundant].
 		
 	visibilityLevels := visibilityLevels , traitLevels

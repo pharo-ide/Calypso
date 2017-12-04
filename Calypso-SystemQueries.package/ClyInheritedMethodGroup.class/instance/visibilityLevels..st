@@ -1,3 +1,3 @@
 accessing
-visibilityLevels: anObject
-	visibilityLevels := anObject
+visibilityLevels: levelCollection
+	visibilityLevels := levelCollection reject: [ :each | each isRedundant ]
