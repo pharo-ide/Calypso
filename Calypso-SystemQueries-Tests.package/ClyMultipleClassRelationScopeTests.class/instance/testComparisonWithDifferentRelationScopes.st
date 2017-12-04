@@ -3,8 +3,8 @@ testComparisonWithDifferentRelationScopes
 
 	| scope2 |
 	scope := ClyMultipleClassRelationScope 
-		of: #() merging: {ClySuperclassScope. ClyInheritedTraitScope }.
+		of: #() merging: {ClySuperclassScope }.
 	scope2 := ClyMultipleClassRelationScope 
-		of: #() merging: {ClySuperclassScope. ClyTraitUserScope }.
+		of: #() merging: {ClySubclassScope}.
 	
 	self deny: scope = scope2
