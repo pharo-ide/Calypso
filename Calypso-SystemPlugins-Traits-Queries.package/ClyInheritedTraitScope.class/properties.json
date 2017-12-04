@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 11/10/2017 13:11",
-	"super" : "ClyClassHierarchyScope",
+	"super" : "ClySingleClassRelationScope",
 	"category" : "Calypso-SystemPlugins-Traits-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
