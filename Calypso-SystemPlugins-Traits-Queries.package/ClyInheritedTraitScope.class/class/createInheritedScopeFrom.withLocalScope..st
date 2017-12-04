@@ -1,5 +1,5 @@
 inherited scope
-asInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass
+createInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass
 	^(aClassScope asScope: ClyMultipleClassRelationScope)
 		relationScopeClasses: { ClySuperclassScope. self };
 		localClassScope: aLocalScopeClass 

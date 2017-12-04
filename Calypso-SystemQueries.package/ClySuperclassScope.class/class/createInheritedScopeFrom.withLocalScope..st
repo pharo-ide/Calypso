@@ -1,4 +1,4 @@
 inherited scope
-asInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass
+createInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass
 	^(aClassScope asScope: self)
 		localClassScope: aLocalScopeClass 

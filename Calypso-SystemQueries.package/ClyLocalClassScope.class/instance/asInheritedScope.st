@@ -1,5 +1,5 @@
 converting
 asInheritedScope
-	^ClyClassHierarchyScope 
-		createInheritedScopeFrom: self 
+	^ClyInheritedScopeProvider
+		createScopeFrom: self 
 		withLocalScope: self class
