@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	accessGuard := Mutex new
+	accessGuard := Mutex new.
+	needsRebuild := true

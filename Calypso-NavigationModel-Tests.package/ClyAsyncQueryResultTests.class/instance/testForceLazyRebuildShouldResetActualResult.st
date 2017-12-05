@@ -1,10 +1,10 @@
 tests
-testResetItemsSilentlyShouldResetActualResult
+testForceLazyRebuildShouldResetActualResult
 	
 	self assert: queryResult items notNil.
 	self assert: queryResult actualResult items notNil.
 	 
-	queryResult resetItemsSilently.
+	queryResult forceLazyRebuild.
 	
 	self deny: queryResult isBuilt.
 	self assert: queryResult items notNil.

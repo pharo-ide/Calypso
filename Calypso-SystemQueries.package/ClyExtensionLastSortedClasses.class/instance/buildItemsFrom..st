@@ -3,6 +3,5 @@ buildItemsFrom: classes
 
 	| subResult |
 	subResult := baseQueryResult prepareNewFor: buildingQuery in: environment.
-	subResult initializeItems.
-	subResult fillWith: classes.
+	subResult buildWith: classes.
 	^subResult items collect: [:each | each asCalypsoBrowserItem ]

@@ -1,8 +1,8 @@
 tests
-testResetItemsSilently
+testForceLazyRebuild
 	
 	self assert: queryResult items notNil.
 	
-	queryResult resetItemsSilently.
+	queryResult forceLazyRebuild.
 	
 	self deny: queryResult isBuilt

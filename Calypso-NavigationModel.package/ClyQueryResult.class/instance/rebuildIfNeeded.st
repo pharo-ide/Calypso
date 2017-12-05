@@ -2,6 +2,8 @@ building
 rebuildIfNeeded
 	accessGuard critical: [
 		
-		self isBuilt ifFalse: [ self rebuild]
+		needsRebuild ifTrue: [ 
+			needsRebuild := false.
+			self rebuild]
 		
 	]

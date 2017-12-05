@@ -11,7 +11,8 @@
 		"metadata",
 		"items",
 		"accessGuard",
-		"announcer"
+		"announcer",
+		"needsRebuild"
 	],
 	"name" : "ClyQueryResult",
 	"type" : "normal"

@@ -1,4 +1,3 @@
 controlling
 forceFullUpdate
-
-	itemCursor forceFullUpdate
+	queryResult forceRebuild

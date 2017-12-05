@@ -3,7 +3,7 @@ testFillingSimpleInstance
 	queryResult := ClyExtensionLastSortedClasses simple.
 
 	queryResult buildingQuery: (ClyAllClasses from: ClyPackageScope of: { ClyClass1FromP1 package } in: environment).
-	queryResult fillWith: {
+	queryResult buildWith: {
 		ClySubclassLOfClass0FromPExtendedByP1. ClySubclassN1OfClass1FromP1.  ClyClass1FromP1}.
 	
 	self assertItems: {ClyClass1FromP1. 0. ClySubclassN1OfClass1FromP1. 0.

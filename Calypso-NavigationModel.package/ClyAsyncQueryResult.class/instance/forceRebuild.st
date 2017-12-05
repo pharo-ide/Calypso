@@ -1,5 +1,5 @@
-system changes
-itemsChanged
+building
+forceRebuild
 
 	actualResult itemsChanged.
 	
