@@ -1,7 +1,6 @@
 controlling
 close
 
-	itemObserver := nil.
-	
-	queryResult unsubscribe: self.
+	queryResult unsubscribe: itemObserver.
+	itemObserver := nil.	
 	^ClyClosedBrowserCursor instance

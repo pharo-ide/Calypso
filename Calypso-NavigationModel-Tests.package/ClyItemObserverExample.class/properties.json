@@ -8,6 +8,6 @@
 	"instvars" : [
 		"wasNotified"
 	],
-	"name" : "ClyItemsObserverExample",
+	"name" : "ClyItemObserverExample",
 	"type" : "normal"
 }

@@ -3,4 +3,4 @@ testViewDataSourceIsNotDetatchedAfterSnapshoting
 
 	self snapshotState.
 	
-	self assert: (viewDataSource queryResult hasSubscriber: viewDataSource itemCursor)
+	self assert: (viewDataSource queryResult hasSubscriber: viewDataSource)

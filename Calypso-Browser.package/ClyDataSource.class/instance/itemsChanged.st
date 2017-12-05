@@ -1,6 +1,6 @@
 controlling
 itemsChanged
-	
+	itemCursor updateItemCache.
 	self updateExpandingItems.
 
 	[self isClosed ifFalse: [ 

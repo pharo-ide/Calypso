@@ -1,7 +1,7 @@
 accessing
-openBrowserCursor
+openBrowserCursorFor: anItemObserver
 
 	| cursor |
 	cursor := ClyBrowserQueryCursor for: self adoptForBrowser.
-	cursor open.
+	cursor openFor: anItemObserver.
 	^cursor.
