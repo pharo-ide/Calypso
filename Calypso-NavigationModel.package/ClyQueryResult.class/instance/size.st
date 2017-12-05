@@ -1,4 +1,3 @@
 accessing
 size
-	self rebuildIfNeeded.
-	^items size
+	^self protectItemsWhile: [items size]

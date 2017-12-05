@@ -1,3 +1,3 @@
 *Calypso-SystemQueries
 canAffectResultOfMethodQuery: aMethodQuery
-	^false
+	^true

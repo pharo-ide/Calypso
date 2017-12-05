@@ -5,12 +5,12 @@ findItemsWith: actualObjects
 	If some object is absent in content then it will return nil in place of it.
 	All returned items will be resilved"
 	| result |
-	self rebuildIfNeeded.
-	result := actualObjects collect: [ :eachObject |
-		items 
-			detect: [ :item | item representsObjectEqualTo: eachObject ] 
-			ifNone: nil].
+	self protectItemsWhile: [
+		result := actualObjects collect: [ :eachObject |
+			items 
+				detect: [ :item | item representsObjectEqualTo: eachObject ] 
+				ifNone: nil].
 	
-	result select: #notNil thenDo: [ :each | 
-		each prepareIn: environment ].
-	^result
+		result select: #notNil thenDo: [ :each | 
+			each prepareIn: environment ].
+		^result]

@@ -1,8 +1,7 @@
 controlling
 itemsChanged
-	itemCursor updateItemCache.
-	self updateExpandingItems.
-
-	[self isClosed ifFalse: [ 
+	[self isClosed ifFalse: [
+		itemCursor updateItemCache.
+		self updateExpandingItems.
 		queryView itemsOf: self wereUpdatedBy: nil.
 		self tableRefresh]] updateCalypsoUI

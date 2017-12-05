@@ -1,4 +1,13 @@
 system changes
 isResult: aQueryResult affectedBy: aSystemAnnouncement
 	
-	^scope includesMethodGroupsAffectedBy: aSystemAnnouncement
+	| asyncGroups |
+	(scope includesMethodGroupsAffectedBy: aSystemAnnouncement) ifTrue: [ ^true ].
+	
+	(aSystemAnnouncement isKindOf: ClyAsyncQueryIsDone) ifTrue: [ 
+		asyncGroups := aQueryResult items select: [ :each | each isKindOf: ClyAsyncMethodGroup ].
+		(asyncGroups anySatisfy: [ :each | each asyncQueryResult == aSystemAnnouncement queryResult])
+			ifTrue: [ ^true ]
+	 ].
+
+	^false
