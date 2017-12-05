@@ -6,10 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"buildingQuery",
-		"properties",
-		"itemCount",
-		"environment"
+		"properties"
 	],
 	"name" : "ClyQueryResultMetadata",
 	"type" : "normal"

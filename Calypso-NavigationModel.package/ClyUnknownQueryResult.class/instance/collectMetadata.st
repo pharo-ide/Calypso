@@ -1,3 +1,3 @@
 initialization
 collectMetadata
-	metadata := ClyQueryResultMetadata for: self
+	metadata := ClyQueryResultMetadata new

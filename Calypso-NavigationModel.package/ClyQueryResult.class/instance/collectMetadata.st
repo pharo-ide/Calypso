@@ -3,7 +3,7 @@ collectMetadata
 	accessGuard critical: [ 
 		metadata ifNotNil: [ ^self ].
 
-		metadata := ClyQueryResultMetadata for: self.
+		metadata := ClyQueryResultMetadata new.
 		environment pluginsDo: [:each | 
 			buildingQuery collectMetadataOf: self by: each	]
 	]

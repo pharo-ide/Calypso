@@ -1,7 +1,7 @@
 building
 rebuild
 	self initializeItems.	
-	metadata ifNil: [metadata := ClyQueryResultMetadata for: self].
+	metadata ifNil: [metadata := ClyQueryResultMetadata new].
 	metadata addProperty: ClyBackgroundProcessingTag instance.
 	
 	buildProcess := [self buildActualResult] 

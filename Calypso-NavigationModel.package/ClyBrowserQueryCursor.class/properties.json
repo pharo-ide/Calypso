@@ -10,7 +10,8 @@
 		"cache",
 		"position",
 		"metadata",
-		"itemObserver"
+		"itemObserver",
+		"itemCount"
 	],
 	"name" : "ClyBrowserQueryCursor",
 	"type" : "normal"

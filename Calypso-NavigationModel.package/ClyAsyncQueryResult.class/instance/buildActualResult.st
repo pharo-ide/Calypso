@@ -3,6 +3,6 @@ buildActualResult
 
 	actualResult rebuild.
 	items := actualResult items.
-	metadata := actualResult metadata.
+	metadata properties: actualResult metadata properties copy.
 	buildProcess := nil.
 	self notifyObservers
