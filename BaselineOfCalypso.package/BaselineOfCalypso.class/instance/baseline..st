@@ -4,6 +4,12 @@ baseline: spec
 
 	spec for: #'common' do: [
 		spec 
+			baseline: 'ClassAnnotation' with: [
+				spec
+					repository: 'github://dionisiydk/ClassAnnotation:dev';
+					loads: 'Core' ];
+			project: 'ClassAnnotationTests' copyFrom: 'ClassAnnotation' with: [
+				spec loads: 'Tests'];
 			baseline: 'Commander' with: [
 				spec repository: 'github://dionisiydk/Commander:dev' ];
 			baseline: 'SystemCommands' with: [
@@ -13,9 +19,9 @@ baseline: spec
 			package: #'Calypso-NavigationModel-Tests' with: [
 				spec requires: #(#'Calypso-NavigationModel' )];
 			package: #'Calypso-SystemQueries' with: [
-				spec requires: #(#'Calypso-NavigationModel' ). ];
+				spec requires: #(#'Calypso-NavigationModel' #'ClassAnnotation' ). ];
 			package: #'Calypso-SystemQueries-Tests' with: [
-				spec requires: #(#'Calypso-NavigationModel-Tests' #'Calypso-SystemQueries' #'Calypso-SystemQueries-Tests-PWithSingleClass' #'Calypso-SystemQueries-Tests-PExtendedByP1' #'Calypso-SystemQueries-Tests-P1WithHierarchy' #'Calypso-SystemQueries-Tests-P2WithSubclassFromP1' #'Calypso-SystemQueries-Tests-P3WithSubclassFromP2' #'Calypso-SystemQueries-Tests-PExtendedByP5' #'Calypso-SystemQueries-Tests-P5WithTags' #'Calypso-SystemPlugins-Traits-Queries-Tests-PWithTraits' #'Calypso-SystemPlugins-Traits-Queries-Tests-PExtendingTrait' ). ];
+				spec requires: #(#'Calypso-NavigationModel-Tests' #'ClassAnnotationTests' #'Calypso-SystemQueries' #'Calypso-SystemQueries-Tests-PWithSingleClass' #'Calypso-SystemQueries-Tests-PExtendedByP1' #'Calypso-SystemQueries-Tests-P1WithHierarchy' #'Calypso-SystemQueries-Tests-P2WithSubclassFromP1' #'Calypso-SystemQueries-Tests-P3WithSubclassFromP2' #'Calypso-SystemQueries-Tests-PExtendedByP5' #'Calypso-SystemQueries-Tests-P5WithTags' #'Calypso-SystemPlugins-Traits-Queries-Tests-PWithTraits' #'Calypso-SystemPlugins-Traits-Queries-Tests-PExtendingTrait' ). ];
 			package: #'Calypso-SystemQueries-Tests-P1WithHierarchy' with: [
 				spec requires: #(#'Calypso-SystemQueries-Tests-PExtendedByP1' ). ];
 			package: #'Calypso-SystemQueries-Tests-P2WithSubclassFromP1' with: [
