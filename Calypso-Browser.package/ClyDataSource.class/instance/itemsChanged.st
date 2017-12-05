@@ -3,5 +3,6 @@ itemsChanged
 	
 	self updateExpandingItems.
 
-	[queryView itemsOf: self wereUpdatedBy: nil.
-	self tableRefresh] updateCalypsoUI
+	[self isClosed ifFalse: [ 
+		queryView itemsOf: self wereUpdatedBy: nil.
+		self tableRefresh]] updateCalypsoUI

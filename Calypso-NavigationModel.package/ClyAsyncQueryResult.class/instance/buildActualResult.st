@@ -3,6 +3,8 @@ buildActualResult
 
 	actualResult := actualQuery execute.
 	items := actualResult items.
-	metadata properties: actualResult metadata properties copy.
+	metadata := nil.
+	self collectMetadata.
 	buildProcess := nil.
-	self notifyObservers
+	self notifyObservers.
+	environment systemChanged: (ClyAsyncQueryIsDone with: self)
