@@ -2,7 +2,7 @@ execution
 buildResult: aQueryResult
 
 	| critiques methods |
-	critiques := scope query: critiqueQuery.
+	critiques := critiqueQuery execute.
 	
 	methods := critiques items collect: [ :each | each sourceAnchor entity ] as: IdentitySet.
 	

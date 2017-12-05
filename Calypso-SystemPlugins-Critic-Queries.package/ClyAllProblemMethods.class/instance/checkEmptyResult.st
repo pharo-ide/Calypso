@@ -1,4 +1,4 @@
 execution
 checkEmptyResult
 
-	^scope isQueryEmpty: critiqueQuery
+	^critiqueQuery hasEmptyResult

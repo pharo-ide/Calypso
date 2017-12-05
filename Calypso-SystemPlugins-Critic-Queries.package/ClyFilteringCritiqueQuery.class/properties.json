@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyMethodGroup",
+	"super" : "ClyCritiqueQuery",
 	"category" : "Calypso-SystemPlugins-Critic-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"ruleSeverity"
+		"baseCritiqueQuery"
 	],
-	"name" : "ClyConcreteCritiqueMethodGroup",
+	"name" : "ClyFilteringCritiqueQuery",
 	"type" : "normal"
 }

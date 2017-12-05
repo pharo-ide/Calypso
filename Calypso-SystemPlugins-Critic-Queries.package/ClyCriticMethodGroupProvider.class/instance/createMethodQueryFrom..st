@@ -1,3 +1,3 @@
 building groups
 createMethodQueryFrom: aClassScope
-	^ClyAllProblemMethods from: aClassScope
+	^(ClyAllProblemMethods from: aClassScope) async

@@ -1,7 +1,7 @@
 testing
 selectsMethod: aMethod
 	| critiques |
-	critiques := scope query: critiqueQuery.
+	critiques := critiqueQuery execute.
 	
 	^critiques items 
 		anySatisfy: [ :each | each sourceAnchor entity == aMethod ]

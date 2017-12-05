@@ -1,3 +1,3 @@
 accessing
-critiqueQuery: anObject
-	critiqueQuery := anObject
+critiqueQuery: aCritiqueQuery
+	critiqueQuery := scope adoptQuery: aCritiqueQuery

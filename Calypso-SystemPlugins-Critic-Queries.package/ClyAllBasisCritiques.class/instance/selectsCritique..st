@@ -1,3 +1,0 @@
-testing
-selectsCritique: aCritique
-	^true
