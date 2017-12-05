@@ -1,8 +1,10 @@
 building groups
 methodGroupsIn: aClassScope do: aBlock
 
-	| methodQuery |
+	| methodQuery methodGroup |
 	methodQuery := self createMethodQueryFrom: aClassScope.
 	methodQuery hasEmptyResult ifTrue: [ ^self ].
 		
-	aBlock value: (self createMethodGroupFor: methodQuery from: aClassScope)
+	methodGroup := self createMethodGroupFor: methodQuery from: aClassScope.
+	methodQuery isAsync ifTrue: [ methodGroup := methodGroup asAsyncGroup ].
+	aBlock value: methodGroup
