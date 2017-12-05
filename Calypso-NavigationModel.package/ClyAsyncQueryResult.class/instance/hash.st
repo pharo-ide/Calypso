@@ -2,4 +2,4 @@ comparing
 hash
 	"Answer an integer value that is related to the identity of the receiver."
 
-	^super hash bitXor: actualResult hash
+	^super hash bitXor: actualQuery hash

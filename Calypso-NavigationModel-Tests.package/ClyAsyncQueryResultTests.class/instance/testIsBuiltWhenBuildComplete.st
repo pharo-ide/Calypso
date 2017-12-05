@@ -1,8 +1,8 @@
 tests
-testIsReadyWhenBuildComplete
+testIsBuiltWhenBuildComplete
 
 	queryResult rebuild.
 	query passExecution.
 	self waitBuildComplete.
 	
-	self assert: queryResult isReady
+	self assert: queryResult isBuilt

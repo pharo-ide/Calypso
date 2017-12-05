@@ -1,5 +1,5 @@
 tests
 testConvertingToAsyncQuery
 
-	self assert:  query async == query
+	self assert: query async == query
 	

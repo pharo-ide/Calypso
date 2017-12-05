@@ -5,4 +5,4 @@ testForceLazyRebuild
 	
 	queryResult forceLazyRebuild.
 	
-	self deny: queryResult isBuilt
+	self assert: queryResult needsRebuild
