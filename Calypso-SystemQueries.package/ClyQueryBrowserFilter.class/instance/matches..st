@@ -1,6 +1,10 @@
 testing
 matches: aBrowserItem
+	| actualObject |
+	actualObject := aBrowserItem class = ClyBrowserItem 
+		ifTrue: [ aBrowserItem actualObject] ifFalse: [ aBrowserItem ].
+		
 	(pattern value beginsWith: '[') ifTrue: [ 
-			^self matchesByScript: aBrowserItem].
+			^self matchesByScript: actualObject].
 
-	^aBrowserItem actualObject matchesQueryBrowserFilter: self
+	^actualObject matchesQueryBrowserFilter: self

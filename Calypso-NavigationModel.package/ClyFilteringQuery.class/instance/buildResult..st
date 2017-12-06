@@ -5,7 +5,7 @@ buildResult: aQueryResult
 	allItems := subqueries 
 		flatCollect: [ :eachSubquery | 
 			subResult := eachSubquery execute.
-			subResult rawItems 
+			subResult items 
 				select: [ :each | itemFilter matches: each ] 
 				thenCollect: [ :each | each adoptForNewCalypsoQuery]]
 		as: OrderedCollection.		
