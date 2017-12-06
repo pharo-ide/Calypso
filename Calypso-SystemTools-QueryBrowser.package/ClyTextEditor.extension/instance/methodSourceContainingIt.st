@@ -2,8 +2,8 @@
 methodSourceContainingIt
 	"Open a browser class comments which contain the current selection somewhere in them."
 
-	| query |
+	| query pattern |
 	self lineSelectAndEmptyCheck: [^ self].
-
-	query := ClyMethodSources withString: self selection string.
+	pattern := self selection string.
+	query := (ClyMethodSources withString: pattern), (ClyClassComments withString: pattern).
 	self browser spawnQueryBrowserOn: query async

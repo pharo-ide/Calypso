@@ -8,7 +8,7 @@ initializeNavigationViews
 		displayItemPropertyBy: [:item | self classNameOf: item].
 	(resultView addColumn: #name) 
 		width: 400;
-		displayItemName.
+		displayItemPropertyBy: [:item | self mainNameOf: item].
 	(resultView addColumn: #package) 
 		width: 50;
 		displayItemPropertyBy: [:item | self packageNameOf: item]
