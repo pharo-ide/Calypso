@@ -1,4 +1,4 @@
 testing
 isAppliedToBrowser
 
-	^browser classView showsItemsFromScope: ClySuperclassScope
+	^browser showsFullClassHierarchy
