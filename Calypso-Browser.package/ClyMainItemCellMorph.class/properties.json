@@ -1,13 +1,12 @@
 {
 	"commentStamp" : "DenisKudryashov 4/25/2017 11:26",
-	"super" : "FTCellMorph",
+	"super" : "ClyItemCellMorph",
 	"category" : "Calypso-Browser-Table",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"item",
-		"nameMorph",
 		"definitionMorph",
 		"extraToolMorphs",
 		"itemDepth",

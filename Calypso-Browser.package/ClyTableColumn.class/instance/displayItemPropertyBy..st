@@ -1,4 +1,4 @@
 accessing
 displayItemPropertyBy: propertyBlock
 	displayBlock := [ :cell :item | 
-		cell addMorphBack: (propertyBlock value: item browserItem) asMorph ]
+		cell label contents: (propertyBlock value: item browserItem) ]

@@ -2,4 +2,4 @@
 decorateMethodGroupTableCell: anItemCellMorph of: groupItem
 	super decorateMethodGroupTableCell: anItemCellMorph of: groupItem.
 	
-	anItemCellMorph nameMorph addEmphasis: TextEmphasis struckOut
+	anItemCellMorph label addEmphasis: TextEmphasis struckOut

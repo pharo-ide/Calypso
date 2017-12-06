@@ -2,5 +2,5 @@
 decorateTableCell: anItemCellMorph of: groupItem
 
 	self isEditableGroup ifFalse: [ 
-		anItemCellMorph nameMorph color: anItemCellMorph theme calypsoFrozenItemColor]
+		anItemCellMorph label color: anItemCellMorph theme calypsoFrozenItemColor]
 	

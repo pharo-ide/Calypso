@@ -12,7 +12,7 @@ initializeNavigationViews
 	
 	classView := self newNavigationView
 		displayMainColumnBy: [ :cell :item | 
-			self specifyClassItemNameOn: cell nameMorph for: item browserItem];
+			self specifyClassItemNameOn: cell label for: item browserItem];
 		enableFilter;
 		requestNavigationBy: #classSelectionChanged.
 
@@ -24,5 +24,5 @@ initializeNavigationViews
 	
 	methodView := self newNavigationView
 		displayMainColumnBy: [ :cell :item | 
-			self specifyMethodItemNameOn: cell nameMorph for: item browserItem];
+			self specifyMethodItemNameOn: cell label for: item browserItem];
 		requestNavigationBy: #methodSelectionChanged.

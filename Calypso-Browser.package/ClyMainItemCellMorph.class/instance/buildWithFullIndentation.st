@@ -11,7 +11,7 @@ buildWithFullIndentation
 		 self addMorphBack: definitionMorph].
 	
 	
-	self addMorphBack: nameMorph.
+	self addMorphBack: label.
 	extraToolMorphs ifNotNil: [ extraToolMorphs do: [:each |
 			each width: 16.
 			 self addMorphBack: each  ] ]

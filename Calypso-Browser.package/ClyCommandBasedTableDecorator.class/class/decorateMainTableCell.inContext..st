@@ -1,5 +1,5 @@
 decoration
-decorateTableCell: anItemCellMorph inContext: itemContext
+decorateMainTableCell: anItemCellMorph inContext: itemContext
 
 	ClyTableIconCommandActivation 
 		activateAllInContext: itemContext 

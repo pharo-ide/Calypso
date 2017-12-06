@@ -3,7 +3,7 @@ decorateTableCell: anItemCellMorph of: groupItem
 	| currentFont |
 	super decorateTableCell: anItemCellMorph of: groupItem.
 	
-	currentFont := anItemCellMorph nameMorph font.
-	anItemCellMorph nameMorph font: (LogicalFont familyName: currentFont familyName pointSize: currentFont pointSize - 1).
+	currentFont := anItemCellMorph label font.
+	anItemCellMorph label font: (LogicalFont familyName: currentFont familyName pointSize: currentFont pointSize - 1).
 	
-	anItemCellMorph nameMorph color: Color gray.
+	anItemCellMorph label color: Color gray.

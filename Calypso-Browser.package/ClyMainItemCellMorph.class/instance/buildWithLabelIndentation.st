@@ -10,7 +10,7 @@ buildWithLabelIndentation
 		 self addMorphBack: definitionMorph].
 	
 	self addBarForLabelIndentation.
-	self addMorphBack: nameMorph.
+	self addMorphBack: label.
 	extraToolMorphs ifNotNil: [ extraToolMorphs do: [:each |
 			each width: 16.
 			 self addMorphBack: each  ] ]
