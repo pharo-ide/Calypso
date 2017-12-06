@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyClassCommentQueryTests",
+	"name" : "ClyClassCommentsTests",
 	"type" : "normal"
 }
