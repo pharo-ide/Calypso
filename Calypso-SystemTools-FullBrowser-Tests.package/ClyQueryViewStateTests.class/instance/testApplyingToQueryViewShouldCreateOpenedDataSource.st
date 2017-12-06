@@ -1,5 +1,5 @@
 tests
-testApplyingToNavigationViewShouldCreateOpenedDataSource
+testApplyingToQueryViewShouldCreateOpenedDataSource
 
 	| newView |
 	self snapshotState.
@@ -7,4 +7,5 @@ testApplyingToNavigationViewShouldCreateOpenedDataSource
 	navigationState applyTo: newView.
 	 
 	self assert: newView dataSource ~~ navigationState dataSource.
-	self deny: newView dataSource isClosed
+	self deny: newView dataSource isClosed.
+	self assert: newView dataSource queryView equals: newView

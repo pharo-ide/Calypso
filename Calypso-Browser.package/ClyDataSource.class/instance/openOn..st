@@ -1,5 +1,7 @@
 controlling
 openOn: aQueryView
 	
-	queryView := aQueryView.
-	self open
+	self isClosed ifFalse: [ self close ].
+
+	queryView := aQueryView.	
+	itemCursor := query openBrowserCursorFor: self
