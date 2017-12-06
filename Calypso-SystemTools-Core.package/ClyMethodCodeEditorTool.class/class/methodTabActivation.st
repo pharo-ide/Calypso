@@ -1,5 +1,5 @@
 activation
-browserActivation
+methodTabActivation
 	<classAnnotation>
 	
 	^ClyTabActivationStrategy for: ClyMethod asCalypsoItemContext

@@ -1,5 +1,5 @@
 activation
-methodScopeActivation
+methodTabActivation
 	<classAnnotation>
 	
 	^ClyTabActivationStrategy for: ClyMethod asCalypsoItemContext

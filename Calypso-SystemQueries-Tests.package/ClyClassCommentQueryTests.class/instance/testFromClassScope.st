@@ -5,4 +5,4 @@ testFromClassScope
 	
 	self assert: resultItems size equals: 1.
 	
-	self assert: resultItems first equals: self class
+	self assert: resultItems first equals: (ClyClassComment of: self class)
