@@ -1,4 +1,4 @@
 *Calypso-SystemTools-Core
 decorateResultMethodEditor: aMethodEditor
 	
-	aMethodEditor selectAnyString: pattern value
+	aMethodEditor selectAnyString: {pattern value}
