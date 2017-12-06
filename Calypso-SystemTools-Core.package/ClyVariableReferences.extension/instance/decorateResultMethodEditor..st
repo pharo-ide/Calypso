@@ -1,4 +1,4 @@
-*Calypso-SystemTools-QueryBrowser
+*Calypso-SystemTools-Core
 decorateResultMethodEditor: aMethodEditor
 	| vars |
 	vars := variableQuery execute items.

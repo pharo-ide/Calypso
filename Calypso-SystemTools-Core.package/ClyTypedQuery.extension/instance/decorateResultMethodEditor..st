@@ -1,2 +1,2 @@
-*Calypso-SystemTools-QueryBrowser
+*Calypso-SystemTools-Core
 decorateResultMethodEditor: aMethodEditor
