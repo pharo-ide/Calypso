@@ -1,4 +1,4 @@
 instance creation
-of: aNavigationView
+of: aQueryView
 	^self new 
-		initializeFrom: aNavigationView 
+		initializeFrom: aQueryView 

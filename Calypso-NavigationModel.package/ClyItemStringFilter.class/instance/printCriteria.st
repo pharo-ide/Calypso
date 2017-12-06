@@ -1,4 +1,4 @@
 printing
 printCriteria
 
-	^pattern
+	^pattern value

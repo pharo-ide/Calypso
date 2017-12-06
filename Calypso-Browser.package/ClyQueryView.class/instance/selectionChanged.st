@@ -1,5 +1,6 @@
 event handling
 selectionChanged
+
 	self isFilterChanged ifTrue: [ ^self selectionWasResetByFilter ].
 	
 	self changeStateBy: [ 

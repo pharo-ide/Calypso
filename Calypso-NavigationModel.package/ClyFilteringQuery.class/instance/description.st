@@ -1,3 +1,3 @@
 printing
 description
-	^requiredResult name, ' filtered by ', itemFilter printCriteria
+	^(',' join: (subqueries collect: #description)), ' filtered by ', itemFilter printCriteria

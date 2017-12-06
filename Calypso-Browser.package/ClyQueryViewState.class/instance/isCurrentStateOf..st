@@ -1,5 +1,5 @@
 testing
-isCurrentStateOf: aNavigationView
+isCurrentStateOf: aQueryView
 	
-	^(aNavigationView dataSource isInSameStateAs: dataSource)
-		and: [aNavigationView selection isSameAs: selection]
+	^(aQueryView dataSource isInSameStateAs: dataSource)
+		and: [aQueryView selection isSameAs: selection]

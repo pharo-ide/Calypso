@@ -3,7 +3,7 @@ decorateContainerTab
 	| title |
 	title := editingClass name.
 
-	browser metaLevelScope == ClyClassSideScope ifTrue: [ 
+	editingClass isClassSide ifTrue: [ 
 		title := title asText allBold asStringMorph ].
 
 	containerTab label: title

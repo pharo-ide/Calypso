@@ -6,5 +6,4 @@ showQueryResult
 		queryScopes add: systemQuery scope ].	
 	activeScope := systemQuery scope.	
 	
-	resultView showQuery: systemQuery.
-	resultView ensureSelectedItem
+	resultView showQuery: systemQuery
