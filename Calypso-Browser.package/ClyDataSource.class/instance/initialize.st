@@ -1,6 +1,6 @@
 initialization
 initialize
 	super initialize.
-	query := ClyUnknownQuery new.
+	query := ClyUnknownQuery instance.
 	itemCursor := ClyClosedBrowserCursor instance.
 	depth := 0

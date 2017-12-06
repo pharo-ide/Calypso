@@ -1,3 +1,3 @@
 queries
 query: aQuery
-	^ClyUnknownQueryResult default
+	^ClyUnknownQueryResult instance

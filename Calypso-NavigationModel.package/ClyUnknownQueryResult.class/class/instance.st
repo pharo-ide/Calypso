@@ -1,0 +1,3 @@
+singleton
+instance
+	^ClyUnknownQuery instance requiredResult

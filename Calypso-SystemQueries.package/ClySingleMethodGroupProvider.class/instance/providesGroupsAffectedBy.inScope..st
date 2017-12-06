@@ -3,4 +3,4 @@ providesGroupsAffectedBy: aSystemAnnouncement inScope: aClassScope
 
 	| query |
 	query := self createMethodQueryFrom: aClassScope.
-	^query isResult: ClyUnknownQueryResult default affectedBy: aSystemAnnouncement
+	^query isResult: ClyUnknownQueryResult instance affectedBy: aSystemAnnouncement

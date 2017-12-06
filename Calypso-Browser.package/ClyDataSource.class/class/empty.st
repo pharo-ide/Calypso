@@ -1,4 +1,4 @@
 instance creation
 empty
 
-	^ClyCollapsedDataSource on: ClyUnknownQuery new
+	^ClyCollapsedDataSource on: ClyUnknownQuery instance

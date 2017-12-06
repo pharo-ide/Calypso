@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	subgroupsQuery := ClyUnknownQuery new
+	subgroupsQuery := ClyUnknownQuery instance
