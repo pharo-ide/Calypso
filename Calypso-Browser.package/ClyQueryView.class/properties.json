@@ -11,6 +11,7 @@
 		"treeStructure",
 		"selection",
 		"desiredSelection",
+		"shouldRestoreSelection",
 		"highlighting",
 		"changesWasInitiatedByUser",
 		"navigationSelector"

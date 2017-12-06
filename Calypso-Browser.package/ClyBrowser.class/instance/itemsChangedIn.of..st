@@ -7,7 +7,7 @@ itemsChangedIn: ownerDataSource of: aQueryView
 	
 	[	actualSelectionChanged := aQueryView updateSelectedItemsOf: ownerDataSource.
 		actualSelectionChanged ifTrue: [ 
-			self updateToolsInContextOf: aQueryView selection changedBy: nil.
+			self updateToolsInContextOf: aQueryView selection.
 			navigationStartedHere ifTrue: [ self rebuildToolsForChangedEnvironment ]]
 	] ensure: [ 
 			navigationStartedHere ifTrue: [ navigationStarted := false ]].

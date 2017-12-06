@@ -19,7 +19,8 @@ initializeNavigationViews
 	methodGroupView := self newNavigationView
 		treeStructure: { 
 			ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: };
-		requestNavigationBy: #methodGroupSelectionChanged.
+		requestNavigationBy: #methodGroupSelectionChanged;
+		neverRestoreSelection.
 	
 	methodView := self newNavigationView
 		displayMainColumnBy: [ :cell :item | 
