@@ -1,3 +1,3 @@
 initialization
 resetScope
-	scope := ClyScope unknown
+	scope := ClyUnknownScope instance

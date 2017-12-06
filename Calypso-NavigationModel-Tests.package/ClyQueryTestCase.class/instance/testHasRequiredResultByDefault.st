@@ -1,4 +1,4 @@
 tests
 testHasRequiredResultByDefault
 
-	self assert: query requiredResult class equals: ClyRawQueryResult
+	self assert: query requiredResult notNil

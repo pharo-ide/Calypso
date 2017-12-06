@@ -1,3 +1,3 @@
 initialization
 defaultResult
-	^ClyUnknownQueryResult new
+	^ClyUnknownQueryResult instance

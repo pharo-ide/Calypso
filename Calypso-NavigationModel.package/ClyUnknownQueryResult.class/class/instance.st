@@ -1,3 +1,3 @@
 singleton
 instance
-	^ClyUnknownQuery instance requiredResult
+	^instance ifNil: [instance := ClyUnknownQueryResult new]
