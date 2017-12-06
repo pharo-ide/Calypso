@@ -7,4 +7,5 @@ setUpDataSource: aDataSource
 	"it is important to reset highligting before selection restore because desired selection could lead to new highlighting items"
 	selection := self newSelectionWith: #().	
 	aDataSource openOn: self.
-	self showDesiredSelection
+	self showDesiredSelection.
+	self refreshAsyncState.

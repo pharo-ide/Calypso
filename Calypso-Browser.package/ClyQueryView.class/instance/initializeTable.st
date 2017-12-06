@@ -8,4 +8,6 @@ initializeTable
 	table dropEnabled: true.
 	table onAnnouncement: FTSelectionChanged send: #selectionChanged to: self.
 	table addColumn: ClyMainTableColumn default.
-	self addMorph: table fullFrame: LayoutFrame identity
+	table vResizing: #spaceFill.
+	table hResizing: #spaceFill.
+	self addMorph: table

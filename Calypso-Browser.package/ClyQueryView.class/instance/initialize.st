@@ -1,7 +1,7 @@
 initialization
 initialize
 	super initialize.
-	self changeProportionalLayout.
+	self changeTableLayout.
 	self initializeTable.
 	
 	changesWasInitiatedByUser := true.

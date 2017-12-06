@@ -3,5 +3,5 @@ itemsChanged
 	[self isClosed ifFalse: [
 		itemCursor updateItemCache.
 		self updateExpandingItems.
-		queryView itemsOf: self wereUpdatedBy: nil.
+		queryView itemsChangedIn: self.
 		self tableRefresh]] updateCalypsoUI

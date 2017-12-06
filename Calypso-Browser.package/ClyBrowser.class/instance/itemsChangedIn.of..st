@@ -1,5 +1,5 @@
 updating
-itemsOf: aQueryView from: ownerDataSource wereUpdatedBy: anEnvironmentChanged
+itemsChangedIn: ownerDataSource of: aQueryView
 
 	| actualSelectionChanged navigationStartedHere |
 	navigationStartedHere := navigationStarted not.
@@ -7,7 +7,7 @@ itemsOf: aQueryView from: ownerDataSource wereUpdatedBy: anEnvironmentChanged
 	
 	[	actualSelectionChanged := aQueryView updateSelectedItemsOf: ownerDataSource.
 		actualSelectionChanged ifTrue: [ 
-			self updateToolsInContextOf: aQueryView selection changedBy: anEnvironmentChanged.
+			self updateToolsInContextOf: aQueryView selection changedBy: nil.
 			navigationStartedHere ifTrue: [ self rebuildToolsForChangedEnvironment ]]
 	] ensure: [ 
 			navigationStartedHere ifTrue: [ navigationStarted := false ]].
