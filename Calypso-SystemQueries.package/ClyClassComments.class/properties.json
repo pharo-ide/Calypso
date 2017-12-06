@@ -8,6 +8,6 @@
 	"instvars" : [
 		"pattern"
 	],
-	"name" : "ClyClassCommentQuery",
+	"name" : "ClyClassComments",
 	"type" : "normal"
 }

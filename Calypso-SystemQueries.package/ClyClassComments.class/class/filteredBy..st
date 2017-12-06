@@ -1,4 +1,4 @@
 instance creation
-using: aStringPattern
+filteredBy: aStringPattern
 	^self new 
 		pattern: aStringPattern

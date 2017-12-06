@@ -1,5 +1,5 @@
 running
 createQuery
-	^ClyClassCommentQuery 
+	^ClyClassComments 
 		withString: self expectedClassCommentSubstring
 		from: (ClyPackageScope of: {Object package} in: environment)

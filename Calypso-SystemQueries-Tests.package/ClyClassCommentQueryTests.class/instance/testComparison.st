@@ -2,12 +2,12 @@ tests
 testComparison
 
 	self 
-		assert: (ClyClassCommentQuery withString: 'test substring') 
-		equals: (ClyClassCommentQuery withString: 'test ', 'substring').
+		assert: (ClyClassComments withString: 'test substring') 
+		equals: (ClyClassComments withString: 'test ', 'substring').
 		
 	self 
-		assert: (ClyClassCommentQuery withString: 'test substring') hash
-		equals: (ClyClassCommentQuery withString: 'test ', 'substring') hash.
+		assert: (ClyClassComments withString: 'test substring') hash
+		equals: (ClyClassComments withString: 'test ', 'substring') hash.
 		
-	self deny: (ClyClassCommentQuery withString: 'test substring')
-					 = (ClyClassCommentQuery withString: 'another substring')
+	self deny: (ClyClassComments withString: 'test substring')
+					 = (ClyClassComments withString: 'another substring')
