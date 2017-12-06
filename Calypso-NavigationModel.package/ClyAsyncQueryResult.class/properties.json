@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"actualQuery",
 		"actualResult",
 		"buildProcess"
 	],

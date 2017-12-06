@@ -1,7 +1,7 @@
 building
 buildActualResult
 
-	actualResult := actualQuery execute.
+	actualResult := buildingQuery execute.
 	items := actualResult items.
 	metadata := nil.
 	self collectMetadata.
