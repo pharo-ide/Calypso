@@ -7,8 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"requiredResult",
-		"scope",
-		"environment"
+		"scope"
 	],
 	"name" : "ClyQuery",
 	"type" : "normal"
