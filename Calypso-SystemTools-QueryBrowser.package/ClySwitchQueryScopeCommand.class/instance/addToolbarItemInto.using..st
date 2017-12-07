@@ -2,6 +2,6 @@ activation-toolbar support
 addToolbarItemInto: toolbarMorph using: aCommandActivator
 	
 	| compoBox |
-	compoBox := ClyScopesCompoBox for: browser.
+	compoBox := ClyScopeCompoBox for: browser.
 	
 	toolbarMorph addNewItem: compoBox
