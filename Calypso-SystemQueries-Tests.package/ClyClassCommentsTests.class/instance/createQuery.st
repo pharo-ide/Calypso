@@ -2,4 +2,4 @@ running
 createQuery
 	^ ClyClassComments
 		withString: self expectedClassCommentSubstring
-		from: (ClyPackageScope ofAll: {Object package} in: environment)
+		from: (ClyPackageScope of: Object package in: environment)

@@ -2,4 +2,4 @@ running
 createQuery
 	^ ClyMethodSources
 		withString: self expectedSourceCodeSubstring
-		from: (ClyClassScope ofAll: {self class} in: environment)
+		from: (ClyClassScope of: self class in: environment)

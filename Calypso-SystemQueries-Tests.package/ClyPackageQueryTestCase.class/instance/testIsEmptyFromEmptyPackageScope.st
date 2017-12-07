@@ -1,4 +1,5 @@
 tests
 testIsEmptyFromEmptyPackageScope
-	query scope: (ClyPackageScope ofAll: #() in: environment).
+	query scope: (ClyPackageScope emptyIn: environment).
+	
 	self assert: query checkEmptyResult

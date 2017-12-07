@@ -1,6 +1,6 @@
 tests
 testIsExecutedFromScopeOfBasisObject
-	query scope: (ClyScopeExample ofAll: #(basis) in: environment).
-	self
-		assert: (query isExecutedFromScopeOf: query scope basisObjects anyOne).
+	query scope: (ClyScopeExample of: #basis in: environment).
+
+	self assert: (query isExecutedFromScopeOf: query scope basisObjects anyOne).
 	self deny: (query isExecutedFromScopeOf: #someObject)

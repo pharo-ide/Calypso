@@ -1,4 +1,4 @@
 tests
 testIsEmptyFromEmptyMethodScope
-	query scope: (ClyMethodScope ofAll: #() in: environment).
+	query scope: (ClyMethodScope emptyIn: environment).
 	self assert: query checkEmptyResult

@@ -2,4 +2,4 @@ running
 createQuery
 	^ ClyMessageImplementors
 		of: {self targetSelector}
-		from: (ClyClassScope ofAll: {Object} in: environment)
+		from: (ClyClassScope of: Object in: environment)

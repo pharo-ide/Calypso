@@ -2,7 +2,7 @@ tests
 testConvertingToAnotherScopeClassShouldRemoveDuplications
 	| convertedScope |
 	scope := ClyCompositeScope on: {
-		ClyScopeExample ofAll: {Object} in: environment.
+		ClyScopeExample of: Object in: environment.
 		ClyScopeExample2 ofAll: {Object. Array} in: environment}.
 		
 	convertedScope := scope asScope: ClyScopeExample2.
