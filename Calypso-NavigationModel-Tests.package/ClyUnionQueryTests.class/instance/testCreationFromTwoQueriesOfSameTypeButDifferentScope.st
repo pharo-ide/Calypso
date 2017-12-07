@@ -2,8 +2,8 @@ tests
 testCreationFromTwoQueriesOfSameTypeButDifferentScope
 
 	| subquery1 subquery2 |
-	subquery1 := self subqueryInScope: ClyScopeExample of: {Array}.
-	subquery2 := self subqueryInScope: ClyScopeExample2 of: {String}.
+	subquery1 := self subqueryFromScope: ClyScopeExample of: Array.
+	subquery2 := self subqueryFromScope: ClyScopeExample2 of: String.
 	
 	query := subquery1, subquery2.
 	

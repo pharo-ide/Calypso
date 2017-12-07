@@ -1,10 +1,10 @@
 tests
 testCreationFromTwoUnionQueries
 	| subquery1 subquery2 subquery3 subquery4 unionQuery1 unionQuery2 scopes |
-	subquery1 := self subqueryInScope: ClyScopeExample of: {Array}.
-	subquery2 := self subqueryInScope: ClyScopeExample2 of: {String}.
-	subquery3 := self subqueryInScope: ClyScopeExample of: {Object}.
-	subquery4 := self subqueryInScope: ClyScopeExample2 of: {Class}.
+	subquery1 := self subqueryFromScope: ClyScopeExample of: Array.
+	subquery2 := self subqueryFromScope: ClyScopeExample2 of: String.
+	subquery3 := self subqueryFromScope: ClyScopeExample of: Object.
+	subquery4 := self subqueryFromScope: ClyScopeExample2 of: Class.
 	
 	unionQuery1 := subquery1 , subquery2.
 	unionQuery2 := subquery3 , subquery4.

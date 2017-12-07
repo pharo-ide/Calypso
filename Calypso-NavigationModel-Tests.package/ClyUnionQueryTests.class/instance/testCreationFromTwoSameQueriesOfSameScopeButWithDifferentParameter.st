@@ -2,9 +2,9 @@ tests
 testCreationFromTwoSameQueriesOfSameScopeButWithDifferentParameter
 
 	| subquery1 subquery2 |
-	subquery1 := self subqueryInScopeOf: {Array}.
+	subquery1 := self subqueryFromScopeOf: Array.
 	subquery1 scope extraParameter: #testParameter.
-	subquery2 := self subqueryInScopeOf: {Array}.
+	subquery2 := self subqueryFromScopeOf: Array.
 	subquery2 scope extraParameter: #testParameter2.
 	query := subquery1, subquery2.
 	

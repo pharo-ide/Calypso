@@ -2,7 +2,7 @@ tests
 testCreationWithSingleSubqueryButAnotherResult
 
 	| subquery |
-	subquery := self subqueryInScopeOf: { Array }.
+	subquery := self subqueryFromScopeOf: Array.
 
 	query := ClyUnionQuery with: {subquery} as: #specialResult.
 	

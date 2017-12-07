@@ -1,5 +1,3 @@
 *Calypso-SystemPlugins-Critic-Browser
 criticAnalysisScope
-	^ ClyClassScope
-		ofAll: {editingClass}
-		in: browser navigationEnvironment
+	^ ClyClassScope of: editingClass in: browser navigationEnvironment

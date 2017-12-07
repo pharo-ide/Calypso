@@ -2,8 +2,8 @@ tests
 testNotExecutedFromSingleScopeWhenAllSubqueriesAreFromEmptyScope
 
 	query subqueries: { 
-		self subqueryInScope: ClyScopeExample of: {}.
-		self subqueryInScope: ClyScopeExample2 of: {}.
+		self subqueryFromScope: ClyScopeExample empty.
+		self subqueryFromScope: ClyScopeExample2 empty.
 	}.
 	
 	self deny: query isExecutedFromSingleScope

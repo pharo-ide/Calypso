@@ -1,8 +1,8 @@
 tests
 testNotEmptyWhenThereIsNotEmptySubquery
 	query subqueries: {
-		(self subqueryInScope: ClyScopeExample of: {}).
-		(self subqueryInScope: ClyScopeExample2 of: {self class superclass})
+		(self subqueryFromScope: ClyScopeExample empty).
+		(self subqueryFromScope: ClyScopeExample2 of: self class superclass)
 	}.
 	
 	self deny: query checkEmptyResult

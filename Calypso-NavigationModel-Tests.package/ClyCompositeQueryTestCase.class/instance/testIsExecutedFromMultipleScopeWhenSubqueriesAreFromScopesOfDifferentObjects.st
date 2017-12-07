@@ -2,8 +2,8 @@ tests
 testIsExecutedFromMultipleScopeWhenSubqueriesAreFromScopesOfDifferentObjects
 
 	query subqueries: { 
-		self subqueryInScopeOf: { self class }.
-		self subqueryInScopeOf: { self class superclass}.
+		self subqueryFromScopeOf: self class.
+		self subqueryFromScopeOf: self class superclass.
 	}.
 	
 	self assert: query isExecutedFromMultipleScope.

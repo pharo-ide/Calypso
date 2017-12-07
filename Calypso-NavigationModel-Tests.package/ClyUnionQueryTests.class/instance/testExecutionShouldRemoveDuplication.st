@@ -2,8 +2,8 @@ tests
 testExecutionShouldRemoveDuplication
 
 	query subqueries: { 
-		self subqueryInScope: ClyScopeExample of: {self class}.
-		self subqueryInScope: ClyScopeExample2 of: {self class}.
+		self subqueryFromScope: ClyScopeExample of: self class.
+		self subqueryFromScope: ClyScopeExample2 of: self class.
 	}.
 	self executeQuery.
 	

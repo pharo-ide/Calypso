@@ -2,7 +2,7 @@ tests
 testNotExecutedFromMultipleScopeWhenSingleSubqueryIsFromEmptyScope
 
 	query subqueries: { 
-		self subqueryInScopeOf: {}.
+		self subqueryFromScope: ClyScopeExample empty.
 	}.
 	
 	self deny: query isExecutedFromMultipleScope

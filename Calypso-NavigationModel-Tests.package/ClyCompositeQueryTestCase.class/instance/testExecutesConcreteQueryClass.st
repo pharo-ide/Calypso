@@ -1,6 +1,6 @@
 tests
 testExecutesConcreteQueryClass
-	query subqueries: { self subqueryInScopeOf: #() }.
+	query subqueries: { self subqueryFromScopeOf: #basis }.
 	
 	self deny: (query executesQuery: query class).
 	
