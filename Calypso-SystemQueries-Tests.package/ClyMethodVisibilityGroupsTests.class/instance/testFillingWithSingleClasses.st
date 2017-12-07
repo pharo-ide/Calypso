@@ -17,7 +17,7 @@ testFillingWithSingleClasses
 		equals: ClySuperclassVisibilityLevel.
 	self
 		assert: visibilityLevel visibleClassScope
-		equals: (ClyClassScope ofAll: {ClyClass1FromP1} in: environment).
+		equals: (ClyClassScope of: ClyClass1FromP1 in: environment).
 	self
 		assert: visibilityLevel extraClassScope
-		equals: (ClyClassScope ofAll: {ClyClass2FromP1} in: environment)
+		equals: (ClyClassScope of: ClyClass2FromP1 in: environment)

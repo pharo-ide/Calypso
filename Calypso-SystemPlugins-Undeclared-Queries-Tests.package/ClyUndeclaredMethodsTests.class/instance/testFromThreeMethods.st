@@ -1,7 +1,7 @@
 tests
 testFromThreeMethods
 
-	self queryInScope: ClyMethodScope of: {
+	self queryFromScope: ClyMethodScope ofAll: {
 		ClyClassWithUndeclares >> #method1WithUndeclares. 
 		ClyClassWithUndeclares >> #method2WithUndeclares.
 		Object >> #printString}.

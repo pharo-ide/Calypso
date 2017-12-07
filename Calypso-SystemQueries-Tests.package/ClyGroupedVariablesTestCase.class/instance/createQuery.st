@@ -5,10 +5,5 @@ createQuery
 	and not just from classes which define given variables"
 
 	| scope |
-	scope := ClyInstanceSideScope
-		ofAll:
-			{Object.
-			Array.
-			String}
-		in: environment.
+	scope := ClyInstanceSideScope ofAll: {Object. Array. String} in: environment.
 	^ ClyAllClasses from: scope

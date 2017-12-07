@@ -2,7 +2,7 @@ tests
 testProcessingQueryCacheWhenSomeWasCollectedAsGarbage
 
 	| evaluated |
-	environment query: (self createQueryInScopeOf: {self class}).
+	environment query: (self createQueryFromScopeOf: self class).
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	
 	evaluated := false.

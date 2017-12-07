@@ -1,7 +1,7 @@
 tests
 testFromSingleClass
 
-	self queryInScope: ClyInstanceSideScope of: {ClyClass1FromP1}.
+	self queryFromScope: ClyInstanceSideScope of: ClyClass1FromP1.
 	
 	self assert: (resultItems collect: #class as: Set) equals: { ClyInheritedMethodGroup. ClyTaggedMethodGroup} asSet.
 	self 

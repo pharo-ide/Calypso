@@ -1,3 +1,3 @@
 running
 emptyScopeSample
-	^ self scopeClass ofAll: #() in: environment
+	^ self scopeClass emptyIn: environment

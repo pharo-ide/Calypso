@@ -1,18 +1,15 @@
 tests
 testClassGroupEnumeration
 	environment addPlugin: ClyDefaultSystemEnvironmentPlugin new.
-	scope := ClyPackageScope
-		ofAll: {ClyClass7WithTag1FromP5 package}
-		in: environment.
+	scope := ClyPackageScope of: ClyClass7WithTag1FromP5 package in: environment.
+	
 	scope classGroupsDo: [ :each | result add: each ].
+	
 	self
 		assert: (result collect: #class as: Set)
-		equals:
-			{ClyNoTagClassGroup.
-			ClyTaggedClassGroup.
-			ClyClassGroup} asSet.
+		equals: {ClyNoTagClassGroup. ClyTaggedClassGroup. ClyClassGroup} asSet.
 	self
-		assert:
+		assert: 
 			(result
 				select: [ :each | each class = ClyTaggedClassGroup ]
 				thenCollect: #tag) sorted asArray

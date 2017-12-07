@@ -1,6 +1,6 @@
 tests
 testFromActiveProcess
 	
-	self queryInScope: ClyProcessScope of: { Processor activeProcess}.
+	self queryFromScope: ClyProcessScope of: Processor activeProcess.
 		
 	self assert: resultItems notEmpty

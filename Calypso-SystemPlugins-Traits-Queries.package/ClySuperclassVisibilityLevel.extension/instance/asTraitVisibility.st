@@ -4,4 +4,4 @@ asTraitVisibility
 	traits := extraClassScope basisObjects select: [ :each | each isTrait ].
 	
 	^(ClySingleTraitVisibilityLevel of: visibleClassScope)
-		extraClassScope: (visibleClassScope asScope: ClyClassScope of: traits)
+		extraClassScope: (visibleClassScope asScope: ClyClassScope ofAll: traits)

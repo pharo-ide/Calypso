@@ -2,7 +2,7 @@ tests
 testCheckEmptyQueryWhenThereIsEmptyResult
 
 	| query result |
-	query := self createQueryInScopeOf: #().
+	query := self createQueryFromScope: ClyScopeExample empty.
 	result := environment query: query.
 	self assert: result items isEmpty.
 	

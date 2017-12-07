@@ -5,7 +5,7 @@ testFromTwoBackgroundProcesses
 	process2 := [ 1 minute wait ] fork.
 	Processor yield.
 	
-	self queryInScope: ClyProcessScope of: { process. process2}.
+	self queryFromScope: ClyProcessScope ofAll: { process. process2}.
 	
 	self 
 		assert: resultItems asIdentitySet 

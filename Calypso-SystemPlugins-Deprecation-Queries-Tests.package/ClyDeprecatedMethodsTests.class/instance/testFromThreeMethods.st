@@ -1,7 +1,7 @@
 tests
 testFromThreeMethods
 
-	self queryInScope: ClyMethodScope of: {
+	self queryFromScope: ClyMethodScope ofAll: {
 		ClyClassWithDeprecatedMethods >> #deprecatedMethod1. 
 		ClyClassWithDeprecatedMethods >> #deprecatedMethod2.
 		ClyClassWithDeprecatedMethods >> #notDeprecatedMethod}.

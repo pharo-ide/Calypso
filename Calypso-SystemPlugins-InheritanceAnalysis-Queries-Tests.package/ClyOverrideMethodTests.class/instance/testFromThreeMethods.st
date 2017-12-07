@@ -1,7 +1,7 @@
 tests
 testFromThreeMethods
 
-	self queryInScope: ClyMethodScope of: {
+	self queryFromScope: ClyMethodScope ofAll: {
 		ClyClassWhichInheritsAbstractClass >> #abstractMethod1. 
 		ClyClassWhichInheritsAbstractClass >> #notOverriddenMethod.
 		ClyClassWhichInheritsAbstractClass >> #overriddenMethod}.

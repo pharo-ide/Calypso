@@ -1,7 +1,7 @@
 tests
 testFromClassScope
 
-	self queryInScope: ClyClassScope of: { self class }.
+	self queryFromScope: ClyClassScope of: self class.
 	
 	self assert: resultItems size equals: 1.
 	

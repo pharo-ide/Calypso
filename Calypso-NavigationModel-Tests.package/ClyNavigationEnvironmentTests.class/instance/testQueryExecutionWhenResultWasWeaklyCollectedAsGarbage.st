@@ -2,7 +2,7 @@ tests
 testQueryExecutionWhenResultWasWeaklyCollectedAsGarbage
 
 	| cache result result2 query |
-	query := self createQueryInScopeOf: { self class }.
+	query := self createQueryFromScopeOf: self class.
 	environment query: query.
 	Smalltalk garbageCollectMost; garbageCollectMost.
 	cache := environment cachedResultOf: query.

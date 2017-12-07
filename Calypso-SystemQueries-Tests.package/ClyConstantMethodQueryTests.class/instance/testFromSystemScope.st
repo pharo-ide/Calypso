@@ -1,7 +1,7 @@
 tests
 testFromSystemScope
 
-	self queryInScope: ClySystemEnvironmentScope of: { ClySystemEnvironment currentImage}.
+	self queryFromScope: ClySystemEnvironmentScope of: ClySystemEnvironment currentImage.
 	
 	self assert: resultItems size equals: 2.	
 	self assert: (resultItems identityIncludes: self class >> #method1).

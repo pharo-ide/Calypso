@@ -1,5 +1,5 @@
 converting
-asScope: anotherTypedScopeClass of: newBasisObjects
+asScope: anotherTypedScopeClass of: singleBasisObject
 	"It will create completely new scope instance but in same environment"
 
-	^ anotherTypedScopeClass ofAll: newBasisObjects in: environment
+	^ anotherTypedScopeClass of: singleBasisObject in: environment

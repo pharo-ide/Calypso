@@ -2,6 +2,6 @@ tests
 testCheckEmptyQueryWhenThereIsNoResultButItWouldNotBeEmpty
 
 	| query |
-	query := self createQueryInScopeOf: {self class}.
+	query := self createQueryFromScopeOf: self class.
 	
 	self deny: (environment isQueryEmpty: query)

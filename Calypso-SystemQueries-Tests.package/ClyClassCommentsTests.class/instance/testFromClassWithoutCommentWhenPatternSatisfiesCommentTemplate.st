@@ -7,6 +7,6 @@ testFromClassWithoutCommentWhenPatternSatisfiesCommentTemplate
 	substring := noCommentClass comment copyFrom: 4 to: 30.
 	
 	query pattern: (ClySubstringPattern with: substring).	
-	self queryInScope: ClyClassScope of: { noCommentClass }.
+	self queryFromScope: ClyClassScope of: noCommentClass.
 	
 	self assert: resultItems isEmpty

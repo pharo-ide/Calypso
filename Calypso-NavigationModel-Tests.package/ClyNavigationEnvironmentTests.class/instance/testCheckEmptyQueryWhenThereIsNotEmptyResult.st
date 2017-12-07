@@ -2,7 +2,7 @@ tests
 testCheckEmptyQueryWhenThereIsNotEmptyResult
 
 	| query result |
-	query := self createQueryInScopeOf: {self class}.
+	query := self createQueryFromScopeOf: self class.
 	result := environment query: query.
 	self assert: result items notEmpty.
 	

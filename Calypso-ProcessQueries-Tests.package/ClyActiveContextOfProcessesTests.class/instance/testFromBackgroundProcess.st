@@ -4,6 +4,6 @@ testFromBackgroundProcess
 	process := [ 1 minute wait ] fork.
 	Processor yield.
 	
-	self queryInScope: ClyProcessScope of: { process}.
+	self queryFromScope: ClyProcessScope of: process.
 		
 	self assert: resultItems anyOne == process suspendedContext
