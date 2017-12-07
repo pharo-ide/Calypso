@@ -1,4 +1,7 @@
 scope creation
 createScopeFrom: aClassScope withLocalScope: aLocalScopeClass
 
-	^annotatedClass createInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass
+	| scope |
+	scope := annotatedClass createInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass.
+	scope name: 'parents'.
+	^scope

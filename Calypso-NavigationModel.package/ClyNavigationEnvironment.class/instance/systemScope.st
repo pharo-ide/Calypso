@@ -1,3 +1,3 @@
 queries
 systemScope
-	^ system globalScopeClass of: system in: self
+	^ system asGlobalScopeIn: self

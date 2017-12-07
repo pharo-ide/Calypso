@@ -7,6 +7,6 @@ newWindowTitle
 		ifFalse: [title := 'Loading: ', title ].
 	
 	self systemScope isCurrentImage ifFalse: [ 
-		title := title , ' in ', self systemScope printBasis ].
+		title := title , ' in ', self systemScope description ].
 	
 	^title

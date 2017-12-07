@@ -1,4 +1,4 @@
 accessing
 scopeNames
 
-	^self scopes collect: [ :each | each printBasis ]
+	^self scopes collect: [ :each | each description capitalized]

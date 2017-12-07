@@ -7,6 +7,6 @@ build
 		getSelected: #currentScopeIndex 
 		setSelected: #currentScopeIndex: 
 		getEnabled: nil useIndex: true
-		help: self currentScope printBasis. 
+		help: self currentScope description. 
 		
 	self addMorph: dropList

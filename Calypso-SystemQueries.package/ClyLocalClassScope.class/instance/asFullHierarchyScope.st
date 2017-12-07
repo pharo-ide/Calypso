@@ -1,7 +1,9 @@
 converting
 asFullHierarchyScope
-	| subclassScope |
+	| subclassScope fullScope |
 	subclassScope := (self asScope: ClySubclassScope)
 		localClassScope: self class.
 		
-	^self , self asInheritedScope, subclassScope
+	fullScope := self , self asInheritedScope, subclassScope.
+	fullScope name: 'hier'.
+	^fullScope

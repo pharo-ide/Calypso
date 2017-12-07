@@ -12,5 +12,5 @@ printOn: aStream
 	aStream nextPutAll: 'from '.
 	scope isBasedOnEmptyBasis 
 		ifTrue: [ aStream nextPutAll: 'empty scope']
-		ifFalse: [ scope printBasisOn: aStream]. 
+		ifFalse: [ scope printDescriptionOn: aStream]. 
 	

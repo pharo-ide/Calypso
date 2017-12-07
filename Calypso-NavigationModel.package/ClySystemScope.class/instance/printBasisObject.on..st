@@ -1,4 +1,4 @@
 printing
 printBasisObject: aSystemEnvironment on: aStream
 
-	^aStream nextPutAll: aSystemEnvironment name
+	aStream nextPutAll: aSystemEnvironment name
