@@ -10,3 +10,4 @@ testConvertingToInheritedScope
 	self assert: convertedScope localClassScope equals: ClyInstanceSideScope.
 	self assert: convertedScope basisObjects equals: scope basisObjects.
 	self assert: convertedScope environment equals: environment.
+	self assert: convertedScope name equals: ClyClassScope inheritedScopeName

@@ -3,5 +3,5 @@ createScopeFrom: aClassScope withLocalScope: aLocalScopeClass
 
 	| scope |
 	scope := annotatedClass createInheritedScopeFrom: aClassScope withLocalScope: aLocalScopeClass.
-	scope name: 'parents'.
+	scope name: ClyClassScope inheritedScopeName.
 	^scope

@@ -1,6 +1,8 @@
 printing
 printDescriptionOn: aStream
 
+	name ifNotNil: [ ^super printDescriptionOn: aStream ].
+	
 	subscopes do: [ :each | 
 		each printDescriptionOn: aStream.
 		aStream nextPutAll: ', ' ].

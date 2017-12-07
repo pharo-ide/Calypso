@@ -2,4 +2,4 @@
 asInterestingClassScope
 	| newSubscopes |
 	newSubscopes := subscopes collect: [ :each | each asInterestingClassScope ].
-	^ClyCompositeScope on: newSubscopes in: environment
+	^ClyCompositeScope on: newSubscopes in: environment named: name

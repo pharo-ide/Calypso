@@ -1,5 +1,7 @@
 queries
 adoptQuery: aQuery
-	| subqueries |
+	| subqueries result |
 	subqueries := subscopes collect: [ :each | aQuery withScope: each ].
-	^ClyQuery unionFrom: subqueries
+	result := ClyQuery unionFrom: subqueries.
+	result scope name: name.
+	^result

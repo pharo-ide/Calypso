@@ -13,4 +13,5 @@ testConvertingToInheritedScope
 	self
 		assert: (convertedScope subscopes collect: #localClassScope as: Set)
 		equals: {ClyInstanceSideScope. ClyClassSideScope} asSet.
-	self assert: convertedScope environment equals: environment
+	self assert: convertedScope environment equals: environment.
+	self assert: convertedScope name equals: ClyClassScope inheritedScopeName

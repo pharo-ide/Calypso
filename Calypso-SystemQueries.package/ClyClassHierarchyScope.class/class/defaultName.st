@@ -1,3 +1,3 @@
 accessing
 defaultName
-	^'hier'
+	^self hierarchyScopeName 

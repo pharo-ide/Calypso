@@ -5,5 +5,5 @@ asFullHierarchyScope
 		localClassScope: self class.
 		
 	fullScope := self , self asInheritedScope, subclassScope.
-	fullScope name: 'hier'.
+	fullScope name: self class hierarchyScopeName.
 	^fullScope
