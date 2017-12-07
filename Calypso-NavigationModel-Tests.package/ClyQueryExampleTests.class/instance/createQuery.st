@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyQueryExampleReturningScopeBasis from: ClyScopeExample of: #(basis) in: environment
+	^ClyQueryExampleReturningScopeBasis from: ClyScopeExample of: #basisObject in: environment

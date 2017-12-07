@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyOverrideMethods from: ClyClassScope of: {Object} in: environment
+	^ClyOverrideMethods from: ClyClassScope of: Object in: environment

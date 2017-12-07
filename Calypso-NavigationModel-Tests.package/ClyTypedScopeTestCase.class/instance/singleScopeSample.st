@@ -1,3 +1,3 @@
 running
 singleScopeSample
-	^self scopeClass of: {self singleBasisSample} in: environment
+	^ self scopeClass ofAll: {self singleBasisSample} in: environment

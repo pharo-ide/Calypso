@@ -1,3 +1,4 @@
 running
 subqueryInScope: aScopeClass of: basisObjects
-	^ClyQueryExampleReturningScopeBasis from: (aScopeClass of: basisObjects in: environment)
+	^ ClyQueryExampleReturningScopeBasis
+		from: (aScopeClass ofAll: basisObjects in: environment)

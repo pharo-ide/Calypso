@@ -1,4 +1,4 @@
 running
 createQuery
 
-	^ClyAllProblemMethods from: ClyClassScope of: #() in: environment.	
+	^ClyAllProblemMethods from: (ClyClassScope emptyIn: environment).	

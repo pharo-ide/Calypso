@@ -1,3 +1,4 @@
 running
 createQuery
-	^ClyUntaggedClasses from: (ClyClassScope of: {Object} in: environment)
+	^ ClyUntaggedClasses
+		from: (ClyClassScope ofAll: {Object} in: environment)

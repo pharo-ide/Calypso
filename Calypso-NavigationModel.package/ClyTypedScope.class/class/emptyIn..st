@@ -1,4 +1,3 @@
 instance creation
 emptyIn: aNavigationEnvironment
-
-	^self of: #() in: aNavigationEnvironment
+	^ self ofAll: #() in: aNavigationEnvironment

@@ -1,4 +1,4 @@
 instance creation
-from: aScopeClass of: basisObjects in: aNavigationEnvironment
-
-	^self from: (aScopeClass of: basisObjects in: aNavigationEnvironment)
+from: aScopeClass of: aBasisObject in: aNavigationEnvironment
+	^ self
+		from: (aScopeClass of: aBasisObject in: aNavigationEnvironment)

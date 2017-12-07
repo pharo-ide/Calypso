@@ -1,3 +1,3 @@
 examples
 scopeWithoutCritiques
-	^ClyMethodScope of: { self methodWithoutCritiques} in: environment
+	^ ClyMethodScope ofAll: {self methodWithoutCritiques} in: environment

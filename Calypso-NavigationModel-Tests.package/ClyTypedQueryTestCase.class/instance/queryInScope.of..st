@@ -1,5 +1,4 @@
 running
 queryInScope: scopeClass of: basisObjects
-
-	query scope: (scopeClass of: basisObjects in: environment).
+	query scope: (scopeClass ofAll: basisObjects in: environment).
 	self executeQuery

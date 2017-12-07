@@ -1,4 +1,4 @@
 helpers
 createQueryInScopeOf: basisObjects
-	^ClyQueryExampleReturningScopeBasis 
-		from: (ClyScopeExample of: basisObjects in: environment).
+	^ ClyQueryExampleReturningScopeBasis
+		from: (ClyScopeExample ofAll: basisObjects in: environment)

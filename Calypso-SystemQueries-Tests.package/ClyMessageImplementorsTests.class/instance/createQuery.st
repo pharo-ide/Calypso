@@ -1,5 +1,5 @@
 running
 createQuery
-	^ClyMessageImplementors 
-		of: { self targetSelector } 
-		from: (ClyClassScope of: {Object} in: environment)
+	^ ClyMessageImplementors
+		of: {self targetSelector}
+		from: (ClyClassScope ofAll: {Object} in: environment)

@@ -1,3 +1,5 @@
 running
 createQuery
-	^ClyTaggedMethods by: #tag1 from: (ClyClassScope of: {ClyClass1FromP1} in: environment)
+	^ ClyTaggedMethods
+		by: #tag1
+		from: (ClyClassScope ofAll: {ClyClass1FromP1} in: environment)

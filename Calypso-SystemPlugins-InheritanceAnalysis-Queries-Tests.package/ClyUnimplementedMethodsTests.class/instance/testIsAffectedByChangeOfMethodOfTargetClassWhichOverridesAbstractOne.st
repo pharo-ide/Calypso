@@ -1,7 +1,11 @@
 tests
 testIsAffectedByChangeOfMethodOfTargetClassWhichOverridesAbstractOne
-
-	query scope: (ClyClassScope of: { ClyClassWhichInheritsAbstractClass } in: environment).	
-	
-	self assert: (
-		query isAffectedByChangedMethod: ClyClassWhichInheritsAbstractClass >> #abstractMethod1)
+	query
+		scope:
+			(ClyClassScope
+				ofAll: {ClyClassWhichInheritsAbstractClass}
+				in: environment).
+	self
+		assert:
+			(query
+				isAffectedByChangedMethod: ClyClassWhichInheritsAbstractClass >> #abstractMethod1)

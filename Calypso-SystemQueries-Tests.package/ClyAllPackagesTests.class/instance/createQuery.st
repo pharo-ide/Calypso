@@ -1,3 +1,4 @@
 running
 createQuery
-	^ClyAllPackages from: (ClyPackageScope of: {Object package} in: environment)
+	^ ClyAllPackages
+		from: (ClyPackageScope ofAll: {Object package} in: environment)

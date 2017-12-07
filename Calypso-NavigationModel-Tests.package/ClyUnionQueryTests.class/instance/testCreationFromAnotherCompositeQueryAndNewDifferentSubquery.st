@@ -4,7 +4,7 @@ testCreationFromAnotherCompositeQueryAndNewDifferentSubquery
 	| subquery1 subquery2 subquery3 |
 	subquery1 := self subqueryInScope: ClyScopeExample of: { Array }.
 	subquery2 := self subqueryInScope: ClyScopeExample2 of: { String }.
-	subquery3 := ClyQueryExampleReturningScopeBasis2 from: ClyScopeExample of: {Object} in: environment.
+	subquery3 := ClyQueryExampleReturningScopeBasis2 from: ClyScopeExample of: Object in: environment.
 	
 	query := subquery1, subquery2, subquery3.
 	

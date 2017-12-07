@@ -1,4 +1,4 @@
 instance creation
 of: basisObjects merging: singleRelationScopeClasses
-	^(self of: basisObjects)
+	^ (self ofAll: basisObjects)
 		relationScopeClasses: singleRelationScopeClasses

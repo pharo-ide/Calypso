@@ -1,9 +1,8 @@
 tests
 testMethodsEnumeration
-
-	scope := ClySubclassScope of: { ClyClass1FromP1 }.
+	scope := ClySubclassScope of: ClyClass1FromP1.
 	
-	scope methodsDo: [ :each | result add: each].
+	scope methodsDo: [ :each | result add: each ].
 	
 	self assert: (result includesAll: ClyClass1FromP1 subclasses first localMethods).
 	self deny: (result includesAll: ClyClass1FromP1 subclasses first classSide localMethods).

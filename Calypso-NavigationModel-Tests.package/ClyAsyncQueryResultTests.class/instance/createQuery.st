@@ -1,4 +1,4 @@
 running
 createQuery
 
-	^ClyLongQueryExample from: ClyScopeExample of: { String } in: environment 
+	^ClyLongQueryExample from: ClyScopeExample of: String in: environment 

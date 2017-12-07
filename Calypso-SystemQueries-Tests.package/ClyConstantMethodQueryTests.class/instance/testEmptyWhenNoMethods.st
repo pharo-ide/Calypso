@@ -1,5 +1,6 @@
 tests
 testEmptyWhenNoMethods
-	query scope: (ClyMethodScope of: {self class >> #method1} in: environment).
+	query
+		scope: (ClyMethodScope ofAll: {(self class >> #method1)} in: environment).
 	query methods: #().
 	self assert: query checkEmptyResult

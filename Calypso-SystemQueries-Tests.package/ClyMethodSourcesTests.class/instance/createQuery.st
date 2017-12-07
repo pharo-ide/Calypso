@@ -1,5 +1,5 @@
 running
 createQuery
-	^ClyMethodSources 
+	^ ClyMethodSources
 		withString: self expectedSourceCodeSubstring
-		from: (ClyClassScope of: {self class} in: environment)
+		from: (ClyClassScope ofAll: {self class} in: environment)

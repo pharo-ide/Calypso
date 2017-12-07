@@ -2,4 +2,4 @@ running
 createQuery
 
 	^ClyQueryExampleReturningScopeBasis 
-		from: ClyScopeExample of: #() in: environment 
+		from: (ClyScopeExample emptyIn: environment)

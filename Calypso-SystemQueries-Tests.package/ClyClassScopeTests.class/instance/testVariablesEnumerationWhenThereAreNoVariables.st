@@ -1,8 +1,7 @@
 tests
 testVariablesEnumerationWhenThereAreNoVariables
-
-	scope := ClyClassScope of: { ProtoObject }.
+	scope := ClyClassScope of: ProtoObject.
 	
-	scope variablesDo: [ :each | result add: each].
+	scope variablesDo: [ :each | result add: each ].
 	
 	self assert: result isEmpty

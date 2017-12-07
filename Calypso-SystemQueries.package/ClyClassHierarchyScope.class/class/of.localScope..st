@@ -1,4 +1,3 @@
 instance creation
 of: basisObjects localScope: aClassScopeClass
-	^(self of: basisObjects)
-		localClassScope: aClassScopeClass 
+	^ (self ofAll: basisObjects) localClassScope: aClassScopeClass
