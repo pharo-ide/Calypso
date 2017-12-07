@@ -1,7 +1,7 @@
 tests
 testClassEnumerationOverMetaclassWhenClassSideIsLocalScope
 
-	scope := ClySuperclassScope of: { ClyClass1FromP1 class } localScope: ClyClassSideScope.
+	scope := ClySuperclassScope of: ClyClass1FromP1 class localScope: ClyClassSideScope.
 	
 	scope classesDo: [ :each | result add: each].
 	

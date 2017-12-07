@@ -15,5 +15,5 @@ testConvertingToNewMetaLevel
 	scopes := newQuery subqueries collect: [ :each | each scope ] as: Set.
 	self assert: scopes equals: {
 		ClyInstanceSideScope of: Object.
-		ClySubclassScope of: {Array} localScope: ClyInstanceSideScope
+		ClySubclassScope of: Array localScope: ClyInstanceSideScope
 	} asSet

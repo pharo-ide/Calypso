@@ -2,7 +2,7 @@ tests
 testClassEnumerationOverClassWhenBothMetaLevelsAreLocalScope
 
 	| expected |
-	scope := ClySubclassScope of: { Class } localScope: ClyBothMetaLevelClassScope.
+	scope := ClySubclassScope of: Class localScope: ClyBothMetaLevelClassScope.
 
 	scope classesDo: [ :each | result add: each].
 	

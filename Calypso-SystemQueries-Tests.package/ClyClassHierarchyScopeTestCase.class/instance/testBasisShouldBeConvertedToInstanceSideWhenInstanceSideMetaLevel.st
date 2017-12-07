@@ -1,6 +1,6 @@
 tests
 testBasisShouldBeConvertedToInstanceSideWhenInstanceSideMetaLevel
 	
-	scope := self scopeClass of: { Object class. Array } localScope: ClyInstanceSideScope.
+	scope := self scopeClass ofAll: { Object class. Array } localScope: ClyInstanceSideScope.
 	
 	self assert: scope basisObjects equals: {Object. Array} asSet

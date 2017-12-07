@@ -2,7 +2,7 @@ tests
 testClassEnumerationOverClassWhenConcreteClassScopeIsLocal
 
 	| expected |
-	scope := ClySubclassScope of: { Class } localScope: ClyClassScope.
+	scope := ClySubclassScope of: Class localScope: ClyClassScope.
 
 	scope classesDo: [ :each | result add: each].
 	

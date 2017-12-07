@@ -1,7 +1,7 @@
 tests
 testMethodsEnumerationWhenBothMetaLevels
 
-	scope := ClySubclassScope of: { ClyClass1FromP1 } localScope: ClyBothMetaLevelClassScope.
+	scope := ClySubclassScope of: ClyClass1FromP1 localScope: ClyBothMetaLevelClassScope.
 	
 	scope methodsDo: [ :each | result add: each].
 	

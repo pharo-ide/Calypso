@@ -1,7 +1,7 @@
 tests
 testMethodsEnumerationWhenBothMetaLevels
 
-	scope := ClyTraitUserScope of: { ClyTraitRoot1 } localScope: ClyBothMetaLevelClassScope.
+	scope := ClyTraitUserScope of: ClyTraitRoot1 localScope: ClyBothMetaLevelClassScope.
 	
 	scope methodsDo: [ :each | result add: each].
 	

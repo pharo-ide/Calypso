@@ -2,7 +2,7 @@ tests
 testMethodsEnumerationOverMetaclassWhenBothMetaLevelsAreLocalScope
 
 	| expected |
-	scope := ClySuperclassScope of: { ClyClass1FromP1 class } localScope: ClyBothMetaLevelClassScope.
+	scope := ClySuperclassScope of: ClyClass1FromP1 class localScope: ClyBothMetaLevelClassScope.
 	
 	scope methodsDo: [ :each | result add: each].
 
