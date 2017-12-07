@@ -1,4 +1,4 @@
 printing
 description
 
-	^'Readers of ', self printVariables 
+	^'readers of ', self printVariables 

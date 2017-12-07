@@ -1,4 +1,4 @@
 testing
 isBasedOnFilter
 
-	^query isKindOf: ClyFilteringQuery
+	^query isKindOf: ClyFilterQuery

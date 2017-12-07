@@ -1,4 +1,4 @@
 printing
 description
 
-	^'Implementors of ', self printSelectors 
+	^'implementors of ', self printSelectors 

@@ -1,4 +1,4 @@
 printing
 description
 
-	^'Accesses to ', self printVariables 
+	^'references to ', self printVariables 

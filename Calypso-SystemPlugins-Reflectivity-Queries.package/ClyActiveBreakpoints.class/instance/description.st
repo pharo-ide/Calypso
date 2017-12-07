@@ -1,3 +1,3 @@
 printing
 description
-	^'Breakpoints'
+	^'active breakpoints'

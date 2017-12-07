@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyCompositeQuery",
+	"super" : "ClyWrapperQuery",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,3 +1,3 @@
 converting
 async
-	^ClyAsyncQuery on: self
+	^ClyAsyncQuery for: self

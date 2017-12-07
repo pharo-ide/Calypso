@@ -1,4 +1,4 @@
 printing
 description
 
-	^'Senders of ', self printSelectors
+	^'senders of ', self printSelectors

@@ -1,5 +1,5 @@
 running
 createQuery
 
-	^ClyAsyncQuery on: (
+	^ClyAsyncQuery for: (
 		ClyQueryExampleReturningScopeBasis from: (ClyScopeExample of: { self class } in: environment))

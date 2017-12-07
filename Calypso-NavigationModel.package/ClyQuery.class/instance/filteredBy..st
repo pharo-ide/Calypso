@@ -1,3 +1,3 @@
 converting
 filteredBy: anItemFilter
-	^ClyFilteringQuery for: self by: anItemFilter.
+	^ClyFilterQuery for: self filter: anItemFilter.

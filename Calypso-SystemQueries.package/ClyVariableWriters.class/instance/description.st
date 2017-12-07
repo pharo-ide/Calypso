@@ -1,4 +1,4 @@
 printing
 description
 
-	^'Writers of ', self printVariables 
+	^'writers of ', self printVariables 
