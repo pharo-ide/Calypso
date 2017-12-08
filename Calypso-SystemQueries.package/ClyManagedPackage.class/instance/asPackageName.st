@@ -1,3 +1,0 @@
-accessing
-asPackageName
-	^systemPackage asPackageName

@@ -1,4 +1,4 @@
 *Calypso-SystemPlugins-Critic-Browser
 criticAnalysisScope
 
-	^ClyPackageScope of: classGroup in: browser navigationEnvironment
+	^ClyPackageScope of: package in: browser navigationEnvironment

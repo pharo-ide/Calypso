@@ -11,4 +11,4 @@ runPackageTests: aPackage
 	testResult updateResultsInHistory.	
 	self  
 		notifyUserAboutResults: testResult 
-		with: aPackage asPackageName
+		with: aPackage name

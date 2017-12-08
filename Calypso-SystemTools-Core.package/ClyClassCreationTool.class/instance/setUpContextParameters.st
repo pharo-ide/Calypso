@@ -2,6 +2,5 @@ initialization
 setUpContextParameters
 	super setUpContextParameters.
 
-	context isPackageSelected ifFalse: [ ^self ].
-	
-	classGroup := context lastSelectedClassGroup
+	context isPackageSelected ifTrue: [ package := context lastSelectedPackage ].
+	context isClassTagSelected ifTrue: [ classTag := context lastSelectedClassTag]
