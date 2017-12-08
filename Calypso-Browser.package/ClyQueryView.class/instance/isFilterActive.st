@@ -1,4 +1,5 @@
 testing
 isFilterActive
-
-	^self dataSource isBasedOnFilter
+	table initialDataSource ifNil: [ ^false ].
+	
+	^self dataSource ~~ table initialDataSource
