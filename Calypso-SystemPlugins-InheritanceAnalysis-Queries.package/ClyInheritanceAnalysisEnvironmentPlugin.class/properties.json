@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyInheritanceAnalyzerEnvironmentPlugin",
+	"name" : "ClyInheritanceAnalysisEnvironmentPlugin",
 	"type" : "normal"
 }
