@@ -11,8 +11,9 @@ testApplyingToQueryViewShouldRestoreExpandedItems
 	expandedItem := navigationState dataSource expandedItems first.
 	self assert: expandedItem childrenDataSource isClosed description: 'applying should not open data source snapshot'.
 	
-	
 	self assert: newView dataSource expandedItems size equals: 1.	
-	self assert: (newView dataSource expandedItems first isSameAs: self selectedItem).
-	self deny: newView dataSource expandedItems first childrenDataSource isClosed.
-	self assert: newView dataSource expandedItems first childrenDataSource queryView equals: newView.
+	expandedItem := newView dataSource expandedItems first.
+	self assert: (expandedItem isSameAs: self selectedItem).
+	self deny: expandedItem childrenDataSource isClosed.
+	self assert: expandedItem childrenDataSource queryView equals: newView.
+	self assert: expandedItem childrenDataSource table notNil
