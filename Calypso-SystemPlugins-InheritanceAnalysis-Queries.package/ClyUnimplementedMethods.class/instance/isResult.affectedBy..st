@@ -5,6 +5,7 @@ isResult: aQueryResult affectedBy: aSystemAnnouncement
 	So the result can be affected by the changes out of query scope.
 	And here we omit scope logic and rely completely on event.
 	So the actual decision about affect 
-	is based on #isAffectedByChangedMethod: method"
-	
-	^aSystemAnnouncement canAffectResultOfMethodQuery: self
+	is based on #isAffectedByChangedMethod: method
+	and generally on any class change"
+	^aSystemAnnouncement affectsClasses 
+		or: [ aSystemAnnouncement canAffectResultOfMethodQuery: self]
