@@ -2,4 +2,4 @@ testing
 isAboutBrowserItemType: itemTypeClass
 
 	^selectedItems anySatisfy: [ :each | 
-		each type includesBehavior: itemTypeClass ]
+		each type isCalypsoItemType: itemTypeClass ]

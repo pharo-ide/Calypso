@@ -1,3 +1,3 @@
 testing
 representsItemOfType: aClass
-	^type includesBehavior: aClass
+	^type isCalypsoItemType: aClass

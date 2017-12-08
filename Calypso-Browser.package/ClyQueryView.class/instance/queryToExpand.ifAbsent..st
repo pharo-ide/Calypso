@@ -3,7 +3,7 @@ queryToExpand: aDataSourceItem ifAbsent: absentBlock
 	
 	| itemTypeAndQuerySelector |
 	itemTypeAndQuerySelector := treeStructure 
-		detect: [:each | aDataSourceItem type includesBehavior: each key ] 
+		detect: [:each | aDataSourceItem isBasedOnItemType: each key ] 
 		ifNone: absentBlock.
 	^aDataSourceItem type 
 		perform: itemTypeAndQuerySelector value 
