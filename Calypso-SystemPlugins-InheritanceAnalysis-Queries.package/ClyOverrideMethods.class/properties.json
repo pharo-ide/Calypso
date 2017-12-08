@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyMethodQuery",
+	"super" : "ClyInheritanceAnalysisMethodQuery",
 	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],

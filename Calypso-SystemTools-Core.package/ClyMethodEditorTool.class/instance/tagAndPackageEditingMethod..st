@@ -1,6 +1,6 @@
 operations
 tagAndPackageEditingMethod: aMethod
-	methodTags do: [ :each | aMethod tagWith: each asSymbol]. 
+	self tagEditingMethod: aMethod.
 	"Tagging should be performed before package movement 
 	because extending package is still based on protocol begining with star. 
 	So it should override manual tagging"	

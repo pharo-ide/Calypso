@@ -1,0 +1,4 @@
+tests
+testNotAffectedByChangeOfSubclassMethodWhichNotOverridesSuperclass
+	
+	self deny: (query isAffectedByChangedMethod: ClyClassWhichInheritsAbstractClass>>#notOverriddenMethod)

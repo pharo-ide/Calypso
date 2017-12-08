@@ -1,5 +1,5 @@
 testing
-isFromScopeOfKindOf: aClass
+isFromScopeWithClassKindOf: aClass
 
 	scope classesDo: [ :each | 
 		(each == aClass or: [each inheritsFrom: aClass])

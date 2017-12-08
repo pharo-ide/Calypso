@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyInheritanceAnalysisMethodQuery",
+	"super" : "ClyMethodQuery",
 	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyOverriddenMethods",
+	"name" : "ClyInheritanceAnalysisMethodQuery",
 	"type" : "normal"
 }
