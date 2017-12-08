@@ -2,6 +2,7 @@ execution
 prepareFullExecutionInContext: aToolContext
 	super prepareFullExecutionInContext: aToolContext.
 	
+	package := aToolContext lastSelectedPackage.
 	classGroup := aToolContext lastSelectedClassGroup.
 	newName := UIManager default 
 		request: 'New name of the class tag' 
