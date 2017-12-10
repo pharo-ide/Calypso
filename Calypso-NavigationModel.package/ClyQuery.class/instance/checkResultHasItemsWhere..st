@@ -1,0 +1,3 @@
+execution
+checkResultHasItemsWhere: itemConditionBlock
+	self subclassResponsibility 

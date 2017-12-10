@@ -1,0 +1,4 @@
+execution
+checkResultHasItemsWhere: itemConditionBlock
+
+	^self installedMethods anySatisfy: itemConditionBlock

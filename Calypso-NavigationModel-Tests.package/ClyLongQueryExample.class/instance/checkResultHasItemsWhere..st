@@ -1,0 +1,4 @@
+execution
+checkResultHasItemsWhere: itemConditionBlock
+	executionSemaphore wait.
+	super checkResultHasItemsWhere: itemConditionBlock 

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyWrapperQuery",
+	"category" : "Calypso-SystemPlugins-SUnit-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTestMethods",
+	"type" : "normal"
+}
