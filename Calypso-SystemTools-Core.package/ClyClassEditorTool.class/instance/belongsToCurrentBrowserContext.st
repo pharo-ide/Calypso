@@ -1,4 +1,4 @@
 testing
 belongsToCurrentBrowserContext
 
-	^browser isClassSelected: context lastSelectedClass
+	^browser isClassSelected: editingClass 

@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"classGroup",
 		"package",
 		"classTag"
 	],

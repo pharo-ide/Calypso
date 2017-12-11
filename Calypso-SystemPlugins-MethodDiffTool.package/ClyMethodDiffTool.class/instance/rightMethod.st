@@ -1,3 +1,3 @@
 accessing
 rightMethod
-	^context lastSelectedMethod
+	^rightMethod

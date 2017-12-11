@@ -1,4 +1,6 @@
 updating
 update
-	self setUpContextParameters.
-	self updateStatusBar 
+	self setUpParametersFromModel.
+	self decorateContainerTab.
+	self rebuildStatusBar.
+	self warnUserAboutChangedContext

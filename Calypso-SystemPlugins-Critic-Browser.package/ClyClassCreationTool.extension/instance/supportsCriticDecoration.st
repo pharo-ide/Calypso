@@ -1,3 +1,3 @@
 *Calypso-SystemPlugins-Critic-Browser
 supportsCriticDecoration
-	^context isPackageSelected
+	^package notNil

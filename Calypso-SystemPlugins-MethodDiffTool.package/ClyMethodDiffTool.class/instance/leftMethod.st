@@ -1,3 +1,3 @@
 accessing
 leftMethod
-	^context firstSelectedMethod 
+	^leftMethod

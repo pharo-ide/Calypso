@@ -4,5 +4,5 @@ buildToolsOn: toolsList for: aBrowserContext
 	ClyTabActivationStrategy 
 		activeInstancesInContext: aBrowserContext
 		do: [ :strategy | 
-			tool := strategy createToolFor: aBrowserContext of: browser.
+			tool := strategy createToolFor: browser inContext: aBrowserContext.
 			toolsList add: tool ]

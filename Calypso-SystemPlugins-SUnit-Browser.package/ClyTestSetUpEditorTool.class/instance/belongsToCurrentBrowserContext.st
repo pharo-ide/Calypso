@@ -1,3 +1,3 @@
 testing
 belongsToCurrentBrowserContext
-	^context isClassSelected and: [ browser isClassSelected: context lastSelectedClass ]
+	^browser isClassSelected: testClass

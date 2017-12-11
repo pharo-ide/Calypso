@@ -1,8 +1,7 @@
 updating
 update
 	| unacceptedText newText |
-	self decorateContainerTab.
-	self updateStatusBar.
+	super update.
 	newText := self editingText.
 	self pendingText asString = newText ifTrue: [ 
 		self applyDecorations.

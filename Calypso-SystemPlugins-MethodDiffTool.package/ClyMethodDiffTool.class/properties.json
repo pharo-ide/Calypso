@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"diffMorph"
+		"diffMorph",
+		"leftMethod",
+		"rightMethod"
 	],
 	"name" : "ClyMethodDiffTool",
 	"type" : "normal"

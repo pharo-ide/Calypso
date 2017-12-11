@@ -1,3 +1,3 @@
 testing
 belongsToCurrentBrowserContext
-	^browser isProcessContextSelected: context lastSelectedObject
+	^browser isProcessContextSelected: methodContext

@@ -1,5 +1,5 @@
 initialization
-setUpContextParameters
-	super setUpContextParameters.
+setUpModelFromContext
+	super setUpModelFromContext.
 
 	editingClass := context lastSelectedClass

@@ -10,6 +10,6 @@ updateTabsWith: newTools
 			ifNone: [ toInstall add: new ]].
 
 	toRemove do: [ :each | 
-		each wantsStayInDifferentContext ifFalse: [ each removeFromBrowser ]].
+		each wantsStayInDifferentContext ifFalse: [  each removeFromBrowser ]].
 	tools do: [ :each | each browserContextWasChanged ].
 	toInstall do: [ :each | self addTool: each]

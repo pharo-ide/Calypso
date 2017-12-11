@@ -2,4 +2,4 @@ controlling
 attachToSystem
 
 	browser system 
-		when: (ClyClassChange of: editingClass) send: #update to: self
+		when: (ClyClassChange of: editingClass) send: #triggerUpdate to: self
