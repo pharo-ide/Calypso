@@ -1,3 +1,4 @@
 updating
 update
-	self setUpContextParameters
+	self setUpContextParameters.
+	self updateStatusBar 

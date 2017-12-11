@@ -2,6 +2,7 @@ updating
 update
 	| unacceptedText newText |
 	self decorateContainerTab.
+	self updateStatusBar.
 	newText := self editingText.
 	self pendingText asString = newText ifTrue: [ 
 		self applyDecorations.

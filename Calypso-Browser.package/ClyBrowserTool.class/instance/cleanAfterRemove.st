@@ -1,3 +1,4 @@
 controlling
-cleanAfterRemove
+cleanAfterRemove.
+	self detachFromSystem.
 	decorators do: [ :each | each toolWasRemoved ]

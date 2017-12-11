@@ -1,6 +1,10 @@
 event handling
 itemsChangedIn: aDataSource 
 	
+	| actualSelectionChanged |
 	self refreshAsyncState.
-	
-	browser itemsChangedIn: aDataSource of: self
+	browser ignoreNavigationDuring: [ 
+		actualSelectionChanged := self updateSelectedItemsOf: aDataSource.
+		actualSelectionChanged ifTrue: [ 
+			browser rebuildToolsForChangedEnvironment ]
+	]

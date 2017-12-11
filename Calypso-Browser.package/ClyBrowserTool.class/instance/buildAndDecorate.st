@@ -5,4 +5,5 @@ buildAndDecorate
 	self decorateContainerTab.
 	self build. 
 	self buildStatusBar.
-	self applyDecorations
+	self applyDecorations.
+	self attachToSystem
