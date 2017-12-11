@@ -1,0 +1,2 @@
+*Calypso-ProcessQueries
+collectMetadataOfProcesses: anEnvironmentContent

@@ -1,8 +1,6 @@
 navigation
-switchClassViewTo: anEnvironmentContentClass inScope: anEnvironmentScope
-	| cursor dataSource |
-	cursor := navigationEnvironment query: anEnvironmentContentClass inScope: anEnvironmentScope.
+switchClassViewTo: aQueryResult inScope: aScope
+	| classes |
+	classes := ClyAllClasses from: aScope as: aQueryResult.
 	
-	dataSource := ClyCollapsedDataSource on: cursor.
-	
-	classView dataSource: dataSource 
+	classView showQuery: classes

@@ -1,2 +1,0 @@
-*Calypso-SystemTools-QueryBrowser
-decorateResultMethodEditor: aMethodEditor

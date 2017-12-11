@@ -1,3 +1,0 @@
-accessing
-leftMethod
-	^context firstSelectedMethod 

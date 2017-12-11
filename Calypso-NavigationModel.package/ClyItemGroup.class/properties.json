@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 2/10/2017 18:15",
+	"super" : "Object",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"priority"
+	],
+	"name" : "ClyItemGroup",
+	"type" : "normal"
+}

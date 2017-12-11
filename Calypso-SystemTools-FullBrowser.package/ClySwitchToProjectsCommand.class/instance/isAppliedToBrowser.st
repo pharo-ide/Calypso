@@ -1,4 +1,4 @@
 testing
 isAppliedToBrowser
 
-	^browser packageView showsContent: ClySortedProjects 
+	^browser packageView showsItemsFromQuery: ClyAllProjects

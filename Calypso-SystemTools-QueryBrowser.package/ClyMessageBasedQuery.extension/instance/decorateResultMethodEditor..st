@@ -1,4 +1,0 @@
-*Calypso-SystemTools-QueryBrowser
-decorateResultMethodEditor: aMethodEditor
-
-	aMethodEditor selectAnySelector: selectors

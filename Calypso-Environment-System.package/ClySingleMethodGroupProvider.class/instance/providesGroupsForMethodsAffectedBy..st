@@ -1,4 +1,0 @@
-system changes
-providesGroupsForMethodsAffectedBy: aMethodAnnouncement
-
-	^aMethodAnnouncement affectsMethodGroup: self createMethodGroup 

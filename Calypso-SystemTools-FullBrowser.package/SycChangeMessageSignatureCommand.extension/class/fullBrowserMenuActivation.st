@@ -3,4 +3,4 @@ fullBrowserMenuActivation
 	<classAnnotation>
 
 	^CmdContextMenuCommandActivation 
-		byRootGroupItemOrder: self browserMenuOrder for: ClyMethodScope 
+		byRootGroupItemOrder: self browserMenuOrder for: ClyMethod asCalypsoItemContext 

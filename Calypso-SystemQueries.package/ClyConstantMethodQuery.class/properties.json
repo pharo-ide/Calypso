@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 7/25/2017 18:01",
+	"super" : "ClyMethodQuery",
+	"category" : "Calypso-SystemQueries-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"description",
+		"methods"
+	],
+	"name" : "ClyConstantMethodQuery",
+	"type" : "normal"
+}

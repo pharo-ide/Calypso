@@ -1,2 +1,0 @@
-items resolving
-resolvePropertiesOfClass: anItem

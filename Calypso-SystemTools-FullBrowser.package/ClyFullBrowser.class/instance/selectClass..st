@@ -1,14 +1,14 @@
 navigation
 selectClass: aClass
 	| foundItems classDefinition |
-	self changeNavigationStateBy: [ 
+	self changeStateBy: [ 
 		self switchToMetaLevelScope: aClass metaLevelScope.	
 		foundItems := classView findItemsWith: { aClass instanceSide }.
 		foundItems ifNotEmpty: [ 
 			"we want ensure that selected package is the package of found class.
 			If it is not then we will select required package"
 			classDefinition := foundItems anyOne getProperty: ClyClassDefinitionProperty.
-			(self isPackageSelected: classDefinition definitionPackage) 
+			(self isPackageSelected: classDefinition definingPackage) 
 				ifTrue: [ ^self classSelection selectItems: foundItems ]].
 		
 		aClass tags 

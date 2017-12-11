@@ -1,1 +1,0 @@
-I represent sorted collection of method groups (sorted by priority and name)

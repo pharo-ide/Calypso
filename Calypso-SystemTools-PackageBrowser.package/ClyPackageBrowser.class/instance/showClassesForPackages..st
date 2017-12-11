@@ -1,4 +1,0 @@
-navigation
-showClassesForPackages: selectedPackages
-	
-	self switchClassViewTo: ClyHierarchicallySortedClasses inScope: selectedPackages asItemsScope

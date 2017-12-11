@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyClass1FromP1",
+	"category" : "Calypso-SystemQueries-Tests-P1WithHierarchy",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"subclassSameVar",
+		"subclassN1Var"
+	],
+	"name" : "ClySubclassN1OfClass1FromP1",
+	"type" : "normal"
+}

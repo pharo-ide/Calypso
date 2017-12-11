@@ -2,5 +2,5 @@ selection-classes
 lastSelectedClass
 	
 	| definition |
-	definition := self lastSelectedItem getProperty: ClyDefinitionProperty.
-	^definition definitionClass
+	definition := self lastSelectedItem getProperty: ClyItemDefinitionProperty.
+	^definition definingClass

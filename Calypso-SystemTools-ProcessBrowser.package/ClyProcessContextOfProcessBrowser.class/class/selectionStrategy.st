@@ -2,4 +2,4 @@ selection strategy
 selectionStrategy
 	<classAnnotation>
 	
-	^ClyContextSelectionStrategy for: ClyProcessBrowser selectionScope: ClyProcessScope
+	^ClyContextSelectionStrategy for: ClyProcessBrowser selectionType: Process

@@ -1,0 +1,3 @@
+converting
+asInheritedScope
+	self subclassResponsibility 

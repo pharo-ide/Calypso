@@ -1,3 +1,3 @@
 testing
 wantsDecorateTableCellOf: aDataSourceItem
-	^(aDataSourceItem environmentItem hasChildrenOf: ClyLocalClassScope) not
+	^(aDataSourceItem browserItem hasChildrenOf: ClyClass) not

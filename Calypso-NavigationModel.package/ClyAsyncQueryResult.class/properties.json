@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyQueryResult",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"actualResult",
+		"buildProcess"
+	],
+	"name" : "ClyAsyncQueryResult",
+	"type" : "normal"
+}

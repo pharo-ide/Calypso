@@ -1,14 +1,14 @@
 initialization
 initializeNavigationViews
 	resultView := self newNavigationView.
-	resultView enableFilter: ClyQueryResultFilter.
+	resultView enableFilter: ClyQueryBrowserFilter.
 	resultView allowsDeselection: false.
 	resultView mainColumn 
 		width: 250;
 		displayItemPropertyBy: [:item | self classNameOf: item].
 	(resultView addColumn: #name) 
 		width: 400;
-		displayItemName.
+		displayItemPropertyBy: [:item | self mainNameOf: item].
 	(resultView addColumn: #package) 
 		width: 50;
 		displayItemPropertyBy: [:item | self packageNameOf: item]

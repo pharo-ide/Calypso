@@ -1,0 +1,3 @@
+accessing
+errorCount
+	^ errorCount

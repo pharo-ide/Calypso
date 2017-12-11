@@ -1,3 +1,0 @@
-accessing
-isComplete
-	^ isComplete

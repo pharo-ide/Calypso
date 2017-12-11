@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Browser-NavigationHistory",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"viewStates",
+		"selectedTabs",
+		"systemScope"
+	],
+	"name" : "ClyBrowserState",
+	"type" : "normal"
+}

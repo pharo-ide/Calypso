@@ -1,3 +1,0 @@
-*Calypso-Environment-Core
-shouldBeConsideredByCalypsoEnvironment
-	^true

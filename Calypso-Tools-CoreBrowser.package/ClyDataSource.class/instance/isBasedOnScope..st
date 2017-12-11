@@ -1,4 +1,0 @@
-testing
-isBasedOnScope: anEnvironmentScopeClass
-
-	^metadata isBuiltInScope: anEnvironmentScopeClass

@@ -1,3 +1,0 @@
-accessing
-environmentItem
-	^item environmentItem

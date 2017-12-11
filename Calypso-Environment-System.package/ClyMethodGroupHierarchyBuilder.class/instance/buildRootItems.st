@@ -1,3 +1,0 @@
-building
-buildRootItems
-	self subclassResponsibility 

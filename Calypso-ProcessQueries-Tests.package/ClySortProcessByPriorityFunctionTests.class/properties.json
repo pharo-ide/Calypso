@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySortFunctionTestCase",
+	"category" : "Calypso-ProcessQueries-Tests-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySortProcessByPriorityFunctionTests",
+	"type" : "normal"
+}

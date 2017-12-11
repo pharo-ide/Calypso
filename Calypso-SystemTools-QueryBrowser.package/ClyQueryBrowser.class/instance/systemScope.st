@@ -1,3 +1,0 @@
-accessing
-systemScope
-	^queryScopes first

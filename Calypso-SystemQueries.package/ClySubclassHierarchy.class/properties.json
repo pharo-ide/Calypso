@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyClassHierarchy",
+	"category" : "Calypso-SystemQueries-Results",
+	"classinstvars" : [
+		"hierarchyForVariables",
+		"hierarchyForMethodVisibility"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySubclassHierarchy",
+	"type" : "normal"
+}

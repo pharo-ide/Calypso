@@ -3,4 +3,4 @@ methodBrowserDragAndDropActivation
 	<classAnnotation>
 	
 	^CmdDragAndDropCommandActivation 
-		for: ClyMethodScope toDropIn: ClyClassScope
+		for: ClyMethod asCalypsoItemContext toDropIn: ClyClass asCalypsoItemContext

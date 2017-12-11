@@ -1,3 +1,3 @@
 selection-methods
 selectedMethodItems
-	^self selectedItemsWhichBelongsTo: ClyMethodScope
+	^self selectedItemsOfType: ClyMethod

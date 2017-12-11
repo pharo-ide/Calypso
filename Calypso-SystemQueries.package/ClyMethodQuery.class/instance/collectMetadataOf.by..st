@@ -1,0 +1,3 @@
+execution
+collectMetadataOf: aQueryResult by: anEnvironmentPlugin
+	anEnvironmentPlugin collectMetadataOfMethods: aQueryResult

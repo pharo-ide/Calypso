@@ -2,4 +2,4 @@
 methodBrowserTabActivation
 	<classAnnotation>
 	
-	^ClyBrowserTabCommandActivation for: ClyMethodScope 
+	^ClyBrowserTabCommandActivation for: ClyMethod asCalypsoItemContext 

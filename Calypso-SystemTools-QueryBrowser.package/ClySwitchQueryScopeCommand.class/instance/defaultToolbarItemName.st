@@ -1,4 +1,4 @@
 accessing
 defaultToolbarItemName
 	
-	^queryScope printBasis
+	^queryScope description

@@ -1,7 +1,4 @@
 opening
-openOn: aProcessStack
+openOn: aProcess
 
-	^self new 
-		setUpAvailablePlugins;
-		showStack: aProcessStack;
-		open
+	^self openOn: aProcess from: ClyNavigationEnvironment currentImage

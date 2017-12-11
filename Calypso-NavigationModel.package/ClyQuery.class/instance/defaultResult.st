@@ -1,0 +1,3 @@
+initialization
+defaultResult
+	^ClyRawQueryResult new

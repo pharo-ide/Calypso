@@ -2,4 +2,4 @@ decoration
 decorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyProjectScope
+	^ClyTableDecorationStrategy for: ClyManagedProject asCalypsoItemContext

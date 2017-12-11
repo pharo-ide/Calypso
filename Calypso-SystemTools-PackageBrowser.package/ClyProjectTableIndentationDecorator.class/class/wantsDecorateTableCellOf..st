@@ -1,3 +1,0 @@
-testing
-wantsDecorateTableCellOf: aDataSourceItem
-	^aDataSourceItem rootParentItem belongsToScope: ClyProjectScope 

@@ -1,3 +1,3 @@
 selection-variables
 lastSelectedVariable
-	^self lastSelectedObject
+	^self lastSelectedObject variable

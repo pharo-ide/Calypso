@@ -1,3 +1,5 @@
 accessing
 queryScopes: scopesCollection
-	queryScopes := scopesCollection asOrderedCollection
+	queryScopes := (scopesCollection
+		reject: [ :each | each isBasedOnEmptyBasis])
+		as: OrderedCollection 

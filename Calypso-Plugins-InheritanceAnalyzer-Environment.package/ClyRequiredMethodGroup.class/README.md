@@ -1,1 +1,0 @@
-I am group of methods which should be implemented by given classes. I collect all inherited methods which send #shouldBeImplemented and not overridden in given classes.

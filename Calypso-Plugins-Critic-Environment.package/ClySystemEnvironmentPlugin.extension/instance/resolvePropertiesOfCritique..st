@@ -1,2 +1,0 @@
-*Calypso-Plugins-Critic-Environment
-resolvePropertiesOfCritique: critiqueItem

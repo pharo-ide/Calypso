@@ -1,0 +1,3 @@
+running
+packageSampleWhichHasGroup
+	self subclassResponsibility 

@@ -1,3 +1,3 @@
 accessing
 activeScope
-	^activeScope ifNil: [ activeScope := queryScopes first ]
+	^activeScope ifNil: [ activeScope := self systemScope ]

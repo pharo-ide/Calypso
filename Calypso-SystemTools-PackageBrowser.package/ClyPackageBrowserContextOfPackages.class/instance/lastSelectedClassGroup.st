@@ -1,3 +1,0 @@
-public
-lastSelectedClassGroup
-	^self lastSelectedObject

@@ -1,3 +1,0 @@
-running
-createQuery
-	^ClyClassCommentQuery withString: self expectedClassCommentSubstring

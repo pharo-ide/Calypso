@@ -2,7 +2,7 @@ navigation
 selectPackage: aPackage atClassTag: tagName
 
 	| packageItem targetClassGroup |
-	self changeNavigationStateBy: [
+	self changeStateBy: [
 		self selectPackage: aPackage.
 		packageItem := self packageSelection lastSelectedItem.
 		packageItem expand.

@@ -1,3 +1,0 @@
-accessing
-updateItemWith: updatedEnvironmentItem
-	environmentItem := updatedEnvironmentItem

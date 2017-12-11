@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyScope",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTypedScope",
+	"type" : "normal"
+}

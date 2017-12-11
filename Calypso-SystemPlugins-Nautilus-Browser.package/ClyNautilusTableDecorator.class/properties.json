@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodTableDecorator",
+	"category" : "Calypso-SystemPlugins-Nautilus-Browser",
+	"classinstvars" : [
+		"nautilusMethodWidget",
+		"emptyActionIcon"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyNautilusTableDecorator",
+	"type" : "normal"
+}

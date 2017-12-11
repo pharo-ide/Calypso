@@ -1,5 +1,6 @@
 execution
-prepareFullExecutionInContext: aToolContext
-	super prepareFullExecutionInContext: aToolContext.
+prepareFullExecutionInContext: aBrowserContext
+	super prepareFullExecutionInContext: aBrowserContext.
 	
-	processStack := aToolContext selectedProcessStack
+	environment := aBrowserContext navigationEnvironment.
+	process := aBrowserContext lastSelectedProcess

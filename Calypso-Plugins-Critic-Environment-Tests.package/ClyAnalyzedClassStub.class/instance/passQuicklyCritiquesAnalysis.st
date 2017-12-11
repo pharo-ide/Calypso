@@ -1,4 +1,0 @@
-controlling
-passQuicklyCritiquesAnalysis
-
-	classCritiquesDelayed := false

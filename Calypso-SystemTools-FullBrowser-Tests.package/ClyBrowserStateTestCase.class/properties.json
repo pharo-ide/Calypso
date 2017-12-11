@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyNavigationHistoryTestCase",
+	"category" : "Calypso-SystemTools-FullBrowser-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyBrowserStateTestCase",
+	"type" : "normal"
+}

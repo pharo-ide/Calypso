@@ -1,3 +1,0 @@
-accessing
-definitionPackageItem
-	self subclassResponsibility 

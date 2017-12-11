@@ -1,0 +1,2 @@
+*Calypso-SystemPlugins-Traits-Queries-Tests-PExtendingTrait
+extensionMethodFromClassItself

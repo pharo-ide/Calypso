@@ -1,4 +1,0 @@
-testing
-showsContentInScope: anEnvironmentScopeClass
-
-	^self dataSource isBasedOnScope: anEnvironmentScopeClass

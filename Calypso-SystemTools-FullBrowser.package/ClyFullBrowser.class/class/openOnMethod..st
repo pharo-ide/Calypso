@@ -1,7 +1,4 @@
 opening
 openOnMethod: aMethod
 
-	| browser |
-	browser := self open.
-	browser selectMethod: aMethod.
-	^browser
+	^self openWithState: [:browser | browser selectMethod: aMethod]

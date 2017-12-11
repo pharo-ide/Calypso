@@ -1,6 +1,6 @@
 navigation
 selectClass: aClass atMethodTag: tagName
 
-	self changeNavigationStateBy: [ 
+	self changeStateBy: [ 
 		self selectClass: aClass.
-		self methodGroupSelection selectItemsWhich: [ :each | each name = tagName ]]
+		self methodGroupSelection selectItemsWhere: [ :each | each name = tagName ]]

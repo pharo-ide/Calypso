@@ -1,3 +1,0 @@
-accessing
-environmentCursor
-	^ environmentCursor

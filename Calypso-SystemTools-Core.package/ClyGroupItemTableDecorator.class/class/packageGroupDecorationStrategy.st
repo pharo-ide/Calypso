@@ -2,4 +2,4 @@ decoration
 packageGroupDecorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyPackageGroupScope
+	^ClyTableDecorationStrategy for: ClyPackageGroup asCalypsoItemContext

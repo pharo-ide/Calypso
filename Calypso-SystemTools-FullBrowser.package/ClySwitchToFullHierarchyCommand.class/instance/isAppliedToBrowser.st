@@ -1,0 +1,4 @@
+testing
+isAppliedToBrowser
+
+	^browser showsFullClassHierarchy

@@ -1,1 +1,0 @@
-I am builder of instance variables hierarchy. Look at my superclass comment for details

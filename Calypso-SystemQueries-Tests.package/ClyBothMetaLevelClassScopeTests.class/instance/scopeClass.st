@@ -1,0 +1,4 @@
+running
+scopeClass
+
+	^ClyBothMetaLevelClassScope

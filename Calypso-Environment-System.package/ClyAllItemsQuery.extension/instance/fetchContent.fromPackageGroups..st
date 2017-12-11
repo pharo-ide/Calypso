@@ -1,3 +1,0 @@
-*Calypso-Environment-System
-fetchContent: anEnvironmentContent fromPackageGroups: packageGroups
-	anEnvironmentContent buildFromPackageGroups: packageGroups

@@ -1,2 +1,0 @@
-*Calypso-Environment-Processor
-resolvePropertiesOfContext: anEnvironmentItem

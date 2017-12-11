@@ -1,0 +1,3 @@
+testing
+belongsToCurrentBrowserContext
+	^browser isClassSelected: testClass

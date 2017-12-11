@@ -1,4 +1,4 @@
 testing
-showsMethodsAs: contentClass
+showsMethodsAs: aQueryResult
 
-	^systemQuery requestedContent == contentClass.
+	^systemQuery requiredResult = aQueryResult

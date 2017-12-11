@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Browser-NavigationHistory",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser",
+		"undoList",
+		"redoList",
+		"undoExecuting",
+		"redoExecuting",
+		"waitingNewState"
+	],
+	"name" : "ClyNavigationHistory",
+	"type" : "normal"
+}

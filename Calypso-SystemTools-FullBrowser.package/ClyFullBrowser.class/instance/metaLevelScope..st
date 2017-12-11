@@ -1,3 +1,3 @@
 accessing
-metaLevelScope: aLocalClassScopeClass
-	metaLevelScope := aLocalClassScopeClass 
+metaLevelScope: aMetaLevelScopeClass
+	metaLevelScope := aMetaLevelScopeClass 

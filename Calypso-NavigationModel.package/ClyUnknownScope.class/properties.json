@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 1/3/2017 17:59",
+	"super" : "ClyScope",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [
+		"instance"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUnknownScope",
+	"type" : "normal"
+}

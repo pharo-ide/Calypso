@@ -1,4 +1,0 @@
-controlling
-failClassCritiquesAnalysis
-
-	classCritiquesFailed := true

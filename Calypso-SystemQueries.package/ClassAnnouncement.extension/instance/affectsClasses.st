@@ -1,0 +1,3 @@
+*Calypso-SystemQueries
+affectsClasses
+	^true

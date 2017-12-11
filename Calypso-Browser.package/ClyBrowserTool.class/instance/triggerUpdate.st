@@ -1,0 +1,3 @@
+updating
+triggerUpdate
+	self update

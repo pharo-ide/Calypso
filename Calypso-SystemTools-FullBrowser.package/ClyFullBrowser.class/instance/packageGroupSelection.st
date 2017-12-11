@@ -1,3 +1,3 @@
 accessing
 packageGroupSelection
-	^packageView selection asSelectedParentsOf: ClyPackageGroupScope
+	^packageView selection asSelectedParentsOf: ClyPackageGroup

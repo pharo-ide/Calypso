@@ -1,0 +1,3 @@
+composition
+, anotherTypedScope
+	self subclassResponsibility 

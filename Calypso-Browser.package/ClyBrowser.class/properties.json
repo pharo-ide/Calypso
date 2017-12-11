@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "PanelMorph",
+	"category" : "Calypso-Browser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"navigationPanel",
+		"navigationViews",
+		"toolPanel",
+		"toolbar",
+		"tabManager",
+		"navigationHistory",
+		"navigationStarted",
+		"plugins",
+		"navigationEnvironment",
+		"systemScope"
+	],
+	"name" : "ClyBrowser",
+	"type" : "normal"
+}

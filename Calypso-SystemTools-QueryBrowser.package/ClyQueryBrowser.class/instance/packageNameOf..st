@@ -1,6 +1,6 @@
 initialization
-packageNameOf: anEnvironmentItem
+packageNameOf: aBrowserItem
 
 	| definition |
-	definition := anEnvironmentItem getProperty: ClyDefinitionProperty.
-	^definition definitionPackageItem name
+	definition := aBrowserItem getProperty: ClyItemDefinitionProperty ifAbsent: [^''].
+	^definition definingPackageItem name

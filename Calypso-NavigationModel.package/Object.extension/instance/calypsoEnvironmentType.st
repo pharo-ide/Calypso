@@ -1,0 +1,4 @@
+*Calypso-NavigationModel
+calypsoEnvironmentType
+
+	^Object

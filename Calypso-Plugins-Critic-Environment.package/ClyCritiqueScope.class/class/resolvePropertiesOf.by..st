@@ -1,3 +1,0 @@
-item resolving
-resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
-	anEnvironmentPlugin resolvePropertiesOfCritique: anEnvironmentItem

@@ -1,6 +1,6 @@
 tests
 testRetrievesBrowserState
 
-	self snapshotNavigationState.
+	self snapshotState.
 	
-	self assert: (navigationState browserState isKindOf: ClyBrowserNavigationState )
+	self assert: (navigationState browserState isKindOf: ClyBrowserState )

@@ -1,4 +1,4 @@
 selection-method groups
 selectedMethodGroupClass
 
-	^self lastSelectedItem environmentItem type
+	^(self lastSelectedObjectIn: self selectedMethodGroupItems) type

@@ -1,0 +1,3 @@
+testing
+selectsClass: aClass
+	^true

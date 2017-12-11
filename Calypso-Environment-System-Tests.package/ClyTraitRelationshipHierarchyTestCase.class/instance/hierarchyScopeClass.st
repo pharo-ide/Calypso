@@ -1,3 +1,0 @@
-helpers
-hierarchyScopeClass
-	self subclassResponsibility 

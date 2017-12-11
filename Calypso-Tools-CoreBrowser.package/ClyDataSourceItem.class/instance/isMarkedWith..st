@@ -1,3 +1,0 @@
-testing
-isMarkedWith: anEnvironmentPropertyTag
-	^environmentItem isMarkedWith: anEnvironmentPropertyTag

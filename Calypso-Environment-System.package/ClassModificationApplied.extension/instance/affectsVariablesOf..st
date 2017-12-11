@@ -1,3 +1,0 @@
-*Calypso-Environment-System
-affectsVariablesOf: aClass
-	^aClass includesVariablesAffectedByModificationOf: modifiedClass

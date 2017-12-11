@@ -3,7 +3,7 @@ belongsToCurrentBrowserContext
 
 	| packageSelection |
 	packageSelection := browser packageView selection.
-	classGroup ifNil: [ ^packageSelection isEmpty].
+	package ifNil: [ ^packageSelection isEmpty].
 	packageSelection isEmpty ifTrue: [ ^true ].
 	
-	^packageSelection lastSelectedItem actualObject == classGroup
+	^packageSelection lastSelectedItem actualObject == package

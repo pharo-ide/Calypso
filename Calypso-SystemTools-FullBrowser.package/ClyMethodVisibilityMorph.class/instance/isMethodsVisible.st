@@ -1,4 +1,4 @@
 testing
 isMethodsVisible
 	
-	^methodGroupItem isMarkedWith: ClyMethodsAreVisibleTag
+	^visibilityLevel isActive

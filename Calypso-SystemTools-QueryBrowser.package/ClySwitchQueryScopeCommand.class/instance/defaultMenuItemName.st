@@ -1,4 +1,4 @@
 accessing
 defaultMenuItemName
 
-	^'Switch scope to ', queryScope printBasis
+	^'Switch scope to ', queryScope description

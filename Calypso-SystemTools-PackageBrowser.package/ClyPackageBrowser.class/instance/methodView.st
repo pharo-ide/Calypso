@@ -1,3 +1,0 @@
-accessing
-methodView
-	^ methodView

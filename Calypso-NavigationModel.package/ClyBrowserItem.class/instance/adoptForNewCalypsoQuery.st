@@ -1,0 +1,4 @@
+preparation
+adoptForNewCalypsoQuery
+
+	^self copy

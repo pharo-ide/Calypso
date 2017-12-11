@@ -1,3 +1,0 @@
-printing
-printDefinition
-	^definitionPackageItem name

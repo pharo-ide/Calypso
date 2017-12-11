@@ -2,4 +2,4 @@ decoration
 decorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyPackageScope
+	^ClyTableDecorationStrategy for: RPackage asCalypsoItemContext

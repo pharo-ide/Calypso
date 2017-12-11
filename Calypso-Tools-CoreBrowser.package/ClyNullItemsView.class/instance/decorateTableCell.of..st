@@ -1,2 +1,0 @@
-showing
-decorateTableCell: anItemCellMorph of: aDataSourceItem

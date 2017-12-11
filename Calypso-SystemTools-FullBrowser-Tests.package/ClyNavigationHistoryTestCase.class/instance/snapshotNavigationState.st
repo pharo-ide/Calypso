@@ -1,3 +1,0 @@
-running
-snapshotNavigationState
-	self subclassResponsibility 

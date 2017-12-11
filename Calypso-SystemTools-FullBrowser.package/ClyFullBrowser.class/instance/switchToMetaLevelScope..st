@@ -1,10 +1,8 @@
 navigation
-switchToMetaLevelScope: scopeClass
-	| newDS |
-	metaLevelScope == scopeClass ifTrue: [ ^self ].
+switchToMetaLevelScope: aMetaLevelScopeClass
+	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
 	
-	self changeNavigationStateBy: [
-		metaLevelScope := scopeClass.	
-		newDS := methodGroupView dataSource withNewScope: metaLevelScope.
-		methodGroupView dataSource: newDS.	
-		self showMethodsForGroups: self methodGroupSelection]
+	self changeMethodGroupQueryBy: [
+		metaLevelScope := aMetaLevelScopeClass.				
+		methodGroupQuery withMetaLevelScope: metaLevelScope
+	]

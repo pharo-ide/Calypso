@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"processStack"
+		"environment",
+		"process"
 	],
 	"name" : "ClyDebugProcessComand",
 	"type" : "normal"

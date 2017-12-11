@@ -2,4 +2,4 @@ activation
 methodBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byItemOf: ClyButtonToolbarGroup for: ClyMethodScope
+	^ClyToolbarCommandActivation byItemOf: ClyButtonToolbarGroup for: ClyMethod asCalypsoItemContext

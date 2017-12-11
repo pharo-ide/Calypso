@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Browser-Tabs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser",
+		"tools",
+		"tabMorph",
+		"selectionPriorities",
+		"updatingStarted"
+	],
+	"name" : "ClyTabManager",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-groups collecting
-collectClassGroupProvidersFor: aPackage
-	^#()

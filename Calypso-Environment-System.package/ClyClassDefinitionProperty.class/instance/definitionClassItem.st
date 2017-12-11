@@ -1,3 +1,0 @@
-accessing
-definitionClassItem
-	self shouldNotImplement 

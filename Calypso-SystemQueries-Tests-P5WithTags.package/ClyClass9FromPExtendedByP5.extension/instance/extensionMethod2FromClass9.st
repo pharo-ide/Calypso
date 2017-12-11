@@ -1,0 +1,2 @@
+*Calypso-SystemQueries-Tests-P5WithTags-extraNonPackageTag
+extensionMethod2FromClass9

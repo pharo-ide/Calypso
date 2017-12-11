@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Browser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browserTool"
+	],
+	"name" : "ClyBrowserToolDecorator",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+execution
+checkEmptyResult
+
+	^critiqueQuery hasEmptyResult

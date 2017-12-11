@@ -1,3 +1,0 @@
-description
-itemScope
-	self shouldBeImplemented

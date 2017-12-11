@@ -1,3 +1,0 @@
-accessing
-definitionClass
-	^self definitionClassItem actualObject

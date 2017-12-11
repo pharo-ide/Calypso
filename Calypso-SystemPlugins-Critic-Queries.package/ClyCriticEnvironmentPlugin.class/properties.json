@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySystemEnvironmentPlugin",
+	"category" : "Calypso-SystemPlugins-Critic-Queries",
+	"classinstvars" : [
+		"providesMethodGroupByDefault"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"providesMethodGroup"
+	],
+	"name" : "ClyCriticEnvironmentPlugin",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMultipleClassRelationScopeTests",
+	"category" : "Calypso-SystemPlugins-Traits-Queries-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySuperclassAndInheritedTraitScopeTests",
+	"type" : "normal"
+}

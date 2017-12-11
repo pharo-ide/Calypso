@@ -1,4 +1,0 @@
-queries
-queryContentInNewScope: anEnvironmentScopeClass
-
-	^observedContent queryInNewScope: anEnvironmentScopeClass

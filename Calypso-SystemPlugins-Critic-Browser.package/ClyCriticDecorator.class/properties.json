@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserToolDecorator",
+	"category" : "Calypso-SystemPlugins-Critic-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"criticView",
+		"originalToolPanel",
+		"analysisScope",
+		"progressMorph"
+	],
+	"name" : "ClyCriticDecorator",
+	"type" : "normal"
+}

@@ -1,10 +1,9 @@
 controlling
 showInheritedMethods: aBoolean
 
-	| browser |
+	| newScope |
 	self isMethodsVisible == aBoolean ifTrue: [ ^self ].
 	
-	browser := methodGroupItem browser.
-	aBoolean 
-		ifTrue: [ browser enableVisibilityOfMethodsFrom: methodGroupItem actualObject ]
-		ifFalse: [ browser disableVisibilityOfMethodsFrom: methodGroupItem actualObject ]
+	newScope := visibilityLevel toggleScope.
+	newScope isBasedOnEmptyBasis ifFalse: [ 
+		browser restrictMethodVisibilityBy: newScope]

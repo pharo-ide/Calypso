@@ -1,4 +1,8 @@
 accessing
 packageName
 
-	^ classGroup ifNil: [ '' ] ifNotNil: [ classGroup asPackageName ]
+	package ifNil: [ ^'' ].
+
+	classTag ifNil: [ ^package name ].
+
+	^package name , '-' , classTag

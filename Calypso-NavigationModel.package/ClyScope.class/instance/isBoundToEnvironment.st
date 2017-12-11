@@ -1,0 +1,3 @@
+testing
+isBoundToEnvironment
+	^environment notNil

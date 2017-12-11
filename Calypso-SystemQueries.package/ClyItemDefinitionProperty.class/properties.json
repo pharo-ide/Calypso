@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 2/9/2017 13:19",
+	"super" : "ClyBrowserItemProperty",
+	"category" : "Calypso-SystemQueries-Properties",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"definingClassItem",
+		"definingPackageItem"
+	],
+	"name" : "ClyItemDefinitionProperty",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+testing
+isExecutedFromMultipleScope
+	^scope isBasedOnMultipleBasis

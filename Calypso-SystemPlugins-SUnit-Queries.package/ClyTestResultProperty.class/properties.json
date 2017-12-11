@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "DenisKudryashov 2/13/2017 13:39",
+	"super" : "ClyBrowserItemProperty",
+	"category" : "Calypso-SystemPlugins-SUnit-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"allCount",
+		"errorCount",
+		"failureCount",
+		"successCount"
+	],
+	"name" : "ClyTestResultProperty",
+	"type" : "normal"
+}

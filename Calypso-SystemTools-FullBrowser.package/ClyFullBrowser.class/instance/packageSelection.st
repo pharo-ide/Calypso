@@ -1,3 +1,3 @@
 accessing
 packageSelection
-	^packageView selection asSelectedParentsOf: ClyPackageScope
+	^packageView selection asSelectedParentsOf: RPackage

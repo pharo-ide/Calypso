@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserQueryResult",
+	"category" : "Calypso-SystemQueries-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hierarchy"
+	],
+	"name" : "ClyGroupedVariables",
+	"type" : "normal"
+}

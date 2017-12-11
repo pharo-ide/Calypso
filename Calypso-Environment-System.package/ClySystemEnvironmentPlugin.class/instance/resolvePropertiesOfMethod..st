@@ -1,4 +1,0 @@
-items resolving
-resolvePropertiesOfMethod: anEnvironmentItem
-
-	

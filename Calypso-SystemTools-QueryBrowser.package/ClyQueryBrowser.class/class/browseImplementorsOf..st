@@ -1,3 +1,3 @@
 opening
 browseImplementorsOf: aSymbol
-	^self browseQueryResultOf: (ClyMessageImplementors of: { aSymbol })
+	^self openOn: (ClyMessageImplementors of: { aSymbol })

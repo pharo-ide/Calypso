@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"classGroup"
+		"package",
+		"classTag"
 	],
 	"name" : "ClyClassCreationTool",
 	"type" : "normal"

@@ -1,3 +1,3 @@
 testing
 wantsDecorateTableCellOf: aDataSourceItem
-	^aDataSourceItem rootParentItem belongsToScope: ClyProjectScope 
+	^aDataSourceItem rootParentItem isBasedOnItemType: ClyManagedProject 

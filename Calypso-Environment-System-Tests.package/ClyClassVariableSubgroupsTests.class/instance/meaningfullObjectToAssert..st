@@ -1,3 +1,0 @@
-helpers
-meaningfullObjectToAssert: anEnvironmentItem
-	^anEnvironmentItem actualObject class
