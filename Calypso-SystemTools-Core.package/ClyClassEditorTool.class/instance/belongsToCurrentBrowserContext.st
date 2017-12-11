@@ -1,4 +1,5 @@
 testing
 belongsToCurrentBrowserContext
 
-	^browser isClassSelected: editingClass 
+	^(browser isClassSelected: editingClass)
+		or: [ ^browser isClassSelected: editingClass instanceSide ]
