@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 11/10/2017 13:11",
+	"super" : "ClyAbstractClassScope",
+	"category" : "Calypso-SystemQueries-Scopes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"localClassScope"
+	],
+	"name" : "ClyClassHierarchyScope",
+	"type" : "normal"
+}

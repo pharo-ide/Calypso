@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "DialogWindow",
+	"category" : "Calypso-Browser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser",
+		"itemsView"
+	],
+	"name" : "ClyBrowserSearchDialog",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyStringPatternTestCase",
+	"category" : "Calypso-NavigationModel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySubstringPatternTests",
+	"type" : "normal"
+}

@@ -1,1 +1,0 @@
-I am group of classes which are only extended by given package

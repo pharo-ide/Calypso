@@ -1,3 +1,0 @@
-accessing
-systemEnvironment
-	^ navigationEnvironment systemEnvironment

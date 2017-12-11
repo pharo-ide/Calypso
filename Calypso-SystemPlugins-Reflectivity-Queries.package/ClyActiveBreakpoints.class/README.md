@@ -1,0 +1,1 @@
+I return all methods which has installed breakpoints or halt execution with explicit message like "self halt"

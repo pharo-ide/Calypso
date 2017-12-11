@@ -1,0 +1,3 @@
+groups collecting
+collectClassGroupProviders
+	^#()

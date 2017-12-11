@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 4/24/2017 10:23",
+	"super" : "Object",
+	"category" : "Calypso-SystemQueries-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"packageManagers"
+	],
+	"name" : "ClyProjectManager",
+	"type" : "normal"
+}

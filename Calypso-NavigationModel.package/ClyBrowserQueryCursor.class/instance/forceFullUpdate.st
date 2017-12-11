@@ -1,0 +1,3 @@
+controlling
+forceFullUpdate
+	queryResult forceRebuild

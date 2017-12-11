@@ -1,0 +1,3 @@
+initialization
+containerForItemsSortedByName
+	^SortedCollection sortBlock: #name ascending

@@ -1,0 +1,3 @@
+scope names
+inheritedScopeName
+	^'parents'

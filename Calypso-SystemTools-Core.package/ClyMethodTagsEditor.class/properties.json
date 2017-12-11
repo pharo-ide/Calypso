@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyStatusBarItem",
+	"category" : "Calypso-SystemTools-Core-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"textMorph"
+	],
+	"name" : "ClyMethodTagsEditor",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 6/12/2017 23:51",
+	"super" : "CmdCommand",
+	"category" : "Calypso-Browser-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyCloseBrowserCommand",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-public
-selectedProjects
-	^tool selectedProjects actualObjects

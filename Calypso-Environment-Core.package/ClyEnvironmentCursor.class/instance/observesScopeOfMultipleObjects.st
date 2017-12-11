@@ -1,3 +1,0 @@
-testing
-observesScopeOfMultipleObjects
-	^metadata isBuiltInScopeOfMultipleObjects

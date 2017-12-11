@@ -1,4 +1,0 @@
-testing
-isBuiltInScopeOfMultipleObjects
-
-	^environmentScope isBasedOnMultipleBasis

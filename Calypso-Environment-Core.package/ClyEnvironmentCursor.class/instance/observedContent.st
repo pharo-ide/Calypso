@@ -1,3 +1,0 @@
-accessing
-observedContent
-	^ observedContent

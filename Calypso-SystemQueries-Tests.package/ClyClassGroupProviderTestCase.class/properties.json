@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyItemGroupProviderTestCase",
+	"category" : "Calypso-SystemQueries-Tests-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassGroupProviderTestCase",
+	"type" : "normal"
+}

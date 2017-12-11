@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyAsyncMethodGroup",
+	"category" : "Calypso-SystemPlugins-Critic-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyAllCritiquesMethodGroup",
+	"type" : "normal"
+}

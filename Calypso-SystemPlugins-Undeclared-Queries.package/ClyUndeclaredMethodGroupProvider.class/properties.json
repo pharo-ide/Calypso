@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySingleMethodGroupProvider",
+	"category" : "Calypso-SystemPlugins-Undeclared-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUndeclaredMethodGroupProvider",
+	"type" : "normal"
+}

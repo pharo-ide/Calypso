@@ -1,0 +1,3 @@
+accessing
+defaultName
+	^'class side'

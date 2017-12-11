@@ -1,4 +1,0 @@
-controlling
-enableFilter: anItemStringFilterClass
-
-	table enableFilter: anItemStringFilterClass; explicitFunction

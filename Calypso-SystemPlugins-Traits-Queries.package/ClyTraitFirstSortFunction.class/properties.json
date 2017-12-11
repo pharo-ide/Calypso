@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySortFunction",
+	"category" : "Calypso-SystemPlugins-Traits-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTraitFirstSortFunction",
+	"type" : "normal"
+}

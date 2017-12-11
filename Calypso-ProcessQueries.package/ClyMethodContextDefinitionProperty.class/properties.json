@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyItemDefinitionProperty",
+	"category" : "Calypso-ProcessQueries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"receiverItem",
+		"closureItem",
+		"definitionMethodItem"
+	],
+	"name" : "ClyMethodContextDefinitionProperty",
+	"type" : "normal"
+}

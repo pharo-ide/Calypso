@@ -1,3 +1,0 @@
-accessing
-queryScope
-	^ metadata queryScope

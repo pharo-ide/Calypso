@@ -1,0 +1,3 @@
+running
+targetVarName
+	self subclassResponsibility 

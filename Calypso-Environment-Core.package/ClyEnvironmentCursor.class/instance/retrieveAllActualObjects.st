@@ -1,4 +1,0 @@
-queries
-retrieveAllActualObjects
-
-	^observedContent actualObjects

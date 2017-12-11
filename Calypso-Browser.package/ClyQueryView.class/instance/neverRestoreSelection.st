@@ -1,0 +1,3 @@
+controlling
+neverRestoreSelection
+	shouldRestoreSelection := false

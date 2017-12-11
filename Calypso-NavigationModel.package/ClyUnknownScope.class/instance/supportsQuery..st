@@ -1,0 +1,3 @@
+testing
+supportsQuery: aQuery
+	^true

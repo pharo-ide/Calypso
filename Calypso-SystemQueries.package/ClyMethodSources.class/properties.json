@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodQuery",
+	"category" : "Calypso-SystemQueries-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pattern"
+	],
+	"name" : "ClyMethodSources",
+	"type" : "normal"
+}

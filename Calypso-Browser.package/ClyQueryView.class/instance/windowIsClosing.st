@@ -1,0 +1,3 @@
+controlling
+windowIsClosing
+	self closeDataSource

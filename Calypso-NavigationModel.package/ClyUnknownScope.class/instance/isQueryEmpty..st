@@ -1,0 +1,3 @@
+testing
+isQueryEmpty: aQuery
+	^true

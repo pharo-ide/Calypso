@@ -1,3 +1,0 @@
-running
-createMethodGroup
-	^ClyRequiredMethodGroup new

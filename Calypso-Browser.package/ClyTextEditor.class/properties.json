@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RubSmalltalkEditor",
+	"category" : "Calypso-Browser-TextEditors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTextEditor",
+	"type" : "normal"
+}

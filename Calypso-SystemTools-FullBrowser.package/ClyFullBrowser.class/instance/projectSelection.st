@@ -1,0 +1,3 @@
+accessing
+projectSelection
+	^packageView selection asSelectedParentsOf: ClyManagedProject

@@ -1,0 +1,3 @@
+accessing
+analyzedObject
+	^ tool analyzedObject

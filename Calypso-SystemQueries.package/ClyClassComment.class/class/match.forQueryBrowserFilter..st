@@ -1,0 +1,3 @@
+as yet unclassified
+match: aClassComment forQueryBrowserFilter: aQueryBrowserFilter
+	^aClassComment definingClass matchesQueryBrowserFilter: aQueryBrowserFilter

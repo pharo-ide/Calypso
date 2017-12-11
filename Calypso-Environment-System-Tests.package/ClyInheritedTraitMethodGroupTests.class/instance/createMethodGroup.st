@@ -1,3 +1,0 @@
-running
-createMethodGroup
-	^ ClyInheritedTraitMethodGroup new

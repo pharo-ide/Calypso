@@ -1,4 +1,0 @@
-controlling
-beWeak
-
-	containerClass := ClyWeakIdentityValueDictionary

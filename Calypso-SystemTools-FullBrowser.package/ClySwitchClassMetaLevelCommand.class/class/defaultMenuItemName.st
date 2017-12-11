@@ -1,0 +1,3 @@
+accessing
+defaultMenuItemName
+	^self metaLevelScope defaultName capitalized

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyGroupedVariablesTestCase",
+	"category" : "Calypso-SystemQueries-Tests-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyGroupedInstanceVariablesTests",
+	"type" : "normal"
+}

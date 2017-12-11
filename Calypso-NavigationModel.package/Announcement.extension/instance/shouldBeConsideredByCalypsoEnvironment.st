@@ -1,0 +1,3 @@
+*Calypso-NavigationModel
+shouldBeConsideredByCalypsoEnvironment
+	^true

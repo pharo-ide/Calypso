@@ -1,0 +1,3 @@
+initialization
+prepareBasisFrom: aCollection
+	^aCollection

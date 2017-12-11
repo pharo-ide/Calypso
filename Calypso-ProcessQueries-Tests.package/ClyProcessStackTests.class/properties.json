@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserQueryResultTestCase",
+	"category" : "Calypso-ProcessQueries-Tests-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"process",
+		"contexts"
+	],
+	"name" : "ClyProcessStackTests",
+	"type" : "normal"
+}

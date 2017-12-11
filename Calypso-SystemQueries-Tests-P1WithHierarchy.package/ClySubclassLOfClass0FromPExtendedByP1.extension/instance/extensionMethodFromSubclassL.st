@@ -1,0 +1,2 @@
+*Calypso-SystemQueries-Tests-P1WithHierarchy
+extensionMethodFromSubclassL

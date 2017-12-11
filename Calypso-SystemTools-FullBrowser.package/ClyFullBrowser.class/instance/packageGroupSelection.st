@@ -1,0 +1,3 @@
+accessing
+packageGroupSelection
+	^packageView selection asSelectedParentsOf: ClyPackageGroup

@@ -1,0 +1,3 @@
+accessing
+critiqueQuery
+	^ critiqueQuery

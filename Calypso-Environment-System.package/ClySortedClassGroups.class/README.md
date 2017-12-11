@@ -1,1 +1,0 @@
-I represent sorted collection of class groups (sorted by priority and name)

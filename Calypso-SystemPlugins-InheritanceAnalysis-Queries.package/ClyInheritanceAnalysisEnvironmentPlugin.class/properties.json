@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/13/2017 13:28",
+	"super" : "ClySystemEnvironmentPlugin",
+	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyInheritanceAnalysisEnvironmentPlugin",
+	"type" : "normal"
+}

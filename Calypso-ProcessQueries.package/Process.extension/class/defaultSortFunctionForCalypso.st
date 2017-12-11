@@ -1,0 +1,3 @@
+*Calypso-ProcessQueries
+defaultSortFunctionForCalypso
+	^ClySortProcessByPriorityFunction ascend

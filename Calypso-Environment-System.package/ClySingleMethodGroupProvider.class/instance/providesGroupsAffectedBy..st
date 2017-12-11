@@ -1,4 +1,0 @@
-system changes
-providesGroupsAffectedBy: aSystemAnnouncement
-
-	^aSystemAnnouncement affectsMethodGroup: self createMethodGroup

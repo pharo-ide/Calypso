@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodCodeEditorTool",
+	"category" : "Calypso-SystemPlugins-SUnit-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"testClass"
+	],
+	"name" : "ClyTestSetUpEditorTool",
+	"type" : "normal"
+}

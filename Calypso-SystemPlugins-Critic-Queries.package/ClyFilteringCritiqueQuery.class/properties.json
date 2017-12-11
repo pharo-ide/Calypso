@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyCritiqueQuery",
+	"category" : "Calypso-SystemPlugins-Critic-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseCritiqueQuery"
+	],
+	"name" : "ClyFilteringCritiqueQuery",
+	"type" : "normal"
+}

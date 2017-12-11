@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Calypso-SystemTools-FullBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser",
+		"label",
+		"visibilityLevel"
+	],
+	"name" : "ClyMethodVisibilityMorph",
+	"type" : "normal"
+}

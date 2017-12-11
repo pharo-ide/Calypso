@@ -1,0 +1,3 @@
+running
+createBrowser
+	^ClyFullBrowser new

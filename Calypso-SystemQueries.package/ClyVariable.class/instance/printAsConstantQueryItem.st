@@ -1,0 +1,3 @@
+printing
+printAsConstantQueryItem
+	^self name

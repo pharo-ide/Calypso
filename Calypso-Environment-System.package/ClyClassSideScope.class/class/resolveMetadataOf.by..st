@@ -1,3 +1,0 @@
-items resolving
-resolveMetadataOf: anEnvironmentContent by: anEnvironmentPlugin
-	anEnvironmentPlugin resolveMetadataOfMetaclasses: anEnvironmentContent

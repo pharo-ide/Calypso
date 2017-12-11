@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowser",
+	"category" : "Calypso-SystemTools-FullBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"DefaultPackageFilter"
+	],
+	"instvars" : [
+		"packageView",
+		"classView",
+		"methodGroupView",
+		"methodView",
+		"metaLevelScope",
+		"methodGroupQuery"
+	],
+	"name" : "ClyFullBrowser",
+	"type" : "normal"
+}

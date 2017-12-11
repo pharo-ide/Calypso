@@ -1,3 +1,0 @@
-controling
-execute
-	browser switchToMethodGroupContent: self methodModeClass

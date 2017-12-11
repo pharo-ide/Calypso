@@ -1,3 +1,0 @@
-controlling
-removeFromBrowser
-	containerTab delete

@@ -1,3 +1,0 @@
-queries
-querySystemFor: anEnvironmentQueryOfContentClass 
-	^self systemScope query: anEnvironmentQueryOfContentClass

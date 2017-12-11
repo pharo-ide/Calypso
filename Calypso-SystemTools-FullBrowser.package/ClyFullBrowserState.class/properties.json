@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserState",
+	"category" : "Calypso-SystemTools-FullBrowser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"metaLevelScope",
+		"methodGroupQuery"
+	],
+	"name" : "ClyFullBrowserState",
+	"type" : "normal"
+}

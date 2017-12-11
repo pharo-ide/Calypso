@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyLocalClassScopeTestCase",
+	"category" : "Calypso-SystemQueries-Tests-Scopes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassSideScopeTests",
+	"type" : "normal"
+}

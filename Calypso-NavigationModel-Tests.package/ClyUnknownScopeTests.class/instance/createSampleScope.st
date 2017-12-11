@@ -1,0 +1,3 @@
+running
+createSampleScope
+	^ClyUnknownScope new

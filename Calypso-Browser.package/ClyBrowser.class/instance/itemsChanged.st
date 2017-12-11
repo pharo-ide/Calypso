@@ -1,0 +1,4 @@
+updating
+itemsChanged
+
+	self rebuildToolsForChangedEnvironment

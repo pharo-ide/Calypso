@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdMenuGroup",
+	"category" : "Calypso-Browser-Toolbar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyButtonToolbarGroup",
+	"type" : "normal"
+}

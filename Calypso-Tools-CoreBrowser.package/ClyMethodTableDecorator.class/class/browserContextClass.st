@@ -1,3 +1,0 @@
-decoration
-browserContextClass
-	^ClyMethodSystemBrowserContext 

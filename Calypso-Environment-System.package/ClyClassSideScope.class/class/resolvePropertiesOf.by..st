@@ -1,3 +1,0 @@
-items resolving
-resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
-	anEnvironmentPlugin resolvePropertiesOfMetaclassOf: anEnvironmentItem 

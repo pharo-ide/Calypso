@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyClassHierarchyScope",
+	"category" : "Calypso-SystemQueries-Scopes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySingleClassRelationScope",
+	"type" : "normal"
+}

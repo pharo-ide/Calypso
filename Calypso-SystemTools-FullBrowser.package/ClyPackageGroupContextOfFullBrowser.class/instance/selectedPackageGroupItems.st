@@ -1,0 +1,3 @@
+selection-package groups
+selectedPackageGroupItems
+	^selectedItems

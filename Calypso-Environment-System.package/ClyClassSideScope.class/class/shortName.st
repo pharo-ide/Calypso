@@ -1,3 +1,0 @@
-accessing
-shortName
-	^'Class side'

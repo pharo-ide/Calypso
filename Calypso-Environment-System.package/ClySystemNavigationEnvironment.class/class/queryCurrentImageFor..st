@@ -1,3 +1,0 @@
-current image
-queryCurrentImageFor: anEnvironmentContentClass
-	^self currentImageScope query: anEnvironmentContentClass

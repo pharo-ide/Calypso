@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyStatusBarItem",
+	"category" : "Calypso-Browser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyToolContextNavigatorMorph",
+	"type" : "normal"
+}

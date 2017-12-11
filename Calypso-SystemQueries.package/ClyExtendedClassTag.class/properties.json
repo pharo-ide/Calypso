@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySimpleTag",
+	"category" : "Calypso-SystemQueries-Properties",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyExtendedClassTag",
+	"type" : "normal"
+}

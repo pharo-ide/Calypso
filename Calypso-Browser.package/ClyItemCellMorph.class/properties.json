@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FTCellMorph",
+	"category" : "Calypso-Browser-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label"
+	],
+	"name" : "ClyItemCellMorph",
+	"type" : "normal"
+}

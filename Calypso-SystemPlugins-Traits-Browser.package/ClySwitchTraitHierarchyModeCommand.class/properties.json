@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySwitchClassViewModeCommand",
+	"category" : "Calypso-SystemPlugins-Traits-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySwitchTraitHierarchyModeCommand",
+	"type" : "normal"
+}

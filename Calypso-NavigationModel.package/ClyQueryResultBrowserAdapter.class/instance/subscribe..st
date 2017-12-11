@@ -1,0 +1,3 @@
+system changes
+subscribe: aBrowserQueryCursor
+	actualResult subscribe: aBrowserQueryCursor

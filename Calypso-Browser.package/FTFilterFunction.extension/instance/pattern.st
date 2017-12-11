@@ -1,0 +1,3 @@
+*Calypso-Browser
+pattern
+	^pattern

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySimpleTag",
+	"category" : "Calypso-SystemPlugins-Undeclared-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyUndeclaresUserTag",
+	"type" : "normal"
+}

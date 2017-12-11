@@ -1,0 +1,3 @@
+testing
+belongsToCurrentBrowserContext
+	^browser isProcessContextSelected: methodContext

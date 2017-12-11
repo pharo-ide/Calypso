@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 2/9/2017 11:15",
+	"super" : "ClyBrowserItemProperty",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [
+		"instance"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySimpleTag",
+	"type" : "normal"
+}

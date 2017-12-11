@@ -1,0 +1,3 @@
+controlling
+itemsChanged
+	wasNotified := true

@@ -1,0 +1,3 @@
+accessing
+queryResult
+	^itemCursor queryResult

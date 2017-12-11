@@ -1,3 +1,0 @@
-accessing
-itemsView
-	^ownerDataSource itemsView

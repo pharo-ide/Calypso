@@ -1,4 +1,0 @@
-system changes
-isAffectedByMethodChange: aMethodAnnouncement
-
-	^aMethodAnnouncement isProvidedByExtension

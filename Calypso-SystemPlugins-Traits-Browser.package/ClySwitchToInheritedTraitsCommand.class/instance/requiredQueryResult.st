@@ -1,0 +1,3 @@
+execution
+requiredQueryResult
+	^ClyTraitUserHierarchy inverse asQueryResult 

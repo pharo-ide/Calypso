@@ -1,3 +1,0 @@
-decoration
-browserPluginClass
-	^ClyInheritanceAnalyzerBrowserPlugin 

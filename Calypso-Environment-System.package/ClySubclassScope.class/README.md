@@ -1,1 +1,0 @@
-I represent class scope of all supeclasses and subclasses of my basis objects.  I see methods of all superclasses and subclasses.

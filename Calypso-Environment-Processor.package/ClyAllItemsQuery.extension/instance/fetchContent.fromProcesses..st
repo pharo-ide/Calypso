@@ -1,3 +1,0 @@
-*Calypso-Environment-Processor
-fetchContent: anEnvironmentContent fromProcesses: processes
-	anEnvironmentContent buildFromProcesses: processes

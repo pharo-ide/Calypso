@@ -1,3 +1,0 @@
-running
-createMethodGroup
-	^ClyUndeclaredMethodGroup new

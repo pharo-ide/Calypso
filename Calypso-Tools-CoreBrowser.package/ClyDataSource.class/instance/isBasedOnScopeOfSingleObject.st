@@ -1,4 +1,0 @@
-testing
-isBasedOnScopeOfSingleObject
-
-	^metadata isBuiltInScopeOfSingleObject 

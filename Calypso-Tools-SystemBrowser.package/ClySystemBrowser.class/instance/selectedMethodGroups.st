@@ -1,3 +1,0 @@
-accessing
-selectedMethodGroups
-	^methodGroupView selection

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 10/10/2017 13:21",
+	"super" : "ClyClassQueryTestCase",
+	"category" : "Calypso-SystemQueries-Tests-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassCommentsTests",
+	"type" : "normal"
+}

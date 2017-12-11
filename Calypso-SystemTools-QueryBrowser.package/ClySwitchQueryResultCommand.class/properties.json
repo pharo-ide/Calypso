@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySwitchBrowserModeCommand",
+	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Controlling",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySwitchQueryResultCommand",
+	"type" : "normal"
+}

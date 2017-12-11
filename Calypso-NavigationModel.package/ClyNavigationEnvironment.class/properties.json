@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "DenisKudryashov 5/22/2017 11:56",
+	"super" : "Object",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [
+		"defaultGlobalEnvironments"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"plugins",
+		"updateStrategy",
+		"accessGuard",
+		"system",
+		"queryCache"
+	],
+	"name" : "ClyNavigationEnvironment",
+	"type" : "normal"
+}

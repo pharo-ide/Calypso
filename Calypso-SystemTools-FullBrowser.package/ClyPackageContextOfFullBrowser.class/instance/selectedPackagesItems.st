@@ -1,0 +1,3 @@
+selection-packages
+selectedPackagesItems
+	^selectedItems

@@ -1,3 +1,0 @@
-public
-selectedPackageGroups
-	^tool selectedPackageGroups actualObjects

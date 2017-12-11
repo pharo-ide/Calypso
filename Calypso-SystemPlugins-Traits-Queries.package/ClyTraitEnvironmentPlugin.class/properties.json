@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySystemEnvironmentPlugin",
+	"category" : "Calypso-SystemPlugins-Traits-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyTraitEnvironmentPlugin",
+	"type" : "normal"
+}

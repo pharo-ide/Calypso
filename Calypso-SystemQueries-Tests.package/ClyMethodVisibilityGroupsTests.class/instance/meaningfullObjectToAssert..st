@@ -1,0 +1,3 @@
+running
+meaningfullObjectToAssert: resultItem
+	^resultItem actualObject methodQuery scope basisObjects anyOne

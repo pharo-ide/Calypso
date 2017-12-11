@@ -1,0 +1,4 @@
+*Calypso-SystemQueries
+includesMethodsAffectedBy: aSystemAnnouncement
+
+	^aSystemAnnouncement affectsMethodsDefinedInPackage: self

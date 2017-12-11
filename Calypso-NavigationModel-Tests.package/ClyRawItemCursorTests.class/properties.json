@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserQueryCursorTestCase",
+	"category" : "Calypso-NavigationModel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyRawItemCursorTests",
+	"type" : "normal"
+}

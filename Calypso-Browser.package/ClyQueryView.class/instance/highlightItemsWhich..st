@@ -1,0 +1,4 @@
+controlling
+highlightItemsWhich: predicateBlock
+
+	highlighting selectItemsWhere: predicateBlock

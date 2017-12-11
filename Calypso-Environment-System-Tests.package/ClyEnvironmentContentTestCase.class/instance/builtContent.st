@@ -1,3 +1,0 @@
-helpers
-builtContent
-	^cursor observedContent
