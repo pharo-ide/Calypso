@@ -1,0 +1,3 @@
+controlling
+itemsChanged
+	self refreshCritiques

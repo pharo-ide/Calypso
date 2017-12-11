@@ -5,4 +5,5 @@ buildToolsOn: toolsList for: aBrowserContext
 		activeInstancesInContext: aBrowserContext
 		do: [ :strategy | 
 			tool := strategy createToolFor: browser inContext: aBrowserContext.
+			browser decorateTool: tool.
 			toolsList add: tool ]

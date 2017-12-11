@@ -1,3 +1,3 @@
-navigation
+controlling
 changeStateBy: aBlock
 	aBlock value
