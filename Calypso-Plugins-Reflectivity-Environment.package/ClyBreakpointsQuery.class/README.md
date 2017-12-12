@@ -1,0 +1,1 @@
+This query provides all methods that contain either metalink breakpoints or 'self halt' (or other flavours of halts).
