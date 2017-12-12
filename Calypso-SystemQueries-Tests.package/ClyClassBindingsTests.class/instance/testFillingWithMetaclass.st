@@ -1,5 +1,5 @@
 tests
-testFillingMetaclass
+testFillingWithMetaclass
 
 	queryResult fillWith: {Array class}.
 	
