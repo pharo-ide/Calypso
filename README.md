@@ -38,7 +38,7 @@ ClyBrowser beAllDefault
 ```
 And to open browser evaluate: 
 ```Smalltalk
-ClySystemBrowser open.
+ClyFullBrowser open.
 ```
 
 ## Problems
@@ -52,7 +52,7 @@ It is not full critic disable. If it not helps then turn off it completely:
 ```Smalltalk
 ClyCriticBrowserPlugin disable.
 ClyCriticEnvironmentPlugin disable.
-ClySystemNavigationEnvironment reset.
+ClyNavigationEnvironment reset.
 ```
 And please report this problem on issue tracker or with direct mail to me or Pharo mailing list.
 ## FAQ
