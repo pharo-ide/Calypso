@@ -1,8 +1,7 @@
-navigation
+initialization
 prepareInitialState
 
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: navigationEnvironment).
+	self prepareCleanInitialStateWithoutFilter.
 	
-	self switchToPackages.	
 	DefaultPackageFilter ifNotNil: [ 
 		packageView activateFilterWith: DefaultPackageFilter]
