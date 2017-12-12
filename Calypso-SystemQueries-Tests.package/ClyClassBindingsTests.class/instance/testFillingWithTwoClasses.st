@@ -1,5 +1,5 @@
 tests
-testFillingTwoClasses
+testFillingWithTwoClasses
 
 	queryResult fillWith: {Array. String}.
 	
