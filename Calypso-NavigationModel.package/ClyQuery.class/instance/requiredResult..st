@@ -1,3 +1,4 @@
 accessing
-requiredResult: aQueryResultClass
-	requiredResult := aQueryResultClass
+requiredResult: aQueryResult
+	requiredResult := aQueryResult.
+	requiredResult beReadOnlyObject 

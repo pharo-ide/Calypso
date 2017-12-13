@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	self resetScope.
-	requiredResult := self defaultResult
+	self requiredResult: self defaultResult

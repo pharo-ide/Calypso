@@ -1,0 +1,4 @@
+tests
+testHasReadonlyRequiredResultByDefault
+
+	self assert: query requiredResult isReadOnlyObject
