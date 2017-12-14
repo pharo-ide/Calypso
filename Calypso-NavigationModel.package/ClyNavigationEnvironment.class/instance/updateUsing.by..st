@@ -6,11 +6,11 @@ updateUsing: newUpdateStrategy by: updateBlock
 	Breaking mutex is done by creating new one which meand that current process
 	is not guarded any more and proceeding execution in debugger can lead to some errors in rare cases. But it is less problem than locked UI"
 	| oldStrategy |
-	[accessGuard critical: [ 
+	[updateGuard critical: [ 
 		oldStrategy := updateStrategy.
 		updateStrategy := newUpdateStrategy.
 		updateBlock on: Exception do: [ :err |
-				accessGuard := Mutex new.
+				updateGuard := Mutex new.
 				err pass]]
 	] ensure: [ 			
 			oldStrategy ifNotNil: [

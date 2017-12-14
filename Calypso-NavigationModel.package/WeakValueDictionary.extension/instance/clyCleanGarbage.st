@@ -1,6 +1,12 @@
 *Calypso-NavigationModel
 clyCleanGarbage
 
-	| garbage |
-	garbage := array select: [ :ass | ass notNil and: [ass value isNil] ].
-	garbage do: [ :ass | self removeKey: ass key ]
+	| firstFound |
+	array withIndexDo: [:ass :index | 
+		(ass notNil and: [ass value isNil]) ifTrue: [ 
+			array at: index put: nil.
+			tally := tally - 1.
+			firstFound ifNil: [firstFound := index]]].
+	
+	firstFound ifNotNil: [ 
+		self fixCollisionsFrom: firstFound]
