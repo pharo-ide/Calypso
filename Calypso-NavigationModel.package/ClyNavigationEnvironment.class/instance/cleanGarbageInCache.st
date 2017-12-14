@@ -1,4 +1,5 @@
 cleaning
 cleanGarbageInCache
 
-	queryCache clyCleanGarbage
+	accessGuard critical: [ 
+		queryCache clyCleanGarbage]
