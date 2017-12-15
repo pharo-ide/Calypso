@@ -10,6 +10,4 @@ tabSelected: aTab
 	browserState selectedTabs: oldTabs.
 	browser recordNavigationState: browserState.
 	
-	(newTab isSimilarTo: oldTabs first) ifFalse: [ ^self ].
-	
 	self swapPrioritiesBetween: newTab and: oldTabs first
