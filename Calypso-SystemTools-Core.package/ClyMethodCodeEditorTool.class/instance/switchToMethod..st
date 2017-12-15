@@ -1,5 +1,5 @@
-controlling
+operations
 switchToMethod: aMethod
 	editingMethod := aMethod.
-	browser selectMethod: editingMethod.
-	self update
+	self update.
+	browser selectMethod: editingMethod

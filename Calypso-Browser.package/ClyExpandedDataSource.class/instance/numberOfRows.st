@@ -1,3 +1,4 @@
 accessing
 numberOfRows
-	^itemCursor itemCount - (collapsedItems detectSum: [ :each | each childrenCount ])
+	^self itemCursor itemCount
+		- (collapsedItems detectSum: [ :each | each childrenCount ])

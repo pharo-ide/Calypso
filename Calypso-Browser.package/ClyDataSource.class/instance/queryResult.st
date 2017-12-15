@@ -1,3 +1,3 @@
 accessing
 queryResult
-	^itemCursor queryResult
+	^self itemCursor queryResult

@@ -1,4 +1,4 @@
 testing
 hasMetaProperty: aPropertyClass
 
-	^itemCursor hasMetaProperty: aPropertyClass
+	^self itemCursor hasMetaProperty: aPropertyClass

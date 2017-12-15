@@ -1,3 +1,3 @@
 testing
 isEmpty
-	^itemCursor itemCount = 0
+	^self itemCursor itemCount = 0

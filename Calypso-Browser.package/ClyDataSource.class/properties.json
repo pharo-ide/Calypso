@@ -11,7 +11,8 @@
 		"depth",
 		"parentItem",
 		"lastFilteredDataSource",
-		"queryView"
+		"queryView",
+		"dirty"
 	],
 	"name" : "ClyDataSource",
 	"type" : "normal"

@@ -1,3 +1,3 @@
 accessing
 getMetaProperty: aPropertyClass
-	^itemCursor getMetaProperty: aPropertyClass
+	^self itemCursor getMetaProperty: aPropertyClass

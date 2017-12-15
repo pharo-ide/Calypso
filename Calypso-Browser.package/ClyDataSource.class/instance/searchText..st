@@ -2,7 +2,7 @@ queries
 searchText: aString
 	"we search only original elements"
 	| found |
-	found := itemCursor moveToItemWhich: [ :each | 
+	found := self itemCursor moveToItemWhich: [ :each | 
 		each name asLowercase beginsWith: aString asLowercase ].
 	
-	^found ifFalse: [ #() ] ifTrue: [ {itemCursor position}]
+	^found ifFalse: [ #() ] ifTrue: [ {self itemCursor position}]

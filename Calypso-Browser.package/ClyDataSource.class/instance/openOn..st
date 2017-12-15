@@ -5,4 +5,5 @@ openOn: aQueryView
 
 	queryView := aQueryView.	
 	table := aQueryView table.
-	itemCursor := query openBrowserCursorFor: self
+	itemCursor := query openBrowserCursorFor: self.
+	dirty := false

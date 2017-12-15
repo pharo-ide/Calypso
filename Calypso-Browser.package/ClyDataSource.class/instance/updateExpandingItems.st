@@ -1,3 +1,3 @@
-controlling
+private
 updateExpandingItems
 	self subclassResponsibility 

@@ -4,3 +4,4 @@ initializeForBrowserStateSpanshot
 	queryView := nil.	
 	itemCursor := ClyClosedBrowserCursor instance.	
 	lastFilteredDataSource := nil.
+	dirty := false.
