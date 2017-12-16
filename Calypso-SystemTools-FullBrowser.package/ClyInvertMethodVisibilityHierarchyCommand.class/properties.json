@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "ClyBrowserCommand",
-	"category" : "Calypso-Browser-Commands",
+	"category" : "Calypso-SystemTools-FullBrowser-Commands-MethodGroups",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyUpdateBrowserCommand",
+	"name" : "ClyInvertMethodVisibilityHierarchyCommand",
 	"type" : "normal"
 }

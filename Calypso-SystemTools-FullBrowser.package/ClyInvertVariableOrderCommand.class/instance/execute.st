@@ -1,0 +1,4 @@
+execution
+execute
+	ClySubclassHierarchy invertVariableHierarchy.
+	browser update
