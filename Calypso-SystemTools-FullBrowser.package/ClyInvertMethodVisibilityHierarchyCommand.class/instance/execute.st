@@ -1,4 +1,4 @@
 execution
 execute
 	ClySubclassHierarchy invertMethodVisibilityHierarchy.
-	browser update.
+	browser switchToMethodGroups
