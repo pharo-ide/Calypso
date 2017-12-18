@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowserCommand",
+	"super" : "CmdCommand",
 	"category" : "Calypso-Browser-Commands",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyUpdateBrowserCommand",
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyBrowserCommand",
 	"type" : "normal"
 }

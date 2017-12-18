@@ -1,3 +1,4 @@
 accessing
 numberOfRows
-	^itemCursor itemCount + (expandedItems detectSum: [ :each | each childrenCount ])
+	^self itemCursor itemCount 
+		+ (expandedItems detectSum: [ :each | each childrenCount ])

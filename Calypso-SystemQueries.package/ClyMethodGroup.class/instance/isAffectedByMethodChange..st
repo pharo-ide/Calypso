@@ -1,3 +1,0 @@
-system changes
-isAffectedByMethodChange: aMethodAnnouncement
-	^self canIncludeMethod: aMethodAnnouncement methodAffected

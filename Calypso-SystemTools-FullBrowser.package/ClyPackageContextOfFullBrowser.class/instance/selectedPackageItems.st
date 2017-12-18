@@ -1,3 +1,3 @@
 selection-packages
-selectedPackagesItems
+selectedPackageItems
 	^selectedItems

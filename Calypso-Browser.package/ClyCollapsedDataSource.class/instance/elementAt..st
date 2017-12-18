@@ -8,10 +8,10 @@ elementAt: rowIndex
 		(each hasChildAt: localIndex) ifTrue: [
 			^each childrenItemAt: localIndex].
 		(each isAfter: localIndex) ifTrue: [
-			itemCursor moveTo: localIndex.
-			^ ClyDataSourceItem of: self value: itemCursor currentItem ].
+			self itemCursor moveTo: localIndex.
+			^ ClyDataSourceItem of: self value: self itemCursor currentItem ].
 		localIndex := localIndex - each childrenCount.
 	].
 
-	itemCursor moveTo: localIndex.
-	^ClyDataSourceItem of: self value: itemCursor currentItem
+	self itemCursor moveTo: localIndex.
+	^ClyDataSourceItem of: self value: self itemCursor currentItem
