@@ -2,7 +2,6 @@ private
 restoreSelectedTools: selectedTools
 	| mainTool extraTools |
 	tools ifEmpty: [ ^self ].
-	selectedTools = self selectedTools ifTrue: [ ^self ].
 	mainTool := self selectMainTool.
 	
 	extraTools := selectedTools reject: [ :each | each class = mainTool class ].
