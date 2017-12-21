@@ -13,6 +13,6 @@ build
 	textMorph 
 		hResizing: #spaceFill;
 		acceptOnFocusChange: true;
-		ghostText: 'tag method here'.
+		ghostText: 'as yet unclassified'.
 	
 	self addMorph: textMorph
