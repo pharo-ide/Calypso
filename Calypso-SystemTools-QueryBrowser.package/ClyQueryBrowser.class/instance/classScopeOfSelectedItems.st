@@ -1,8 +1,6 @@
 accessing
 classScopeOfSelectedItems
-	| definition classes |
+	| classes |
 	classes := self selection items
-		collect: [ :methodItem | 
-			definition := methodItem getProperty: ClyItemDefinitionProperty.
-			definition definingClass ].
+		collect: [ :methodItem | methodItem systemDefinition definingClass ].
 	^ ClyBothMetaLevelClassScope ofAll: classes in: navigationEnvironment

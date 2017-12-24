@@ -1,7 +1,6 @@
 updating
 buildTitleFromSelections
-	| newTitle mainItem definition |
-	
+	| newTitle mainItem |	
 	self projectSelection isEmpty ifFalse: [ 
 		newTitle := self projectSelection lastSelectedItem name].
 	
@@ -13,9 +12,8 @@ buildTitleFromSelections
 	mainItem := self methodSelection isEmpty 
 		ifTrue: [ self classSelection lastSelectedItem ]
 		ifFalse: [ self methodSelection lastSelectedItem].
-	definition := mainItem 
-		getProperty: ClyItemDefinitionProperty ifAbsent: [^newTitle].
-	newTitle := definition printDefiningClass.
+
+	newTitle := mainItem systemDefinition printDefiningClass.
 	self methodSelection isEmpty ifFalse: [ 
 		newTitle := newTitle , '>>' , self methodSelection lastSelectedItem name ].
 	^newTitle

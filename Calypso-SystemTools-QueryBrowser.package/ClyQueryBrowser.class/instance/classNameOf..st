@@ -1,6 +1,4 @@
 initialization
 classNameOf: aBrowserItem
 
-	| definition |
-	definition := aBrowserItem getProperty: ClyItemDefinitionProperty ifAbsent: [^''].
-	^definition printDefiningClass
+	^aBrowserItem systemDefinition printDefiningClass

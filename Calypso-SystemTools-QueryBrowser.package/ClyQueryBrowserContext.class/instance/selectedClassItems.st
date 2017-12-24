@@ -1,11 +1,10 @@
 selection-classes
 selectedClassItems
 	
-	| definition unique classItem |
+	| unique classItem |
 	unique := OrderedCollection new.
 	selectedItems do: [ :each | 
-		definition := each getProperty: ClyItemDefinitionProperty.
-		classItem := definition definingClassItem.
+		classItem := each systemDefinition definingClassItem.
 		unique 
 			detect: [:existing | existing actualObject == classItem actualObject] 
 			ifNone: [unique add: classItem]].

@@ -1,6 +1,6 @@
 printing
 printPathToSelection
 	| definition |
-	definition := self lastSelectedItem getProperty: ClyItemDefinitionProperty.
+	definition := self lastSelectedItem systemDefinition.
 	
 	^definition definingPackageItem name, ' / ', definition printDefinition

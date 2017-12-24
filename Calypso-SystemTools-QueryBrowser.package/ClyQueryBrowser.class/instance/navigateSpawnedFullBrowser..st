@@ -3,7 +3,7 @@ navigateSpawnedFullBrowser: aFullBrowser
 
 	| lastItem definition |
 	lastItem := self selection lastSelectedItem.
-	definition := lastItem getProperty: ClyItemDefinitionProperty.
+	definition := lastItem systemDefinition.
 	
 	aFullBrowser selectPackage: definition definingPackage.
 	aFullBrowser selectClass: definition definingClass.
