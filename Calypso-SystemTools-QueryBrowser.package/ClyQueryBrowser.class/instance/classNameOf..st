@@ -3,4 +3,4 @@ classNameOf: aBrowserItem
 
 	| definition |
 	definition := aBrowserItem getProperty: ClyItemDefinitionProperty ifAbsent: [^''].
-	^definition definingClassItem name
+	^definition printDefiningClass

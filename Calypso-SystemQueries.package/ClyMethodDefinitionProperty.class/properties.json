@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"isInstanceSide",
 		"isExtension"
 	],
 	"name" : "ClyMethodDefinitionProperty",
