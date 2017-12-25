@@ -1,10 +1,11 @@
-accessing
+selection changes
 adoptMetaLevelForSelectedClass
-	| lastClass extendedMetaLevel |
+	| selectedClass extendedMetaLevel |
 	self classSelection isEmpty ifTrue: [ ^self ].
-	lastClass := self classSelection lastSelectedItem.
+	selectedClass := self classSelection lastSelectedItem.
+	(selectedClass isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
 	
-	extendedMetaLevel := lastClass systemDefinition definingMetaLevelScope.
+	extendedMetaLevel := selectedClass systemDefinition definingMetaLevelScope.
 	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].
 	
 	"We should switch to the meta level of extended class"

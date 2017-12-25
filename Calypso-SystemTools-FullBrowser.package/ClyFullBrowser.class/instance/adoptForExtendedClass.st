@@ -1,6 +1,9 @@
-accessing
-adoptStateForSelectedClass
+selection changes
+adoptForExtendedClass
 	| lastClass extendingPackages extraGroups |
+	(methodGroupQuery executesQuery: ClyAllMethodGroups) ifFalse: [ ^self ].
+	(methodGroupQuery isKindOf: ClyAllMethodGroups) ifFalse: [ 
+		methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods].
 	self classSelection isEmpty ifTrue: [ ^self ].
 	lastClass := self classSelection lastSelectedItem.
 	(lastClass isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
