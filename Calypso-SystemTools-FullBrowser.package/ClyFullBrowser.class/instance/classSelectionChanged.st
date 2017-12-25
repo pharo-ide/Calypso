@@ -7,7 +7,7 @@ classSelectionChanged
 	
 	self changeMethodGroupQueryBy: [ 
 		methodGroupQuery := methodGroupQuery withScopeOf: self classSelection actualObjects.
-		actualMetaLevel := self selectedClassMetaLevelScope.
+		actualMetaLevel := self selectedClassDefaultMetaLevelScope.
 		actualMetaLevel = metaLevelScope 
 			ifTrue: [ methodGroupQuery ]
 			ifFalse: [ 

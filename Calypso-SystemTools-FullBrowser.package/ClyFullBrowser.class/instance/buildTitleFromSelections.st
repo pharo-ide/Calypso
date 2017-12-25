@@ -14,6 +14,8 @@ buildTitleFromSelections
 		ifFalse: [ self methodSelection lastSelectedItem].
 
 	newTitle := mainItem systemDefinition printDefiningClass.
+	mainItem systemDefinition isInstanceSide & (metaLevelScope = ClyClassSideScope)
+		ifTrue: [ newTitle := newTitle , ' class' ].
 	self methodSelection isEmpty ifFalse: [ 
 		newTitle := newTitle , '>>' , self methodSelection lastSelectedItem name ].
 	^newTitle
