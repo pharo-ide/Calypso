@@ -2,4 +2,5 @@ operations
 restoreNavigationStateOf: aBrowser
 	
 	aBrowser navigationViews with: viewStates do: [:view :state |
-		state applyTo: view]
+		view ignoreNavigationDuring: [ 
+			state applyTo: view]]
