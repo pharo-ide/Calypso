@@ -1,0 +1,3 @@
+testing
+canBeExecutedInContext: aBrowserContext
+	^aBrowserContext hasSelectedItems
