@@ -5,7 +5,9 @@ decorateMainTableCell: anItemCellMorph of: aDataSourceItem
 	
 	button := self nautilusMethodWidget methodIconFor: method.
 	button == self emptyActionIcon ifTrue: [ ^self ].
-	((button isKindOf: IconicButton) and: [ button actionSelector == #runTestForAMethod:notifying:])
+	((button isKindOf: IconicButton) and: [ 
+		button actionSelector == #runTestForAMethod:notifying: 
+			and: [ button arguments first isTestMethod]])
 		ifTrue: [ ^self ]. 
 		
 	anItemCellMorph definitionMorph: button asMorph
