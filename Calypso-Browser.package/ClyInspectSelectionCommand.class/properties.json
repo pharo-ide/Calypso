@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"selectedItem"
+		"selectedItems"
 	],
 	"name" : "ClyInspectSelectionCommand",
 	"type" : "normal"

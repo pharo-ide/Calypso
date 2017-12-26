@@ -1,3 +1,5 @@
 execution
 execute
-	selectedItem inspect
+	selectedItems size = 1 
+		ifTrue: [ selectedItems first inspect ]
+		ifFalse: [ selectedItems inspect]
