@@ -1,3 +1,3 @@
 testing
 retrievesItem: anObject
-	resultItems includes: anObject
+	^resultItems includes: anObject
