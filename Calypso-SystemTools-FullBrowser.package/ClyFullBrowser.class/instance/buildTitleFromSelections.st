@@ -1,7 +1,6 @@
 updating
 buildTitleFromSelections
-	| newTitle |
-	
+	| newTitle mainItem |	
 	self projectSelection isEmpty ifFalse: [ 
 		newTitle := self projectSelection lastSelectedItem name].
 	
@@ -9,7 +8,14 @@ buildTitleFromSelections
 		newTitle := self packageSelection lastSelectedItem name].
 	
 	self classSelection isEmpty ifTrue: [ ^newTitle ].
-	newTitle := self classSelection lastSelectedItem name.
 	
-	self methodSelection isEmpty ifTrue: [ ^newTitle ].
-	^newTitle, '>>', self methodSelection lastSelectedItem name
+	mainItem := self methodSelection isEmpty 
+		ifTrue: [ self classSelection lastSelectedItem ]
+		ifFalse: [ self methodSelection lastSelectedItem].
+
+	newTitle := mainItem systemDefinition printDefiningClass.
+	mainItem systemDefinition isInstanceSide & (metaLevelScope = ClyClassSideScope)
+		ifTrue: [ newTitle := newTitle , ' class' ].
+	self methodSelection isEmpty ifFalse: [ 
+		newTitle := newTitle , '>>' , self methodSelection lastSelectedItem name ].
+	^newTitle

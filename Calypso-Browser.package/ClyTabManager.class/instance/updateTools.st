@@ -1,11 +1,12 @@
 updating
 updateTools
-	| newTools selectedTools |
-	self updateToolsBy: [ 
+	| newTools selectedTools currentTools |
+	self updateToolsBy: [
 		newTools := OrderedCollection new.	
 		browser currentContextsDo: [ :each | self buildToolsOn: newTools for: each].
 
 		selectedTools := self selectedTools.
+		currentTools := tools copy.
 		self updateTabsWith: newTools.
-		self restoreSelectedTools: selectedTools.
+		tools = currentTools ifFalse: [ self restoreSelectedTools: selectedTools].
 	]

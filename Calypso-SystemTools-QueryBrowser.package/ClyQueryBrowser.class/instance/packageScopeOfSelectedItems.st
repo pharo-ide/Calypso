@@ -1,8 +1,6 @@
 accessing
 packageScopeOfSelectedItems
-	| definition packages |
+	| packages |
 	packages := self selection items
-		collect: [ :methodItem | 
-			definition := methodItem getProperty: ClyItemDefinitionProperty.
-			definition definingPackage ].
+		collect: [ :methodItem | methodItem systemDefinition definingPackage ].
 	^ ClyPackageScope ofAll: packages in: navigationEnvironment

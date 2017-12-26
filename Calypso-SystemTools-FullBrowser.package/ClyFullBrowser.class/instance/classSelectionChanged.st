@@ -1,8 +1,13 @@
 selection changes
 classSelectionChanged
 	
-	self showsFlatClasses ifFalse: [ 
-		self silentlySelectPackageOfSelectedClass].
-	
-	self changeMethodGroupQueryBy: [ 
-		methodGroupQuery withScopeOf: self classSelection actualObjects]
+	self changeStateBy: [
+		self showsFlatClasses ifFalse: [ 
+			self silentlySelectPackageOfSelectedClass].
+		 
+		self changeMethodGroupQueryBy: [ 
+			self adoptForExtendedClass.
+			methodGroupQuery withScopeOf: self classSelection actualObjects].
+		
+		self selectCurrentExtensionMethodGroup
+	]

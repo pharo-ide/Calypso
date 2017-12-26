@@ -6,6 +6,7 @@ updateSelectedItemsOf: aDataSource
 		actualSelectionChanged := selection updateItemsWhichBelongsTo: aDataSource.
 		highlighting updateItemsWhichBelongsTo: aDataSource.
 		desiredSelection ifNotNil: [
+			desiredSelection updateItemsWhichBelongsTo: aDataSource.
 			actualSelectionChanged := actualSelectionChanged 
 				| (desiredSelection restoreCurrentSelection: selection)].
 		^actualSelectionChanged]
