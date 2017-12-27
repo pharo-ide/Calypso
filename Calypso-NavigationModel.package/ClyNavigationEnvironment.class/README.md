@@ -77,43 +77,35 @@ To maintain query cache I use two mutexes:
 - accessGuard, protects any modification of queryCache
 - updateGuard, protects cache updating in the way that multiple changes will be always processed in sequence
 
-I provide plugins collection which are subclasses of ClyEnvironmentPlugin. Plugins responsible to extend queries of particular system:
+In my cache the query is a key and the result is a value. The cache is weak and unused result is cleaned by GC. In same time unused keys (queries which result is cleaned) are collected when new query is executed (using #cleanGarbageInCache).
 
-- plugin can extend properties of special kind of query items, ClyBrowserItem instances.
-- plugin can extend system with extra information from other systems. 
-As package it can extend visibility of existing scopes by providing new information which can be retrieved by new queries.
-And to manage information from external system plugin can notify environment about changes from it.
+I am extendable by plugins, subclasses of ClyEnvironmentPlugin. Plugins are responsible to extend queries of particular system in following ways:
+
+- plugin can extend properties of query result (ClyBrowserItem instances and query metadata).
+- plugin can supply information about other systems. 
+Plugins are packaged separatelly. Plugin package can extend visibility of existing scopes by providing new information from external systems. This information can be retrieved by new queries.
+And to manage this information plugin should notify environment about external changes.
 
 To add plugin use following method:
 
-	environment addPlugin: MyTestPlugin new
+	environment addPlugin: MyTestPlugin new.
 	
-I attatch new plugin to my system when it is added to me.
-And when I am attached to the system I also attach all my plugins to it.
+And to access plugins use: 
+	
+	environment pluginsDo: aBlock
+	
+When I am attached to the system I also attach all my plugins to it using:
 
- it can extend 
+	plugin attachToSystem
 
-They affect set of properties for each item which is retrieved by queries.
-These properties are used by UI related plugins to extend look and feel of tools.
-
--------------------todo---------------------------------
-    
-
-
-I have plugins collection which are ClyEnvironmentPlugin subclasses. They affect set of properties for each item which is retrieved by queries.
-These properties are used by UI related plugins to extend look and feel of tools.
-
-For more details look at ClyEnvironmentScope and ClyEnvironmentContent comments.
-
-Public API and Key Messages
-
-- selectScope: scopeClass of: arrayOfObjects
-- withCachedScopesDo: aBlock
-- resolveItem: anEnvironmentItem of: anEnvironmentContent
+In this method plugin is able to subscribe on own system changes to notify environment about them.
  
 Internal Representation and Key Implementation Points.
 
     Instance Variables 
 	plugins:		<Collection of<ClyEnvironmentPlugin>>>
-	scopeCache:		<Dictionary of<ClyEnvironmentScope class,Dictionary of<Array,ClyEnvironmentScope>>>
+	queryCache:		<WeakValueDictionary of<ClyQuery, ClyQueryResult>>
+	system: 	<Object>
 	updateStrategy:	<ClyEnvironmentUpdateStrategy>
+	updateGuard:	<Mutex>
+	accessGuard:	<Mutex>
