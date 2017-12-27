@@ -1,5 +1,24 @@
-I am a root of hierarchy of environment queries.
-My subclasses implement specific logic how to retrieve particular set of environment items from given environment scope. 
+I am a root of hierarchy of queries.
+My subclasses implement specific logic how to retrieve particular objects from given environment scope. 
+
+Any query should be created with scope:
+
+	query := ClyAllMethods from: scope
+	
+And to create scope instance you need some navigation environment. For example to query Smalltalk image there is global environment: 
+
+	scope := ClyClassScope of: Object in: ClyNavigationEnvironment currentImage.
+	
+When query is ready you can simply execute it: 
+
+	result := query execute.
+	
+The result of any query is an instance of ClyQueryResult subclasses.
+By default it is always ClyRawQueryResult which do not apply any formatting or transformation on retrieved items.
+The required result is a parameter of any query, which is in the variable #requiredResult. It is an instance of ClyQueryResult subclass and it is used as prototype to create actual result instances. During execution query creates it using: 
+
+	requiredResult prepareNewFor: aQuery in: environment
+
 Subclasses must implement method:
 	- fetchContent: anEnvironmentContent from: anEnvironmentScope
 It should fill given content with items fetched from given scope where given content is actual result of my evaluation (read below).

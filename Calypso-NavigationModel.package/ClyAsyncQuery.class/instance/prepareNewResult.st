@@ -1,4 +1,4 @@
 execution
-prepareResultIn: aNavigationEnvironment
+prepareNewResult
 	
 	^ClyAsyncQueryResult for: self actualQuery
