@@ -15,28 +15,40 @@ When query is ready you can simply execute it:
 	
 The result of any query is an instance of ClyQueryResult subclasses.
 By default it is always ClyRawQueryResult which do not apply any formatting or transformation on retrieved items.
-The required result is a parameter of any query, which is in the variable #requiredResult. It is an instance of ClyQueryResult subclass and it is used as prototype to create actual result instances. During execution query creates it using: 
+The required result is a parameter of any query, the variable #requiredResult. It is used as prototype to create actual result instances. During execution query creates it using: 
 
-	requiredResult prepareNewFor: aQuery in: environment
+	actualResult := requiredResult prepareNewFor: aQuery in: environment
+	
+To create query instances using concrete result you can specify it as extra parameter. I provide simple method #as:: 
 
-Subclasses must implement method:
-	- fetchContent: anEnvironmentContent from: anEnvironmentScope
-It should fill given content with items fetched from given scope where given content is actual result of my evaluation (read below).
-Usually my subclasses implement it by double dispatch to get specific behaviour for concrete type of content and scope. They redirect processing using:
-	anEnvironmentScope fetchContent: anEnvironmentContent by: self
-Look at subclasses for detailes.
+	QueryClass as: ClySpecialQueryResult new.
 
-Concrete form of retrieved items is described by my variable requestedContent. It is subclass of ClyEnvironmentContent which instances are supposed to represent my result.
-I define method to create instances with this property:
-	anEnvironmentQueryClass requestedContent: anEnvironmentContentClass
-Usually my subclasses provide more suitable methods. For example: 
-	ClyMessageSenders of: #(do:) as: ClySortedMethods
+But subclasses provide better versions with all parameters. For example: 
 
-To evaluate me users ask environment scope for that:
-	classesScope query: anEnvironmentQuery
-There are other related objects (cursor, dataSource, content) which provide query interface but at the end I am always evaluated by some existing scope.
-(This query method accepts any compatible object which define #asEnvironmentQuery conversion method. I implement it by returning self)
+	ClyAllClassQuery from: packageScope as: ClySubclassHierarchy new asQueryResult.
+	
+You can also convert given query with new result: 
 
+	aQuery withResult: ClySpecialQueryResult new
+	
+There are other converting methods which are supported by any kind of queries: 
+
+- withScope: aScope, it returnes similar query but with different scope
+- withScopeOf: newBasisObjects, it returns similar query with scope of different basis
+- filtereBy: anItemFilter, it returns wrapper query which filters original query result with given filter
+
+Subclasses must implement several methods. The main methods are: 
+	
+- buildResult: aQueryResult 
+It is the method where query retrieves items from the scope and fill given result with them. Look at implementors.
+
+- checkEmptyResult. 
+Subclasses should be able detect that result will be empty without execution.
+
+Other methods are implemented by more concrete abstract classes. Look at them for details. 
+
+
+---------------more about changes-----------------------
 Scopes cache result of all evaluated queries (look ClyEnvironmentScope comment). It requires correct comparison methods in all my subclasses. Equality and hash methods should consider own and superclasses state. For example I use requestedContent variable to implement them.
 
 Cached result requires maintainance: if related system change is happen then result should be recomputed. I detect it in method #isResult:affectedBy:. I allow subclasses to define simple #isResultCanBeAffectedBy: where they can ignore not related changes. And then I ask result is it affected by given change:
