@@ -74,6 +74,11 @@ Subclasses should implement union with another query.
 -collectMetadataOf: aQueryResult by: anEnvironmentPlugin
 Subclasses should dispatch metadata collection to the given environment plugin.
 
+Also there is special ClyUnionQuery class which requires additional method to be implemented: 
+
+- mergeOwnInstances: queries
+It should merge similar query instances. Idea to reduce subqueries count in union query which call this method. Subclasses should produce single query with merged collection of parameters. The argument is always collection of receiver instances.
+
 Queries should define user friendly #description. I provide very general implementation based on class name. For example look at hierarchy implementors.
 
 Navigation environment caches my instances and their results. It requires correct implementation of equality and hashing.
