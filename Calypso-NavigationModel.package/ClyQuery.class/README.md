@@ -36,6 +36,7 @@ There are other converting methods which are supported by any kind of queries:
 
 - withScope: aScope, it returnes similar query but with different scope
 - withScopeOf: newBasisObjects, it returns similar query with scope of different basis
+- restrictedByScope: aScope, it returnes similar query with similar scope restricted by basis of given scope.
 - filtereBy: anItemFilter, it returns wrapper query which filters original query result using given filter
 
 My subclasses must implement several methods: 
