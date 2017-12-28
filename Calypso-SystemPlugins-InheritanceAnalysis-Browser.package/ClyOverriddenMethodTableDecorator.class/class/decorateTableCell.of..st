@@ -11,4 +11,4 @@ decorateTableCell: anItemCellMorph of: aDataSourceItem
 		 ].
 	(aDataSourceItem isMarkedWith: ClyOverriddenTag) ifTrue: [ 
 		 ].
-	anItemCellMorph definitionMorph: buttons
+"	anItemCellMorph definitionMorph: buttons"
