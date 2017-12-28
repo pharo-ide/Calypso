@@ -34,20 +34,38 @@ At the end aQuery fills result instance with items retrieved from the scope of e
 
 Notice that #rebuild itself is private method. Users should use #rebuildIfNeeded. In fact users do not need it too because it is lazely evaluated when my items are accessed. But in case when query is executed it is evaluated explicitly by navigation environment. So callers always receive fresh result.
 
+In the case when you want force update there are two methods: 
+
+- forceRebuild 
+It set flag #needsRebuild to true and notify observers about changes.
+
+- forceLazyRebuild 
+It silently set flag #needsRebuild to true without any notification to observers.
+
+In first case observers can handle notification by requesting new items from the result instance.
+For example if UI widget observes result items and shows them to the user the #forceRebuild message will update items immediately. 
+But #forceLazyRebuild will not update items until user request them manually.
+
+There is extra helper method #cancelRebuild which reset rebuild flag and reset items to the empty collection.
+
 My instances are safe to be used from multiple processes. Building and updating of items are protected by my #accessGuard mutex.
 
 I provide several methods to access built items: 
 
 - itemsStartingAt: startIndex count: size
+
 - itemsStartingWhere: conditionBlock count: size
 It finds first item where condition is true and then it returns "size" items starting from found position
+
 - itemsWhere: conditionBlock
 It collects all items where conditionBlock is true
+
 - allItems
+- size
 
 These methods are safe to use any time: when user calls them I first ensure that items are ready and if not I rebuild them. 
 Also I protect these methods by #accessGuard mutex. So it is safe to access items from multiple processes.
-I implement and use helper method #protectItemsWhile: to ensure this logic.
+To ensure this logic I implement and use helper method #protectItemsWhile:.
 
 
 
