@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SycMethodCommand",
+	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyShowLocalImplementorsCommand",
+	"type" : "normal"
+}
