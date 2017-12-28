@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySimpleTag",
+	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyOverriddenTag",
+	"type" : "normal"
+}
