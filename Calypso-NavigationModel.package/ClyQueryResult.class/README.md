@@ -1,4 +1,63 @@
-My subclasses represent specific kind of environment content, typed collection of items, concrete view on enviroment. 
+I represent collection of items retrieved by query from environment. 
+My subclasses implement specific format or transformation of items. They should implement method:
+
+- fillWith: items 
+
+Any query has special parameter #requiredResult which specifies what kind of result should represent retrieved items. It is an instance of result which used as prototype to create actual result instances. 
+
+When query is executed at first time the navigation environment prepares new instance of required result:
+	
+	actualResult := aQuery prepareNewResult.
+
+where query asks #requiredResult for: 
+
+	actualResult := requiredResult prepareNewFor: aQuery in: environment
+
+Then actualResult is cached using query as a key. And subsequent query execution just returns existing value.
+
+Thus my instances describe required result they can be implementeed using composition of other objects. So different instances of same result class can lead to different result of query.
+For example there is ClySortedQueryResult with #sortFunction variable. It allows to sort retrieved items using different criteria and different direction (ascending or descending).
+
+Since requiredResult is part of query it is used in query comparison and hashing logic. And therefore my subclasses should correctly implement equality and hash operations when they introduce parameters.
+Also instances which are used as required result should be immutable because instead modification of result can corrupt cache of queries. 
+To ensure this property #requiredResult is marked as readOnlyObject when it is assigned to the query.
+
+Actual query execution is initiated by me using method #rebuildIfNeeded. Navigation environment calls it before returning result to the user.
+
+I maintain special flag #needsRebuild to detect that existing items are dirty or are not built yet. So at first time #rebuildIfNeeded will lead to actual query execution (result building). But then it will do nothing until update will be not requested again.
+
+So #rebuildIfNeeded will call #rebuild which will ask #buildingQuery to build result: 
+
+	aQuery buildResult: self 
+
+At the end aQuery fills result instance with items retrieved from the scope of environment.
+
+Notice that #rebuild itself is private method. Users should use #rebuildIfNeeded. In fact users do not need it too because it is lazely evaluated when my items are accessed. But in case when query is executed it is evaluated explicitly by navigation environment. So callers always receive fresh result.
+
+My instances are safe to be used from multiple processes. Building and updating of items are protected by my #accessGuard mutex.
+
+I provide several methods to access built items: 
+
+- itemsStartingAt: startIndex count: size
+- itemsStartingWhere: conditionBlock count: size
+It finds first item where condition is true and then it returns "size" items starting from found position
+- itemsWhere: conditionBlock
+It collects all items where conditionBlock is true
+- allItems
+
+These methods are safe to use any time: when user calls them I first ensure that items are ready and if not I rebuild them. 
+Also I protect these methods by #accessGuard mutex. So it is safe to access items from multiple processes.
+I implement and use helper method #protectItemsWhile: to ensure this logic.
+
+
+
+
+
+I am a root of hierarchy of different kind of query results which provide special formatting or transformation of retrieved items.
+
+Subclasses format or transform given items
+My subclasses represent specific kind of query result.
+
 For example there are ClySortedClasses and ClyHierarchicallySortedClasses. Both are represent classes from given scope but structure of representation are different.
 Subclasses specify position and depth of each item which belongs to them. In above example same class could have different position and depth inside different content.  
 

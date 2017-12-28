@@ -1,7 +1,7 @@
 queries
-itemsStartingWhere: blockCondition count: size
+itemsStartingWhere: conditionBlock count: size
 
 	| firstItemIndex |
-	firstItemIndex := items findFirst: blockCondition.
+	firstItemIndex := items findFirst: conditionBlock.
 	firstItemIndex = 0 ifTrue: [ ^#() ].
 	^self itemsStartingAt: firstItemIndex count: size

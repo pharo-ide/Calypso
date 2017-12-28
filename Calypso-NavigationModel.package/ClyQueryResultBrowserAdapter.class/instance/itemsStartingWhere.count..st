@@ -1,9 +1,9 @@
 queries
-itemsStartingWhere: blockCondition count: size
+itemsStartingWhere: conditionBlock count: size
 	
 	actualResult protectItemsWhile: [
 		actualResult items doWithIndex: [ :each :i |
-			 (blockCondition value: each asCalypsoBrowserItem) 
+			 (conditionBlock value: each asCalypsoBrowserItem) 
 					ifTrue: [	^self itemsStartingAt: i count: size	]]
 	].
 

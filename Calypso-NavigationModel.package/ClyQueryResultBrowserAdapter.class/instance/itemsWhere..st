@@ -1,11 +1,11 @@
 queries
-itemsWhere: aBlockClosure 
+itemsWhere: conditionBlock 
 	| found item |
 	actualResult protectItemsWhile: [
 		found := OrderedCollection new.
 		actualResult items doWithIndex: [ :each :i | 
 			item := each asCalypsoBrowserItem.
-			(aBlockClosure value: item)	ifTrue: [ 
+			(conditionBlock value: item)	ifTrue: [ 
 				item position: i.
 				item prepareIn: self environment.	
 				found add: item ] ].
