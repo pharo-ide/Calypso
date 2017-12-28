@@ -37,7 +37,7 @@ Notice that #rebuild itself is private method. Users should use #rebuildIfNeeded
 In the case when you want force update there are two methods: 
 
 - forceRebuild 
-It set flag #needsRebuild to true and notify observers about changes.
+It set flag #needsRebuild to true and notify observers about changes (observers will be explained below)
 
 - forceLazyRebuild 
 It silently set flag #needsRebuild to true without any notification to observers.
@@ -61,6 +61,7 @@ It finds first item where condition is true and then it returns "size" items sta
 It collects all items where conditionBlock is true
 
 - allItems
+
 - size
 
 These methods are safe to use any time: when user calls them I first ensure that items are ready and if not I rebuild them. 
@@ -68,16 +69,14 @@ Also I protect these methods by #accessGuard mutex. So it is safe to access item
 To ensure this logic I implement and use helper method #protectItemsWhile:.
 
 
+-------------todo-----------
+metadata 
+-------------todo-----------
+changes 
+-------------todo-----------
+openBrowserCursor
+-------------todo-----------
 
-
-
-I am a root of hierarchy of different kind of query results which provide special formatting or transformation of retrieved items.
-
-Subclasses format or transform given items
-My subclasses represent specific kind of query result.
-
-For example there are ClySortedClasses and ClyHierarchicallySortedClasses. Both are represent classes from given scope but structure of representation are different.
-Subclasses specify position and depth of each item which belongs to them. In above example same class could have different position and depth inside different content.  
 
 So my items are instances of ClyEnvironmentItem with position and depth inside me. Also I could extend items with arbitrary properties (ClyEnvironmentItemProperty). These properties can be used by tools to provide specific look&feel. 
 Because properties are dynamic and extendable my subclasses usually not specify any of them but instead this task is delegated to environment plugins and only at time when items are requested by user. It provide optimization when properties are complex and require time to compute. Only requested items will resolve properties and only once.
