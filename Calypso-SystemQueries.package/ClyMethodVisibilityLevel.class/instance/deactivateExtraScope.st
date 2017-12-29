@@ -1,3 +1,3 @@
 controlling
 deactivateExtraScope
-	^visibleClassScope withoutBasisObjects: extraClassScope collectAllClasses
+	^visibleClassScope reducedByClassesFrom: extraClassScope
