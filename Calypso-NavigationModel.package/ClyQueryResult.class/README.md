@@ -93,10 +93,16 @@ When cursor is not needed anymore it should be closed. It will unsubscribe obser
 
 	cursor close
 
-For the details on what you can do with cursor look at comments of ClyBrowserQueryCursor	class.
+With cursor you are able access items as ClyBrowserItem instances. For example: 
+
+	cursor currentItem.
+	cursor moveToNext.
+	cursor findItemsWhere: conditionBlock 
+	
+For more details about cursor look at ClyBrowserQueryCursor comments. And read comments of ClyBrowserItem.
 	
 	
-	
+
 	
 	
 -------------todo-----------
