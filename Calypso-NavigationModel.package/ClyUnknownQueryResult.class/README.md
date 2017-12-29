@@ -1,1 +1,5 @@
-I represent kind of null environment content
+I implement null pattern for query result.
+
+Users should use my singleton #instance on class side: 
+
+	ClyUnknownQueryResult instance
