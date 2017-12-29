@@ -3,7 +3,7 @@ My subclasses implement specific format or transformation of items. They should 
 
 - fillWith: items 
 
-Any query has special parameter #requiredResult which specifies what kind of result should represent retrieved items. It is an instance of result which used as prototype to create actual result instances. 
+Any query has special parameter #requiredResult which specifies what kind of result should represent retrieved items. It is an instance of result which is used as prototype to create actual result instances. 
 
 When query is executed at first time the navigation environment prepares new instance of required result:
 	
@@ -15,10 +15,10 @@ where query asks #requiredResult for:
 
 Then actualResult is cached using query as a key. And subsequent query execution just returns existing value.
 
-Thus my instances describe required result they can be implementeed using composition of other objects. So different instances of same result class can lead to different result of query.
+Thus my instances describe required result and they can be implemented using composition of other objects. So different instances of same result class can lead to different result of query.
 For example there is ClySortedQueryResult with #sortFunction variable. It allows to sort retrieved items using different criteria and different direction (ascending or descending).
 
-Since requiredResult is part of query it is used in query comparison and hashing logic. And therefore my subclasses should correctly implement equality and hash operations when they introduce parameters.
+Since requiredResult is part of query it is used in query comparison and hashing logic. And therefore my subclasses should correctly implement equality and hash operations when they introduce new parameters.
 Also instances which are used as required result should be immutable because instead modification of result can corrupt cache of queries. 
 To ensure this property #requiredResult is marked as readOnlyObject when it is assigned to the query.
 
@@ -34,17 +34,18 @@ At the end aQuery fills result instance with items retrieved from the scope of e
 
 Notice that #rebuild itself is private method. Users should use #rebuildIfNeeded. In fact users do not need it too because it is lazely evaluated when my items are accessed. But in case when query is executed it is evaluated explicitly by navigation environment. So callers always receive fresh result.
 
-In the case when you want force update there are two methods: 
+In the case when you want force items update there are two methods: 
 
 - forceRebuild 
-It set flag #needsRebuild to true and notify observers about changes (observers will be explained below)
+It set flag #needsRebuild to true and notify observers about changes (observers will be explained below).
 
 - forceLazyRebuild 
 It silently set flag #needsRebuild to true without any notification to observers.
 
 In first case observers can handle notification by requesting new items from the result instance.
-For example if UI widget observes result items and shows them to the user the #forceRebuild message will update items immediately. 
-But #forceLazyRebuild will not update items until user request them manually.
+For example if UI widget observes result items and shows them to the user the #forceRebuild message will update shown items immediately. 
+But #forceLazyRebuild will not update items until user request it manually.
+In addition both methods reset items to nil.
 
 There is extra helper method #cancelRebuild which reset rebuild flag and reset items to the empty collection.
 
@@ -55,7 +56,7 @@ I provide several methods to access built items:
 - itemsStartingAt: startIndex count: size
 
 - itemsStartingWhere: conditionBlock count: size
-It finds first item where condition is true and then it returns "size" items starting from found position
+It finds first item where condition is true and then it returns "size" items starting from the found position
 
 - itemsWhere: conditionBlock
 It collects all items where conditionBlock is true
@@ -64,11 +65,40 @@ It collects all items where conditionBlock is true
 
 - size
 
-These methods are safe to use any time: when user calls them I first ensure that items are ready and if not I rebuild them. 
+These methods are safe to be used at any time: when user calls them I first ensure that items are ready and if not I rebuild them. 
 Also I protect these methods by #accessGuard mutex. So it is safe to access items from multiple processes.
-To ensure this logic I implement and use helper method #protectItemsWhile:.
+To ensure this logic I use helper method #protectItemsWhile:.
 
+So I am cached by navigation environment. And this cache requires updates when underlying system is changed.
+For this purpose navigation environment subscribes on system changes. And when any change happens the environment asks every result in cache to handle given event object:
 
+	aQueryResult handleSystemChange: aSystemAnnouncement
+ 
+To handle system change I ask my #buildingQuery if it is affected by given event. And if it is affected I force rebuild using #itemsChanged method where I announce that I was changed.
+I allow my users to be notified when my items are changed. Users should subscribe to me using #subscribe: method:
+	
+	aQueryResult subscribe: anObserver 
+	
+Underhood I subscribe anObserver for ClyEnvironmentChanged to my #announcer. And it will be notified using #itemsChanged message. So observers should implement this method.
+Also observers must #unsubscribe: when they are not interested anymore. 
+
+For the UI support I provide special stream kind access in the form of ClyBrowserQueryCursor instance which returns items as ClyBrowserItem instances.
+ClyBrowserItem is a wrapper over actual result item which provides UI specific information like position in the result, depth in the hierarchy and extendable set of properties related to the underlying object.
+To get cursor instance you should open it for concrete observer:
+
+	cursor := aQueryResult openBrowserCursorFor: anObserver
+
+anObserver will be subscribed on my changes and new cursor instance will be return to the caller.
+When cursor is not needed anymore it should be closed. It will unsubscribe observer in addition:
+
+	cursor close
+
+For the details on what you can do with cursor look at comments of ClyBrowserQueryCursor	class.
+	
+	
+	
+	
+	
 -------------todo-----------
 metadata 
 -------------todo-----------
