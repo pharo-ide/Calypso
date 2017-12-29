@@ -1,7 +1,7 @@
-queries
+private
 protectItemsWhile: aBlock
 
-	^accessGuard critical: [
+	^self protectAccessWhile: [ 
 		self rebuildIfNeeded.
 		aBlock value
 	]

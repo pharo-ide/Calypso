@@ -5,6 +5,6 @@ forceLazyRebuild
 	but instead allow them update items manually. 
 	After this method is called observers will be updated only when they will try access items again"
 	
-	accessGuard critical: [ 	
+	self protectAccessWhile: [ 	
 		needsRebuild := true.
 		items := nil]
