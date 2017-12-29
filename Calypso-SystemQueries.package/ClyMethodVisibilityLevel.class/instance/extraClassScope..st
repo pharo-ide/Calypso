@@ -1,3 +1,4 @@
 accessing
-extraClassScope: anObject
-	extraClassScope := anObject
+extraClassScope: aScope
+	extraClassScope := aScope.
+	self detectActiveState
