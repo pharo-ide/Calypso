@@ -1,3 +1,0 @@
-testing
-belongsToContent: anEnvironmentContentClass
-	^ownerDataSource isBasedOn: anEnvironmentContentClass 

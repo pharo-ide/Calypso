@@ -1,0 +1,3 @@
+converting
+asLocalClassScope
+	self subclassResponsibility 
