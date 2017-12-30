@@ -1,4 +1,4 @@
-testing
+private
 isOverridesAction: aButton	
 
 	(aButton isKindOf: IconicButton) ifTrue: [ 

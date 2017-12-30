@@ -1,4 +1,4 @@
-testing
+private
 isTestAction: aButton	
 
 	(aButton isKindOf: IconicButton) ifFalse: [^false].
