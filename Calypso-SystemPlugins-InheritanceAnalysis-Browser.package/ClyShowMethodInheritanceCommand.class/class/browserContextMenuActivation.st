@@ -1,5 +1,5 @@
 activation
-methodContextMenuActivation
+browserContextMenuActivation
 	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyMethod asCalypsoItemContext 
