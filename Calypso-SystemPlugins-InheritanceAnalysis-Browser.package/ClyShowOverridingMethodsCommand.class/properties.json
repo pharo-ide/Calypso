@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyShowOverrideMethodsCommand",
+	"name" : "ClyShowOverridingMethodsCommand",
 	"type" : "normal"
 }

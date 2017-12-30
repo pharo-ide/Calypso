@@ -1,3 +1,3 @@
 accessing
 defaultMenuItemName 
-	^'Overrides'
+	^'Overriding methods'
