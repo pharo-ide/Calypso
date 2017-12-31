@@ -1,6 +1,7 @@
 controlling
 processMethodChange: aMethodAnnouncement
 	| method |
+	
 	method := aMethodAnnouncement methodAffected.
 	method origin superclass ifNotNil: [ :superclass |
 		(superclass lookupSelector: method selector) ifNotNil: [:overriddenMethod |
