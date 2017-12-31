@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyOverrideTag",
+	"name" : "ClyOverridingMethodTag",
 	"type" : "normal"
 }

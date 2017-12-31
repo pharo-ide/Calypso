@@ -1,3 +1,3 @@
 running
 groupProviderClass
-	^ClyOverrideMethodGroupProvider 
+	^ClyOverridingMethodGroupProvider 

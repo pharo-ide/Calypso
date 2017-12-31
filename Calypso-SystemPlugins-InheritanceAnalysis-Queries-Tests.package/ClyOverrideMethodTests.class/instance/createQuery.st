@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyOverrideMethods from: ClyClassScope of: ClyClassWhichInheritsAbstractClass in: environment
+	^ClyOverridingMethods from: ClyClassScope of: ClyClassWhichInheritsAbstractClass in: environment

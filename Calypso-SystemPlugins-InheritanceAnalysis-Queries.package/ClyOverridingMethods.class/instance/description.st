@@ -1,4 +1,4 @@
 printing
 description
 
-	^'override methods'
+	^'overriding methods'

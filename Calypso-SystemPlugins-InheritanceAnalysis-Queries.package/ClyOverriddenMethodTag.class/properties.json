@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "DenisKudryashov 2/13/2017 12:24",
-	"super" : "ClySingleMethodGroupProvider",
+	"commentStamp" : "",
+	"super" : "ClySimpleTag",
 	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyOverrideMethodGroupProvider",
+	"name" : "ClyOverriddenMethodTag",
 	"type" : "normal"
 }

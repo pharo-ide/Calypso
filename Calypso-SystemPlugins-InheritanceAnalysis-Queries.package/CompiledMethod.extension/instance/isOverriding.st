@@ -1,4 +1,4 @@
 *Calypso-SystemPlugins-InheritanceAnalysis-Queries
-isOverride
+isOverriding
 
 	^(self origin superclass ifNotNil: [ :c | c lookupSelector: self selector]) notNil

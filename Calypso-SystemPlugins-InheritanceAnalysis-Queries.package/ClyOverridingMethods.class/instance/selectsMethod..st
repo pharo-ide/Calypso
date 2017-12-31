@@ -1,3 +1,3 @@
 testing
 selectsMethod: aMethod
-	^aMethod isOverride
+	^aMethod isOverriding

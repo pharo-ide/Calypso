@@ -1,5 +1,5 @@
 testing
 wantsDecorateTableCellOf: aDataSourceItem
 
-	^(aDataSourceItem isMarkedWith: ClyOverrideTag)
-		or: [ aDataSourceItem isMarkedWith: ClyOverriddenTag ]
+	^(aDataSourceItem isMarkedWith: ClyOverridingMethodTag)
+		or: [ aDataSourceItem isMarkedWith: ClyOverriddenMethodTag ]
