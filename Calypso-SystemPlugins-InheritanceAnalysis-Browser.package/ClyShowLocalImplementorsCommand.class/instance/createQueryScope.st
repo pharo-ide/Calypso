@@ -1,7 +1,9 @@
 execution
 createQueryScope
 
-	| classes |
+	| classes scope |
 	classes := methods collect: [ :each | each origin].
 	
-	^self createInheritanceScopeFrom: classes
+	scope := self createInheritanceScopeFrom: classes.
+	scope := scope withMetaLevel: classes anyOne metaLevelScope.
+	^scope
