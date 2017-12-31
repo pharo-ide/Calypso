@@ -1,6 +1,5 @@
 controlling
 processClassRemoval: aClassRemoved
 
-	| class |
-	class := aClassRemoved classAffected.
-	environment systemChanged: (ClyClassHierarchyChanged modifiedClass: class)
+	environment systemChanged: (
+		ClyOverriddenSuperclassesChanged overridingSubclass: aClassRemoved classAffected)
