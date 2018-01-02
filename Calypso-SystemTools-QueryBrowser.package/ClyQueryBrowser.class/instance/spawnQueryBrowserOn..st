@@ -2,6 +2,8 @@ navigation
 spawnQueryBrowserOn: aQuery
 	
 	| actualQuery |
-	actualQuery := activeScope adoptQuery: aQuery.
+	actualQuery := aQuery isBoundToEnvironment 
+		ifTrue: [ aQuery ]
+		ifFalse: [ activeScope adoptQuery: aQuery].
 	
-	super spawnQueryBrowserOn: actualQuery
+	^super spawnQueryBrowserOn: actualQuery

@@ -1,4 +1,3 @@
 instance creation
 of: selectors from: aScope
-	^(self from: aScope)
-		selectors: selectors
+	^aScope adoptQuery: (self of: selectors)

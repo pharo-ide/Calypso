@@ -6,4 +6,5 @@ spawnBrowser: aBrowserClass withState: navigationBlock
 	
 	browser prepareInitialStateBy: navigationBlock.
 	self openAnotherBrowser: browser.
-	browser wasSpawnedFrom: self
+	browser wasSpawnedFrom: self.
+	^browser
