@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyOverrideMethodTests",
+	"name" : "ClyOverridingMethodsTests",
 	"type" : "normal"
 }

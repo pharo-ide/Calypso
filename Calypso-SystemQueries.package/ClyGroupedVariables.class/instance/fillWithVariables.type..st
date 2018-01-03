@@ -2,7 +2,7 @@ building
 fillWithVariables: varsPerClass type: varTypeClass
 
 	| classMap vars declarationGroup varItem methodQueryScope |
-	methodQueryScope := self queryScope asScope: ClyClassScope.
+	methodQueryScope := self queryScope asLocalClassScope.
 	classMap := hierarchy buildFrom: varsPerClass keys.
 	classMap doInOrder: [ :eachClass |
 		vars := varsPerClass at: eachClass.

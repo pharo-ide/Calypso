@@ -8,4 +8,4 @@ testConvertingToReducedScopeByExtraClassScope
 	convertedScope := increasedScope reducedByClassesFrom: extraClassScope.
 	
 	self assert: convertedScope class equals: scope class.
-	self assert: convertedScope basisObjects equals: scope basisObjects
+	self assert: convertedScope basisObjects equals: (scope basisObjects collect: #instanceSide)

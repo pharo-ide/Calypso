@@ -1,4 +1,4 @@
-meta level
+private
 methodGroupProvidersDo: aBlock
 	| providers |
 

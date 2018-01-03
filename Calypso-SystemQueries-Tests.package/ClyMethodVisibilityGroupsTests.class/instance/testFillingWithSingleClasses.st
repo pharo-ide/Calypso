@@ -1,7 +1,6 @@
 tests
 testFillingWithSingleClasses
 	| group visibilityLevel |
-	query scope basisObjects: {ClyClass1FromP1}.
 	queryResult fillWith: {ClyClass2FromP1}.
 	self assert: queryResult size equals: 1.
 	group := queryResult items first actualObject.

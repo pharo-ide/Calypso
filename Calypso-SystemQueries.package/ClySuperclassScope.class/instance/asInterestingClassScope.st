@@ -1,4 +1,3 @@
 converting
 asInterestingClassScope
-	^(self asScope: ClyInterestingSuperclassScope)
-		localClassScope: localClassScope
+	^self asScope: ClyInterestingSuperclassScope 

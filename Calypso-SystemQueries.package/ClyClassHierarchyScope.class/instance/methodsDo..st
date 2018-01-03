@@ -1,4 +1,4 @@
-meta level
+queries
 methodsDo: aBlock
 
 	self classesDo: [ :eachClass | 

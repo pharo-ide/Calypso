@@ -1,4 +1,4 @@
-meta level
+private
 collectAllClasses
 	| classes |
 	classes := OrderedCollection new: basisObjects size.

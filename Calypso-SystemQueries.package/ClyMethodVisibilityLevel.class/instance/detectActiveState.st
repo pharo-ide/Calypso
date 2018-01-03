@@ -2,7 +2,7 @@ controlling
 detectActiveState
 
 	extraClassScope classesDo: [:each | 
-		(visibleClassScope isBasedOn: each) ifTrue: [ 
+		(visibleClassScope includesClass: each) ifTrue: [ 
 			^isActive := true ] ].
 	
 	isActive := false

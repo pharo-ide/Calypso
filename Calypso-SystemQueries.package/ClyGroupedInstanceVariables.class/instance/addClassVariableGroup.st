@@ -4,7 +4,7 @@ addClassVariableGroup
 	| variableQuery methodQuery group |
 	variableQuery := ClyAllClassVariables from: self queryScope.
 	methodQuery := ClyVariableReferences 
-		from: (self queryScope asScope: ClyClassScope)
+		from: self queryScope asLocalClassScope
 		toVariablesFrom: variableQuery.
 	
 	group := ClyMethodGroup 

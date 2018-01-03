@@ -1,4 +1,4 @@
-enumerating
+queries
 classesDo: aBlock
 
 	basisObjects do: [ :each | 

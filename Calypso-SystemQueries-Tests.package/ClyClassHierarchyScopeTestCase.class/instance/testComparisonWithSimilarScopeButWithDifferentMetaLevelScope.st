@@ -5,6 +5,6 @@ testComparisonWithSimilarScopeButWithDifferentMetaLevelScope
 	scope := self createSampleScope.
 	scope2 := self createSampleScope.
 	
-	self deny: scope localClassScope = ClyInstanceSideScope.
-	scope2 localClassScope: ClyInstanceSideScope.
+	self deny: scope localScopeClass = ClyInstanceSideScope.
+	scope2 localScopeClass: ClyInstanceSideScope.
 	self deny: scope = scope2
