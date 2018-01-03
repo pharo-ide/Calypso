@@ -1,6 +1,6 @@
 tests
 testFromThreeMethods
-	Breakpoint new node: (ClyClassWithBreakMethods >> #breakMethod) ast; always; install.
+	self installBreakpointInto: (ClyClassWithBreakMethods >> #breakMethod).
 	self queryFromScope: ClyMethodScope ofAll: {
 		ClyClassWithHaltMethods >> #haltMethod1. 
 		ClyClassWithBreakMethods >> #breakMethod.

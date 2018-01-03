@@ -1,5 +1,5 @@
 tests
 testSelectsMethodWithBreakpoint
-	Breakpoint new node: (ClyClassWithBreakMethods >> #breakMethod) ast; always; install.
+	self installBreakpointInto: (ClyClassWithBreakMethods >> #breakMethod).
 
 	self assert: (query selectsMethod: ClyClassWithBreakMethods >> #breakMethod)
