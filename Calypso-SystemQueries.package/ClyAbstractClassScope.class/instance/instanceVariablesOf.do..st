@@ -1,4 +1,4 @@
-meta level
+private
 instanceVariablesOf: definingClass do: aBlock
 
 	self metaLevelsOf: definingClass do: [ :concreteMetaLevelClass |

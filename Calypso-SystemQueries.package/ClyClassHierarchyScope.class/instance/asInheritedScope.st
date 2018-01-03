@@ -2,4 +2,4 @@ converting
 asInheritedScope
 	^ClyInheritedScopeProvider
 		createScopeFrom: self 
-		withLocalScope: localClassScope
+		withLocalScope: localScopeClass

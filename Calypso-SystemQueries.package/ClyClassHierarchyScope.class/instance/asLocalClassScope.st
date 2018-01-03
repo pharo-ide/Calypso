@@ -1,3 +1,3 @@
 converting
 asLocalClassScope
-	^self asScope: localClassScope 
+	^self asScope: localScopeClass 

@@ -3,5 +3,5 @@ testHasDefaultClassLocalScope
 
 	scope := self createSampleScope.
 	
-	self assert: scope localClassScope equals: ClyClassScope 
+	self assert: scope localScopeClass equals: ClyClassScope 
 	

@@ -2,5 +2,5 @@ accessing
 visibleClassScope: aScope
 	super 	visibleClassScope: aScope.
 	extraClassScope := (visibleClassScope asScope: ClyInheritedTraitScope).
-	extraClassScope localClassScope: visibleClassScope class.
+	extraClassScope localScopeClass: visibleClassScope class.
 	self detectActiveState 
