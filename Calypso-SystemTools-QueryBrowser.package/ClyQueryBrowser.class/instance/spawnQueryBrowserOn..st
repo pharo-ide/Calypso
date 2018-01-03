@@ -4,6 +4,6 @@ spawnQueryBrowserOn: aQuery
 	| actualQuery |
 	actualQuery := aQuery isBoundToEnvironment 
 		ifTrue: [ aQuery ]
-		ifFalse: [ activeScope adoptQuery: aQuery].
+		ifFalse: [ aQuery withScope: activeScope].
 	
 	^super spawnQueryBrowserOn: actualQuery
