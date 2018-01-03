@@ -1,3 +1,3 @@
 converting
 asInheritedScope
-	self subclassResponsibility 
+	^ClyInheritedScopeProvider createScopeFrom: self
