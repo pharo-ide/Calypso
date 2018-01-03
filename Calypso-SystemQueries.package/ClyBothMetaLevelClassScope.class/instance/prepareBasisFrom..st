@@ -1,3 +1,0 @@
-initialization
-prepareBasisFrom: classes
-	^classes
