@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyClassHierarchyChanged",
+	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"overridingSubclass"
+	],
+	"name" : "ClyOverriddenSuperclassesChanged",
+	"type" : "normal"
+}

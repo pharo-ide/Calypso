@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyShowLocalImplementorsCommand",
+	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyShowOverriddenMethodsCommand",
+	"type" : "normal"
+}

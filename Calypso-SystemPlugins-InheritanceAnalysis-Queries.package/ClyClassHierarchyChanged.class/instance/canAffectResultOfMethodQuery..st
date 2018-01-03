@@ -1,0 +1,3 @@
+testing
+canAffectResultOfMethodQuery: aMethodQuery
+	^true
