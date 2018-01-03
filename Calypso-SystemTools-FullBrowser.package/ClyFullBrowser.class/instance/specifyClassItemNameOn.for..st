@@ -3,7 +3,7 @@ specifyClassItemNameOn: nameMorph for: classItem
 	| definition |
 	nameMorph contents: classItem name.
 	
-	definition := classItem getProperty: ClyClassDefinitionProperty.
+	definition := classItem systemDefinition.
 	
 	self packageSelection isMultipleSelected ifTrue: [
 		nameMorph contents: (definition printFullNameOf: classItem)].
