@@ -1,10 +1,11 @@
 item decoration
 decorateBrowserItem: anItem ofMethod: aMethod
 
-	| testMethod |
+	| testMethod testResult |
 	aMethod isTestMethod ifTrue: [ ^self ].
 
 	testMethod := self findTestMethodCovering: aMethod.
 	testMethod ifNil: [ ^self ].
 	
-	anItem addProperty: (ClyTestResultProperty ofMethod: testMethod)
+	testResult := (ClyTestResultProperty ofMethod: testMethod).
+	anItem addProperty: (ClyTestedMethodProperty coveringTest: testMethod result: testResult)

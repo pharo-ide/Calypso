@@ -2,7 +2,7 @@ execution
 targetTestCasesFor: testItem
 	| fullResult itemTestCases |
 	itemTestCases := IdentitySet new.
-	fullResult := testItem getProperty: ClyTestResultProperty.
+	fullResult := self testResultOf: testItem.
 	
 	runTestCases do: [:each |
 		fullResult concreteResultOf: each ifPresent: [ :concreteResult | 

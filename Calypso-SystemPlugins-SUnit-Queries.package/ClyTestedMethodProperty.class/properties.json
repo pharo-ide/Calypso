@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserItemProperty",
+	"category" : "Calypso-SystemPlugins-SUnit-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"coveringTest",
+		"testResult"
+	],
+	"name" : "ClyTestedMethodProperty",
+	"type" : "normal"
+}

@@ -2,9 +2,9 @@ execution
 buildResultIcon
 
 	| fullResult |
-	fullResult := testItems first getProperty: ClyTestResultProperty.
+	fullResult := self testItemsResult.
 	runTestCases do: [ :each | 
 		fullResult concreteResultOf: runTestCases first ifPresent: [:testResult |
 			^testResult createIcon ]].
 	
-	^super buildResultIcon
+	^fullResult createIcon
