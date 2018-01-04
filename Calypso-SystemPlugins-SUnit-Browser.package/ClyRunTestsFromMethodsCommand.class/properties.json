@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"targetTestCases"
+		"runTestCases"
 	],
 	"name" : "ClyRunTestsFromMethodsCommand",
 	"type" : "normal"

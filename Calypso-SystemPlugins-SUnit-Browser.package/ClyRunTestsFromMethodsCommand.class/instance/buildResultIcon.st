@@ -3,8 +3,8 @@ buildResultIcon
 
 	| fullResult |
 	fullResult := testItems first getProperty: ClyTestResultProperty.
-	targetTestCases do: [ :each | 
-		fullResult concreteResultOf: targetTestCases first ifPresent: [:testResult |
+	runTestCases do: [ :each | 
+		fullResult concreteResultOf: runTestCases first ifPresent: [:testResult |
 			^testResult createIcon ]].
 	
 	^super buildResultIcon
