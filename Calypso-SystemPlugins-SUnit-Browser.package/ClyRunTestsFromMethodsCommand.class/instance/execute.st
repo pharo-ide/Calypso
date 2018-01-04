@@ -1,3 +1,3 @@
 execution
 execute
-	testItems do: [:each | self runTest: each actualObject ]
+	testItems do: [:each | self runTestItem: each ]

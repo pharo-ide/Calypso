@@ -1,4 +1,4 @@
 instance creation
 ofMethod: aMethod
-	^self new 
+	^ClyCompositeTestResultProperty new 
 		accumulateTestMethod: aMethod
