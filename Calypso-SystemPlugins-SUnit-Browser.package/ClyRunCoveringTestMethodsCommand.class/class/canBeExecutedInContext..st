@@ -2,4 +2,4 @@ testing
 canBeExecutedInContext: aToolContext
 	
 	^aToolContext selectedMethodItems anySatisfy: [ :each | 
-			each hasProperty: ClyTestedMethodProperty ]
+		each hasProperty: ClyTestedMethodProperty ]
