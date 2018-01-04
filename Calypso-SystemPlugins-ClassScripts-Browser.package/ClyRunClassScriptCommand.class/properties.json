@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdCommand",
+	"category" : "Calypso-SystemPlugins-ClassScripts-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetClass",
+		"script"
+	],
+	"name" : "ClyRunClassScriptCommand",
+	"type" : "normal"
+}
