@@ -1,3 +1,3 @@
 accessing
 criteriaString: anObject
-	criteriaString := anObject
+	criteriaString := anObject asString
