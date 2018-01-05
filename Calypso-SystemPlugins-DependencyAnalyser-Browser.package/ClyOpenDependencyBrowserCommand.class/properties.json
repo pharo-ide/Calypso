@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SycPackageCommand",
+	"category" : "Calypso-SystemPlugins-DependencyAnalyser-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyOpenDependencyBrowserCommand",
+	"type" : "normal"
+}
