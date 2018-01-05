@@ -87,16 +87,18 @@ baseline: spec
 				spec requires: #(#'Calypso-SystemTools-Core' ). ];
 			
 			package: #'Calypso-SystemPlugins-Reflectivity-Browser' with: [
-				spec requires: #(#'Calypso-SystemPlugins-Reflectivity-Queries' #'Calypso-SystemTools-FullBrowser' ). ];
+				spec requires: #(#'Calypso-SystemPlugins-Reflectivity-Queries' #'Calypso-SystemTools-FullBrowser' ) ];
 			package: #'Calypso-SystemPlugins-Reflectivity-Queries' with: [
-				spec requires: #(#'Calypso-SystemQueries' ). ];
+				spec requires: #(#'Calypso-SystemQueries' ) ];
 			package: #'Calypso-SystemPlugins-Reflectivity-Queries-Tests' with: [
-				spec requires: #(#'Calypso-SystemQueries-Tests' #'Calypso-SystemPlugins-Reflectivity-Queries' ). ];
+				spec requires: #(#'Calypso-SystemQueries-Tests' #'Calypso-SystemPlugins-Reflectivity-Queries' ) ];
 			
 			package: #'Calypso-SystemPlugins-SUnit-Browser' with: [
-				spec requires: #(#'Calypso-SystemPlugins-SUnit-Queries' #'Calypso-SystemTools-FullBrowser' ). ];
+				spec requires: #(#'Calypso-SystemPlugins-SUnit-Queries' #'Calypso-SystemTools-FullBrowser' ) ];
 			package: #'Calypso-SystemPlugins-SUnit-Queries' with: [
-				spec requires: #(#'Calypso-SystemQueries' ). ];
+				spec requires: #(#'Calypso-SystemQueries' ) ];
+			package: #'Calypso-SystemPlugins-SUnit-Queries-Tests' with: [
+				spec requires: #(#'Calypso-SystemQueries-Tests' #'Calypso-SystemPlugins-SUnit-Queries' ) ];
 			
 			package: #'Calypso-SystemPlugins-Undeclared-Queries' with: [
 				spec requires: #(#'Calypso-SystemQueries' ). ];
@@ -163,6 +165,6 @@ baseline: spec
 			
 			group: 'FullEnvironment' with: #(#'Calypso-SystemPlugins-Traits-Queries' #'Calypso-SystemPlugins-Monticello-Queries' #'Calypso-SystemPlugins-SUnit-Queries' 'Environment' 'Calypso-SystemPlugins-InheritanceAnalysis-Queries' #'Calypso-SystemPlugins-FileOut-Queries' #'Calypso-SystemPlugins-Deprecation-Queries' #'Calypso-SystemPlugins-Reflectivity-Queries' #'Calypso-SystemPlugins-Critic-Queries' #'Calypso-SystemPlugins-Undeclared-Queries' #'Calypso-SystemPlugins-FFI-Queries' #'Calypso-SystemPlugins-Flags-Queries' #'Calypso-SystemPlugins-ClassScripts-Queries');
 			
-			group: 'Tests' with: #(#'Calypso-NavigationModel-Tests' #'Calypso-SystemQueries-Tests' #'Calypso-ProcessQueries-Tests' #'Calypso-SystemTools-FullBrowser-Tests' #'Calypso-SystemTools-QueryBrowser-Tests' #'Calypso-SystemPlugins-Traits-Queries-Tests' 'Calypso-SystemPlugins-InheritanceAnalysis-Queries-Tests' #'Calypso-SystemPlugins-Deprecation-Queries-Tests' #'Calypso-SystemPlugins-Reflectivity-Queries-Tests' #'Calypso-SystemPlugins-Critic-Queries-Tests' #'Calypso-SystemPlugins-Undeclared-Queries-Tests' #'Calypso-SystemPlugins-FFI-Queries-Tests' #'Calypso-SystemPlugins-Flags-Queries-Tests' #'Calypso-SystemPlugins-ClassScripts-Queries-Tests');
+			group: 'Tests' with: #(#'Calypso-NavigationModel-Tests' #'Calypso-SystemQueries-Tests' #'Calypso-ProcessQueries-Tests' #'Calypso-SystemTools-FullBrowser-Tests' #'Calypso-SystemTools-QueryBrowser-Tests' #'Calypso-SystemPlugins-Traits-Queries-Tests' 'Calypso-SystemPlugins-InheritanceAnalysis-Queries-Tests' #'Calypso-SystemPlugins-Deprecation-Queries-Tests' #'Calypso-SystemPlugins-Reflectivity-Queries-Tests' #'Calypso-SystemPlugins-SUnit-Queries-Tests' #'Calypso-SystemPlugins-Critic-Queries-Tests' #'Calypso-SystemPlugins-Undeclared-Queries-Tests' #'Calypso-SystemPlugins-FFI-Queries-Tests' #'Calypso-SystemPlugins-Flags-Queries-Tests' #'Calypso-SystemPlugins-ClassScripts-Queries-Tests');
 			
 			group: 'default' with: #('FullEnvironment' 'FullBrowser' 'Tests' ). ].
