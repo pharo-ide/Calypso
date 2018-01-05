@@ -82,10 +82,7 @@ baseline: spec
 				spec requires: #(#'Calypso-SystemPlugins-Monticello-Queries' #'Calypso-SystemTools-FullBrowser' ). ];
 			package: #'Calypso-SystemPlugins-Monticello-Queries' with: [
 				spec requires: #(#'Calypso-SystemQueries' ). ];
-			
-			package: #'Calypso-SystemPlugins-Nautilus-Browser' with: [
-				spec requires: #(#'Calypso-SystemTools-Core' ). ];
-			
+				
 			package: #'Calypso-SystemPlugins-Reflectivity-Browser' with: [
 				spec requires: #(#'Calypso-SystemPlugins-Reflectivity-Queries' #'Calypso-SystemTools-FullBrowser' ) ];
 			package: #'Calypso-SystemPlugins-Reflectivity-Queries' with: [
@@ -163,7 +160,7 @@ baseline: spec
 			group: 'Core' with: #('Environment' 'Browser' );
 			group: 'Environment' with: #(#'Calypso-SystemQueries' #'Calypso-NavigationModel' #'Calypso-ProcessQueries' );
 			
-			group: 'FullBrowser' with: #('Browser' #'Calypso-SystemPlugins-Traits-Browser' #'Calypso-SystemPlugins-Monticello-Browser' #'Calypso-SystemPlugins-SUnit-Browser' #'Calypso-SystemPlugins-Nautilus-Browser' #'Calypso-SystemTools-OldToolCompatibillity' #'Calypso-SystemPlugins-Critic-Browser' 'Calypso-SystemPlugins-InheritanceAnalysis-Browser' #'Calypso-SystemPlugins-FileOut-Browser' #'Calypso-SystemPlugins-MethodDiffTool' #'Calypso-SystemPlugins-Deprecation-Browser' #'Calypso-SystemPlugins-Reflectivity-Browser' #'Calypso-SystemPlugins-Undeclared-Browser' #'Calypso-SystemPlugins-FFI-Browser' #'Calypso-SystemPlugins-Flags-Browser' #'Calypso-SystemPlugins-ClassScripts-Browser' #'Calypso-SystemPlugins-DependencyAnalyser-Browser');
+			group: 'FullBrowser' with: #('Browser' #'Calypso-SystemPlugins-Traits-Browser' #'Calypso-SystemPlugins-Monticello-Browser' #'Calypso-SystemPlugins-SUnit-Browser' #'Calypso-SystemTools-OldToolCompatibillity' #'Calypso-SystemPlugins-Critic-Browser' 'Calypso-SystemPlugins-InheritanceAnalysis-Browser' #'Calypso-SystemPlugins-FileOut-Browser' #'Calypso-SystemPlugins-MethodDiffTool' #'Calypso-SystemPlugins-Deprecation-Browser' #'Calypso-SystemPlugins-Reflectivity-Browser' #'Calypso-SystemPlugins-Undeclared-Browser' #'Calypso-SystemPlugins-FFI-Browser' #'Calypso-SystemPlugins-Flags-Browser' #'Calypso-SystemPlugins-ClassScripts-Browser' #'Calypso-SystemPlugins-DependencyAnalyser-Browser');
 			
 			group: 'FullEnvironment' with: #(#'Calypso-SystemPlugins-Traits-Queries' #'Calypso-SystemPlugins-Monticello-Queries' #'Calypso-SystemPlugins-SUnit-Queries' 'Environment' 'Calypso-SystemPlugins-InheritanceAnalysis-Queries' #'Calypso-SystemPlugins-FileOut-Queries' #'Calypso-SystemPlugins-Deprecation-Queries' #'Calypso-SystemPlugins-Reflectivity-Queries' #'Calypso-SystemPlugins-Critic-Queries' #'Calypso-SystemPlugins-Undeclared-Queries' #'Calypso-SystemPlugins-FFI-Queries' #'Calypso-SystemPlugins-Flags-Queries' #'Calypso-SystemPlugins-ClassScripts-Queries');
 			
