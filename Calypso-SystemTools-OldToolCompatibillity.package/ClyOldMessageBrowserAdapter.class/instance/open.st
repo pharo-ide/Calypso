@@ -1,6 +1,6 @@
 opening
 open
-	| query browser methods |
+	| query methods |
 	methods := messages 
 		select: [:each | (each isRingObject and: [ each isMethod ]) or: [ each isCompiledMethod  ] ]
 		thenCollect: [ :each | each compiledMethod ].
