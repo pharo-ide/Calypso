@@ -1,11 +1,13 @@
 opening
 open
-	| query methods |
+	| query methods comments |
 	methods := messages 
 		select: [:each | (each isRingObject and: [ each isMethod ]) or: [ each isCompiledMethod  ] ]
 		thenCollect: [ :each | each compiledMethod ].
-	
-	query := ClyOldMessageBrowserQuery named: title with: methods.
+	comments := messages 
+		select: [:each | each isRingObject and: [ each isComment  ]]
+		thenCollect: [ :each | ClyClassComment of: each parent realClass ].
+	query := ClyOldMessageBrowserQuery named: title with: methods asOrderedCollection, comments.
 	query
 		criteriaString: autoSelect;
 		criteriaBlock: refreshingBlock.

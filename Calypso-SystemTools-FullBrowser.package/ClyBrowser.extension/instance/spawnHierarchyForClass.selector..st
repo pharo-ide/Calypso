@@ -2,7 +2,9 @@
 spawnHierarchyForClass: aClass selector: aSymbolOrNil
 	"For compatibility with SystemNavigation 
 	we should ensure current image environment if it is absent".
-	navigationEnvironment ifNil: [ navigationEnvironment := ClyNavigationEnvironment currentImage ].
+	navigationEnvironment ifNil: [ 
+		self navigationEnvironment: ClyNavigationEnvironment currentImage.
+		self setUpAvailablePlugins].
 	self spawnBrowser: ClyFullBrowser withState: [ :browser | 
 		browser selectClass: aClass.
 		browser switchToFullClassHierarchy.
