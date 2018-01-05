@@ -1,3 +1,3 @@
 testing
 selectsMethod: aMethod
-	^aMethod isOverridden
+	^scope inheritanceAnalyzer isMethodOverridden: aMethod

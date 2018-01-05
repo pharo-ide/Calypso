@@ -2,5 +2,8 @@ item decoration
 decorateBrowserItem: anItem ofMethod: aMethod
 
 	aMethod isAbstract ifTrue: [ anItem markWith: ClyAbstractItemTag ].
-	aMethod isOverriding ifTrue: [ anItem markWith: ClyOverridingMethodTag ].
-	aMethod isOverridden ifTrue: [ anItem markWith: ClyOverriddenMethodTag ]
+	
+	(self isMethodOverriding: aMethod) ifTrue: [ 
+		anItem markWith: ClyOverridingMethodTag ].
+	(self isMethodOverridden: aMethod) ifTrue: [ 
+		anItem markWith: ClyOverriddenMethodTag ]
