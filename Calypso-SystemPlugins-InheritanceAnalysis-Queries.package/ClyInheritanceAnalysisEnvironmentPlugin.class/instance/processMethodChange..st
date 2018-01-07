@@ -1,6 +1,7 @@
 controlling
 processMethodChange: aMethodAnnouncement
 	| method |
+	self resetCacheOfMethod: aMethodAnnouncement methodAffected.
 	
 	method := aMethodAnnouncement methodAffected.
 	method origin superclass ifNotNil: [ :superclass |

@@ -7,7 +7,8 @@ processClassDefinitionChange: aClassDefinitionChange
 		(superclass subclasses includes: aClassDefinitionChange oldClassDefinition)
 			ifTrue: [ ^self ] ].
 	(aClassDefinitionChange oldClassDefinition superclass 
-		= aClassDefinitionChange newClassDefinition superclass) ifTrue: [ ^self ].
-		
+		= aClassDefinitionChange newClassDefinition superclass) ifTrue: [ ^self ].	
+	
+	self resetCacheOfClass: aClassDefinitionChange oldClassDefinition superclass.
 	environment systemChanged: (
 		ClyOverriddenSuperclassesChanged overridingSubclass: aClassDefinitionChange oldClassDefinition)
