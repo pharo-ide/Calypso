@@ -2,5 +2,5 @@ methods analysis
 resetCacheOfMethod: aMethod
 	
 	cacheGuard critical: [
-		methodCache removeKey: aMethod selector
+		methodCache removeKey: aMethod selector ifAbsent: [  ]
 	]
