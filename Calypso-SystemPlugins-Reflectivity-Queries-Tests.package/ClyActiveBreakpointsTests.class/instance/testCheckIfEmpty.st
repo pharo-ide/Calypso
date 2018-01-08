@@ -1,6 +1,6 @@
 tests
 testCheckIfEmpty
-	Breakpoint new node: (ClyClassWithBreakMethods >> #breakMethod) ast; always; install.
+	self installBreakpointInto: (ClyClassWithBreakMethods >> #breakMethod).
 	query scope: (ClyMethodScope 
 		of: (ClyClassWithHaltMethods >> #haltMethod1) in: environment).
 	self deny: query checkEmptyResult.

@@ -1,0 +1,3 @@
+testing
+isProtected
+	^accessGuard notNil

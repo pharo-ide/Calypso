@@ -3,7 +3,7 @@ specifyMethodItemNameOn: nameMorph for: methodItem
 	| definition highlightMainMethods |
 	nameMorph contents: methodItem name.
 	
-	definition := methodItem	getProperty: ClyMethodDefinitionProperty.
+	definition := methodItem	systemDefinition.
 	(self isPackagePartOfSelection: definition definingPackage) ifFalse: [
 		nameMorph color: Smalltalk ui theme classExtensionColor].
 	

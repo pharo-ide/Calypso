@@ -1,3 +1,3 @@
 items type
 resultItemsType
-	self shouldBeImplemented
+	self shouldNotImplement 

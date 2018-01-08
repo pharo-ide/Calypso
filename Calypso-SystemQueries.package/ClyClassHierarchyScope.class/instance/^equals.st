@@ -5,4 +5,4 @@ comparing
 	self == anObject ifTrue: [ ^ true ].
 	super = anObject ifFalse: [ ^false ].
 	
-	^ localClassScope = anObject localClassScope
+	^ localScopeClass = anObject localScopeClass

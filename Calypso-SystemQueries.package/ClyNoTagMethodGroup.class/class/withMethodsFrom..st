@@ -1,4 +1,4 @@
 instance creation
-withMethodsFrom: aClassScope
+withMethodsFrom: aMethodQuery
 
-	^self named: self groupName on: (ClyUnclassifiedMethods from: aClassScope)
+	^self named: self groupName on: aMethodQuery 

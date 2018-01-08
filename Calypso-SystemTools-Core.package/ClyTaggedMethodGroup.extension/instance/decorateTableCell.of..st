@@ -1,10 +1,11 @@
 *Calypso-SystemTools-Core
 decorateTableCell: anItemCellMorph of: groupItem
+	| myName |
 	super decorateTableCell: anItemCellMorph of: groupItem.
-	
-	(name beginsWith: 'private') ifTrue: [ 
+	myName := name asLowercase.
+	(myName beginsWith: 'private') ifTrue: [ 
 		^anItemCellMorph definitionIcon: #protocolPrivateIcon ].
 	
 	(#('initial' 'releaz' 'releas' 'finali') 
-		anySatisfy: [ :each | name beginsWith: each ])
+		anySatisfy: [ :each | myName beginsWith: each ])
 			ifTrue: [ anItemCellMorph definitionIcon: #protocolProtectedIcon]	

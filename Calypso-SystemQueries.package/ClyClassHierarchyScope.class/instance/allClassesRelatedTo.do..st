@@ -1,4 +1,4 @@
-accessing
+queries
 allClassesRelatedTo: aClass do: aBlock
 	"Any hierarchy is defined in terms of relationship between classes 
 	retrieved from meta level which are specified by local scope class
@@ -14,9 +14,9 @@ allClassesRelatedTo: aClass do: aBlock
 	
 	Also any hierarchy scope should ignore obsolete classes"
 	| actualClass |
-	actualClass := localClassScope metaLevelForHierarchyOf: aClass.
+	actualClass := localScopeClass metaLevelForHierarchyOf: aClass.
 	
 	self classesRelatedTo: actualClass do: [:each | 
-		((localClassScope metaLevelForHierarchyOf: each) = each) ifTrue: [ 
+		((localScopeClass metaLevelForHierarchyOf: each) = each) ifTrue: [ 
 			each isObsolete ifFalse: [ self metaLevelsOf: each do: aBlock].
 			self allClassesRelatedTo: each do: aBlock]]

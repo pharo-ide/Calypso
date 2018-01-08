@@ -1,6 +1,6 @@
 building
 rebuildIfNeeded
-	accessGuard critical: [
+	self protectAccessWhile: [
 		
 		needsRebuild ifTrue: [ 
 			needsRebuild := false.

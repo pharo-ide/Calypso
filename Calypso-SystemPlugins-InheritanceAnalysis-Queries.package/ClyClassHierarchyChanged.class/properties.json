@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClassAnnouncement",
+	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassHierarchyChanged",
+	"type" : "normal"
+}

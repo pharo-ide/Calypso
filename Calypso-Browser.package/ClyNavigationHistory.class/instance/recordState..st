@@ -1,6 +1,6 @@
 operations
-recordState: aBrowserNavigationState
-	aBrowserNavigationState representsConcreteContent ifFalse: [ ^self ]. 
+recordState: aBrowserState
+	aBrowserState representsConcreteQuery ifFalse: [ ^self ]. 
 	waitingNewState ifFalse: [ ^self ].
 	
 	undoExecuting | redoExecuting ifTrue: [ 
@@ -9,7 +9,7 @@ recordState: aBrowserNavigationState
 		waitingNewState := false ].
 	
 	undoExecuting 
-		ifTrue: [ redoList add: aBrowserNavigationState ]
+		ifTrue: [ redoList add: aBrowserState ]
 		ifFalse: [ 
 			redoExecuting ifFalse: [ redoList removeAll].
-			undoList add: aBrowserNavigationState ]
+			undoList add: aBrowserState ]

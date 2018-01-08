@@ -1,0 +1,3 @@
+meta level
+localScopeClass
+	^ localScopeClass

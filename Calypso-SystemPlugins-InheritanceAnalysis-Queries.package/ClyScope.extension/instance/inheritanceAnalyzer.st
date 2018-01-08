@@ -1,0 +1,4 @@
+*Calypso-SystemPlugins-InheritanceAnalysis-Queries
+inheritanceAnalyzer
+
+	^environment getPlugin: ClyInheritanceAnalysisEnvironmentPlugin 

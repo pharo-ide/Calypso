@@ -1,5 +1,5 @@
 accessing
-addMetaProperty: anEnvironmentItemProperty
-	"I allow to annotate content about its internal items. For example SUnit plugin annotate method content with summary of test results"
+addMetaProperty: anBrowserItemProperty
+	"I allow to annotate result about its internal items. For example SUnit plugin annotate method query result with summary about test runs"
 	
-	self metadata addProperty: anEnvironmentItemProperty
+	self metadata addProperty: anBrowserItemProperty

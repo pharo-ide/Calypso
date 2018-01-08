@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyClassScript",
+	"category" : "Calypso-SystemPlugins-ClassScripts-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyEvaluationScript",
+	"type" : "normal"
+}

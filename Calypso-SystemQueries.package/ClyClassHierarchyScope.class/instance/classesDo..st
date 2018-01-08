@@ -1,4 +1,4 @@
-accessing
+queries
 classesDo: aBlock
 
 	basisObjects do: [ :each | 

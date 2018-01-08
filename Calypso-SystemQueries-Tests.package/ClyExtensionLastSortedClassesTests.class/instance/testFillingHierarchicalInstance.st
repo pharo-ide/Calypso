@@ -1,8 +1,8 @@
 tests
 testFillingHierarchicalInstance
-	queryResult := ClyExtensionLastSortedClasses hierarchical.
+	query := ClyAllClasses from: ClyPackageScope of: ClyClass1FromP1 package in: environment.
+	queryResult := ClyExtensionLastSortedClasses hierarchical prepareNewFor: query in: environment..
 	
-	queryResult buildingQuery: (ClyAllClasses from: ClyPackageScope of: ClyClass1FromP1 package in: environment).
 	queryResult buildWith: {
 		ClySubclassLOfClass0FromPExtendedByP1. ClySubclassN1OfClass1FromP1.  ClyClass1FromP1}.
 	

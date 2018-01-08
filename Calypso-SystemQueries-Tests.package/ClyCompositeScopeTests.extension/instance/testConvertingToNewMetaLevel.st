@@ -15,7 +15,7 @@ testConvertingToNewMetaLevel
 		assert: convertedScope subscopes last class
 		equals: ClySubclassScope.
 	self
-		assert: convertedScope subscopes last localClassScope
+		assert: convertedScope subscopes last localScopeClass
 		equals: ClyInstanceSideScope.
 	self assert: convertedScope environment equals: environment.
 	self

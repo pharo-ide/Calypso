@@ -1,0 +1,2 @@
+not ffi methods
+notFFIMethod

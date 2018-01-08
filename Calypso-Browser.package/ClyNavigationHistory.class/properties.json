@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"browser",
 		"undoList",
 		"redoList",
 		"undoExecuting",

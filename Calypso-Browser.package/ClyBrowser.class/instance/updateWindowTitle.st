@@ -2,9 +2,9 @@ updating
 updateWindowTitle
 
 	self window ifNotNil: [ :w | 
-		w setLabel: self newWindowTitle.
+		self setWindowTitle: self newWindowTitle in: w.
 		"in the case when window is managed as tab by window group
 		we should set up top group window label too"
 		(self ownerThatIsA: GroupWindowMorph) ifNotNil: [:group | 
-			group window setLabel: w label]
+			self setWindowTitle: w labelString in: group window]
 	]

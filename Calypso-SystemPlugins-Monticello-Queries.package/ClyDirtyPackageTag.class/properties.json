@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySimpleTag",
+	"category" : "Calypso-SystemPlugins-Monticello-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyDirtyPackageTag",
+	"type" : "normal"
+}

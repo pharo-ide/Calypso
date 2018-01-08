@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserItemProperty",
+	"category" : "Calypso-SystemPlugins-ClassScripts-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"script"
+	],
+	"name" : "ClyClassScriptProperty",
+	"type" : "normal"
+}

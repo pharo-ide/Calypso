@@ -1,4 +1,4 @@
-meta level
+private
 methodsOf: aClass do: aBlock
 
 	self metaLevelsOf: aClass do: [ :concreteMetaLevelClass |

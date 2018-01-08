@@ -1,6 +1,6 @@
 initialization
 collectMetadata
-	accessGuard critical: [ 
+	self protectAccessWhile: [ 
 		metadata ifNotNil: [ ^self ].
 
 		metadata := ClyQueryResultMetadata new.

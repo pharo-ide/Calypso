@@ -1,7 +1,7 @@
 building
 fillWith: classes
 	| actualClassScope classMap addedClasses |
-	actualClassScope := self scope asScope: ClyClassScope. 
+	actualClassScope := self scope asLocalClassScope. 
 	classMap := hierarchy buildFrom: classes.
 	addedClasses := Set new.
 	classMap doInOrderWithDepth: [ :each :depth |

@@ -2,8 +2,8 @@ tests
 testConvertingWithNewBasisShouldKeepMetaLevelScope
 	| convertedScope |
 	scope := self singleScopeSample.
-	scope localClassScope: ClyInstanceSideScope.
+	scope localScopeClass: ClyInstanceSideScope.
 	
 	convertedScope := scope withNewBasisObjects: {self extraBasisSample}.
 	
-	self assert: convertedScope localClassScope equals: ClyInstanceSideScope 
+	self assert: convertedScope localScopeClass equals: ClyInstanceSideScope 

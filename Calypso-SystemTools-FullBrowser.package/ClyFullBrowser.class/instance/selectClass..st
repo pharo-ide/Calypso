@@ -7,7 +7,7 @@ selectClass: aClass
 		foundItems ifNotEmpty: [ 
 			"we want ensure that selected package is the package of found class.
 			If it is not then we will select required package"
-			classDefinition := foundItems anyOne getProperty: ClyClassDefinitionProperty.
+			classDefinition := foundItems anyOne systemDefinition.
 			(self isPackageSelected: classDefinition definingPackage) 
 				ifTrue: [ ^self classSelection selectItems: foundItems ]].
 		
