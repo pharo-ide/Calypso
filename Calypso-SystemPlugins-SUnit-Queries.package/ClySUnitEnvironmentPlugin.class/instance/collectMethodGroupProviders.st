@@ -1,4 +1,4 @@
 method groups
 collectMethodGroupProviders 
 
-	^{ClyFailedTestGroupProvider new}
+	^{ClyFailedTestGroupProvider new. ClyExpectedFailureMethodGroupProvider new}

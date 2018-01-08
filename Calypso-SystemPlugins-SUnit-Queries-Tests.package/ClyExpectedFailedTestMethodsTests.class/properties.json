@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodQueryTestCase",
+	"category" : "Calypso-SystemPlugins-SUnit-Queries-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyExpectedFailedTestMethodsTests",
+	"type" : "normal"
+}

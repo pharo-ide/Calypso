@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodGroupProviderTestCase",
+	"category" : "Calypso-SystemPlugins-SUnit-Queries-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyExpectedFailureMethodGroupProviderTests",
+	"type" : "normal"
+}
