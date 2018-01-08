@@ -1,14 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowserItemProperty",
+	"super" : "ClySimpleTag",
 	"category" : "Calypso-SystemPlugins-Monticello-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"versionName",
-		"isModified"
-	],
-	"name" : "ClyPackageVersionProperty",
+	"instvars" : [ ],
+	"name" : "ClyDirtyPackageTag",
 	"type" : "normal"
 }
