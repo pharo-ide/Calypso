@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySingleMethodGroupProvider",
+	"category" : "Calypso-SystemPlugins-Flags-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyFlagMethodGroupProvider",
+	"type" : "normal"
+}
