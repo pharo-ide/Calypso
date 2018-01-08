@@ -1,0 +1,3 @@
+running
+classSampleWhichHasGroup
+	^ClySubclassN1OfClass1FromP1 
