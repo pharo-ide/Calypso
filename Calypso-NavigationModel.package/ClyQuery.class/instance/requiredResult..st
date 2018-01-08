@@ -1,4 +1,5 @@
 accessing
 requiredResult: aQueryResult
 	requiredResult := aQueryResult.
-	requiredResult beReadOnlyObject 
+	self shouldBeProtectedByWriteBarrier ifTrue: [ 
+		requiredResult beReadOnlyObject ]

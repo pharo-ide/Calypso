@@ -4,7 +4,9 @@
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"ShouldBeProtectedByWriteBarrier"
+	],
 	"instvars" : [
 		"requiredResult",
 		"scope"
