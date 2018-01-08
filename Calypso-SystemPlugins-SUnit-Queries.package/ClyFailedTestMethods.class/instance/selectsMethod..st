@@ -1,4 +1,4 @@
 testing
 selectsMethod: aMethod
 	
-	^aMethod isPassedTest not
+	^aMethod isTestMethod and: [aMethod isPassedTest not]
