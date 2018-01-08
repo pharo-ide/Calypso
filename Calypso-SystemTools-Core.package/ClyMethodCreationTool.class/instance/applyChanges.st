@@ -3,7 +3,11 @@ applyChanges
 	| newMethod selector selectedClass |
 	selectedClass := self selectClassForNewMethodIfNone: [^false].
 	
-	selector := selectedClass compile: self pendingText asString notifying: textMorph.
+	selector := methodTags 
+		ifEmpty: [ selectedClass compile: self pendingText asString notifying: textMorph]
+		ifNotEmpty: [
+			selectedClass compile: self pendingText asString classified: methodTags anyOne notifying: textMorph].
+			
 	selector ifNil: [ ^false ].
 	
 	newMethod := selectedClass >> selector.
