@@ -4,5 +4,6 @@ fixStateBeforeExecution
 	If query needs additional state for execution 
 	it should retrieve it in prepare method which is executed before readonly fix"
 	self prepareStateBeforeExecution.
+	self shouldBeProtectedByWriteBarrier ifFalse: [^self].
 	self beReadOnlyObject.
 	scope beReadOnlyObject
