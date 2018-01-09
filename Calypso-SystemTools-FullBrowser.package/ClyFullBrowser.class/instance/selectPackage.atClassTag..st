@@ -3,8 +3,7 @@ selectPackage: aPackage atClassTag: tagName
 
 	| packageItem targetClassGroup |
 	self changeStateBy: [
-		self selectPackage: aPackage.
-		packageItem := self packageSelection lastSelectedItem.
+		packageItem := (packageView findItemsWith: {aPackage}) first.
 		packageItem expand.
 		targetClassGroup := packageItem childrenItems detect: [:each | each name = tagName ].
 	

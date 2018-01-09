@@ -6,6 +6,6 @@ resetCacheOfClass: aClass
 		selectorsToRemove := OrderedCollection new.
 		methodCache keysAndValuesDo: [ :selector :classCache |
 			(self doesClassCache: classCache includesOverridesOf: aClass)
-					ifTrue: [ selectorsToRemove add: selector ].
+					ifTrue: [ selectorsToRemove add: selector ]].
 		selectorsToRemove do: [:each | methodCache removeKey: each]
-	]]
+	]
