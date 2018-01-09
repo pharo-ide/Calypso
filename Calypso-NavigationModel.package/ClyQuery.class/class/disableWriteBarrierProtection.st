@@ -1,0 +1,3 @@
+accessing
+disableWriteBarrierProtection
+	ShouldBeProtectedByWriteBarrier := false

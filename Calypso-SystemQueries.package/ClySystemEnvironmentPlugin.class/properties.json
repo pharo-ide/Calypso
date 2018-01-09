@@ -4,7 +4,9 @@
 	"category" : "Calypso-SystemQueries-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"SlowPluginsAreDisabled"
+	],
 	"instvars" : [ ],
 	"name" : "ClySystemEnvironmentPlugin",
 	"type" : "normal"
