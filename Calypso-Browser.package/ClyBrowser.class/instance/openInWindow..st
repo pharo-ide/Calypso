@@ -3,10 +3,7 @@ openInWindow: aWindow
 	| groupWindow myWindow |
 	groupWindow := self createWindowGroupFrom: aWindow.
 	
-	myWindow := (SystemWindow labelled: self newWindowTitle) model: self.
-	myWindow 
-		addMorph: self frame: (0@0 extent: 1@1);
-		updatePaneColors.
+	myWindow := self buildWindow.
 	groupWindow addWindow: myWindow.
 	myWindow activate.
 	myWindow announceOpened
