@@ -1,5 +1,5 @@
 tests
-testSelectsMethodWithCritiquesWhenTheyExistsAndComputedInAdvance
+testSelectsMethodWithCritiquesWhenTheyExistAndComputedInAdvance
 
 	| critiques |
 	critiques := query critiqueQuery async execute.
