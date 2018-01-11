@@ -7,5 +7,4 @@ buildActualResult
 	(items := actualResult items) isNil] whileTrue.
 	self collectMetadata.
 	buildProcess := nil.
-	self notifyObservers.
-	environment systemChanged: (ClyAsyncQueryIsDone with: self)
+	self buildIsDone

@@ -1,0 +1,4 @@
+running
+rawResultItems
+
+	^queryResult items

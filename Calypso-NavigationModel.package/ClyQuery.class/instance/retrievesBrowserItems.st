@@ -1,0 +1,3 @@
+testing
+retrievesBrowserItems
+	^requiredResult representsBrowserItems
