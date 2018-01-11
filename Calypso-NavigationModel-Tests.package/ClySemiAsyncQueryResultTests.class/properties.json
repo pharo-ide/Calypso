@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyAsyncQueryResultTests",
+	"category" : "Calypso-NavigationModel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySemiAsyncQueryResultTests",
+	"type" : "normal"
+}

@@ -1,6 +1,6 @@
 tests
 testNotBuiltByDefault
 
-	queryResult := ClyAsyncQueryResult for: query.
+	queryResult := queryResult class for: query.
 	
 	self deny: queryResult isBuilt
