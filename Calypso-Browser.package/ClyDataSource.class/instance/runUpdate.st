@@ -1,7 +1,7 @@
 private
 runUpdate
-	dirty ifFalse: [ ^self ].
 	self isClosed ifTrue: [^self].
+	dirty ifFalse: [ ^self ].
 	
 	dirty := false.
 	itemCursor updateItemCache.
