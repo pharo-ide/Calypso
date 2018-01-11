@@ -6,4 +6,4 @@ showQueryResult
 		queryScopes add: systemQuery scope ].	
 	activeScope := systemQuery scope.	
 	
-	resultView showQuery: systemQuery async
+	resultView showQuery: systemQuery semiAsync

@@ -1,4 +1,4 @@
 execution
 prepareNewResult
 	
-	^ClyAsyncQueryResult for: self actualQuery
+	^asyncResult prepareNewFor: self actualQuery in: self environment

@@ -1,0 +1,3 @@
+accessing
+asyncResult
+	^ asyncResult
