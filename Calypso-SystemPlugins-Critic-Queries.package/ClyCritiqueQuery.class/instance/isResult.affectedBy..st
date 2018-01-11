@@ -6,8 +6,7 @@ isResult: aQueryResult affectedBy: aSystemAnnouncement
 	It can of course lead to very poor system performance because critic computation is slow process
 	and triggering it after every system change can slow down system a lot.
 	So instead we just reset given aQueryResult silently. So users should update views manually"
-	(aSystemAnnouncement isKindOf: ClyAsyncQueryIsDone) ifTrue: [ ^false ].
+	aSystemAnnouncement affectsCritiques ifFalse: [ ^false ].
 	
-	aQueryResult forceLazyRebuild.
-	
+	aQueryResult forceLazyRebuild.	
 	^false "and we return false to prevent result observers to be notified"
