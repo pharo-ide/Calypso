@@ -1,5 +1,6 @@
 private
 runUpdate
+	dirty ifFalse: [ ^self ].
 	self isClosed ifTrue: [^self].
 	
 	dirty := false.
