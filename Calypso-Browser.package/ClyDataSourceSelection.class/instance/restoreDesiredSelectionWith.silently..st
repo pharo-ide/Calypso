@@ -5,4 +5,4 @@ restoreDesiredSelectionWith: newDataSourceItems silently: aBool
 
 	self restoreTableSelectionSilently: aBool.
 	
-	self ensureVisibleLastItem
+	aBool ifFalse: [self ensureVisibleLastItem]
