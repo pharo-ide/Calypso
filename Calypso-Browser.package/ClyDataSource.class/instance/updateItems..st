@@ -5,5 +5,5 @@ updateItems: dataSourceItems
 	| updatedItems |
 	updatedItems := itemCursor findItemsWith: (dataSourceItems collect: #actualObject).
 
-	dataSourceItems with: updatedItems do: [ :dataSourceItem :environmentItem | 
-		dataSourceItem updateItemWith: environmentItem  ]
+	dataSourceItems with: updatedItems do: [ :myItem :updatedBrowserItem | 
+		myItem updateItemWith: updatedBrowserItem  ]
