@@ -8,5 +8,5 @@ updateSelectedItemsOf: aDataSource
 		desiredSelection ifNotNil: [
 			desiredSelection updateItemsWhichBelongsTo: aDataSource.
 			actualSelectionChanged := actualSelectionChanged 
-				| (desiredSelection restoreCurrentSelection: selection)].
+				| (desiredSelection restoreCurrentSelectionAfterUpdate: selection)].
 		^actualSelectionChanged]
