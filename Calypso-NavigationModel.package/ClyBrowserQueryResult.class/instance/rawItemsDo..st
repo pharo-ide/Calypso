@@ -1,4 +1,4 @@
 accessing
 rawItemsDo: aBlock
 
-	^items collect: #actualObject thenDo: aBlock
+	^items collect: [:each | each actualObject] thenDo: aBlock

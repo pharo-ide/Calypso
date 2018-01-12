@@ -1,7 +1,10 @@
 event handling
 itemsChangedIn: aDataSource 
-	
+	| selectionWasEmpty |
 	self refreshAsyncState.
+	selectionWasEmpty := 	self selection isEmpty.
+		
 	browser ignoreNavigationDuring: [ 
 		self updateSelectedItemsOf: aDataSource.
-		browser itemsChanged ]
+		selectionWasEmpty ifTrue: [self ensureSelectedItemIfNeeded].
+		browser itemsChanged].

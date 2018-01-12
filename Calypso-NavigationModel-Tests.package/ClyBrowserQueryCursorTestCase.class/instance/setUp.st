@@ -2,9 +2,7 @@ running
 setUp
 	| query |
 	super setUp.
-	query := ClyQueryExampleReturningScopeBasis
-		from: (ClyScopeExample ofAll: {Array. Object. String} in: environment)
-		as: self createQueryResult.
+	query := self createQuery.
 	queryResult := query execute.
 	itemObserver := ClyItemObserverExample new.
 	cursor := queryResult openBrowserCursorFor: itemObserver

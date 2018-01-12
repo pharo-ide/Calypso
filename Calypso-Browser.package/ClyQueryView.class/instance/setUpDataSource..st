@@ -9,3 +9,4 @@ setUpDataSource: aDataSource
 	aDataSource openOn: self.	
 	self showDesiredSelection.
 	self refreshAsyncState.
+	self ensureSelectedItemIfNeeded
