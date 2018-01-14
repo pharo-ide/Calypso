@@ -1,4 +1,4 @@
-public
+selection
 lastSelectedMessage
 
 	^self selectedMessage

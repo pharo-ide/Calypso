@@ -1,4 +1,4 @@
-public
+selection
 lastSelectedClass
 
 	^self selectedClass

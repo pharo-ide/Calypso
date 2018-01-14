@@ -1,3 +1,3 @@
-public
+selection
 lastSelectedMethod
 	^self selectedMethod

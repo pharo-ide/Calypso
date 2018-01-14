@@ -1,11 +1,9 @@
 *Calypso-SystemTools-Core
 requestUserConfirmationUsing: aCommandActivator
 	
-	| refactorings submitDialog |
-	refactorings := self asRefactorings.
-	refactorings do: [:each | each primitiveExecute].
+	| submitDialog |
 	
-	submitDialog := ChangesBrowser changes: refactorings.
+	submitDialog := SycRefactoringPreview for: self scopes: aCommandActivator context refactoringScopes.
 	submitDialog openDialogWithSpec
 		okAction: [ submitDialog accept. 
 			aCommandActivator applyCommandResult];
