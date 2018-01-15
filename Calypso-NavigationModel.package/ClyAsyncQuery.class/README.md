@@ -1,7 +1,7 @@
 I run my subquery using background process.
 I do not implement #buildResult: as other queries. 
 Instead I return special ClyAsyncQueryResult instances to represent result of execution. 
-Async result overrides building logic in the way that it forks actual query execution and updates itself when execution is completed. For details look at this class.
+Async result overrides building logic in the way that it forks actual query execution and updates itself when execution completes. For details look at this class.
 So I only implement hook which triggers background execution of actual query.
 
 Any query can be converted to async query using:

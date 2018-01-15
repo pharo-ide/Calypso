@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClySemiAsyncQueryResult for: query
+	^ClySemiAsyncQueryResult new
