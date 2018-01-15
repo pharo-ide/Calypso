@@ -4,4 +4,5 @@ itemsChanged
 	
 	tabManager tools ifEmpty: [ 
 		resultView ensureSelectedItem.
-		self rebuildAllTools ]
+		self rebuildAllTools ].
+	self updateWindowTitle

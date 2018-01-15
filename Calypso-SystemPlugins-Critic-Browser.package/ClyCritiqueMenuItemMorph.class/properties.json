@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 1/12/2018 15:19",
+	"super" : "Morph",
+	"category" : "Calypso-SystemPlugins-Critic-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyCritiqueMenuItemMorph",
+	"type" : "normal"
+}

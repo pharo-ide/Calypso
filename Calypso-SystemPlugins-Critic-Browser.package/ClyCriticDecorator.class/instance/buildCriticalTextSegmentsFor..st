@@ -6,7 +6,7 @@ buildCriticalTextSegmentsFor: anObject
 		select: [ :critique | critique hasProperty: ClySourceNodeCritiqueInterval ]
 		thenCollect: [ :critique |
 			interval := critique getProperty: ClySourceNodeCritiqueInterval.		
-			segment := QARubTextSegmentMorph
+			segment := ClyCriticalTextSegmentMorph
 				from: interval start
 				to: interval stop + 1.
 			severity := critique getProperty: ClyCritiqueSeverity.

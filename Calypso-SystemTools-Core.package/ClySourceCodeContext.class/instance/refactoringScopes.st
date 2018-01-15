@@ -1,0 +1,3 @@
+refactoring support
+refactoringScopes
+	^self browser allNavigationScopes

@@ -1,4 +1,4 @@
-public
+selection
 lastSelectedVariable
 
 	^self selectedVariable 

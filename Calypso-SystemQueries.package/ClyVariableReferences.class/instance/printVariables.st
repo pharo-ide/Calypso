@@ -1,4 +1,6 @@
 printing
 printVariables
 
-	^variableQuery description
+	^variableQuery scope == scope 
+		ifTrue: [variableQuery description]
+		ifFalse: [ variableQuery fullDescription ]

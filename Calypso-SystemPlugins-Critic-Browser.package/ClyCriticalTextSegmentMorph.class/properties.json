@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 1/12/2018 15:17",
+	"super" : "RubTextSegmentMorph",
+	"category" : "Calypso-SystemPlugins-Critic-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"entity",
+		"critique"
+	],
+	"name" : "ClyCriticalTextSegmentMorph",
+	"type" : "normal"
+}
