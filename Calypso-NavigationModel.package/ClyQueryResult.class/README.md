@@ -90,7 +90,7 @@ To get cursor instance you should open it for concrete observer:
 
 	cursor := aQueryResult openBrowserCursorFor: anObserver
 
-anObserver will be subscribed on my changes and new cursor instance will be return to the caller.
+anObserver will be subscribed on my changes and new cursor instance will be returned to the caller.
 When cursor is not needed anymore it should be closed. It will unsubscribe observer in addition:
 
 	cursor close
@@ -105,8 +105,8 @@ The important responsibility of cursor is to organize cache of retrieved browser
 For more details about cursor look at ClyBrowserQueryCursor comments. And read comments of ClyBrowserItem.
 
 The last feature which I provide for my subclasses is metadata. I compute it lazily on demand and keed it in the #metadata variable. Metadata is updated together with items. So when items are changed the metadata is reset and subsequent call for it will recompute it again.
-The metadata is an instance of ClyQueryResultMetadata which represent extended properties of result in general. For example the result of class query can include the count of success tests as metadata property.
-And properties are represented by first class objects, a kind of ClyBrowserItemProperty.
+The metadata is an instance of ClyQueryResultMetadata which represents extended properties of result in general. For example the result of class query can include the count of success tests as metadata property.
+Properties are represented by first class objects, a kind of ClyBrowserItemProperty.
 The metadata is collected using environment plugins. So it is extended by them. 
 Plugins collect information of concrete type of result items. For example: 
 	
