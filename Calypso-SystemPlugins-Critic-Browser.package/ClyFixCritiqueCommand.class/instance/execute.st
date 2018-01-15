@@ -1,4 +1,4 @@
 execution
 execute
 
-	self executeRefactorings
+	(ChangesBrowser changes: { critique change }) open
