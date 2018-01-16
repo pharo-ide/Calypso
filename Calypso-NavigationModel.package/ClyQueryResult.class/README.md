@@ -102,6 +102,15 @@ With cursor you are able access items as ClyBrowserItem instances. For example:
 	cursor findItemsWhere: conditionBlock 
 	
 The important responsibility of cursor is to organize cache of retrieved browser items. It is especially important for remote scenario where cache represents loaded remote items. But also it caches all extended properties collected for items by environment plugins.  
+
+So cursor expects instances of ClyBrowserItem from inderlying query result. 
+Some my subclasses build them directly from retrieved raw items. They are subclasses of ClyBrowseQueryResult. They provide extra query methods to lookup browser items.
+When cursor is requested for such result it is just created over receiver instance.
+But other result classes can't be used directly in cursor because they have no knowledge about browser items. For example ClyRawQueryResult just returns raw objects which were retrieved by query.
+For such cases I provide special adapter ClyQueryResultBrowserAdapter: by default cursor instance is always created over adapter which wraps actual result instance.
+Adapter converts actual items to the ClyBrowserItem instances and implements same query methods as ClyBrowserQueryResult.
+This logic is implemented in method #adoptForBrowser which is overridden by ClyBrowserQueryResult with self return.
+
 For more details about cursor look at ClyBrowserQueryCursor comments. And read comments of ClyBrowserItem.
 
 The last feature which I provide for my subclasses is metadata. I compute it lazily on demand and keed it in the #metadata variable. Metadata is updated together with items. So when items are changed the metadata is reset and subsequent call for it will recompute it again.
