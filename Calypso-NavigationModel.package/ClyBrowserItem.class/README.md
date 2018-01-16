@@ -1,17 +1,19 @@
-I represent object like package, class, method from specific point of view on system environment.
-I provide name, position and depth of object from this point of view and add arbitrary properties to it.
+I wrap query items and extend them with information required for the browser:
+- name of item
+- position inside actual result items
+- depth inside result hierarchy (if hierarchycal result was built)
+- properties about actual item
 
-For example you can look at classes in system as a list sorted by name. Or you can look at them as a hierarchy.
+For example you can query classes from system. The result can be sorted by name. Or classes can be arranged in subclass hierarchy. 
 In first case I will represent particular class with one position and zero depth. But in another case position of same class will be different and depth could be not zero.
 	
-So I wrap actual object and extend it with properties. As in case of position and depth properties also can be different depends on point of view or depends on client which creates me. 
-Properties are represented by first class objects: subclasses of ClyEnvironmentItemProperty. To add and access them use following messages:
+Properties are represented by first class objects: subclasses of ClyBrowserItemProperty. To add and access them use following messages:
 	- addProperty: aProperty
 	- getProperty: aPropertyClass
 	- getProperty: aPropertyClass ifAbsent: aBlock
 	- hasProperty: aPropertyClass
 
-There are special kind of properties for specific purpose.
+There are special kind of properties for specific purpose:
 
 There is hierarchy of item tags represented by subclasses of ClyEnvironmentItemSimpleTag. They allow mark object with specific tag. For example there is ClyAbstractClassTag which is used to mark abstract classes.
 You can use following methods to manage tags:
