@@ -83,6 +83,17 @@ The method is used in browser logic to restore desired selection. For example wh
 
 As you see comparison logic is also delegated to the item type. So in method example all method implementations do not need to duplicate them.
 
+There are few other testing methods:
+
+- representsItemOfType: itemType
+It check that browser item belongs to the given type. It uses #includesBehaviour: logic.
+
+- representsObject: anObject
+It checks that browser item represents same object as argument. Actual comparison is delegated to the item type.
+
+- representsObjectEqualTo: anObject
+It checks that browser item represents object equal to argument. Actual comparison is delegated to the item type.
+
 Internal Representation and Key Implementation Points.
 
     Instance Variables
