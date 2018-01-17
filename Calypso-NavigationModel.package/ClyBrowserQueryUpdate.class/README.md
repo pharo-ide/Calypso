@@ -1,12 +1,13 @@
-I represent information update from ClyEnvironmentContent instance. I include updated metadata and item cache from particular position.
+I represent information update from query result instance. I include updated metadata, total result size and item cache starting from particular position.
 
-I was introduced to update cursor cache and metadata together by single message. It is important for remote scenario where content is remote proxy and any interaction with it leads to network communication. I allows to return all updated information in one request by single remote message.
+I was introduced to update cursor cache and metadata together by single message. It is important for remote scenario where query rsult is remote proxy and any interaction with it leads to network communication. I return all updated information in one request by single remote message.
 
 Create my instances using following message:
-	ClyEnvironmentContentUpdate of: anEnvironmentContent withItems: anEnvironmentContentCache
+	ClyBrowserQueryUpdate of: aBrowserQueryResult withItems: aBrowserQueryCache
 
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	itemCache:		<ClyEnvironmentContentCache>
-	metadata:		<ClyEnvironmentContentMetadata>
+	itemCache:		<ClyBrowserQueryCache>
+	metadata:		<ClyQueryResultMetadata>
+	totalItemCount: <Integer>

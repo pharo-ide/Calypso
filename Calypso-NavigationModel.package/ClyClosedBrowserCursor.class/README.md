@@ -1,5 +1,6 @@
-I represent closed state of data source by playing role of closed environment cursor.
+I represent closed query cursor.
+I am used by data source to represent closed state.
 
-Only my singleton instance is supposed to be used:
+My singleton instance is supposed to be used:
 
-	ClyClosedDataSourceCursor instance
+	ClyClosedBrowserCursor instance
