@@ -40,6 +40,7 @@ To access items one by one use following methods:
 	- currentItem 
 	- moveTo: positionNumber
 	- moveToStart
+	- moveToNext
 	- moveToItemWhich: conditionBlock
 	- nextItem. It moves cursor to next position and returns new current item
 	
