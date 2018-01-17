@@ -62,8 +62,9 @@ During instance creation I collect the type of given object:
 
 	anObject calypsoEnvironmentType 
 
-The idea of type is to not depends on single implementation of particular kind of objects. For example there is CompiledMethod, RGMethodDefinition and RG2MethodDefinition. They all represent different model of methods. But for the browser it is important to work with them in same way. So all of them return ClyMethod class as calypsoEnvironmentType. It allows avoid duplication of method related logic by delegating it to the reusable item type class. 
-For example system browser defines commands to be used in context of selected methods. It uses ClyMethod type to attach commands to methods. And they available and work independently of concrete method object. 
+The idea behind item type is to separate it from object class to not depends on single implementation of particular kind of objects. For example there is CompiledMethod, RGMethodDefinition and RG2MethodDefinition. They all represent different model of methods. But for the browser it is important to work with them in same way. So all of them return ClyMethod class as calypsoEnvironmentType. It allows avoid duplication of methods by delegating actual logic to the reusable item type class. 
+For example system browser defines commands to be used in context of selected methods. It uses ClyMethod type to attach commands to methods. And they available and work independently from concrete method class. 
+But by default the calypso type is the class of object. And it is not necessery to introduce separate type for every kind of item.
 
 I provide several methods to compare items: 
 
@@ -80,7 +81,7 @@ It checks that receiver and argument represent equal actual objects. The #equal 
 It is very weak comparison which return true for two equaly named items of same type. If they are named differently then isEqualTo: comparison will be result.
 The method is used in browser logic to restore desired selection. For example when user selects new class which has the method similar to the prevous method selection of another class.
 
-As you see comparison logic is also delegated to the item type. So in method example all method implementation do not need duplicate them.
+As you see comparison logic is also delegated to the item type. So in method example all method implementations do not need to duplicate them.
 
 Internal Representation and Key Implementation Points.
 
