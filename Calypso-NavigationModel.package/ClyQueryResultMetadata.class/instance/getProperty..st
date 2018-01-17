@@ -1,4 +1,4 @@
 accessing
-getProperty: propertyClass 
+getProperty: aPropertyClass 
 
-	^properties detect: [ :each | each isKindOf: propertyClass ] 
+	^properties detect: [ :each | each isKindOf: aPropertyClass ] 

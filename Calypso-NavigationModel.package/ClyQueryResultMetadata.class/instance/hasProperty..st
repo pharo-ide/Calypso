@@ -1,4 +1,4 @@
 testing
-hasProperty: propertyClass
+hasProperty: aPropertyClass
 
-	^properties anySatisfy: [ :each | each isKindOf: propertyClass ]
+	^properties anySatisfy: [ :each | each isKindOf: aPropertyClass ]
