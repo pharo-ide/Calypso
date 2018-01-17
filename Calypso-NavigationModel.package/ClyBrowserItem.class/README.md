@@ -8,7 +8,7 @@ I wrap actual object retrieved by query and extend it with information required 
 For example you can query classes from system. The result can be sorted by name. Or classes can be arranged in subclass hierarchy. 
 In first case I will represent particular class with one position and zero depth. But in another case position of same class will be different and depth could be not zero.
 	
-Properties are represented by first class objects: subclasses of ClyBrowserItemProperty. To add and access them use following messages:
+Properties are represented by first class objects: subclasses of ClyProperty. To add and access them use following messages:
 	- addProperty: aProperty
 	- getProperty: aPropertyClass
 	- getProperty: aPropertyClass ifAbsent: aBlock
@@ -21,19 +21,19 @@ You can use following methods to manage tags:
 	- markWith: aSimpleTagClass
 	- isMarkedWith: aSimpleTagClass. It is analogue to #hasProperty:
 
-There is special property ClyChildrenTag to mark object that it includes particilar kind of children. Kind of children is represented by class of children type.
+There is special property ClyItemChildrenTag to mark object that it includes particilar kind of children. Kind of children is represented by class of children type.
 For example you can mark class with methods:
 	classItem markWithChildrenOf: ClyMethod.
 To check that object has particular children use:
 	classItem hasChildrenOf: ClyMethod
 
-Another special kind of property is ClyLocalHierarchyProperty. It includes number of all local children which exists in item query result. 
+Another special kind of property is ClyItemLocalHierarchyProperty. It includes number of all local children which exists in item query result. 
 For example if you look at classes as a hierarchy then you can see Object and its subclasses. This hierarchy can be limited by package scope.
 So in case of one particular package Object can have 10 subclasses. But in another package it can be 30 (for example).
-And ClyLocalHierarchyProperty represents such local hierarchy size. To access it use following methods:
+And ClyItemLocalHierarchyProperty represents such local hierarchy size. To access it use following methods:
 	- localHierarchySize
 	- localHierarchySize: count
-ClyLocalHierarchyProperty is used by tools to organize tree view for list of items which provide local hierarchy by themselves. Item has no real list of children. But instead it knows count of internal tree. It allows tool hide right number of items when given parent node needs to be collapsed. Important condition here is that property must hold count of full subtree of local hierarchy (not just first level children).
+ClyItemLocalHierarchyProperty is used by tools to organize tree view for list of items which provide local hierarchy by themselves. Item has no real list of children. But instead it knows count of internal tree. It allows tool hide right number of items when given parent node needs to be collapsed. Important condition here is that property must hold count of full subtree of local hierarchy (not just first level children).
 
 I collect properties using environment plugins. Query result prepares own browser items lazely when they should be returned to the user:
 
@@ -102,5 +102,5 @@ Internal Representation and Key Implementation Points.
 	position:		<Number>
 	depth:		<Number>
 	type: <Class>
-	properties:		<Collection of<ClyBrowserItemProperty>>
+	properties:		<Collection of<ClyProperty>>
 	isPrepared:		<Boolean>	

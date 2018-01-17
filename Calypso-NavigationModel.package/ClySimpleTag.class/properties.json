@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 1/17/2018 10:12",
-	"super" : "ClyBrowserItemProperty",
+	"super" : "ClyProperty",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [
 		"instance"

@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyBrowserItemProperty",
+	"name" : "ClyProperty",
 	"type" : "normal"
 }

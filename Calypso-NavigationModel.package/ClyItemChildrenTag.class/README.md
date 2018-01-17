@@ -3,7 +3,7 @@ For example you can mark class with methods:
 	classItem markWithChildrenOf: ClyMethod.
 
 To create my instance manually use:
-	ClyChildrenTag childrenType: ClyMethod
+	ClyItemChildrenTag childrenType: ClyMethod
 
 I cache all my instances. I use class variable "Types" to ensure single property instance for each scope class.
 	

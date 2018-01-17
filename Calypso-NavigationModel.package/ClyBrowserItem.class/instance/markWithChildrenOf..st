@@ -1,3 +1,3 @@
 preparation
 markWithChildrenOf: anItemTypeClass
-	self addProperty: (ClyChildrenTag childrenType: anItemTypeClass)
+	self addProperty: (ClyItemChildrenTag childrenType: anItemTypeClass)

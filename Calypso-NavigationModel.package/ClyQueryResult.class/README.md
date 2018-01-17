@@ -115,7 +115,7 @@ For more details about cursor look at ClyBrowserQueryCursor comments. And read c
 
 The last feature which I provide for my subclasses is metadata. I compute it lazily on demand and keed it in the #metadata variable. Metadata is updated together with items. So when items are changed the metadata is reset and subsequent call for it will recompute it again.
 The metadata is an instance of ClyQueryResultMetadata which represents extended properties of result in general. For example the result of class query can include the count of success tests as metadata property.
-Properties are represented by first class objects, a kind of ClyBrowserItemProperty.
+Properties are represented by first class objects, a kind of ClyProperty.
 The metadata is collected using environment plugins. So it is extended by them. 
 Plugins collect information of concrete type of result items. For example: 
 	
@@ -132,7 +132,7 @@ So every query class should implement the method #collectMetadataOf:by:.
 
 To access metadata there are several methods:
 
-- addMetaProperty: anBrowserItemProperty
+- addMetaProperty: aProperty
 - getMetaProperty: aPropertyClass
 - hasMetaProperty: aPropertyClass	
 - metadata
