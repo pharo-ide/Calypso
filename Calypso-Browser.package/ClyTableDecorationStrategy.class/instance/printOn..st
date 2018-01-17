@@ -4,7 +4,7 @@ printOn: aStream
 	
 	aStream 
 		nextPut: $(;
-		nextPutAll: annotatedClass name;
+		nextPutAll: (annotatedClass ifNil: [ 'detached' ] ifNotNil: [ annotatedClass name]);
 		nextPutAll: '; ';
 		nextPutAll: priority asString;
 		nextPut: $)
