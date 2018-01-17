@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CmdCommand",
+	"category" : "Calypso-SystemPlugins-Monticello-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"method",
+		"repository"
+	],
+	"name" : "ClyIcebergShowMethodVersionCommand",
+	"type" : "normal"
+}
