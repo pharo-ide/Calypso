@@ -30,7 +30,11 @@ It enumerates all class variables available from visible classes. It is not abst
 It enumerates all available variables from visible classes. It is not abstract.
 
 - methodGroupsDo: aBlock 
-It is special method which collects and enumerates all methods groups available for given class scope using environment plugins.
+It is special method which collects and enumerates all methods groups available for given class scope using environment plugins. The actual logic of groups colletion is explained in ClyAllMethodGroups comment.
+
+- collectAllClasses
+
+- includesClass: aClass
 
 The methods enumeration can be also implemented using #classesDo: logic but it would not be generally correct because I do not apply any restriction on the visible meta level of classes. 
 So for given class I do not know what methods I can access: instance side or class side, or both. 
@@ -53,4 +57,23 @@ It should convert the receiver to the similar scope but which will represent giv
 It should adopt receiver to the given local scope. As opposite to the previous method it supposed to modify receiver.
 It is internal method to support #asScope: convertion propertly. Idea that converted class scope should keep receiver local scope if possible. And local scope itself implement this method with empty body.
 
+And I provide several convertion methods whichare used by tools to increase or decrease class and methods visibility:
 
+- asInheritedScope
+It return the scope based on receiver basis which provide view on all inherited classes by any definition of inheritance availably in the system. It uses class annotation ClyInheritedScopeProvider to find actual scope class which is responsible to build inheritance scope from receiver. By default it is ClySuperclassScope which includes all superclasses of basis. But with Traits plugin it will be composed scope which includes superclasses and inherited traits. 
+
+- increasedByClassesFrom: aClassScope 
+It returned similar scope to receiver but with basis increased by all classes visible from given aClassScope. 
+ 
+- reducedByClassesFrom: aClassScope
+It returned similar scope to receiver but with basis reduced by all classes visible from given aClassScope.
+
+- asInterestingClassScope
+This methods was introduced specifically to be able restrict ClySuperclassScope by excluding too common superclasses like Object and ProtoObject. For this purpose the ClyInterestingSuperclassScope was implemented. 
+This method is also implemented in ClyCompositeScope. So in case when you have full class hierarchy composition scope you are also able restrict it by excluding uninteresting parts like Object.
+It is used by browser to enable visibility of all inherited methods accept methods from most common classes like Object and ProtoObject.
+
+Also I implement methods which are used in system changes processing. Queries ask me about various kind of affect which particular event could produce ob objects which are visible from me. Look at methods under tag "system changes".
+
+And to support scoped refactoring my instances can be converted to the refactoring environment:
+- asRBEnvironment 
