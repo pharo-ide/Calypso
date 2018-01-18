@@ -1,6 +1,13 @@
 My subclasses represent the scope of concrete typed objects.
+I do not require them to implement any specific methods. They just define logically what objects they represent. And they should provide methods to assess information from them.
 
 For example there is ClyClassScope which is based on set of classes. And there is ClyPackageScope which is based on set of packages.
+And they provide methods which queries are using to retrieve required objects: 
+	aClassScope classesDo: aBlock
+	aClassScope methodsDo: aBlock 
+	aPackageScope packagesDo: aBlock 
+	aPackageScope classesDo: aBlock 
+	aPackageScope methodsDo: aBlock
 
 I provide several methods to instantiate typed scopes:
 
