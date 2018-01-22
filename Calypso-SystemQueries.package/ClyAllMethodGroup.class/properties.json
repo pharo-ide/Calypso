@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyInheritedMethodGroup",
+	"category" : "Calypso-SystemQueries-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyAllMethodGroup",
+	"type" : "normal"
+}

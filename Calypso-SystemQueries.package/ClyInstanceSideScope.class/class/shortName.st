@@ -1,3 +1,0 @@
-accessing
-shortName
-	^'Inst. side'
