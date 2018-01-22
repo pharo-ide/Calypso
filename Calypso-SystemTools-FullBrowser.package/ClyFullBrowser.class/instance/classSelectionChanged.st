@@ -7,7 +7,7 @@ classSelectionChanged
 		 
 		self changeMethodGroupQueryBy: [ 
 			self adoptForExtendedClass.
-			methodGroupQuery withScopeOf: self classSelection actualObjects].
+			methodGroupQuery restrictedByScope: self defaultClassScopeForMethods].
 		
 		self selectCurrentExtensionMethodGroup
 	]

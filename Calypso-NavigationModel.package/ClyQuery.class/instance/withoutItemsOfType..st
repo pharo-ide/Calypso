@@ -1,0 +1,3 @@
+converting
+withoutItemsOfType: anItemTypeClass
+	self subclassResponsibility 

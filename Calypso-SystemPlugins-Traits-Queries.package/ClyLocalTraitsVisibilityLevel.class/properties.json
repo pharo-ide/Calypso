@@ -2,7 +2,9 @@
 	"commentStamp" : "",
 	"super" : "ClyMethodVisibilityLevel",
 	"category" : "Calypso-SystemPlugins-Traits-Queries",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"isDefault"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
