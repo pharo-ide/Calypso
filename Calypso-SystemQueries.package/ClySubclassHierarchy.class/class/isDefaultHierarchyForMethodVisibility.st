@@ -1,0 +1,3 @@
+method visibility
+isDefaultHierarchyForMethodVisibility
+	^self hierarchyForMethodVisibility isInverse not

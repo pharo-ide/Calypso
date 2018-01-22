@@ -1,0 +1,3 @@
+variable hierarchy
+isDefaultHierarchyForVariables
+	^self hierarchyForVariables isInverse not
