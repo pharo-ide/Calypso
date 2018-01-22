@@ -1,4 +1,5 @@
 context menu support
 buildResultIcon
-	
-	^self testItemsResult createIcon
+	^ testItems 
+		ifNotEmpty: [ self testItemsResult createIcon ]
+		ifEmpty: [ nil ]
