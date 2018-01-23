@@ -1,3 +1,4 @@
 accessing
 extendingPackage: aPackage
-	extendingPackage := aPackage
+	extendingPackage := aPackage.
+	methodTags := #().

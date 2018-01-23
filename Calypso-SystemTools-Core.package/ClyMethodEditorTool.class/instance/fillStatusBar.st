@@ -9,7 +9,6 @@ fillStatusBar
 	statusBar addCommandItem: (ClyTextLineNumbersSwitch of: textMorph).
 	statusBar addCommandItem: (ClyFormatAsReadSwitch of: textMorph).
 	
-	statusBar addCommandItem: (ClyMethodExtensionSwitch for: self).
-	statusBar addCommandItem: (ClyMethodTagsEditor for: self).
+	statusBar addCommandItem: (ClyMethodTagsAndPackageEditor for: self).
 	
 	

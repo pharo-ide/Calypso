@@ -13,4 +13,8 @@ requestSingleMethodTag: queryTitle
 		yourself.
 	selectedTag := ui chooseFromOwner: tool.
 	selectedTag isEmptyOrNil ifTrue: [ CmdCommandAborted signal].
+	(selectedTag beginsWith: '*') ifTrue: [ 
+		self inform: 'Star is forbidden for protocol name. You can specify package in method editor using status bar checkbox'.
+		^CmdCommandAborted signal].
+	
 	^selectedTag
