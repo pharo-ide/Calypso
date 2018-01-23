@@ -1,3 +1,5 @@
 execution
 execute
-	methodEditor tagsAndPackageEditor requestTag 
+	| tagEditor |
+	tagEditor := methodEditor tagsAndPackageEditor.
+	tagEditor requestChangeBy: [ tagEditor requestTag] 
