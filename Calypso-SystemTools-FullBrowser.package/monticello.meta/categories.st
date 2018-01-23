@@ -10,3 +10,4 @@ SystemOrganization addCategory: #'Calypso-SystemTools-FullBrowser-Commands-Queri
 SystemOrganization addCategory: #'Calypso-SystemTools-FullBrowser-Contexts'!
 SystemOrganization addCategory: #'Calypso-SystemTools-FullBrowser-Toolbar'!
 SystemOrganization addCategory: #'Calypso-SystemTools-FullBrowser-UI'!
+SystemOrganization addCategory: #'Calypso-SystemTools-FullBrowser-UI-Spotter'!
