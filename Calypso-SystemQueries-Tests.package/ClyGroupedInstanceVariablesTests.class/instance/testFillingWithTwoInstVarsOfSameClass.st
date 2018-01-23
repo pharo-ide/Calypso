@@ -6,6 +6,6 @@ testFillingWithTwoInstVarsOfSameClass
 		ClyInstanceVariable named: #instanceSideVar1 definedIn: ClyClass1FromP1}.
 	queryResult fillWith: variables.
 	
-	self assertItems: {ClyInheritedMethodGroup. 0. 
+	self assertItems: {ClyAllMethodGroup. 0. 
 		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1 }.
 	self assertVars: #(#instanceSideVar1 #instanceSideVar2 )
