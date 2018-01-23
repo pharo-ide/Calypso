@@ -1,6 +1,6 @@
 testing
-isSimilarTo: anotherBrowserItem
+isSimilarTo: anotherEnvironmentItem
 
-	type = anotherBrowserItem type ifFalse: [ ^false ].
+	type = anotherEnvironmentItem type ifFalse: [ ^false ].
 	
-	^name = anotherBrowserItem name or: [ self isEqualTo: anotherBrowserItem ]
+	^name = anotherEnvironmentItem name or: [ self isEqualTo: anotherEnvironmentItem ]

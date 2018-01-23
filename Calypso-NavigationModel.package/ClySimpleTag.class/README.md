@@ -1,11 +1,8 @@
-I am a root of hierarchy of first class tags which can mark objects.
+I am a root of hierarchy of first class tags which could mark environment items.
+For example ClyAbstractClassTag is created to mark abstract classes.
 
-For example ClyAbstractItemTag is created to mark abstract classes and methods.
-
-ClyBrowserItem provides suitable methods for tagging:
+ClyEnvironmentItem provide suitable methods for tagging:
 	- item markWith: aSimpleTagClass
 	- item isMarkedWith: aSimpleTagClass
 	
-I provide singleton instance for my subclasses:
-	ClyAbstractItemTag instance 
-So tagging items do not produce garbage
+I provide singleton instance for my subclasses. So tagging items do not produce much garbage

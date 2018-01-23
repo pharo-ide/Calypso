@@ -5,11 +5,11 @@ Any query should be created with scope:
 
 	query := ClyAllMethods from: scope
 	
-And to create scope instance you need some navigation environment. For example to query Smalltalk image there is global #currentImage environment: 
+And to create scope instance you need some navigation environment. For example to query Smalltalk image there is global environment: 
 
 	scope := ClyClassScope of: Object in: ClyNavigationEnvironment currentImage.
 	
-When query instance is created you can simply execute it: 
+When query is ready you can simply execute it: 
 
 	result := query execute.
 	
@@ -22,7 +22,7 @@ The value of requiredResult variable is used as prototype to create actual resul
 
 	actualResult := requiredResult prepareNewFor: aQuery in: environment
 	
-You can specify requird result when you create query instances. For example: 
+You can specify result when you create query instances. For example: 
 
 	ClyAllClassQuery from: packageScope as: ClySubclassHierarchy new asQueryResult.
 	
@@ -45,13 +45,13 @@ My subclasses must implement several methods:
 It is the method where query retrieves items from the scope and fill given result with them. Look at implementors.
 
 - checkEmptyResult
-It checks that result will be empty without full execution.
+Subclasses should be able detect that result will be empty without execution.
 
 -isResult: aQueryResult affectedBy: aSystemAnnouncement
-Any query can be affected by system changes. Subclasses should decide what changes can affect them.
+Any query can be affected by system changes. Subclasses should implement what change affects their results.
 
 - retrivesItem: anObject
-Subclasses should check that given item can be retrieved. This check should not depends on query scope.
+Subclasses should check that given item can be retrieved independently on scope.
 
 - retrivesItemOfType: aClass
 Subclasses should check what kind of items they retrieve.
@@ -77,13 +77,13 @@ Subclasses should dispatch metadata collection to the given environment plugin.
 Also there is special ClyUnionQuery class which requires additional method to be implemented: 
 
 - mergeOwnInstances: queries
-It should merge similar query instances. Idea to reduce subqueries count in union query. Subclasses should produce single query with merged collection of parameters. The argument is always collection of receiver instances.
+It should merge similar query instances. Idea to reduce subqueries count in union query which call this method. Subclasses should produce single query with merged collection of parameters. The argument is always collection of receiver instances.
 
-Queries should define user friendly #description. I provide very general implementation based on class name. Look at implementors for examples.
+Queries should define user friendly #description. I provide very general implementation based on class name. For example look at hierarchy implementors.
 
 Navigation environment caches my instances and their results. It requires correct implementation of equality and hashing.
 Some queries include various state which can be initialized at different time. It is important that instance will be not modified after execution because instead it can affect hash and equality functions which are used by cache. 
-For this reason I implement special method #fixStateBeforeExecution which marks the instance and related state (the scope for example) as read only objects (#beReadOnlyObject). So after execution my instances became immutable.
+And to ensure it I implement special method #fixStateBeforeExecution which marks the instance and related state (the scope for example) as read only objects (#beReadOnlyObject). So after execution my instances became immutable.
 
 And according to this logic I provide special hook #prepareStateBeforeExecution to prepare complete state of query instance before execution. It allows initialize lazy variables before making instance immutable.
 			

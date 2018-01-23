@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyProperty",
+	"super" : "ClyBrowserItemProperty",
 	"category" : "Calypso-SystemPlugins-SUnit-Queries",
 	"classinstvars" : [ ],
 	"pools" : [ ],

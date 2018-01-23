@@ -1,106 +1,58 @@
-I wrap actual object retrieved by query and extend it with information required for the browser:
-- name of item
-- type of item (a class)
-- position inside result items
-- depth inside items hierarchy (if hierarchycal result was built)
-- properties about actual object
+I represent object like package, class, method from specific point of view on system environment.
+I provide name, position and depth of object from this point of view and add arbitrary properties to it.
 
-For example you can query classes from system. The result can be sorted by name. Or classes can be arranged in subclass hierarchy. 
+For example you can look at classes in system as a list sorted by name. Or you can look at them as a hierarchy.
 In first case I will represent particular class with one position and zero depth. But in another case position of same class will be different and depth could be not zero.
 	
-Properties are represented by first class objects: subclasses of ClyProperty. To add and access them use following messages:
+So I wrap actual object and extend it with properties. As in case of position and depth properties also can be different depends on point of view or depends on client which creates me. 
+Properties are represented by first class objects: subclasses of ClyEnvironmentItemProperty. To add and access them use following messages:
 	- addProperty: aProperty
 	- getProperty: aPropertyClass
 	- getProperty: aPropertyClass ifAbsent: aBlock
 	- hasProperty: aPropertyClass
 
-There are special kind of properties for specific purposes:
+There are special kind of properties for specific purpose.
 
-There is hierarchy of item tags represented by subclasses of ClySimpleTag. They allow mark object with specific tag. For example there is ClyAbstractItemTag which is used to mark abstract classes and methods.
+There is hierarchy of item tags represented by subclasses of ClyEnvironmentItemSimpleTag. They allow mark object with specific tag. For example there is ClyAbstractClassTag which is used to mark abstract classes.
 You can use following methods to manage tags:
 	- markWith: aSimpleTagClass
-	- isMarkedWith: aSimpleTagClass. It is analogue to #hasProperty:
+	- isMarkedWith: aPropertyClass. It is analogue of #hasProperty:
 
-There is special property ClyItemChildrenTag to mark object that it includes particilar kind of children. Kind of children is represented by class of children type.
+There is special property ClyChildrenTag to mark object that it includes particilar kind of children. Kind of children is represented by class of environment scope which children arrange.
 For example you can mark class with methods:
-	classItem markWithChildrenOf: ClyMethod.
+	classItem markWithChildrenOf: ClyMethodScope.
 To check that object has particular children use:
-	classItem hasChildrenOf: ClyMethod
+	classItem hasChildrenOf: ClyMethodScope
 
-Another special kind of property is ClyItemLocalHierarchyProperty. It includes number of all local children which exists in item query result. 
-For example if you look at classes as a hierarchy then you can see Object and its subclasses. This hierarchy can be limited by package scope.
-So in case of one particular package Object can have 10 subclasses. But in another package it can be 30 (for example).
-And ClyItemLocalHierarchyProperty represents such local hierarchy size. To access it use following methods:
+Another special kind of property is ClyLocalHierarchyProperty. It represents how many local children exist from given point of view on owner environment. 
+For example if you look at classes as hierarchy then you can see Object and its subclasses. This hierarchy can be limited by package scope.
+From such point of view Object class can be marked with this special property to keep count of "local" children. From point of view of another package this count can be different.
+There is suitable method to access this property:
 	- localHierarchySize
 	- localHierarchySize: count
-ClyItemLocalHierarchyProperty is used by tools to organize tree view for list of items which provide local hierarchy by themselves. Item has no real list of children. But instead it knows count of internal tree. It allows tool hide right number of items when given parent node needs to be collapsed. Important condition here is that property must hold count of full subtree of local hierarchy (not just first level children).
+ClyLocalHierarchyProperty is used by tools to organize tree view for list of items which provide local hierarchy by themselves. Item has no real list of children. But instead it knows count of internal tree. It allows tool hide right amount of items when given parent node needs to be collapsed. Only condition here is that property should hold count of full subtree of local hierarchy (not just first level children).
 
-I collect properties using environment plugins. Query result prepares own browser items lazely when they should be returned to the user:
+Another useful property is ClyEnvironmentItemTypeProperty. It keeps class of object. You can of course ask class directly from object. But for example with remote scenario it could be suitable to keep class closer to item and not communicate with underlying remote object for this. To access property use:
+	- type
+	- type:
 
-	aBrowserItem prepareIn: environment
+Clients create my instances and fill them with desired set of properties. They can decide that filled properties are complete and mark me as resolved. They can use this flag to compute properties lazely and once. I provide set of methods to manage this state:
+	- isResolved 
+	- isResolved: aBool
+	- beResolved
 
-But actual preparation is delegated to plugins:
+To create my instances use:
 
-	environment pluginsDo: [ :each | aBrowserItem decorateBy: each].
+	ClyEnvironmentItem named: aString with: anObject
 
-So every plugin decorates item with properties. At the end decoration is dispatched to the item type which sends concrete typed message back to the plugin. 
-For example method decoration is evaluated to:
-
-	aPlugin decorateBrowserItem: aBrowserItem ofMethod: aBrowserItem actualObject.
-	
-Properties computation can be heavy process and I use special flag #isPrepared to collect them only once.
-
-To create my instances there is class side method:
-
-	ClyBrowserItem named: aString with: anObject
-
-But normally you should ask anObject directly: 
-	
-	anObject asCalypsoBrowserItem
-
-During instance creation I collect the type of given object:
-
-	anObject calypsoEnvironmentType 
-
-The idea behind item type is to separate it from object class to not depends on single implementation of particular kind of objects. For example there is CompiledMethod, RGMethodDefinition and RG2MethodDefinition. They all represent different model of methods. But for the browser it is important to work with them in same way. So all of them return ClyMethod class as calypsoEnvironmentType. It allows avoid duplication of methods by delegating actual logic to the reusable item type class. 
-For example system browser defines commands to be used in context of selected methods. It uses ClyMethod type to attach commands to methods. And they available and work independently from concrete method class. 
-But by default the calypso type is the class of object. And it is not necessery to introduce separate type for every kind of item.
-
-I provide several methods to compare items: 
-
-- isSameAs: anotherBrowserItem
-It checks that receiver and argument represent same actual object. The #same meaning is based on item type to which I delegate actual comparison:
-
-	type checkCalypsoItem: actualObject isSameAs: anotherBrowserItem actualObject
-
-- isEqualTo: anotherBrowserItem 
-It checks that receiver and argument represent equal actual objects. The #equal meaning is based on item type to which I delegate actual comparison:
-	type checkCalypsoItem: actualObject isEqualTo: anotherBrowserItem actualObject
-
-- isSimilarTo: anotherBrowserItem
-It is very weak comparison which return true for two equaly named items of same type. If they are named differently then isEqualTo: comparison will be result.
-The method is used in browser logic to restore desired selection. For example when user selects new class which has the method similar to the prevous method selection of another class.
-
-As you see comparison logic is also delegated to the item type. So in method example all method implementations do not need to duplicate them.
-
-There are few other testing methods:
-
-- representsItemOfType: itemType
-It check that browser item belongs to the given type. It uses #includesBehaviour: logic.
-
-- representsObject: anObject
-It checks that browser item represents same object as argument. Actual comparison is delegated to the item type.
-
-- representsObjectEqualTo: anObject
-It checks that browser item represents object equal to argument. Actual comparison is delegated to the item type.
+I am not supposed to be subclassed.
 
 Internal Representation and Key Implementation Points.
 
     Instance Variables
 	actualObject:		<Object>
+	depth:		<Number>
+	isResolved:		<Boolean>
 	name:		<String>
 	position:		<Number>
-	depth:		<Number>
-	type: <Class>
-	properties:		<Collection of<ClyProperty>>
-	isPrepared:		<Boolean>	
+	properties:		<Collection of<ClyEnvironmentItemProperty>>

@@ -2,5 +2,5 @@ testing
 hasChildrenWhich: aBlockWithChildType
 
 	^properties anySatisfy: [ :each | 
-		(each isKindOf: ClyItemChildrenTag) 
+		(each isKindOf: ClyChildrenTag) 
 			and: [ aBlockWithChildType value: each childrenType ] ] 

@@ -1,6 +1,6 @@
 tests
 testNotBuiltByDefault
 
-	queryResult := queryResult class new.
+	queryResult := queryResult class for: query.
 	
 	self deny: queryResult isBuilt

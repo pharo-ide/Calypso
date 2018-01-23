@@ -1,5 +1,5 @@
 I am environment where user navigates over particular system by quering objects from particular scope of other objects. 
-I cache query results and extend retrieved objects using builtin plugin system.
+I cache query results and extend retrieve objects using builtin plugin system.
 
 My instances should be created over some system: 
 
