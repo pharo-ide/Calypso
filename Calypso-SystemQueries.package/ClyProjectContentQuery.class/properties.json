@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyProjectContentsQuery",
+	"name" : "ClyProjectContentQuery",
 	"type" : "normal"
 }
