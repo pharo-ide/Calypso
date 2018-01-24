@@ -3,7 +3,7 @@ updateTools
 	| newTools selectedTools currentTools |
 	self updateToolsBy: [
 		newTools := OrderedCollection new.	
-		browser currentContextsDo: [ :each | self buildToolsOn: newTools for: each].
+		browser navigationContextsDo: [ :each | self buildToolsOn: newTools for: each].
 
 		selectedTools := self selectedTools.
 		currentTools := tools copy.

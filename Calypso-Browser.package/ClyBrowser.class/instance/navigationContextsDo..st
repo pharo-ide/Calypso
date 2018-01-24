@@ -1,4 +1,4 @@
 accessing
-currentContextsDo: aBlock
+navigationContextsDo: aBlock
 
 	navigationViews do: [ :each | aBlock value: each createSelectionContext ]
