@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-SystemPlugins-Spotter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"icon",
+		"actionBlock"
+	],
+	"name" : "ClyGoToSpotterCandidate",
+	"type" : "normal"
+}

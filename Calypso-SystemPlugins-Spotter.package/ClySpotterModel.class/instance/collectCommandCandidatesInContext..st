@@ -1,0 +1,4 @@
+private
+collectCommandCandidatesInContext: aContext
+	
+	^CmdContextMenuCommandActivation createActivatorsExecutableInContext: aContext
