@@ -5,6 +5,7 @@ collectGoToCandidates
 	result := OrderedCollection new.
 	
 	browser allContextsDo: [ :each | 
-		result add: each asGoToSpotterCandidate ].
+		each asGoToSpotterCandidate ifNotNil: [:c |
+			result add: c ] ].
 	
 	^result 

@@ -1,6 +1,7 @@
 private
 commandListProcessorForContext: aContext step: aStep
 	aStep listProcessor
+		order: 20;
 		title: aContext simpleNameForSpotterMenu;
 		allCandidates: [ self collectCommandCandidatesInContext: aContext ];
 		itemName: #menuItemName;
