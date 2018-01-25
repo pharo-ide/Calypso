@@ -1,3 +1,3 @@
 *Calypso-SystemPlugins-Spotter
 simpleNameForSpotterMenu
-	^'Comment of ', self editingClass name
+	^'Comment editor: ', self editingClass name
