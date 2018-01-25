@@ -1,3 +1,3 @@
 *Calypso-SystemPlugins-Spotter
 simpleNameForSpotterMenu
-	^'Definition of ', self editingClass name
+	^'Class editor: ', self editingClass name

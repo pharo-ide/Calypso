@@ -1,3 +1,3 @@
 *Calypso-SystemPlugins-Spotter
 simpleNameForSpotterMenu
-	^'Method ', super simpleNameForSpotterMenu 
+	^'Method editor: ', super simpleNameForSpotterMenu 
