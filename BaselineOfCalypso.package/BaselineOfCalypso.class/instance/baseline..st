@@ -10,9 +10,9 @@ baseline: spec
 			project: 'ClassAnnotationTests' copyFrom: 'ClassAnnotation' with: [
 				spec loads: 'Tests'];
 			baseline: 'Commander' with: [
-				spec repository: 'github://dionisiydk/Commander:v0.3.x' ];
+				spec repository: 'github://dionisiydk/Commander:v0.4.x' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://dionisiydk/SystemCommands:v0.3.x' ].			
+				spec repository: 'github://dionisiydk/SystemCommands:v0.4.x' ].			
 		spec 
 			package: #'Calypso-NavigationModel';
 			package: #'Calypso-NavigationModel-Tests' with: [
