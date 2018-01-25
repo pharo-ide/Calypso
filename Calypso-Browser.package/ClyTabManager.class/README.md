@@ -5,28 +5,18 @@ And #isSimilarTo: method is used to detect that new collected tool is already op
 There are cases when existing tools are not closed when selection is changed. For example when method editor is dirty and you select another method
 In that case dirty method will indicate that it is now do not belongs to the context of browser.
 And this method #belongsToCurrentBrowserContext is used for this
-In case of method editor it checks that browser still selects editing method
+In case of method editor it checks that browser still selects editing method.
 
-For the Responsibility part: Three sentences about my main responsibilities - what I do, what I know.
+So by default #isSimilarTo: simply checks the class of given tool. And if concrete tool have extra state then it should override it because otherwise new tool instance will never be opened.
 
-For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	browser:		<Object>
-	selectionPriorities:		<Object>
-	tabMorph:		<Object>
-	tools:		<Object>
-	updatingStarted:		<Object>
+	browser:		<ClyBrowser>
+	selectionPriorities:		<Dictionary<ClyBrowserTool class, Number>>
+	tabMorph:		<TabManagerMorph>
+	tools:		<Collection of<ClyBrowserTool>>
+	updatingStarted:		<Boolean>
 
 
     Implementation Points
