@@ -6,7 +6,7 @@ ensureSelectedItem
 	self dataSource isEmpty ifTrue: [ ^self ]. 
 	
 	selectionIndex := 1.
-	desiredSelection ifNotNil: [ 
+	(desiredSelection notNil and: [desiredSelection isEmpty not]) ifTrue: [ 
 		selectionIndex := desiredSelection lastSelectedItem globalPosition
 									min: self dataSource numberOfRows ].
 	self selection selectItems: {self dataSource elementAt: selectionIndex}.

@@ -1,0 +1,3 @@
+initialization
+defaultMenuIconName
+	^#smallCancelIcon

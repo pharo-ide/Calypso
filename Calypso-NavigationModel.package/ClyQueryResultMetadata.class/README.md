@@ -1,40 +1,31 @@
-I represent metadata about ClyEnvironmentContent instance. I hold information about query which built it and in what scope. 
+I represent metadata of query result as collection of first class properties (kind of ClyProperty).
+I allow annotate query result with summary information about items. 
 
-I provide suitable interface to analyze target content instance: 
+For example SUnit plugin annotates method queries with information about tests.
+Another example: ClyAsyncQueryResult includes metadata ClyBackgroundProcessingTag which indicates that result is still in processing. 
 
-	- itemScope. It returns items scope of target content (look at ClyEnvironmentContent comment for details)
-	- isAboutContent: anEnvironmentContentClass. It checks that target content is kind of given class
-	- isBuiltInScope: anEnvironmentScopeClass. It checks that content was build in given scope  class
-	- isBuiltInScopeOf: basisObject. It checks that content was build in scope  of given object
-	- isBuiltInEmptyScope. It checks that scope of building query was empty
-	- isBuiltInScopeOfSingleObject. It checks that scope of building query was based on single object.
-	- isBuiltInScopeOfMultipleObjects. It checks that scope of building query was based on multiple objects.
+To access properties use following methods: 
+- addProperty: aProperty
+- getProperty: aPropertyClass
+- hasProperty: aPropertyClass
 
-All these properties can be retrieved from content itself. But idea to escape such communication in remote scenario. Metadata of content is transfered together with content cursor from server to client. And client can use it directly to retrieve information without extra remote requests (in remote scenario content is remote object).
+Metadata is collected lazely when user asks it from the result: 
+	aQueryResult metadata 
 
-You can ask me from content by simple message #metadata. For example: 
+Actual logic to collect metadata is implemented by environment plugins. But concrete dispatch method is choosen by query which built given result:
 
-	sortedMethods metadata
+	metadata := ClyQueryResultMetadata new.
+	environment pluginsDo: [:each | 
+		buildingQuery collectMetadataOf: self by: each	] 
 
-Or create me manually: 
+Query sends typed message depending on items which query retrieves. For example:
 	
-	ClyEnvironmentContentMetadata forContentBuiltBy: anEnvironmentQuery from: anEnvironmentScope
+	ClyMethodQuery>>collectMetadataOf: aQueryResult by: anEnvironmentPlugin
+		anEnvironmentPlugin collectMetadataOfMethods: aQueryResult
 
-I also provide collection of content properties which are populated by environment plugins during content build process:
-- addProperty: anEnvironmentItemProperty
-- getProperty: propertyClass
-- hasProperty: propertyClass
-This properties allow annotate content with summary information about items.For example SUnit plugin annotate method content with information about tests.
-
-Last my function is to recreate new instance of cursor:
-	metadata newCursor
-It is used by data source to implement open/close operations.
+So metadata is property of query result. But when you open browser cursor metadata is passed to the cursor instances. It is important optimization for remote scenario where result is remote proxy. In that case cursor is transferred to the client by value together with metadata. So all properties are available for the local cursor user.
 	
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	buildingQuery:		<ClyEnvironmentQuery>
-	queryScope:		<ClyEnvironmentScope class>
-	queryScopeSize:		<Integer>
-	itemScope:		<ClyEnvironmentScope class>
-	properties:	<OrderedCollection of: <ClyEnvironmentItemProperty>>
+	properties:	<OrderedCollection of: <ClyProperty>>

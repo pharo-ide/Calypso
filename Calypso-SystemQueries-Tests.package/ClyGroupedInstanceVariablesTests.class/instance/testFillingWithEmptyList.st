@@ -3,4 +3,4 @@ testFillingWithEmptyList
 
 	queryResult fillWith: { }.
 	
-	self assertItems: {ClyInheritedMethodGroup. 0}
+	self assertItems: {ClyAllMethodGroup. 0}

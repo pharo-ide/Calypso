@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodEditorCommand",
+	"category" : "Calypso-SystemTools-Core-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyRequestMethodTagForEditorCommand",
+	"type" : "normal"
+}

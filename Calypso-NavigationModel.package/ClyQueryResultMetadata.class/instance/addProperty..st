@@ -1,3 +1,3 @@
 accessing
-addProperty: anEnvironmentItemProperty
-	properties add: anEnvironmentItemProperty
+addProperty: aProperty
+	properties add: aProperty

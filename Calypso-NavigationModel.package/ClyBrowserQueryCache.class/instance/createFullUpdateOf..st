@@ -1,4 +1,4 @@
 controlling
-createFullUpdateOf: aQueryResult
+createFullUpdateOf: aBrowserQueryResult
 
-	^aQueryResult createUpdateWithItemsStartingAt: startPosition count: sizeLimit
+	^aBrowserQueryResult createUpdateWithItemsStartingAt: startPosition count: sizeLimit

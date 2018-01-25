@@ -12,7 +12,7 @@ build
 		help: 'input tags which should be applied to current method'.
 	textMorph 
 		hResizing: #spaceFill;
-		acceptOnFocusChange: true;
+		acceptOnFocusChange: false;
 		ghostText: 'as yet unclassified'.
 	
 	self addMorph: textMorph

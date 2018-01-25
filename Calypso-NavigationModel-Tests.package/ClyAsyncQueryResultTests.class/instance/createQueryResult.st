@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClyAsyncQueryResult for: query
+	^ClyAsyncQueryResult new

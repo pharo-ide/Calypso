@@ -3,7 +3,7 @@ updateItems
 
 	| menu |
 	menu := CmdMenu activatedBy: ClyToolbarCommandActivation.
-	browser currentContextsDo: [ :eachContext | menu buildInContext: eachContext].
+	browser navigationContextsDo: [ :eachContext | menu buildInContext: eachContext].
 	
 	self hide.
 	self removeAllMorphs.

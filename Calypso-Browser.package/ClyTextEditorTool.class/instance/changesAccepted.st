@@ -4,7 +4,8 @@ changesAccepted
 	| applied |
 	applyingChanges := true.
 	textMorph hasUnacceptedEdits: true.
-	[applied := self applyChanges] on: Error do: [ :err | 
+	[self changesAreAboutApply.
+	applied := self applyChanges] on: Error do: [ :err | 
 			textModel text: self editingText. 
 			textMorph hasUnacceptedEdits: true.
 			applyingChanges := false.

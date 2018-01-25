@@ -1,4 +1,4 @@
 *Calypso-NavigationModel
 calypsoEnvironmentType
 
-	^Object
+	^self class

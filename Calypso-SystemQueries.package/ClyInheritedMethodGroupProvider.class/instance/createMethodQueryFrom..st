@@ -1,3 +1,3 @@
 building groups
 createMethodQueryFrom: aClassScope
-	^ClyAllMethods from: aClassScope asInheritedScope
+	^ClyAllMethods from: aClassScope asLocalClassScope

@@ -1,73 +1,72 @@
 My subclasses represent specific point of view on system environment. 
-I am managed by navigation environment to produce queries over system:
-	
-	scope := ClyNavigationEnvironment currentImage selectScope: ClyPackageScope of: {#Kernel asPackage}.
-	
-Or you can create me manually:
+They play role of source of data for queries which are always executed from concrete scope instance.
 
-	scope := ClyClassScope of: env basis: { Object. Point }
+Concrete types of scopes implement several methods to access concrete type of objects which are visible from given scope. This methods are supposed to be in form of enumeration based on block:
+	aScope someKindOfObjectsDo: aBlockWithObjectArg
+For example ClyPackageScope shows objects which are visible from given packages: packages, classes and methods. And to access them it implements following methods:
+- packagesDo:
+- classesDo:
+- methodsDo:
 
-I am always created within list of basis objects which restrict what could be retrieved from environment from my point of view. In previous example scope will allow to see only methods of Object or Point classes.
+Scope instances are always created in some environment and based on set of basis objects. Basis objects are the root of information which scope can provide for queries.
+Scopes which are based on single type objects are represented by subclasses of ClyTypedScope. They provide instance creation methods:
 
-I provide query operation to retrieve specific environment content: 
+	scope := ClyPackageScope of: 'Kernel' asPackage in: ClyNavigationEnvironment currentImage.
+	scope := ClyPackageScope ofAll: {'Kernel' asPackage. 'Alien' asPackage} in: ClyNavigationEnvironment currentImage.
 
-	scope query: ClySortedMethods.
-	scope query: ClySortedMethodGroups
+For more information read ClyTypedScope comment.
+I do not provide any constructor because I do not know how concrete scope will be created, how it will setup the basis.
+But I provide set of operation to convert any scope to the given typed scope class:
+- asScope: aTypedScopeClass. It creates instance of given scope class using receiver basis and environment.
+- asScope: aTypedScopeClass of: singleBasisObject. It creates instance of given scope class using given singleBasisObject and receiver environment.
+- asScope: aTypedScopeClass ofAll: newBasisObjects. It creates instance of given scope class using given newBasisObjects and receiver environment.
+So the main point of these methods is to create new scope instances with existing properties of given scope. Where environment is always shared. 
 
-Argument of #query: message is instance of ClyEnvironmentQuery or compatible object (inside it is asked for #asEnvironmentQuery). 
-In example concrete class of requested content is used. But it could be direct instance of query like: 
+Also I implement several testing methods which are used in some UI logic:
+- isBasedOn: aBasisObject
+- isBasedOnEmptyBasis
+- isBasedOnSingleBasis
+- isBasedOnMultipleBasis
 
-	scope query: (ClyAllItemsQuery requestedContent: ClySortedMethods).
-	scope query: (ClyEnvironmentFilterQuery for: ClySortedMethods by: (ClyItemNameSubstringFilter pattern: 'test')).
-	scope query: (ClyMessageSenders of: #do:).
+Although it is preferred to instantiate scopes in the environment in some cases it is conveinient to bound scope to the environment separately from instantiation. 
+For this purpose there are few methods:
+- isBoundToEnvironment
+- bindTo: aNavigationEnvironment
 
-There is most global scope where user can retrieve items. It is ClySystemScope. You can ask it from current image navigation environment: 
+Scope is integral part of query. So it participates in environment query cache. And therefore any scope should correctly implement comparison: equal and hash operations. 
+I provide default implementation based on basis objects. And subclasses which introduce extra parameters should provide specialized implementation.
+Also it adds restriction that scope should be completaly initialized at query execution time and after it should never be modified. It is protected by write barrier logic when query fixes state before execution. It forces scope to beReadOnlyObject.
 
-	scope := ClyNavigationEnvironment currentImageScope.
-	
-And you can query it directly:
+To support query execution I also provide several methods which are supposed to not be used externally:
+- query: aQuery
+- isQueryEmpty: aQuery
+These methods are called by query. And I just delegate them to the environment.
+Also subclasses should implement #adoptQuery: method to prepare given query for execution from receiver.
+For example there is composite scope which converts given query to the composite query. Because simple query can't be executed directly from composite.
+And by same reason I require subclasses implement:
+- supportsQuery: aQuery
+Query checks it when it is assigned to the scope. It allows to detect incompatibitily early and signal error.
 
-	ClyNavigationEnvironment queryCurrentImageFor: ClySortedPackages.
+Also in case of composite scope users can be still interested to know that they work with some simple scope which is part of composite. 
+To made such test independent of type of scope I require subclasses to implement:
+- representsScope: aScopeClass 
+In case of composte it will check subscopes. And in case of simple scope it will simply check isKindOf:.
 
-I also provide suitable methods to create modified scopes. For example to create similar scope with extra basis object or without it:
-
-	scope withExtraBasisObject: Collection.
-	scope withoutBasisObject: Point
-
-Or you can ask me for another kind of scope but with same basis: 
-	
-	classScope asScope: ClyClassSideScope.
-	classScope asScope: ClyInstanceSideScope.
-	
-Look at queries protocol for more.
-
-My subclasses should implement a couple of methods which used in double dispatch logic to call typed message according to my basis objects:
-
-- buildContent: anEnvironmentContent 
-
-For example ClyPackageScope will ask content for: 	
-	anEnvironmentContent buildFromPackages: basisObjects
-
-- class side resolvePropertiesOf: anEnvironmentItem by: anEnvironmentPlugin
-
-For example ClyClassScope will ask plugin for: 
-	anEnvironmentPlugin resolvePropertiesOfClass: anEnvironmentItem
-
-I maintain weak cache of all executed queries. So any duplicated queries are performed fast and memory efficient.
-This cache is a dictionary where keys are queries and values are result instances (anEnvironmentContent).
-
-If my environment is attached to system I receive each system change to fix all my cached queries (method handleSystemChange:).
-
-Public API and Key Messages
-
-- query: anEnvironmentQueryOrEnvironmentContentClass
-- withExtraBasisObject: anObject
-- withoutBasisObject: anObject
-- withCachedQueriesDo: aBlock
+In addition I provide printing infrastructure.
+Subclasses can define class side method #defaultName. And users can override it in instance:
+	aScope name: 'special name'  
+I implement #description with these names which is used in UI and to print queries:
+	aScope description
+In addition basis objects are appended in the end of desription. 
+Subclasses can specialize how basis objects are printed using method #printBasisObject:on:.
+For printString logic I just print basis in brackets. 
+Look at examples:
+	(ClyPackageScope of: 'Kernel' asPackage) description "==> 'packages: Kernel'"
+	(ClyPackageScope of: 'Kernel' asPackage) printString "==>  'a ClyPackageScope(Kernel)'"
  
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	basisObjects:		<Array>
+	basisObjects:		<Set>
 	environment:		<ClyNavigationEnvironment>
-	queryCache:		<Dictionary of<EnvironmentQuery, EnvironmentContent>>
+	name:		String

@@ -1,3 +1,6 @@
 accessing
 classScopeForMethods
-	^methodGroupQuery scope asScope: metaLevelScope
+	| currentClassScope |
+	currentClassScope := methodGroupQuery scope asScope: metaLevelScope.
+	
+	^self extendClassScopeForMethods: currentClassScope

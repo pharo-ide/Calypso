@@ -4,6 +4,6 @@ buildBrowserTabActionsUsing: aCommandActivator
 	^{
 		TabAction 
 			action: [ aCommandActivator executeCommand ]
-			icon: (Smalltalk ui iconNamed: self browserTabActionIconName)
+			icon: self browserTabActionIcon
 			label: aCommandActivator menuItemName
 	}

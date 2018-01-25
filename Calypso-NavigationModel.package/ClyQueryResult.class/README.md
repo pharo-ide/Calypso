@@ -90,7 +90,7 @@ To get cursor instance you should open it for concrete observer:
 
 	cursor := aQueryResult openBrowserCursorFor: anObserver
 
-anObserver will be subscribed on my changes and new cursor instance will be return to the caller.
+anObserver will be subscribed on my changes and new cursor instance will be returned to the caller.
 When cursor is not needed anymore it should be closed. It will unsubscribe observer in addition:
 
 	cursor close
@@ -102,11 +102,20 @@ With cursor you are able access items as ClyBrowserItem instances. For example:
 	cursor findItemsWhere: conditionBlock 
 	
 The important responsibility of cursor is to organize cache of retrieved browser items. It is especially important for remote scenario where cache represents loaded remote items. But also it caches all extended properties collected for items by environment plugins.  
+
+So cursor expects instances of ClyBrowserItem from inderlying query result. 
+Some my subclasses build them directly from retrieved raw items. They are subclasses of ClyBrowseQueryResult. They provide extra query methods to lookup browser items.
+When cursor is requested for such result it is just created over receiver instance.
+But other result classes can't be used directly in cursor because they have no knowledge about browser items. For example ClyRawQueryResult just returns raw objects which were retrieved by query.
+For such cases I provide special adapter ClyQueryResultBrowserAdapter: by default cursor instance is always created over adapter which wraps actual result instance.
+Adapter converts actual items to the ClyBrowserItem instances and implements same query methods as ClyBrowserQueryResult.
+This logic is implemented in method #adoptForBrowser which is overridden by ClyBrowserQueryResult with self return.
+
 For more details about cursor look at ClyBrowserQueryCursor comments. And read comments of ClyBrowserItem.
 
 The last feature which I provide for my subclasses is metadata. I compute it lazily on demand and keed it in the #metadata variable. Metadata is updated together with items. So when items are changed the metadata is reset and subsequent call for it will recompute it again.
-The metadata is an instance of ClyQueryResultMetadata which represent extended properties of result in general. For example the result of class query can include the count of success tests as metadata property.
-And properties are represented by first class objects, a kind of ClyBrowserItemProperty.
+The metadata is an instance of ClyQueryResultMetadata which represents extended properties of result in general. For example the result of class query can include the count of success tests as metadata property.
+Properties are represented by first class objects, a kind of ClyProperty.
 The metadata is collected using environment plugins. So it is extended by them. 
 Plugins collect information of concrete type of result items. For example: 
 	
@@ -123,7 +132,7 @@ So every query class should implement the method #collectMetadataOf:by:.
 
 To access metadata there are several methods:
 
-- addMetaProperty: anBrowserItemProperty
+- addMetaProperty: aProperty
 - getMetaProperty: aPropertyClass
 - hasMetaProperty: aPropertyClass	
 - metadata

@@ -1,3 +1,3 @@
 preparation
-markWithChildrenOf: anEnvironmentScopeClass
-	self addProperty: (ClyChildrenTag childrenType: anEnvironmentScopeClass)
+markWithChildrenOf: anItemTypeClass
+	self addProperty: (ClyItemChildrenTag childrenType: anItemTypeClass)

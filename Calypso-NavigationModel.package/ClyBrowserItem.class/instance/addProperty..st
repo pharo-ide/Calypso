@@ -1,3 +1,3 @@
 preparation
-addProperty: aBrowserItemProperty
-	properties add: aBrowserItemProperty
+addProperty: aProperty
+	properties add: aProperty

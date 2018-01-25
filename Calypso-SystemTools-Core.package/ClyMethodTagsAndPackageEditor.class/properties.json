@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyStatusBarItem",
+	"category" : "Calypso-SystemTools-Core-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"extensionCheckbox",
+		"editButton",
+		"label"
+	],
+	"name" : "ClyMethodTagsAndPackageEditor",
+	"type" : "normal"
+}

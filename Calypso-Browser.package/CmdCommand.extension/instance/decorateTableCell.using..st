@@ -1,8 +1,7 @@
 *Calypso-Browser
 decorateTableCell: anItemCellMorph using: aCommandActivator
 
-	| button icon |
-	icon := self buildTableCellIconFor: anItemCellMorph.
-	button := self createTableCellButtonWith: icon using: aCommandActivator.
+	| button |
+	button := self createTableCellButtonUsing: aCommandActivator.
 		
 	self decorateTableCell: anItemCellMorph with: button

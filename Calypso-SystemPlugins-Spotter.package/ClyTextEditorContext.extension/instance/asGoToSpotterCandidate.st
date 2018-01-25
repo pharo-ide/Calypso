@@ -1,0 +1,3 @@
+*Calypso-SystemPlugins-Spotter
+asGoToSpotterCandidate
+	^tool asGoToSpotterCandidate
