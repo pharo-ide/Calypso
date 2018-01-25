@@ -2,4 +2,4 @@ activation
 textToolShortcutActivation
 	<classAnnotation>
 
-	^ CmdShortcutCommandActivation by: $/ command for: ClyTextEditorContext
+	^ CmdShortcutCommandActivation by: self defaultShortcut for: ClyTextEditorContext

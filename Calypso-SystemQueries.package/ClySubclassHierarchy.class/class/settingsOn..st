@@ -1,5 +1,5 @@
 settings
-settingsGroupOn: aBuilder
+settingsOn: aBuilder
 	<systemsettings>
 	(aBuilder setting: #isDefaultHierarchyForVariables)
 		parent: #Calypso;

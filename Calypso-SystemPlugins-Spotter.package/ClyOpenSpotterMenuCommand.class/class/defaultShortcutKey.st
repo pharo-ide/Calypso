@@ -1,0 +1,3 @@
+settings
+defaultShortcutKey
+	^self defaultShortcut character asString
