@@ -1,3 +1,3 @@
-I filter objects by name using given string filter.
+I am a root of hierarchy of string filters which analyze name of item.
 
-So I am compatible with objects which respond to the #name
+My subclasses must implement method #matchesName:

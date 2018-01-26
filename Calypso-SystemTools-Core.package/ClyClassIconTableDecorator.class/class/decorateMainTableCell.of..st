@@ -1,11 +1,11 @@
 decoration
 decorateMainTableCell: anItemCellMorph of: aDataSourceItem
 	
-	| icon |
+	| iconName |
 	super decorateMainTableCell: anItemCellMorph of: aDataSourceItem.
-	    
-   icon := Object environment at: aDataSourceItem name asSymbol
-            ifPresent: [ :aClass | aClass systemIcon ]
-            ifAbsent: [ Object systemIcon ].
+	
+	iconName := Object environment at: aDataSourceItem name asSymbol
+			ifPresent: [ :aClass | aClass systemIconName]
+			ifAbsent: [ Object systemIconName ].
 
-    anItemCellMorph definitionMorph: icon asMorph
+	anItemCellMorph definitionIcon: iconName

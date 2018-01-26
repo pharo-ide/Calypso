@@ -12,3 +12,6 @@ Internal Representation and Key Implementation Points.
 
     Instance Variables
 	value:		<String>
+
+
+    Implementation Points

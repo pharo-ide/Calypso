@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "DenisKudryashov 1/17/2018 18:18",
+	"commentStamp" : "",
 	"super" : "ClyQueryResultBrowserAdapter",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],

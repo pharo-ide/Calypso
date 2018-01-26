@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "DenisKudryashov 1/17/2018 12:06",
-	"super" : "ClyProperty",
+	"commentStamp" : "DenisKudryashov 2/9/2017 11:53",
+	"super" : "ClyBrowserItemProperty",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 	"instvars" : [
 		"subtreeSize"
 	],
-	"name" : "ClyItemLocalHierarchyProperty",
+	"name" : "ClyLocalHierarchyProperty",
 	"type" : "normal"
 }

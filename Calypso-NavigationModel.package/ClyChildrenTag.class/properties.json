@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "DenisKudryashov 1/17/2018 12:07",
-	"super" : "ClyProperty",
+	"commentStamp" : "DenisKudryashov 2/9/2017 11:46",
+	"super" : "ClyBrowserItemProperty",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -10,6 +10,6 @@
 	"instvars" : [
 		"childrenType"
 	],
-	"name" : "ClyItemChildrenTag",
+	"name" : "ClyChildrenTag",
 	"type" : "normal"
 }

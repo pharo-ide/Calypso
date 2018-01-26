@@ -1,8 +1,8 @@
 queries
-findItemsSimilarTo: sampleBrowserItems
+findItemsSimilarTo: sampleEnvironmentItems
 	| rest found |
 	self protectItemsWhile: [ 
-		rest := sampleBrowserItems as: OrderedCollection.
+		rest := sampleEnvironmentItems as: OrderedCollection.
 		found := OrderedCollection new.	
 		items do: [ :existing |
 			rest

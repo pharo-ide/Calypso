@@ -2,6 +2,6 @@ accessing
 localHierarchySize
 
 	| property |
-	property := self getProperty: ClyItemLocalHierarchyProperty ifAbsent: [ ^0].
+	property := self getProperty: ClyLocalHierarchyProperty ifAbsent: [ ^0].
 	
 	^property subtreeSize

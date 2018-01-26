@@ -1,4 +1,4 @@
 queries
 nextItem
-	self moveToNext.
+	self moveTo: position + 1.
 	^self currentItem
