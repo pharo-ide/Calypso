@@ -41,8 +41,10 @@ And to open browser evaluate:
 ClyFullBrowser open.
 ```
 ### Pharo 6 installation on Windows
-To install Calypso properly on Windows check that Iceberg intergation is disabled (it is disabled by default). 
-
+To install Calypso properly on Windows check that Iceberg intergation is disabled (it is disabled by default):
+```Smalltalk
+Iceberg enableMetacelloIntegration: false
+```
 There are long package and methods names in Calypso (related to tests) which are the problem of FileTree format on Windows.
 
 ## Problems
