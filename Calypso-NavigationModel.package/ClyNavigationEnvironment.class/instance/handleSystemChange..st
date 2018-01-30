@@ -1,15 +1,15 @@
 system changes
 handleSystemChange: aSystemAnnouncement
 
-	| busyResults busySize success anyResult |
-	busyResults := 	(queryCache values select: [ :each | each notNil ]) as: IdentitySet.
-	busySize := 0.
-	[[busySize = busyResults size] whileFalse: [
-		busySize := busyResults size.  
-		busyResults asArray do: [ :eachResult |
-			success := eachResult tryHandleSystemChange: aSystemAnnouncement.
-			success ifTrue: [ busyResults remove: eachResult ] ]].
-	busyResults notEmpty] whileTrue: [ 
-		anyResult := busyResults anyOne.
+	| todoList todoSize anyResult |
+	todoList := 	(queryCache values select: [ :each | each notNil ]) as: IdentitySet.
+	todoSize := 0.
+	[[todoSize = todoList size] whileFalse: [
+		todoSize := todoList size.  
+		todoList asArray do: [ :eachResult |
+			(todoList includes: eachResult) ifTrue: [  
+				eachResult handleSystemChange: aSystemAnnouncement byProcessingList: todoList]]].
+	todoList notEmpty] whileTrue: [ 
+		anyResult := todoList anyOne.
 		anyResult handleSystemChange: aSystemAnnouncement.
-		busyResults remove: anyResult]
+		todoList remove: anyResult]
