@@ -12,7 +12,7 @@ baseline: spec
 			baseline: 'Commander' with: [
 				spec repository: 'github://dionisiydk/Commander:v0.4.x' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://dionisiydk/SystemCommands:v0.4.x' ].			
+				spec repository: 'github://dionisiydk/SystemCommands:v0.5.x' ].			
 		spec 
 			package: #'Calypso-NavigationModel';
 			package: #'Calypso-NavigationModel-Tests' with: [
