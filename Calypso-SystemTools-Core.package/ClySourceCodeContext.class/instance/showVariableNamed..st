@@ -1,3 +1,3 @@
-user requests
+tool controlling
 showVariableNamed: aString
 	tool selectVariableNamed: aString

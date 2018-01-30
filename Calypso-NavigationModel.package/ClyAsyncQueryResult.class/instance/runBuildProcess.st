@@ -1,6 +1,8 @@
 building
 runBuildProcess
 
-	buildProcess := [self buildActualResult] 
-		forkAt: Processor userBackgroundPriority 
-		named: 'Build result of ', buildingQuery printString
+	buildProcess := [self buildActualResult] newProcess.
+	buildProcess 
+		name: 'Build result of ', buildingQuery printString;
+		priority: Processor userBackgroundPriority.
+	buildProcess resume

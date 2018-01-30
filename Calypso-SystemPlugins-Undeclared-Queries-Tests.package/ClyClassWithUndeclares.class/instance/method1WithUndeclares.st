@@ -1,3 +1,3 @@
 with undeclares
 method1WithUndeclares
-	^instVar1 printString
+	^undeclaredStubInstVar1 printString

@@ -6,4 +6,4 @@ chooseClassesForNewMethod: aMethod
 	
 	selectedClasses := self chooseClassesForNewMethod.
 	selectedClasses := selectedClasses copyWithout: methodClass.
-	^{methodClass} , selectedClasses
+	^selectedClasses, {methodClass}
