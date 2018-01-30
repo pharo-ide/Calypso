@@ -1,10 +1,13 @@
 system changes
 handleSystemChange: aSystemAnnouncement byProcessingList: allProcessingResults
+	| expectedResult |
 	super handleSystemChange: aSystemAnnouncement byProcessingList: allProcessingResults.
 	
-	actualResult ifNil: [ ^self].
+	expectedResult := environment cachedResultOf: buildingQuery.
+	expectedResult ifNil: [ ^self ].
+	
 	needsRebuild ifTrue: [ 
 		buildProcess ifNotNil: [ buildProcess terminate ].
-		actualResult itemsChanged].
+		expectedResult itemsChanged].
 	
-	allProcessingResults remove: actualResult ifAbsent: [  ]
+	allProcessingResults remove: expectedResult ifAbsent: [  ]
