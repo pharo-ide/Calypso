@@ -1,12 +1,12 @@
 operations
 selectClassForNewMethodIfNone: aBlock
-	| methodClass targetClasses |
+	| targetClasses |
 	targetClasses := browser chooseClassesForNewMethod: self editingMethod.
-	
-	methodClass := targetClasses first.
-	targetClasses size > 1 ifTrue: [
-		methodClass := UIManager default 
-			chooseFrom: targetClasses values: targetClasses 
-			title: 'Choose class where you want install new method'].
-	
-	^methodClass ifNil: aBlock
+	 
+	targetClasses size = 1 ifTrue: [ ^ targetClasses first].
+
+	^[self browser searchDialog 
+			requestSingleObject: 'Where install new method?'
+			from: (ClyAllClasses as: ClyMethodVisibilityProvider defaultHierarchy asQueryResult) 
+			inScope: (ClyClassScope ofAll: targetClasses)]
+		on: CmdCommandAborted do: [:err | aBlock value ]
