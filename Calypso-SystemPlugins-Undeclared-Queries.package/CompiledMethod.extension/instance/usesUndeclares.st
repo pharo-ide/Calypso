@@ -9,6 +9,6 @@ usesUndeclares
 		ifFalse: [
 			"To support Pharo 6"
 			self literalsDo: [:each | 
-				(each class == Association and: [each value notNil]) ifTrue: [^true]]].
+				(each class == Association and: [each key notNil]) ifTrue: [^true]]].
 	
 	^false
