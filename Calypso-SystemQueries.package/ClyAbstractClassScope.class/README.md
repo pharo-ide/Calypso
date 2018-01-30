@@ -1,6 +1,6 @@
 I am a root of class scope hierarchy.
 From any class scope you are able access classes, methods and variables. 
-And each kind of class scope define what exact objects are accessible.
+And my subclasses define what exact objects are accessible.
 
 For example ClyInstanceSideScope can only access instance side methods. While ClyClassSideScope see only class side methods.
 Or ClySuperclassScope can access methods of all superclasses of basis classes. 
@@ -10,15 +10,13 @@ Class scope instances should be created on set of classes:
 	ClyClassScope of: String .
 	ClyClassScope ofAll: { String. Array }.
 
-I define accessing interface which my classes should implement: 
+I define accessing interface with following set of methods: 
 
 - classesDo: aBlock 
 Each scope should implement visible classes enumeration
 
 - methodsDo: aBlock
 Each scope should implement visible methodes enumeration
-
-And methods which are based on it:
 
 - instanceVariablesDo: aBlock
 It enumerates all instance variables available from visible classes. It is not abstract method. It is based of class enumeration.
@@ -36,10 +34,10 @@ It is special method which collects and enumerates all methods groups available 
 
 - includesClass: aClass
 
-The methods enumeration can be also implemented using #classesDo: logic but it would not be generally correct because I do not apply any restriction on the visible meta level of classes. 
+The methods enumeration is abstract because I do not apply any restriction on the visible meta level of classes.  
 So for given class I do not know what methods I can access: instance side or class side, or both. 
 It is responsibility of my subclasses to define concrete meta level logic and implement #methodsDo: according to it. 
-And to define meta level logic subclasses should implement following methods:
+So to define meta level logic subclasses should implement following methods:
 
 - metaLevelsOf: aClass do: aBlock
 It should evaluate given aBlock with all meta levels of given class which are accessible from receiver. For example ClyInstanceSideScope will evaluate aBlock with instance side of aClass. And ClyBothMetaLevelClassScope will evaluate aBlock twice with instance side and class side separately.
