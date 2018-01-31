@@ -1,1 +1,1 @@
-I represent local scope of classes where my basis objects are actual classes which define point of view on environment
+I represent local scope of classes which merges both instance and class sides
