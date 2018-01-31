@@ -1,1 +1,1 @@
-I am a query to retrieve implementors of given selectors set
+I return all implementors of given selectors

@@ -1,1 +1,1 @@
-I am a query to retrieve senders of given selectors set
+I return all senders of any of given selectors
