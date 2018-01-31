@@ -1,1 +1,6 @@
-I represent point of view on environment from set of projects
+I am a scope of projects.
+So I see all objects which are defined in given projects:
+- projects
+- packages
+- classes 
+- methods
