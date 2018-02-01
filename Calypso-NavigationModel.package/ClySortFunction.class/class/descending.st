@@ -1,5 +1,5 @@
 instance creation
-descend
+descending
 
 	^self new 
 		direction: -1

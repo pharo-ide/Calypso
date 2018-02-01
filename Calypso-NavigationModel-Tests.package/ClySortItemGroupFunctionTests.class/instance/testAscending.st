@@ -1,7 +1,7 @@
 tests
 testAscending
 
-	function := ClySortItemGroupFunction ascend.
+	function := ClySortItemGroupFunction ascending.
  
 	self assert: (function 
 		value: (ClyItemGroup named: 'group1' priority: 20) 

@@ -1,3 +1,3 @@
 accessing
 queryResultClass
-	^ClySortedQueryResult using: ClySortSystemItemFunction ascend
+	^ClySortedQueryResult using: ClySortSystemItemFunction ascending

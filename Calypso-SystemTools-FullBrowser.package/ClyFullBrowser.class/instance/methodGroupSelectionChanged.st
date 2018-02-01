@@ -7,4 +7,4 @@ methodGroupSelectionChanged
 	methodQueries := self methodGroupSelection actualObjects 
 		collect: [ :eachGroup | eachGroup methodQuery].
 	methodView 
-		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascend)
+		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascending)

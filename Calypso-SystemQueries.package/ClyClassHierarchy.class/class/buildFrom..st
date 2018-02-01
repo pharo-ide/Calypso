@@ -1,3 +1,3 @@
 building
 buildFrom: classes
-	^self buildFrom: classes sortedBy: ClySortByNameFunction ascend
+	^self buildFrom: classes sortedBy: ClySortByNameFunction ascending

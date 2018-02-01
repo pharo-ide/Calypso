@@ -1,7 +1,7 @@
 tests
 testCompareTwoMethods
 
-	function := ClySortSystemItemFunction ascend.
+	function := ClySortSystemItemFunction ascending.
 	
 	self deny: (function value: Object >> #size value: Object >> #printString ).
 	self assert: (function value: Object >> #printString value: Object >> #size ).

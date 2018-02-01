@@ -1,3 +1,3 @@
 initialization
 defaultItems
-	^SortedCollection sortBlock: ClySortByNameFunction ascend
+	^SortedCollection sortBlock: ClySortByNameFunction ascending

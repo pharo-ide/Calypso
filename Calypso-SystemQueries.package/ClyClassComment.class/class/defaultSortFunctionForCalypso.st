@@ -1,3 +1,3 @@
 sorting
 defaultSortFunctionForCalypso
-	^ClySortByDefiningClassFunction ascend
+	^ClySortByDefiningClassFunction ascending

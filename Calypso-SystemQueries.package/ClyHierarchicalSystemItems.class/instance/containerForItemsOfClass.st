@@ -1,3 +1,3 @@
 building
 containerForItemsOfClass
-	^SortedCollection sortBlock: ClySortSystemItemFunction ascend forBrowserItems
+	^SortedCollection sortBlock: ClySortSystemItemFunction ascending forBrowserItems

@@ -1,7 +1,7 @@
 tests
 testDescending
 
-	function := ClySortMethodFunction descend.
+	function := ClySortMethodFunction descending.
 	
 	self assert: (function value: Object >> #size value: Object >> #printString ).
 	self deny: (function value: Object >> #printString value: Object >> #size ).
