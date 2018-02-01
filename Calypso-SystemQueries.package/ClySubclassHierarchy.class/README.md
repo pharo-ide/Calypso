@@ -1,0 +1,1 @@
+I represent hierarchy of classes where roots are all common superclasses and children of every class are its subclasses
