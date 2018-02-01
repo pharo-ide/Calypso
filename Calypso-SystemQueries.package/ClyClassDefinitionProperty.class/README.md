@@ -1,8 +1,5 @@
-I describe package which defines given class.
+I represent definition of class which includes package and class itself as defining objects.
 
 You can create me by: 
-	ClyClassDefinitionProperty of: aClass 
-	ClyClassDefinitionProperty package: aPackage.
-	
-You can access actual package using:
-	classDefinition definitionPackage
+
+	ClyClassDefinitionProperty of: aClass
