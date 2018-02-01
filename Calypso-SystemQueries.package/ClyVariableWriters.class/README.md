@@ -1,1 +1,1 @@
-I am a query to retrieve writers of given variables set
+I return only methods which write given variables

@@ -1,1 +1,1 @@
-I am a query to retrieve readers of given variables set
+I return only methods which read given variables
