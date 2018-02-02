@@ -2,7 +2,7 @@ accessing
 accumulateTestMethod: aMethod
 	| testSelector result |	
 	testSelector := aMethod selector.
-	aMethod origin withAllSubclassesDo: [ :concreteTestCase | 
+	aMethod methodClass withAllSubclassesDo: [ :concreteTestCase | 
 		concreteTestCase isAbstract ifFalse: [
 			self accumulateTest: testSelector of: concreteTestCase.
 			
