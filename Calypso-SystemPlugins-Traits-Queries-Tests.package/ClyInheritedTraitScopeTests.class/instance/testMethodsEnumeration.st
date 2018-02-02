@@ -4,8 +4,8 @@ testMethodsEnumeration
 	
 	scope methodsDo: [ :each | result add: each ].
 	
-	self assert: (result includesAll: ClyTraitChild1 localMethods).
-	self assert: (result includesAll: ClyTraitRoot1 localMethods).
-	self deny: (result includesAll: ClyTraitRoot1 classSide localMethods).
+	self assert: (result includesAll: (self methodsInstalledFrom: ClyTraitChild1)).
+	self assert: (result includesAll: (self methodsInstalledFrom: ClyTraitRoot1)).
+	self deny: (result includesAll: (self methodsInstalledFrom: ClyTraitRoot1 classSide)).
 	self deny: (result includesAll: ClyClassWithTraits localMethods).
 	self deny: (result includesAll: ClyClassWithTraits classSide localMethods)
