@@ -13,5 +13,9 @@ updateUsing: newUpdateStrategy by: updateBlock
 				updateBlock on: Exception do: [ :err |
 					updateGuard := Mutex new.
 					err pass]
-			] ensure: [ updateStrategy := oldStrategy ]]
+			] ensure: [ 
+				updateStrategy == newUpdateStrategy ifTrue: [ 
+					"In case of error another process can set up new strategy. 
+					This condition will avoid possible collision"
+					updateStrategy := oldStrategy ]]]
 	] ensure: [ newUpdateStrategy publishCollectedChanges]
