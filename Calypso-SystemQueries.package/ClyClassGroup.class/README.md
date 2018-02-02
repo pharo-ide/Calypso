@@ -16,7 +16,18 @@ And there are additional constructors to specify priority of group:
 	ClyClassGroup named: 'some group' priority: 20 on: aClassQuery withSubgroupsFrom: aQuery
 
 All groups are sorted by priority and name in the browser. Larger priority value put group to the top of list.
+
+I provide several methods to implement various commands: 
+
+- importClass: aClass
+It supposed to modify given aClass in the way that it will become the part of group.
+
+- importClasses: classes 
+It imports multiple classes
 		 
+- removeWithClasses
+It removes all classes and should ensure that groups will be removed too which is true for all virtual groups.
+
 Internal Representation and Key Implementation Points.
 
     Instance Variables

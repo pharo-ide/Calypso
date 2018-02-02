@@ -1,11 +1,15 @@
-I am group of classes marked by specific tag.
+I represent group of classes which does marked by specific tag.
 
-You can create me be: 
-	ClyTaggedClassGroup in: aPackage tag: #Core 
+You can create my instance using: 
+
+	ClyTaggedClassGroup withClassesFrom: aPackageScope taggedBy: aSymbol.
 	 
-I am managed by user because my source of data (tag) is what user explicitly create, rename or remove.
+I provide simple method to rename this tag:
 
-Internal Representation and Key Implementation Points.
+	aGroup renameClassTagTo: aSymbol
 
-    Instance Variables
-	tag:		<Symbol>
+Which in fact untags all classes and then marks them with new tag.
+
+For the #removeWithClasses operation I remove empty class tag from registrered tags of package.
+	
+My class query is ClyTaggedClasses
