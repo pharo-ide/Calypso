@@ -1,6 +1,6 @@
 presentation
 createIcon
-
+	allCount = 0 ifTrue: [ ^ Smalltalk ui icons iconNamed: #testNotRunIcon ].
 	allCount = successCount
 		ifTrue: [ ^Smalltalk ui icons iconNamed: #testGreenIcon ].
 	errorCount = 0 & (failureCount > 0)
