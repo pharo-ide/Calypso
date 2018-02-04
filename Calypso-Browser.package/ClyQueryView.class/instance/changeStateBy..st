@@ -1,3 +1,3 @@
 controlling
 changeStateBy: aBlock
-	browser changeStateBy: aBlock
+	browser changeStateOf: self by: aBlock

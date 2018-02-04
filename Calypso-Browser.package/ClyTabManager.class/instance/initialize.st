@@ -3,6 +3,7 @@ initialize
 	super initialize.
 	tools := SortedCollection sortBlock: [:a :b | a tabOrder <= b tabOrder ].
 	selectionPriorities := IdentityDictionary new.
+	desiredSelection := #().
 	updatingStarted := false.
 	tabMorph := TabManagerMorph new.
 	tabMorph useSortedTabsBy: [:a :b | a model tabOrder <= b model tabOrder ].
