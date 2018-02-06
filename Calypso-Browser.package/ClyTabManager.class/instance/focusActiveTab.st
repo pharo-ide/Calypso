@@ -1,4 +1,8 @@
 focus management
 focusActiveTab
 
-	self mainTool ifNotNil: [ :tool | tool takeKeyboardFocus]
+	| activeTab |
+	activeTab := self selectedTools detectMax: [ :each | 
+		self activationPriorityOf: each].
+		
+	activeTab ifNotNil: [ activeTab takeKeyboardFocus]
