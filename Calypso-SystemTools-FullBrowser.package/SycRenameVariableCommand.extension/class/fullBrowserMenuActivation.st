@@ -2,4 +2,4 @@
 fullBrowserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemOrder: 2 for: ClyVariableContextOfFullBrowser 
+	^CmdContextMenuCommandActivation byRootGroupItemOrder: 2 for: ClyVariable asCalypsoItemContext 

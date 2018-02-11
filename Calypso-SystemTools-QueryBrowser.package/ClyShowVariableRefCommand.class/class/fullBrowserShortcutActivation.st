@@ -2,4 +2,4 @@ activation
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $n meta for: ClyVariableContextOfFullBrowser
+	^CmdShortcutCommandActivation by: $n meta for: ClyVariable asCalypsoItemContext
