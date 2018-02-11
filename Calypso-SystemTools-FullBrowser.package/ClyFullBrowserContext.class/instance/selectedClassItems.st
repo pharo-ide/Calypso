@@ -1,3 +1,5 @@
 selection-classes
 selectedClassItems
-	^tool classSelection items
+	^(activeQueryView showsItemsOfType: ClyClass) 
+		ifTrue: [ selectedItems ]
+		ifFalse: [ tool classSelection items]

@@ -1,0 +1,3 @@
+selection-variables
+lastSelectedVariable
+	^self lastSelectedObjectIn: self selectedVariables

@@ -1,3 +1,5 @@
 selection-projects
 selectedProjectItems
-	^tool projectSelection items
+	^(activeQueryView showsItemsOfType: ClyManagedProject) 
+		ifTrue: [ selectedItems ]
+		ifFalse: [ tool projectSelection items]

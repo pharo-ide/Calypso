@@ -1,3 +1,5 @@
 selection-packages
 selectedPackageItems
-	^tool packageSelection items
+	^(activeQueryView showsItemsOfType: RPackage) 
+		ifTrue: [ selectedItems ]
+		ifFalse: [ tool packageSelection items]

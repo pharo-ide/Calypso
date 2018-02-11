@@ -1,3 +1,5 @@
 selection-method groups
 selectedMethodGroupItems
-	^tool methodGroupSelection items
+	^(activeQueryView showsItemsOfType: ClyMethodGroup) 
+		ifTrue: [ selectedItems ]
+		ifFalse: [ tool methodGroupSelection items]

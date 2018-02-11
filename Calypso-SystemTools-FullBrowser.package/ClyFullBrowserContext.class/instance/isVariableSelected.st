@@ -1,3 +1,3 @@
 selection-variables
 isVariableSelected
-	^self hasSelectedItems 
+	^self selectedVariableItems notEmpty

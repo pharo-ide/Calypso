@@ -1,3 +1,5 @@
 selection-methods
 selectedMethodItems
-	^tool methodSelection items
+	^(activeQueryView showsItemsOfType: ClyMethod) 
+		ifTrue: [ selectedItems ]
+		ifFalse: [ tool methodSelection items]

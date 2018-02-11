@@ -1,3 +1,5 @@
 selection-package groups
 selectedPackageGroupItems
-	^tool packageGroupSelection items
+	^(activeQueryView showsItemsOfType: ClyPackageGroup) 
+		ifTrue: [ selectedItems ]
+		ifFalse: [ tool packageGroupSelection items]
