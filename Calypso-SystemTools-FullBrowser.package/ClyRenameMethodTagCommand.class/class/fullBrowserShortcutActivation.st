@@ -1,5 +1,5 @@
-as yet unclassified
+activation
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation renamingFor: ClyMethodGroupContextOfFullBrowser
+	^CmdShortcutCommandActivation renamingFor: ClyMethodGroup asCalypsoItemContext
