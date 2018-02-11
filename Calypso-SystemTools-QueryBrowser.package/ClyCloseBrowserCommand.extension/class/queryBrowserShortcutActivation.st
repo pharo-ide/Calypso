@@ -2,4 +2,4 @@
 queryBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $w command for: ClyQueryBrowserContext
+	^CmdShortcutCommandActivation by: $w command for: ClyQueryBrowser

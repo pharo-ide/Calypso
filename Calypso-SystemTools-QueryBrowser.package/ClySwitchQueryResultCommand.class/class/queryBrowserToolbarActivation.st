@@ -2,4 +2,4 @@ activation
 queryBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byItemOf: ClyQueryResultToolbarGroup for: ClyQueryBrowserContext 
+	^ClyToolbarCommandActivation byItemOf: ClyQueryResultToolbarGroup for: ClyQueryBrowser
