@@ -2,4 +2,4 @@
 processBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byRootGroupItemOrder: 1 for: ClyProcessContextOfProcessBrowser
+	^ClyToolbarCommandActivation byRootGroupItemOrder: 1 for: Process asCalypsoItemContext

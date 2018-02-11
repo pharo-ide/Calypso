@@ -2,4 +2,4 @@ activation
 processBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byRootGroupItemFor: ClyProcessContextOfProcessBrowser
+	^ClyToolbarCommandActivation byRootGroupItemFor: Process asCalypsoItemContext

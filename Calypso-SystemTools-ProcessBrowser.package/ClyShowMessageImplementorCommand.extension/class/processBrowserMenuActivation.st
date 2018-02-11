@@ -2,4 +2,4 @@
 processBrowserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyStackContextOfProcessBrowser 
+	^CmdContextMenuCommandActivation byRootGroupItemFor: Context asCalypsoItemContext  
