@@ -1,3 +1,3 @@
 *Calypso-NavigationModel
 asCalypsoItemContext
-	^ClyBrowserItemContext itemType: self
+	^ClyExpectedSelectionContext itemType: self

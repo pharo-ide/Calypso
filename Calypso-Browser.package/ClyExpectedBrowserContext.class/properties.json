@@ -1,13 +1,13 @@
 {
-	"commentStamp" : "DenisKudryashov 10/5/2017 17:25",
+	"commentStamp" : "DenisKudryashov 2/11/2018 10:25",
 	"super" : "AnnotationContext",
 	"category" : "Calypso-Browser-Contexts",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"itemType"
+		"browserClass"
 	],
-	"name" : "ClyBrowserItemContext",
+	"name" : "ClyExpectedBrowserContext",
 	"type" : "normal"
 }

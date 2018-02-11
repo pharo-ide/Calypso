@@ -1,0 +1,3 @@
+testing
+isRetrievedFromQueryKindOf: aQueryClass
+	^self ownerDataSource isBasedOnQueryKindOf: aQueryClass

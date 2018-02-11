@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/11/2018 11:59",
+	"super" : "ClyExpectedItemContext",
+	"category" : "Calypso-Browser-Contexts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyExpectedSelectionContext",
+	"type" : "normal"
+}

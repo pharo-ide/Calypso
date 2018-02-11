@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 2/11/2018 10:14",
+	"super" : "AnnotationContext",
+	"category" : "Calypso-Browser-Contexts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"itemType"
+	],
+	"name" : "ClyExpectedItemContext",
+	"type" : "normal"
+}

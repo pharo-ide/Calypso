@@ -1,0 +1,3 @@
+*Calypso-NavigationModel
+asQueryItemTypeContext
+	^ClyExpectedQueryItemContext itemType: self
