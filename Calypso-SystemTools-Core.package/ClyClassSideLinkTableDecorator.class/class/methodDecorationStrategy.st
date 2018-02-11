@@ -2,4 +2,4 @@ decoration
 methodDecorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyMethodContextOfFullBrowser 
+	^ClyTableDecorationStrategy for: ClyMethod asCalypsoItemContext, ClyFullBrowser  
