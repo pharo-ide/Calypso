@@ -2,4 +2,4 @@ activation
 fullBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byItemOf: ClyMethodViewToolbarGroup for: ClyClassContextOfFullBrowser 
+	^ClyToolbarCommandActivation byItemOf: ClyMethodViewToolbarGroup for: ClyClass asCalypsoItemContext, ClyFullBrowser 
