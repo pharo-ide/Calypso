@@ -2,4 +2,4 @@ activation
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation removalFor: ClyClassGroupContextOfFullBrowser 
+	^CmdShortcutCommandActivation removalFor: ClyClassGroup asCalypsoItemContext 

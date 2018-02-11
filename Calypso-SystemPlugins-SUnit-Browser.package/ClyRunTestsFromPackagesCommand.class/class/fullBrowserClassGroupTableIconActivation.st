@@ -2,4 +2,4 @@ activation
 fullBrowserClassGroupTableIconActivation
 	<classAnnotation>
 	
-	^ClyTableIconCommandActivation for: ClyClassGroupContextOfFullBrowser 
+	^ClyTableIconCommandActivation for: ClyClassGroup asCalypsoItemContext 
