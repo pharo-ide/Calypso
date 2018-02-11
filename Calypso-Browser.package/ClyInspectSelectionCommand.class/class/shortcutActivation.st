@@ -2,4 +2,4 @@ activation
 shortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: PharoShortcuts current inspectItShortcut for: ClyBrowserContext
+	^CmdShortcutCommandActivation by: PharoShortcuts current inspectItShortcut for: ClyBrowser

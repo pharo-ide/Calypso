@@ -2,4 +2,4 @@ decoration
 decorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyBrowserContext
+	^ClyTableDecorationStrategy for: ClyBrowser
