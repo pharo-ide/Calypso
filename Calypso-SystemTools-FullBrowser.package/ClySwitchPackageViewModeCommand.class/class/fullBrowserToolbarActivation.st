@@ -2,4 +2,4 @@ activation
 fullBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byItemOf: ClyPackageToolbarGroup for: ClyPackageContextOfFullBrowser
+	^ClyToolbarCommandActivation byItemOf: ClyPackageToolbarGroup for: RPackage asQueryItemTypeContext, ClyFullBrowser 

@@ -2,4 +2,4 @@
 fullBrowserPackageActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyPackageContextOfFullBrowser
+	^ClyTabActivationStrategy for: RPackage asQueryItemTypeContext, ClyFullBrowser 

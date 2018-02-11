@@ -2,4 +2,4 @@
 fullBrowserClassGroupActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyClassGroup asQueryItemTypeContext 
+	^ClyTabActivationStrategy for: ClyClassGroup asQueryItemTypeContext , ClyFullBrowser 

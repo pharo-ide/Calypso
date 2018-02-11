@@ -2,4 +2,4 @@
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation renamingFor: ClyPackageContextOfFullBrowser
+	^CmdShortcutCommandActivation renamingFor: RPackage asCalypsoItemContext

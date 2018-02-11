@@ -2,4 +2,4 @@
 fullBrowserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyPackageContextOfFullBrowser 
+	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: RPackage asQueryItemTypeContext , ClyFullBrowser  
