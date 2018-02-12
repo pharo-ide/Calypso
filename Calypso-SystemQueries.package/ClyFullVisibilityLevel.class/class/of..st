@@ -2,4 +2,4 @@ instance creation
 of: aClassScope
 	
 	^(super of: aClassScope)
-		extraClassScope: aClassScope asInheritedScope
+		extraClassScope: aClassScope asInheritedScope asInterestingClassScope
