@@ -17,5 +17,7 @@ updateUsing: newUpdateStrategy by: updateBlock
 				updateStrategy == newUpdateStrategy ifTrue: [ 
 					"In case of error another process can set up new strategy. 
 					This condition will avoid possible collision"
+					oldStrategy class = ClyInstantEnvironmentUpdateStrategy 
+						ifFalse: [ self error: 'should not happen' ].
 					updateStrategy := oldStrategy ]]]
 	] ensure: [ newUpdateStrategy publishCollectedChanges]
