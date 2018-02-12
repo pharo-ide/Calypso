@@ -7,6 +7,8 @@ updateUsing: newUpdateStrategy by: updateBlock
 	is not guarded any more and proceeding execution in debugger can lead to some errors in rare cases. But it is less problem than locked UI"
 	[
 		updateGuard critical: [ | oldStrategy |
+			updateStrategy class = newUpdateStrategy class ifTrue: [ 
+				self error: 'it should not happen'].
 			oldStrategy := updateStrategy.
 			[
 				updateStrategy := newUpdateStrategy.
