@@ -1,7 +1,7 @@
 tests
 testDetectingSpecialSelectorLikeIfTrue
 
-	query := ClyMessageSenders of: #(#ifTrue:).
+	query := ClyMessageSenders of: ##ifTrue:.
 	
 	self queryFromScope: ClyMethodScope of: self class >> #senderOfIfTrue.
 	

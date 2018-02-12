@@ -1,7 +1,7 @@
 tests
 testForMetaclass
 
-	query := ClyClassReferences to: {self referencedClass classSide}.
+	query := ClyClassReferences to: self referencedClass classSide.
 	
 	self queryFromScope: ClyMethodScope of: self class >> #reference1OfClass.
 	

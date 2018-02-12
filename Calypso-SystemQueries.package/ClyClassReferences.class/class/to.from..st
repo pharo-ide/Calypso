@@ -1,4 +1,4 @@
 instance creation
-to: classes from: aScope
+to: aClass from: aScope
 
-	^self of: classes from: aScope
+	^self of: aClass from: aScope

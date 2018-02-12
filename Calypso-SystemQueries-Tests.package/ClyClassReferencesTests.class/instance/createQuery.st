@@ -1,5 +1,5 @@
 running
 createQuery
 	^ ClyClassReferences
-		to: {self referencedClass}
+		to: self referencedClass
 		from: (ClyClassScope of: Object in: environment)

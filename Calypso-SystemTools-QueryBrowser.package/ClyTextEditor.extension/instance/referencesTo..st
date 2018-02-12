@@ -9,6 +9,6 @@ referencesTo: aVariableName
 	class isBehavior ifTrue: [ 
 		class slotNamed: aVariableName ifFound: [:slot | 
 			var := ClyInstanceVariable on: slot definedIn: class.
-			^self browser spawnQueryBrowserOn: (ClyVariableReferences of: {var})]].
+			^self browser spawnQueryBrowserOn: (ClyVariableReferences of: var)]].
 	
 	self browser browseReferencesTo: aVariableName asSymbol

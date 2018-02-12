@@ -1,4 +1,4 @@
 execution
 execute
 	
-	browser spawnQueryBrowserOn: (ClyVariableWriters of: variables)
+	browser spawnQueryBrowserOn: (ClyVariableWriters ofAny: variables)

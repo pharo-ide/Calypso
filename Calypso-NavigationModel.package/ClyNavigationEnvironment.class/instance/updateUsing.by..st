@@ -12,7 +12,8 @@ updateUsing: newUpdateStrategy by: updateBlock
 			oldStrategy := updateStrategy.
 			[
 				updateStrategy := newUpdateStrategy.
-				updateBlock on: Exception do: [ :err |
+				updateBlock on: Error do: [ :err |
+					err logCr.
 					updateGuard := Mutex new.
 					err pass]
 			] ensure: [ 

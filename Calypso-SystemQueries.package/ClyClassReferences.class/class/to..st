@@ -1,4 +1,4 @@
 instance creation
-to: classes
+to: aClass
 
-	^self of: classes
+	^self of: aClass

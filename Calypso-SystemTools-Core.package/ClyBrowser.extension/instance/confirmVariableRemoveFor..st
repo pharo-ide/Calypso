@@ -2,7 +2,7 @@
 confirmVariableRemoveFor: variables
 	
 	| refQuery refs showRefs |
-	refQuery := ClyVariableReferences of: variables from: self systemScope.
+	refQuery := ClyVariableReferences ofAny: variables from: self systemScope.
 	
 	refs := refQuery execute.
 	refs isEmpty ifTrue: [ ^true ].
