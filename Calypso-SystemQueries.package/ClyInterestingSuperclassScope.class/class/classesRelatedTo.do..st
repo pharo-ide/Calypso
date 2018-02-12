@@ -1,9 +1,9 @@
 accessing
 classesRelatedTo: aClass do: aBlock
-	| nextSuperclass |
+	| objectClass |
 	aClass isRootInEnvironment ifTrue: [ ^self ].
 	
-	nextSuperclass := aClass superclass.
-	nextSuperclass = Object ifTrue: [ ^self ].
+	objectClass := aClass environment classNamed: #Object.
+	aClass = objectClass | (aClass superclass = objectClass) ifTrue: [ ^self ].
 	
-	aBlock value: nextSuperclass
+	aBlock value: aClass superclass
