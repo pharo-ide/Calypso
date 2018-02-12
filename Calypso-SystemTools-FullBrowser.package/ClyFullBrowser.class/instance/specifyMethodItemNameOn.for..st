@@ -1,6 +1,6 @@
 initialization
 specifyMethodItemNameOn: nameMorph for: methodItem
-	| definition highlightMainMethods |
+	| definition |
 	nameMorph contents: methodItem name.
 	
 	definition := methodItem	systemDefinition.
@@ -10,10 +10,7 @@ specifyMethodItemNameOn: nameMorph for: methodItem
 	self classSelection isMultipleSelected ifTrue: [
 		^nameMorph contents: (definition printFullNameOf: methodItem)].
 	
-	highlightMainMethods := methodGroupView showsItemsFromMultipleScope.
-	(self isClassSelected: definition definingClass) ifTrue: [ 	
-		highlightMainMethods ifTrue: [ nameMorph emphasis: TextEmphasis bold emphasisCode].
-		^self].
+	(self isClassSelected: definition definingClass) ifTrue: [ ^self].
 	
 	nameMorph emphasis: TextEmphasis italic emphasisCode.
 	nameMorph contents: (definition printFullNameOf: methodItem)
