@@ -7,20 +7,16 @@ updateUsing: newUpdateStrategy by: updateBlock
 	is not guarded any more and proceeding execution in debugger can lead to some errors in rare cases. But it is less problem than locked UI"
 	[
 		updateGuard critical: [ | oldStrategy |
-			updateStrategy class = newUpdateStrategy class ifTrue: [ 
-				self error: 'it should not happen'].
 			oldStrategy := updateStrategy.
 			[
 				updateStrategy := newUpdateStrategy.
 				updateBlock on: Error do: [ :err |
-					err logCr.
+					updateStrategy := oldStrategy.
 					updateGuard := Mutex new.
 					err pass]
 			] ensure: [ 
 				updateStrategy == newUpdateStrategy ifTrue: [ 
 					"In case of error another process can set up new strategy. 
 					This condition will avoid possible collision"
-					oldStrategy class = ClyInstantEnvironmentUpdateStrategy 
-						ifFalse: [ self error: 'should not happen' ].
 					updateStrategy := oldStrategy ]]]
 	] ensure: [ newUpdateStrategy publishCollectedChanges]
