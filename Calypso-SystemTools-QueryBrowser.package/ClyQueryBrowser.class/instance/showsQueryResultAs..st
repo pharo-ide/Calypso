@@ -1,4 +1,4 @@
 testing
-showsMethodsAs: aQueryResult
+showsQueryResultAs: aQueryResult
 
 	^systemQuery requiredResult = aQueryResult

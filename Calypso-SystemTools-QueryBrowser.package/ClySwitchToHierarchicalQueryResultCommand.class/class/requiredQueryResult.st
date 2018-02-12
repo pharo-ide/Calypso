@@ -1,3 +1,3 @@
 accessing
-queryResultClass
+requiredQueryResult
 	^ClyHierarchicalSystemItems new

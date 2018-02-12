@@ -1,0 +1,3 @@
+execution
+requiredQueryResult
+	^self class requiredQueryResult

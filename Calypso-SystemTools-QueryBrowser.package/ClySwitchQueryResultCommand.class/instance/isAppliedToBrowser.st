@@ -1,3 +1,3 @@
 testing
 isAppliedToBrowser
-	^browser showsMethodsAs: self queryResultClass
+	^browser showsQueryResultAs: self requiredQueryResult

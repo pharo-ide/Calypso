@@ -1,3 +1,3 @@
 accessing
 defaultMenuItemName
-	^self queryResultClass shortName
+	^self requiredQueryResult shortName
