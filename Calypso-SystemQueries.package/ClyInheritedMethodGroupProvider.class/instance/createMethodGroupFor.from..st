@@ -1,5 +1,5 @@
 building groups
 createMethodGroupFor: aMethodQuery from: aClassScope
 	
-	^ClyAllMethodGroup 
+	^ClyCurrentMetaLevelMethodGroup 
 		withMethodQuery: aMethodQuery andClassesInheritedFrom: aClassScope

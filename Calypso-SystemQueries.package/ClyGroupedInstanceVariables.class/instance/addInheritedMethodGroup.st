@@ -2,5 +2,5 @@ building
 addInheritedMethodGroup
 
 	| group |
-	group := ClyAllMethodGroup withMethodsInheritedFrom: self queryScope. 
+	group := ClyCurrentMetaLevelMethodGroup withMethodsInheritedFrom: self queryScope. 
 	items add: group asCalypsoBrowserItem

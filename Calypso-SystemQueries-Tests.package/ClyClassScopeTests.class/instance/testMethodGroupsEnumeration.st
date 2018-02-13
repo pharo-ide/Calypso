@@ -7,7 +7,7 @@ testMethodGroupsEnumeration
 	
 	self
 		assert: (result collect: #class as: Set)
-		equals: {ClyAllMethodGroup. ClyTaggedMethodGroup} asSet.
+		equals: {ClyCurrentMetaLevelMethodGroup. ClyTaggedMethodGroup} asSet.
 	self
 		assert: (result
 				select: [ :each | each class = ClyTaggedMethodGroup ]

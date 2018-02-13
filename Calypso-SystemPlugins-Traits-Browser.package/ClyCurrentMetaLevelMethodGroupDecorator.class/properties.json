@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyTableDecorator",
+	"category" : "Calypso-SystemPlugins-Traits-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyCurrentMetaLevelMethodGroupDecorator",
+	"type" : "normal"
+}

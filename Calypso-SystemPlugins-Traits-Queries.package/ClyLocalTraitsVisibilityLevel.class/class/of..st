@@ -2,4 +2,4 @@ instance creation
 of: aClassScope
 	
 	^(super of: aClassScope)
-		extraClassScope: (aClassScope asScope: ClyInheritedTraitScope)
+		"extraClassScope: (aClassScope asScope: ClyInheritedTraitScope)"
