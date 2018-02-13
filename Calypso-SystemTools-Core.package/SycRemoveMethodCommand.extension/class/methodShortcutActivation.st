@@ -1,5 +1,5 @@
 *Calypso-SystemTools-Core
-methodBrowserShortcutActivation
+methodShortcutActivation
 	<classAnnotation>
 	
 	^CmdShortcutCommandActivation removalFor: ClyMethod asCalypsoItemContext

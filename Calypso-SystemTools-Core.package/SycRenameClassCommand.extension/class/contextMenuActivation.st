@@ -2,4 +2,4 @@
 contextMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemOrder: 2 for: ClyClass asCalypsoItemContext  
+	^CmdContextMenuCommandActivation byRootGroupItemOrder: 1 for: ClyClass asCalypsoItemContext  

@@ -1,5 +1,5 @@
 activation
-methodBrowserShortcutActivation
+methodShortcutActivation
 	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: $m meta for: ClyMethod asCalypsoItemContext

@@ -1,5 +1,5 @@
 *Calypso-SystemTools-Core
-methodBrowserMenuActivation
+methodMenuActivation
 	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyMethod asCalypsoItemContext 

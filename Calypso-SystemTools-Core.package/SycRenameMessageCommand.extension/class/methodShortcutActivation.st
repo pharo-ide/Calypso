@@ -1,5 +1,5 @@
-*Calypso-SystemTools-FullBrowser
-fullBrowserShortcutActivation
+*Calypso-SystemTools-Core
+methodShortcutActivation
 	<classAnnotation>
 	
 	^CmdShortcutCommandActivation renamingFor: ClyMethod asCalypsoItemContext

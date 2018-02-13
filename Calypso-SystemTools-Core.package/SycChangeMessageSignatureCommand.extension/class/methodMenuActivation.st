@@ -1,5 +1,5 @@
-*Calypso-SystemTools-FullBrowser
-fullBrowserMenuActivation
+*Calypso-SystemTools-Core
+methodMenuActivation
 	<classAnnotation>
 
 	^CmdContextMenuCommandActivation 

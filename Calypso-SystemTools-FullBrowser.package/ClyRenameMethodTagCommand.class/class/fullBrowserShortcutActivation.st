@@ -1,4 +1,4 @@
-as yet unclassified
+activation
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
