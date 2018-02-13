@@ -5,7 +5,8 @@ usesUndeclares
 	(UndeclaredVariable inheritsFrom: LiteralVariable) 
 		ifTrue: [ 
 			self literalsDo: [:each | 
-				each class == UndeclaredVariable ifTrue: [^true]]]
+				each class == UndeclaredVariable ifTrue: [^true].
+				(each value isBehavior and: [ each value isObsolete ]) ifTrue: [^true]]]
 		ifFalse: [
 			"To support Pharo 6"
 			self literalsDo: [:each | 

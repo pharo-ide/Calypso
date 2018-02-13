@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClySortedQueryResult using: ClySortByNameFunction ascend
+	^ClySortedQueryResult using: ClySortByNameFunction ascending

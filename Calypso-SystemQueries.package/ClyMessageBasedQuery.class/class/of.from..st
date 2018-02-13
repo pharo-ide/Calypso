@@ -1,3 +1,3 @@
 instance creation
-of: selectors from: aScope
-	^aScope adoptQuery: (self of: selectors)
+of: aSelector from: aScope
+	^self ofAny: {aSelector} from: aScope

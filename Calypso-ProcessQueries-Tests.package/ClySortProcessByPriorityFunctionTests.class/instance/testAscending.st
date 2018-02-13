@@ -4,7 +4,7 @@ testAscending
 	process1 := [  ] newProcess priority: 20.
  	process2 := [  ] newProcess priority: 30.
 	
-	function := ClySortProcessByPriorityFunction ascend.
+	function := ClySortProcessByPriorityFunction ascending.
 	
 	self deny: (function value: process2 value: process1 ).
 	self assert: (function value: process1 value: process2 ).

@@ -1,4 +1,4 @@
 running
 createQueryResult
 	^(ClySubclassHierarchy inverse, ClyTraitUserHierarchy inverse) 
-		asQueryResult sortedBy: ClyTraitFirstSortFunction ascend
+		asQueryResult sortedBy: ClyTraitFirstSortFunction ascending

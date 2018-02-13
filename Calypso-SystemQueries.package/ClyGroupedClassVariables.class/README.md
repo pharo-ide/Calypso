@@ -1,0 +1,1 @@
+I special variable query result which filter only class variables and represent them as ClyVariableMethodGroup instances in hierarchical order

@@ -9,8 +9,9 @@
 		"browser",
 		"tools",
 		"tabMorph",
+		"updatingStarted",
 		"selectionPriorities",
-		"updatingStarted"
+		"desiredSelection"
 	],
 	"name" : "ClyTabManager",
 	"type" : "normal"

@@ -1,7 +1,7 @@
 tests
 testAscending
 
-	function := ClySortByNameFunction ascend.
+	function := ClySortByNameFunction ascending.
 	
 	self deny: (function value: Object value: Array ).
 	self assert: (function value: Array value: Object ).

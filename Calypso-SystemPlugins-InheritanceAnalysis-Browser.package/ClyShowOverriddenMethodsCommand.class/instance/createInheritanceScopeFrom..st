@@ -1,7 +1,6 @@
 execution
 createInheritanceScopeFrom: classes
-
-	^ClySuperclassScope 
-		ofAll: classes 
-		in: browser navigationEnvironment 
-		localScope: ClyBothMetaLevelClassScope 
+	| classScope |
+	classScope := ClyClassScope ofAll: classes in: browser navigationEnvironment.
+	
+	^classScope asInheritedScope

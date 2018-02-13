@@ -1,7 +1,7 @@
 tests
 testDescending
 
-	function := ClySortItemGroupFunction descend.
+	function := ClySortItemGroupFunction descending.
  
 	self deny: (function 
 		value: (ClyItemGroup named: 'group1' priority: 20) 

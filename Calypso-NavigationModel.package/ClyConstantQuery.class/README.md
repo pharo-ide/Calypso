@@ -4,7 +4,7 @@ Items are supposed to be homogeneous collection (a kind of same class).
 To create my instance use following methods: 
 
 	ClyConstantQuery returning: { Object. String }.
-	ClyConstantQuery returning: { Object. String } as: (ClySortedQueryResult using: ClySortByNameFunction ascend).
+	ClyConstantQuery returning: { Object. String } as: (ClySortedQueryResult using: ClySortByNameFunction ascending).
 	ClyConstantQuery returning: { Object. String } from: aScope 
 	
  

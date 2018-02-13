@@ -1,7 +1,7 @@
 tests
 testAscending
 	
-	function := ClyTraitFirstSortFunction ascend.
+	function := ClyTraitFirstSortFunction ascending.
 	
 	self assert: (function value: ClyTraitRoot1 value: ClyTraitRoot2 ).
 	self deny: (function value: ClyTraitRoot2 value: ClyTraitRoot1 ).

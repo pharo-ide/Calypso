@@ -3,4 +3,4 @@ requestSingleClass: queryTitle from: classCollection
 	^tool searchDialog 
 		requestSingleObject: queryTitle
 		from: ClyAllClasses hierarchical 
-		inScope: (ClyClassScope of: classCollection)
+		inScope: (ClyClassScope ofAll: classCollection)

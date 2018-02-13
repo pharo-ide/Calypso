@@ -1,4 +1,3 @@
 instance creation
-of: selectors
-	^self new 
-		selectors: selectors
+of: aSelector
+	^self ofAny: { aSelector }

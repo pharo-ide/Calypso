@@ -1,6 +1,7 @@
 building
 decorateContainerTab
 	| title |
+	super decorateContainerTab.
 	title := editingMethod selector.
 
 	editingMethod origin isClassSide ifTrue: [ 

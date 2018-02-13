@@ -1,3 +1,3 @@
 *Calypso-SystemQueries
 defaultSortFunctionForCalypso
-	^ClySortByNameFunction ascend
+	^ClySortByNameFunction ascending

@@ -1,15 +1,12 @@
-I describe class and package which define given method.
-I also contain isInstanceSide flag which describe instance or class side where method is defined
+I represent definition of method which includes defining package and defining class.
 
 You can create me by: 
-	ClyMethodDefinitionProperty of: aMethod 
 
-You can access actual class or package using: 
-		methodDefinition definitionClass
-		methodDefinition definitionPackage
- 
+	ClyClassDefinitionProperty of: aMethod 
+	
+Also I provide extra flag #isExtension to mark that method is extension.
+			 
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	isInstanceSide:		<Boolean>
-	packageItem:		<ClyEnvironmentItem of: RPackage>
+	isExtension:		<Boolean>

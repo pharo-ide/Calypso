@@ -1,16 +1,24 @@
-I represent scope of classes. 
-My basis is set of classes. I see all items which are defined by them:
+I represent the local scope of classes which they define by themselves:
 
-- classesDo: , just enumerates all my basis classes.
-- methodsDo:. enumerates all methods defined by my classes
-- methodGroupsDo:, group all methods defined by my classes
-- variablesDo:. enumerates all variables defined by my classes
-- instanceVariablesDo:, enumerates only instance variables defined by basis
-- classVariablesDo:, enumerates only class variables defined by my basis
+	ClyClassScope of: Array 
+	
+It represents instance side of Array.
 
-I provide hooks to allow subclasses extend view on these items. For example subclasses can show both instance and class sides methods and variables. 
-To implement it the following method should be overridden:
-- metaLevelsOf: aClass do: aBlock
-Each class has two meta levels: instance and class sides. And subclasses decide what meta level is visible from their own point of view. By default given class itself is actual visible meta level.
+	ClyClassScope of: Array class 
+	
+It represents class side of Array.
 
-To extend the visible set of classes mehtod  #classesDo: can be overridden. For example subclasses can provide view on superclass or subclass methods 
+Also I provide natural hierarchy traversal of basis classes. 
+It means that 
+
+	ClySuperclassScope of: Array class localScope: ClyClassScope  
+
+will see Class and Object because any metaclass is subclass of Class which by itself is subclass of Object.
+
+It is ortogonal to behaviour of ClyMetaLevelClassScope subclasses which restrict hierarchical traversal to the relationships of instance side. For example 
+
+	ClySuperclassScope of: Array class localScope: ClyClassSideScope	
+
+will not see Class and Object. It will end up at Object class and ProtoObject class.
+
+So I am the default local scope for hierarchy scopes which gives the natural look at classes without user metalevel restrictions

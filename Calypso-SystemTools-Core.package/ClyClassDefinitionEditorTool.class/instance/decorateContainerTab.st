@@ -1,6 +1,7 @@
 building
 decorateContainerTab
 	| title |
+	super decorateContainerTab.
 	title := editingClass name.
 
 	editingClass isClassSide ifTrue: [ 

@@ -1,9 +1,13 @@
-I am a query to retrieve references to given classes.
-I exist only for convenience because you can also use my superclass for same goal.
+I return methods which reference given classes.
+So I expect that my variableQuery will be in fact class query.
+But because class itself is not a variable I convert given query to class bindings which can play role of variables in the method filtering logic:
 
-I provide suitable method to create instances directly with classes (no need to think about class bindings):
-	ClyClassReferences to: { Point. Collection }
+	ClyClassReferences>>variableQuery: aClassQuery
+		super variableQuery: (aClassQuery withResult: ClyClassBindings new)
 
-Also I redefine description. So in tools you will see clear name "References to ".
+And in addition I provide more readable methods to instantiate my instances from classes:
 
-And for execution I perform extra trick to support remote scenario when class bindings are transferred from client to server. It is important to get local binding instances on server side to correctly filter methods
+	ClyClassReferences to: aClass.
+	ClyClassReferences to: aClass from: aScope.
+	ClyClassReferences toAny: {Array. String}.
+	ClyClassReferences toAny: {Array. String} from: aScope.

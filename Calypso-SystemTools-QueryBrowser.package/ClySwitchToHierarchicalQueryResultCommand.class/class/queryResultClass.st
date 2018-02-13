@@ -1,3 +1,0 @@
-accessing
-queryResultClass
-	^ClyHierarchicalSystemItems new

@@ -1,1 +1,5 @@
-I represent point of view on environment from set of packages
+I am a scope of packages.
+So I see all objects which are defined by given packages: 
+- packages
+- classes 
+- methods

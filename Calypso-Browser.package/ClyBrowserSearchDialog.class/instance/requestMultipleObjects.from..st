@@ -1,4 +1,9 @@
 requests
-requestMultipleObjects: dialogTitle from: anEnvironmentQuery
+requestMultipleObjects: dialogTitle from: aQuery
 	
-	^self requestMultipleObjects: dialogTitle from: anEnvironmentQuery inScope: browser systemScope
+	self 
+		openOn: aQuery 
+		withTitle: dialogTitle
+		thenDo: [ 
+			itemsView selection isEmpty ifTrue: [ ^self findObjectsSameAsFilter ].
+			^itemsView selection actualObjects]

@@ -1,3 +1,0 @@
-accessing
-queryResultClass
-	^ClySortedQueryResult using: ClySortSystemItemFunction ascend

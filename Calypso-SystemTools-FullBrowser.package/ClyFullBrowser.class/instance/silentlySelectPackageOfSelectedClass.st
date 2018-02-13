@@ -1,7 +1,12 @@
 navigation
 silentlySelectPackageOfSelectedClass
 		
+	| selectedClass |
 	self classSelection isEmpty ifTrue: [ ^self ].
 	
-	packageView ignoreNavigationDuring: [ 
-		self selectPackage: self classSelection lastSelectedItem actualObject package]
+	selectedClass := self classSelection lastSelectedItem actualObject.
+	
+	packageView ignoreNavigationDuring: [
+		selectedClass tags
+			ifEmpty: [ self selectPackage: selectedClass package]
+			ifNotEmpty: [:tags | self selectPackage: selectedClass package atClassTag: tags anyOne]]

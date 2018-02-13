@@ -1,10 +1,6 @@
 requests
-requestMultipleObjects: dialogTitle from: aQuery inScope: anEnvironmentScope
+requestMultipleObjects: dialogTitle from: aQuery inScope: aScope
+
+	aScope bindTo: browser navigationEnvironment.
 	
-	self 
-		openOn: aQuery 
-		inScope: anEnvironmentScope 
-		withTitle: dialogTitle
-		thenDo: [ 
-			itemsView selection isEmpty ifTrue: [ ^self findObjectsSameAsFilter ].
-			^itemsView selection actualObjects]
+	^self requestMultipleObjects: dialogTitle from: (aScope adoptQuery: aQuery)

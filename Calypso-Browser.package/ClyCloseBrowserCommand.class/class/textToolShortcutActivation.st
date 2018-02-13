@@ -2,4 +2,4 @@ activation
 textToolShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $w command for: ClyTextEditorContext
+	^CmdShortcutCommandActivation by: $w meta for: ClyTextEditorContext

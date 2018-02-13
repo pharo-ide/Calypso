@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserCommand",
+	"category" : "Calypso-SystemTools-FullBrowser-Commands-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyFindMethodInBrowserCommand",
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
 building
 buildInverseFrom: classes
-	^self buildInverseFrom: classes sortedBy: ClySortByNameFunction ascend
+	^self buildInverseFrom: classes sortedBy: ClySortByNameFunction ascending

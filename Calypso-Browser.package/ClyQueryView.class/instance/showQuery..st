@@ -2,6 +2,7 @@ queries
 showQuery: aQuery
 
 	| dataSource |
-	dataSource := ClyCollapsedDataSource on: aQuery.
-	self dataSource: dataSource.
-	self ensureSelectedItemIfNeeded.
+	self initiateUIChangeBy: [ 
+		dataSource := ClyCollapsedDataSource on: aQuery.
+		self dataSource: dataSource.
+		self ensureSelectedItemIfNeeded].

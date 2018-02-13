@@ -1,1 +1,3 @@
-I represent point of view on environment from set of methods
+I am a scope of methods.
+
+Currently I do not provide any information except methods itself

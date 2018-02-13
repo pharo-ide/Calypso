@@ -1,7 +1,7 @@
 tests
 testDescendingForBinaryAndUnarySelectors
 	"binary selector is always on top when ascending and on botton when descending"
-	function := ClySortMethodFunction descend.
+	function := ClySortMethodFunction descending.
 	
 	self assert: #| > #abs. "this should not affect desired sort behaviour"	
 	self deny: (function value: Integer >> #| value: Number >> #abs ).

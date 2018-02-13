@@ -1,5 +1,3 @@
 instance variables
-of: variables from: aScope
-	^self 
-		from: aScope 
-		toVariablesFrom: (ClyConstantQuery returning: variables)
+of: aVariable from: aScope
+	^self ofAny: { aVariable } from: aScope
