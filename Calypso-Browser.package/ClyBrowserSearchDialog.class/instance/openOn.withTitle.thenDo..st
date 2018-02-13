@@ -1,7 +1,7 @@
 private
-openOn: aQuery inScope: aScope withTitle: dialogTitle thenDo: resultActionBlock
+openOn: aQuery withTitle: dialogTitle thenDo: resultActionBlock
 
-	self showItemsOf: aQuery inScope: aScope.
+	self showItemsOf: aQuery.
 	self title: dialogTitle.
 
 	browser openModal: self.
