@@ -6,4 +6,4 @@ methodSourceContainingIt
 	self lineSelectAndEmptyCheck: [^ self].
 	pattern := self selection string.
 	query := (ClyMethodSources withString: pattern), (ClyClassComments withString: pattern).
-	self browser spawnQueryBrowserOn: query async
+	self browser spawnQueryBrowserOn: query

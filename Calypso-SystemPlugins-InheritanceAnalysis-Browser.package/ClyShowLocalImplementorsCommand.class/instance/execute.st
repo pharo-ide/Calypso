@@ -1,9 +1,9 @@
 execution
 execute
 
-	| selectors queryBrowser query |
+	| selectors query |
 	selectors := methods collect: [ :each | each selector].
 	
 	query := 	ClyMessageImplementors ofAny: selectors from: self createQueryScope.
-	queryBrowser := browser spawnQueryBrowserOn: query.
-	self selectMethodsIn: queryBrowser 
+	browser spawnQueryBrowserOn: query withState: [:queryBrowser |
+		self selectMethodsIn: queryBrowser ]

@@ -6,4 +6,4 @@ classCommentsContainingIt
 	self lineSelectAndEmptyCheck: [^ self].
 
 	query := ClyClassComments withString: self selection string.
-	self browser spawnQueryBrowserOn: query async
+	self browser spawnQueryBrowserOn: query
