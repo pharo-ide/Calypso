@@ -1,3 +1,3 @@
 controlling
 restoreBrowserState
-	context restoreBrowserState
+	self subclassResponsibility 

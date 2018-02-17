@@ -1,3 +1,3 @@
-helpers
+selection
 lastSelectedObject
 	^self lastSelectedItem actualObject

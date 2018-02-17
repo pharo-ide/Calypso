@@ -1,3 +1,3 @@
-helpers
+selection
 selectedObjects
 	^self actualSelectionFrom: selectedItems

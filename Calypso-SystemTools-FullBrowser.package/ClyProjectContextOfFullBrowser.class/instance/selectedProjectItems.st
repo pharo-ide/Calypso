@@ -1,3 +1,0 @@
-selection-projects
-selectedProjectItems
-	^selectedItems

@@ -1,4 +1,4 @@
-helpers
+selection
 lastSelectedObjectIn: selectedObjects
 	^selectedObjects first
 	

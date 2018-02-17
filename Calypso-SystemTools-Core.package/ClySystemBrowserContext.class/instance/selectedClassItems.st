@@ -1,3 +1,3 @@
 selection-classes
 selectedClassItems
-	self subclassResponsibility 
+	^ self selectedItemsOfType: ClyClass

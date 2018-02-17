@@ -1,3 +1,3 @@
 selection-packages
 selectedPackageItems
-	self subclassResponsibility 
+	^self selectedItemsOfType: RPackage

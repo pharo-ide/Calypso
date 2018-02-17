@@ -1,3 +1,3 @@
 selection-methods
 selectedMethodItems
-	self subclassResponsibility 
+	^self selectedItemsOfType: ClyMethod

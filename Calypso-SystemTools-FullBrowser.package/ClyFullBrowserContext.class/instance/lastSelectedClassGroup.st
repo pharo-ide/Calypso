@@ -1,0 +1,3 @@
+selection-class groups
+lastSelectedClassGroup
+	^self lastSelectedObjectIn: self selectedClassGroups
