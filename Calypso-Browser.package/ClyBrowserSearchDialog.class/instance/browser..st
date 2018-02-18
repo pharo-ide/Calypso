@@ -1,3 +1,6 @@
 accessing
-browser: anObject
-	browser := anObject
+browser: aBrowser
+	browser := aBrowser.
+	itemsView 
+		browser: browser;
+		contextClass: browser navigationContextClass forSearchDialog
