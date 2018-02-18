@@ -1,3 +1,3 @@
 tool controlling
 showClass: aClass
-	tool selectClass: aClass
+	self browser selectClass: aClass

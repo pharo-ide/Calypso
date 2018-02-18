@@ -1,4 +1,4 @@
 accessing
-tool: aBrowser
-	super tool: aBrowser.
-	metaLevelScope := aBrowser metaLevelScope
+tool: aQueryView
+	super tool: aQueryView.
+	metaLevelScope := self browser metaLevelScope

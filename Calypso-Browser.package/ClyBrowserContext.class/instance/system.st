@@ -1,3 +1,3 @@
 accessing
 system
-	^tool system
+	^self browser system

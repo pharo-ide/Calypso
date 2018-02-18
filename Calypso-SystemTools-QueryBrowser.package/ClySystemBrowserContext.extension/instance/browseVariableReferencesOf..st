@@ -1,4 +1,4 @@
 *Calypso-SystemTools-QueryBrowser
 browseVariableReferencesOf: variables
 
-	tool spawnQueryBrowserOn: (ClyVariableReferences of: variables )
+	self browser spawnQueryBrowserOn: (ClyVariableReferences of: variables )

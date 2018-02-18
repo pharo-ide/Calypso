@@ -14,7 +14,8 @@
 		"shouldRestoreSelection",
 		"highlighting",
 		"changesWasInitiatedByUser",
-		"navigationSelector"
+		"navigationSelector",
+		"contextClass"
 	],
 	"name" : "ClyQueryView",
 	"type" : "normal"

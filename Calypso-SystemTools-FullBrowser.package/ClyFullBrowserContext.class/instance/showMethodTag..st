@@ -1,3 +1,3 @@
 tool controlling
 showMethodTag: tagName
-	tool selectMethodGroupNamed: tagName
+	self browser selectMethodGroupNamed: tagName

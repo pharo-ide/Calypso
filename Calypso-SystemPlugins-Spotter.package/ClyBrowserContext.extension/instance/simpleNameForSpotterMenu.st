@@ -1,3 +1,3 @@
 *Calypso-SystemPlugins-Spotter
 simpleNameForSpotterMenu
-	^activeQueryView query description
+	^self activeQueryView query description

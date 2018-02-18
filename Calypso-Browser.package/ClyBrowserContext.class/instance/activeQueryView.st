@@ -1,4 +1,4 @@
 accessing
 activeQueryView
 
-	^activeQueryView 
+	^tool

@@ -1,4 +1,4 @@
 context
 createSelectionContextOf: aSelection
 
-	^ClyContextSelectionStrategy selectContextOf: aSelection for: browser
+	^contextClass ofSelection: aSelection for: self

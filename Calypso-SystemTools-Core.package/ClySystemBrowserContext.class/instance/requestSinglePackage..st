@@ -1,3 +1,4 @@
 user requests
 requestSinglePackage: queryTitle
-	^tool searchDialog requestSingleObject: queryTitle from: ClyAllPackages sorted
+	^self browser searchDialog 
+		requestSingleObject: queryTitle from: ClyAllPackages sorted

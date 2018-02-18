@@ -1,3 +1,3 @@
 user requests
 requestRemoveMethodStrategyFor: methods
-	^tool requestRemoveMethodStrategyFor: methods
+	^self browser requestRemoveMethodStrategyFor: methods

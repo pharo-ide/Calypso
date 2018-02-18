@@ -1,3 +1,3 @@
 tool controlling
 showPackage: aPackage
-	tool selectPackage: aPackage
+	self browser selectPackage: aPackage

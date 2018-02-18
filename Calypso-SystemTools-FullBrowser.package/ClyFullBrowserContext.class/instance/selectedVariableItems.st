@@ -1,7 +1,7 @@
 selection-variables
 selectedVariableItems
-	^(activeQueryView showsItemsOfType: ClyVariableMethodGroup) 
+	^(self activeQueryView showsItemsOfType: ClyVariableMethodGroup) 
 		ifTrue: [ selectedItems ]
 		ifFalse: [ 
-			tool methodGroupSelection items 
+			self browser methodGroupSelection items 
 				select: [:each | each isBasedOnItemType: ClyVariableMethodGroup ]]

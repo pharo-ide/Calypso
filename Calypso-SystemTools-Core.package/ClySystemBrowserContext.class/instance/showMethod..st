@@ -1,3 +1,3 @@
 tool controlling
 showMethod: aMethod
-	tool selectMethod: aMethod
+	self browser selectMethod: aMethod

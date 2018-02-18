@@ -1,3 +1,3 @@
 selection-processes
 selectedProcessItems
-	^tool processSelection items
+	^self browser processSelection items

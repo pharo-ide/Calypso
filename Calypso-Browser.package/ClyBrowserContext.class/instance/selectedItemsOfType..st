@@ -1,7 +1,7 @@
 selection
 selectedItemsOfType: anItemTypeClass
 	| targetView |
-	(activeQueryView showsItemsOfType: anItemTypeClass) ifTrue: [ 
+	(self activeQueryView showsItemsOfType: anItemTypeClass) ifTrue: [ 
 		^selectedItems select: [ :each | each isBasedOnItemType: anItemTypeClass ] ].
 	
 	targetView := self browser navigationViews 

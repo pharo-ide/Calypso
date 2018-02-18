@@ -1,3 +1,3 @@
 selection-contexts
 selectedContextItems
-	^tool contextSelection items
+	^self browser contextSelection items

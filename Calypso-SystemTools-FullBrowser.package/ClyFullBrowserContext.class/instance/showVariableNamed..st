@@ -1,3 +1,3 @@
 tool controlling
 showVariableNamed: varName
-	tool selectVariableNamed: varName
+	self browser selectVariableNamed: varName

@@ -1,3 +1,3 @@
 user requests
 confirmVariableRemoveFor: variables
-	^tool confirmVariableRemoveFor: variables
+	^self browser confirmVariableRemoveFor: variables

@@ -1,3 +1,3 @@
 accessing
 browser
-	^tool
+	^tool browser

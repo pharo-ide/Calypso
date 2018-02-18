@@ -5,4 +5,4 @@ isAboutQueryOf: anItemTypeClass
 		each isRetrievedFromQueryOf: anItemTypeClass ])
 			ifTrue: [ ^true ].
 			
-	^activeQueryView showsItemsOfType: anItemTypeClass
+	^self activeQueryView showsItemsOfType: anItemTypeClass
