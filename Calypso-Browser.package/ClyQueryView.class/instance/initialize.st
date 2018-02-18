@@ -3,7 +3,7 @@ initialize
 	super initialize.
 	self changeTableLayout.
 	self initializeTable.
-	contextClass := ClyBrowserContext.
+	contextClass := ClyUnknownBrowserContext.
 	shouldRestoreSelection := true.
 	changesWasInitiatedByUser := true.
 	treeStructure := #().	
