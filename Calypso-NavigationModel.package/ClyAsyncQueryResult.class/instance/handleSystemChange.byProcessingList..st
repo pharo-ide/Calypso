@@ -7,7 +7,9 @@ handleSystemChange: aSystemAnnouncement byProcessingList: allProcessingResults
 	expectedResult ifNil: [ ^self ].
 	
 	needsRebuild ifTrue: [ 
-		buildProcess ifNotNil: [ buildProcess terminate ].
+		buildProcess ifNotNil: [ 
+			buildProcess terminate.
+			metadata removeProperty: ClyBackgroundProcessingTag instance].
 		expectedResult itemsChanged].
 	
 	allProcessingResults remove: expectedResult ifAbsent: [  ]
