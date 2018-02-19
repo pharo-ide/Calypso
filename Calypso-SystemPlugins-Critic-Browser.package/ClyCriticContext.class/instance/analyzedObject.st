@@ -1,3 +1,3 @@
 accessing
 analyzedObject
-	^ tool analyzedObject
+	^ self browser analyzedObject
