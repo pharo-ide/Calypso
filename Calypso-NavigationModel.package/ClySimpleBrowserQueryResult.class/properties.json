@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserQueryResult",
+	"category" : "Calypso-NavigationModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClySimpleBrowserQueryResult",
+	"type" : "normal"
+}
