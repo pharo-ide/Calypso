@@ -1,4 +1,4 @@
 browser item preparation
-convertToCalypsoBrowserItem: aGroup
+convertToCalypsoBrowserItem: myItem
 
-	^ClyBrowserItem named: aGroup name with: aGroup
+	^ClyBrowserItem named: myItem name with: myItem
