@@ -6,4 +6,4 @@ While class group is based on class query my subclasses should implement two met
 It should return class query representing classes for the group.
 
 - createClassGroupFor: aClassQuery from: aPackageScope
-It should creates group instance using given scope. The packge scope is given to build subgroups query if needed. Any class group can be expanded to children subgroups
+It should creates group instance using given scope. The package scope is given to build subgroups query if needed. Any class group can be expanded to children subgroups

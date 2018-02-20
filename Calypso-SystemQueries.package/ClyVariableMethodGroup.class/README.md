@@ -1,6 +1,3 @@
-I am group of methods which reference given variable. 
- 
-Internal Representation and Key Implementation Points.
+I am group of methods which reference some variable. 
 
-    Instance Variables
-	variable:		<ClyVariable>
+I not keep this variable directly. All required information is passed to my instance from variables query
