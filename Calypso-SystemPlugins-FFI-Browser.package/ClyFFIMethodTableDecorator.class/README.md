@@ -1,1 +1,1 @@
-I decorate ffi methods in the table with special icon
+I decorate table with special icon for ffi methods

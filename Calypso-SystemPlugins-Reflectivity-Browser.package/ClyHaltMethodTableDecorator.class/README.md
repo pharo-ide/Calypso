@@ -1,0 +1,1 @@
+I decorate table with special icon for methods with halt or breakpoint

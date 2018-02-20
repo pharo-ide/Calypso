@@ -1,0 +1,1 @@
+I am example class which methods have no halts or breakpoints
