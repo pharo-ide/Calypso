@@ -1,1 +1,1 @@
-I provide deprecated method groups when given classes define them
+I provide "deprecated" method groups when given classes define them

@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/20/2018 17:41",
 	"super" : "ClyMethodTableDecorator",
 	"category" : "Calypso-SystemPlugins-FFI-Browser",
 	"classinstvars" : [ ],

@@ -1,0 +1,1 @@
+I decorate ffi methods in the table with special icon
