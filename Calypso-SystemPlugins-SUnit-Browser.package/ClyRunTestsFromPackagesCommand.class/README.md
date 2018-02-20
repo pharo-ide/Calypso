@@ -1,0 +1,1 @@
+I run all tests from selected packages
