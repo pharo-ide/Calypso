@@ -1,0 +1,1 @@
+I decorate methods with flag in the table with special icon
