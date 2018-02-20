@@ -1,0 +1,1 @@
+I decorate deprecated methods in the table with struck out font

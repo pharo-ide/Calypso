@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/20/2018 17:36",
 	"super" : "SycPackageCommand",
 	"category" : "Calypso-SystemPlugins-DependencyAnalyser-Browser",
 	"classinstvars" : [ ],
