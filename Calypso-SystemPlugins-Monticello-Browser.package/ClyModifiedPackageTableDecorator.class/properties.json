@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/20/2018 17:55",
 	"super" : "ClyPackageTableDecorator",
 	"category" : "Calypso-SystemPlugins-Monticello-Browser",
 	"classinstvars" : [ ],
