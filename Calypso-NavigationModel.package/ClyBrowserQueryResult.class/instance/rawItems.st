@@ -1,4 +1,4 @@
 accessing
 rawItems
 
-	^items collect: [:each | each actualObject]
+	^rawResult rawItems
