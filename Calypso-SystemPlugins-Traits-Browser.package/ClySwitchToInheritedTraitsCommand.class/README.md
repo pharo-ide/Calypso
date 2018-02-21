@@ -1,0 +1,1 @@
+I a command to show in browser a hierarchy of traits which are inherited by selected classes

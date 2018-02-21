@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/21/2018 14:32",
 	"super" : "ClySwitchTraitHierarchyModeCommand",
 	"category" : "Calypso-SystemPlugins-Traits-Browser",
 	"classinstvars" : [ ],
