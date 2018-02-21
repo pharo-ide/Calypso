@@ -1,0 +1,1 @@
+I am a command to move browser focus to next (right) navigation pane

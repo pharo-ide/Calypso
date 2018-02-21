@@ -1,0 +1,1 @@
+I am a command to force full update of all browser views
