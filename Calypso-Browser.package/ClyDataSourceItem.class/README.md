@@ -1,10 +1,10 @@
 I represent item of ClyDataSource.
-I am created with owner data source and environment item which I wrap:
-	ClyDataSourceItem of: aDataSource value: anEnvironmentItem
-You can access actual object of environment item:
+I am created with owner data source and browser item which I wrap:
+	ClyDataSourceItem of: aDataSource value: aBrowserItem
+You can access actual object of browser item:
 	aDataSourceItem actualObject
 
-You can controll expansion
+You can control expansion
 - supportsExpansion
 - collapse
 - expand
@@ -36,6 +36,6 @@ You can retrieve item properties:
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	environmentItem:		<ClyEnvironmentItem>
+	browserItem:		<ClyBrowserItem>
 	ownerDataSource:		<ClyDataSource>
 	childrenDataSource:		<ClyDataSource>
