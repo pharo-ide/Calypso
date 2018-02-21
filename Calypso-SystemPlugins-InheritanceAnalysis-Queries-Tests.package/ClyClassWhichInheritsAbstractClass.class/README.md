@@ -1,0 +1,1 @@
+I am example of class which inherits from abstract superclass

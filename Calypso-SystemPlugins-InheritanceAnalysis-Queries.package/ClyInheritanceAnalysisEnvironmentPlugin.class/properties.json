@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "DenisKudryashov 2/13/2017 13:28",
+	"commentStamp" : "DenisKudryashov 2/21/2018 13:22",
 	"super" : "ClySystemEnvironmentPlugin",
 	"category" : "Calypso-SystemPlugins-InheritanceAnalysis-Queries",
 	"classinstvars" : [ ],

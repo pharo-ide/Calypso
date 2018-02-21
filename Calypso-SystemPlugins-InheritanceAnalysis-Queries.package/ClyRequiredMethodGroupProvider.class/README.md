@@ -1,1 +1,1 @@
-I provide ClyRequiredMethodGroup only when there are any methods which should be implemented by given classes
+I provide "should be implemented" method group which includes all abstract methods from inherited classes which are still not implemented by given classes
