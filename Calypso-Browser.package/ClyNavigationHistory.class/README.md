@@ -2,16 +2,38 @@ I implement navigation history.
 I maintain two lists: 
 - redoList 
 - undoList 
+They include collection of ClyBrowserState instances.
 
- 
+To record new state send following message: 
+
+	navigationHistory recordState: aBrowserState 
+
+And to undo changes call: 
+
+	navigationHistory undoNavigationOf: aBrowser 
+	
+To redo them call: 
+
+	navigationHistory redoNavigationOf: aBrowser
+	
+When you undo last browser state it adds new item to the redo list. And otherwise: when you perform redo it adds new item to the undo list.
+This logic is implemented using undoExecuting and redoExecuting flags.
+
+I allow to ignore navigation during given block: 
+
+	navigationHistory ignoreNavigationDuring: aBlock	
+
+During given block execution the #recordState: method do nothing. It resets flag #waitingNewState to achive this.
+
+You can always check that history is empty: 
+
+	navigationHistory isEmpty
+	
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	redoExecuting:		<Object>
-	redoList:		<Object>
-	undoExecuting:		<Object>
-	undoList:		<Object>
-	waitingNewState:		<Object>
-
-
-    Implementation Points
+	redoExecuting:		<Boolean>
+	redoList:		<OrderedCollection of<ClyBrowserState>>
+	undoExecuting:		<Boolean>
+	undoList:		<OrderedCollection of<ClyBrowserState>>
+	waitingNewState:		<Boolean>
