@@ -1,0 +1,1 @@
+I am an example class which methods have example critiques
