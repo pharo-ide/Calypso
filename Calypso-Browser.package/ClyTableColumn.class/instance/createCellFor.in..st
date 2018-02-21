@@ -1,9 +1,9 @@
 cells creation
-createCellFor: aDataSourceItem in: itemsView
+createCellFor: aDataSourceItem in: aQueryView
 
 	| cell |
 	cell := ClyItemCellMorph new.
 	displayBlock value: cell value: aDataSourceItem.
-	itemsView decorateTableCell: cell of: aDataSourceItem.
+	aQueryView decorateTableCell: cell of: aDataSourceItem.
 	cell build.
 	^cell

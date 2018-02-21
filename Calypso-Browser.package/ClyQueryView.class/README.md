@@ -1,51 +1,80 @@
-I represent navigation tool over table of environment items.
+I represent query result using fast table.
 I should be created for browser:
-	ClyNavigationView for: aBrowser
+
+	ClyQueryView for: aBrowser
+
 or using helper browser method:
+
 	aBrowser newNavigationView.
-By default I am include only main column, the instance of ClyMainTableColumn. You can ask it to set up specific column properties
-	aNavigationView mainColumn 
+
+By default I initialize table with single column, the instance of ClyMainTableColumn. You can ask it to set up specific column properties
+
+	aQueryView mainColumn 
 		width: 100;
 		displayItemPropertyBy: [:rowItem | rowItem name, 'special name suffix for test' ].
+
 Or you can set up display block using:
-	aNavigationView displayMainColumnBy: [ :cell :item | 
+
+	aQueryView displayMainColumnBy: [ :cell :item | 
 		cell nameMorph contents: item name.
 		cell nameMorph color: Color green].
+
 To create more columns use #addColumn: method:
-	(aNavigationView addColumn: #package) 
+
+	(aQueryView addColumn: #package) 
 		width: 50;
 		displayItemPropertyBy: [:methodItem | self packageNameOf: methodItem]
 
-To show items user should set up instance of ClyDataSource for me:
-	aNavigationView	dataSource: aDataSource
+To show items user should pass query instance into me:
 
-When user selects any table view I trigger navigation request which ask browser for desired action. To set up navigation selector use:
-	aNavigationView requestNavigationBy: #showMethodsForSelectedClasses
+	aQueryView showQuery: aQuery
 
-I maintain selection objects to always show correct table selection after any tree expansion, items addition of removal.
-Main selection is what user selects on table. I manage it in variable selection, instance of ClyDataSourceSeleciton.
-Next is desiredSelection, instance of ClyDesiredSelection. Every time user set me new data source I am trying to restore desired selection. Idea to show previously selected items on new data source. I try to find same items and if they not exists I lookup similar items by name.
-I modify desiredSelection object only when user manually modifies table selection.
+When user selects any item in table I trigger navigation request which ask browser for desired action. To set up navigation selector use:
+
+	aQueryView requestNavigationBy: #showMethodsForSelectedClasses
+
+I maintain several selection objects to always show correct table selection after any tree expansion, items addition of removal.
+
+Main selection is what user selects on table. I manage it in #selection variable, instance of ClyDataSourceSeleciton.
+
+Next is desiredSelection, instance of ClyDesiredSelection. Every time user passes me new query I am trying to restore desired selection on new items. Idea is to show previously selected items on new data source. I try to find same items and if they not exists I lookup similar items by name.
+I set new desiredSelection instance only when user manually modifies table selection.
+
 And last type of selection is highlighting, instance of ClyHighlightingSelection. User can set it by:
-	aNavigationView highlightItemsWhich: predicateBlock.
-Logic to fix selections during any change is implemented in method #updateSelectedItemsOf: aDataSource.
+
+	aQueryView highlightItemsWhich: predicateBlock.
+
+All type of selections maintain correct state to be in sync with actual table seletion indexes after any data source changes. This logic implemented in method #updateSelectedItemsOf:.
 
 By default user can type characters on table to search required items. But also explicit filter with extra field can be added: 
-- enableFilter.  It adds simple ClyItemNameSubstringFilter.
-- enableFilter: anItemStringFilterClass.
+
+- enableFilter
+It adds simple ClyItemNameFilter.
+
+- enableFilter: anItemStringFilterClass
 
 I use Commander library to implement:
+
 - context menu using CmdContextMenuCommandActivator:
-	- buildContextMenuFor: aSelection
+
+	- menuColumn: column row: rowIndex
+
 - shortcuts using CmdShortcutCommandActivator 
+
 	- kmDispatcher
+
 -  drag and drop using CmdDragAndDropCommandActivator 
+
 	- createDragPassengerFor: aSelection
+
 To use Commander I ask browser for command context of given selection.
-Same context I use decorate table cells with appropriate decorators:
+The context is also used to decorate table cells with appropriate decorators:
+
+	- decorateMainTableCell: anItemCellMorph of: aDataSourceItem
 	- decorateTableCell: anItemCellMorph of: aDataSourceItem
-There is special decorator which also based on Commander: ClyTableIconCommandActivator. It adds iconic button to table cells for all interested commands.
-It brings behaviour of Nautilus method widget where table icons are extended by AbstractMethodIconAction. Here commands should be marked with ClyTableIconCommandActivator.
+
+There is special decorator which also based on Commander: ClyTableIconCommandActivation. It adds iconic button to table cells for all interested commands.
+It brings behaviour of Nautilus method widget where table icons are extended by AbstractMethodIconAction. Here commands should be marked with ClyTableIconCommandActivation.
 
 I provide extra suitable events which in future should be also based on commands:
 - whenDoubleClickDo: 
@@ -68,3 +97,5 @@ Internal Representation and Key Implementation Points.
 	desiredSelection:		<ClyDesiredSelection>
 	highlighting:		<ClyHighlightingSelection>	
 	changesWasInitiatedByUser:		<Boolean>
+	shouldRestoreSelection: <Boolean>
+	treeStructure: <Array of<Association>>
