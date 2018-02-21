@@ -28,7 +28,11 @@ During given block execution the #recordState: method do nothing. It resets flag
 You can always check that history is empty: 
 
 	navigationHistory isEmpty
-	
+
+Important detail:
+I am implemented in the way to not keep reference to the browser and any of query results.
+So long history do not prevent query results in environment cache to be garbage collected.
+ 	
 Internal Representation and Key Implementation Points.
 
     Instance Variables

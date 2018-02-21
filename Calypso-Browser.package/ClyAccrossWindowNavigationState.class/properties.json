@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/21/2018 16:36",
 	"super" : "Object",
 	"category" : "Calypso-Browser-NavigationHistory",
 	"classinstvars" : [ ],
@@ -8,7 +8,6 @@
 	"instvars" : [
 		"windowGroup",
 		"window",
-		"browser",
 		"browserState",
 		"browserPlugins",
 		"navigationEnvironment",

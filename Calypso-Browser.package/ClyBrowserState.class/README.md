@@ -6,10 +6,14 @@ While subclasses can provide additional state they all include following propert
 - selectedTabs, the colletion of selected browser tabs 
 - systemScope, the system scope of the browser 
 
-My instances are created from browser: 
+My instances are created with browser: 
 
 	ClyBrowserState of: aBrowser
+
+Or simply ask 
 	
+	aBrowser snapshotState
+
 During initialization I retrieve the browser state in method #retrieveStateFrom:.
 
 When history performs undo/redo operation it just applies particular browser state to the browser: 
