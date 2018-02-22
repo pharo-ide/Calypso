@@ -1,0 +1,1 @@
+I a command which opens dependency browser of given package which is my analyzed object

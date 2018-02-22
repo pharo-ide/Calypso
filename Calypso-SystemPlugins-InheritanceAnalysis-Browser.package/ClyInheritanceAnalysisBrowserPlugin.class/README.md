@@ -1,0 +1,1 @@
+I am special browser plugin to restrict table decorators in this package to appear only in browsers where I am installed

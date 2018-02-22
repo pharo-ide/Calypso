@@ -1,2 +1,2 @@
 execution
-selectMethodsIn: queryBrowser 
+selectMethodsIn: aQueryBrowser 

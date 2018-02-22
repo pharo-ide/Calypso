@@ -1,0 +1,1 @@
+I represent class side methods with pragma <example> or with selector beginning with example word

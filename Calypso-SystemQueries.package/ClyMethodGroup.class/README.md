@@ -1,35 +1,37 @@
 I am a root of hierarchy of method groups.
 
-Any method group is created on set of classes:
-	ClyMethodGroup classes: {Point. Collection}
- 
-My subclasses decide what methods should be extracted from classes. They should implement #includesMethod: for this. I define public API in terms of it: 
-	- methods 
-	- methodsSize
-	- includesMethodsAffectedBy: aMethodAnnouncement. It check all affected methods by #canIncludeMethod: criteria.
-	- canIncludeMethod: aMethod. It is less restrictive version of #includesMethod: which is same by default. This method is used to detect if group was modified due to given method change. In such case modified method can not satisfy strong restriction of #includesMethod:. But at the time before change original method can belongs to group. For some kind of groups only way to detect change is matching method by less restrictions.
-	 
-My subclasses can redifine these methods differently to achieve better performance for example.
+Any method group is created on method query:
 
-My subclasses can have subgroups. In tools they will be shown in tree. 
-To define subgroups few methods should be implemented:
-	- hasSubgroups
-	- subgroups
-	- buildSubgroupItems
-I provide implementation for last method based on #subgroups. But for specific needs like optimization it can be redefined.
+	ClyMethodGroup named: 'some group' on: aMetodQuery
 
-Subgroups can belongs to specific environment scope. By default it is original ClyMethodGroupScope. But subclasses can override it with more specific one:
-	ClyMethodGroup>>subgroupEnvironmentScope
-		^ClyMethodGroupScope
-	ClyVariablesRelatedMethodGroup>>subgroupEnvironmentScope
-		^ClyVariableScope
+Method query can be also composite but it should return methods.
 
-I provide default support for system changes. My subclasses override following methods when needed:
-	- isAffectedByClassChange: aClassAnnouncement. It returns false by default
-	- isAffectedByPackageChange: aPackageAnnouncement. It returns false by default
-	- includesMethodsAffectedBy: aMethodAnnouncement. It is described above.
+Also method group can be expanded to subgroups using subgroupsQuery. You can specify it in another instance creation method: 
+
+	ClyMethodGroup named: 'some group' on: aMethodQuery withSubgroupsFrom: aQuery	
+
+And there are additional constructors to specify priority of group:
+
+	ClyMethodGroup named: 'some group' priority: 20 on: aMethodQuery.
+	ClyMethodGroup named: 'some group' priority: 20 on: aMethodQuery withSubgroupsFrom: aQuery
+
+All groups are sorted by priority and name in the browser. Larger priority value put group to the top of list.
+
+I provide several methods to implement various commands: 
+
+- importMethod: aMethod
+It supposed to modify given aMethod in the way that it will become the part of the group.
+
+- importMethods: methods 
+It imports multiple methods
+		 
+- removeWithMethods
+It removes all methods and should ensure that groups will be removed too which is true for all virtual groups.
+
+And I provide method #includesMethod: which is used in the browser to highlight groups which contains selected methods.
 
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	classes:		<Collection of:<Class>>
+	methodQuery:		<ClyMethodQuery>
+	subgroupsQuery:		<ClyQuery>

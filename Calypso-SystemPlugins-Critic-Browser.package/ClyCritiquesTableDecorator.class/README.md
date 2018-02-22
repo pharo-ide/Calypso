@@ -1,0 +1,1 @@
+I decorate table of critiques with severity level icon

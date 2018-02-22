@@ -1,0 +1,1 @@
+I am example class which has ffi methods

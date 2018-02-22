@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/22/2018 17:12",
 	"super" : "ClySystemBrowserContext",
 	"category" : "Calypso-SystemTools-QueryBrowser-UI",
 	"classinstvars" : [ ],

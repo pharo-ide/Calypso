@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/20/2018 18:38",
 	"super" : "ClyRunTestsFromMethodsCommand",
 	"category" : "Calypso-SystemPlugins-SUnit-Browser",
 	"classinstvars" : [ ],

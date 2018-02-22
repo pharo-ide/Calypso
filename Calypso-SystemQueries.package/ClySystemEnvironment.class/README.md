@@ -19,3 +19,4 @@ Internal Representation and Key Implementation Points.
 	globals:		<SmalltalkDictionary> "Smalltalk globals class"
 	name:		<String>
 	packageOrganizer:		<RPackageOrganizer>
+	projectManager:		<ClyProjectManager>

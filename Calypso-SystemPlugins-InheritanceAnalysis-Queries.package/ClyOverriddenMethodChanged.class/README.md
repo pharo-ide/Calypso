@@ -1,0 +1,1 @@
+I am a special kind of MethodAnnouncement which represent that overridden method changes own "overridden status"

@@ -1,1 +1,1 @@
-I provide ClyOverriddenMethodGroup only when there are methods which are overridden by subclasses
+I provide "overridden" method group which includes all methods of given classes which are overridden by subclasses

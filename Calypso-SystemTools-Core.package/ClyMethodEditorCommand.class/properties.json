@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/22/2018 15:08",
 	"super" : "CmdCommand",
 	"category" : "Calypso-SystemTools-Core-Editors-Methods",
 	"classinstvars" : [ ],

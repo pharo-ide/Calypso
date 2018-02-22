@@ -1,0 +1,1 @@
+I am example class without deprecated methods

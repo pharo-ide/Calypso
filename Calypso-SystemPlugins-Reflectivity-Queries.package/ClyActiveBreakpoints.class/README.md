@@ -1,1 +1,1 @@
-I return all methods which has installed breakpoints or halt execution with explicit message like "self halt"
+I return all methods which have installed breakpoints or send the halt message (and friends like haltIf:)

@@ -11,21 +11,17 @@ I can give you interesting information:
 I can be modified using following methods which update visible table selection: 
 - selectItems: dataSourceItems. It just changes selection to given items.
 - selectItemsWhich: aBlock. It queries data source for items satisfying given block criteria.
-- selectItemsWith: actualObjectsArray. It queries data source to find items in underlying environment content which belongs to given objects array.
+- selectItemsWith: actualObjectsArray. It queries data source to find items in underlying query result which belongs to given objects array.
 
 Also there are filter methods which return new selection instances:
 - asSelectedRoots. It return new selection which includes only root parents of my own items.
-- asSelectedItemsOf: anEnvironmentScopeClass. It returns new selection which only includes items which belongs to selected scope class. Because I am selection of tree structure I can include items of different scopes. This method allows split them. 
-I can be converted to environment scope of my items: 
-- asItemsScope
+- asSelectedItemsOf: anItemTypeClass. It returns new selection which only includes items which belongs to given item type. 
+I can be converted to the scope of my items: 
+- asItemsScope: aTypedScope
 I can create desired selection instance which responsible to restore selection on different data sources: 
 - asDesiredSelection
 
-I provide query interface to retrieve data in context of my items: 
-- query: anEnvironmentQuery. It evaluates query in scope of my items. Type of scope will be same as my root data source.
-- query: anEnvironmentQuery inScope: anEnvironmentScopeClass. It evaluates query in new scope of my items.
-
-When data source is changed I responsible to update table visible selection:
+When data source is changed I am responsible to update visible selection of the table:
 	aSelection updateItemsWhichBelongsTo: aDataSource
 For example when user expands tree node selected indexes should be shifted when expansion happens before selection. Same should be done when items of data source are removed or added.
 

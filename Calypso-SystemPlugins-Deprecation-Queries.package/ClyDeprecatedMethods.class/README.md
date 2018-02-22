@@ -1,0 +1,1 @@
+I return all deprecated methods from my scope

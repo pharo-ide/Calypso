@@ -1,3 +1,3 @@
 testing
 wantsDecorateTableCellOf: aDataSourceItem
-	^false
+	^true

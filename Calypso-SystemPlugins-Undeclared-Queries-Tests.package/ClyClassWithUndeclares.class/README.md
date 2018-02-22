@@ -1,0 +1,1 @@
+I am example class with methods which use undeclated variables

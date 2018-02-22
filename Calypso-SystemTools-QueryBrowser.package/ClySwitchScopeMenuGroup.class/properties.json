@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/22/2018 16:48",
 	"super" : "CmdMenuGroup",
 	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Controlling",
 	"classinstvars" : [ ],

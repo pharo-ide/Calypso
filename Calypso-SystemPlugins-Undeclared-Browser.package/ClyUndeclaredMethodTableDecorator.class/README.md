@@ -1,0 +1,1 @@
+I decorate table items with red font for methods which use undeclared variables

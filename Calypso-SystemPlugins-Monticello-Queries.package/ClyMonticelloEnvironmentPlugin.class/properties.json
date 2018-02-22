@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/20/2018 17:56",
 	"super" : "ClySystemEnvironmentPlugin",
 	"category" : "Calypso-SystemPlugins-Monticello-Queries",
 	"classinstvars" : [ ],

@@ -1,1 +1,1 @@
-I am used to mark abstract classes
+I am used to mark abstract classes and methods

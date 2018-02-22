@@ -1,0 +1,1 @@
+I am a command to move browser focus to previous (left) navigation pane

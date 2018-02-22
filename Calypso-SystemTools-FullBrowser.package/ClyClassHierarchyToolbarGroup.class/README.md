@@ -1,0 +1,1 @@
+I am a toolbar menu group to show class view modes of the browser together

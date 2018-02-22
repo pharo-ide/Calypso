@@ -1,0 +1,1 @@
+I am a toolbar menu group to show together query browser controlling commands

@@ -1,0 +1,1 @@
+I return all methods which send #flag: message

@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/22/2018 14:50",
 	"super" : "ClyBrowserCommand",
 	"category" : "Calypso-SystemTools-Core-Commands-Classes",
 	"classinstvars" : [ ],
