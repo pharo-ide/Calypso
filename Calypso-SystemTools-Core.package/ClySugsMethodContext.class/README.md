@@ -1,0 +1,1 @@
+I provide compatibility of ClyMethodEditor with suggestions menu
