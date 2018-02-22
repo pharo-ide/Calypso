@@ -1,0 +1,1 @@
+I am a remove method strategy which do not remove methods but instead it shows all senders.

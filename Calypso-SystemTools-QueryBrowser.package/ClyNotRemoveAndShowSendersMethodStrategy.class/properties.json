@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "DenisKudryashov 2/22/2018 16:51",
 	"super" : "ClyInteractiveRemoveMethodStrategy",
 	"category" : "Calypso-SystemTools-QueryBrowser-Commands-Methods",
 	"classinstvars" : [ ],
