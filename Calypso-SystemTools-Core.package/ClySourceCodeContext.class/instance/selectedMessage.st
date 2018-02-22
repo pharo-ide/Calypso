@@ -1,4 +1,4 @@
 selection
 selectedMessage
 
-	^SycMessageDescription ofMesageNode: self selectedSourceNode
+	^SycMessageDescription ofMessageNode: self selectedSourceNode
