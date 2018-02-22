@@ -8,9 +8,7 @@ build
 		borderWidth: 0;
 		vResizing: #shrinkWrap;
 		hResizing: #shrinkWrap.
-	label
-		ifNil: [ checkBox labelMorph delete ] 
-		ifNotNil: [ checkBox label: label.
-			checkBox labelMorph comeToFront ].
+	checkBox labelMorph delete.	
+
 	self addMorph: checkBox.
 	
