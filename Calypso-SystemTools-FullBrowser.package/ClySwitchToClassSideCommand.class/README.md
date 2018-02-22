@@ -1,0 +1,1 @@
+I am a command to switch full browser to the class side mode

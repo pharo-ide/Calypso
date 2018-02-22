@@ -1,0 +1,1 @@
+I am a command to switch the full browser to flat class mode

@@ -1,0 +1,1 @@
+I am a command to switch full browser to the instance side mode
