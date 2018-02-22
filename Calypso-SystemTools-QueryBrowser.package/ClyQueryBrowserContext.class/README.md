@@ -1,0 +1,1 @@
+I represent query browser context
