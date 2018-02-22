@@ -1,0 +1,1 @@
+I am a context menu group which holds all generated ClySwitchQueryScopeCommand items
