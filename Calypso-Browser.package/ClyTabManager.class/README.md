@@ -31,6 +31,10 @@ So at the end I always select tab with most activation priority which exists in 
 
 By default activationPriority is equal to #tabOrder which defines general order between tabs.
 
+My instances are created on the browser: 
+
+	ClyTabManager of: aBrowser
+	
 Internal Representation and Key Implementation Points.
 
     Instance Variables
