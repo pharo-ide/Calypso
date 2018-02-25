@@ -1,4 +1,4 @@
 context menu support
-testItemsResult
+testResult
 
 	^self testResultOf: testItems first

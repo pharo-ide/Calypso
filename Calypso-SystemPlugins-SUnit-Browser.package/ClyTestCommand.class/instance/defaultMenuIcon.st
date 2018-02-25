@@ -1,4 +1,4 @@
 context menu support
 defaultMenuIcon
 	
-	^self testItemsResult createIcon
+	^self testResult createIcon
