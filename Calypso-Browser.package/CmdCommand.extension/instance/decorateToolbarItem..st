@@ -1,8 +1,8 @@
 *Calypso-Browser
-decorateToolbarItem: aBrowserButton
+decorateToolbarItem: aBrowserToolbarItem
 
 	self description ifNotNil: [ :d | 
-		aBrowserButton setBalloonText: d ].
+		aBrowserToolbarItem setBalloonText: d ].
 	
 	self defaultMenuIcon ifNotNil: [:icon |
-		aBrowserButton addIcon: icon asMorph]
+		aBrowserToolbarItem addIcon: icon asMorph]
