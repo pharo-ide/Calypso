@@ -5,4 +5,4 @@ decorateToolbarItem: aBrowserButton
 		aBrowserButton setBalloonText: d ].
 	
 	self defaultMenuIcon ifNotNil: [:icon |
-		aBrowserButton addMorphFront: icon asMorph]
+		aBrowserButton addIcon: icon asMorph]
