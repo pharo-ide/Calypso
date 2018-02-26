@@ -175,4 +175,4 @@ baseline: spec
 			group: 'ProcessBrowser' with: #(#'Calypso-SystemTools-ProcessBrowser');
 			group: 'ProcessBrowserTests' with: #(#'Calypso-ProcessQueries-Tests');
 			
-			group: 'default' with: #('FullEnvironment' 'FullBrowser' 'Tests' 'ProcessEnvironment' 'ProcessBrowser' 'ProcessBrowserTests' ) ].
+			group: 'default' with: #('FullEnvironment' 'SystemBrowser' 'Tests' 'ProcessEnvironment' 'ProcessBrowser' 'ProcessBrowserTests' ) ].
