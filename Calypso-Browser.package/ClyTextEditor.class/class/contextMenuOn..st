@@ -3,5 +3,8 @@ contextMenuOn: aBuilder
 	<RubSmalltalkCodeMenu>
 
 	| context |
+	(aBuilder model editingMode isKindOf: ClyTextEditingMode)
+		ifFalse: [ ^self ].
+		
 	context := aBuilder model browserTool createCommandContext.
 	CmdContextMenuCommandActivation registerMenuOn: aBuilder inContext: context

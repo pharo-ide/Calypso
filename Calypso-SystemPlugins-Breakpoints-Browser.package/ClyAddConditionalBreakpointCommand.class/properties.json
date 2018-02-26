@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "DenisKudryashov 2/26/2018 16:59",
-	"super" : "ClyAddMethodBreakpointCommand",
+	"commentStamp" : "DenisKudryashov 2/26/2018 17:02",
+	"super" : "ClyAddBreakpointCommand",
 	"category" : "Calypso-SystemPlugins-Breakpoints-Browser",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 	"instvars" : [
 		"conditionBlock"
 	],
-	"name" : "ClyAddConditionalMethodBreakpointCommand",
+	"name" : "ClyAddConditionalBreakpointCommand",
 	"type" : "normal"
 }

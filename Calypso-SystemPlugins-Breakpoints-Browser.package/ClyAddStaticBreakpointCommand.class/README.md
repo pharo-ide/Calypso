@@ -1,0 +1,1 @@
+I am a command to add static breakpoint into particular source node.
