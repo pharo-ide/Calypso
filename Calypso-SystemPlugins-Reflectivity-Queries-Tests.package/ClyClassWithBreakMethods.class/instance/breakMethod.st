@@ -1,3 +1,0 @@
-methods
-breakMethod
-	self printString
