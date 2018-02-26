@@ -1,4 +1,4 @@
 execution
 canBeExecutedInContext: aBrowserContext
 
-	^aBrowserContext selectedSourceNode hasBreakpoint not
+	^aBrowserContext isItemWithBreakpointSelected not

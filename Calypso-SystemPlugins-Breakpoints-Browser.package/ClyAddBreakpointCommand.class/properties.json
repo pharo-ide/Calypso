@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/26/2018 17:01",
-	"super" : "ClySourceNodeBreakpointCommand",
+	"super" : "ClyMetalinkCommand",
 	"category" : "Calypso-SystemPlugins-Breakpoints-Browser",
 	"classinstvars" : [ ],
 	"pools" : [ ],

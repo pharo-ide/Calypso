@@ -1,0 +1,3 @@
+testing
+isItemWithBreakpointSelected
+	^selectedSourceNode hasBreakpoint 
