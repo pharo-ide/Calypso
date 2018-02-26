@@ -6,7 +6,8 @@ usesUndeclares
 		ifTrue: [ 
 			self literalsDo: [:each | 
 				each class == UndeclaredVariable ifTrue: [^true].
-				(each value isBehavior and: [ each value isObsolete ]) ifTrue: [^true]]]
+				(each isBlock not and: [ 
+					each value isBehavior and: [ each value isObsolete ]]) ifTrue: [^true]]]
 		ifFalse: [
 			"To support Pharo 6"
 			self literalsDo: [:each | 

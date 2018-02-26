@@ -1,6 +1,4 @@
 execution
 execute
 	
-	methods do: [ :each | 
-		each ast nodesWithLinks do:[:link | Breakpoint removeFrom: link ]]
-	
+	Breakpoint new node: sourceNode; always; install

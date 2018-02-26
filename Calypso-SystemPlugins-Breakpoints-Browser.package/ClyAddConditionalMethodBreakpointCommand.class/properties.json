@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "ClySourceNodeBreakpointCommand",
+	"super" : "ClyAddMethodBreakpointCommand",
 	"category" : "Calypso-SystemPlugins-Breakpoints-Browser",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyRemoveBreakpointCommand",
+	"instvars" : [
+		"conditionBlock"
+	],
+	"name" : "ClyAddConditionalMethodBreakpointCommand",
 	"type" : "normal"
 }
