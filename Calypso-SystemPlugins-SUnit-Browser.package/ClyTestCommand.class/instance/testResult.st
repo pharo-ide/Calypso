@@ -1,0 +1,3 @@
+tests
+testResult
+	self subclassResponsibility 

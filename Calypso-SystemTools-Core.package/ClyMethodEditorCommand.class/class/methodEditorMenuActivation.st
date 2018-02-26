@@ -1,5 +1,0 @@
-activation
-methodEditorMenuActivation
-	<classAnnotation>
-	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyTextEditorContext

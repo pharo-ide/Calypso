@@ -1,3 +1,3 @@
-private
+accessing
 selectedSourceNode
-	^selectedSourceNode ifNil: [selectedSourceNode := tool selectedSourceNode]
+	^selectedSourceNode

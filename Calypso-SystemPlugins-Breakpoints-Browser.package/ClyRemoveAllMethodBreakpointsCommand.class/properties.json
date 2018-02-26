@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/26/2018 17:00",
+	"super" : "ClyMethodBreakpointCommand",
+	"category" : "Calypso-SystemPlugins-Breakpoints-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyRemoveAllMethodBreakpointsCommand",
+	"type" : "normal"
+}

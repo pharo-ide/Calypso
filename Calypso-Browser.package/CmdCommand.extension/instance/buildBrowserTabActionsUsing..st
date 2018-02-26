@@ -5,5 +5,5 @@ buildBrowserTabActionsUsing: aCommandActivator
 		TabAction 
 			action: [ aCommandActivator executeCommand ]
 			icon: self browserTabActionIcon
-			label: aCommandActivator menuItemName
+			label: aCommandActivator commandDescription
 	}

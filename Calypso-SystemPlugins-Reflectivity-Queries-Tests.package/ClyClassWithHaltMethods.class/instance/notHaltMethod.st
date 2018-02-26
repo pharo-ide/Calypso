@@ -1,4 +1,0 @@
-methods
-notHaltMethod
-
-	self printString

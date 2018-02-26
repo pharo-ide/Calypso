@@ -1,0 +1,1 @@
+I am a command to remove all breakpoints from particular source node.

@@ -1,4 +1,4 @@
 *Calypso-SystemTools-Core
 browserMenuOrder
 	<classAnnotationDependency>
-	^1.1
+	^2.1

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/20/2018 18:07",
+	"super" : "Object",
+	"category" : "Calypso-SystemPlugins-Breakpoints-Queries-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyClassWithHalts",
+	"type" : "normal"
+}
