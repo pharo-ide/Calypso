@@ -1,6 +1,6 @@
 running
 tearDown
-	super tearDown.
-	
 	installedBreakpoints do: [ :each | each remove ].
-	installedBreakpoints removeAll
+	installedBreakpoints removeAll.
+	
+	super tearDown

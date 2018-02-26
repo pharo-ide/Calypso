@@ -1,3 +1,5 @@
 operations
 createTextContext
-	^ClySourceCodeContext for: self
+	^self selectedSourceNode
+		ifNil: [super createTextContext]
+		ifNotNil: [ :astNode | ClySourceCodeContext for: self selectedNode: astNode]
