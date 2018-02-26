@@ -1,3 +1,3 @@
-testing
+*Calypso-SystemPlugins-Breakpoints-Browser
 isSelectedItemHasBreakpoint
 	^selectedSourceNode hasBreakpoint 
