@@ -1,3 +1,3 @@
 execution
 execute
-	(IceExtendedVersionBrowser repository: repository method: method) open
+	(#IceExtendedVersionBrowser asClass repository: repository method: method) open
