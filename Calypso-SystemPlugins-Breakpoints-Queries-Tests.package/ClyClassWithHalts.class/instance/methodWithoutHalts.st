@@ -1,0 +1,4 @@
+methods
+methodWithoutHalts
+
+	self printString
