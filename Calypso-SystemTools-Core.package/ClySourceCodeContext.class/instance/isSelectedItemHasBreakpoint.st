@@ -1,3 +1,3 @@
 testing
-isItemWithBreakpointSelected
+isSelectedItemHasBreakpoint
 	^selectedSourceNode hasBreakpoint 

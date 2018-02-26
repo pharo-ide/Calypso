@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMetalinkCommand",
+	"category" : "Calypso-SystemPlugins-Breakpoints-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyAddExecutionCounterCommand",
+	"type" : "normal"
+}

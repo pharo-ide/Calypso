@@ -1,4 +1,4 @@
 *Calypso-SystemPlugins-Breakpoints-Browser
-isItemWithBreakpointSelected
+isSelectedItemHasBreakpoint
 	^selectedItems anySatisfy: [ :each | 
 		each isMarkedWith: ClyMethodWithBreakpointTag ]
