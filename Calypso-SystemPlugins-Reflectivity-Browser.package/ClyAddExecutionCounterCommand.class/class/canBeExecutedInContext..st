@@ -1,4 +1,4 @@
 execution
 canBeExecutedInContext: aBrowserContext
 
-	^aBrowserContext isSelectedItemHasBreakpoint not
+	^aBrowserContext isSelectedItemHasExecutionCounter not

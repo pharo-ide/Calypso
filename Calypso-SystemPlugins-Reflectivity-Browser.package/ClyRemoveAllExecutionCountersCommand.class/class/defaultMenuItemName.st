@@ -1,3 +1,3 @@
 execution
 defaultMenuItemName 
-	^'Remove breakpoint'
+	^'Remove counter'

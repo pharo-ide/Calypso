@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "DenisKudryashov 2/27/2018 11:46",
-	"super" : "ClyMetalinkCommand",
+	"commentStamp" : "DenisKudryashov 2/27/2018 12:03",
+	"super" : "ClyRemoveAllMetalinksCommand",
 	"category" : "Calypso-SystemPlugins-Reflectivity-Browser-ExecutionCounters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAddExecutionCounterCommand",
+	"name" : "ClyRemoveAllExecutionCountersCommand",
 	"type" : "normal"
 }

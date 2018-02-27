@@ -3,4 +3,4 @@ methodContextMenuActivation
 	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation 
-		byItemOf: ClyMetalinkMenuGroup for: ClyMethod asCalypsoItemContext
+		byItemOf: ClyMetalinkMenuGroup order: 2 for: ClyMethod asCalypsoItemContext

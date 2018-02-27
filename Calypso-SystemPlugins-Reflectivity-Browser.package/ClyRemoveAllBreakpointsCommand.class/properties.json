@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/26/2018 17:02",
-	"super" : "ClyMetalinkCommand",
+	"super" : "ClyRemoveAllMetalinksCommand",
 	"category" : "Calypso-SystemPlugins-Reflectivity-Browser-Breakpoints",
 	"classinstvars" : [ ],
 	"pools" : [ ],

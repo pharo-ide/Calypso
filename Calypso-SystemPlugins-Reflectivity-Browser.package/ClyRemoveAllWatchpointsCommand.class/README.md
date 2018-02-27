@@ -1,0 +1,1 @@
+I am a command to remove all watchpoints from given method or source node
