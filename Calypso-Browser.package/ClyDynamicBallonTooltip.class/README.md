@@ -1,5 +1,5 @@
 I am a hook to get dynamically updatable balloon tooltip.
 
-Create my instance using block: 
+To install me into the morph use following expression:
 
-	ClyDynamicBallonTooltip from: ['test string']
+	ClyDynamicBallonTooltip from: ['test string'] installInto: aMorph
