@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/27/2018 16:07",
+	"super" : "ClySimpleTag",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries-ExecutionCounters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMethodWithExecutionCounterTag",
+	"type" : "normal"
+}

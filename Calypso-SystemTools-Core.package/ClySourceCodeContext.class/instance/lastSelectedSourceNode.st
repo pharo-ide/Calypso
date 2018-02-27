@@ -1,0 +1,4 @@
+selection
+lastSelectedSourceNode
+
+	^self selectedSourceNode

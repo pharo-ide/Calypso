@@ -1,3 +1,0 @@
-method groups
-collectMethodGroupProviders
-	^{ClyBreakpointMethodGroupProvider new}

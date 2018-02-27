@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/27/2018 16:05",
+	"super" : "ClyMethodQuery",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries-Watchpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMethodWatchpoints",
+	"type" : "normal"
+}

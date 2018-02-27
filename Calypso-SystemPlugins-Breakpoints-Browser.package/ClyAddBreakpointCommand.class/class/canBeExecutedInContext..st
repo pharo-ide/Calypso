@@ -1,4 +1,0 @@
-execution
-canBeExecutedInContext: aBrowserContext
-
-	^aBrowserContext selectedSourceNode hasBreakpoint not

@@ -1,3 +1,0 @@
-execution
-defaultMenuItemName 
-	^'Remove breakpoint'

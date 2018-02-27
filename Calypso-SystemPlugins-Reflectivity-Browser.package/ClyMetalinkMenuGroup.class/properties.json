@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/27/2018 16:09",
+	"super" : "CmdMenuGroup",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Browser-Commands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMetalinkMenuGroup",
+	"type" : "normal"
+}

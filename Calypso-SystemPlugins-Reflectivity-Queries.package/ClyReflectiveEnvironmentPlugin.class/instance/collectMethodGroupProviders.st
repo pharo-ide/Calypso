@@ -1,0 +1,3 @@
+method groups
+collectMethodGroupProviders
+	^{ClyBreakpointMethodGroupProvider new. ClyMethodCounterGroupProvider new. ClyWatchpointMethodGroupProvider new}
