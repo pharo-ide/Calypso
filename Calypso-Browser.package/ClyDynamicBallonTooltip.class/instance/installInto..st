@@ -1,4 +1,4 @@
-as yet unclassified
+installation
 installInto: aMorph
 	"Dynamic update is done by #asString converting.
 	But simple aMorph setBalloonText: also converts given argument to string.
