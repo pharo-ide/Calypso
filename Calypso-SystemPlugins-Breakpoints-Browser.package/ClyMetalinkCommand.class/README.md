@@ -1,1 +1,0 @@
-I am a base class for commands which add/remove breakpoints from particular source node
