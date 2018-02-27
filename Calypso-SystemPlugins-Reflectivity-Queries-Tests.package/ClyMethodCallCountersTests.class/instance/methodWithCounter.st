@@ -1,0 +1,2 @@
+running
+methodWithCounter

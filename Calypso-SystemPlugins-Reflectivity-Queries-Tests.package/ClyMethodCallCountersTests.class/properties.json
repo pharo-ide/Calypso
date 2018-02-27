@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodQueryTestCase",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries-Tests-ExecutionCounters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"installedCounters"
+	],
+	"name" : "ClyMethodCallCountersTests",
+	"type" : "normal"
+}

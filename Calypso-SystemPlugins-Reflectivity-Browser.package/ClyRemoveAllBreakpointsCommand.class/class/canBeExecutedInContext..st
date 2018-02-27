@@ -1,0 +1,4 @@
+execution
+canBeExecutedInContext: aBrowserContext
+
+	^aBrowserContext isSelectedItemHasBreakpoint 

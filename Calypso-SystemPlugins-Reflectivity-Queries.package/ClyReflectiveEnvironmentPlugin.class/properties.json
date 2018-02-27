@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/20/2018 18:07",
+	"super" : "ClySystemEnvironmentPlugin",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries-Plugin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyReflectiveEnvironmentPlugin",
+	"type" : "normal"
+}

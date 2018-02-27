@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyMethodQueryTestCase",
+	"category" : "Calypso-SystemPlugins-Reflectivity-Queries-Tests-Watchpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"installedWatchpoints"
+	],
+	"name" : "ClyMethodWatchpointsTests",
+	"type" : "normal"
+}

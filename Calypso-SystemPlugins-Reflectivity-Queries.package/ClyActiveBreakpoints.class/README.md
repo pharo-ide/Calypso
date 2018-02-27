@@ -1,0 +1,1 @@
+I return all methods which have installed breakpoints or send the halt message (and friends like haltIf:)
