@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyRemoveAllMetalinksCommand",
+	"name" : "ClyRemoveMetalinkCommand",
 	"type" : "normal"
 }
