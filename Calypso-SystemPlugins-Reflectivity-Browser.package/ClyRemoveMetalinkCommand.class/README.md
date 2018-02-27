@@ -1,4 +1,4 @@
-I am a base class for commands which removes particular kind of metalink from given method or source node.
+I am a base class for commands which remove particular kind of metalink from given method or source node.
 My subclasses should implement following class side methods: 
 
 - metalinkManagerClass

@@ -1,0 +1,1 @@
+I return all methods which has installed execution counters

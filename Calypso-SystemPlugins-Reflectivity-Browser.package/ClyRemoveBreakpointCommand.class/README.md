@@ -1,1 +1,1 @@
-I am a command to remove all breakpoints from particular source node.
+I am a command to remove all breakpoints from given method or source node
