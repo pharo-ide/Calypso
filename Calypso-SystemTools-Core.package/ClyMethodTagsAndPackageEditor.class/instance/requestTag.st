@@ -1,8 +1,12 @@
 operations
 requestTag
 
-	| selectedTag |
-	selectedTag := self ownerTool browser createCommandContext 
-		requestSingleMethodTag: 'New protocol name'.
+	| selectedTag existingTag |
+	existingTag := ownerTool methodTags 
+		ifEmpty: [ '' ] ifNotEmpty: [ :tags | tags anyOne ].
+
+	selectedTag := self ownerTool context
+		requestSingleMethodTag: 'New protocol name' suggesting: existingTag.
+	selectedTag = existingTag ifTrue: [ ^CmdCommandAborted signal ].
 	
 	ownerTool methodTags: { selectedTag asSymbol }

@@ -1,5 +1,6 @@
 operations
 renameMethodTagTo: newTag 
+	newTag = self tag ifTrue: [ ^self ].
 	
 	self methods do: [ :each |
 		each tagWith: newTag.

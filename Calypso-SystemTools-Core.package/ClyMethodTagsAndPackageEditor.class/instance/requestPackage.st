@@ -2,7 +2,6 @@ operations
 requestPackage
 
 	| extendingPackage |
-	extendingPackage := ownerTool browser searchDialog 
-		requestSingleObject: 'Choose package for method' from: ClyAllPackages sorted.
+	extendingPackage := ownerTool context requestSinglePackage: 'Choose package for method'.
 		
 	ownerTool extendingPackage: extendingPackage
