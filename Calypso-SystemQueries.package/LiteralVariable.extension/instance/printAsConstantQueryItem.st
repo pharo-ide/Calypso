@@ -1,0 +1,3 @@
+*Calypso-SystemQueries
+printAsConstantQueryItem
+	^key

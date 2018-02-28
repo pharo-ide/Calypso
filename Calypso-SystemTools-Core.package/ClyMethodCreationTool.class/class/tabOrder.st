@@ -1,3 +1,3 @@
 accessing
 tabOrder
-	^ ClyClassDefinitionEditorTool tabOrder + 1
+	^ 1000

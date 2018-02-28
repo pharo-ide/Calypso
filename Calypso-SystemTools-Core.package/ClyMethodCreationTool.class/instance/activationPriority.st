@@ -4,4 +4,4 @@ activationPriority
 	Instead when user select class creation tool should not be activated"
 	^browser methodGroupSelection isEmpty 
 		ifTrue: [ 0]
-		ifFalse: [ super activationPriority ]
+		ifFalse: [ ClyClassDefinitionEditorTool tabOrder + 1 ]

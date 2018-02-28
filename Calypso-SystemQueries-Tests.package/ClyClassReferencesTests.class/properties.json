@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"var2"
-	],
+	"instvars" : [ ],
 	"name" : "ClyClassReferencesTests",
 	"type" : "normal"
 }
