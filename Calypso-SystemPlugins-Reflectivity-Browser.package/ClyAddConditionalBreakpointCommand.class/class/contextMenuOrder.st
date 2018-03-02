@@ -1,3 +1,3 @@
 activation
 contextMenuOrder
-	^3
+	^1.2
