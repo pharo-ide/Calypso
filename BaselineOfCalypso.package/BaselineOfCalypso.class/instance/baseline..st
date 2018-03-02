@@ -5,14 +5,14 @@ baseline: spec
 		spec 
 			baseline: 'ClassAnnotation' with: [
 				spec
-					repository: 'github://dionisiydk/ClassAnnotation:v0.2.x';
+					repository: 'github://dionisiydk/ClassAnnotation:v0.3.x';
 					loads: 'Core' ];
 			project: 'ClassAnnotationTests' copyFrom: 'ClassAnnotation' with: [
 				spec loads: 'Tests'];
 			baseline: 'Commander' with: [
-				spec repository: 'github://dionisiydk/Commander:dev' ]; "v0.4.x"
+				spec repository: 'github://dionisiydk/Commander:v0.5.x' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://dionisiydk/SystemCommands:v0.6.x' ].			
+				spec repository: 'github://dionisiydk/SystemCommands:v0.7.x' ].			
 		spec 
 			package: #'Calypso-NavigationModel';
 			package: #'Calypso-NavigationModel-Tests' with: [
