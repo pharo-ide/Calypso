@@ -2,9 +2,7 @@
 	"commentStamp" : "DenisKudryashov 2/20/2018 18:13",
 	"super" : "ClyBrowserCommand",
 	"category" : "Calypso-SystemPlugins-Spotter",
-	"classinstvars" : [
-		"defaultShortcut"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
