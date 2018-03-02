@@ -1,4 +1,4 @@
-events handling
+contexts
 sourceNodeContextAt: aCursorPoint
 
 	| sourceNode |

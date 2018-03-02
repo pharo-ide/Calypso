@@ -6,4 +6,4 @@ leftSideBarClicked: anEvent
 	targetContext := self sourceNodeContextAt: anEvent cursorPoint.
 	
 	CmdTextLeftBarClickCommandActivation 
-		activateAllInContext: targetContext by: [:activator | activator executeCommand ]
+		activateAllInContext: targetContext by: [:activator | ^activator executeCommand ]

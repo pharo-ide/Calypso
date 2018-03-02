@@ -1,3 +1,3 @@
-operations
+contexts
 createCommandContext
 	^self createTextContext

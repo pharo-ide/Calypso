@@ -1,4 +1,4 @@
-events handling
+contexts
 findSourceNodeAt: aCursorPoint
 	| startPosition endPosition line lineIndex  selection ast |
 	lineIndex := self leftSideBar lineIndexForPoint: aCursorPoint. "strangely we can't ask text morph about it"

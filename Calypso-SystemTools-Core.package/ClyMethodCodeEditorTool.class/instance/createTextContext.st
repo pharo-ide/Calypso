@@ -1,4 +1,4 @@
-operations
+contexts
 createTextContext
 	^self selectedSourceNode
 		ifNil: [super createTextContext]

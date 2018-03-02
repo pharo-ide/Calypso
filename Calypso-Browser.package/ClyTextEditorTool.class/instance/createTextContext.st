@@ -1,3 +1,3 @@
-operations
+contexts
 createTextContext
 	^ClyTextEditorContext for: self
