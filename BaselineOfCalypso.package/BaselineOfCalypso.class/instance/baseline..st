@@ -5,7 +5,7 @@ baseline: spec
 		spec 
 			baseline: 'ClassAnnotation' with: [
 				spec
-					repository: 'github://dionisiydk/ClassAnnotation:v0.2.x';
+					repository: 'github://dionisiydk/ClassAnnotation:v0.3.x';
 					loads: 'Core' ];
 			project: 'ClassAnnotationTests' copyFrom: 'ClassAnnotation' with: [
 				spec loads: 'Tests'];
