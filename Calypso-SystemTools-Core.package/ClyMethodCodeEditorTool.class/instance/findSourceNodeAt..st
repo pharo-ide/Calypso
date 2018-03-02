@@ -1,11 +1,11 @@
 events handling
 findSourceNodeAt: aCursorPoint
 	| startPosition endPosition line lineIndex  selection ast |
-	lineIndex := textMorph paragraph lineIndexForPoint: aCursorPoint.
+	lineIndex := self leftSideBar lineIndexForPoint: aCursorPoint. "strangely we can't ask text morph about it"
 	line := textMorph paragraph lines at: lineIndex.	
 	startPosition := line first.
 	endPosition := line last.
-	
+
 	selection := textMorph selectionInterval.
 	selection ifNotNil: [ 
 		selection first >= startPosition & (selection last <= endPosition) ifTrue: [ 
