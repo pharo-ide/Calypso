@@ -1,5 +1,6 @@
 instance creation
-named: aString using: aBlock
+target: aView named: aString using: aBlock
 	^self new 
+		targetView: aView;
 		name: aString;
 		actionBlock: aBlock
