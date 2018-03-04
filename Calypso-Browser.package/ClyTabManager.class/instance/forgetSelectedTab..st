@@ -1,4 +1,4 @@
 accessing
-forgotSelectedTab: aBrowserTool
+forgetSelectedTab: aBrowserTool
 
 	desiredSelection remove: aBrowserTool class ifAbsent: [].
