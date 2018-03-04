@@ -15,5 +15,7 @@ selectClass: aClass
 			ifEmpty: [ self selectPackage: aClass package]
 			ifNotEmpty: [:tags | self selectPackage: aClass package atClassTag: tags anyOne].
 		self packageSelection isEmpty ifTrue: [ ^self ].
+		
+		self showsFullClassHierarchy ifTrue: [ self switchToFullClassHierarchyOf: aClass ].
 		self classSelection selectItemsWith: { aClass instanceSide }
 	]

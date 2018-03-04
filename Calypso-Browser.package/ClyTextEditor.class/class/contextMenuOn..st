@@ -7,4 +7,4 @@ contextMenuOn: aBuilder
 		ifFalse: [ ^self ].
 		
 	context := aBuilder model browserTool createCommandContext.
-	CmdContextMenuCommandActivation registerMenuOn: aBuilder inContext: context
+	CmdContextMenuCommandActivation registerContextMenuOn: aBuilder inContext: context

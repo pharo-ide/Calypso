@@ -2,5 +2,5 @@ accessing
 selectedSourceNode
 
 	| selectedInterval |
-	selectedInterval := textMorph selectionInterval.
+	selectedInterval := self selectedTextInterval.
 	^editingMethod astForStylingInCalypso bestNodeFor: selectedInterval

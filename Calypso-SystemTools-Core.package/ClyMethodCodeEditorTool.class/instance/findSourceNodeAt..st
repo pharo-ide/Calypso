@@ -6,7 +6,7 @@ findSourceNodeAt: aCursorPoint
 	startPosition := line first.
 	endPosition := line last.
 
-	selection := textMorph selectionInterval.
+	selection := self selectedTextInterval.
 	selection ifNotNil: [ 
 		selection first >= startPosition & (selection last <= endPosition) ifTrue: [ 
 			startPosition := selection first max: 1.

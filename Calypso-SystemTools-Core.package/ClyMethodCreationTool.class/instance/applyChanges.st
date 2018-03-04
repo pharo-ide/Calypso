@@ -17,5 +17,6 @@ applyChanges
 	self tagAndPackageEditingMethod: newMethod.
 	
 	self removeFromBrowser.
+	browser tabManager forgotSelectedTab: self.
 	browser selectMethod: newMethod.
 	^true
