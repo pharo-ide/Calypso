@@ -1,5 +1,5 @@
 activation
-contextMenuActivation
+browserContextMenuActivation
 	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byItemOf: CmdExtraMenuGroup for: ClyBrowserContext

@@ -1,5 +1,5 @@
 *Calypso-SystemTools-Core
-contextMenuActivation
+browserContextMenuActivation
 	<classAnnotation>
 	
 	^CmdContextMenuCommandActivation byRootGroupItemOrder: 1 for: ClyClass asCalypsoItemContext  

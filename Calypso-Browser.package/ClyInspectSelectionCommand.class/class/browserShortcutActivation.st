@@ -1,5 +1,5 @@
 activation
-shortcutActivation
+browserShortcutActivation
 	<classAnnotation>
 	
 	^CmdShortcutCommandActivation by: PharoShortcuts current inspectItShortcut for: ClyBrowserContext

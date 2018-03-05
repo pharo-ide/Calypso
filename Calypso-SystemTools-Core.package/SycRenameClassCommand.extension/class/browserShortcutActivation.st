@@ -1,5 +1,5 @@
 *Calypso-SystemTools-Core
-shortcutActivation
+browserShortcutActivation
 	<classAnnotation>
 	
 	^CmdShortcutCommandActivation renamingFor: ClyClass asCalypsoItemContext 

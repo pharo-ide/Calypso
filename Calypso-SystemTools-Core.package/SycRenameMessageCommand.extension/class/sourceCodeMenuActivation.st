@@ -2,4 +2,4 @@
 sourceCodeMenuActivation
 	<classAnnotation>
 	
-	^SycSourceCodeMenuActivation byRootGroupItemOrder: 1 for: ClySourceCodeContext
+	^SycSourceCodeMenuActivation byRootGroupItemOrder: 1.2 for: ClySourceCodeContext
