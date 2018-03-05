@@ -1,5 +1,5 @@
 *Calypso-SystemTools-Core
-methodEditorContextMenuActivation
+methodEditorLeftBarMenuActivation
 	<classAnnotation>
 	
 	^CmdTextLeftBarMenuCommandActivation byRootGroupItem: 'Refactorings' for: ClySourceCodeContext  
