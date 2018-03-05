@@ -1,5 +1,5 @@
 *Calypso-SystemTools-Core
 methodEditorShortcutActivation
-	<classAnnotation>
+	"<classAnnotation>"
 	
 	^CmdShortcutCommandActivation by: $y meta for: ClySourceCodeContext
