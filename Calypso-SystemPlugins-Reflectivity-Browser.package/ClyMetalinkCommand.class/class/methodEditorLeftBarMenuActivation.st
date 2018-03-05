@@ -2,5 +2,5 @@ activation
 methodEditorLeftBarMenuActivation
 	<classAnnotation>
 	
-	^CmdTextLeftBarMenuCommandActivation 
+	^CmdTextLeftBarMenuActivation 
 		byItemOf: ClyMetalinkMenuGroup order: self contextMenuOrder for: ClySourceCodeContext

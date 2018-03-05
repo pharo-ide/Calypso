@@ -6,5 +6,5 @@ leftSideBarClickedMouseUp: anEvent
 
 	targetContext := self sourceNodeContextAt: anEvent cursorPoint.
 	
-	menuMorph := CmdTextLeftBarMenuCommandActivation buildContextMenuFor: self inContext: targetContext.
+	menuMorph := CmdTextLeftBarMenuActivation buildContextMenuFor: self inContext: targetContext.
 	menuMorph popUpInWorld

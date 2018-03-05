@@ -2,4 +2,4 @@ activation
 methodEditorLeftBarClickActivation
 	<classAnnotation>
 	
-	^CmdTextLeftBarClickCommandActivation for: ClySourceCodeContext 
+	^CmdTextLeftBarClickActivation for: ClySourceCodeContext 
