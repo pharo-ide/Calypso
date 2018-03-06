@@ -1,6 +1,4 @@
 event handling
 triggerDoubleClickCommands
 
-	CmdDoubleClickActivation 
-		activateAllInContext: self createSelectionContext 
-		by: [:activator | ^activator executeCommand ]
+	CmdDoubleClickActivation executeCommandInContext: self createSelectionContext
