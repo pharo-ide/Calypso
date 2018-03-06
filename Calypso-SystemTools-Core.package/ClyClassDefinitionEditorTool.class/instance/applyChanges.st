@@ -5,7 +5,7 @@ applyChanges
 	newClass ifNil: [ ^false ].
 	
 	editingClass == newClass ifFalse: [ 
-		self removeFromBrowser.
-		browser selectClass: newClass instanceSide].
+		self removeFromBrowser].
+	browser selectClass: newClass.
 	^true
 	

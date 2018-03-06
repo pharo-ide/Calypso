@@ -1,6 +1,6 @@
 operations
 toggle
-	| formatter |
+	| formatter isDirty |
 	formatter := RBProgramNode formatterClass.
 	formatter formatAsYouReadPolicy
 		ifTrue: [ 
@@ -9,6 +9,6 @@ toggle
 				ifTrue: [ textMorph model cancelEdits ] ]
 		ifFalse: [ 
 			formatter formatAsYouReadPolicy: true.
-			textMorph model
-				formatSourceCodeInView;
-				clearUserEdits ]
+			isDirty := textMorph hasUnacceptedEdits.
+			textMorph model	formatSourceCodeInView.
+			isDirty ifFalse: [ textMorph model clearUserEdits ]]

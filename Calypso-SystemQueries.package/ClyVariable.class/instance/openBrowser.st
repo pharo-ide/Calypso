@@ -1,0 +1,4 @@
+operations
+openBrowser
+
+	definingClass browse

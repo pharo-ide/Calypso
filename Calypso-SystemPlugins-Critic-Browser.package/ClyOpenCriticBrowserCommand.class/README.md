@@ -1,0 +1,1 @@
+I am a command to open a critic browser on given set of packages

@@ -2,4 +2,4 @@ activation
 methodBrowserTableIconActivation
 	<classAnnotation>
 	
-	^ClyTableIconCommandActivation for: ClyMethod asCalypsoItemContext
+	^ClyTableIconCommandActivation priority: 900 for: ClyMethod asCalypsoItemContext

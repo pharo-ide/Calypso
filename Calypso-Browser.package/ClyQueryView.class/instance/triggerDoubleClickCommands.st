@@ -1,0 +1,4 @@
+event handling
+triggerDoubleClickCommands
+
+	CmdDoubleClickActivation executeCommandInContext: self createSelectionContext

@@ -1,5 +1,3 @@
 activation
-contextMenuOrder
-	<classAnnotationDependency>
-	
+contextMenuOrder	
 	^2

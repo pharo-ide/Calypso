@@ -1,0 +1,3 @@
+public
+selectedTextInterval
+	^tool selectedTextInterval

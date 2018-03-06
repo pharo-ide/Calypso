@@ -1,0 +1,3 @@
+building
+buildLeftSideBar
+	textMorph withTextSegmentIcons

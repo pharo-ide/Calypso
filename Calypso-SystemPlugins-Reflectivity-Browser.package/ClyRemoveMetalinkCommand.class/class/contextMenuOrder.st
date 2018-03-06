@@ -1,4 +1,0 @@
-activation
-contextMenuOrder
-
-	self subclassResponsibility
