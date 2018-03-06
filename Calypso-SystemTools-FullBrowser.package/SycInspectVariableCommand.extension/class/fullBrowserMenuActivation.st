@@ -2,5 +2,4 @@
 fullBrowserMenuActivation
 	<classAnnotation>
 	
-	^(CmdDoubleClickActivation for: ClyVariableContextOfFullBrowser)
-		priority: 10000
+	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyVariableContextOfFullBrowser 
