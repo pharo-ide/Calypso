@@ -1,6 +1,5 @@
 event handling
 selectionChanged
-
 	self isFilterChanged ifTrue: [ ^self selectionWasResetByFilter ].
 	
 	self changeStateBy: [ 
@@ -9,4 +8,6 @@ selectionChanged
 			browser 
 				perform: navigationSelector 
 				withEnoughArguments: {self selection}].
-	]
+	].
+
+	self triggerClickCommands.

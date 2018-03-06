@@ -2,4 +2,4 @@ building
 buildLeftSideBar
 	super buildLeftSideBar.
 
-	CmdTextLeftBarClickActivation enableIn: self leftSideBar withCommandsFrom: self
+	self leftSideBar enableMouseCommands: CmdTextLeftBarClickActivation withContextFrom: self

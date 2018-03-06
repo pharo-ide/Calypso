@@ -1,3 +1,3 @@
 accessing
 defaultMenuIconName
-	^#halt
+	^#smallDebug
