@@ -1,0 +1,4 @@
+operations
+openInspector
+
+	actualVariable inspect
