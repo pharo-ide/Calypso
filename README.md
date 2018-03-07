@@ -40,6 +40,12 @@ And to open browser evaluate:
 ```Smalltalk
 ClyFullBrowser open.
 ```
+### Pharo 6 installation on Windows
+To install Calypso properly on Windows check that Iceberg intergation is disabled (it is disabled by default):
+```Smalltalk
+Iceberg enableMetacelloIntegration: false
+```
+There are long package and methods names in Calypso (related to tests) which are the problem of FileTree format on Windows.
 
 ## Problems
 If you will find many processes hanging in the image it can be caused by some issue of critic plugin implementation. Some people report it in the past. It should be fixed now but there is always possibility that fix is not complete.
