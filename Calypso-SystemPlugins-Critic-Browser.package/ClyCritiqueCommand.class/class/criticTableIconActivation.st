@@ -2,4 +2,4 @@ activation
 criticTableIconActivation
 	<classAnnotation>
 	
-	^ClyTableIconCommandActivation for: ClyCriticContext
+	^ClyTableIconCommandActivation for: ReAbstractCritique asCalypsoItemContext 

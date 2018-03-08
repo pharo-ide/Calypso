@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 3/8/2018 13:33",
+	"super" : "ClyCritiqueCommand",
+	"category" : "Calypso-SystemPlugins-Critic-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyDebugBrokenCritiqueCommand",
+	"type" : "normal"
+}

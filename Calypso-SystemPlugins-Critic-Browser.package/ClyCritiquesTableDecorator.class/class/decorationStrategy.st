@@ -2,4 +2,4 @@ decoration
 decorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyCriticContext 
+	^ClyTableDecorationStrategy for: ReAbstractCritique asCalypsoItemContext 

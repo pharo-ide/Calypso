@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 3/8/2018 13:32",
+	"super" : "ClySimpleTag",
+	"category" : "Calypso-SystemPlugins-Critic-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyBrokenCritiqueTag",
+	"type" : "normal"
+}
