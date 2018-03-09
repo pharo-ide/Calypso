@@ -1,6 +1,7 @@
 testing
 shouldBeActivatedInContext: aBrowserContext
 	aBrowserContext isClassSelected ifFalse: [ ^false ].
+	
 	(aBrowserContext lastSelectedItem hasProperty: ClyTestResultProperty) ifFalse: [ ^false ].
 	
 	(aBrowserContext lastSelectedClass lookupSelector: #setUp) ifNil: [ ^false ].
