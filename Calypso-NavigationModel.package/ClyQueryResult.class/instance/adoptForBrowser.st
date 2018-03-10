@@ -1,4 +1,4 @@
 converting
 adoptForBrowser
 
-	^ClyQueryResultBrowserAdapter for: self
+	^ClyQueryResultBrowserAdapterOld for: self
