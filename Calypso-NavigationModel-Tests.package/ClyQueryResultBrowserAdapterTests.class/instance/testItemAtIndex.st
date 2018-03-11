@@ -1,5 +1,5 @@
 tests
-testGettingItemAtIndex
+testItemAtIndex
 
 	| actual |
 	self buildResultWith: #(#item1 #item2 #item3).

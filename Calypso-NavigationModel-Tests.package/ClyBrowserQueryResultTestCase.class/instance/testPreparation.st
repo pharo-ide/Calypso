@@ -8,4 +8,5 @@ testPreparation
 	self deny: newResult == queryResult.
 	self assert: newResult buildingQuery equals: (query withResult: queryResult rawResult).
 	self assert: newResult environment equals: environment.
+	self assert: newResult needsRebuild.
 	self assert: newResult isProtected.

@@ -1,5 +1,5 @@
 tests
-testGettingItemAtIndexShouldCacheIt
+testItemAtIndexShouldCacheIt
 
 	| actual actual2 |
 	self buildResultWith: #(#item1 #item2 #item3).

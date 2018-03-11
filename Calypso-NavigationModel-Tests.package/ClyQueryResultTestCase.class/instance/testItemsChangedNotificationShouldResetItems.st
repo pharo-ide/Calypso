@@ -7,4 +7,4 @@ testItemsChangedNotificationShouldResetItems
 	queryResult itemsChanged.
 	
 	self deny: queryResult isBuilt.
-	self assert: queryResult items isNil
+	self assert: queryResult itemBuffer isNil

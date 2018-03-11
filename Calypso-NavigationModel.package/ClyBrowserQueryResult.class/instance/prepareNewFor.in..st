@@ -4,4 +4,5 @@ prepareNewFor: aQuery in: aNavigationEnvironment
 		environment: aNavigationEnvironment;
 		buildingQuery: (aQuery withResult: rawResult);
 		rawResult: nil;
-		beProtected.
+		beProtected;
+		forceLazyRebuild
