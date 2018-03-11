@@ -1,8 +1,6 @@
 running
 buildResultWith: objects
 	
-	query := ClyQueryExampleReturningScopeBasis 
-		from: (ClyScopeExample ofAll: objects in: environment)
-		as: self createQueryResult.
-	
+	query := ClyConstantQuery returning: objects as: self createQueryResult.
+	query scope: (ClyScopeExample emptyIn: environment). 
 	queryResult := query execute
