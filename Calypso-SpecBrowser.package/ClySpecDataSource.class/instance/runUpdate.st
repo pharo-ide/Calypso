@@ -7,4 +7,4 @@ runUpdate
 	itemCursor updateItemCache.
 	self updateExpandingItems.
 	queryView itemsChangedIn: self.
-"	self tableRefresh"
+	self announceChanges
