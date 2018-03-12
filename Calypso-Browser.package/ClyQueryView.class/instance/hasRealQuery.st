@@ -1,4 +1,4 @@
 testing
 hasRealQuery
 
-	^self query ~~ ClyUnknownQuery instance
+	^(self query isKindOf: ClyUnknownQuery) not
