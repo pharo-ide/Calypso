@@ -1,3 +1,5 @@
 queries
 query: aQuery
-	^ClyUnknownQueryResult instance
+	^aQuery prepareNewResult 
+		fillWith: #();
+		yourself

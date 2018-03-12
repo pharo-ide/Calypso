@@ -1,4 +1,4 @@
 instance creation
 empty
 
-	^ClyCollapsedDataSource on: ClyUnknownQuery instance
+	^ClyCollapsedDataSource on: ClyUnknownQuery instance adoptedForBrowser
