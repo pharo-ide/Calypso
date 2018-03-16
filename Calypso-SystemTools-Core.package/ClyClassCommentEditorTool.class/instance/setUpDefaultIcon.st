@@ -1,9 +1,9 @@
 initialization
 setUpDefaultIcon
-	"There is the reason why this logic here instead of #defaultIconName.
-	Idea that analysing comment can be slow and it is important to do it during background tab building.
-	For example it is slow when browsing remote environment"
+	"Here we duplicate logic of #defaultIconName to directly ask class about comment.
+	This method is called during background tab building. 
+	So it does not really affect performance which is critical for remote scenario"
 	
-	editingClass hasComment ifTrue: [ ^ super setUpDefaultIcon ].
-	
-	containerTab icon: (self iconNamed: #uncommentedClass)
+	| iconName |
+	iconName := editingClass hasComment ifTrue: [ #commentsIcon ] ifFalse: [ #uncommentedClass ].
+	containerTab icon: (self iconNamed: iconName)

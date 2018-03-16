@@ -5,4 +5,4 @@ decorateBrowserItem: anItem ofClass: aClass
 	
 	aClass localSelectors ifNotEmpty: [ anItem markWithChildrenOf: ClyMethod].
 
-	aClass hasComment ifFalse: [ anItem markWith: ClyNotCommentedClassTag]
+	aClass hasComment ifFalse: [ anItem markWith: ClyNoCommentTag]

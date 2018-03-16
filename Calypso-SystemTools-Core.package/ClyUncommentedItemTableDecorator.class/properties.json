@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "DenisKudryashov 2/22/2018 15:35",
-	"super" : "ClyClassTableDecorator",
+	"super" : "ClyTableDecorator",
 	"category" : "Calypso-SystemTools-Core-TableDecorators",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyUncommentedClassTableDecorator",
+	"name" : "ClyUncommentedItemTableDecorator",
 	"type" : "normal"
 }

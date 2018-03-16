@@ -4,4 +4,4 @@ decorateMainTableCell: anItemCellMorph of: aDataSourceItem
 	super decorateMainTableCell: anItemCellMorph of: aDataSourceItem.
 	
 	noCommentWarn := anItemCellMorph addExtraIcon: #uncommentedClass.
-	noCommentWarn setBalloonText: 'Class has no comment!'
+	noCommentWarn setBalloonText: 'There is no comment!'
