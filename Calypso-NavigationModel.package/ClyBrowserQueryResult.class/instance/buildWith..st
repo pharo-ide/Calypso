@@ -4,6 +4,6 @@ buildWith: rawObjects
 	needsRebuild false value will prevent rebuilding when accessing items which were manually filled"
 	needsRebuild := false.
 	self initializeItems.
-	rawResult := rawResult prepareNewFor: buildingQuery in: environment.
+	rawResult := buildingQuery prepareNewResult.
 	rawResult fillWith: rawObjects.
-	self fillWith: rawObjects
+	self fillWith: rawResult items
