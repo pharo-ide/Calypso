@@ -6,4 +6,5 @@ buildWith: rawObjects
 	self initializeItems.
 	rawResult := buildingQuery prepareNewResult.
 	rawResult fillWith: rawObjects.
-	self fillWith: rawResult items
+	self fillWith: rawResult items.
+	self buildIndexes
