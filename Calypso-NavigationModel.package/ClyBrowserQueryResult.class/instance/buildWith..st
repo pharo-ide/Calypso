@@ -5,6 +5,6 @@ buildWith: rawObjects
 	needsRebuild := false.
 	self initializeItems.
 	rawResult := buildingQuery prepareNewResult.
-	rawResult fillWith: rawObjects.
+	rawResult buildWith: rawObjects.
 	self fillWith: rawResult items.
 	self buildIndexes
