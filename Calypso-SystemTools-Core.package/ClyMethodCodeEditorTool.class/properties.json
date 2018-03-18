@@ -1,13 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "ClyMethodEditorTool",
-	"category" : "Calypso-SystemTools-Core-Editors-Methods",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"editingMethod"
-	],
-	"name" : "ClyMethodCodeEditorTool",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "ClyMethodEditorTool",	"category" : "Calypso-SystemTools-Core-Editors-Methods",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"editingMethod"	],	"name" : "ClyMethodCodeEditorTool",	"type" : "normal"}

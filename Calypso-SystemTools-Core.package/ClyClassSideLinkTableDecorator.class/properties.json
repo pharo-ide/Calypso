@@ -1,11 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "ClyTableDecorator",
-	"category" : "Calypso-SystemTools-Core-TableDecorators",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyClassSideLinkTableDecorator",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "ClyTableDecorator",	"category" : "Calypso-SystemTools-Core-TableDecorators",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "ClyClassSideLinkTableDecorator",	"type" : "normal"}

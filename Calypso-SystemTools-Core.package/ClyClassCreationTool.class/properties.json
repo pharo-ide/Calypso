@@ -1,14 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "ClyTextEditorTool",
-	"category" : "Calypso-SystemTools-Core-Editors-Classes",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"package",
-		"classTag"
-	],
-	"name" : "ClyClassCreationTool",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "ClyTextEditorTool",	"category" : "Calypso-SystemTools-Core-Editors-Classes",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"package",		"classTag"	],	"name" : "ClyClassCreationTool",	"type" : "normal"}

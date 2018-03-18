@@ -1,13 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "CmdCommand",
-	"category" : "Calypso-SystemTools-Core-Editors-Methods",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"methodEditor"
-	],
-	"name" : "ClyMethodEditorCommand",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "CmdCommand",	"category" : "Calypso-SystemTools-Core-Editors-Methods",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"methodEditor"	],	"name" : "ClyMethodEditorCommand",	"type" : "normal"}

@@ -1,11 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "ClySystemBrowserContext",
-	"category" : "Calypso-SystemTools-Core-Contexts",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClySystemSearchDialogContext",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "ClySystemBrowserContext",	"category" : "Calypso-SystemTools-Core-Contexts",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "ClySystemSearchDialogContext",	"type" : "normal"}

@@ -1,13 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "ClyStatusBarItem",
-	"category" : "Calypso-SystemTools-Core-Editors-Methods",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"checkbox"
-	],
-	"name" : "ClyMethodExtensionSwitch",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "ClyStatusBarItem",	"category" : "Calypso-SystemTools-Core-Editors-Methods",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"checkbox"	],	"name" : "ClyMethodExtensionSwitch",	"type" : "normal"}

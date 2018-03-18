@@ -1,13 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "ClyTextMorphTool",
-	"category" : "Calypso-SystemTools-Core-Editors-Methods",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"checkbox"
-	],
-	"name" : "ClyFormatAsReadSwitch",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "ClyTextMorphTool",	"category" : "Calypso-SystemTools-Core-Editors-Methods",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"checkbox"	],	"name" : "ClyFormatAsReadSwitch",	"type" : "normal"}
