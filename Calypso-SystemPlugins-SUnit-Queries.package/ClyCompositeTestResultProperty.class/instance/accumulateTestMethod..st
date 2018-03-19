@@ -3,7 +3,7 @@ accumulateTestMethod: aMethod
 	| testSelector result |	
 	testSelector := aMethod selector.
 	aMethod methodClass withAllSubclassesDo: [ :concreteTestCase | 
-		concreteTestCase isAbstract ifFalse: [
+		(concreteTestCase isTestCase and: [concreteTestCase isAbstract not]) ifTrue: [
 			self accumulateTest: testSelector of: concreteTestCase.
 			
 			result := testCaseResults 

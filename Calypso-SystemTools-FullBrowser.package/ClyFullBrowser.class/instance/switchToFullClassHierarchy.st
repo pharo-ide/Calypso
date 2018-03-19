@@ -2,7 +2,7 @@ navigation
 switchToFullClassHierarchy
 	
 	| classScope |
-	classScope := self classSelection asItemsScope: ClyClassScope.
+	classScope := self classSelection asItemsScope: ClyInstanceSideScope.
 	
 	self 
 		switchClassViewTo: ClyHierarchicallySortedClasses new

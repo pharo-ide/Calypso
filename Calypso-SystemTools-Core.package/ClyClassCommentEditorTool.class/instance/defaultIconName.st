@@ -1,5 +1,5 @@
 initialization
 defaultIconName
-	^(context lastSelectedItem isMarkedWith: ClyNotCommentedClassTag)
+	^(context lastSelectedItem isMarkedWith: ClyNoCommentTag)
 		ifTrue: [ #uncommentedClass ]
 		ifFalse: [ #commentsIcon]

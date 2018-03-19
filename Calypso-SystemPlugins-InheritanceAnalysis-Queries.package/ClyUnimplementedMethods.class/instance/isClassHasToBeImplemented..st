@@ -1,6 +1,7 @@
 testing
 isClassHasToBeImplemented: aClass
-
+	(self doesClassDefinedAsAbstract: aClass) ifTrue: [ ^false].
+	
 	aClass allSuperclassesDo: [ :superclass | 
 		superclass == Object ifTrue: [ ^false ].
 		

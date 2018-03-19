@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "SpecTableDataSource",
+	"category" : "Calypso-SpecBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"query",
+		"itemCursor",
+		"depth",
+		"parentItem",
+		"lastFilteredDataSource",
+		"queryView",
+		"dirty",
+		"expandedItems"
+	],
+	"name" : "ClySpecDataSource",
+	"type" : "normal"
+}
