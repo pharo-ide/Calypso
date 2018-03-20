@@ -1,8 +1,7 @@
 initialization
 prepareNewFor: aQuery in: aNavigationEnvironment
-	^self copy 
-		environment: aNavigationEnvironment;
-		buildingQuery: (aQuery withResult: rawResult);
-		rawResult: nil;
-		beProtected;
-		forceLazyRebuild
+	| rawQuery |
+	rawQuery := self prepareRawQueryFrom: aQuery.
+	
+	^(super prepareNewFor: rawQuery in: aNavigationEnvironment)
+		rawResult: nil "To ensure that we will not use it before execution"
