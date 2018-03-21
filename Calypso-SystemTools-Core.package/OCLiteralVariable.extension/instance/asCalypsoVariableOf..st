@@ -4,4 +4,4 @@ asCalypsoVariableOf: declarationClass
 	Then it will be not needed and simplified"
 	self isGlobalVariable ifTrue: [ ^ClyGlobalVariable on: assoc ]. 
 	
-	^ClyClassVariable on: assoc definedIn: scope getClass
+	^ClyClassVariable on: assoc visibleFrom: scope getClass
