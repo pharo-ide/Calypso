@@ -1,4 +1,4 @@
-private
+protection
 protectItemsWhile: aBlock
 
 	^self protectAccessWhile: [ 

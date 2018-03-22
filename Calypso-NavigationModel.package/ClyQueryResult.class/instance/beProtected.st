@@ -1,3 +1,3 @@
-private
+protection
 beProtected
 	accessGuard := Mutex new

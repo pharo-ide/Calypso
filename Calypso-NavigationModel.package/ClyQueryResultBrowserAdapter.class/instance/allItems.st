@@ -1,4 +1,0 @@
-queries
-allItems
-
-	^self items
