@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyEnvironmentChanged",
+	"name" : "ClyQueryChanged",
 	"type" : "normal"
 }

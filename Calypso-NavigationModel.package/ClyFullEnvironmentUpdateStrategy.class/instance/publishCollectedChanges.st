@@ -1,4 +1,4 @@
 updating
 publishCollectedChanges
-	changes do: [ :queryResult | queryResult notifyChanges ].
+	changes do: [ :queryResult | queryResult publishChanges ].
 	changes removeAll

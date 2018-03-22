@@ -1,4 +1,4 @@
 updating
 announceChangesOf: aQueryResult
 
-	aQueryResult notifyChanges
+	aQueryResult publishChanges
