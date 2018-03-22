@@ -1,3 +1,4 @@
-accessing
+queries
 items
-	^ items
+
+	^ self protectItemsWhile: [ items]

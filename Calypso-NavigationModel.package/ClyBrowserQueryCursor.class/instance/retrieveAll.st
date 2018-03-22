@@ -1,4 +1,4 @@
 queries
 retrieveAll
 
-	^queryResult allItems
+	^queryResult items

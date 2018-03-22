@@ -1,7 +1,7 @@
 tests
 testItemsInitializationShouldNotResetExistingItems
 	
-	queryResult items: #(items).
+	queryResult itemBuffer: #(items).
 	queryResult initializeItems.
 	
 	self assert: queryResult items equals: #(items)

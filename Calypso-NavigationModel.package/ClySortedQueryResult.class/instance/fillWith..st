@@ -1,3 +1,5 @@
 building
-fillWith: objects 
-	items addAll: objects
+fillWith: resultObjects 
+	super fillWith: resultObjects.
+	
+	items sort: sortFunction

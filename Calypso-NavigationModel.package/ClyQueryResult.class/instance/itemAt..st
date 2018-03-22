@@ -1,3 +1,4 @@
-accessing
+queries
 itemAt: index
-	^items at: index
+
+	^self protectItemsWhile: [ items at: index ]

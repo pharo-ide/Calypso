@@ -1,4 +1,4 @@
 building
-fillWith: queriedObjects
+fillWith: resultObjects
 
-	items addAll: queriedObjects
+	items := resultObjects asArray

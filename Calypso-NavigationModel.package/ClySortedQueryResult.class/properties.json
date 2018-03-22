@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/1/2018 13:50",
-	"super" : "ClyQueryResult",
+	"super" : "ClyRawQueryResult",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],

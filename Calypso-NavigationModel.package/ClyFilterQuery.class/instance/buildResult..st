@@ -6,4 +6,4 @@ buildResult: aQueryResult
 	filteredItems := fullResult items 
 		select: [ :each | itemFilter matches: each ] 
 		thenCollect: [ :each | each adoptForNewCalypsoQuery].
-	aQueryResult items: filteredItems
+	aQueryResult itemBuffer: filteredItems

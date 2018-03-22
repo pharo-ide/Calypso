@@ -1,7 +1,7 @@
 tests
 testItemsChangedNotificationShouldNotResetExistingItems
 	
-	queryResult items: #(items).
+	queryResult itemBuffer: #(items).
 	
 	queryResult itemsChanged.
 	
