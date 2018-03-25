@@ -6,7 +6,7 @@ findItemsWith: actualObjects
 	| result foundIndex |
 	self protectItemsWhile: [ 
 		result := actualObjects collect: [ :eachObject |
-			foundIndex := rawResult items findFirst: [ :item | 
+			foundIndex := rawResult findFirstItemWhere: [ :item | 
 				item calypsoEnvironmentType checkCalypsoItem: item isEqualTo: eachObject ].
 			foundIndex > 0 
 				ifTrue: [ self convertRawItemAt: foundIndex]
