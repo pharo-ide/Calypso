@@ -2,15 +2,11 @@ queries
 findItemsWith: actualObjects
 	"it returnes browser items which represent actualObjects.
 	Result will be in same order as given actualObjects array.
-	If some object is absent in content then it will return nil in place of it.
-	All returned items will be resilved"
-	| result |
-	self protectItemsWhile: [
-		result := actualObjects collect: [ :eachObject |
-			items 
-				detect: [ :item | item representsObjectEqualTo: eachObject ] 
-				ifNone: nil].
-	
-		result select: #notNil thenDo: [ :each | 
-			each prepareIn: environment ].
-		^result]
+	If some object is absent in content then it will return nil in place of it"
+	| indexes |
+	^self protectItemsWhile: [
+		indexes := self findRawItems: actualObjects comparingBy: [ :existing :given | 
+			existing 	calypsoEnvironmentType checkCalypsoItem: existing isEqualTo: given].
+		
+		indexes collect: [ :each | 
+			each ifNotNil: [ self itemAt: each ] ]]
