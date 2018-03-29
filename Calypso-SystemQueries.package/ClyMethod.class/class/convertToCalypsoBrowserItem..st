@@ -2,6 +2,6 @@ item convertation
 convertToCalypsoBrowserItem: aMethod
 
 	| item |
-	item := ClyBrowserItem named: aMethod selector with: aMethod.
+	item := super convertToCalypsoBrowserItem: aMethod.
 	item addProperty: (ClyMethodDefinitionProperty of: aMethod).
 	^item
