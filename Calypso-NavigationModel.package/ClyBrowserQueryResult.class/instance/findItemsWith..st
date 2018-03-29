@@ -5,7 +5,7 @@ findItemsWith: actualObjects
 	If some object is absent in content then it will return nil in place of it"
 	| indexes |
 	^self protectItemsWhile: [
-		indexes := self findRawItems: actualObjects comparingBy: [ :existing :given | 
+		indexes := self find: actualObjects comparingToActualItemsBy: [ :existing :given | 
 			existing 	calypsoEnvironmentType checkCalypsoItem: existing isEqualTo: given].
 		
 		indexes collect: [ :each | 

@@ -1,6 +1,6 @@
 queries
-findRawItems: sampleObjects comparingBy: comparisonBloc
-	"It returns array of indexes where items were successfuly compared to given sampleObjects.
+find: sampleObjects comparingToActualItemsBy: comparisonBloc
+	"It returns array of indexes where actual items were successfuly compared to given sampleObjects.
 	Comparison is perform by given block which is evaluated with two arguments:
 		- first from sampleObjects array
 		- last from items.
@@ -10,7 +10,7 @@ findRawItems: sampleObjects comparingBy: comparisonBloc
 	self protectItemsWhile: [
 		rest := OrderedCollection withAll: sampleObjects.
 		foundIndexes := Array new: sampleObjects size.
-		items doWithIndex: [ :existing :index |
+		self actualItemsDo: [ :existing :index |
 			rest
 				detect: [ :sample | comparisonBloc value: sample value: existing]
 				ifFound: [ :sample | 
