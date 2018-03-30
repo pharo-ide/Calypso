@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 3/30/2018 17:14",
+	"super" : "Object",
+	"category" : "Calypso-SystemPlugins-Deprecation-Queries-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyDeprecatedClassExample",
+	"type" : "normal"
+}
