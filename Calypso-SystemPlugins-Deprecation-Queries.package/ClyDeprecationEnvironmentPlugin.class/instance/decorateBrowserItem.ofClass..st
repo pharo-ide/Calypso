@@ -1,5 +1,5 @@
 item decoration
 decorateBrowserItem: anItem ofClass: aClass
 
-	((aClass classSide includesLocalSelector: #isDeprecated) and: [aClass isDeprecated]) 
+	((aClass respondsTo: #isDeprecated) and: [aClass isDeprecated]) 
 		ifTrue: [ anItem markWith: ClyDeprecatedItemTag]
