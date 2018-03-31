@@ -1,9 +1,9 @@
 tests
 testFindItemsWithUnexistingObjects
 
-	self buildResultWith: #(#item1 #item2 #item3 #item4).
+	self simulateResultWith: #(#item1 #item2 #item3 #item4).
 	
-	items := queryResult findItemsWith: #(#item2 unexistingObject).
+	items := queryResult itemsWith: #(#item2 unexistingObject).
 	
 	self assert: items size equals: 2.
 	self assert: items first actualObject equals: #item2.

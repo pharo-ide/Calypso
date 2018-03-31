@@ -1,11 +1,11 @@
 queries
-findItemsSimilarTo: dataSourceItems
+itemsSimilarTo: dataSourceItems
 
 	| myItems childItems |
-	myItems := super findItemsSimilarTo: dataSourceItems.
+	myItems := super itemsSimilarTo: dataSourceItems.
 	myItems size == dataSourceItems size ifTrue: [ ^myItems ].
 	
 	childItems := expandedItems flatCollect: [ :each | 
-		each childrenDataSource findItemsSimilarTo: dataSourceItems].
+		each childrenDataSource itemsSimilarTo: dataSourceItems].
 	
 	^myItems, childItems

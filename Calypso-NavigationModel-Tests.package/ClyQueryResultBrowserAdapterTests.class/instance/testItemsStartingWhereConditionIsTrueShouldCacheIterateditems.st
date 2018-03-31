@@ -2,7 +2,7 @@ tests
 testItemsStartingWhereConditionIsTrueShouldCacheIterateditems
 
 	| iteratedItems |
-	self buildResultWith: #(#item1 #item2 #item3 #item4).
+	self simulateResultWith: #(#item1 #item2 #item3 #item4).
 	
 	iteratedItems := OrderedCollection new.
 	items := queryResult 

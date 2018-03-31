@@ -8,7 +8,7 @@ restoreCurrentSelection: currentSelection
 	self checkItemsOfCurrentSelection: currentSelection.
 	newItems := isSameAsCurrent 
 		ifTrue: [ currentSelection items]
-		ifFalse: [ currentSelection rootDataSource findItemsSimilarTo: items].
+		ifFalse: [ currentSelection rootDataSource itemsSimilarTo: items].
 		
 	currentSelectionIsChanged := (wasSameAsCurrent & isSameAsCurrent) not.
 	currentSelection 

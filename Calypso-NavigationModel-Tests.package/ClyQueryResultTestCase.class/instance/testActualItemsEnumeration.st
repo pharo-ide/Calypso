@@ -2,9 +2,8 @@ tests
 testActualItemsEnumeration
 
 	| enumerated |
-	queryResult itemBuffer: {
-		ClyBrowserItem with: #a. ClyBrowserItem with: #b. ClyBrowserItem with: #c}.
-
+	self simulateResultWith: #(#a #b #c).
+	
 	enumerated := OrderedCollection new.
 	queryResult actualItemsDo: [:each :index | enumerated add: each -> index] .
 	

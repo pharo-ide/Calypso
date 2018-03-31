@@ -1,9 +1,9 @@
 tests
-testFindItemsSimilarToOtherItemsWhichBasedOnExistingObjects
+testFindItemsSimilarToOtherItemsWhichBasedOnSimilarObjects
 
-	self buildResultWith: #(#item1 #item2 #item3 #item4).
+	self simulateResultWith: #(#item1 'item2' #item3 #item4).
 	
-	items := queryResult findItemsSimilarTo: {#item2 asCalypsoBrowserItem}.
+	items := queryResult itemsSimilarTo: {'item2' copy asCalypsoBrowserItem}.
 	
 	self assert: items size equals: 1.
 	self assert: items first == (queryResult itemAt: 2).

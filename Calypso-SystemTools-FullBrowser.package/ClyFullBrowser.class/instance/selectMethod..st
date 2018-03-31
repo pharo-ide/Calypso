@@ -3,7 +3,7 @@ selectMethod: aMethod
 
 	| foundItems |
 	self changeStateBy: [
-		foundItems := methodView findItemsWith: { aMethod }.
+		foundItems := methodView itemsWith: { aMethod }.
 		foundItems ifNotEmpty: [ ^self methodSelection selectItems: foundItems ].
 	
 		self selectClass: aMethod origin.

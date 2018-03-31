@@ -3,7 +3,7 @@ selectClass: aClass
 	| foundItems classDefinition |
 	self changeStateBy: [ 
 		self switchToMetaLevelScope: aClass metaLevelScope.	
-		foundItems := classView findItemsWith: { aClass instanceSide }.
+		foundItems := classView itemsWith: { aClass instanceSide }.
 		foundItems ifNotEmpty: [ 
 			"we want ensure that selected package is the package of found class.
 			If it is not then we will select required package"

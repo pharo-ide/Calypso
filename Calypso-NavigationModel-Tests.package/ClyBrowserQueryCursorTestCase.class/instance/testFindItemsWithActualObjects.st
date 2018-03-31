@@ -2,7 +2,7 @@ tests
 testFindItemsWithActualObjects
 	
 	| found |
-	found := cursor findItemsWith: {#absentItem1. Array. #absentItem2}.
+	found := cursor itemsWith: {#absentItem1. Array. #absentItem2}.
 	
 	self assert: found size equals: 3.
 	self assert: found first equals: nil.

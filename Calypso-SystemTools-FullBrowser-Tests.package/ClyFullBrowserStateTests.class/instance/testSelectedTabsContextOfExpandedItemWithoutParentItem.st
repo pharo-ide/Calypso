@@ -3,7 +3,7 @@ testSelectedTabsContextOfExpandedItemWithoutParentItem
 
 	| tab contextItem packageItem |
 	packageItem := browser packageView 
-		findItemsWith: { ClyClass7WithTag1FromP5 package}. "P5WithTags package which can be expanded".
+		itemsWith: { ClyClass7WithTag1FromP5 package}. "P5WithTags package which can be expanded".
 	packageItem first expand.
 	browser packageView selection 
 		selectItems: {packageItem first childrenDataSource elementAt: 1}. "some class group"

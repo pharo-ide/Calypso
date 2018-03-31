@@ -1,3 +1,3 @@
 queries
-findItemsWith: aCollection 
+itemsWith: aCollection 
 	^Array new: aCollection size withAll: nil

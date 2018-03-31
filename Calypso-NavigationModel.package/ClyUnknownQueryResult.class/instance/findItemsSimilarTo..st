@@ -1,3 +1,0 @@
-queries
-findItemsSimilarTo: sampleEnvironmentItems
-	^#()

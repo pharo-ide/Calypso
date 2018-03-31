@@ -1,5 +1,5 @@
 queries
-findItemsWith: actualObjects
+itemsWith: actualObjects
 	"it returns browser items which represent actualObjects.
 	Result will be in same order as given actualObjects array.
 	If some object is absent then it will return nil in place of it"

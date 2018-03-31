@@ -2,7 +2,7 @@ tests
 testItemAtIndex
 
 	| actual |
-	self buildResultWith: #(#item1 #item2 #item3).
+	self simulateResultWith: #(#item1 #item2 #item3).
 	
 	actual := queryResult itemAt: 2.
 	

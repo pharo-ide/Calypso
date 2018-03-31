@@ -12,7 +12,7 @@ find: sampleObjects comparingToActualItemsBy: comparisonBloc
 		foundIndexes := Array new: sampleObjects size.
 		self actualItemsDo: [ :existing :index |
 			rest
-				detect: [ :sample | comparisonBloc value: sample value: existing]
+				detect: [ :sample | comparisonBloc value: existing value: sample]
 				ifFound: [ :sample | 
 					foundIndexes at: (sampleObjects identityIndexOf: sample) put: index. 
 					rest remove: sample.

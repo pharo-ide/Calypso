@@ -1,7 +1,7 @@
 tests
 testItemsStartingAtIndex
 
-	self buildResultWith: #(#item1 #item2 #item3 #item4).
+	self simulateResultWith: #(#item1 #item2 #item3 #item4).
 	
 	items := queryResult itemsStartingAt: 2 count: 2.
 	

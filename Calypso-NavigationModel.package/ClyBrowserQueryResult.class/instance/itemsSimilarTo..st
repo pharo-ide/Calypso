@@ -1,5 +1,5 @@
 queries
-findItemsSimilarTo: sampleBrowserItems
+itemsSimilarTo: sampleBrowserItems
 	
 	| indexes |
 	^self protectItemsWhile: [

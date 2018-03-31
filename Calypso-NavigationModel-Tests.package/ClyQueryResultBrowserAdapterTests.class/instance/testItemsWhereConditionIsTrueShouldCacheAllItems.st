@@ -2,7 +2,7 @@ tests
 testItemsWhereConditionIsTrueShouldCacheAllItems
 
 	| iteratedItems |
-	self buildResultWith: #(#item1 #item2 #item3).
+	self simulateResultWith: #(#item1 #item2 #item3).
 	
 	iteratedItems := OrderedCollection new.
 	queryResult itemsWhere: [:each | iteratedItems add: each. each actualObject = #item2].

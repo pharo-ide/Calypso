@@ -1,11 +1,11 @@
 queries
-findItemsWith: actualObjects
+itemsWith: actualObjects
 
 	| myItems childItems |
-	myItems := super findItemsWith: actualObjects.
+	myItems := super itemsWith: actualObjects.
 	myItems size == actualObjects size ifTrue: [ ^myItems ].
 	
 	childItems := expandedItems flatCollect: [ :each | 
-		each childrenDataSource findItemsWith: actualObjects].
+		each childrenDataSource itemsWith: actualObjects].
 	
 	^myItems, childItems
