@@ -2,6 +2,7 @@ tests
 testOpeningBrowserCursor
 	
 	| itemObserver |
+	queryResult rebuild.
 	itemObserver := ClyItemObserverExample new.
 	cursor := queryResult openBrowserCursorFor: itemObserver.
 	
