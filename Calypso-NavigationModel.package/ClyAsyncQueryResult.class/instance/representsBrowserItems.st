@@ -1,0 +1,4 @@
+testing
+representsBrowserItems
+
+	^buildingQuery retrievesBrowserItems
