@@ -5,4 +5,4 @@ testFindActualItemsShouldNotGenerateBrowserItems
 	
 	queryResult itemsWith: #(#someItem).
 	
-	self assert: queryResult itemBuffer equals: {nil. nil}
+	self assert: queryResult itemBuffer equals: #(nil nil)

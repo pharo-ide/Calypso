@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowserItemCursorTests",
+	"super" : "ClyCursorOverRawResultTests",
 	"category" : "Calypso-NavigationModel-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyAsyncBrowserQueryCursorTests",
+	"name" : "ClyCursorOverAsyncRawResultTests",
 	"type" : "normal"
 }

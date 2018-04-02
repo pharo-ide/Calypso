@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyRawItemCursorTests",
+	"name" : "ClyCursorOverRawResultTests",
 	"type" : "normal"
 }

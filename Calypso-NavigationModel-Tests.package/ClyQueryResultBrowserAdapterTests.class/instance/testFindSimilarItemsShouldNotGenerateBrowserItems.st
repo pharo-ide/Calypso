@@ -5,4 +5,4 @@ testFindSimilarItemsShouldNotGenerateBrowserItems
 	
 	queryResult itemsSimilarTo: {#someItem asCalypsoBrowserItem}.
 	
-	self assert: queryResult itemBuffer equals: {nil. nil}
+	self assert: queryResult itemBuffer equals: #(nil nil)

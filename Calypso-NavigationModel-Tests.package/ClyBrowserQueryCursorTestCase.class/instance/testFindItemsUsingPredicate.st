@@ -7,4 +7,4 @@ testFindItemsUsingPredicate
 	self assert: allItems size equals: 1.
 	self assert: allItems first actualObject equals: Array.
 	self assert: allItems first isPrepared.
-	self assert: allItems first position equals: (self rawResultItems indexOf: Array).
+	self assert: allItems first position equals: (queryResult actualItems indexOf: Array).

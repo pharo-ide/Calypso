@@ -5,4 +5,4 @@ testActualItemsEnumerationShouldNotGenerateBrowserItems
 	
 	queryResult actualItemsDo: [:each :index | ] .
 	
-	self assert: queryResult itemBuffer equals: { nil. nil. nil }
+	self assert: queryResult itemBuffer equals: #(nil nil nil)
