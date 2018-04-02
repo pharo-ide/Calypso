@@ -1,4 +1,4 @@
-running
+tests
 testPreparation
 	| newQuery newResult |
 	newQuery := self createQuery.

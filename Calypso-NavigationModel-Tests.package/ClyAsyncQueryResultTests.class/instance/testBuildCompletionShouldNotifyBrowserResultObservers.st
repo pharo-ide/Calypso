@@ -1,9 +1,9 @@
 tests
-testBuildCompletionShouldNotifyItemObservers
+testBuildCompletionShouldNotifyBrowserResultObservers
 
-	| observer cursor |
+	| observer |
 	observer := ClyItemObserverExample new.
-	cursor := queryResult openBrowserCursorFor: observer.
+	queryResult subscribe: observer.
 
 	queryResult rebuild.
 	query passExecution.

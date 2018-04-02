@@ -5,5 +5,5 @@ testItemsChangedNotificationShouldNotResetExistingItems
 	
 	queryResult itemsChanged.
 	
-	self assert: queryResult items equals: #(items).
+	self assert: queryResult itemBuffer equals: #(items).
 	self assert: queryResult needsRebuild

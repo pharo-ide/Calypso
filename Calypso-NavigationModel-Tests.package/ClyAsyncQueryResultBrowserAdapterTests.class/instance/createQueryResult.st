@@ -1,4 +1,4 @@
 running
 createQueryResult
 
-	^ClyAsyncQueryResultBrowserAdapter on: ClyAsyncQueryResult new
+	^ClyAsyncQueryResultBrowserAdapter on: ClySemiAsyncQueryResult new
