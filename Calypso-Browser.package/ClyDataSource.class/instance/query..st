@@ -1,3 +1,3 @@
 accessing
-query: anObject
-	query := anObject
+query: aQuery
+	query := aQuery adoptedForBrowser 

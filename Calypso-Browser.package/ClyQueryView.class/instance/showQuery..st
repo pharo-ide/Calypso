@@ -3,6 +3,6 @@ showQuery: aQuery
 
 	| dataSource |
 	self initiateUIChangeBy: [ 
-		dataSource := ClyCollapsedDataSource on: aQuery adoptedForBrowser.
+		dataSource := ClyCollapsedDataSource on: aQuery.
 		self dataSource: dataSource.
 		self ensureSelectedItemIfNeeded].
