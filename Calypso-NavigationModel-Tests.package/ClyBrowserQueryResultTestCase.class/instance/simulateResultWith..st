@@ -4,4 +4,6 @@ simulateResultWith: actualItems
 	| browserItems |
 	browserItems := actualItems collect: [:each | ClyBrowserItem with: each].
 	
-	super simulateResultWith: browserItems
+	super simulateResultWith: browserItems.
+	
+	queryResult buildIndexes.

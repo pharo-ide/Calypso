@@ -1,8 +1,8 @@
 building items
 buildItemsFrom: classes
 
-	| classesHierarchy |
-	classesHierarchy := self new.
-	classesHierarchy itemBuffer: (OrderedCollection new: classes size).
-	classesHierarchy fillWith: classes.
-	^classesHierarchy items
+	| result |
+	result := self new.
+	result itemBuffer: (OrderedCollection new: classes size).
+	result fillWith: classes.
+	^result items
