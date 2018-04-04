@@ -5,7 +5,10 @@ restoreSelectedTools: selectedTools
 	mainTool := self selectMainTool.
 	
 	extraTools := selectedTools reject: [ :each | each class = mainTool class ].
-	extraTools size = selectedTools size ifTrue: [ extraTools := #() ]. "if main tool not existed before then we reset previously selected extra tools"
+	extraTools size = selectedTools size 
+		ifTrue: [ extraTools := #() ] "if main tool not existed before then we reset previously selected extra tools"
+		ifFalse: [ mainTool isExtraSelectionRequested 
+			ifTrue: [ extraTools add: mainTool ] "To allow multiple selected tabs by cmd+click on table"].
 	(tools copyWithout: mainTool) do: [ :currentTool | 
 		"Generally if previously selected extra tab is found in new tools then it should be selected.
 		Other tools should be deselected"
