@@ -5,6 +5,10 @@ isExtraSelectionRequested
 	And this method allow tab manager to keep current tool selected in that case.
 	In addition tab manager will force all similar tools (of same class) to be selected.
 	So cmd+click on method pane leads to multiple methods selected in the table and in the tabs"
-	
-	"Normally it should be #meta key pressed. But we don't have it"
-	^Sensor commandKeyPressed or: [ Sensor controlKeyPressed ]
+
+	"Following mouse logic ensures that we are under condition when mouseDown+cmd was produced.
+	(it should be simple #meta modifier. But we don't have it"
+	| lastEvent |
+	lastEvent := ActiveHand lastEvent.
+	^ lastEvent isMouse & lastEvent isMouseDown 
+		and: [Sensor commandKeyPressed or: [ Sensor controlKeyPressed ]]
