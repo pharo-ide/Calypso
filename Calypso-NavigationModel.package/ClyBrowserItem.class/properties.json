@@ -9,10 +9,7 @@
 		"position",
 		"name",
 		"depth",
-		"properties",
-		"actualObject",
-		"type",
-		"isPrepared"
+		"properties"
 	],
 	"name" : "ClyBrowserItem",
 	"type" : "normal"

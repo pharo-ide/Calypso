@@ -1,4 +1,4 @@
 accessing
 definingPackage: aPackage
 
-	definingPackageItem := ClyBrowserItem named: aPackage name with: aPackage
+	definingPackageItem := ClyRealBrowserItem named: aPackage name with: aPackage

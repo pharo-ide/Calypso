@@ -1,6 +1,6 @@
 *Calypso-NavigationModel
 convertToCalypsoBrowserItem: anObject
 
-	^ClyBrowserItem 
+	^ClyRealBrowserItem 
 		named: (self defaultTitleForCalypsoItem: anObject)
 		with: anObject

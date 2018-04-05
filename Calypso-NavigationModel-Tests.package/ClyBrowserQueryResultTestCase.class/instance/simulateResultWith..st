@@ -2,7 +2,7 @@ running
 simulateResultWith: actualItems
 
 	| browserItems |
-	browserItems := actualItems collect: [:each | ClyBrowserItem with: each].
+	browserItems := actualItems collect: [:each | each asCalypsoBrowserItem].
 	
 	super simulateResultWith: browserItems.
 	

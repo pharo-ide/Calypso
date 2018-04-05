@@ -1,4 +1,4 @@
 testing
 isSameAs: anotherBrowserItem
 
-	self subclassResponsibility 
+	^self type = anotherBrowserItem type

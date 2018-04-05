@@ -1,13 +1,15 @@
 {
-	"commentStamp" : "DenisKudryashov 1/17/2018 17:32",
+	"commentStamp" : "",
 	"super" : "ClyBrowserItem",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"priority"
+		"actualObject",
+		"type",
+		"isPrepared"
 	],
-	"name" : "ClyItemGroup",
+	"name" : "ClyRealBrowserItem",
 	"type" : "normal"
 }

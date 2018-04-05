@@ -1,7 +1,7 @@
 testing
 matches: aBrowserItem
 	| actualObject |
-	actualObject := aBrowserItem class = ClyBrowserItem 
+	actualObject := (aBrowserItem isKindOf: ClyBrowserItem) 
 		ifTrue: [ aBrowserItem actualObject] ifFalse: [ aBrowserItem ].
 		
 	(pattern value beginsWith: '[') ifTrue: [ 

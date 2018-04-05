@@ -1,3 +1,2 @@
 decoration
 prepareIn: aNavigationEnvironment
-	self subclassResponsibility 

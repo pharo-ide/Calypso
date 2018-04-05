@@ -1,3 +1,3 @@
 testing
 representsItemOfType: aClass
-	^type isCalypsoItemType: aClass
+	^self type isCalypsoItemType: aClass

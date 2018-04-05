@@ -1,3 +1,3 @@
 accessing
 actualObject
-	^actualObject
+	self subclassResponsibility 

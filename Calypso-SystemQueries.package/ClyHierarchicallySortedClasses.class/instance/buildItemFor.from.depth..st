@@ -2,7 +2,7 @@ building
 buildItemFor: aClass from: aHierarchyMap depth: currentDepth
 
 	| item childDepth children subTreeSize childItem |
-	item := ClyBrowserItem named: aClass name with: aClass. 
+	item := ClyRealBrowserItem named: aClass name with: aClass. 
 	item depth: currentDepth.
 	items add: item.
 	childDepth := currentDepth + 1.

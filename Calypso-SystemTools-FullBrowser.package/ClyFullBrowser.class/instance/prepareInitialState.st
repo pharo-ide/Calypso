@@ -1,6 +1,7 @@
 initialization
 prepareInitialState
 
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: navigationEnvironment).
-	
+	methodGroupQuery := ClyAllClasses 
+		from: (metaLevelScope emptyIn: navigationEnvironment)
+		as: ClyGroupedClassMethods new.
 	self switchToPackages

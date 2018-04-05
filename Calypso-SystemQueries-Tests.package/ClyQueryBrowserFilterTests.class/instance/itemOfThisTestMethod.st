@@ -1,3 +1,3 @@
 helpers
 itemOfThisTestMethod
-	^ClyBrowserItem with: self class >> testSelector
+	^ClyRealBrowserItem with: self class >> testSelector

@@ -1,4 +1,4 @@
 testing
 isEqualTo: anotherBrowserItem
 
-	self subclassResponsibility 
+	^self type = anotherBrowserItem type

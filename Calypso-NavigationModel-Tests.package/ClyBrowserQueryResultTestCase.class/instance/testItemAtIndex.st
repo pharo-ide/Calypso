@@ -6,6 +6,6 @@ testItemAtIndex
 	
 	actual := queryResult itemAt: 2.
 	
-	self assert: actual class equals: ClyBrowserItem.
+	self assert: (actual isKindOf: ClyBrowserItem).
 	self assert: actual actualObject equals: #item2.
 	self assert: actual position equals: 2.

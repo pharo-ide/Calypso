@@ -1,4 +1,4 @@
 accessing
 definingClass: aClass
 
-	definingClassItem := ClyBrowserItem named: aClass name with: aClass
+	definingClassItem := ClyRealBrowserItem named: aClass name with: aClass

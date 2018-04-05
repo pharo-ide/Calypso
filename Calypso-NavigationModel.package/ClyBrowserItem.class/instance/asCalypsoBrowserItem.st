@@ -1,3 +1,3 @@
-preparation
+decoration
 asCalypsoBrowserItem
 	^self
