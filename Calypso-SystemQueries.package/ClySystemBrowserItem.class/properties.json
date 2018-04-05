@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyRealBrowserItem",
+	"category" : "Calypso-SystemQueries-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"definingPackage",
+		"definingClass"
+	],
+	"name" : "ClySystemBrowserItem",
+	"type" : "normal"
+}
