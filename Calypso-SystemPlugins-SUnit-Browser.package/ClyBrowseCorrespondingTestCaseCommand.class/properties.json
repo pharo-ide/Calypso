@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 4/6/2018 19:27",
+	"super" : "SycClassCommand",
+	"category" : "Calypso-SystemPlugins-SUnit-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser"
+	],
+	"name" : "ClyBrowseCorrespondingTestCaseCommand",
+	"type" : "normal"
+}

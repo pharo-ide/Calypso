@@ -1,0 +1,1 @@
+I am a command that opens a new browser on the test class corresponding to the selected class.
