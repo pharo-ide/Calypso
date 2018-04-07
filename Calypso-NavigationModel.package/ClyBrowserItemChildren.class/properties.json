@@ -1,17 +1,14 @@
 {
-	"commentStamp" : "DenisKudryashov 1/17/2018 12:08",
+	"commentStamp" : "",
 	"super" : "Object",
 	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"position",
 		"name",
-		"depth",
-		"children",
-		"properties"
+		"query"
 	],
-	"name" : "ClyBrowserItem",
+	"name" : "ClyBrowserItemChildren",
 	"type" : "normal"
 }
