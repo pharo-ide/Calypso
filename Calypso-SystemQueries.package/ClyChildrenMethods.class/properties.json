@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyBrowserItemChildren",
+	"category" : "Calypso-SystemQueries-Results",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyChildrenMethods",
+	"type" : "normal"
+}
