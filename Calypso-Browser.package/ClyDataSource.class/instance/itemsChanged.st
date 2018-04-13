@@ -13,4 +13,4 @@ itemsChanged
 	because dirty flag is reset during processing (look at #runUpdate)"
 	dirty ifTrue: [ ^self ].
 	dirty := true.
-	[UIManager default defer: [self runUpdate]] forkAt: Processor activePriority - 1
+	self scheduleUpdate

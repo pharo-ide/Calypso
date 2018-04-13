@@ -2,4 +2,4 @@ controlling
 register: aDataSource
 
 	updateQueue nextPut: aDataSource.
-	self activate
+	self ensureRunning

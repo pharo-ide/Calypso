@@ -41,7 +41,8 @@ In case of the event I update my children structure and refresh table:
 - itemsChanged
 Update is performed in special logic to prevent multiple updates during complex system changes.
 First I check if I am already dirty. In that case I do nothing.
-Otherwise I mark myself as dirty and defer actual update to next UI step. So if complex system change is initiated from UI operation (which is common scenario) I will be updated only when full operation will be finished. And it will be always single update independently how many changes operation produces with the system. 
+Otherwise I mark myself as dirty and defer actual update using UpdateScheduler which performs update in low priority process when there is a time. So if complex system change is initiated from UI operation (which is common scenario) I will be updated only when full operation will be finished. And it will be always single update independently how many changes operation produces with the system. 
+For details look at ClyDataSourceUpdateScheduler comments.
 
 Internal Representation and Key Implementation Points.
 
