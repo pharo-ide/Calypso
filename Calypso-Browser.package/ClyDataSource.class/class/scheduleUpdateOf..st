@@ -1,4 +1,4 @@
-as yet unclassified
+scheduling updates
 scheduleUpdateOf: aDataSource
 
 	UpdateScheduler ifNil: [ UpdateScheduler := ClyDataSourceUpdateScheduler new ].
