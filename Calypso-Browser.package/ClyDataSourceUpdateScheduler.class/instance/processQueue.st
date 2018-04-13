@@ -1,7 +1,9 @@
 controlling
 processQueue
 
+	| available next |
 	[
-		updateQueue next in: [:next | 
-			UIManager default defer: [next runUpdate] ]
+		available := OrderedCollection with: updateQueue next.
+		[ next := updateQueue nextOrNil ] whileNotNil: [ available add: next ].
+		self runUpdateFor: available.	
 	] repeat
