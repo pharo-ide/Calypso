@@ -4,7 +4,9 @@
 	"category" : "Calypso-Browser-DataSource",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"UpdateScheduler"
+	],
 	"instvars" : [
 		"query",
 		"itemCursor",

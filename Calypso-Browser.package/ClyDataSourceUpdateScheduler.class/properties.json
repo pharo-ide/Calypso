@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Browser-DataSource",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"updateQueue",
+		"process"
+	],
+	"name" : "ClyDataSourceUpdateScheduler",
+	"type" : "normal"
+}
