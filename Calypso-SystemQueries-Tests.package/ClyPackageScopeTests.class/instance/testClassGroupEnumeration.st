@@ -7,10 +7,10 @@ testClassGroupEnumeration
 	
 	self
 		assert: (result collect: #class as: Set)
-		equals: {ClyNoTagClassGroup. ClyTaggedClassGroup. ClyClassGroup} asSet.
+		equals: {ClyNoTagClassGroup. ClyClassTagItem. ClyClassGroup} asSet.
 	self
 		assert: 
 			(result
-				select: [ :each | each class = ClyTaggedClassGroup ]
+				select: [ :each | each class = ClyClassTagItem ]
 				thenCollect: #tag) sorted asArray
 		equals: ClyClass7WithTag1FromP5 package tagsForClasses sorted asArray

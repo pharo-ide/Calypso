@@ -5,7 +5,7 @@ testFillingWithSingleInstVar
 	queryResult fillWith: { ClyInstanceVariable named: #instVar definedIn: ClyClass2FromP1 }.
 	
 	self assertItems: {ClyAllMethodGroup. 0. 
-		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1}.
+		ClyVariableGroupItem. 0. ClyVariableMethodGroup. 1}.
 	classVarGroup := items last actualObject.
 	self assert: classVarGroup methodQuery class equals: ClyVariableReferences.
 	self 

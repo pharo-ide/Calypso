@@ -7,6 +7,6 @@ testFillingWithThreeClasVarsOfSuperclassAndSubclass
 		ClyClassVariable named: #ClassVar2 definedIn: ClyClass2FromP1}.
 	
 	self assertItems: {
-		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1.
-		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1}.
+		ClyVariableGroupItem. 0. ClyVariableMethodGroup. 1. ClyVariableMethodGroup. 1.
+		ClyVariableGroupItem. 0. ClyVariableMethodGroup. 1}.
 	self assertVars: #(#ClassVar1 #ClassVar2 #SubclassClassVar).

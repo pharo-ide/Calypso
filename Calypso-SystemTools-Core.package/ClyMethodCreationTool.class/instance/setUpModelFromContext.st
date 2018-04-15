@@ -6,7 +6,7 @@ setUpModelFromContext
 	methodClass := context selectedClassSide.
 	context isMethodGroupSelected ifFalse: [ ^self].
 	selectedGroup := context lastSelectedMethodGroup.
-	(selectedGroup isKindOf: ClyExternalPackageMethodGroup) ifTrue: [ 
+	(selectedGroup isKindOf: ClyExtendingPackageItem) ifTrue: [ 
 		^extendingPackage := selectedGroup package].
-	(selectedGroup isKindOf: ClyTaggedMethodGroup) ifTrue: [ 
+	(selectedGroup isKindOf: ClyMethodTagItem) ifTrue: [ 
 		^methodTags := {selectedGroup tag}]

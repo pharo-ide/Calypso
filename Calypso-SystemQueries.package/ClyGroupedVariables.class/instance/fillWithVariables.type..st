@@ -6,7 +6,7 @@ fillWithVariables: varsPerClass type: varTypeClass
 	classMap := hierarchy buildFrom: varsPerClass keys.
 	classMap doInOrder: [ :eachClass |
 		vars := varsPerClass at: eachClass.
-		declarationGroup := ClyVarDefinitionMethodGroup
+		declarationGroup := ClyVariableGroupItem
 			withMethodsFrom: methodQueryScope 
 			referencedAny: varTypeClass definedIn: eachClass.
 		items add: declarationGroup asCalypsoBrowserItem.

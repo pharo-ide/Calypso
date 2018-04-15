@@ -7,9 +7,9 @@ testMethodGroupsEnumeration
 	
 	self
 		assert: (result collect: #class as: Set)
-		equals: {ClyAllMethodGroup. ClyTaggedMethodGroup} asSet.
+		equals: {ClyAllMethodGroup. ClyMethodTagItem} asSet.
 	self
 		assert: (result
-				select: [ :each | each class = ClyTaggedMethodGroup ]
+				select: [ :each | each class = ClyMethodTagItem ]
 				thenCollect: #tag) sorted asArray
 		equals: ClyClass1FromP1 tagsForMethods sorted asArray

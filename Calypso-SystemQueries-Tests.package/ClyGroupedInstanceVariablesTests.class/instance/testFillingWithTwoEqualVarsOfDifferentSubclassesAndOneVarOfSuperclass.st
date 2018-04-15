@@ -7,7 +7,7 @@ testFillingWithTwoEqualVarsOfDifferentSubclassesAndOneVarOfSuperclass
 		ClyInstanceVariable named: #subclassSameVar definedIn: ClySubclassN1OfClass1FromP1}.
 	
 	self assertItems: {ClyAllMethodGroup. 0. 
-		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1.
-		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1.
-		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1}.
+		ClyVariableGroupItem. 0. ClyVariableMethodGroup. 1.
+		ClyVariableGroupItem. 0. ClyVariableMethodGroup. 1.
+		ClyVariableGroupItem. 0. ClyVariableMethodGroup. 1}.
 	self assertVars: #(#instanceSideVar2 #subclassSameVar #subclassSameVar).

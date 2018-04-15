@@ -2,4 +2,4 @@ decoration
 methodGroupDecorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyTaggedMethodGroup asCalypsoItemContext
+	^ClyTableDecorationStrategy for: ClyMethodTagItem asCalypsoItemContext

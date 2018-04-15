@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "DenisKudryashov 2/13/2017 11:21",
-	"super" : "ClyMethodGroup",
+	"commentStamp" : "DenisKudryashov 2/13/2017 12:21",
+	"super" : "ClyRealBrowserItem",
 	"category" : "Calypso-SystemQueries-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyTaggedMethodGroup",
+	"name" : "ClyExtendingPackageItem",
 	"type" : "normal"
 }

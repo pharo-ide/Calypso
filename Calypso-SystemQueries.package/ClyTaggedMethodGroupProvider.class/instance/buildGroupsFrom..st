@@ -7,6 +7,6 @@ buildGroupsFrom: aClassScope
 	aClassScope classesDo: [ :eachClass |
 		eachClass tagsForMethods do: [:eachTag | 
 			groups at: eachTag ifAbsentPut: [ 
-				ClyTaggedMethodGroup withMethodsFrom: aClassScope taggedBy: eachTag]]].
+				ClyMethodTagItem withMethodsFrom: aClassScope taggedBy: eachTag]]].
 
 	^groups values
