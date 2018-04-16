@@ -1,3 +1,3 @@
 testing
 belongsToCurrentBrowserContext
-	^browser isClassSelected: methodClass
+	^browser isClassSelected: methodClass instanceSide

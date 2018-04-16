@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 4/16/2018 16:01",
+	"super" : "ClyProperty",
+	"category" : "Calypso-SystemPlugins-SUnit-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"coveringTestCase"
+	],
+	"name" : "ClyTestedClassProperty",
+	"type" : "normal"
+}
