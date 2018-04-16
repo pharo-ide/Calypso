@@ -3,7 +3,7 @@ addMissingGroupsOn: methodGroups inScope: aClassScope
 	
 	aClassScope classesDo: [ :each | each tagsForMethods do: [ :eachTag |	
 		methodGroups at: eachTag ifAbsentPut: [
-			ClyMethodTagItem withMethodsFrom: aClassScope taggedBy: eachTag]	
+			ClyMethodTagItem named: eachTag withMethodsFrom: aClassScope]	
 	]].
 
 	methodGroups at: ClyUnclassifiedSystemItem groupName ifPresent: [ :existing | 
