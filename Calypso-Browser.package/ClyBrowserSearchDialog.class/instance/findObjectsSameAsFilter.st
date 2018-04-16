@@ -6,4 +6,3 @@ findObjectsSameAsFilter
 	
 	^itemsView findItemsSameAsFilter
 		ifNotEmpty: [ :foundItems | foundItems collect: #actualObject ]
-		ifEmpty: [ CmdCommandAborted signal ]

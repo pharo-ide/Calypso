@@ -1,4 +1,4 @@
 accessing
 defaultMenuItemName
 
-	^'Move to protocol'
+	^'Convert to protocol'

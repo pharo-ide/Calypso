@@ -1,10 +1,11 @@
 *Calypso-SystemTools-FullBrowser
 browseClassNamed: aString
 	
-	| classBinding classToBrowse |
-	classBinding := self system bindingOf: aString.
-	classBinding ifNil: [ ^self ].
-	classToBrowse := classBinding value.
+	| classToBrowse |
+	classToBrowse := (self system bindingOf: aString)
+		ifNil: [ self chooseClassToBrowseFrom: aString ]
+		ifNotNil: [:binding | classToBrowse := binding value].
+	classToBrowse ifNil: [ ^self ].
 	classToBrowse isClassOrTrait ifFalse: [ classToBrowse := classToBrowse class ].
 	
 	self spawnBrowser: ClyFullBrowser withState: [ :browser |

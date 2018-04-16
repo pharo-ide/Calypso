@@ -13,4 +13,4 @@ itemsChanged
 	because dirty flag is reset during processing (look at #runUpdate)"
 	dirty ifTrue: [ ^self ].
 	dirty := true.
-	UIManager default defer: [self runUpdate]
+	self scheduleUpdate
