@@ -1,5 +1,6 @@
 initialization
 resetStateForSnapshot
+	owner := nil.
 	submorphs := EmptyArray.
 	extension := nil.
 	browser := nil.
