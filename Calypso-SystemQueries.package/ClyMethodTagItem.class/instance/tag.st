@@ -1,3 +1,3 @@
 accessing
 tag
-	^ methodQuery tag
+	^ actualObject
