@@ -1,6 +1,7 @@
 initialization
 resetStateForSnapshot
-	self initialize.
+	submorphs := EmptyArray.
+	extension := nil.
 	browser := nil.
 	context := nil.
 	containerTab := nil.
