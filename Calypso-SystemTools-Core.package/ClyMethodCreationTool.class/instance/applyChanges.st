@@ -1,7 +1,7 @@
 operations
 applyChanges
 	| newMethod selector selectedClass |
-	selectedClass := self selectClassForNewMethodIfNone: [^false].
+	selectedClass := self chooseClassForNewMethodIfNone: [^false].
 	
 	selector := methodTags 
 		ifEmpty: [ selectedClass compile: self pendingText asString notifying: textMorph]

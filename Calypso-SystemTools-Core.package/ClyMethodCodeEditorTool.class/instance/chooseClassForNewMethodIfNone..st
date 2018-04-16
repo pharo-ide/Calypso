@@ -1,5 +1,5 @@
 operations
-selectClassForNewMethodIfNone: aBlock
+chooseClassForNewMethodIfNone: aBlock
 	| targetClasses |
 	targetClasses := browser chooseClassesForNewMethod: self editingMethod.
 	 

@@ -1,5 +1,5 @@
 operations
-selectClassForNewMethodIfNone: aBlock
+chooseClassForNewMethodIfNone: aBlock
 	| targetClasses selectedClass |
 	targetClasses := browser chooseClassesForNewMethod.
 	(targetClasses includes: methodClass) ifFalse: [ 
