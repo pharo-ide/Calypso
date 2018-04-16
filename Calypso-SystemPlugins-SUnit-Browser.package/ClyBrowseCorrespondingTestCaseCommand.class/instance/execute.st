@@ -1,3 +1,0 @@
-execution
-execute
-	browser spawnFullBrowser selectClass: classes first correspondingTestCase
