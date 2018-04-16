@@ -1,7 +1,7 @@
 operations
 applyChanges
 	| selector methodClass currentMethod |
-	methodClass := self selectClassForNewMethodIfNone: [^false].
+	methodClass := self chooseClassForNewMethodIfNone: [^false].
 	selector := methodClass compile: self pendingText classified: editingMethod protocol notifying: textMorph.
 	selector ifNil: [^false ].
 	currentMethod := methodClass >> selector.

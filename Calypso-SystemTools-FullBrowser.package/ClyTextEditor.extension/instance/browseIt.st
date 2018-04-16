@@ -1,4 +1,9 @@
 *Calypso-SystemTools-FullBrowser
 browseIt
+	| className |
 	self lineSelectAndEmptyCheck: [^ self].
-	self browser browseClassNamed: (self selection string copyWithoutAll: CharacterSet crlf) trimBoth 
+	
+	className := self findClassFromAST.
+	className isEmptyOrNil ifTrue: [ textArea flash. ^self ]. 
+	
+	self browser browseClassNamed: className

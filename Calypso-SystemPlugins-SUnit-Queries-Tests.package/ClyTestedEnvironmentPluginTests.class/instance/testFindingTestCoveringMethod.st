@@ -18,4 +18,4 @@ testFindingTestCoveringMethod
 	((ClyTestedClassTests >> #testTwo) -> nil).
 	((ClyTestedClassTests >> #testOneTwo) -> nil)}
 		do: [ :each | 
-			self assert: (plugin findTestMethodCovering: each key) == each value ]
+			self assert: (plugin findTestMethodCovering: each key ifAbsent: nil) == each value ]

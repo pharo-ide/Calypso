@@ -1,3 +1,3 @@
 printing
 printContext
-	^methodClass printSystemPath
+	^methodClass printSystemPath, ' / ' , methodClass name

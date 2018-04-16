@@ -1,4 +1,4 @@
 accessing
 defaultMenuItemName
 
-	^'Move to package'
+	^'Convert to extension'

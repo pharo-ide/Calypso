@@ -1,6 +1,6 @@
 opening
 openOnClass: aClass selector: aSymbol
 
-	| method |
-	method := aClass lookupSelector: aSymbol.
-	^self openOnMethod: method
+	^(aClass lookupSelector: aSymbol)
+		ifNil: [ self openOnClass: aClass ]
+		ifNotNil: [:method | self openOnMethod: method]

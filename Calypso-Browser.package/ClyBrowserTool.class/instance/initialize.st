@@ -3,6 +3,7 @@ initialize
 	super initialize.
 	decorators := OrderedCollection new.
 	isManagedByUser := false.
+	isDirty := false.
 	self
 		changeTableLayout;
 		listDirection: #topToBottom;

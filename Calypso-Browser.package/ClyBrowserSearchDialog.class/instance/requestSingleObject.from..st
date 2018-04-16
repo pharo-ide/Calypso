@@ -5,6 +5,9 @@ requestSingleObject: dialogTitle from: aQuery
 		openOn: aQuery
 		withTitle: dialogTitle
 		thenDo: [ 
-			itemsView selection isEmpty ifTrue: [ ^self findObjectsSameAsFilter first].
+			itemsView selection isEmpty ifTrue: [ 
+				^self findObjectsSameAsFilter 
+					ifEmpty: [ CmdCommandAborted signal ]
+					ifNotEmpty: [ :items | items first]].
 	
 			^itemsView selection lastSelectedItem actualObject]
