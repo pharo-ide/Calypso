@@ -1,4 +1,9 @@
 accessing
 snapshotState
 	
-	^ClyQueryViewState of: self
+	| dataSourceSnapshot |
+	dataSourceSnapshot := selection rootDataSource copyForBrowserStateSnapshot.
+	
+	^ClyQueryViewState new 
+		dataSource: dataSourceSnapshot;
+		selection: (selection copyForBrowserStateSnapshotOf: dataSourceSnapshot)
