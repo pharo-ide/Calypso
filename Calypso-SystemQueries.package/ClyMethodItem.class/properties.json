@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClySystemBrowserItem",
+	"category" : "Calypso-SystemQueries-Domain",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyMethodItem",
+	"type" : "normal"
+}
