@@ -1,4 +1,4 @@
 operations
 removeWithMethods
 	super removeWithMethods.
-	methodQuery scope classesDo: [ :each | each removeMethodTag: self tag ]
+	self methodQuery scope classesDo: [ :each | each removeMethodTag: self tag ]

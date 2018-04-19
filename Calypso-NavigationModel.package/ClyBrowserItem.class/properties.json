@@ -10,7 +10,8 @@
 		"name",
 		"depth",
 		"children",
-		"properties"
+		"properties",
+		"priority"
 	],
 	"name" : "ClyBrowserItem",
 	"type" : "normal"

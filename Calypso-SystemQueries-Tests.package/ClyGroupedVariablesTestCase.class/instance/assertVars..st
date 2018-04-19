@@ -3,7 +3,7 @@ assertVars: varNames
 
 	| vars i var |
 	vars := items 
-		select: [ :each | each actualObject isKindOf: ClyVariableMethodGroup ].
+		select: [ :each | each actualObject isKindOf: ClyRealBrowserItem ].
 	self assert: vars size equals: varNames size.
 	i := 1.
 	varNames do: [ :expectedVar |

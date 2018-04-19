@@ -6,7 +6,7 @@ classGroupsIn: aPackageScope do: aBlock
 		each tagsForClasses do: [ :eachTag |	
 			classGroups at: eachTag ifAbsentPut: [
 				group := ClyClassTagItem 
-					withClassesFrom: aPackageScope taggedBy: eachTag.
+					named: eachTag withClassesFrom: aPackageScope.
 				aBlock value: group.
 				group].				
 	]]

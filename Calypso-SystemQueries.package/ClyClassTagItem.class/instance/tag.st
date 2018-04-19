@@ -1,3 +1,3 @@
 accessing
 tag
-	^ classQuery tag
+	^ actualObject
