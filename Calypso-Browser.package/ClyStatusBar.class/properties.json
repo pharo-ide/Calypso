@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/22/2018 14:30",
-	"super" : "Morph",
+	"super" : "PanelMorph",
 	"category" : "Calypso-Browser-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],

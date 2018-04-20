@@ -1,7 +1,7 @@
 decoration
 adoptBrowserToolLayout
 
-	originalToolPanel := BorderedMorph new.
+	originalToolPanel := PanelMorph new.
 	originalToolPanel 
 		name: 'original tool elements';
 		color: Color transparent;		
