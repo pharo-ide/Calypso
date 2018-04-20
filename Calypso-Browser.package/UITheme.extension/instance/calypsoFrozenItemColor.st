@@ -4,6 +4,6 @@ calypsoFrozenItemColor
 	But this trick still allows override this color on external themes. 
 	Idea to only cover default ones which are white and dark"
 	
-	^self backgroundColor = Color white 
+	^self backgroundColor lightness > 0.3
 		ifTrue: [ Color blue muchDarker]
 		ifFalse: [ Color cyan ] 
