@@ -1,14 +1,18 @@
 execution
 execute
-	| icePackages iceRepos mcPackages |
-	packages ifEmpty: [ ^IceRepositoriesBrowser open ].
+	| repoBrowser commitBrowser repos targetRepo |
+	repoBrowser := self class environment at: #IceTipRepositoriesBrowser ifAbsent: [ 
+		^ self inform: 'Iceberg 0.7 and higher is required'].
+	commitBrowser := self class environment at: #IceTipCommitBrowser ifAbsent: [ 
+		^ self inform: 'Iceberg 0.7 and higher is required'].
+	packages ifEmpty: [ ^repoBrowser new openWithSpec ].
 	
-	icePackages := packages select: [ :each | [each iceRepository. true] ifError: [false]].	
-	iceRepos := icePackages collect: [ :each | each iceRepository ] as: Set.
-	iceRepos do: [ :each | IceSynchronizeBrowser synchronize: each ].
-	
-	mcPackages := packages copyWithoutAll: icePackages.
-	mcPackages ifNotEmpty: [ 
-		Komitter openAndCommitToMonticelloWorkingCopiesFilteredBy: [ :workingCopy |
-			"simple #includes: not works here. Somehow packages are different" 
-			mcPackages anySatisfy: [ :each | each name = workingCopy package name]]]
+	repos := IceRepository registry select: [ :repo | 
+		packages anySatisfy: [:each | repo includesPackageNamed: each name ]].
+	repos ifEmpty: [ ^self inform: 'Selected packages does not managed by Iceberg'].
+	targetRepo := repos size = 1 ifTrue: [ repos first ] ifFalse: [ 
+		UIManager default 
+			chooseFrom: (repos collect: #name) values: repos title: 'Choose repository'].
+	targetRepo ifNil: [ ^self ]. 
+			
+	(commitBrowser onRepository: targetRepo) openWithSpec

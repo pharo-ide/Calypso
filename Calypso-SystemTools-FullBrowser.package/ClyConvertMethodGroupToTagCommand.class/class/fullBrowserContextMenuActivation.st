@@ -2,4 +2,4 @@ activation
 fullBrowserContextMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyMethodGroupContextOfFullBrowser 
+	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyMethodGroup asCalypsoItemContext 
