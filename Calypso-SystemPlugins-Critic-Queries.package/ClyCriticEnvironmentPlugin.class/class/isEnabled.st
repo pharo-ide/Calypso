@@ -1,0 +1,3 @@
+settings
+isEnabled
+	^self providesMethodGroupByDefault

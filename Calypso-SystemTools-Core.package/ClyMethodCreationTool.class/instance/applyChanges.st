@@ -17,6 +17,6 @@ applyChanges
 	self tagAndPackageEditingMethod: newMethod.
 	
 	self removeFromBrowser.
-	browser tabManager forgetSelectedTab: self.
+	browser tabManager desiredSelection: {ClyMethodCodeEditorTool}.
 	browser selectMethod: newMethod.
 	^true
