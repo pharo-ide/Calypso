@@ -1,3 +1,3 @@
 accessing
 providesMethodGroupByDefault
-	^providesMethodGroupByDefault ifNil: [ true ]
+	^providesMethodGroupByDefault ifNil: [ false ]
