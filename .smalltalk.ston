@@ -2,7 +2,8 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Calypso',
-      #platforms : [ #pharo ]
+      #platforms : [ #pharo ],
+      #failOn : [ #Error ]
     }
   ]
 }
