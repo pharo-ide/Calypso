@@ -1,4 +1,4 @@
 *Calypso-NavigationModel
 calypsoBrowserType
 
-	^self class
+	^ClyRealBrowserItem

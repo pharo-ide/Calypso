@@ -1,3 +1,3 @@
 *Calypso-SystemQueries
 calypsoBrowserType
-	^ClyClass
+	^ClyClassItem

@@ -1,0 +1,3 @@
+converting
+calypsoBrowserType
+	^self class

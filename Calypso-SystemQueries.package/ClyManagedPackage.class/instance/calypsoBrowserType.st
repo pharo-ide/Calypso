@@ -1,3 +1,3 @@
 accessing
 calypsoBrowserType
-	^RPackage
+	^ClyPackageItem
