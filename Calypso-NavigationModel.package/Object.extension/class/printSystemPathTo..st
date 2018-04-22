@@ -1,3 +1,0 @@
-*Calypso-NavigationModel
-printSystemPathTo: myInstance
-	^''

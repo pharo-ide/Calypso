@@ -1,4 +1,4 @@
 testing
 isEqualTo: anotherBrowserItem
 
-	^type checkItem: actualObject isEqualTo: anotherBrowserItem actualObject
+	^self class checkItem: actualObject isEqualTo: anotherBrowserItem actualObject
