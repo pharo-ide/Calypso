@@ -1,3 +1,3 @@
 items type
 resultItemsType
-	^ClyClassComment
+	^ClyClassCommentItem

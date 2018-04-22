@@ -5,6 +5,6 @@ buildResult: aQueryResult
 	
 	scope classesDo: [ :each | 
 		(self selectsClass: each) ifTrue: [
-			classComments add: (ClyClassComment of: each)]].
+			classComments add: (ClyClassCommentItem of: each)]].
 	
 	aQueryResult fillWith: classComments

@@ -2,4 +2,4 @@ decoration
 decorationStrategy
 	<classAnnotation>
 	
-	^ClyTableDecorationStrategy for: ClyClassComment asCalypsoItemContext
+	^ClyTableDecorationStrategy for: ClyClassCommentItem asCalypsoItemContext

@@ -2,4 +2,4 @@ activation
 classCommentTabActivation
 	<classAnnotation>
 	
-	^ClyTabActivationStrategy for: ClyClassComment asCalypsoItemContext
+	^ClyTabActivationStrategy for: ClyClassCommentItem asCalypsoItemContext

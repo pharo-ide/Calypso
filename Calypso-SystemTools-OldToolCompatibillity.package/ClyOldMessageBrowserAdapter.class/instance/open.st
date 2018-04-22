@@ -6,7 +6,7 @@ open
 		thenCollect: [ :each | each compiledMethod ].
 	comments := messages 
 		select: [:each | each isRingObject and: [ each isComment  ]]
-		thenCollect: [ :each | ClyClassComment of: each parent realClass ].
+		thenCollect: [ :each | ClyClassCommentItem of: each parent realClass ].
 	query := ClyOldMessageBrowserQuery named: title with: methods asOrderedCollection, comments.
 	query
 		criteriaString: autoSelect;
