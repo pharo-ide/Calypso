@@ -3,4 +3,4 @@ fullBrowserMenuActivation
 	<classAnnotation>
 	^ CmdContextMenuCommandActivation
 		byItemOf: ClyQueryMenuGroup
-		for: ClyClassContextOfFullBrowser
+		for: ClyClass asCalypsoItemContext 
