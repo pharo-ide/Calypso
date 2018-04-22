@@ -1,4 +1,4 @@
 instance creation
 named: tagName withClassesFrom: aPackageScope
-	^(self named: tagName with: tagName asSymbol)
+	^(self of: tagName asSymbol named: tagName)
 		addChildren: ClyChildrenClasses with: (ClyTaggedClasses by: tagName from: aPackageScope)

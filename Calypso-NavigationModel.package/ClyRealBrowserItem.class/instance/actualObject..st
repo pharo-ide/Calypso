@@ -1,4 +1,4 @@
 accessing
 actualObject: anObject
 	actualObject := anObject.
-	type := anObject calypsoEnvironmentType
+	type := anObject calypsoBrowserType

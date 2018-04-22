@@ -5,7 +5,7 @@ selectsMethod: aMethod
 	criteriaBlock ifNil: [ ^false ].
 
 	extraMethods removeAllSuchThat: [ :each | 
-		each calypsoEnvironmentType checkCalypsoItem: each isEqualTo: aMethod].
+		each calypsoBrowserType checkCalypsoItem: each isEqualTo: aMethod].
 
 	result := criteriaBlock value: aMethod.
 	result ifTrue: [ extraMethods add: aMethod ].

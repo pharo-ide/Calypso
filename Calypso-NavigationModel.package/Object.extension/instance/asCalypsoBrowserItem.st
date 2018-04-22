@@ -1,4 +1,4 @@
 *Calypso-NavigationModel
 asCalypsoBrowserItem
 
-	^self calypsoEnvironmentType convertToCalypsoBrowserItem: self 
+	^self calypsoBrowserType convertToCalypsoBrowserItem: self 

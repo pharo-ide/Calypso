@@ -3,6 +3,6 @@ collectPackagesFrom: aProject
 		
 	| item |
 	aProject packages do: [ :each |
-		item := ClyRealBrowserItem named: each name with: each.		
+		item := ClyRealBrowserItem of: each named: each name.		
 		items add: item ]
 	

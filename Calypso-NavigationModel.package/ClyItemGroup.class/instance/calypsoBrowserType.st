@@ -1,0 +1,3 @@
+accessing
+calypsoBrowserType
+	^self class

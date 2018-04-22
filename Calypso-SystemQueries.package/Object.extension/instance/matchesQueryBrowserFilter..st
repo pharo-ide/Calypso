@@ -1,4 +1,4 @@
 *Calypso-SystemQueries
 matchesQueryBrowserFilter: aQueryBrowserFilter
 
-	^self calypsoEnvironmentType match: self forQueryBrowserFilter: aQueryBrowserFilter
+	^self calypsoBrowserType match: self forQueryBrowserFilter: aQueryBrowserFilter

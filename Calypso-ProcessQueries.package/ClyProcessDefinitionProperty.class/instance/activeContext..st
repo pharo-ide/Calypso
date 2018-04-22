@@ -1,4 +1,4 @@
 accessing
 activeContext: aContext
 
-	activeContextItem := ClyRealBrowserItem named: aContext selector with: aContext
+	activeContextItem := ClyRealBrowserItem of: aContext named: aContext selector

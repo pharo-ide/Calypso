@@ -2,6 +2,6 @@ evaluating
 sortFunctionFor: systemObject
 
 	^functionsForTypes 
-		at: systemObject calypsoEnvironmentType 
-		ifAbsentPut: [ systemObject calypsoEnvironmentType defaultSortFunctionForCalypso].
+		at: systemObject calypsoBrowserType 
+		ifAbsentPut: [ systemObject calypsoBrowserType defaultSortFunctionForCalypso].
 		
