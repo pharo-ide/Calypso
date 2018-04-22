@@ -1,3 +1,3 @@
-*Calypso-NavigationModel
+*Calypso-Browser
 asCalypsoItemContext
 	^ClyBrowserItemContext itemType: self
