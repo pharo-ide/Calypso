@@ -1,6 +1,4 @@
 testing
 isEqualTo: anotherBrowserItem
 
-	type = anotherBrowserItem type ifFalse: [ ^false ].
-	
-	^type checkCalypsoItem: actualObject isEqualTo: anotherBrowserItem actualObject
+	^type checkItem: actualObject isEqualTo: anotherBrowserItem actualObject

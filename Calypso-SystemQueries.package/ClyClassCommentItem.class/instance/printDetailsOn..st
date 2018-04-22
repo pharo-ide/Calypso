@@ -1,4 +1,4 @@
 printing
 printDetailsOn: aStream
 	
-	definingClass printOn: aStream
+	actualObject printOn: aStream

@@ -2,4 +2,4 @@ testing
 selectsMethod: aMethod
 
 	^methods anySatisfy: [ :each | 
-		each calypsoBrowserType checkCalypsoItem: each isEqualTo: aMethod]
+		each calypsoBrowserType checkItem: each isEqualTo: aMethod]
