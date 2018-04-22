@@ -1,0 +1,3 @@
+accessing
+defaultNameForCalypso
+	^self name
