@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "DenisKudryashov 2/1/2018 11:45",
 	"super" : "ClySortFunction",
-	"category" : "Calypso-SystemQueries-Queries",
+	"category" : "Calypso-NavigationModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"functionsForTypes"
 	],
-	"name" : "ClySortSystemItemFunction",
+	"name" : "ClyHeterogeneousItemSortFunction",
 	"type" : "normal"
 }
