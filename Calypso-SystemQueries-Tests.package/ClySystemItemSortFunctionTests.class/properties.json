@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClySortSystemItemFunctionTests",
+	"name" : "ClySystemItemSortFunctionTests",
 	"type" : "normal"
 }
