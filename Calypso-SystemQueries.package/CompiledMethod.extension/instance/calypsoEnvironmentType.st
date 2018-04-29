@@ -1,0 +1,4 @@
+*Calypso-SystemQueries
+calypsoEnvironmentType
+
+	^ClyMethod

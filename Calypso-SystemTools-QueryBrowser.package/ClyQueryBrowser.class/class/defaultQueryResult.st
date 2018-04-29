@@ -1,4 +1,4 @@
 default
 defaultQueryResult
 	^DefaultQueryResult ifNil: [ 
-		DefaultQueryResult := ClySortedQueryResult using: ClyHeterogeneousItemSortFunction ascending]
+		DefaultQueryResult := ClySortedQueryResult using: ClyHeterogeneousSortFunction ascending]

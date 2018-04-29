@@ -1,4 +1,4 @@
 *Calypso-NavigationModel
 printSystemPath
 
-	^self calypsoBrowserType printSystemPathTo: self 
+	^self calypsoEnvironmentType printSystemPathTo: self 

@@ -1,7 +1,7 @@
 tests
 testCompareTwoMethods
 
-	function := ClyHeterogeneousItemSortFunction ascending.
+	function := ClyHeterogeneousSortFunction ascending.
 	
 	self deny: (function value: Object >> #size value: Object >> #printString ).
 	self assert: (function value: Object >> #printString value: Object >> #size ).

@@ -1,5 +1,5 @@
 comparison
-checkItem: aMethod isEqualTo: anotherMethod
+checkCalypsoItem: aMethod isEqualTo: anotherMethod
 	aMethod == anotherMethod ifTrue: [ ^true ].
 	aMethod class == anotherMethod class ifTrue: [ ^false ].
 	

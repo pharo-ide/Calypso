@@ -1,3 +1,3 @@
-printing
+*Calypso-NavigationModel
 printSystemPathTo: anObject
 	^''

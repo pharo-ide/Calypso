@@ -6,7 +6,7 @@ itemsWith: actualObjects
 	| indexes |
 	^self protectItemsWhile: [
 		indexes := self find: actualObjects comparingToActualItemsBy: [ :existing :sample | 
-			existing 	calypsoBrowserType checkItem: existing isEqualTo: sample].
+			existing isEqualToCalypsoItem: sample].
 		
 		indexes collect: [ :each | 
 			each ifNotNil: [ self itemAt: each ] ]]
