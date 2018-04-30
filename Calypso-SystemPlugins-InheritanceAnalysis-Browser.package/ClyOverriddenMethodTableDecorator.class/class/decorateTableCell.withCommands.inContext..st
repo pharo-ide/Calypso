@@ -8,5 +8,7 @@ decorateTableCell: anItemCellMorph withCommands: commands inContext: itemContext
 			command: each; 
 			context: itemContext.
 		button := each createTableCellButtonUsing: activator.
+		button hResizing: #spaceFill.
+		button vResizing: #spaceFill.
 		panel addMorph: button].
 	anItemCellMorph definitionMorph: panel
