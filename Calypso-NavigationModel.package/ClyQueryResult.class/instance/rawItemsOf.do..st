@@ -2,6 +2,6 @@ accessing
 rawItemsOf: itemTypeClass do: aBlock
 
 	^self rawItemsDo: [:each | 
-		each calypsoBrowserType = itemTypeClass ifTrue: [ 
+		each calypsoEnvironmentType = itemTypeClass ifTrue: [ 
 			aBlock value: each ]
 	]
