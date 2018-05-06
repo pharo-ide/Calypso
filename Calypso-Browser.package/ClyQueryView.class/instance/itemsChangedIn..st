@@ -6,5 +6,5 @@ itemsChangedIn: aDataSource
 		
 	browser ignoreNavigationDuring: [ 
 		self updateSelectedItemsOf: aDataSource.
-		selectionWasEmpty ifTrue: [self ensureSelectedItemIfNeeded].
-		browser itemsChanged].
+		selectionWasEmpty ifTrue: [self ensureSelectedItemIfNeeded]].
+	browser itemsChanged

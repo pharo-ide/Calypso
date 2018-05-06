@@ -1,6 +1,6 @@
 updating
-itemsChanged
-	super itemsChanged.
+rebuildToolsForChangedEnvironment
+	super rebuildToolsForChangedEnvironment.
 	
 	tabManager tools ifEmpty: [ 
 		resultView ensureSelectedItem.
