@@ -2,6 +2,8 @@ world menu
 worldMenuOn: aBuilder 
 	<worldMenu> 
 	| isDefaultBrowser target targetName |
+	(self environment hasClassNamed: #Nautilus) ifFalse: [^self].
+	
 	isDefaultBrowser := Smalltalk tools browser = self.
 	(isDefaultBrowser and: [ self environment hasClassNamed: #Nautilus ])
 		ifTrue: [ 
