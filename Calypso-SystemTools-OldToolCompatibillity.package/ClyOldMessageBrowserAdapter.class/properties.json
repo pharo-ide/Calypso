@@ -9,7 +9,8 @@
 		"messages",
 		"title",
 		"autoSelect",
-		"refreshingBlock"
+		"refreshingBlock",
+		"openedBrowser"
 	],
 	"name" : "ClyOldMessageBrowserAdapter",
 	"type" : "normal"
