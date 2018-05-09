@@ -1,4 +1,4 @@
-initialization
+controlling
 detachFromTextMorph
 	super detachFromTextMorph.
 	
