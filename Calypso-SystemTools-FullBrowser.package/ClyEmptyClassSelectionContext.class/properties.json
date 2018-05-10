@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "AnnotationContext",
+	"category" : "Calypso-SystemTools-FullBrowser-Contexts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyEmptyClassSelectionContext",
+	"type" : "normal"
+}

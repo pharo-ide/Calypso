@@ -11,4 +11,4 @@ open
 	query
 		criteriaString: autoSelect;
 		criteriaBlock: refreshingBlock.
-	ClyQueryBrowser openOn: query
+	openedBrowser := ClyQueryBrowser openOn: query.

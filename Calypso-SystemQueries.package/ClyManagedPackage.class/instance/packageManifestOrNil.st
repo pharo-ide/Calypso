@@ -1,0 +1,3 @@
+accessing
+packageManifestOrNil
+	^systemPackage packageManifestOrNil

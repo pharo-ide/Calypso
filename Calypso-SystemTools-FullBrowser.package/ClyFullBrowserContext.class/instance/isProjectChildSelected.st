@@ -1,0 +1,3 @@
+selection-projects
+isProjectChildSelected
+	^self selectedProjectChildItems notEmpty

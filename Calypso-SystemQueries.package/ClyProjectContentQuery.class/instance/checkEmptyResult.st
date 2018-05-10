@@ -2,5 +2,5 @@ execution
 checkEmptyResult
 	
 	scope projectsDo: [ :each | 
-		each contents ifNotEmpty: [ ^false ]  ].
+		each items ifNotEmpty: [ ^false ]  ].
 	^true

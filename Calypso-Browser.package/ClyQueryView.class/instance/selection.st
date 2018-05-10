@@ -5,5 +5,6 @@ selection
 	It continue points to the old data source from the last selection update"
 	self isFilterChanged ifTrue: [ 
 		self initiateUIChangeBy: [self updateSelection] ].
-		
+	selection updateIfDirty.
+	
 	^selection

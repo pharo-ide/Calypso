@@ -1,3 +1,4 @@
 selection-projects
 selectedProjectItems
-	^selectedItems
+	
+	^selectedItems collect: [ :each | each rootParentItem ]
