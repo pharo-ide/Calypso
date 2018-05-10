@@ -1,3 +1,3 @@
 testing
 retrievesItemsOfType: itemTypeClass
-	^itemTypeClass isCalypsoItemType: self resultItemsType
+	^ self resultItemsType isCalypsoItemType: itemTypeClass

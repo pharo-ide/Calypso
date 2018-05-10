@@ -2,8 +2,8 @@ testing
 belongsToCurrentBrowserContext
 
 	| packageSelection |
-	packageSelection := browser packageView selection.
+	packageSelection := browser packageSelection.
 	package ifNil: [ ^packageSelection isEmpty].
 	packageSelection isEmpty ifTrue: [ ^true ].
 	
-	^packageSelection lastSelectedItem actualObject == package
+	^packageSelection includesActualObject: package

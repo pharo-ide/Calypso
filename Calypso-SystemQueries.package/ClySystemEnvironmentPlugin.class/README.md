@@ -11,7 +11,6 @@ To extend objects subclasses should implement methods:
 Plugins can provide new kind of package, class and method groups. They return own group providers in following methods:
 	- collectMethodGroupProviders
 	- collectClassGroupProviders
-	- collectPackageGroupProvidersFor: aProject
 
 Notice that current image environment adds all plugins automatically. 
 Look at superclass ClyEnvironmentPlugin for responsibility details.

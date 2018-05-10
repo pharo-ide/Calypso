@@ -1,3 +1,0 @@
-selection-package groups
-selectedPackageGroupItems
-	^tool packageGroupSelection items

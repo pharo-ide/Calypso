@@ -1,0 +1,3 @@
+selection-projects
+lastSelectedProjectChild
+	^self lastSelectedObjectIn: self selectedProjectChildren

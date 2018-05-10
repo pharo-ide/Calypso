@@ -4,7 +4,7 @@ initializeNavigationViews
 	packageView := self newNavigationView
 		treeStructure: 	{ 
 			ClyManagedProject -> #prepareProjectItemsQueryFrom:in:. 
-			ClyPackageGroup -> #prepareProjectItemsQueryFrom:in:.
+			ClyProjectChildItem -> #prepareProjectItemsQueryFrom:in:.
 			RPackage -> #prepareClassGroupQueryFrom:in: };
 		enableFilterUsing: ClyRegexPattern new;
 		requestNavigationBy: #packageSelectionChanged.

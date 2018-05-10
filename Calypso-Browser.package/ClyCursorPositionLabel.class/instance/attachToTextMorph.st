@@ -1,4 +1,4 @@
-initialization
+controlling
 attachToTextMorph
 	super attachToTextMorph.
 	

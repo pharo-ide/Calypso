@@ -1,5 +1,5 @@
 # Calypso
-[![Build Status](https://travis-ci.org/dionisiydk/Calypso.svg?branch=master)](https://travis-ci.org/dionisiydk/Calypso)
+[![Build Status](https://travis-ci.org/pharo-ide/Calypso.svg?branch=master)](https://travis-ci.org/pharo-ide/Calypso)
 
 Pharo system browser
 

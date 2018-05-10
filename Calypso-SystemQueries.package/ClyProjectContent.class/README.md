@@ -1,1 +1,0 @@
-I am deprecated class and should be removed when Cargo will fix integration with latest Calypso version

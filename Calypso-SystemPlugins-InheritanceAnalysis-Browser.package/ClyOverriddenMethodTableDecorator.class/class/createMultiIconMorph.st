@@ -4,7 +4,7 @@ createMultiIconMorph
 	^Morph new 
 		changeTableLayout;
 		listDirection: #topToBottom;
+		listCentering: #center;
 		wrapCentering: #center;
-		vResizing: #shrinkWrap;
-		extent: 12@12;
+		extent: 16@16;
 		color: Color transparent
