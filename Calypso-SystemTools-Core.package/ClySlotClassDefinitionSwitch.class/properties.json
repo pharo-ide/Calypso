@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ClyStatusBarItem",
+	"category" : "Calypso-SystemTools-Core-Editors-Classes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"checkbox"
+	],
+	"name" : "ClySlotClassDefinitionSwitch",
+	"type" : "normal"
+}
