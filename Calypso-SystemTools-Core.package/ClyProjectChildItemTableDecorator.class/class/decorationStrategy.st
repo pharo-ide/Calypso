@@ -1,5 +1,5 @@
 decoration
-packageGroupDecorationStrategy
+decorationStrategy
 	<classAnnotation>
 	
 	^ClyTableDecorationStrategy for: ClyProjectChildItem asCalypsoItemContext

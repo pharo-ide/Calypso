@@ -1,4 +1,4 @@
-as yet unclassified
+queries
 prepareProjectItemsQueryFrom: aProjectChildItem in: aNavigationEnvironment 
 
 	^ ClyProjectContentQuery 

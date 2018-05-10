@@ -1,4 +1,4 @@
-as yet unclassified
+item convertation
 convertToCalypsoBrowserItem: aProjectChildItem 
 	| item |
 	item := ClyBrowserItem named: aProjectChildItem name with: aProjectChildItem.
