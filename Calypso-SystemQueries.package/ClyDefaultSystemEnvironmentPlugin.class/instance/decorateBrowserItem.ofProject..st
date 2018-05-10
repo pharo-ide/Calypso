@@ -2,4 +2,4 @@ item decoration
 decorateBrowserItem: anItem ofProject: aProject 
 	
 	aProject isEmpty ifFalse: [ 
-		anItem markWithChildrenOf: ClyPackageGroup]
+		anItem markWithChildrenOf: ClyProjectChildItem]

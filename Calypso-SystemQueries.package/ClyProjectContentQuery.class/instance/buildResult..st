@@ -5,6 +5,6 @@ buildResult: aQueryResult
 	allItems := OrderedCollection new.
 	
 	scope projectsDo: [ :each | 
-		allItems addAll: each contents  ].
+		allItems addAll: each items  ].
 	
 	aQueryResult fillWith: allItems

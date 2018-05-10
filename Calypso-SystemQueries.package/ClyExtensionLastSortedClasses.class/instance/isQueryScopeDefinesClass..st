@@ -4,5 +4,5 @@ isQueryScopeDefinesClass: aClass
 	| classPackage |
 	classPackage := aClass package.
 	buildingQuery scope packagesDo: [ :each | 
-		each = classPackage ifTrue: [ ^true ]].
+		(each isAboutPackage: classPackage) ifTrue: [ ^true ]].
 	^false
