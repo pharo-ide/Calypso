@@ -5,5 +5,5 @@ createBlockFromPattern
 		badScript := true.
 		^self].
 
-	[scriptBlock := self class compiler evaluate: pattern value logged: false] 
+	[scriptBlock := self class compiler evaluate: pattern value] 
 		on: Exception do: [:err | badScript := true ]
