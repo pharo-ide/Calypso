@@ -1,3 +1,3 @@
 accessing
 defaultMenuItemName
-	^'Classify method'
+	^'Unclassify method'

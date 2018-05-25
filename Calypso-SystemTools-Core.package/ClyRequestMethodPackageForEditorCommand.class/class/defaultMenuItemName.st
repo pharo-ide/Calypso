@@ -1,3 +1,3 @@
 accessing
 defaultMenuItemName
-	^'Change method editor package'
+	^'Select method package'
