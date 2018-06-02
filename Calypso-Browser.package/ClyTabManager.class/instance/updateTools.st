@@ -4,7 +4,7 @@ updateTools
 	self updateToolsBy: [
 		newTools := OrderedCollection new.	
 		browser navigationContextsDo: [ :each | self buildToolsOn: newTools for: each].
-
+self haltOnce.
 		needsNewSelection := self requiresNewDesiredSelection.
 		selectedTools := self selectedTools.
 		currentTools := tools copy.
