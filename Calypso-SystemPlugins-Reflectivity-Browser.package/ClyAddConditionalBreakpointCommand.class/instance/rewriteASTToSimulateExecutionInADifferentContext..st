@@ -1,4 +1,4 @@
-breakpoints
+block generation
 rewriteASTToSimulateExecutionInADifferentContext: anAST
 	| semanticallyAnalysedMethodAST allUndeclaredVariableNodes allUndeclaredVariableSymbols rewriter rewrittenConditionBlockProducerAST allMessageNodes receiverSuperclassValueNode intermediateAST analysedIntermediateAST rewriter2 |
 	"AnAST is the AST of a method returning a block taking a context as its argument named `ThisContext` and whose body is the condition of this conditional breakpoint.

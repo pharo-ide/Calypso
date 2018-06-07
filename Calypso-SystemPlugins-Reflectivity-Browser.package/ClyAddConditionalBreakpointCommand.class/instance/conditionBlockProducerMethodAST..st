@@ -1,4 +1,4 @@
-breakpoints
+block generation
 conditionBlockProducerMethodAST: conditionString
 	| conditionBlockProducerMethodAST conditionAST |
 	conditionAST := RBParser parseExpression: conditionString.

@@ -1,5 +1,5 @@
-breakpoints
-conditionStringToConditionBlock: aString
+block generation
+generateConditionBlockFrom: aString
 	| conditionBlockProducerMethodAST |
 	conditionBlockProducerMethodAST := self conditionBlockProducerMethodAST: aString.
 

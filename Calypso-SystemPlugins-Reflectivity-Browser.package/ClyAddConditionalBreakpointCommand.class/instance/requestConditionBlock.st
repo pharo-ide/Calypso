@@ -9,4 +9,4 @@ requestConditionBlock
 		initialAnswer: script
 		title: 'Break on what condition?'.
 	script isEmptyOrNil ifTrue: [ CmdCommandAborted signal ].
-	^ self conditionStringToConditionBlock: script.
+	^ self generateConditionBlockFrom: script
