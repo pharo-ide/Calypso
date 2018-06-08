@@ -1,5 +1,5 @@
 accessing
 defaultMenuItemName
 	^browser isScopedModeEnabled 
-		ifTrue: [ 'Package scope' ]
+		ifTrue: [ 'Scoped pckg' ]
 		ifFalse: [ 'Packages' ]

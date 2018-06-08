@@ -1,12 +1,10 @@
 navigation
 allNavigationScopes
 	
-	| classLocalScope mainScopes |
+	| classLocalScope |
 	classLocalScope := self classSelection asItemsScope: ClyBothMetaLevelClassScope.
-	mainScopes := super allNavigationScopes.
-	self isScopedModeEnabled ifTrue: [ 
-		mainScopes := mainScopes copyWith: packageView query scope ].
-	^mainScopes , { 
+
+	^super allNavigationScopes, { 
 		self packageSelection asItemsScope: ClyPackageScope. 
 		classLocalScope asFullHierarchyScope. 
 		classLocalScope }

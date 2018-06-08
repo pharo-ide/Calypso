@@ -2,6 +2,8 @@ navigation
 navigateSpawnedFullBrowser: aFullBrowser
 
 	| lastItem definition |
+	aFullBrowser setUpScopedModeWith: self activeScope.
+	
 	lastItem := self selection lastSelectedItem.
 	definition := lastItem systemDefinition.
 	

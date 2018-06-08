@@ -1,0 +1,3 @@
+navigation
+defaultNavigationScope
+	^self activeScope
