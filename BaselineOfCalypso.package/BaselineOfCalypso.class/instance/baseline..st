@@ -12,7 +12,7 @@ baseline: spec
 			baseline: 'Commander' with: [
 				spec repository: 'github://pharo-ide/Commander:v0.6.3' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://pharo-ide/SystemCommands:v0.9.0' ].			
+				spec repository: 'github://pharo-ide/SystemCommands:v0.9.1' ].			
 
 		spec 
 			package: #'Calypso-NavigationModel';
