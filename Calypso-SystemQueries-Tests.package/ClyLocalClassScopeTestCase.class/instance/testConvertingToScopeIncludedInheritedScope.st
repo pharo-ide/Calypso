@@ -1,5 +1,5 @@
 tests
-testConvertingToScopeInlcudedInheritedScope
+testConvertingToScopeIncludedInheritedScope
 	| convertedScope inheritedScope |
 	scope := self createSampleScope.
 	inheritedScope := scope asInheritedScope.

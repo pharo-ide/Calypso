@@ -1,9 +1,13 @@
 navigation
 selectPackage: aPackage atClassTag: tagName
 
-	| packageItem targetClassGroup |
+	| packageItem targetClassGroup foundPackages |
 	self changeStateBy: [
-		packageItem := (packageView findItemsWith: {aPackage}) first.
+		foundPackages := packageView findItemsWith: {aPackage}.
+		foundPackages ifEmpty: [ 
+			self switchToPackages.
+			foundPackages := packageView findItemsWith: {aPackage} ].
+		packageItem := foundPackages first.
 		packageItem expand.
 		targetClassGroup := packageItem childrenItems detect: [:each | each name = tagName ].
 	

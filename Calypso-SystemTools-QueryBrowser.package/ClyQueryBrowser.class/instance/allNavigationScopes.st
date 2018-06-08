@@ -1,4 +1,4 @@
-accessing
+navigation
 allNavigationScopes
 	| extraScopes |
 	extraScopes := self extraScopesOfSelectedItems reject: #isBasedOnEmptyBasis.
