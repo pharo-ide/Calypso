@@ -2,7 +2,7 @@ updating
 updateItems
 
 	| menu |
-	menu := CmdMenu activatedBy: ClyToolbarCommandActivation.
+	menu := CmdMenu activatedBy: ClyToolbarActivation.
 	browser navigationContextsDo: [ :eachContext | menu buildInContext: eachContext].
 	
 	self hide.

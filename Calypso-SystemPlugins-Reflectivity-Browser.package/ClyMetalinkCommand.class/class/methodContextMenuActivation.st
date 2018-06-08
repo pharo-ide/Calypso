@@ -2,5 +2,5 @@ activation
 methodContextMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation 
+	^CmdContextMenuActivation 
 		byItemOf: ClyMetalinkMenuGroup order: self contextMenuOrder for: ClyMethod asCalypsoItemContext

@@ -2,4 +2,4 @@ activation
 methodShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $m meta for: ClyMethod asCalypsoItemContext
+	^CmdShortcutActivation by: $m meta for: ClyMethod asCalypsoItemContext

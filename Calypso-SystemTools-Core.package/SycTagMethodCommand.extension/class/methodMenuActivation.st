@@ -2,4 +2,4 @@
 methodMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemFor: ClyMethod asCalypsoItemContext 
+	^CmdContextMenuActivation byRootGroupItemFor: ClyMethod asCalypsoItemContext 

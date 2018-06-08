@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ClyToolbarCommandActivation",
+	"name" : "ClyToolbarActivation",
 	"type" : "normal"
 }

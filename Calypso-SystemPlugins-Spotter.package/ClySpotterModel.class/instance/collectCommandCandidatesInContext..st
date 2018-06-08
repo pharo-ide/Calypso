@@ -1,7 +1,7 @@
 private
 collectCommandCandidatesInContext: aContext
 	| allActivators allCommands |
-	allActivators := CmdContextMenuCommandActivation createActivatorsExecutableInContext: aContext.
+	allActivators := CmdContextMenuActivation createActivatorsExecutableInContext: aContext.
 	allCommands := allActivators collect: [ :each | each command class ] as: IdentitySet.
 	
 	CmdMenuCommandActivationStrategy allSubclassesDo: [ :eachStrategy |

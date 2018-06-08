@@ -2,4 +2,4 @@ activation
 processBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $d meta for: ClyProcessContextOfProcessBrowser
+	^CmdShortcutActivation by: $d meta for: ClyProcessContextOfProcessBrowser

@@ -2,5 +2,5 @@
 methodMenuActivation
 	<classAnnotation>
 
-	^CmdContextMenuCommandActivation 
+	^CmdContextMenuActivation 
 		byRootGroupItemOrder: self browserMenuOrder for: ClyMethod asCalypsoItemContext 
