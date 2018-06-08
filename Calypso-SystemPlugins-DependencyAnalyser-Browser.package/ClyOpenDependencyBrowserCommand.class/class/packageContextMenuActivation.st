@@ -2,4 +2,4 @@ activation
 packageContextMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: RPackage asCalypsoItemContext 
+	^CmdContextMenuActivation byItemOf: ClyQueryMenuGroup for: RPackage asCalypsoItemContext 

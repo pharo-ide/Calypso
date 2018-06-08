@@ -2,4 +2,4 @@ activation
 browserContextMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byItemOf: CmdExtraMenuGroup for: ClyInheritedMethodGroup asCalypsoItemContext
+	^CmdContextMenuActivation byItemOf: CmdExtraMenuGroup for: ClyInheritedMethodGroup asCalypsoItemContext

@@ -2,4 +2,4 @@ activation
 queryBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byItemOf: ClyQueryResultToolbarGroup order: -5 for: ClyQueryBrowserContext 
+	^ClyToolbarActivation byItemOf: ClyQueryResultToolbarGroup order: -5 for: ClyQueryBrowserContext 

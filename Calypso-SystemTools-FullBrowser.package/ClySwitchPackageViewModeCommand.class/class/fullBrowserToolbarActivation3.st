@@ -2,7 +2,7 @@ activation
 fullBrowserToolbarActivation3
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation 
+	^ClyToolbarActivation 
 		byItemOf: ClyPackageToolbarGroup 
 		order: self toolbarOrder
 		for: ClyProjectContextOfFullBrowser

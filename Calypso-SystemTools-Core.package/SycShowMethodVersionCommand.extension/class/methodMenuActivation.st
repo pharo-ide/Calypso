@@ -2,4 +2,4 @@
 methodMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byItemOf: ClyQueryMenuGroup for: ClyMethod asCalypsoItemContext 
+	^CmdContextMenuActivation byItemOf: ClyQueryMenuGroup for: ClyMethod asCalypsoItemContext 

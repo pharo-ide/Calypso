@@ -2,4 +2,4 @@ activation
 browserShortcutActivation
 	<classAnnotation>
 
-	^ CmdShortcutCommandActivation by: $/ meta for: ClyBrowserContext
+	^ CmdShortcutActivation by: $/ meta for: ClyBrowserContext

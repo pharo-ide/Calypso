@@ -2,4 +2,4 @@ activation
 browserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byItemOf: CmdExtraMenuGroup for: ClySystemBrowserContext
+	^CmdContextMenuActivation byItemOf: CmdExtraMenuGroup for: ClySystemBrowserContext

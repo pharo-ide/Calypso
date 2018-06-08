@@ -3,4 +3,4 @@ createDragPassengerFor: aSelection
 	| context |
 	context := self createSelectionContextOf: aSelection. 
 	
-	^CmdDragAndDropCommandActivation createDragPassengerInContext: context
+	^CmdDragAndDropActivation createDragPassengerInContext: context

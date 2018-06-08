@@ -2,4 +2,4 @@ activation
 methodEditorShorcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $e meta, $t meta for: ClyTextEditorContext
+	^CmdShortcutActivation by: $e meta, $t meta for: ClyTextEditorContext

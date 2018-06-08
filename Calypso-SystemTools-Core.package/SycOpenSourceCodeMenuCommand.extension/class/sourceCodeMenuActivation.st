@@ -2,4 +2,4 @@
 sourceCodeMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemOrder: -10 for: ClySourceCodeContext
+	^CmdContextMenuActivation byRootGroupItemOrder: -10 for: ClySourceCodeContext

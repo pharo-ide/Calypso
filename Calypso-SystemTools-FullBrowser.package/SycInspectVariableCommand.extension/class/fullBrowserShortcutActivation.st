@@ -2,6 +2,6 @@
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^(CmdShortcutCommandActivation 
+	^(CmdShortcutActivation 
 		by: PharoShortcuts current inspectItShortcut for: ClyVariableContextOfFullBrowser)
 			priority: 100000
