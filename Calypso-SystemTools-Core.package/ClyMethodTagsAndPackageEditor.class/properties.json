@@ -8,7 +8,8 @@
 	"instvars" : [
 		"extensionCheckbox",
 		"editButton",
-		"label"
+		"label",
+		"resetButton"
 	],
 	"name" : "ClyMethodTagsAndPackageEditor",
 	"type" : "normal"

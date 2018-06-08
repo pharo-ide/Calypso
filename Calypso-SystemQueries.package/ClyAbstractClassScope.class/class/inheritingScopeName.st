@@ -1,0 +1,3 @@
+scope names
+inheritingScopeName
+	^'children'

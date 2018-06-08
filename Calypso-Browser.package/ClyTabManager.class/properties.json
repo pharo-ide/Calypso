@@ -11,7 +11,8 @@
 		"tabMorph",
 		"updatingStarted",
 		"selectionPriorities",
-		"desiredSelection"
+		"desiredSelection",
+		"shouldSkipCurrentDesiredSelection"
 	],
 	"name" : "ClyTabManager",
 	"type" : "normal"

@@ -1,10 +1,13 @@
 building
-build
-	self buildLabel.
-	self addMorph: label.
+build	
+	self buildResetButton.
+	self addMorphBack: resetButton.
 	
 	self buildEditButton.
-	self addMorph: editButton.
+	self addMorphBack: editButton.
+	
+	self buildLabel.
+	self addMorphBack: label.
 	
 	self buildExtensionCheckBoxButton.
 	self addMorphBack: extensionCheckbox.

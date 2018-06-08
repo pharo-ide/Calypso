@@ -7,4 +7,5 @@ resetStateForSnapshot
 	context := nil.
 	containerTab := nil.
 	statusBar := nil.
-	isDirty := false
+	isDirty := false.
+	decorators := nil

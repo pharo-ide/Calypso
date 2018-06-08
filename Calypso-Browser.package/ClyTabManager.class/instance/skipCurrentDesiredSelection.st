@@ -1,0 +1,3 @@
+accessing
+skipCurrentDesiredSelection
+	shouldSkipCurrentDesiredSelection := true

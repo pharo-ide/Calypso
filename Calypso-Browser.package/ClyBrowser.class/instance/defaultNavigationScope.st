@@ -1,0 +1,4 @@
+navigation
+defaultNavigationScope
+	
+	^self systemScope
