@@ -1,8 +1,9 @@
 accessing
 accumulateTestMethod: aMethod
-	| testSelector result |	
+	| testSelector result inheritingScope |	
 	testSelector := aMethod selector.
-	aMethod methodClass withAllSubclassesDo: [ :concreteTestCase | 
+	inheritingScope := (ClyClassScope of: aMethod origin) withInheritingScope.
+	inheritingScope classesDo: [ :concreteTestCase | 
 		(concreteTestCase isTestCase and: [concreteTestCase isAbstract not]) ifTrue: [
 			self accumulateTest: testSelector of: concreteTestCase.
 			

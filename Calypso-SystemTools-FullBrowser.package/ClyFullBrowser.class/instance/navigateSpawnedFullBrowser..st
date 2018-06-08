@@ -1,6 +1,8 @@
 navigation
 navigateSpawnedFullBrowser: aFullBrowser
-
+	self isScopedModeEnabled ifTrue: [
+		aFullBrowser switchToPackageScopeOf: packageView query scope basisObjects].
+	 
 	self methodSelection isEmpty ifFalse: [ 
 		^aFullBrowser selectMethod: self methodSelection lastSelectedItem actualObject].
 	

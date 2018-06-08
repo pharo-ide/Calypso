@@ -1,3 +1,3 @@
 converting
 asInheritedScope
-	^ClyInheritedScopeProvider createScopeFrom: self
+	^ClyInheritedScopeProvider createInheritedScopeFrom: self

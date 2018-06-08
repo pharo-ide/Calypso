@@ -1,5 +1,5 @@
 scope creation
-createScopeFrom: aClassScope
+createInheritedScopeFrom: aClassScope
 
 	| scope |
 	scope := annotatedClass createInheritedScopeFrom: aClassScope.
