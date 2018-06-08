@@ -2,4 +2,4 @@ activation
 browserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: self defaultShortcut for: ClyBrowserContext
+	^CmdShortcutActivation by: self defaultShortcut for: ClyBrowserContext

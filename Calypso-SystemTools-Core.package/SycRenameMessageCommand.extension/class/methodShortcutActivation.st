@@ -2,4 +2,4 @@
 methodShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation renamingFor: ClyMethod asCalypsoItemContext
+	^CmdShortcutActivation renamingFor: ClyMethod asCalypsoItemContext

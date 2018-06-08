@@ -2,4 +2,4 @@ as yet unclassified
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation by: $f meta for: ClyMethodContextOfFullBrowser 
+	^CmdShortcutActivation by: $f meta for: ClyMethodContextOfFullBrowser 

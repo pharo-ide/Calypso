@@ -2,6 +2,6 @@ activation
 fullBrowserDragAndDropActivation3
 	<classAnnotation>
 	
-	^CmdDragAndDropCommandActivation 
+	^CmdDragAndDropActivation 
 		for: ClyClass asCalypsoItemContext 
 		toDropIn: ClyNoTagClassGroup asCalypsoItemContext

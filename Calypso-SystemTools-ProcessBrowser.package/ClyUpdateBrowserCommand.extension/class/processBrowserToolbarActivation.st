@@ -2,4 +2,4 @@
 processBrowserToolbarActivation
 	<classAnnotation>
 	
-	^ClyToolbarCommandActivation byRootGroupItemOrder: 1 for: ClyProcessContextOfProcessBrowser
+	^ClyToolbarActivation byRootGroupItemOrder: 1 for: ClyProcessContextOfProcessBrowser
