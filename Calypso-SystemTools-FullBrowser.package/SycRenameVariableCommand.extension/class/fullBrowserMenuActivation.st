@@ -2,4 +2,4 @@
 fullBrowserMenuActivation
 	<classAnnotation>
 	
-	^CmdContextMenuCommandActivation byRootGroupItemOrder: 1 for: ClyVariableContextOfFullBrowser 
+	^CmdContextMenuActivation byRootGroupItemOrder: 1 for: ClyVariableContextOfFullBrowser 

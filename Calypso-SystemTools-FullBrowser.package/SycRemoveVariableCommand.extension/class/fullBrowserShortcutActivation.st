@@ -2,4 +2,4 @@
 fullBrowserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation removalFor: ClyVariableContextOfFullBrowser
+	^CmdShortcutActivation removalFor: ClyVariableContextOfFullBrowser

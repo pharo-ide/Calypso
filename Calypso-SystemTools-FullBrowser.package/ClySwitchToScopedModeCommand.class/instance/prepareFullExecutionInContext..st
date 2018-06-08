@@ -4,4 +4,5 @@ prepareFullExecutionInContext: aBrowserContext
 	
 	packages := browser searchDialog 
 		requestMultipleObjects: 'Select package scope' 
-		from: ClyAllPackages sorted
+		from: ClyAllPackages sorted.
+	packages ifEmpty: [ CmdCommandAborted signal ]

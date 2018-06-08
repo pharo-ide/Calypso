@@ -2,4 +2,4 @@
 browserShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation renamingFor: ClyClass asCalypsoItemContext 
+	^CmdShortcutActivation renamingFor: ClyClass asCalypsoItemContext 

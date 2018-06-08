@@ -6,4 +6,4 @@ menuColumn: column row: rowIndex
 		
 	context := self createSelectionContextOf: menuSelection.
 	
-	^CmdContextMenuCommandActivation buildContextMenuFor: self inContext: context
+	^CmdContextMenuActivation buildContextMenuFor: self inContext: context

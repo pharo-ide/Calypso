@@ -2,5 +2,5 @@
 sourceCodeShortcutActivation
 	<classAnnotation>
 	
-	^CmdShortcutCommandActivation 
+	^CmdShortcutActivation 
 		by: PharoShortcuts current inspectItShortcut for: ClySourceCodeContext
