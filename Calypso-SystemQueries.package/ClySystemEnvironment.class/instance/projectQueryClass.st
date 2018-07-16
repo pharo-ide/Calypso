@@ -1,0 +1,4 @@
+projects
+projectQueryClass
+	
+	^ projectManager projectQueryClass

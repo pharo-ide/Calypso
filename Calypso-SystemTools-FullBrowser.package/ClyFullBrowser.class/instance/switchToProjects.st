@@ -1,6 +1,7 @@
 navigation
 switchToProjects
 	| projects |
-	projects := ClyAllProjects sortedFrom: self systemScope.
+		
+	projects := systemScope projectQueryClass sortedFrom: self systemScope.
 
 	packageView showQuery: projects
