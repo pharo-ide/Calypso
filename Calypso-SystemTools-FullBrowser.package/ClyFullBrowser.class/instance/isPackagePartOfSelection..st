@@ -1,5 +1,6 @@
 testing
 isPackagePartOfSelection: aPackage
+
 	(self isPackageSelected: aPackage) ifTrue: [ ^true ].
 	
 	^self projectSelection actualObjects

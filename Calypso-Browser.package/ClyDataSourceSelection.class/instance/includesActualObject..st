@@ -1,3 +1,3 @@
 testing
 includesActualObject: anObject
-	^items anySatisfy: [ :each | each actualObject == anObject ]
+	^items anySatisfy: [ :each | each includesActualObject: anObject ]
