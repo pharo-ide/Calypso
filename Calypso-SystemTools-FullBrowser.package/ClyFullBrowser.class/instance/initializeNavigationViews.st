@@ -2,7 +2,7 @@ initialization
 initializeNavigationViews
 
 	| projectItemClass | 
-	projectItemClass := ClySystemEnvironment currentImage projectItemClass.
+	projectItemClass := self projectItemClass.
 
 	packageView := self newNavigationView
 		treeStructure: 	{ 
