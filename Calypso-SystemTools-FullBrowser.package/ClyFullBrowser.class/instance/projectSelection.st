@@ -1,3 +1,3 @@
 accessing
 projectSelection
-	^packageView selection asSelectedParentsOf: self projectItemClass
+	^packageView selection asSelectedParentsOf: self projectClass

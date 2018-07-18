@@ -1,0 +1,3 @@
+queries
+customProjectClass
+	^ nil
