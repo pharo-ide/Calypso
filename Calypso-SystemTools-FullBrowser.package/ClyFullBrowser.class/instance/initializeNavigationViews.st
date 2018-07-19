@@ -1,12 +1,8 @@
 initialization
 initializeNavigationViews
 
-	| projectItemClass | 
-	projectItemClass := self projectItemClass.
-
 	packageView := self newNavigationView
 		treeStructure: 	{ 
-			projectItemClass -> #prepareProjectItemsQueryFrom:in:. 
 			ClyProjectChildItem -> #prepareProjectItemsQueryFrom:in:.
 			RPackage -> #prepareClassGroupQueryFrom:in: };
 		enableFilterUsing: ClyRegexPattern new;

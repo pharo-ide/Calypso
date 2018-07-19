@@ -1,3 +1,3 @@
 testing
 includesActualObject: anObject
-	^ self actualObject = anObject
+	^ self actualObject == anObject

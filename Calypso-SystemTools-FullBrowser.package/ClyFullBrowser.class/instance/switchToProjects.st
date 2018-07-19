@@ -1,7 +1,4 @@
 navigation
 switchToProjects
-	| projects |
-		
-	projects := systemScope projectQueryClass sortedFrom: self systemScope.
-
-	packageView showQuery: projects
+	packageView showQuery: (systemScope projectQueryFor: self systemScope).
+	^ true

@@ -1,4 +1,4 @@
 accessing
 projectClass
 
-	^ ClySystemEnvironment currentImage projectClass
+	^ ClyManagedProject

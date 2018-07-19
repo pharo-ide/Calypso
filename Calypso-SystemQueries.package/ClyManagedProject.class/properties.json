@@ -1,15 +1,11 @@
 {
 	"commentStamp" : "DenisKudryashov 2/20/2018 14:01",
-	"super" : "Object",
+	"super" : "ClyProjectChildItem",
 	"category" : "Calypso-SystemQueries-Domain",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"manager",
-		"project",
-		"name"
-	],
+	"instvars" : [ ],
 	"name" : "ClyManagedProject",
 	"type" : "normal"
 }

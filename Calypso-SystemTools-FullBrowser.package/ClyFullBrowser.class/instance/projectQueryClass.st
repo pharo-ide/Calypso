@@ -1,3 +1,0 @@
-accessing
-projectQueryClass
-	^ systemScope system projectManager projectQueryClass
