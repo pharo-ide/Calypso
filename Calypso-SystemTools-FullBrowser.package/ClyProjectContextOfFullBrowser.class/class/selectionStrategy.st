@@ -2,4 +2,4 @@ selection strategy
 selectionStrategy
 	<classAnnotation>
 	
-	^ClyContextSelectionStrategy for: ClyFullBrowser selectionType: ClyManagedProject
+	^ClyContextSelectionStrategy for: ClyFullBrowser selectionType: ClyProjectChildItem

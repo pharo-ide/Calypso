@@ -2,6 +2,7 @@ navigation
 selectPackage: aPackage atClassTag: tagName
 
 	| packageItem targetClassGroup foundPackages |
+
 	self changeStateBy: [
 		foundPackages := packageView findItemsWith: {aPackage}.
 		foundPackages ifEmpty: [ 
