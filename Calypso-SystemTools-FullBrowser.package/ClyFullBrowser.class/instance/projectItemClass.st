@@ -1,4 +1,0 @@
-accessing
-projectItemClass
-
-	^ ClySystemEnvironment currentImage projectItemClass
