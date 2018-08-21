@@ -8,7 +8,7 @@ classTemplate
 			'Object subclass: #NameOfSubclass
 	slots: {}
 	classVariables: {}
-	category: ''' ]
+	package: ''' ]
 		ifFalse: [ 
 			'Object subclass: #NameOfSubclass
 	instanceVariableNames: ''''
