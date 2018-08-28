@@ -1,7 +1,7 @@
 decoration
 createCriticView
 
-	criticView := ClyQueryView for: self.
+	criticView := ClyQueryViewMorph for: self.
 	criticView 
 		name: 'critiques table';
 		hResizing: #spaceFill;
