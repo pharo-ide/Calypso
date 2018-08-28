@@ -2,4 +2,4 @@ tests
 testHasBasisCritiquesAsBaseQuery
 
 	query := query class new.
-	self assert: query baseCritiqueQuery class equals: ClyAllBasisCritiques 
+	self assert: query baseCritiqueQuery class equals: ClyAllBasisCritiqueQuery 

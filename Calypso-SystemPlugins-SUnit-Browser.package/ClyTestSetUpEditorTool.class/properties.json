@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/20/2018 18:35",
-	"super" : "ClyMethodCodeEditorTool",
+	"super" : "ClyMethodCodeEditorToolMorph",
 	"category" : "Calypso-SystemPlugins-SUnit-Browser",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "DenisKudryashov 2/22/2018 15:07",
+	"super" : "ClyTextMorphToolMorph",
+	"category" : "Calypso-SystemTools-Core-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"checkbox"
+	],
+	"name" : "ClyFormatAsReadSwitchMorph",
+	"type" : "normal"
+}
