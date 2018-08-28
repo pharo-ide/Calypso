@@ -1,6 +1,6 @@
 initialization
 initializeToolsPanel
-	toolbar := ClyToolbar of: self.
+	toolbar := ClyToolbarMorph of: self.
 	tabManager := ClyTabManager of: self.
 	
 	toolPanel := PanelMorph new.

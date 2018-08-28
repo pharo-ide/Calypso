@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "DenisKudryashov 2/22/2018 10:09",
+	"commentStamp" : "DenisKudryashov 2/22/2018 10:19",
 	"super" : "ClyBrowserToolbarItemMorph",
 	"category" : "Calypso-Browser-Toolbar",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "ClyBrowserButton",
+	"instvars" : [
+		"radioButton"
+	],
+	"name" : "ClyBrowserModeSwitchMorph",
 	"type" : "normal"
 }
