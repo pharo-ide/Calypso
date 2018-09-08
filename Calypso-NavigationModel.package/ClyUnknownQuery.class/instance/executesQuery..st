@@ -1,0 +1,3 @@
+testing
+executesQuery: aClass 
+	^false
