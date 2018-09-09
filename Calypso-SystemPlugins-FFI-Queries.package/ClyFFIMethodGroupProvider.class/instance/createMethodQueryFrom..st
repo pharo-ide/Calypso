@@ -1,3 +1,3 @@
 building groups
 createMethodQueryFrom: aClassScope
-	^ClyFFIMethods from: aClassScope
+	^ClyFFIMethodQuery from: aClassScope

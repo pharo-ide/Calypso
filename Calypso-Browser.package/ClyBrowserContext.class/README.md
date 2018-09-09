@@ -1,4 +1,4 @@
-My subclasses represent the navigation context of the browser, the browser state. They describe concrete type of selected items together with items itself.
+My subclasses represent the navigation context of the browser, the browser state. They describe the concrete type of selected items together with items itself.
 
 My tool is always the browser. And I provide the #browser method to use this fact explicitly.
 

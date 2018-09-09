@@ -2,8 +2,8 @@ tests
 testComparisonWithSimilarQueryBasedOnDifferentBaseCritiqueQuery
 
 	| query2 |
-	query baseCritiqueQuery: ClyAllBasisCritiques new.
+	query baseCritiqueQuery: ClyAllBasisCritiqueQuery new.
 	query2 := self createQuery.
-	query2 baseCritiqueQuery: ClyAllMethodCritiques new.
+	query2 baseCritiqueQuery: ClyAllMethodCritiqueQuery new.
 	
 	self deny: query = query2

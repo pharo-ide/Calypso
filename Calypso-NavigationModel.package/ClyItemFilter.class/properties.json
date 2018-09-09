@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "DenisKudryashov 1/17/2018 17:00",
 	"super" : "Object",
-	"category" : "Calypso-NavigationModel",
+	"category" : "Calypso-NavigationModel-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

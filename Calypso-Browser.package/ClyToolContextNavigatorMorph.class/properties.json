@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/22/2018 14:34",
-	"super" : "ClyStatusBarItem",
+	"super" : "ClyStatusBarItemMorph",
 	"category" : "Calypso-Browser-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],

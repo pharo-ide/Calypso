@@ -3,5 +3,5 @@ updateCriticView
 	
 	| critiqueQuery |
 	
-	critiqueQuery := (ClyAllBasisCritiques from: analysisScope) async.
+	critiqueQuery := (ClyAllBasisCritiqueQuery from: analysisScope) async.
 	criticView showQuery: critiqueQuery

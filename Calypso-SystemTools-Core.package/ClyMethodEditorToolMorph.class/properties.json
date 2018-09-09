@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 2/22/2018 15:15",
+	"super" : "ClyTextEditorToolMorph",
+	"category" : "Calypso-SystemTools-Core-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodTags",
+		"extendingPackage"
+	],
+	"name" : "ClyMethodEditorToolMorph",
+	"type" : "normal"
+}
