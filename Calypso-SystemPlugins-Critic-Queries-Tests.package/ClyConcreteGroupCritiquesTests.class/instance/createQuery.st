@@ -3,7 +3,7 @@ createQuery
 	| exampleCritique |
 	exampleCritique := self methodWithCritiques critiques anyOne.
 	
-	^ClyConcreteGroupCritiques 
-		filter: ClyAllMethodCritiques new
+	^ClyConcreteGroupCritiqueQuery 
+		filter: ClyAllMethodCritiqueQuery new
 		from: self scopeWithCritiques 
 		byGroup: exampleCritique rule group

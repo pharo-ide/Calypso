@@ -1,3 +1,3 @@
 running
 createQueryResult
-	^ClyGroupedCritiques new
+	^ClyGroupedCritiqueResult new

@@ -1,3 +1,3 @@
 instance creation
 ofSearchIn: aBrowserClass
-	^self of: ClyBrowserSearchDialog in: aBrowserClass
+	^self of: ClyBrowserSearchDialogWindow in: aBrowserClass

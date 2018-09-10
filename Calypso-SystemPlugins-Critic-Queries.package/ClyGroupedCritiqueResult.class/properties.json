@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "StephaneDucasse 8/28/2018 13:53",
+	"super" : "ClyQueryResult",
+	"category" : "Calypso-SystemPlugins-Critic-Queries",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ClyGroupedCritiqueResult",
+	"type" : "normal"
+}

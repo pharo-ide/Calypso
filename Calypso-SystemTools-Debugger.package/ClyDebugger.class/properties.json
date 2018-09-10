@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ClyBrowser",
+	"super" : "ClyBrowserMorph",
 	"category" : "Calypso-SystemTools-Debugger",
 	"classinstvars" : [ ],
 	"pools" : [ ],

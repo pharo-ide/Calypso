@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/22/2018 17:12",
-	"super" : "ClyBrowser",
+	"super" : "ClyBrowserMorph",
 	"category" : "Calypso-SystemTools-QueryBrowser-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],

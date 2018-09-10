@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 2/22/2018 14:30",
+	"super" : "PanelMorph",
+	"category" : "Calypso-Browser-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contextBar",
+		"commandBar"
+	],
+	"name" : "ClyStatusBarMorph",
+	"type" : "normal"
+}
