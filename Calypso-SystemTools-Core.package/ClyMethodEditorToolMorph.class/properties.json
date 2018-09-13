@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"methodTags",
-		"extendingPackage"
+		"extendingPackage",
+		"targetClasses"
 	],
 	"name" : "ClyMethodEditorToolMorph",
 	"type" : "normal"
