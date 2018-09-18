@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyAllMethodCritiques from: self scopeWithCritiques 
+	^ClyAllMethodCritiqueQuery from: self scopeWithCritiques 

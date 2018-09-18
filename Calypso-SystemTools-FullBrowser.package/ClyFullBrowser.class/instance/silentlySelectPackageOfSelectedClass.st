@@ -2,8 +2,9 @@ navigation
 silentlySelectPackageOfSelectedClass
 		
 	| selectedClass |
+		
 	self classSelection isEmpty ifTrue: [ ^self ].
-	
+
 	selectedClass := self classSelection lastSelectedItem actualObject.
 	
 	packageView ignoreNavigationDuring: [

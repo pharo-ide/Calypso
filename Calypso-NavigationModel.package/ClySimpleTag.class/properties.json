@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "DenisKudryashov 1/17/2018 10:12",
 	"super" : "ClyProperty",
-	"category" : "Calypso-NavigationModel",
+	"category" : "Calypso-NavigationModel-Tag",
 	"classinstvars" : [
 		"instance"
 	],

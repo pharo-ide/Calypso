@@ -1,3 +1,3 @@
 running
 createQuery
-	^ClyFFIMethods from: ClyClassScope of: Object in: environment
+	^ClyFFIMethodQuery from: ClyClassScope of: Object in: environment

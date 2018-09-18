@@ -1,4 +1,4 @@
 testing
 isAppliedToBrowser
 
-	^browser packageView showsItemsFromQuery: ClyAllProjects
+	^ browser isInProjectView

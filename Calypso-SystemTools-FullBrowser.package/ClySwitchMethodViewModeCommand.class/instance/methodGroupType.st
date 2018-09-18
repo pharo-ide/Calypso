@@ -1,3 +1,3 @@
 accessing
 methodGroupType
-	^self class methodGroupType
+	self subclassResponsibility 

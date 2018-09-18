@@ -1,6 +1,4 @@
-I am a root of commands hierachy which affect state of the browser.
- 
-Internal Representation and Key Implementation Points.
+I am the root of the command hierarchy which affects state of the browser.
 
-    Instance Variables
+Instance Variables
 	browser:		<ClyBrowser>

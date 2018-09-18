@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	ruleSeverity := ClyCritiqueSeverity default
+	ruleSeverity := ClyCritiqueSeverityProperty default

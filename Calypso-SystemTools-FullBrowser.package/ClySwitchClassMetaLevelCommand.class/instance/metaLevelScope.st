@@ -1,3 +1,3 @@
 execution
 metaLevelScope
-	^self class metaLevelScope
+	self subclassResponsibility 

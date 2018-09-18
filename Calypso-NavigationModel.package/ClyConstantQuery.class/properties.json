@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "DenisKudryashov 2/1/2018 13:50",
 	"super" : "ClyTypedQuery",
-	"category" : "Calypso-NavigationModel",
+	"category" : "Calypso-NavigationModel-Query",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
