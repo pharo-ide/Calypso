@@ -7,8 +7,10 @@ smalltalk_edge:
   branch: dev
 jobs:
   include:
-    - smalltalk: Pharo-6.1
+    - stage: Latest
+    smalltalk: Pharo-7.0
+    - stage: Old Pharo versions
+    smalltalk: Pharo-6.1
     smalltalk_config: .smalltalk-pharo61.ston
-    - smalltalk: Pharo-7.0
 
 smalltalk_config: .smalltalk.ston
