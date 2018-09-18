@@ -5,6 +5,10 @@ os:
 smalltalk_edge:
   source: hpi-swa/smalltalkCI
   branch: dev
-smalltalk:
-  - Pharo-6.0
-  - Pharo-7.0
+jobs:
+  includes:
+    - smalltalk: Pharo-6.1
+    smalltalk_config: .smalltalk-pharo61.ston
+    - smalltalk: Pharo-7.0
+
+smalltalk_config: .smalltalk.ston
