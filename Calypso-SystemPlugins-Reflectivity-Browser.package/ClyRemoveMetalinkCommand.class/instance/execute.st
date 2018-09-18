@@ -2,4 +2,4 @@ execution
 execute
 	
 	sourceNode nodesWithLinks do: [:each | 
-		self class metalinkManagerClass removeFrom: each]
+		self metalinkManagerClass removeFrom: each]

@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	projectManager := ClyProjectManager new
+	projectManager := ClyProjectManagerRegistry new

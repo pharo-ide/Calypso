@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "DenisKudryashov 2/22/2018 15:21",
+	"super" : "ClyStatusBarItemMorph",
+	"category" : "Calypso-SystemTools-Core-Editors-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"extensionCheckbox",
+		"editButton",
+		"label",
+		"resetButton"
+	],
+	"name" : "ClyMethodTagsAndPackageEditorMorph",
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
 testing
 canBeExecutedInContext: aToolContext
-	^aToolContext tool isKindOf: ClyMethodEditorTool 
+	^aToolContext tool isKindOf: ClyMethodEditorToolMorph 

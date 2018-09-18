@@ -1,3 +1,3 @@
-execution
+accessing
 requiredQueryResult
-	^self class requiredQueryResult
+	self subclassResponsibility 

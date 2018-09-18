@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "DenisKudryashov 2/20/2018 17:51",
-	"super" : "ClyBrowserTool",
+	"super" : "ClyBrowserToolMorph",
 	"category" : "Calypso-SystemPlugins-MethodDiffTool",
 	"classinstvars" : [ ],
 	"pools" : [ ],
