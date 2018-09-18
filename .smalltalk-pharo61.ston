@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Calypso',
+      #platforms : [ #pharo ],
+      #failOn : [ #Warning ]
+    }
+  ]
+}
