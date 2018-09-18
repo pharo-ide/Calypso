@@ -6,7 +6,7 @@ smalltalk_edge:
   source: hpi-swa/smalltalkCI
   branch: dev
 jobs:
-  includes:
+  include:
     - smalltalk: Pharo-6.1
     smalltalk_config: .smalltalk-pharo61.ston
     - smalltalk: Pharo-7.0
