@@ -1,0 +1,5 @@
+initialization
+setUpParametersFromModel
+	super setUpParametersFromModel.
+
+	self setUpTargetClasses 

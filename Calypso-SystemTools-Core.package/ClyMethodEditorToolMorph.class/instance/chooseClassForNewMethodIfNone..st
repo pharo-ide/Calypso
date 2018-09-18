@@ -1,8 +1,6 @@
 operations
 chooseClassForNewMethodIfNone: aBlock
-	| targetClasses |
-	targetClasses := browser chooseClassesForNewMethod: self editingMethod.
-	 
+	
 	targetClasses size = 1 ifTrue: [ ^ targetClasses first].
 
 	^[self browser searchDialog 

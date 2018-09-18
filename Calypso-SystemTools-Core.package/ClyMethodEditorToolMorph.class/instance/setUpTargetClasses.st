@@ -1,0 +1,3 @@
+initialization
+setUpTargetClasses
+	self subclassResponsibility 
