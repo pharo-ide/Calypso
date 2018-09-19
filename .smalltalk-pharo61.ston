@@ -6,5 +6,10 @@ SmalltalkCISpec {
       #platforms : [ #pharo ],
       #failOn : [ #Warning ]
     }
+  ],
+  #testing : [
+    #exclude : {
+      #packages : [ 'Calypso-SystemPlugins-Critic-Queries-Tests' ]
+    }	
   ]
 }
