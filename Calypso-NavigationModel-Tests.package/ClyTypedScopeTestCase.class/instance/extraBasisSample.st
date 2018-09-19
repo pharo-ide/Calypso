@@ -1,3 +1,0 @@
-running
-extraBasisSample
-	self subclassResponsibility 

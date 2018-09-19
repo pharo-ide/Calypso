@@ -1,3 +1,0 @@
-running
-referencedClass
-	^self class

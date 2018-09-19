@@ -1,4 +1,0 @@
-selection
-lastSelectedClass
-
-	^self selectedClass

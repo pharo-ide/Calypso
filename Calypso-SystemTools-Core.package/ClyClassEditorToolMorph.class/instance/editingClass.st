@@ -1,3 +1,0 @@
-accessing
-editingClass
-	^editingClass

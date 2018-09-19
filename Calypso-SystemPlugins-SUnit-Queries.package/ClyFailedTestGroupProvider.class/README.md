@@ -1,1 +1,0 @@
-I provide "failed tests" method group when there are failed tests in given test cases

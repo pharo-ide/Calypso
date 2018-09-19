@@ -1,3 +1,0 @@
-*Calypso-SystemPlugins-Traits-Queries
-asTraitVisibility
-	^ClyLocalTraitsVisibilityLevel of: visibleClassScope

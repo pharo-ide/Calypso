@@ -1,3 +1,0 @@
-testing
-match: aClassComment forQueryBrowserFilter: aQueryBrowserFilter
-	^aClassComment definingClass matchesQueryBrowserFilter: aQueryBrowserFilter

@@ -1,3 +1,0 @@
-helpers
-meaningfullObjectToAssert: resultItem
-	^resultItem actualObject

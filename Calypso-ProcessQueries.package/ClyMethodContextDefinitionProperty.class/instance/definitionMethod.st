@@ -1,3 +1,0 @@
-accessing
-definitionMethod
-	^self definitionMethodItem actualObject

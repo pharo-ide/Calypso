@@ -1,3 +1,0 @@
-initialization
-setUpTargetClasses
-	self subclassResponsibility 

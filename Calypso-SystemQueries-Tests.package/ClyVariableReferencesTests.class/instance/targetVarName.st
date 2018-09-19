@@ -1,3 +1,0 @@
-running
-targetVarName
-	^#referencedVar1 

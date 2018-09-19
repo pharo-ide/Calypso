@@ -1,3 +1,0 @@
-private
-refreshTable
-	table refresh

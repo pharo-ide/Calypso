@@ -1,3 +1,0 @@
-converting
-asInheritingScope
-	^ClyInheritedScopeProvider createInheritingScopeFrom: self

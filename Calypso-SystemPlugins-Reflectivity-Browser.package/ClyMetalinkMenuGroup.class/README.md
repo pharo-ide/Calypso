@@ -1,1 +1,0 @@
-I am menu group to arrange together all metalink related commands (breakpoints, counters, watchpoints)

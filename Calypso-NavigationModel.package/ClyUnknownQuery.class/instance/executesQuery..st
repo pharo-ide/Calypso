@@ -1,3 +1,0 @@
-testing
-executesQuery: aClass 
-	^false

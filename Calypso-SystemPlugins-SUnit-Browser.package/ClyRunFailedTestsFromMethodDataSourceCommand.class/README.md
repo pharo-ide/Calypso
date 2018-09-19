@@ -1,1 +1,0 @@
-I am a command to run all failed tests available in given data source

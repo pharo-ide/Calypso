@@ -1,4 +1,0 @@
-accessing
-items
-	self subclassResponsibility 
-	

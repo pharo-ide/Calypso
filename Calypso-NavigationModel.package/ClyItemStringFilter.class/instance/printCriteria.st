@@ -1,4 +1,0 @@
-printing
-printCriteria
-
-	^pattern value

@@ -1,4 +1,0 @@
-printing
-printCriteria
-
-	^self printString 

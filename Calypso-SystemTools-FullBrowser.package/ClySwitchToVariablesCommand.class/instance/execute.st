@@ -1,3 +1,0 @@
-controling
-execute
-	browser switchToVariables

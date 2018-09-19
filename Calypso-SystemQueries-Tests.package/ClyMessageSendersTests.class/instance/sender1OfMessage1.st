@@ -1,3 +1,0 @@
-methods for tests
-sender1OfMessage1
-	self clyReferencedMessage1

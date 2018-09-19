@@ -1,3 +1,0 @@
-execution
-requiredQueryResult
-	^ClySortedQueryResult using: ClySortSystemItemFunction ascending

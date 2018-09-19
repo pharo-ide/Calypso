@@ -1,7 +1,0 @@
-{
-	"commentStamp" : "",
-	"traitcomposition" : "ClyTraitRoot1 + ClyTraitRoot2",
-	"classtraitcomposition" : "ClyTraitRoot1 classTrait + ClyTraitRoot2 classTrait",
-	"category" : "Calypso-SystemPlugins-Traits-Queries-Tests-PWithTraits",
-	"name" : "ClyTraitChild3"
-}

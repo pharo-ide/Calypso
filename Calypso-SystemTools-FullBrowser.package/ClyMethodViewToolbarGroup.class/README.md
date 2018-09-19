@@ -1,1 +1,0 @@
-I am a toolbar menu group to show method group view modes of the browser together

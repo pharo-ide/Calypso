@@ -1,3 +1,0 @@
-building
-buildLeftSideBar
-	textMorph withTextSegmentIcons

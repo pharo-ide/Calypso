@@ -1,3 +1,0 @@
-controlling
-itemsChanged
-	self refreshCritiques

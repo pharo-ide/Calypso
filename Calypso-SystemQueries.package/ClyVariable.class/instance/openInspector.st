@@ -1,4 +1,0 @@
-operations
-openInspector
-
-	actualVariable inspect

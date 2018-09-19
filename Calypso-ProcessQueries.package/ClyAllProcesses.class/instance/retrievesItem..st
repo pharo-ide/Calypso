@@ -1,3 +1,0 @@
-testing
-retrievesItem: aProcess
-	^true

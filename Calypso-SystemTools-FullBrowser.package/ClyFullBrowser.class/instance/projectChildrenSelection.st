@@ -1,3 +1,0 @@
-accessing
-projectChildrenSelection
-	^packageView selection asSelectedParentsOf: ClyProjectChildItem

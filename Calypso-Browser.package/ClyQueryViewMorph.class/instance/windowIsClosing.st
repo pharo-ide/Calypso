@@ -1,3 +1,0 @@
-controlling
-windowIsClosing
-	self closeDataSource

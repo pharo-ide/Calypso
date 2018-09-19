@@ -1,3 +1,0 @@
-helpers
-createQueryResult
-	^ClyHierarchicalSystemItems new

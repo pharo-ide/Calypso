@@ -1,3 +1,0 @@
-context
-createCommandContext
-	^ClyGlobalContextOfFullBrowser for: self

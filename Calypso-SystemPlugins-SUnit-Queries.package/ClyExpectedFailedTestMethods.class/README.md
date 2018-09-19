@@ -1,1 +1,0 @@
-I return all test methods which are marked with <expectedFailure> pragma

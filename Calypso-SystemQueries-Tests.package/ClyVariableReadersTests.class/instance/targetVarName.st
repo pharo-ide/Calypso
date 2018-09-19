@@ -1,3 +1,0 @@
-running
-targetVarName
-	^#readVar1

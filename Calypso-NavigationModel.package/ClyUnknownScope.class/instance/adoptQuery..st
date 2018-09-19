@@ -1,3 +1,0 @@
-queries
-adoptQuery: aQuery 
-	^aQuery

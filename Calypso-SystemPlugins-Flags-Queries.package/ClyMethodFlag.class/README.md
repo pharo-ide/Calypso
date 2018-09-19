@@ -1,1 +1,0 @@
-I mark methods which send #flag: message

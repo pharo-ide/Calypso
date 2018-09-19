@@ -1,1 +1,0 @@
-I mark critiques which can be fixed by refactoring

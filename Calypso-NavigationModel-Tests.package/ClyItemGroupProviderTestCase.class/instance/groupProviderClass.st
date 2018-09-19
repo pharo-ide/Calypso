@@ -1,3 +1,0 @@
-running
-groupProviderClass
-	self subclassResponsibility 

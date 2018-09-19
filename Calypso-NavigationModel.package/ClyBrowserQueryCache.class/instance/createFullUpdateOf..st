@@ -1,4 +1,0 @@
-controlling
-createFullUpdateOf: aBrowserQueryResult
-
-	^aBrowserQueryResult createUpdateWithItemsStartingAt: startPosition count: sizeLimit

@@ -1,3 +1,0 @@
-helpers
-firstSelectedObjectIn: selectedObjects
-	^selectedObjects last

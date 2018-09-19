@@ -1,3 +1,0 @@
-*Calypso-SystemQueries
-affectsPackages
-	^false

@@ -1,5 +1,0 @@
-initialization
-setUpParametersFromModel
-	super setUpParametersFromModel.
-
-	self updateMethodTagsAndPackage

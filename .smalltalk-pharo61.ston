@@ -1,9 +1,16 @@
 SmalltalkCISpec {
+  #name : 'Calypso',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Calypso',
+      #directory : 'src',	  
       #platforms : [ #pharo ],
       #failOn : [ #Warning ]
     }
-  ]
+  ],
+  #testing : {
+     #exclude : {
+        #packages : [ 'Calypso-SystemPlugins-Critic-Queries-Tests' ]
+    }
+  }
 }

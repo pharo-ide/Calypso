@@ -1,1 +1,0 @@
-I mark deprecated objects like methods or classes 

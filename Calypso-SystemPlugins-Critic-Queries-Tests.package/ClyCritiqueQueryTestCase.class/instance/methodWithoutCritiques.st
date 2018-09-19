@@ -1,3 +1,0 @@
-examples
-methodWithoutCritiques
-	^ ClyClassWithProblemMethods >> #methodWithoutCritiques

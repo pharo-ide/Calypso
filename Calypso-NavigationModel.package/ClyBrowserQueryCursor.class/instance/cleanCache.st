@@ -1,4 +1,0 @@
-private
-cleanCache
-
-	cache items: #()

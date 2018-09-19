@@ -1,1 +1,0 @@
-I return critiques of all methods visible from my scope

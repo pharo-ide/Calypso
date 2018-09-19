@@ -1,4 +1,0 @@
-printing
-printSelectors
-
-	^',' join: selectors

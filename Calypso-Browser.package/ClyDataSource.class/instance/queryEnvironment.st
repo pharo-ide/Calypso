@@ -1,3 +1,0 @@
-accessing
-queryEnvironment
-	^query environment

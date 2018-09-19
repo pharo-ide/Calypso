@@ -1,3 +1,0 @@
-testing
-canAffectResultOfMethodQuery: aMethodQuery
-	^true

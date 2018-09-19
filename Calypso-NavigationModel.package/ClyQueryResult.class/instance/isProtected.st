@@ -1,3 +1,0 @@
-testing
-isProtected
-	^accessGuard notNil

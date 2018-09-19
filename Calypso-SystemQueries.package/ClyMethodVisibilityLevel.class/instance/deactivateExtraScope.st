@@ -1,3 +1,0 @@
-controlling
-deactivateExtraScope
-	^visibleClassScope reducedByClassesFrom: extraClassScope

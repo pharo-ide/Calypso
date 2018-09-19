@@ -1,1 +1,0 @@
-I am a command to open dependency browser on set of packages

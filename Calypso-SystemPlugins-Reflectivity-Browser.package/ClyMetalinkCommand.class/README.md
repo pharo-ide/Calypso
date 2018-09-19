@@ -1,1 +1,0 @@
-I am a base class for commands which add/remove metalinks into given method or source node

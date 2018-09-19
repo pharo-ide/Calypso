@@ -1,3 +1,0 @@
-testing
-isClassVariable
-	self subclassResponsibility 

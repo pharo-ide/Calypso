@@ -1,3 +1,0 @@
-execution
-collectMetadataOf: aQueryResult by: anEnvironmentPlugin
-	anEnvironmentPlugin collectMetadataOfMethodGroups: aQueryResult 
