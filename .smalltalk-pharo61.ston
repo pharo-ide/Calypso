@@ -9,7 +9,7 @@ SmalltalkCISpec {
   ],
   #testing : [
     #exclude : {
-      #packages : [ 'Calypso-SystemPlugins-Critic-Queries-Tests' ]
+      #categories : [ 'Calypso-SystemPlugins-Critic-Queries-Tests' ]
     }	
   ]
 }
