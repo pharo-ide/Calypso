@@ -1,3 +1,0 @@
-running
-createQuery
-	self subclassResponsibility 

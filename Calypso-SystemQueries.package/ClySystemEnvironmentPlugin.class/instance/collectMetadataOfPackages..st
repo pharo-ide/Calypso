@@ -1,2 +1,0 @@
-query metadata
-collectMetadataOfPackages: aQueryResult

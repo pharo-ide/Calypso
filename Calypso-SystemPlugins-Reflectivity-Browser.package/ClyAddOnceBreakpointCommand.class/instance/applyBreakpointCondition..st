@@ -1,3 +1,0 @@
-execution
-applyBreakpointCondition: aBreakpoint
-	aBreakpoint once

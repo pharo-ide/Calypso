@@ -1,3 +1,0 @@
-accessing
-activationPriority
-	^self tabOrder

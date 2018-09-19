@@ -1,1 +1,0 @@
-I provide "overridden" method group which includes all methods of given classes which are overridden by subclasses

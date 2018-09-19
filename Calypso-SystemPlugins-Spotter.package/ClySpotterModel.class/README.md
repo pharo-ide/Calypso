@@ -1,1 +1,0 @@
-I'm a model to collect options for "spotter navigation" mode in a full browser.

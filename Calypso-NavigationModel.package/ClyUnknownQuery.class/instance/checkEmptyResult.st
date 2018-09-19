@@ -1,3 +1,0 @@
-execution
-checkEmptyResult
-	^true

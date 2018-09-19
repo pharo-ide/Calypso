@@ -1,3 +1,0 @@
-building
-fillWithGroupedVariables: varsPerTypeAndDefiningClass
-	self subclassResponsibility 

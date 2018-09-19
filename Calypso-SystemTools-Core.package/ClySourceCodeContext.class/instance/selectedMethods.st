@@ -1,3 +1,0 @@
-selection
-selectedMethods
-	^{self selectedMethod}

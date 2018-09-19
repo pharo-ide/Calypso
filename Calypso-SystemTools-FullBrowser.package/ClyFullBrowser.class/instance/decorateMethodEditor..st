@@ -1,4 +1,0 @@
-tools support
-decorateMethodEditor: aMethodEditor
-
-	methodView query decorateResultMethodEditor: aMethodEditor

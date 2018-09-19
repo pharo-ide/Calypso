@@ -1,4 +1,0 @@
-accessing
-defaultToolbarItemName
-	
-	^queryScope description

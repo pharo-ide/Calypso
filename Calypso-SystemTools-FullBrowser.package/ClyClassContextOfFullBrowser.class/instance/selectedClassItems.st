@@ -1,3 +1,0 @@
-selection-classes
-selectedClassItems
-	^selectedItems

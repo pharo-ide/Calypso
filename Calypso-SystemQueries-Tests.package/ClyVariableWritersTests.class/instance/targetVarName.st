@@ -1,3 +1,0 @@
-running
-targetVarName
-	^#writtenVar1

@@ -1,3 +1,0 @@
-accessing
-navigationEnvironment
-	^self browser navigationEnvironment

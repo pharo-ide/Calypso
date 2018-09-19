@@ -1,4 +1,0 @@
-updating
-rebuildToolbar
-
-	toolbar updateItems

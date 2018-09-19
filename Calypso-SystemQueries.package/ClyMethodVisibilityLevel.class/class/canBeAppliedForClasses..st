@@ -1,3 +1,0 @@
-testing
-canBeAppliedForClasses: classItems
-	^true

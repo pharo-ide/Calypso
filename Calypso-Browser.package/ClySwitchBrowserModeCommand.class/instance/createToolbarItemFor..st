@@ -1,4 +1,0 @@
-activation-toolbar support
-createToolbarItemFor: aCommandActivator
-
-	^ClyBrowserModeSwitchMorph activatingBy: aCommandActivator

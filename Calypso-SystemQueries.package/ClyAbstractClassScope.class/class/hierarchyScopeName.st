@@ -1,3 +1,0 @@
-scope names
-hierarchyScopeName
-	^'hier'

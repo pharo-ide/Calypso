@@ -1,3 +1,0 @@
-decoration
-decorateTool
-	self subclassResponsibility 

@@ -1,3 +1,0 @@
-accessing
-getProperty: anEnvironmentPropertyClass
-	^browserItem getProperty: anEnvironmentPropertyClass

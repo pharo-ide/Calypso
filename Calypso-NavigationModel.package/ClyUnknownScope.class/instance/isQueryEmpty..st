@@ -1,3 +1,0 @@
-testing
-isQueryEmpty: aQuery
-	^true

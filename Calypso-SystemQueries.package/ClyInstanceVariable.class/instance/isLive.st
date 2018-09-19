@@ -1,4 +1,0 @@
-testing
-isLive
-
-	^definingClass isClassSide

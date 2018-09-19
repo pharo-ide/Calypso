@@ -1,3 +1,0 @@
-private
-createBrowser
-	^ClyFullBrowser new

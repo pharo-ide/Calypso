@@ -1,1 +1,0 @@
-I provide "undeclared" method group when classes include any method which uses undeclared variable

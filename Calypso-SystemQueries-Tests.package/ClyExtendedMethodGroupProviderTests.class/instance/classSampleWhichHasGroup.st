@@ -1,3 +1,0 @@
-running
-classSampleWhichHasGroup
-	^ClySubclassLOfClass0FromPExtendedByP1 

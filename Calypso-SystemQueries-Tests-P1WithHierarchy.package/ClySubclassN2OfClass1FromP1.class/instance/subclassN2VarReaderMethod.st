@@ -1,3 +1,0 @@
-as yet unclassified
-subclassN2VarReaderMethod
-	^subclassN2Var

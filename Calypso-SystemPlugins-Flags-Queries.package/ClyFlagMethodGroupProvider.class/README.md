@@ -1,1 +1,0 @@
-I provide "flags" method groups when given classes define methods with flag

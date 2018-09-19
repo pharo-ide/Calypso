@@ -1,4 +1,0 @@
-queries
-retrieveAll
-
-	^queryResult allItems

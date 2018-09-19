@@ -1,3 +1,0 @@
-testing
-hasMetaProperty: aPropertyClass 
-	^false

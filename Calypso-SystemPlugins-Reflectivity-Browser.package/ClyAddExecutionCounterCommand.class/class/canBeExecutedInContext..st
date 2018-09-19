@@ -1,4 +1,0 @@
-execution
-canBeExecutedInContext: aBrowserContext
-
-	^aBrowserContext isSelectedItemHasExecutionCounter not

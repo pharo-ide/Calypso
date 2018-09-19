@@ -1,3 +1,0 @@
-accessing
-processSelection
-	^processView selection

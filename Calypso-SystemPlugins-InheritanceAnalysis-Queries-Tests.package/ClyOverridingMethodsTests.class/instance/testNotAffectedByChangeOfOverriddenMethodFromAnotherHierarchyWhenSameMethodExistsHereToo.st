@@ -1,4 +1,0 @@
-tests
-testNotAffectedByChangeOfOverriddenMethodFromAnotherHierarchyWhenSameMethodExistsHereToo
-	
-	self deny: (query isAffectedByChangedMethod: ClyAbstractSubclassExample >> #abstractMethod1)

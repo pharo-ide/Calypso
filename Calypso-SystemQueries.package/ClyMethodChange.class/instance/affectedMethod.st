@@ -1,3 +1,0 @@
-accessing
-affectedMethod
-	^ affectedMethod

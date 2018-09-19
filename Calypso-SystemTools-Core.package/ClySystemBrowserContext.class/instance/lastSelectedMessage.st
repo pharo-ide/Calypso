@@ -1,3 +1,0 @@
-selection-messages
-lastSelectedMessage
-	^SycMessageDescription ofMethod: self lastSelectedMethod

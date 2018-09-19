@@ -1,4 +1,0 @@
-tests
-testHasDefaultBaseQueryResultByDefault
-
-	self assert: queryResult baseQueryResult class equals: ClySortedQueryResult

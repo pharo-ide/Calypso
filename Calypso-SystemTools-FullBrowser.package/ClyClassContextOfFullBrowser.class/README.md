@@ -1,1 +1,0 @@
-I am a context of selected classes in full browser

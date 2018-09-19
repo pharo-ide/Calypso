@@ -1,1 +1,0 @@
-I am group of methods marked by concrete tag

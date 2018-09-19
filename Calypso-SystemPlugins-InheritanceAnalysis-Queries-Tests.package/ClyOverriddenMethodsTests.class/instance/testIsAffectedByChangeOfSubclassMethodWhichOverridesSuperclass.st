@@ -1,4 +1,0 @@
-tests
-testIsAffectedByChangeOfSubclassMethodWhichOverridesSuperclass
-	
-	self assert: (query isAffectedByChangedMethod: ClyClassWhichInheritsAbstractClass>>#overriddenMethod)

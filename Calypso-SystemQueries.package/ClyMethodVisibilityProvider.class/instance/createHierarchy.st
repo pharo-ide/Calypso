@@ -1,3 +1,0 @@
-hierarchy creation
-createHierarchy
-	^annotatedClass hierarchyForMethodVisibility

@@ -1,3 +1,0 @@
-controlling
-neverRestoreSelection
-	shouldRestoreSelection := false
