@@ -2,6 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Calypso',
+      #directory : 'src',	  
       #platforms : [ #pharo ],
       #failOn : [ #Warning ]
     }
