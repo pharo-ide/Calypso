@@ -1,3 +1,0 @@
-accessing
-analyzedObject
-	^analysisScope basisObjects anyOne

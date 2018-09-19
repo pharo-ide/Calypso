@@ -1,3 +1,0 @@
-accessing
-globalPositionOf: childDataSourceItem
-	self subclassResponsibility 

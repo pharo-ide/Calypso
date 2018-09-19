@@ -1,3 +1,0 @@
-building
-editingText
-	^self classTemplate 

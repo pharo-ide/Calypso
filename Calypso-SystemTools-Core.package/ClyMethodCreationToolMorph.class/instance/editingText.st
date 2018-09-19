@@ -1,3 +1,0 @@
-accessing
-editingText
-	^methodClass sourceCodeTemplate

@@ -1,3 +1,0 @@
-examples
-methodWithCritiques
-	^ ClyClassWithProblemMethods >> #methodWithHalt

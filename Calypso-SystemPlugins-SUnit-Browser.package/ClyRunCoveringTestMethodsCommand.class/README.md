@@ -1,1 +1,0 @@
-I am a command to run all covering tests of selected methods

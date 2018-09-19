@@ -1,3 +1,0 @@
-installing
-handlesMouseOver: evt
-	^true

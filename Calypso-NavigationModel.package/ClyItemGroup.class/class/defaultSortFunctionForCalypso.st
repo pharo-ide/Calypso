@@ -1,3 +1,0 @@
-sorting
-defaultSortFunctionForCalypso
-	^ClySortItemGroupFunction ascending

@@ -1,3 +1,0 @@
-testing
-isBoundToEnvironment
-	^environment notNil

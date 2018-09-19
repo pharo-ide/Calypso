@@ -1,3 +1,0 @@
-accessing
-useFullIndentation
-	fullIndentation := true

@@ -1,3 +1,0 @@
-selection-contexts
-selectedContextItems
-	^selectedItems

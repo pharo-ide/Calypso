@@ -1,3 +1,0 @@
-controlling
-restoreBrowserState
-	context restoreBrowserState

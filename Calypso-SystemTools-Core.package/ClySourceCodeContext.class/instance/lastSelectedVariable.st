@@ -1,4 +1,0 @@
-selection
-lastSelectedVariable
-
-	^self selectedVariable 

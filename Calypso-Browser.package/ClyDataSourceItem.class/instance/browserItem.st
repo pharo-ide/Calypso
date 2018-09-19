@@ -1,3 +1,0 @@
-accessing
-browserItem
-	^ browserItem

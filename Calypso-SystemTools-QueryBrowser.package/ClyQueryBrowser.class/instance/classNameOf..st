@@ -1,4 +1,0 @@
-initialization
-classNameOf: aBrowserItem
-
-	^aBrowserItem systemDefinition printDefiningClass

@@ -1,3 +1,0 @@
-selection-projects
-isProjectSelected
-	^self selectedProjectItems notEmpty

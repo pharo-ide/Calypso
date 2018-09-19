@@ -1,3 +1,0 @@
-building
-queryScope
-	^buildingQuery scope

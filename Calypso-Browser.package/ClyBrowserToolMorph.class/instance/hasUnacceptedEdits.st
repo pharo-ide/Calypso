@@ -1,3 +1,0 @@
-testing
-hasUnacceptedEdits
-	^false

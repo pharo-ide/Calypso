@@ -1,1 +1,0 @@
-I mark the method that it has halt (sends any of halt message)

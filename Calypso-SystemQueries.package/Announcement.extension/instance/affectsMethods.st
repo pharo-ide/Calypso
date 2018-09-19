@@ -1,3 +1,0 @@
-*Calypso-SystemQueries
-affectsMethods
-	^false

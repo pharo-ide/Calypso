@@ -1,4 +1,0 @@
-execution
-asRefactorings
-
-	^targetClass deprecationRefactorings

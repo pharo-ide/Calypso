@@ -1,1 +1,0 @@
-I return all abstract methods inherited by classes in my scope which are still not implemented by them

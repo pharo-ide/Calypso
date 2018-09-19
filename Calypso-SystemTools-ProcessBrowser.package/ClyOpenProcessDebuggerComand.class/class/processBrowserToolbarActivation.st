@@ -1,5 +1,0 @@
-activation
-processBrowserToolbarActivation
-	<classAnnotation>
-	
-	^ClyToolbarActivation byRootGroupItemFor: ClyProcessContextOfProcessBrowser

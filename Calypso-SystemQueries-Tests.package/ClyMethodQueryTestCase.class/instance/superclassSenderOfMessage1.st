@@ -1,3 +1,0 @@
-methods for tests
-superclassSenderOfMessage1
-	self clyReferencedMessage1

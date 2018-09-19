@@ -1,1 +1,0 @@
-I mark methods that they have installed execution counters

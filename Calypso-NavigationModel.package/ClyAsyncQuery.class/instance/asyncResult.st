@@ -1,3 +1,0 @@
-accessing
-asyncResult
-	^ asyncResult

@@ -1,3 +1,0 @@
-selection
-selectionInterval
-	^self selectedInterval 

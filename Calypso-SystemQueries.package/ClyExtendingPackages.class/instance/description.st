@@ -1,4 +1,0 @@
-printing
-description
-
-	^'extending packages'

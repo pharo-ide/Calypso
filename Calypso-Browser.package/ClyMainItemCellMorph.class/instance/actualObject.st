@@ -1,3 +1,0 @@
-accessing
-actualObject
-	^item actualObject

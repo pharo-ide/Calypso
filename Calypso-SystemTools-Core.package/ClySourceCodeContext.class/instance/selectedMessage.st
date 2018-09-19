@@ -1,3 +1,0 @@
-selection
-selectedMessage
-	^SycMessageDescription ofMessageNode: self selectedSourceNode

@@ -1,3 +1,0 @@
-controlling
-disable
-	isDefault := false

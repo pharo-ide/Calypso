@@ -1,1 +1,0 @@
-I am announced when query result when it is changed due to occured system change

@@ -1,3 +1,0 @@
-accessing
-sourceTextArea
-	^ model textMorph

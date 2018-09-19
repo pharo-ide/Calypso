@@ -1,3 +1,0 @@
-accessing
-package
-	^ methodQuery package

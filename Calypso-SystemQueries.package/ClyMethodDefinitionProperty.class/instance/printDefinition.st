@@ -1,4 +1,0 @@
-printing
-printDefinition
-
-	^self printDefiningClass

@@ -1,1 +1,0 @@
-I am a command to switch full browser to raw packages mode. 

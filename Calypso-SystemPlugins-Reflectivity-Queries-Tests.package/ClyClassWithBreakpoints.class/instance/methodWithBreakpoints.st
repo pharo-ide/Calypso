@@ -1,3 +1,0 @@
-methods
-methodWithBreakpoints
-	self printString

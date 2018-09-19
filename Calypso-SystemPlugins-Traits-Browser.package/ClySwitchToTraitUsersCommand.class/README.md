@@ -1,1 +1,0 @@
-I a command to show in browser a hierarchy of traits which are used by selected classes

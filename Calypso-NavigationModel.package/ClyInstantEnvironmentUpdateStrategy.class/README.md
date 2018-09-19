@@ -1,1 +1,0 @@
-I am default updating strategy for navigation environment. I force query result to notify observers immediatelly when any change was happen

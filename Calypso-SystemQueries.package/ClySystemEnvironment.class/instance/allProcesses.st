@@ -1,3 +1,0 @@
-accessing
-allProcesses
-	^Process allSubInstances 

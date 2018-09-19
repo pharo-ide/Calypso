@@ -1,3 +1,0 @@
-selection-variables
-isGlobalVariableSelected
-	^false

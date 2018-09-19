@@ -1,3 +1,0 @@
-*Calypso-SystemPlugins-Reflectivity-Browser
-isSelectedItemHasWatchpoint
-	^selectedSourceNode hasWatchpoint

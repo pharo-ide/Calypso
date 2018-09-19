@@ -1,1 +1,0 @@
-I return all implementors of given selectors

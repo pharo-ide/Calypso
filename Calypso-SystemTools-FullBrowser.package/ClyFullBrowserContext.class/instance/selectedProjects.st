@@ -1,3 +1,0 @@
-selection-projects
-selectedProjects
-	^self actualSelectionFrom: self selectedProjectItems

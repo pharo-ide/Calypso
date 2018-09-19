@@ -1,3 +1,0 @@
-helpers
-lastSelectedItem
-	^selectedItems first

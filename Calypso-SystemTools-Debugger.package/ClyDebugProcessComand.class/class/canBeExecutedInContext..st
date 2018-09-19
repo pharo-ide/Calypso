@@ -1,3 +1,0 @@
-execution
-canBeExecutedInContext: aToolContext
-	^aToolContext isProcessSelected
