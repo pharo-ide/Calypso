@@ -18,6 +18,12 @@ Class {
 }
 
 { #category : #testing }
+ClyMethodEditorCommand class >> canBeExecutedInCodeMethodEditor: aTool [
+	
+	^ false
+]
+
+{ #category : #testing }
 ClyMethodEditorCommand class >> canBeExecutedInContext: aToolContext [
 
 	^ aToolContext tool isCommandAvailable: self
