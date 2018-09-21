@@ -260,12 +260,6 @@ ClyBrowserToolMorph >> buildStatusBar [
 	self fillStatusBar
 ]
 
-{ #category : #controlling }
-ClyBrowserToolMorph >> cleanAfterRemove. [
-	self detachFromSystem.
-	decorators do: [ :each | each toolWasRemoved ]
-]
-
 { #category : #accessing }
 ClyBrowserToolMorph >> containerTab [
 	^ containerTab

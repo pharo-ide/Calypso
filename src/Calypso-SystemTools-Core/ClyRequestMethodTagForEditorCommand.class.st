@@ -7,6 +7,13 @@ Class {
 	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
+{ #category : #testing }
+ClyRequestMethodTagForEditorCommand class >> canBeExecutedInContext: aToolContext [
+
+	^ (super canBeExecutedInContext: aToolContext)
+		and: [ aToolContext tool isKindOf: ClyMethodCodeEditorToolMorph ]
+]
+
 { #category : #activation }
 ClyRequestMethodTagForEditorCommand class >> methodEditorShorcutActivation [
 	<classAnnotation>
@@ -16,7 +23,8 @@ ClyRequestMethodTagForEditorCommand class >> methodEditorShorcutActivation [
 
 { #category : #accessing }
 ClyRequestMethodTagForEditorCommand >> defaultMenuItemName [
-	^'Classify method'
+
+	^ 'Classify method'
 ]
 
 { #category : #execution }
