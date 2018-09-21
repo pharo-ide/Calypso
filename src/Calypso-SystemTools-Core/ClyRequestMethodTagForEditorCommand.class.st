@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #testing }
+ClyRequestMethodTagForEditorCommand class >> canBeExecutedInCodeMethodEditor: aTool [
+	
+	^ true
+]
+
+{ #category : #testing }
 ClyRequestMethodTagForEditorCommand class >> canBeExecutedInContext: aToolContext [
 
 	^ (super canBeExecutedInContext: aToolContext)

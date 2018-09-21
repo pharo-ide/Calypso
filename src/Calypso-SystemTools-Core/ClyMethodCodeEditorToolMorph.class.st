@@ -218,6 +218,12 @@ ClyMethodCodeEditorToolMorph >> findSourceNodeAt: aCursorPoint [
 ]
 
 { #category : #testing }
+ClyMethodCodeEditorToolMorph >> isCommandAvailable: aCommand [ 
+
+	^ aCommand canBeExecutedInCodeMethodEditor: self
+]
+
+{ #category : #testing }
 ClyMethodCodeEditorToolMorph >> isSimilarTo: anotherBrowserTool [
 	(super isSimilarTo: anotherBrowserTool) ifFalse: [ ^false ].
 	

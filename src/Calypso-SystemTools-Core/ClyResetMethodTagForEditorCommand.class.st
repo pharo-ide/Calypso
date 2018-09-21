@@ -5,10 +5,9 @@ Class {
 }
 
 { #category : #testing }
-ClyResetMethodTagForEditorCommand class >> canBeExecutedInContext: aToolContext [
-
-	^ (super canBeExecutedInContext: aToolContext)
-		and: [ aToolContext tool isKindOf: ClyMethodCodeEditorToolMorph ]
+ClyResetMethodTagForEditorCommand class >> canBeExecutedInCodeMethodEditor: aTool [
+	
+	^ true
 ]
 
 { #category : #activation }

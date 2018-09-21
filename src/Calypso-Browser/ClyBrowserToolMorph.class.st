@@ -380,6 +380,14 @@ ClyBrowserToolMorph >> isBuilt [
 ]
 
 { #category : #testing }
+ClyBrowserToolMorph >> isCommandAvailable: aCommand [
+	"A double dispatch mechanism to allow tools to validate commands that can be 
+	 executed on it. Subclasses can override me to perform the proper dispatch."
+	
+	^ aCommand canBeExecutedInTool: self
+]
+
+{ #category : #testing }
 ClyBrowserToolMorph >> isExtraSelectionRequested [
 	"It checks that users wants multiple selected tabs.
 	So cmd click on table just adds new selected items and keep existed selected.
