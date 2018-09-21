@@ -1,5 +1,5 @@
 SmalltalkCISpec {
-
+  #preLoading: 'scripts/preLoading61.st',
   #name : 'Calypso',
   #loading : [
     SCIMetacelloLoadSpec {
