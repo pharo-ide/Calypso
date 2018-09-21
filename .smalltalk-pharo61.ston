@@ -1,4 +1,5 @@
 SmalltalkCISpec {
+  #preLoading: 'scripts/preLoading61.st',
   #name : 'Calypso',
   #loading : [
     SCIMetacelloLoadSpec {
@@ -7,10 +8,6 @@ SmalltalkCISpec {
       #platforms : [ #pharo ],
       #failOn : [ #Warning ]
     }
-  ],
-  #testing : {
-     #exclude : {
-        #packages : [ 'Calypso-SystemPlugins-Critic-Queries-Tests' ]
-    }
-  }
+    
+  ]
 }
