@@ -13,13 +13,6 @@ ClyRequestMethodTagForEditorCommand class >> canBeExecutedInCodeMethodEditor: aT
 	^ true
 ]
 
-{ #category : #testing }
-ClyRequestMethodTagForEditorCommand class >> canBeExecutedInContext: aToolContext [
-
-	^ (super canBeExecutedInContext: aToolContext)
-		and: [ aToolContext tool isKindOf: ClyMethodCodeEditorToolMorph ]
-]
-
 { #category : #activation }
 ClyRequestMethodTagForEditorCommand class >> methodEditorShorcutActivation [
 	<classAnnotation>
