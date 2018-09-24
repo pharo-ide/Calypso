@@ -374,6 +374,8 @@ ClyFullBrowser >> initialize [
 
 { #category : #initialization }
 ClyFullBrowser >> initializeNavigationViews [
+	"Initialize all panes (navigation views) of the browser. 
+	 Regular browsers have four panes: package, class, protocol and method."
 
 	packageView := self newPackageView.
 	classView := self newClassView.
@@ -497,7 +499,7 @@ ClyFullBrowser >> navigateSpawnedFullBrowser: aFullBrowser [
 		^aFullBrowser selectPackage: self packageSelection lastSelectedItem actualObject]
 ]
 
-{ #category : #initialization }
+{ #category : #'private factory' }
 ClyFullBrowser >> newClassView [
 	"Creates the class pane"
 
@@ -508,7 +510,7 @@ ClyFullBrowser >> newClassView [
 		requestNavigationBy: #classSelectionChanged	
 ]
 
-{ #category : #initialization }
+{ #category : #'private factory' }
 ClyFullBrowser >> newMethodGroupView [
 	"Creates the 'method group' pane (this is the protocol [ane])"
 
@@ -519,7 +521,7 @@ ClyFullBrowser >> newMethodGroupView [
 		neverRestoreSelection
 ]
 
-{ #category : #initialization }
+{ #category : #'private factory' }
 ClyFullBrowser >> newMethodView [
 	"Creates the method pane"
 
@@ -529,7 +531,7 @@ ClyFullBrowser >> newMethodView [
 		requestNavigationBy: #methodSelectionChanged
 ]
 
-{ #category : #initialization }
+{ #category : #'private factory' }
 ClyFullBrowser >> newPackageView [
 	"Creates the package pane"
 	| newPackageView |
