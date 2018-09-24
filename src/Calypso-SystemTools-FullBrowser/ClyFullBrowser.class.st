@@ -375,30 +375,10 @@ ClyFullBrowser >> initialize [
 { #category : #initialization }
 ClyFullBrowser >> initializeNavigationViews [
 
-	packageView := self newNavigationView
-		treeStructure: 	{ 
-			ClyProjectChildItem -> #prepareProjectItemsQueryFrom:in:.
-			RPackage -> #prepareClassGroupQueryFrom:in: };
-		enableFilterUsing: ClyRegexPattern new;
-		requestNavigationBy: #packageSelectionChanged.
-	packageView filterField announcer when: RubTextChanged send: #updateDefaultPackageFilter to: self.
-	
-	classView := self newNavigationView
-		displayMainColumnBy: [ :cell :item | 
-			self specifyClassItemNameOn: cell label for: item browserItem];
-		enableFilter;
-		requestNavigationBy: #classSelectionChanged.
-
-	methodGroupView := self newNavigationView
-		treeStructure: { 
-			ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: };
-		requestNavigationBy: #methodGroupSelectionChanged;
-		neverRestoreSelection.
-	
-	methodView := self newNavigationView
-		displayMainColumnBy: [ :cell :item | 
-			self specifyMethodItemNameOn: cell label for: item browserItem];
-		requestNavigationBy: #methodSelectionChanged.
+	packageView := self newPackageView.
+	classView := self newClassView.
+	methodGroupView := self newMethodGroupView.
+	methodView := self newMethodView
 ]
 
 { #category : #testing }
@@ -515,6 +495,57 @@ ClyFullBrowser >> navigateSpawnedFullBrowser: aFullBrowser [
 	
 	self packageSelection isEmpty ifFalse: [ 
 		^aFullBrowser selectPackage: self packageSelection lastSelectedItem actualObject]
+]
+
+{ #category : #initialization }
+ClyFullBrowser >> newClassView [
+	"Creates the class pane"
+
+	^ self newNavigationView
+		displayMainColumnBy: [ :cell :item | 
+			self specifyClassItemNameOn: cell label for: item browserItem];
+		enableFilter;
+		requestNavigationBy: #classSelectionChanged	
+]
+
+{ #category : #initialization }
+ClyFullBrowser >> newMethodGroupView [
+	"Creates the 'method group' pane (this is the protocol [ane])"
+
+	^ self newNavigationView
+		treeStructure: { 
+			ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: };
+		requestNavigationBy: #methodGroupSelectionChanged;
+		neverRestoreSelection
+]
+
+{ #category : #initialization }
+ClyFullBrowser >> newMethodView [
+	"Creates the method pane"
+
+	^ self newNavigationView
+		displayMainColumnBy: [ :cell :item | 
+			self specifyMethodItemNameOn: cell label for: item browserItem];
+		requestNavigationBy: #methodSelectionChanged
+]
+
+{ #category : #initialization }
+ClyFullBrowser >> newPackageView [
+	"Creates the package pane"
+	| newPackageView |
+	
+	newPackageView := self newNavigationView
+		treeStructure: 	{ 
+			ClyProjectChildItem -> #prepareProjectItemsQueryFrom:in:.
+			RPackage -> #prepareClassGroupQueryFrom:in: };
+		enableFilterUsing: ClyRegexPattern new;
+		requestNavigationBy: #packageSelectionChanged.
+	newPackageView filterField announcer 
+		when: RubTextChanged 
+		send: #updateDefaultPackageFilter 
+		to: self.
+		
+	^ newPackageView
 ]
 
 { #category : #updating }
