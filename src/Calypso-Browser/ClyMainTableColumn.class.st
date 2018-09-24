@@ -25,3 +25,9 @@ ClyMainTableColumn >> createCellFor: aDataSourceItem in: aQueryView [
 	cell build.
 	^cell
 ]
+
+{ #category : #testing }
+ClyMainTableColumn >> isMainColumn [ 
+
+	^ true
+]
