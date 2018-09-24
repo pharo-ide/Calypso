@@ -88,6 +88,14 @@ ClyConstantMethodQueryTests >> testFromSystemScope [
 ]
 
 { #category : #tests }
+ClyConstantMethodQueryTests >> testFromWrongClassScope [
+
+	self queryFromScope: ClyClassScope of: self class superclass.
+	
+	self assert: resultItems isEmpty
+]
+
+{ #category : #tests }
 ClyConstantMethodQueryTests >> testIsEmptyFromEmptyMethodScope [
 	"Constant query do not depends on scope. So we redefine this method"
 	<expectedFailure>
