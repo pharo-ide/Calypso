@@ -4,6 +4,12 @@ Class {
 	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
+{ #category : #testing }
+ClyResetMethodTagForEditorCommand class >> canBeExecutedInCodeMethodEditor: aTool [
+	
+	^ true
+]
+
 { #category : #activation }
 ClyResetMethodTagForEditorCommand class >> methodEditorShorcutActivation [
 	<classAnnotation>
@@ -13,7 +19,8 @@ ClyResetMethodTagForEditorCommand class >> methodEditorShorcutActivation [
 
 { #category : #accessing }
 ClyResetMethodTagForEditorCommand >> defaultMenuItemName [
-	^'Unclassify method'
+
+	^ 'Unclassify method'
 ]
 
 { #category : #execution }
