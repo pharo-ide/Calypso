@@ -56,7 +56,7 @@ ClyConstantMethodQuery >> async [
 { #category : #execution }
 ClyConstantMethodQuery >> buildResult: aQueryResult [
 
-	aQueryResult fillWith: self installedMethods
+	aQueryResult fillWith: self scopedMethods
 ]
 
 { #category : #execution }
@@ -111,6 +111,22 @@ ClyConstantMethodQuery >> methods [
 { #category : #accessing }
 ClyConstantMethodQuery >> methods: anObject [
 	methods := anObject asIdentitySet
+]
+
+{ #category : #execution }
+ClyConstantMethodQuery >> scopedMethods [
+
+	| installedMethods scopedMethods |
+	installedMethods := self installedMethods.
+	scopedMethods := IdentitySet new.
+	
+	scope methodsDo: [ :each | 
+		(installedMethods includes: each) ifTrue: [ 
+			scopedMethods add: each.
+			installedMethods remove: each.
+			installedMethods ifEmpty: [ ^scopedMethods ] ]].
+	
+	^scopedMethods
 ]
 
 { #category : #testing }
