@@ -159,7 +159,7 @@ ClyFullBrowser class >> worldMenuOn: aBuilder [
 		action: [ target open ]
 ]
 
-{ #category : #'selection changes' }
+{ #category : #private }
 ClyFullBrowser >> adoptForExtendedClass [
 	| extendingPackages extraGroups |
 	self classSelection isEmpty ifTrue: [ ^self ].
@@ -175,7 +175,7 @@ ClyFullBrowser >> adoptForExtendedClass [
 	methodGroupQuery := methodGroupQuery , extraGroups
 ]
 
-{ #category : #'selection changes' }
+{ #category : #private }
 ClyFullBrowser >> adoptMetaLevelForSelectedClass [
 	| selectedClass extendedMetaLevel |
 	self classSelection isEmpty ifTrue: [ ^self ].
@@ -269,7 +269,7 @@ ClyFullBrowser >> chooseClassesForNewMethod: aMethod [
 	^selectedClasses, {methodClass}
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> classGroupSelection [
 	^packageView selection asSelectedItemsOf: ClyClassGroup 
 ]
@@ -282,12 +282,12 @@ ClyFullBrowser >> classScopeForMethods [
 	^self extendClassScopeForMethods: currentClassScope
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> classSelection [
 	^classView selection
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> classSelectionChanged [
 	
 	self changeStateBy: [
@@ -302,7 +302,7 @@ ClyFullBrowser >> classSelectionChanged [
 	]
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> classView [
 	^ classView
 ]
@@ -438,12 +438,12 @@ ClyFullBrowser >> methodGroupQuery: aQuery [
 	methodGroupQuery := aQuery
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodGroupSelection [
 	^methodGroupView selection
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodGroupSelectionChanged [
 		
 	| methodQueries |
@@ -458,17 +458,17 @@ ClyFullBrowser >> methodGroupSelectionChanged [
 		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascending)
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> methodGroupView [
 	^ methodGroupView
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodSelection [
 	^methodView selection
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodSelectionChanged [
 
 	| actualMethods |
@@ -479,7 +479,7 @@ ClyFullBrowser >> methodSelectionChanged [
 			eachGroup actualObject includesMethod: eachMethod]]
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> methodView [
 	^ methodView
 ]
@@ -499,7 +499,7 @@ ClyFullBrowser >> navigateSpawnedFullBrowser: aFullBrowser [
 		^aFullBrowser selectPackage: self packageSelection lastSelectedItem actualObject]
 ]
 
-{ #category : #'private factory' }
+{ #category : #initialization }
 ClyFullBrowser >> newClassView [
 	"Creates the class pane"
 
@@ -510,7 +510,7 @@ ClyFullBrowser >> newClassView [
 		requestNavigationBy: #classSelectionChanged	
 ]
 
-{ #category : #'private factory' }
+{ #category : #initialization }
 ClyFullBrowser >> newMethodGroupView [
 	"Creates the 'method group' pane (this is the protocol [ane])"
 
@@ -521,7 +521,7 @@ ClyFullBrowser >> newMethodGroupView [
 		neverRestoreSelection
 ]
 
-{ #category : #'private factory' }
+{ #category : #initialization }
 ClyFullBrowser >> newMethodView [
 	"Creates the method pane"
 
@@ -531,7 +531,7 @@ ClyFullBrowser >> newMethodView [
 		requestNavigationBy: #methodSelectionChanged
 ]
 
-{ #category : #'private factory' }
+{ #category : #initialization }
 ClyFullBrowser >> newPackageView [
 	"Creates the package pane"
 	| newPackageView |
@@ -563,18 +563,18 @@ ClyFullBrowser >> newWindowTitle [
 	^newTitle
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> packageSelection [
 	^packageView selection asSelectedParentsOf: RPackage
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> packageSelectionChanged [
 	
 	self switchToFlatClasses 
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> packageView [
 	^ packageView
 ]
@@ -597,7 +597,7 @@ ClyFullBrowser >> prepareInitialState [
 	self switchToPackages
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> projectChildrenSelection [
 	^packageView selection asSelectedParentsOf: ClyProjectChildItem
 ]
@@ -608,7 +608,7 @@ ClyFullBrowser >> projectClass [
 	^ ClyManagedProject
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> projectSelection [
 	^packageView selection asSelectedParentsOf: self projectClass
 ]
@@ -780,7 +780,7 @@ ClyFullBrowser >> snapshotState [
 	^ClyFullBrowserState of: self
 ]
 
-{ #category : #initialization }
+{ #category : #private }
 ClyFullBrowser >> specifyClassItemNameOn: nameMorph for: classItem [
 	| definition |
 	nameMorph contents: classItem name.
@@ -793,7 +793,7 @@ ClyFullBrowser >> specifyClassItemNameOn: nameMorph for: classItem [
 		ifFalse: [nameMorph color: Smalltalk ui theme classExtensionColor]
 ]
 
-{ #category : #initialization }
+{ #category : #private }
 ClyFullBrowser >> specifyMethodItemNameOn: nameMorph for: methodItem [
 	| definition |
 	nameMorph contents: methodItem name.
@@ -907,7 +907,7 @@ ClyFullBrowser >> switchToVariables [
 	]
 ]
 
-{ #category : #initialization }
+{ #category : #private }
 ClyFullBrowser >> updateDefaultPackageFilter [
 
 	DefaultPackageFilter := packageView filterField getText ifEmpty: [ nil ]
