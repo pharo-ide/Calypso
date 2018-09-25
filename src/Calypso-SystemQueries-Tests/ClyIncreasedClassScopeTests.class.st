@@ -13,11 +13,11 @@ ClyIncreasedClassScopeTests >> scopeClass [
 { #category : #tests }
 ClyIncreasedClassScopeTests >> testClassEnumeration [
 
-	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {Object. Array}.
+	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {Array. Object}.
 	
 	scope classesDo: [ :each | result add: each ].
 	
-	self assert: result asArray equals: {Object. Array}
+	self assert: result asArray equals: {Array. Object}
 ]
 
 { #category : #tests }
@@ -27,7 +27,7 @@ ClyIncreasedClassScopeTests >> testClassEnumerationOverInstanceSideBasisWhenBoth
 	
 	scope classesDo: [ :each | result add: each].
 	
-	self assert: result asSet equals: {Object. Object class. } asSet
+	self assert: result asSet equals: {Object. Object class } asSet
 ]
 
 { #category : #tests }
@@ -38,6 +38,20 @@ ClyIncreasedClassScopeTests >> testClassEnumerationOverMetaclassBasisWhenInstanc
 	scope classesDo: [ :each | result add: each].
 	
 	self assert: result asSet equals: { Object } asSet
+]
+
+{ #category : #tests }
+ClyIncreasedClassScopeTests >> testClassSideMethodsEnumerationWhenOverriddenMethodsAreHidden [
+	| expected |
+	scope := ClyIncreasedClassScope of: ClySubclassN1OfClass1FromP1 withAll: {ClyClass1FromP1}.
+	scope localScopeClass: ClyClassSideScope.
+	scope hideOverriddenMethods.
+	
+	scope methodsDo: [ :each | result add: each ].
+	
+	"overriddenClassSideMethod is overridden in ClySubclassN1OfClass1FromP1"
+	expected := ClyClass1FromP1 class localMethods asIdentitySet copyWithout: ClyClass1FromP1 class >> #overriddenClassSideMethod.
+	self assert: result asIdentitySet equals: expected
 ]
 
 { #category : #tests }
@@ -97,6 +111,6 @@ ClyIncreasedClassScopeTests >> testMethodsEnumerationWhenOverriddenMethodsAreHid
 	scope methodsDo: [ :each | result add: each ].
 	
 	"tag1Method1 is overridden in ClySubclassN1OfClass1FromP1"
-	expected := ClyClass1FromP1 localMethods copyWithout: ClyClass1FromP1 >> #tag1Method1.
-	self assert: result asIdentitySet equals: expected asIdentitySet
+	expected := ClyClass1FromP1 localMethods asIdentitySet copyWithout: ClyClass1FromP1 >> #tag1Method1.
+	self assert: result asIdentitySet equals: expected
 ]

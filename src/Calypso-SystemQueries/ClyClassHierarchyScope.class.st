@@ -45,8 +45,8 @@ ClyClassHierarchyScope class >> of: basisObjects in: aNavigationEnvironment loca
 ]
 
 { #category : #'instance creation' }
-ClyClassHierarchyScope class >> of: basisObjects localScope: aClassScopeClass [
-	^ (self of: basisObjects) localScopeClass: aClassScopeClass
+ClyClassHierarchyScope class >> of: basisObjects localScope: aLocalScopeClass [
+	^ (self of: basisObjects) localScopeClass: aLocalScopeClass
 ]
 
 { #category : #'instance creation' }

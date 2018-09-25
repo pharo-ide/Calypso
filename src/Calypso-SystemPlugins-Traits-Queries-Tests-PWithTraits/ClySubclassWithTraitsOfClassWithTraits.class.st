@@ -9,3 +9,8 @@ Class {
 { #category : #'as yet unclassified' }
 ClySubclassWithTraitsOfClassWithTraits >> localMethodFromSubclass [
 ]
+
+{ #category : #'as yet unclassified' }
+ClySubclassWithTraitsOfClassWithTraits >> methodFromRoot1 [ 
+	^#overriddenTraitMethodInClass
+]

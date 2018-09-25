@@ -8,6 +8,20 @@ Class {
 	#category : #'Calypso-SystemQueries-Scopes'
 }
 
+{ #category : #'instance creation' }
+ClyIncreasedClassScope class >> of: aBasisClass withAll: extraClasses [
+
+	^(self of: aBasisClass)
+		extraClasses: extraClasses
+]
+
+{ #category : #'instance creation' }
+ClyIncreasedClassScope class >> of: aBasisClass withAll: extraClasses localScope: aLocalScopeClass [
+
+	^(self of: aBasisClass localScope: aLocalScopeClass)
+		extraClasses: extraClasses
+]
+
 { #category : #comparing }
 ClyIncreasedClassScope >> = anObject [
 	"Answer whether the receiver and anObject represent the same object."
@@ -21,7 +35,8 @@ ClyIncreasedClassScope >> = anObject [
 { #category : #queries }
 ClyIncreasedClassScope >> classesDo: aBlock [
 
-	extraClasses do: aBlock
+	extraClasses do: [:each | 
+		self metaLevelsOf: each do: aBlock]
 ]
 
 { #category : #queries }
@@ -59,11 +74,18 @@ ClyIncreasedClassScope >> initialize [
 ]
 
 { #category : #testing }
+ClyIncreasedClassScope >> isMethod: aMethod overriddenBy: aClass [
+
+	self metaLevelsOf: aClass do: [:eachClassSide | 
+		(eachClassSide overridesMethod: aMethod) ifTrue: [ ^true ] ].
+	^false
+]
+
+{ #category : #testing }
 ClyIncreasedClassScope >> isMethodOverridden: aMethod [
 
 	^basisObjects anySatisfy: [ :each | 
-		(each inheritsFrom: aMethod origin) 
-			and: [ (each lookupSelector: aMethod selector) ~~ aMethod] ]
+		self isMethod: aMethod overriddenBy: each]
 ]
 
 { #category : #queries }

@@ -15,3 +15,11 @@ Behavior >> includesMethodsAffectedBy: aSystemAnnouncement [
 Behavior >> metaLevelScope [
 	^self isInstanceSide ifTrue: [ ClyInstanceSideScope ] ifFalse: [ ClyClassSideScope ]
 ]
+
+{ #category : #'*Calypso-SystemQueries' }
+Behavior >> overridesMethod: aMethod [
+
+	^((self inheritsFrom: aMethod origin) or: [ 
+		self isComposedBy: aMethod origin  ])
+			and: [ (self lookupSelector: aMethod selector) originMethod ~~ aMethod]
+]
