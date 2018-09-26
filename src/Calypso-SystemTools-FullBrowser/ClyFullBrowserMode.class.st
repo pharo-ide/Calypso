@@ -17,13 +17,6 @@ ClyFullBrowserMode class >> initialFor: aBrowser [
 ]
 
 { #category : #'instance creation' }
-ClyFullBrowserMode class >> metaLevelScope: aMetaLevelScopeClass methodGroupQuery: aQuery [
-	^self new 
-		metaLevelScope: aMetaLevelScopeClass;
-		methodGroupQuery: aQuery
-]
-
-{ #category : #'instance creation' }
 ClyFullBrowserMode class >> switchedFrom: anotherBrowserMode [
 
 	^(self initialFor: anotherBrowserMode browser)
@@ -46,6 +39,23 @@ ClyFullBrowserMode >> classScopeForMethods [
 	currentClassScope := methodGroupQuery scope asScope: metaLevelScope.
 	
 	^self extendClassScopeForMethods: currentClassScope
+]
+
+{ #category : #'current scopes' }
+ClyFullBrowserMode >> defaultClassScopeForMethods [
+
+	| selectedClassScope |
+	selectedClassScope := browser classSelection asItemsScope: metaLevelScope.
+	
+	^self extendClassScopeForMethods: selectedClassScope
+]
+
+{ #category : #converting }
+ClyFullBrowserMode >> defaultForSelectedClasses [
+	^(self class initialFor: browser)
+		metaLevelScope: metaLevelScope;
+		methodGroupQuery: methodGroupQuery;
+		initializeForSelectedClasses 
 ]
 
 { #category : #initialization }
@@ -71,6 +81,12 @@ ClyFullBrowserMode >> initializeFor: aBrowser [
 	browser := aBrowser.
 	metaLevelScope := ClyInstanceSideScope.
 	methodGroupQuery := self emptyMethodGroupQueryFor: aBrowser
+]
+
+{ #category : #initialization }
+ClyFullBrowserMode >> initializeForSelectedClasses [
+
+	self subclassResponsibility 
 ]
 
 { #category : #initialization }
@@ -113,15 +129,15 @@ ClyFullBrowserMode >> withMetaLevelScope: aMetaLevelScopeClass [
 
 	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
 	
-	^self class 
-		metaLevelScope: aMetaLevelScopeClass 
+	^(self class initialFor: browser) 
+		metaLevelScope: aMetaLevelScopeClass; 
 		methodGroupQuery: (methodGroupQuery withMetaLevelScope: aMetaLevelScopeClass)
 ]
 
 { #category : #converting }
 ClyFullBrowserMode >> withRestrictMethodVisibilityBy: aClassScope [
 
-	^self class 
-		metaLevelScope: metaLevelScope
+	^(self class initialFor: browser)
+		metaLevelScope: metaLevelScope;
 		methodGroupQuery: (methodGroupQuery restrictedByScope: aClassScope)
 ]
