@@ -13,7 +13,8 @@ Class {
 	#superclass : #ClyBrowserState,
 	#instVars : [
 		'metaLevelScope',
-		'methodGroupQuery'
+		'methodGroupQuery',
+		'mode'
 	],
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
@@ -43,13 +44,24 @@ ClyFullBrowserState >> methodGroupQuery: aQuery [
 	methodGroupQuery := aQuery
 ]
 
+{ #category : #accessing }
+ClyFullBrowserState >> mode [
+	^ mode
+]
+
+{ #category : #accessing }
+ClyFullBrowserState >> mode: anObject [
+	mode := anObject
+]
+
 { #category : #private }
 ClyFullBrowserState >> restoreStateOf: aBrowser [
 	super restoreStateOf: aBrowser.
 	
 	aBrowser 
 		metaLevelScope: metaLevelScope;
-		methodGroupQuery: methodGroupQuery
+		methodGroupQuery: methodGroupQuery;
+		mode: (mode copy browser: aBrowser)
 ]
 
 { #category : #operations }
@@ -57,5 +69,6 @@ ClyFullBrowserState >> retrieveStateFrom: aBrowser [
 	super retrieveStateFrom: aBrowser.
 	
 	metaLevelScope := aBrowser metaLevelScope.
-	methodGroupQuery := aBrowser methodGroupQuery
+	methodGroupQuery := aBrowser methodGroupQuery.
+	mode := aBrowser mode copy browser: nil
 ]

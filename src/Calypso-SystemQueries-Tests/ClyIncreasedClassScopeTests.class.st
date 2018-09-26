@@ -79,6 +79,39 @@ ClyIncreasedClassScopeTests >> testComparisonWithSimilarScopeButWithDifferentOve
 ]
 
 { #category : #tests }
+ClyIncreasedClassScopeTests >> testConvertingToIncreasedScopeByExtraClassScope [
+	| convertedScope extraClassScope |
+	scope := self singleScopeSample.
+	scope extraClasses: { Point. Object }.
+	
+	extraClassScope := ClySuperclassScope of: self class in: environment.
+	convertedScope := scope increasedByClassesFrom: extraClassScope.
+	
+	self assert: convertedScope class equals: scope class.
+	self assert: convertedScope basisObjects equals: scope basisObjects.
+	self 
+		assert: convertedScope extraClasses asSet 
+		equals: (scope extraClasses, self class allSuperclasses) asSet.
+]
+
+{ #category : #tests }
+ClyIncreasedClassScopeTests >> testConvertingToReducedScopeByExtraClassScope [
+	| convertedScope extraClassScope increasedScope |
+	scope := self multipleScopeSample.
+	scope extraClasses: { Point }.
+	extraClassScope := ClySuperclassScope of: self class in: environment.
+	
+	increasedScope := scope increasedByClassesFrom: extraClassScope.
+	convertedScope := increasedScope reducedByClassesFrom: extraClassScope.
+	
+	self assert: convertedScope class equals: scope class.
+	self assert: convertedScope basisObjects equals: scope basisObjects.
+	self 
+		assert: convertedScope extraClasses asSet 
+		equals: scope extraClasses asSet
+]
+
+{ #category : #tests }
 ClyIncreasedClassScopeTests >> testMethodsEnumeration [
 	| expected |
 	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {Object}.

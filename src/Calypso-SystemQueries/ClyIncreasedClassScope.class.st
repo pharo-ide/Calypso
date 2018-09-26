@@ -50,8 +50,8 @@ ClyIncreasedClassScope >> extraClasses [
 ]
 
 { #category : #accessing }
-ClyIncreasedClassScope >> extraClasses: anObject [
-	extraClasses := anObject
+ClyIncreasedClassScope >> extraClasses: aCollection [
+	extraClasses := aCollection asArray
 ]
 
 { #category : #comparing }
@@ -64,6 +64,12 @@ ClyIncreasedClassScope >> hash [
 { #category : #accessing }
 ClyIncreasedClassScope >> hideOverriddenMethods [
 	showsOverriddenMethods := false
+]
+
+{ #category : #converting }
+ClyIncreasedClassScope >> increasedByClassesFrom: aClassScope [
+
+	^self withExtraClasses: aClassScope collectAllClasses
 ]
 
 { #category : #accessing }
@@ -98,6 +104,17 @@ ClyIncreasedClassScope >> methodsDo: aBlock [
 			(self isMethodOverridden: eachMethod) ifFalse: [ aBlock value: eachMethod ]]]
 ]
 
+{ #category : #converting }
+ClyIncreasedClassScope >> reducedByClassesFrom: aClassScope [
+
+	| myClasses classesToExclude |
+	myClasses := extraClasses collect: [:each | each instanceSide].
+	classesToExclude := aClassScope collectAllClasses collect: [:each | each instanceSide].
+
+	^self copy
+		extraClasses: (myClasses copyWithoutAll: classesToExclude)
+]
+
 { #category : #accessing }
 ClyIncreasedClassScope >> showOverriddenMethods [
 	showsOverriddenMethods := true
@@ -111,4 +128,15 @@ ClyIncreasedClassScope >> showsOverriddenMethods [
 { #category : #accessing }
 ClyIncreasedClassScope >> showsOverriddenMethods: anObject [
 	showsOverriddenMethods := anObject
+]
+
+{ #category : #converting }
+ClyIncreasedClassScope >> withExtraClasses: classes [
+	| newExtraClasses |
+	newExtraClasses := OrderedCollection withAll: extraClasses.
+	classes do: [ :each | 
+		(newExtraClasses identityIncludes: each) ifFalse: [ newExtraClasses add: each ] ].
+
+	^self copy 
+		extraClasses: newExtraClasses
 ]

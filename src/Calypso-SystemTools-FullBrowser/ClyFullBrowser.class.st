@@ -34,12 +34,13 @@ Class {
 		'methodGroupView',
 		'methodView',
 		'metaLevelScope',
-		'methodGroupQuery'
+		'methodGroupQuery',
+		'mode'
 	],
 	#classVars : [
 		'DefaultPackageFilter'
 	],
-	#category : 'Calypso-SystemTools-FullBrowser-UI'
+	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
 { #category : #'tools registration' }
@@ -369,7 +370,7 @@ ClyFullBrowser >> extendClassScopeForMethods: aClassScope [
 { #category : #initialization }
 ClyFullBrowser >> initialize [
 	super initialize.
-	metaLevelScope := ClyInstanceSideScope
+	
 ]
 
 { #category : #initialization }
@@ -502,6 +503,16 @@ ClyFullBrowser >> methodView [
 	^ methodView
 ]
 
+{ #category : #accessing }
+ClyFullBrowser >> mode [
+	^ mode
+]
+
+{ #category : #accessing }
+ClyFullBrowser >> mode: anObject [
+	mode := anObject
+]
+
 { #category : #navigation }
 ClyFullBrowser >> navigateSpawnedFullBrowser: aFullBrowser [
 	self isScopedModeEnabled ifTrue: [
@@ -559,6 +570,8 @@ ClyFullBrowser >> prepareDefaultState [
 { #category : #initialization }
 ClyFullBrowser >> prepareInitialState [
 
+	mode := ClyFullBrowserMethodGroupMode initialFor: self.
+	metaLevelScope := ClyInstanceSideScope.
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: navigationEnvironment).
 	
 	self switchToPackages
@@ -584,6 +597,7 @@ ClyFullBrowser >> projectSelection [
 ClyFullBrowser >> restrictMethodVisibilityBy: aClassScope [
 
 	self changeMethodGroupQueryBy: [
+		mode := mode withRestrictMethodVisibilityBy: aClassScope.
 		methodGroupQuery restrictedByScope: aClassScope]
 ]
 
@@ -824,6 +838,7 @@ ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
 	
 	self changeMethodGroupQueryBy: [
+		mode := mode withMetaLevelScope: aMetaLevelScopeClass.
 		metaLevelScope := aMetaLevelScopeClass.				
 		methodGroupQuery withMetaLevelScope: metaLevelScope
 	]
@@ -833,6 +848,7 @@ ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 ClyFullBrowser >> switchToMethodGroups [
 	
 	self changeMethodGroupQueryBy: [ 
+		mode := mode switchToMethodGroups.
 		ClyAllMethodGroups sortedFrom: self classScopeForMethods
 	]
 ]
@@ -867,6 +883,7 @@ ClyFullBrowser >> switchToVariables [
 	| classScope |
 	
 	self changeMethodGroupQueryBy: [
+		mode := mode switchToVariables.
 		classScope := self classScopeForMethods.
 		ClyAllVariables 
 			from: classScope, classScope asInheritedScope 
