@@ -1,11 +1,11 @@
 Class {
-	#name : #ClyFullBrowserVariableMode,
-	#superclass : #ClyFullBrowserMode,
+	#name : #ClyBrowseClassMethodsWithVariablesMode,
+	#superclass : #ClyBrowseClassMethodsMode,
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
 { #category : #converting }
-ClyFullBrowserVariableMode >> defaultForSelectedClasses [
+ClyBrowseClassMethodsWithVariablesMode >> defaultForSelectedClasses [
 	browser classSelection isEmpty ifTrue: [ ^super defaultForSelectedClasses ].
 	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [
 		 ^self switchToMethodGroups; initializeForSelectedClasses ].
@@ -14,14 +14,14 @@ ClyFullBrowserVariableMode >> defaultForSelectedClasses [
 ]
 
 { #category : #initialization }
-ClyFullBrowserVariableMode >> emptyMethodGroupQueryFor: aBrowser [
+ClyBrowseClassMethodsWithVariablesMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllVariables 
 		from: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
 		as: ClyGroupedInstanceVariables withDefaultHierarchy
 ]
 
 { #category : #initialization }
-ClyFullBrowserVariableMode >> initializeForSelectedClasses [
+ClyBrowseClassMethodsWithVariablesMode >> initializeForSelectedClasses [
 	| classScope |
 	classScope := self classScopeForMethods.
 	methodGroupQuery := ClyAllVariables 
@@ -31,7 +31,7 @@ ClyFullBrowserVariableMode >> initializeForSelectedClasses [
 ]
 
 { #category : #initialization }
-ClyFullBrowserVariableMode >> initializeFromMode: aBrowserMode [
+ClyBrowseClassMethodsWithVariablesMode >> initializeFromMode: aBrowserMode [
 	| classScope |
 	metaLevelScope := aBrowserMode metaLevelScope.
 	classScope := aBrowserMode classScopeForMethods.
@@ -41,10 +41,10 @@ ClyFullBrowserVariableMode >> initializeFromMode: aBrowserMode [
 ]
 
 { #category : #converting }
-ClyFullBrowserVariableMode >> switchToMethodGroups [
-	^ClyFullBrowserMethodGroupMode switchedFrom: self
+ClyBrowseClassMethodsWithVariablesMode >> switchToMethodGroups [
+	^ClyBrowseClassMethodsWithGroupsMode switchedFrom: self
 ]
 
 { #category : #converting }
-ClyFullBrowserVariableMode >> switchToVariables [
+ClyBrowseClassMethodsWithVariablesMode >> switchToVariables [
 ]

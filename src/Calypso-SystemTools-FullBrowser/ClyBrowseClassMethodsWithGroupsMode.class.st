@@ -1,11 +1,11 @@
 Class {
-	#name : #ClyFullBrowserMethodGroupMode,
-	#superclass : #ClyFullBrowserMode,
+	#name : #ClyBrowseClassMethodsWithGroupsMode,
+	#superclass : #ClyBrowseClassMethodsMode,
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
 { #category : #initialization }
-ClyFullBrowserMethodGroupMode >> adoptForExtendedClass [
+ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClass [
 	| extendingPackages extraGroups |
 	browser classSelection isEmpty ifTrue: [ ^self ].
 	"methodGroupQuery := methodGroupQuery withoutItemsOfType: RPackage." "To remove previous package injection"
@@ -21,7 +21,7 @@ ClyFullBrowserMethodGroupMode >> adoptForExtendedClass [
 ]
 
 { #category : #initialization }
-ClyFullBrowserMethodGroupMode >> adoptMetaLevelForSelectedClass [
+ClyBrowseClassMethodsWithGroupsMode >> adoptMetaLevelForSelectedClass [
 	| selectedClass extendedMetaLevel |
 	browser classSelection isEmpty ifTrue: [ ^self ].
 	selectedClass := browser classSelection lastSelectedItem.
@@ -38,28 +38,28 @@ ClyFullBrowserMethodGroupMode >> adoptMetaLevelForSelectedClass [
 ]
 
 { #category : #initialization }
-ClyFullBrowserMethodGroupMode >> emptyMethodGroupQueryFor: aBrowser [
+ClyBrowseClassMethodsWithGroupsMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
 ]
 
 { #category : #initialization }
-ClyFullBrowserMethodGroupMode >> initializeForSelectedClasses [
+ClyBrowseClassMethodsWithGroupsMode >> initializeForSelectedClasses [
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods.
 	self adoptForExtendedClass.
 	methodGroupQuery := methodGroupQuery restrictedByScope: self defaultClassScopeForMethods
 ]
 
 { #category : #initialization }
-ClyFullBrowserMethodGroupMode >> initializeFromMode: aBrowserMode [
+ClyBrowseClassMethodsWithGroupsMode >> initializeFromMode: aBrowserMode [
 	metaLevelScope := aBrowserMode metaLevelScope.
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: aBrowserMode classScopeForMethods
 ]
 
 { #category : #converting }
-ClyFullBrowserMethodGroupMode >> switchToMethodGroups [
+ClyBrowseClassMethodsWithGroupsMode >> switchToMethodGroups [
 ]
 
 { #category : #converting }
-ClyFullBrowserMethodGroupMode >> switchToVariables [
-	^ClyFullBrowserVariableMode switchedFrom: self
+ClyBrowseClassMethodsWithGroupsMode >> switchToVariables [
+	^ClyBrowseClassMethodsWithVariablesMode switchedFrom: self
 ]

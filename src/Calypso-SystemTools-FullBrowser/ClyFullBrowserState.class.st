@@ -12,36 +12,36 @@ Class {
 	#name : #ClyFullBrowserState,
 	#superclass : #ClyBrowserState,
 	#instVars : [
-		'mode'
+		'browseMethodsMode'
 	],
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
+
+{ #category : #accessing }
+ClyFullBrowserState >> browseMethodsMode [
+	^ browseMethodsMode
+]
+
+{ #category : #accessing }
+ClyFullBrowserState >> browseMethodsMode: anObject [
+	browseMethodsMode := anObject
+]
 
 { #category : #private }
 ClyFullBrowserState >> createBrowser [
 	^ClyFullBrowser new
 ]
 
-{ #category : #accessing }
-ClyFullBrowserState >> mode [
-	^ mode
-]
-
-{ #category : #accessing }
-ClyFullBrowserState >> mode: anObject [
-	mode := anObject
-]
-
 { #category : #private }
 ClyFullBrowserState >> restoreStateOf: aBrowser [
 	super restoreStateOf: aBrowser.
 	
-	aBrowser mode: (mode copy browser: aBrowser)
+	aBrowser browseMethodsMode: (browseMethodsMode copy browser: aBrowser)
 ]
 
 { #category : #operations }
 ClyFullBrowserState >> retrieveStateFrom: aBrowser [
 	super retrieveStateFrom: aBrowser.
 	
-	mode := aBrowser mode copy browser: nil
+	browseMethodsMode := aBrowser browseMethodsMode copy browser: nil
 ]

@@ -1,5 +1,5 @@
 Class {
-	#name : #ClyFullBrowserMode,
+	#name : #ClyBrowseClassMethodsMode,
 	#superclass : #Object,
 	#instVars : [
 		'metaLevelScope',
@@ -10,31 +10,31 @@ Class {
 }
 
 { #category : #'instance creation' }
-ClyFullBrowserMode class >> initialFor: aBrowser [
+ClyBrowseClassMethodsMode class >> initialFor: aBrowser [
 
 	^self new 
 		initializeFor: aBrowser
 ]
 
 { #category : #'instance creation' }
-ClyFullBrowserMode class >> switchedFrom: anotherBrowserMode [
+ClyBrowseClassMethodsMode class >> switchedFrom: anotherBrowserMode [
 
 	^(self initialFor: anotherBrowserMode browser)
 		initializeFromMode: anotherBrowserMode
 ]
 
 { #category : #accessing }
-ClyFullBrowserMode >> browser [
+ClyBrowseClassMethodsMode >> browser [
 	^ browser
 ]
 
 { #category : #accessing }
-ClyFullBrowserMode >> browser: anObject [
+ClyBrowseClassMethodsMode >> browser: anObject [
 	browser := anObject
 ]
 
 { #category : #'current scopes' }
-ClyFullBrowserMode >> classScopeForMethods [
+ClyBrowseClassMethodsMode >> classScopeForMethods [
 	| currentClassScope |
 	currentClassScope := methodGroupQuery scope asScope: metaLevelScope.
 	
@@ -42,17 +42,17 @@ ClyFullBrowserMode >> classScopeForMethods [
 ]
 
 { #category : #'current queries' }
-ClyFullBrowserMode >> currentMethodQuery [
+ClyBrowseClassMethodsMode >> currentMethodQuery [
 	^ClyAllMethods sortedFrom: self classScopeForMethods
 ]
 
 { #category : #'current scopes' }
-ClyFullBrowserMode >> currentSideOfClass: aClass [
+ClyBrowseClassMethodsMode >> currentSideOfClass: aClass [
 	^metaLevelScope metaLevelOf: aClass
 ]
 
 { #category : #'current scopes' }
-ClyFullBrowserMode >> defaultClassScopeForMethods [
+ClyBrowseClassMethodsMode >> defaultClassScopeForMethods [
 
 	| selectedClassScope |
 	selectedClassScope := browser classSelection asItemsScope: metaLevelScope.
@@ -61,7 +61,7 @@ ClyFullBrowserMode >> defaultClassScopeForMethods [
 ]
 
 { #category : #converting }
-ClyFullBrowserMode >> defaultForSelectedClasses [
+ClyBrowseClassMethodsMode >> defaultForSelectedClasses [
 	^(self class initialFor: browser)
 		metaLevelScope: metaLevelScope;
 		methodGroupQuery: methodGroupQuery;
@@ -69,12 +69,12 @@ ClyFullBrowserMode >> defaultForSelectedClasses [
 ]
 
 { #category : #initialization }
-ClyFullBrowserMode >> emptyMethodGroupQueryFor: aBrowser [ 
+ClyBrowseClassMethodsMode >> emptyMethodGroupQueryFor: aBrowser [ 
 	self subclassResponsibility 
 ]
 
 { #category : #'current scopes' }
-ClyFullBrowserMode >> extendClassScopeForMethods: aClassScope [
+ClyBrowseClassMethodsMode >> extendClassScopeForMethods: aClassScope [
 	| resultScope |
 	resultScope := aClassScope.
 	
@@ -86,7 +86,7 @@ ClyFullBrowserMode >> extendClassScopeForMethods: aClassScope [
 ]
 
 { #category : #initialization }
-ClyFullBrowserMode >> initializeFor: aBrowser [
+ClyBrowseClassMethodsMode >> initializeFor: aBrowser [
 
 	browser := aBrowser.
 	metaLevelScope := ClyInstanceSideScope.
@@ -94,60 +94,60 @@ ClyFullBrowserMode >> initializeFor: aBrowser [
 ]
 
 { #category : #initialization }
-ClyFullBrowserMode >> initializeForSelectedClasses [
+ClyBrowseClassMethodsMode >> initializeForSelectedClasses [
 
 	self subclassResponsibility 
 ]
 
 { #category : #initialization }
-ClyFullBrowserMode >> initializeFromMode: aBrowserMode [
+ClyBrowseClassMethodsMode >> initializeFromMode: aBrowserMode [
 	self subclassResponsibility 
 ]
 
 { #category : #testing }
-ClyFullBrowserMode >> isClassSideMetaLevel [
+ClyBrowseClassMethodsMode >> isClassSideMetaLevel [
 
 	^metaLevelScope = ClyClassSideScope
 ]
 
 { #category : #testing }
-ClyFullBrowserMode >> isInstanceSideMetaLevel [
+ClyBrowseClassMethodsMode >> isInstanceSideMetaLevel [
 
 	^metaLevelScope = ClyInstanceSideScope
 ]
 
 { #category : #accessing }
-ClyFullBrowserMode >> metaLevelScope [
+ClyBrowseClassMethodsMode >> metaLevelScope [
 	^ metaLevelScope
 ]
 
 { #category : #accessing }
-ClyFullBrowserMode >> metaLevelScope: anObject [
+ClyBrowseClassMethodsMode >> metaLevelScope: anObject [
 	metaLevelScope := anObject
 ]
 
 { #category : #accessing }
-ClyFullBrowserMode >> methodGroupQuery [
+ClyBrowseClassMethodsMode >> methodGroupQuery [
 	^ methodGroupQuery
 ]
 
 { #category : #accessing }
-ClyFullBrowserMode >> methodGroupQuery: anObject [
+ClyBrowseClassMethodsMode >> methodGroupQuery: anObject [
 	methodGroupQuery := anObject
 ]
 
 { #category : #converting }
-ClyFullBrowserMode >> switchToMethodGroups [
+ClyBrowseClassMethodsMode >> switchToMethodGroups [
 	self subclassResponsibility 
 ]
 
 { #category : #converting }
-ClyFullBrowserMode >> switchToVariables [
+ClyBrowseClassMethodsMode >> switchToVariables [
 	self subclassResponsibility 
 ]
 
 { #category : #converting }
-ClyFullBrowserMode >> withMetaLevelScope: aMetaLevelScopeClass [
+ClyBrowseClassMethodsMode >> withMetaLevelScope: aMetaLevelScopeClass [
 
 	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
 	
@@ -157,7 +157,7 @@ ClyFullBrowserMode >> withMetaLevelScope: aMetaLevelScopeClass [
 ]
 
 { #category : #converting }
-ClyFullBrowserMode >> withRestrictMethodVisibilityBy: aClassScope [
+ClyBrowseClassMethodsMode >> withRestrictMethodVisibilityBy: aClassScope [
 
 	^(self class initialFor: browser)
 		metaLevelScope: metaLevelScope;
