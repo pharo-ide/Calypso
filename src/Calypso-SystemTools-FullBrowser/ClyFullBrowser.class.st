@@ -196,10 +196,10 @@ ClyFullBrowser >> buildTitleFromSelections [
 { #category : #navigation }
 ClyFullBrowser >> changeMethodGroupQueryBy: aBlock [
 	
-	self changeStateBy: [ | oldMode |
-		oldMode := mode.
-		aBlock value.
-		oldMode == mode ifTrue: [ ^self ].
+	self changeStateBy: [ | newMode |
+		newMode := aBlock value.
+		mode == newMode ifTrue: [ ^self ].
+		mode := newMode.
 		methodGroupView showQuery: mode methodGroupQuery.
 		methodGroupView initiateUIChangeBy: [
 			"view should know that any change here was not requested by user"
@@ -254,7 +254,7 @@ ClyFullBrowser >> classSelectionChanged [
 			self silentlySelectPackageOfSelectedClass].
 		 
 		self changeMethodGroupQueryBy: [ 
-			mode := mode defaultForSelectedClasses].
+			mode defaultForSelectedClasses].
 		
 		self selectCurrentExtensionMethodGroup
 	]
@@ -528,7 +528,7 @@ ClyFullBrowser >> projectSelection [
 ClyFullBrowser >> restrictMethodVisibilityBy: aClassScope [
 
 	self changeMethodGroupQueryBy: [
-		mode := mode withRestrictMethodVisibilityBy: aClassScope]
+		mode withRestrictMethodVisibilityBy: aClassScope]
 ]
 
 { #category : #navigation }
@@ -764,7 +764,7 @@ ClyFullBrowser >> switchToFullClassHierarchyOf: aClass [
 ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 	
 	self changeMethodGroupQueryBy: [
-		mode := mode withMetaLevelScope: aMetaLevelScopeClass
+		mode withMetaLevelScope: aMetaLevelScopeClass
 	]
 ]
 
@@ -772,7 +772,7 @@ ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 ClyFullBrowser >> switchToMethodGroups [
 	
 	self changeMethodGroupQueryBy: [ 
-		mode := mode switchToMethodGroups
+		mode switchToMethodGroups
 	]
 ]
 
@@ -805,7 +805,7 @@ ClyFullBrowser >> switchToProjects [
 ClyFullBrowser >> switchToVariables [
 	
 	self changeMethodGroupQueryBy: [
-		mode := mode switchToVariables
+		mode switchToVariables
 	]
 ]
 
