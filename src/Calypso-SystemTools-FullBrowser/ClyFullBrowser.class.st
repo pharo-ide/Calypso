@@ -33,8 +33,6 @@ Class {
 		'classView',
 		'methodGroupView',
 		'methodView',
-		'metaLevelScope',
-		'methodGroupQuery',
 		'mode'
 	],
 	#classVars : [
@@ -160,40 +158,6 @@ ClyFullBrowser class >> worldMenuOn: aBuilder [
 		action: [ target open ]
 ]
 
-{ #category : #'selection changes' }
-ClyFullBrowser >> adoptForExtendedClass [
-	| extendingPackages extraGroups |
-	self classSelection isEmpty ifTrue: [ ^self ].
-	methodGroupQuery := methodGroupQuery withoutItemsOfType: RPackage. "To remove previous package injection"
-	(self classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
-	
-	self adoptMetaLevelForSelectedClass. "it will also ensures method groups mode"
-	
-	extendingPackages := self packageSelection actualObjects.
-	extraGroups := ClyConstantQuery 
-				returning: extendingPackages as: ClyGroupedExtendingPackages new.
-	extraGroups := methodGroupQuery scope adoptQuery: extraGroups.
-	methodGroupQuery := methodGroupQuery , extraGroups
-]
-
-{ #category : #'selection changes' }
-ClyFullBrowser >> adoptMetaLevelForSelectedClass [
-	| selectedClass extendedMetaLevel |
-	self classSelection isEmpty ifTrue: [ ^self ].
-	selectedClass := self classSelection lastSelectedItem.
-	(selectedClass isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
-	
-	"First we should always switch to method groups because
-	only in that mode we can show properly extension methods "
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods.
-	extendedMetaLevel := selectedClass systemDefinition definingMetaLevelScope.
-	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].
-	
-	"We should switch to the meta level of extended class"
-	metaLevelScope := extendedMetaLevel.
-	methodGroupQuery := methodGroupQuery withMetaLevelScope: metaLevelScope
-]
-
 { #category : #navigation }
 ClyFullBrowser >> allNavigationScopes [
 	
@@ -232,9 +196,11 @@ ClyFullBrowser >> buildTitleFromSelections [
 { #category : #navigation }
 ClyFullBrowser >> changeMethodGroupQueryBy: aBlock [
 	
-	self changeStateBy: [
-		methodGroupQuery := aBlock value.
-		methodGroupView showQuery: methodGroupQuery.
+	self changeStateBy: [ | oldMode |
+		oldMode := mode.
+		aBlock value.
+		oldMode == mode ifTrue: [ ^self ].
+		methodGroupView showQuery: mode methodGroupQuery.
 		methodGroupView initiateUIChangeBy: [
 			"view should know that any change here was not requested by user"
 			self methodGroupSelectionChanged] 
@@ -276,14 +242,6 @@ ClyFullBrowser >> classGroupSelection [
 ]
 
 { #category : #accessing }
-ClyFullBrowser >> classScopeForMethods [
-	| currentClassScope |
-	currentClassScope := methodGroupQuery scope asScope: metaLevelScope.
-	
-	^self extendClassScopeForMethods: currentClassScope
-]
-
-{ #category : #accessing }
 ClyFullBrowser >> classSelection [
 	^classView selection
 ]
@@ -296,9 +254,7 @@ ClyFullBrowser >> classSelectionChanged [
 			self silentlySelectPackageOfSelectedClass].
 		 
 		self changeMethodGroupQueryBy: [ 
-			mode := mode defaultForSelectedClasses.
-			self adoptForExtendedClass.
-			methodGroupQuery restrictedByScope: self defaultClassScopeForMethods].
+			mode := mode defaultForSelectedClasses].
 		
 		self selectCurrentExtensionMethodGroup
 	]
@@ -330,16 +286,6 @@ ClyFullBrowser >> currentMetaLevelOf: aClass [
 ClyFullBrowser >> decorateMethodEditor: aMethodEditor [
 
 	methodView query decorateResultMethodEditor: aMethodEditor
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> defaultClassScopeForMethods [
-
-	| selectedClassScope |
-	selectedClassScope := self classSelection asItemsScope: metaLevelScope.
-	
-	^self extendClassScopeForMethods: selectedClassScope
-	
 ]
 
 { #category : #navigation }
@@ -440,22 +386,8 @@ ClyFullBrowser >> isScopedModeEnabled [
 
 { #category : #accessing }
 ClyFullBrowser >> metaLevelScope [
-	^metaLevelScope 
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> metaLevelScope: aMetaLevelScopeClass [
-	metaLevelScope := aMetaLevelScopeClass 
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> methodGroupQuery [
-	^methodGroupQuery
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> methodGroupQuery: aQuery [
-	methodGroupQuery := aQuery
+	
+	^mode metaLevelScope 
 ]
 
 { #category : #accessing }
@@ -572,8 +504,6 @@ ClyFullBrowser >> prepareDefaultState [
 ClyFullBrowser >> prepareInitialState [
 
 	mode := ClyFullBrowserMethodGroupMode initialFor: self.
-	metaLevelScope := ClyInstanceSideScope.
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: navigationEnvironment).
 	
 	self switchToPackages
 ]
@@ -598,8 +528,7 @@ ClyFullBrowser >> projectSelection [
 ClyFullBrowser >> restrictMethodVisibilityBy: aClassScope [
 
 	self changeMethodGroupQueryBy: [
-		mode := mode withRestrictMethodVisibilityBy: aClassScope.
-		methodGroupQuery restrictedByScope: aClassScope]
+		mode := mode withRestrictMethodVisibilityBy: aClassScope]
 ]
 
 { #category : #navigation }
@@ -833,12 +762,9 @@ ClyFullBrowser >> switchToFullClassHierarchyOf: aClass [
 
 { #category : #navigation }
 ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
-	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
 	
 	self changeMethodGroupQueryBy: [
-		mode := mode withMetaLevelScope: aMetaLevelScopeClass.
-		metaLevelScope := aMetaLevelScopeClass.				
-		methodGroupQuery withMetaLevelScope: metaLevelScope
+		mode := mode withMetaLevelScope: aMetaLevelScopeClass
 	]
 ]
 
@@ -846,8 +772,7 @@ ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 ClyFullBrowser >> switchToMethodGroups [
 	
 	self changeMethodGroupQueryBy: [ 
-		mode := mode switchToMethodGroups.
-		ClyAllMethodGroups sortedFrom: self classScopeForMethods
+		mode := mode switchToMethodGroups
 	]
 ]
 
@@ -878,14 +803,9 @@ ClyFullBrowser >> switchToProjects [
 
 { #category : #navigation }
 ClyFullBrowser >> switchToVariables [
-	| classScope |
 	
 	self changeMethodGroupQueryBy: [
-		mode := mode switchToVariables.
-		classScope := self classScopeForMethods.
-		ClyAllVariables 
-			from: classScope, classScope asInheritedScope 
-			as: ClyGroupedInstanceVariables withDefaultHierarchy 
+		mode := mode switchToVariables
 	]
 ]
 
