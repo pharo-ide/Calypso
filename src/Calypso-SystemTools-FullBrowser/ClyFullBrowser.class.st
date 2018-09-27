@@ -314,12 +314,12 @@ ClyFullBrowser >> compileANewClassFrom: aString notifying: aController startingF
 
 ]
 
-{ #category : #context }
+{ #category : #'accessing context' }
 ClyFullBrowser >> createCommandContext [
 	^ClyGlobalContextOfFullBrowser for: self
 ]
 
-{ #category : #context }
+{ #category : #'accessing context' }
 ClyFullBrowser >> currentMetaLevelOf: aClass [
 	^metaLevelScope metaLevelOf: aClass
 ]
@@ -357,11 +357,12 @@ ClyFullBrowser >> defaultPackageFilter [
 { #category : #accessing }
 ClyFullBrowser >> extendClassScopeForMethods: aClassScope [
 	| resultScope |
+
 	resultScope := aClassScope.
-	
-	ClyMethodVisibilityLevel allSubclassesDo: [ :each | 
-		(each isDefault and: (each canBeAppliedForClasses: self classSelection items))
-			ifTrue: [resultScope := each extendClassScope: resultScope ]].
+	(ClyMethodVisibilityLevel allAvailableFor: self classSelection items)
+		ifNotEmpty: [ :levels | 
+			"It will be likely one, but who knows"
+			resultScope := levels anyOne extendClassScope: resultScope ].
 	
 	^resultScope
 ]
