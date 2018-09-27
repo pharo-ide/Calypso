@@ -41,6 +41,16 @@ ClyFullBrowserMode >> classScopeForMethods [
 	^self extendClassScopeForMethods: currentClassScope
 ]
 
+{ #category : #'current queries' }
+ClyFullBrowserMode >> currentMethodQuery [
+	^ClyAllMethods sortedFrom: self classScopeForMethods
+]
+
+{ #category : #'current scopes' }
+ClyFullBrowserMode >> currentSideOfClass: aClass [
+	^metaLevelScope metaLevelOf: aClass
+]
+
 { #category : #'current scopes' }
 ClyFullBrowserMode >> defaultClassScopeForMethods [
 
@@ -92,6 +102,18 @@ ClyFullBrowserMode >> initializeForSelectedClasses [
 { #category : #initialization }
 ClyFullBrowserMode >> initializeFromMode: aBrowserMode [
 	self subclassResponsibility 
+]
+
+{ #category : #testing }
+ClyFullBrowserMode >> isClassSideMetaLevel [
+
+	^metaLevelScope = ClyClassSideScope
+]
+
+{ #category : #testing }
+ClyFullBrowserMode >> isInstanceSideMetaLevel [
+
+	^metaLevelScope = ClyInstanceSideScope
 ]
 
 { #category : #accessing }

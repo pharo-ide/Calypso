@@ -222,7 +222,7 @@ ClyFullBrowser >> buildTitleFromSelections [
 		ifFalse: [ self methodSelection lastSelectedItem].
 
 	newTitle := mainItem systemDefinition printDefiningClass.
-	mainItem systemDefinition isInstanceSide & (metaLevelScope = ClyClassSideScope)
+	mainItem systemDefinition isInstanceSide & mode isClassSideMetaLevel
 		ifTrue: [ newTitle := newTitle , ' class' ].
 	self methodSelection isEmpty ifFalse: [ 
 		newTitle := newTitle , '>>' , self methodSelection lastSelectedItem name ].
@@ -256,7 +256,7 @@ ClyFullBrowser >> chooseClassForEditorOfMethod: aMethod [
 ClyFullBrowser >> chooseClassesForNewMethod [
 
 	^self classSelection actualObjects collect: [ :each | 
-		metaLevelScope metaLevelOf: each]
+		mode currentSideOfClass: each]
 ]
 
 { #category : #accessing }
@@ -296,6 +296,7 @@ ClyFullBrowser >> classSelectionChanged [
 			self silentlySelectPackageOfSelectedClass].
 		 
 		self changeMethodGroupQueryBy: [ 
+			mode := mode defaultForSelectedClasses.
 			self adoptForExtendedClass.
 			methodGroupQuery restrictedByScope: self defaultClassScopeForMethods].
 		
@@ -322,7 +323,7 @@ ClyFullBrowser >> createCommandContext [
 
 { #category : #context }
 ClyFullBrowser >> currentMetaLevelOf: aClass [
-	^metaLevelScope metaLevelOf: aClass
+	^mode currentSideOfClass: aClass
 ]
 
 { #category : #'tools support' }
@@ -715,7 +716,7 @@ ClyFullBrowser >> setWindowTitle: aString in: aWindow [
 	super setWindowTitle: aString in: aWindow.
 	
 	aWindow basicLabel ifNotNil: [:label |
-		emphasis := metaLevelScope = ClyInstanceSideScope 
+		emphasis := mode isInstanceSideMetaLevel
 			ifTrue: [ TextEmphasis normal ] ifFalse: [ TextEmphasis bold ].
 		label emphasis: emphasis emphasisCode]
 ]
@@ -723,10 +724,7 @@ ClyFullBrowser >> setWindowTitle: aString in: aWindow [
 { #category : #navigation }
 ClyFullBrowser >> showAllMethods [
 		
-	| methodQuery |
-	
-	methodQuery := ClyAllMethods sortedFrom: self classScopeForMethods.	
-	methodView showQuery: methodQuery
+	methodView showQuery: mode currentMethodQuery
 ]
 
 { #category : #testing }
