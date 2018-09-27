@@ -21,6 +21,22 @@ ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClass [
 ]
 
 { #category : #initialization }
+ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClassFrom: classSelection [
+	| extendingPackages extraGroups selectedClassItem |
+	classSelection isEmpty ifTrue: [ ^self ].
+	selectedClassItem := classSelection lastSelectedItem.
+	(selectedClassItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
+	
+	self adoptMetaLevelForSelectedClass: selectedClassItem.
+	
+	extendingPackages := browser packageSelection actualObjects.
+	extraGroups := ClyConstantQuery 
+				returning: extendingPackages as: ClyGroupedExtendingPackages new.
+	extraGroups := methodGroupQuery scope adoptQuery: extraGroups.
+	methodGroupQuery := methodGroupQuery , extraGroups
+]
+
+{ #category : #initialization }
 ClyBrowseClassMethodsWithGroupsMode >> adoptMetaLevelForSelectedClass [
 	| selectedClass extendedMetaLevel |
 	browser classSelection isEmpty ifTrue: [ ^self ].
@@ -43,16 +59,18 @@ ClyBrowseClassMethodsWithGroupsMode >> emptyMethodGroupQueryFor: aBrowser [
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> initializeForSelectedClasses [
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods.
-	self adoptForExtendedClass.
-	methodGroupQuery := methodGroupQuery restrictedByScope: self defaultClassScopeForMethods
-]
-
-{ #category : #initialization }
 ClyBrowseClassMethodsWithGroupsMode >> initializeFromMode: aBrowserMode [
 	metaLevelScope := aBrowserMode metaLevelScope.
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: aBrowserMode classScopeForMethods
+]
+
+{ #category : #initialization }
+ClyBrowseClassMethodsWithGroupsMode >> setUpForSelectedClasses [
+	classScopeForMethods := 	browser classSelection asItemsScope: metaLevelScope.
+	classScopeForMethods := self extendClassScopeForMethods: classScopeForMethods.
+	
+	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods.
+	self adoptForExtendedClass
 ]
 
 { #category : #converting }

@@ -8,7 +8,7 @@ Class {
 ClyBrowseClassMethodsWithVariablesMode >> defaultForSelectedClasses [
 	browser classSelection isEmpty ifTrue: [ ^super defaultForSelectedClasses ].
 	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [
-		 ^self switchToMethodGroups; initializeForSelectedClasses ].
+		 ^self switchToMethodGroups; setUpForSelectedClasses ].
 	
 	^super defaultForSelectedClasses
 ]
@@ -21,16 +21,6 @@ ClyBrowseClassMethodsWithVariablesMode >> emptyMethodGroupQueryFor: aBrowser [
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithVariablesMode >> initializeForSelectedClasses [
-	| classScope |
-	classScope := self classScopeForMethods.
-	methodGroupQuery := ClyAllVariables 
-			from: classScope, classScope asInheritedScope 
-			as: ClyGroupedInstanceVariables withDefaultHierarchy.
-	methodGroupQuery := methodGroupQuery restrictedByScope: self defaultClassScopeForMethods
-]
-
-{ #category : #initialization }
 ClyBrowseClassMethodsWithVariablesMode >> initializeFromMode: aBrowserMode [
 	| classScope |
 	metaLevelScope := aBrowserMode metaLevelScope.
@@ -38,6 +28,16 @@ ClyBrowseClassMethodsWithVariablesMode >> initializeFromMode: aBrowserMode [
 	methodGroupQuery := ClyAllVariables 
 			from: classScope, classScope asInheritedScope 
 			as: ClyGroupedInstanceVariables withDefaultHierarchy
+]
+
+{ #category : #initialization }
+ClyBrowseClassMethodsWithVariablesMode >> setUpForSelectedClasses [
+	| classScope |
+	classScope := self classScopeForMethods.
+	methodGroupQuery := ClyAllVariables 
+			from: classScope, classScope asInheritedScope 
+			as: ClyGroupedInstanceVariables withDefaultHierarchy.
+	methodGroupQuery := methodGroupQuery restrictedByScope: self defaultClassScopeForMethods
 ]
 
 { #category : #converting }

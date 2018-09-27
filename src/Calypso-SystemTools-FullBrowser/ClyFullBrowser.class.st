@@ -312,18 +312,6 @@ ClyFullBrowser >> defaultPackageFilter [
 		DefaultPackageFilter := ClyTableFilterFactory of: ClyItemNameFilter using: ClyRegexPattern new]
 ]
 
-{ #category : #accessing }
-ClyFullBrowser >> extendClassScopeForMethods: aClassScope [
-	| resultScope |
-	resultScope := aClassScope.
-	
-	ClyMethodVisibilityLevel allSubclassesDo: [ :each | 
-		(each isDefault and: (each canBeAppliedForClasses: self classSelection items))
-			ifTrue: [resultScope := each extendClassScope: resultScope ]].
-	
-	^resultScope
-]
-
 { #category : #initialization }
 ClyFullBrowser >> initialize [
 	super initialize.

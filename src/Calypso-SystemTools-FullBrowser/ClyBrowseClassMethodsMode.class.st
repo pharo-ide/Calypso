@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'metaLevelScope',
 		'methodGroupQuery',
-		'browser'
+		'browser',
+		'classScopeForMethods'
 	],
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
@@ -65,12 +66,24 @@ ClyBrowseClassMethodsMode >> defaultForSelectedClasses [
 	^(self class initialFor: browser)
 		metaLevelScope: metaLevelScope;
 		methodGroupQuery: methodGroupQuery;
-		initializeForSelectedClasses 
+		setUpForSelectedClasses 
 ]
 
 { #category : #initialization }
 ClyBrowseClassMethodsMode >> emptyMethodGroupQueryFor: aBrowser [ 
 	self subclassResponsibility 
+]
+
+{ #category : #'current scopes' }
+ClyBrowseClassMethodsMode >> extendClassScope: aClassScope forMethodsFrom: classSelection [
+	| resultScope |
+	resultScope := aClassScope.
+	
+	ClyMethodVisibilityLevel allSubclassesDo: [ :each | 
+		(each isDefault and: (each canBeAppliedForClasses: classSelection items))
+			ifTrue: [resultScope := each extendClassScope: resultScope ]].
+	
+	^resultScope
 ]
 
 { #category : #'current scopes' }
@@ -91,12 +104,6 @@ ClyBrowseClassMethodsMode >> initializeFor: aBrowser [
 	browser := aBrowser.
 	metaLevelScope := ClyInstanceSideScope.
 	methodGroupQuery := self emptyMethodGroupQueryFor: aBrowser
-]
-
-{ #category : #initialization }
-ClyBrowseClassMethodsMode >> initializeForSelectedClasses [
-
-	self subclassResponsibility 
 ]
 
 { #category : #initialization }
@@ -134,6 +141,12 @@ ClyBrowseClassMethodsMode >> methodGroupQuery [
 { #category : #accessing }
 ClyBrowseClassMethodsMode >> methodGroupQuery: anObject [
 	methodGroupQuery := anObject
+]
+
+{ #category : #initialization }
+ClyBrowseClassMethodsMode >> setUpForSelectedClasses [
+
+	self subclassResponsibility 
 ]
 
 { #category : #converting }
