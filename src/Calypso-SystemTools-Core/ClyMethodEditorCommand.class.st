@@ -20,7 +20,7 @@ Class {
 { #category : #testing }
 ClyMethodEditorCommand class >> canBeExecutedInCodeMethodEditor: aTool [
 	
-	^ false
+	^ true
 ]
 
 { #category : #testing }
