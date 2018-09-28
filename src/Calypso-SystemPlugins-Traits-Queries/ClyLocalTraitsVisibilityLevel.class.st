@@ -18,17 +18,17 @@ Class {
 { #category : #testing }
 ClyLocalTraitsVisibilityLevel class >> canBeAppliedForClasses: classItems [
 
-	^classItems anySatisfy: [ :each | each isMarkedWith: ClyTraitUserTag ]
+	^ "classItems anySatisfy: [ :each | each isMarkedWith: ClyTraitUserTag ]" false
 ]
 
 { #category : #controlling }
 ClyLocalTraitsVisibilityLevel class >> disable [
-	isDefault := false
+	activeByDefault := false
 ]
 
 { #category : #controlling }
 ClyLocalTraitsVisibilityLevel class >> enable [
-	isDefault := true
+	activeByDefault := true
 ]
 
 { #category : #controlling }
@@ -42,12 +42,12 @@ ClyLocalTraitsVisibilityLevel class >> extendClassScope: aClassScope [
 { #category : #testing }
 ClyLocalTraitsVisibilityLevel class >> isActiveByDefault [
 	
-	^ isDefault ifNil: [ true ]
+	^ activeByDefault ifNil: [ true ]
 ]
 
 { #category : #testing }
 ClyLocalTraitsVisibilityLevel class >> isDefault: aBool [
-	isDefault := aBool
+	activeByDefault := aBool
 ]
 
 { #category : #'instance creation' }

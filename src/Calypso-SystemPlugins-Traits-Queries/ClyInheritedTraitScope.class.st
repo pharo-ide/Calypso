@@ -10,7 +10,7 @@ Class {
 
 { #category : #accessing }
 ClyInheritedTraitScope class >> classesRelatedTo: aClass do: aBlock [
-	aClass traits do: aBlock
+	"aClass traits do: aBlock"
 ]
 
 { #category : #'inherited scope' }
