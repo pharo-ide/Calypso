@@ -10,7 +10,7 @@ Class {
 	#name : #ClyLocalTraitsVisibilityLevel,
 	#superclass : #ClyMethodVisibilityLevel,
 	#classInstVars : [
-		'isDefault'
+		'activeByDefault'
 	],
 	#category : #'Calypso-SystemPlugins-Traits-Queries'
 }
