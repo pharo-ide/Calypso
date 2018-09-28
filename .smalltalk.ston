@@ -4,8 +4,8 @@ SmalltalkCISpec {
       #baseline : 'Calypso',
       #directory : 'src',
       #platforms : [ #pharo ],
-	  #onConflict : #useIncoming;
-	  #onUpgrade : #useIncoming;
+	  #onConflict : #useIncoming,
+	  #onUpgrade : #useIncoming,
       #failOn : [ #Warning ]
     }
   ]
