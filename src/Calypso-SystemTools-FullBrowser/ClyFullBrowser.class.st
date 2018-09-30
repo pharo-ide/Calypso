@@ -491,7 +491,7 @@ ClyFullBrowser >> prepareDefaultState [
 { #category : #initialization }
 ClyFullBrowser >> prepareInitialState [
 
-	browseMethodsMode := ClyBrowseClassMethodsWithGroupsMode initialFor: self.
+	browseMethodsMode := ClyBrowseClassMethodsWithGroupsMode of: self.
 	
 	self switchToPackages
 ]
@@ -641,7 +641,7 @@ ClyFullBrowser >> setWindowTitle: aString in: aWindow [
 { #category : #navigation }
 ClyFullBrowser >> showAllMethods [
 		
-	methodView showQuery: browseMethodsMode currentMethodQuery
+	methodView showQuery: browseMethodsMode allMethodQuery
 ]
 
 { #category : #testing }

@@ -8,7 +8,7 @@ Class {
 ClyBrowseClassMethodsWithVariablesMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllVariables 
 		from: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
-		as: ClyGroupedInstanceVariables withDefaultHierarchy
+		as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
 ]
 
 { #category : #converting }
@@ -23,11 +23,11 @@ ClyBrowseClassMethodsWithVariablesMode >> forNewClassSelection [
 { #category : #initialization }
 ClyBrowseClassMethodsWithVariablesMode >> initializeFromMode: aBrowserMode [
 	| classScope |
-	metaLevelScope := aBrowserMode metaLevelScope.
+	super initializeFromMode: aBrowserMode.
 	classScope := aBrowserMode classScopeForMethods.
 	methodGroupQuery := ClyAllVariables 
 			from: classScope, classScope asInheritedScope 
-			as: ClyGroupedInstanceVariables withDefaultHierarchy
+			as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
 ]
 
 { #category : #initialization }
@@ -35,10 +35,10 @@ ClyBrowseClassMethodsWithVariablesMode >> setUpForSelectedClasses [
 	| classScope |
 	super setUpForSelectedClasses.
 	
-	classScope := 	browser classSelection asItemsScope: metaLevelScope.	
+	classScope := browser classSelection asItemsScope: metaLevelScope.	
 	methodGroupQuery := ClyAllVariables 
 			from: classScope, classScope asInheritedScope 
-			as: ClyGroupedInstanceVariables withDefaultHierarchy
+			as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
 ]
 
 { #category : #converting }

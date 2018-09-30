@@ -56,13 +56,6 @@ ClyBrowseClassMethodsWithGroupsMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
 ]
 
-{ #category : #converting }
-ClyBrowseClassMethodsWithGroupsMode >> forMethodVisibilityRestrictedBy: aClassScope [
-
-	^self copy
-		restrictMethodVisibilityBy: aClassScope
-]
-
 { #category : #initialization }
 ClyBrowseClassMethodsWithGroupsMode >> initializeFromMode: aBrowserMode [
 	metaLevelScope := aBrowserMode metaLevelScope.
@@ -71,8 +64,8 @@ ClyBrowseClassMethodsWithGroupsMode >> initializeFromMode: aBrowserMode [
 
 { #category : #initialization }
 ClyBrowseClassMethodsWithGroupsMode >> restrictMethodVisibilityBy: aClassScope [
+	super restrictMethodVisibilityBy: aClassScope.
 
-	classScopeForMethods := classScopeForMethods restrictedBy: aClassScope.
 	methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope
 ]
 

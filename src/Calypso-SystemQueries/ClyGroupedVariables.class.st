@@ -41,7 +41,8 @@ Class {
 	#name : #ClyGroupedVariables,
 	#superclass : #ClyBrowserQueryResult,
 	#instVars : [
-		'hierarchy'
+		'hierarchy',
+		'classScopeForMethods'
 	],
 	#category : #'Calypso-SystemQueries-Results'
 }
@@ -58,9 +59,9 @@ ClyGroupedVariables class >> isExpandedHierarchy [
 ]
 
 { #category : #'instance creation' }
-ClyGroupedVariables class >> withDefaultHierarchy [
+ClyGroupedVariables class >> withDefaultHierarchyAndMethodsFrom: aClassScope [
 
-	^self withHierarchy: self defaultHierarchy 
+	^self withHierarchy: self defaultHierarchy andMethodsFrom: aClassScope
 ]
 
 { #category : #'instance creation' }
@@ -70,6 +71,14 @@ ClyGroupedVariables class >> withHierarchy: aClassHierarchy [
 		hierarchy: aClassHierarchy
 ]
 
+{ #category : #'instance creation' }
+ClyGroupedVariables class >> withHierarchy: aClassHierarchy andMethodsFrom: aClassScope [
+
+	^self new 
+		hierarchy: aClassHierarchy;
+		classScopeForMethods: aClassScope
+]
+
 { #category : #comparing }
 ClyGroupedVariables >> = anObject [
 	"Answer whether the receiver and anObject represent the same object."
@@ -77,7 +86,18 @@ ClyGroupedVariables >> = anObject [
 	self == anObject ifTrue: [ ^ true ].
 	super = anObject ifFalse: [ ^false ].
 	
-	^ hierarchy = anObject hierarchy
+	^ hierarchy = anObject hierarchy 
+		and: [ self classScopeForMethods = anObject classScopeForMethods ]
+]
+
+{ #category : #accessing }
+ClyGroupedVariables >> classScopeForMethods [
+	^ classScopeForMethods ifNil: [self queryScope]
+]
+
+{ #category : #accessing }
+ClyGroupedVariables >> classScopeForMethods: anObject [
+	classScopeForMethods := anObject
 ]
 
 { #category : #building }
@@ -97,7 +117,7 @@ ClyGroupedVariables >> fillWithGroupedVariables: varsPerTypeAndDefiningClass [
 ClyGroupedVariables >> fillWithVariables: varsPerClass type: varTypeClass [
 
 	| classMap vars declarationGroup varItem methodQueryScope |
-	methodQueryScope := self queryScope asLocalClassScope.
+	methodQueryScope := self classScopeForMethods asLocalClassScope.
 	classMap := hierarchy buildFrom: varsPerClass keys.
 	classMap doInOrder: [ :eachClass |
 		vars := varsPerClass at: eachClass.
@@ -130,7 +150,8 @@ ClyGroupedVariables >> groupVariablesByTypeAndDefinition: variables [
 ClyGroupedVariables >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
 
-	^super hash bitXor: hierarchy hash
+	^(super hash bitXor: hierarchy hash)
+		bitXor: classScopeForMethods hash
 ]
 
 { #category : #accessing }
