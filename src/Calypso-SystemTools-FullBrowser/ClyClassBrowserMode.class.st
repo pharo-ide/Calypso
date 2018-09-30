@@ -11,13 +11,6 @@ Class {
 }
 
 { #category : #'instance creation' }
-ClyClassBrowserMode class >> initialFor: aBrowser [
-
-	^self new 
-		initializeFor: aBrowser
-]
-
-{ #category : #'instance creation' }
 ClyClassBrowserMode class >> of: aBrowser [
 
 	^self new 
@@ -28,11 +21,11 @@ ClyClassBrowserMode class >> of: aBrowser [
 { #category : #'instance creation' }
 ClyClassBrowserMode class >> switchedFrom: anotherBrowserMode [
 
-	^(self initialFor: anotherBrowserMode browser)
+	^self new
 		initializeFromMode: anotherBrowserMode
 ]
 
-{ #category : #'current queries' }
+{ #category : #accessing }
 ClyClassBrowserMode >> allMethodQuery [
 	^ClyAllMethods sortedFrom: classScopeForMethods
 ]
@@ -47,41 +40,14 @@ ClyClassBrowserMode >> browser: anObject [
 	browser := anObject
 ]
 
-{ #category : #'current scopes' }
+{ #category : #accessing }
 ClyClassBrowserMode >> classScopeForMethods [
 	^classScopeForMethods 
 ]
 
-{ #category : #'current scopes' }
+{ #category : #accessing }
 ClyClassBrowserMode >> currentSideOfClass: aClass [
 	^metaLevelScope metaLevelOf: aClass
-]
-
-{ #category : #initialization }
-ClyClassBrowserMode >> emptyMethodGroupQueryFor: aBrowser [ 
-	self subclassResponsibility 
-]
-
-{ #category : #converting }
-ClyClassBrowserMode >> forMethodVisibilityRestrictedBy: aClassScope [
-
-	^self copy
-		restrictMethodVisibilityBy: aClassScope
-]
-
-{ #category : #converting }
-ClyClassBrowserMode >> forNewClassSelection [
-	^self copy
-		setUpForSelectedClasses 
-]
-
-{ #category : #converting }
-ClyClassBrowserMode >> forNewMetaLevelScope: aMetaLevelScopeClass [
-
-	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
-	
-	^self copy 
-		setUpNewMetaLevelScope: aMetaLevelScopeClass
 ]
 
 { #category : #initialization }
@@ -91,16 +57,8 @@ ClyClassBrowserMode >> initialize [
 ]
 
 { #category : #initialization }
-ClyClassBrowserMode >> initializeFor: aBrowser [
-
-	browser := aBrowser.
-	metaLevelScope := ClyInstanceSideScope.
-	methodGroupQuery := self emptyMethodGroupQueryFor: aBrowser
-]
-
-{ #category : #initialization }
 ClyClassBrowserMode >> initializeFromMode: aBrowserMode [
-	browser := aBrowserMode.
+	browser := aBrowserMode browser.
 	metaLevelScope := aBrowserMode metaLevelScope.
 	classScopeForMethods := aBrowserMode classScopeForMethods
 ]
@@ -137,13 +95,13 @@ ClyClassBrowserMode >> methodGroupQuery: anObject [
 	methodGroupQuery := anObject
 ]
 
-{ #category : #initialization }
+{ #category : #controlling }
 ClyClassBrowserMode >> restrictMethodVisibilityBy: aClassScope [
 
 	classScopeForMethods := classScopeForMethods restrictedBy: aClassScope
 ]
 
-{ #category : #'current scopes' }
+{ #category : #controlling }
 ClyClassBrowserMode >> setUpDefaultMethodVisibility [
 	
 	ClyMethodVisibilityLevel allSubclassesDo: [ :each | 
@@ -151,13 +109,13 @@ ClyClassBrowserMode >> setUpDefaultMethodVisibility [
 			ifTrue: [^classScopeForMethods := each extendClassScope: classScopeForMethods ]]
 ]
 
-{ #category : #initialization }
+{ #category : #controlling }
 ClyClassBrowserMode >> setUpForSelectedClasses [
 	classScopeForMethods := 	browser classSelection asItemsScope: metaLevelScope.
 	self setUpDefaultMethodVisibility
 ]
 
-{ #category : #initialization }
+{ #category : #controlling }
 ClyClassBrowserMode >> setUpNewMetaLevelScope: aMetaLevelScopeClass [
 	metaLevelScope := aMetaLevelScopeClass.
 	classScopeForMethods := classScopeForMethods withMetaLevel: metaLevelScope.
@@ -165,8 +123,30 @@ ClyClassBrowserMode >> setUpNewMetaLevelScope: aMetaLevelScopeClass [
 ]
 
 { #category : #converting }
+ClyClassBrowserMode >> switchMethodVisibilityTo: aClassScope [
+
+	^self copy
+		restrictMethodVisibilityBy: aClassScope
+]
+
+{ #category : #converting }
+ClyClassBrowserMode >> switchToMetaLevelScope: aMetaLevelScopeClass [
+
+	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
+	
+	^self copy 
+		setUpNewMetaLevelScope: aMetaLevelScopeClass
+]
+
+{ #category : #converting }
 ClyClassBrowserMode >> switchToMethodGroups [
 	self subclassResponsibility 
+]
+
+{ #category : #converting }
+ClyClassBrowserMode >> switchToNewClassSelection [
+	^self copy
+		setUpForSelectedClasses 
 ]
 
 { #category : #converting }

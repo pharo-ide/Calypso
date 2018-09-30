@@ -264,7 +264,7 @@ ClyFullBrowser >> classSelectionChanged [
 			self silentlySelectPackageOfSelectedClass].
 		 
 		self changeClassBrowserModeBy: [ 
-			classBrowserMode forNewClassSelection].
+			classBrowserMode switchToNewClassSelection].
 		
 		self selectCurrentExtensionMethodGroup
 	]
@@ -516,7 +516,7 @@ ClyFullBrowser >> projectSelection [
 ClyFullBrowser >> restrictMethodVisibilityBy: aClassScope [
 
 	self changeClassBrowserModeBy: [
-		classBrowserMode forMethodVisibilityRestrictedBy: aClassScope]
+		classBrowserMode switchMethodVisibilityTo: aClassScope]
 ]
 
 { #category : #navigation }
@@ -752,7 +752,7 @@ ClyFullBrowser >> switchToFullClassHierarchyOf: aClass [
 ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 	
 	self changeClassBrowserModeBy: [
-		classBrowserMode forNewMetaLevelScope: aMetaLevelScopeClass
+		classBrowserMode switchToMetaLevelScope: aMetaLevelScopeClass
 	]
 ]
 

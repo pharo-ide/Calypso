@@ -5,22 +5,6 @@ Class {
 }
 
 { #category : #initialization }
-ClyClassBrowserVariablesMode >> emptyMethodGroupQueryFor: aBrowser [
-	^ClyAllVariables 
-		from: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
-		as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
-]
-
-{ #category : #converting }
-ClyClassBrowserVariablesMode >> forNewClassSelection [
-	browser classSelection isEmpty ifTrue: [ ^super forNewClassSelection ].
-	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [
-		 ^self switchToMethodGroups; setUpForSelectedClasses ].
-	
-	^super forNewClassSelection
-]
-
-{ #category : #initialization }
 ClyClassBrowserVariablesMode >> initializeFromMode: aBrowserMode [
 	| classScope |
 	super initializeFromMode: aBrowserMode.
@@ -44,6 +28,15 @@ ClyClassBrowserVariablesMode >> setUpForSelectedClasses [
 { #category : #converting }
 ClyClassBrowserVariablesMode >> switchToMethodGroups [
 	^ClyClassBrowserMethodGroupsMode switchedFrom: self
+]
+
+{ #category : #converting }
+ClyClassBrowserVariablesMode >> switchToNewClassSelection [
+	(browser classSelection isEmpty not and: [ 
+		browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag]) 
+			ifTrue: [ ^self switchToMethodGroups setUpForSelectedClasses ].
+	
+	^super switchToNewClassSelection
 ]
 
 { #category : #converting }

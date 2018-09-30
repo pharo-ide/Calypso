@@ -52,14 +52,9 @@ ClyClassBrowserMethodGroupsMode >> adoptMetaLevelForSelectedClass [
 ]
 
 { #category : #initialization }
-ClyClassBrowserMethodGroupsMode >> emptyMethodGroupQueryFor: aBrowser [
-	^ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
-]
-
-{ #category : #initialization }
 ClyClassBrowserMethodGroupsMode >> initializeFromMode: aBrowserMode [
-	metaLevelScope := aBrowserMode metaLevelScope.
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: aBrowserMode classScopeForMethods
+	super initializeFromMode: aBrowserMode.
+	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods
 ]
 
 { #category : #initialization }
