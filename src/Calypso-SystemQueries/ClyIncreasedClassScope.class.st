@@ -53,7 +53,7 @@ ClyIncreasedClassScope >> extraClasses [
 
 { #category : #accessing }
 ClyIncreasedClassScope >> extraClasses: aCollection [
-	extraClasses := aCollection asArray
+	extraClasses := aCollection asSet
 ]
 
 { #category : #comparing }
@@ -74,7 +74,7 @@ ClyIncreasedClassScope >> increasedByClassesFrom: aClassScope [
 	^self withExtraClasses: aClassScope collectAllClasses
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 ClyIncreasedClassScope >> initialize [ 	
 	super initialize.
 	

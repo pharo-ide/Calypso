@@ -161,6 +161,7 @@ ClyIncreasedClassScopeTests >> testMethodsEnumerationOverInstanceSideWhenBothMet
 
 	| expected |
 	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: { Object } localScope: ClyBothMetaLevelClassScope.
+	scope showOverriddenMethods.
 	
 	scope methodsDo: [ :each | result add: each].
 
