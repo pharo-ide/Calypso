@@ -1,11 +1,11 @@
 Class {
-	#name : #ClyBrowseClassMethodsWithGroupsMode,
-	#superclass : #ClyBrowseClassMethodsMode,
+	#name : #ClyClassBrowserMethodGroupsMode,
+	#superclass : #ClyClassBrowserMode,
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClass [
+ClyClassBrowserMethodGroupsMode >> adoptForExtendedClass [
 	| extendingPackages extraGroups |
 	browser classSelection isEmpty ifTrue: [ ^self ].
 	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
@@ -19,7 +19,7 @@ ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClass [
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClassFrom: classSelection [
+ClyClassBrowserMethodGroupsMode >> adoptForExtendedClassFrom: classSelection [
 	| extendingPackages extraGroups selectedClassItem |
 	classSelection isEmpty ifTrue: [ ^self ].
 	selectedClassItem := classSelection lastSelectedItem.
@@ -35,7 +35,7 @@ ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClassFrom: classSelection
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> adoptMetaLevelForSelectedClass [
+ClyClassBrowserMethodGroupsMode >> adoptMetaLevelForSelectedClass [
 	| selectedClass extendedMetaLevel |
 	browser classSelection isEmpty ifTrue: [ ^self ].
 	selectedClass := browser classSelection lastSelectedItem.
@@ -52,25 +52,25 @@ ClyBrowseClassMethodsWithGroupsMode >> adoptMetaLevelForSelectedClass [
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> emptyMethodGroupQueryFor: aBrowser [
+ClyClassBrowserMethodGroupsMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> initializeFromMode: aBrowserMode [
+ClyClassBrowserMethodGroupsMode >> initializeFromMode: aBrowserMode [
 	metaLevelScope := aBrowserMode metaLevelScope.
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: aBrowserMode classScopeForMethods
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> restrictMethodVisibilityBy: aClassScope [
+ClyClassBrowserMethodGroupsMode >> restrictMethodVisibilityBy: aClassScope [
 	super restrictMethodVisibilityBy: aClassScope.
 
 	methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithGroupsMode >> setUpForSelectedClasses [
+ClyClassBrowserMethodGroupsMode >> setUpForSelectedClasses [
 	super setUpForSelectedClasses.
 	
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods.
@@ -78,10 +78,10 @@ ClyBrowseClassMethodsWithGroupsMode >> setUpForSelectedClasses [
 ]
 
 { #category : #converting }
-ClyBrowseClassMethodsWithGroupsMode >> switchToMethodGroups [
+ClyClassBrowserMethodGroupsMode >> switchToMethodGroups [
 ]
 
 { #category : #converting }
-ClyBrowseClassMethodsWithGroupsMode >> switchToVariables [
-	^ClyBrowseClassMethodsWithVariablesMode switchedFrom: self
+ClyClassBrowserMethodGroupsMode >> switchToVariables [
+	^ClyClassBrowserVariablesMode switchedFrom: self
 ]

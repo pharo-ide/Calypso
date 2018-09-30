@@ -18,12 +18,12 @@ Class {
 }
 
 { #category : #accessing }
-ClyFullBrowserState >> browseMethodsMode [
+ClyFullBrowserState >> classBrowserMode [
 	^ browseMethodsMode
 ]
 
 { #category : #accessing }
-ClyFullBrowserState >> browseMethodsMode: anObject [
+ClyFullBrowserState >> classBrowserMode: anObject [
 	browseMethodsMode := anObject
 ]
 
@@ -36,12 +36,12 @@ ClyFullBrowserState >> createBrowser [
 ClyFullBrowserState >> restoreStateOf: aBrowser [
 	super restoreStateOf: aBrowser.
 	
-	aBrowser browseMethodsMode: (browseMethodsMode copy browser: aBrowser)
+	aBrowser classBrowserMode: (browseMethodsMode copy browser: aBrowser)
 ]
 
 { #category : #operations }
 ClyFullBrowserState >> retrieveStateFrom: aBrowser [
 	super retrieveStateFrom: aBrowser.
 	
-	browseMethodsMode := aBrowser browseMethodsMode copy browser: nil
+	browseMethodsMode := aBrowser classBrowserMode copy browser: nil
 ]

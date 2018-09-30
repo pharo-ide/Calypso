@@ -1,18 +1,18 @@
 Class {
-	#name : #ClyBrowseClassMethodsWithVariablesMode,
-	#superclass : #ClyBrowseClassMethodsMode,
+	#name : #ClyClassBrowserVariablesMode,
+	#superclass : #ClyClassBrowserMode,
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithVariablesMode >> emptyMethodGroupQueryFor: aBrowser [
+ClyClassBrowserVariablesMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllVariables 
 		from: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
 		as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
 ]
 
 { #category : #converting }
-ClyBrowseClassMethodsWithVariablesMode >> forNewClassSelection [
+ClyClassBrowserVariablesMode >> forNewClassSelection [
 	browser classSelection isEmpty ifTrue: [ ^super forNewClassSelection ].
 	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [
 		 ^self switchToMethodGroups; setUpForSelectedClasses ].
@@ -21,7 +21,7 @@ ClyBrowseClassMethodsWithVariablesMode >> forNewClassSelection [
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithVariablesMode >> initializeFromMode: aBrowserMode [
+ClyClassBrowserVariablesMode >> initializeFromMode: aBrowserMode [
 	| classScope |
 	super initializeFromMode: aBrowserMode.
 	classScope := aBrowserMode classScopeForMethods.
@@ -31,7 +31,7 @@ ClyBrowseClassMethodsWithVariablesMode >> initializeFromMode: aBrowserMode [
 ]
 
 { #category : #initialization }
-ClyBrowseClassMethodsWithVariablesMode >> setUpForSelectedClasses [
+ClyClassBrowserVariablesMode >> setUpForSelectedClasses [
 	| classScope |
 	super setUpForSelectedClasses.
 	
@@ -42,10 +42,10 @@ ClyBrowseClassMethodsWithVariablesMode >> setUpForSelectedClasses [
 ]
 
 { #category : #converting }
-ClyBrowseClassMethodsWithVariablesMode >> switchToMethodGroups [
-	^ClyBrowseClassMethodsWithGroupsMode switchedFrom: self
+ClyClassBrowserVariablesMode >> switchToMethodGroups [
+	^ClyClassBrowserMethodGroupsMode switchedFrom: self
 ]
 
 { #category : #converting }
-ClyBrowseClassMethodsWithVariablesMode >> switchToVariables [
+ClyClassBrowserVariablesMode >> switchToVariables [
 ]

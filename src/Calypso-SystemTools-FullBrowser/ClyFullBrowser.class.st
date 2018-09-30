@@ -33,7 +33,7 @@ Class {
 		'classView',
 		'methodGroupView',
 		'methodView',
-		'browseMethodsMode'
+		'classBrowserMode'
 	],
 	#classVars : [
 		'DefaultPackageFilter'
@@ -170,16 +170,6 @@ ClyFullBrowser >> allNavigationScopes [
 		classLocalScope }
 ]
 
-{ #category : #accessing }
-ClyFullBrowser >> browseMethodsMode [
-	^ browseMethodsMode
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> browseMethodsMode: anObject [
-	browseMethodsMode := anObject
-]
-
 { #category : #updating }
 ClyFullBrowser >> buildTitleFromSelections [
 	| newTitle mainItem |	
@@ -196,7 +186,7 @@ ClyFullBrowser >> buildTitleFromSelections [
 		ifFalse: [ self methodSelection lastSelectedItem].
 
 	newTitle := mainItem systemDefinition printDefiningClass.
-	mainItem systemDefinition isInstanceSide & browseMethodsMode isClassSideMetaLevel
+	mainItem systemDefinition isInstanceSide & classBrowserMode isClassSideMetaLevel
 		ifTrue: [ newTitle := newTitle , ' class' ].
 	self methodSelection isEmpty ifFalse: [ 
 		newTitle := newTitle , '>>' , self methodSelection lastSelectedItem name ].
@@ -204,13 +194,13 @@ ClyFullBrowser >> buildTitleFromSelections [
 ]
 
 { #category : #navigation }
-ClyFullBrowser >> changeBrowseMethodsModeBy: aBlock [
+ClyFullBrowser >> changeClassBrowserModeBy: aBlock [
 	
 	self changeStateBy: [ | newMode |
 		newMode := aBlock value.
-		browseMethodsMode == newMode ifTrue: [ ^self ].
-		browseMethodsMode := newMode.
-		methodGroupView showQuery: browseMethodsMode methodGroupQuery.
+		classBrowserMode == newMode ifTrue: [ ^self ].
+		classBrowserMode := newMode.
+		methodGroupView showQuery: classBrowserMode methodGroupQuery.
 		methodGroupView initiateUIChangeBy: [
 			"view should know that any change here was not requested by user"
 			self methodGroupSelectionChanged] 
@@ -232,7 +222,7 @@ ClyFullBrowser >> chooseClassForEditorOfMethod: aMethod [
 ClyFullBrowser >> chooseClassesForNewMethod [
 
 	^self classSelection actualObjects collect: [ :each | 
-		browseMethodsMode currentSideOfClass: each]
+		classBrowserMode currentSideOfClass: each]
 ]
 
 { #category : #accessing }
@@ -244,6 +234,16 @@ ClyFullBrowser >> chooseClassesForNewMethod: aMethod [
 	selectedClasses := self chooseClassesForNewMethod.
 	selectedClasses := selectedClasses copyWithout: methodClass.
 	^selectedClasses, {methodClass}
+]
+
+{ #category : #accessing }
+ClyFullBrowser >> classBrowserMode [
+	^ classBrowserMode
+]
+
+{ #category : #accessing }
+ClyFullBrowser >> classBrowserMode: anObject [
+	classBrowserMode := anObject
 ]
 
 { #category : #accessing }
@@ -263,8 +263,8 @@ ClyFullBrowser >> classSelectionChanged [
 		self showsFlatClasses ifFalse: [ 
 			self silentlySelectPackageOfSelectedClass].
 		 
-		self changeBrowseMethodsModeBy: [ 
-			browseMethodsMode forNewClassSelection].
+		self changeClassBrowserModeBy: [ 
+			classBrowserMode forNewClassSelection].
 		
 		self selectCurrentExtensionMethodGroup
 	]
@@ -289,7 +289,7 @@ ClyFullBrowser >> createCommandContext [
 
 { #category : #context }
 ClyFullBrowser >> currentMetaLevelOf: aClass [
-	^browseMethodsMode currentSideOfClass: aClass
+	^classBrowserMode currentSideOfClass: aClass
 ]
 
 { #category : #'tools support' }
@@ -385,7 +385,7 @@ ClyFullBrowser >> isScopedModeEnabled [
 { #category : #accessing }
 ClyFullBrowser >> metaLevelScope [
 	
-	^browseMethodsMode metaLevelScope 
+	^classBrowserMode metaLevelScope 
 ]
 
 { #category : #accessing }
@@ -491,7 +491,7 @@ ClyFullBrowser >> prepareDefaultState [
 { #category : #initialization }
 ClyFullBrowser >> prepareInitialState [
 
-	browseMethodsMode := ClyBrowseClassMethodsWithGroupsMode of: self.
+	classBrowserMode := ClyClassBrowserMethodGroupsMode of: self.
 	
 	self switchToPackages
 ]
@@ -515,8 +515,8 @@ ClyFullBrowser >> projectSelection [
 { #category : #navigation }
 ClyFullBrowser >> restrictMethodVisibilityBy: aClassScope [
 
-	self changeBrowseMethodsModeBy: [
-		browseMethodsMode forMethodVisibilityRestrictedBy: aClassScope]
+	self changeClassBrowserModeBy: [
+		classBrowserMode forMethodVisibilityRestrictedBy: aClassScope]
 ]
 
 { #category : #navigation }
@@ -633,7 +633,7 @@ ClyFullBrowser >> setWindowTitle: aString in: aWindow [
 	super setWindowTitle: aString in: aWindow.
 	
 	aWindow basicLabel ifNotNil: [:label |
-		emphasis := browseMethodsMode isInstanceSideMetaLevel
+		emphasis := classBrowserMode isInstanceSideMetaLevel
 			ifTrue: [ TextEmphasis normal ] ifFalse: [ TextEmphasis bold ].
 		label emphasis: emphasis emphasisCode]
 ]
@@ -641,7 +641,7 @@ ClyFullBrowser >> setWindowTitle: aString in: aWindow [
 { #category : #navigation }
 ClyFullBrowser >> showAllMethods [
 		
-	methodView showQuery: browseMethodsMode allMethodQuery
+	methodView showQuery: classBrowserMode allMethodQuery
 ]
 
 { #category : #testing }
@@ -751,16 +751,16 @@ ClyFullBrowser >> switchToFullClassHierarchyOf: aClass [
 { #category : #navigation }
 ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 	
-	self changeBrowseMethodsModeBy: [
-		browseMethodsMode forNewMetaLevelScope: aMetaLevelScopeClass
+	self changeClassBrowserModeBy: [
+		classBrowserMode forNewMetaLevelScope: aMetaLevelScopeClass
 	]
 ]
 
 { #category : #navigation }
 ClyFullBrowser >> switchToMethodGroups [
 	
-	self changeBrowseMethodsModeBy: [ 
-		browseMethodsMode switchToMethodGroups
+	self changeClassBrowserModeBy: [ 
+		classBrowserMode switchToMethodGroups
 	]
 ]
 
@@ -792,8 +792,8 @@ ClyFullBrowser >> switchToProjects [
 { #category : #navigation }
 ClyFullBrowser >> switchToVariables [
 	
-	self changeBrowseMethodsModeBy: [
-		browseMethodsMode switchToVariables
+	self changeClassBrowserModeBy: [
+		classBrowserMode switchToVariables
 	]
 ]
 
