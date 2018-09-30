@@ -1,3 +1,45 @@
+"
+I represent the way how to browse selected classes in full browser.
+It can be eighter method groups mode or variables mode which are implemented by my subclasses.
+
+So my instances keep: 
+- methodGroupQuery for third pane of browser.
+- metaLevelScope for class side and instance side.
+- classScopeForMethods to query all methods from selected classes 
+
+Subclasses should implement main method which set up methodGroupQuery:
+
+- setUpDefaultMethodGroupQuery
+
+My instances are supposed to be converted from each others when user decides to show class methods differently. It is implemented by several switch methods: 
+
+- switchToNewClassSelection. New mode is created when user changes class selection.
+
+- switchToMetaLevelScope: aMetaLevelScopeClass. New mode is created when user toggle class side.
+
+- switchToMethodGroups. It is subclass responsibility. Each subclass should return opposite mode instance but with same meta level.
+
+- switchToVariable. Same logic as for #switchToMethodGroups.
+
+- switchMethodVisibilityTo: aClassScope. New mode is created when user changes method visibility of browser.
+
+- switchOverriddenMethodVisibility. New mode is created when user enable/disable visibility of overridden methods 
+
+According to logic of concrete browser mode these methods set up specific methodGroupQuery and classScopeForMethods (look at #controlling protocol).
+
+To create instance of mode use following methods: 
+
+- of: aBrowser. To create mode for current class selection.
+- switchedFrom: anotherBrowserMode. To perform switch to another type of browser mode. 
+
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	browser:		<ClyFullBrowser>
+	classScopeForMethods:		<ClyClassScope>
+	metaLevelScope:		<ClyMetaLevelClassScope class>
+	methodGroupQuery:		<ClyQuery>
+"
 Class {
 	#name : #ClyClassBrowserMode,
 	#superclass : #Object,
@@ -59,6 +101,11 @@ ClyClassBrowserMode >> classScopeForMethods [
 ]
 
 { #category : #accessing }
+ClyClassBrowserMode >> classScopeForMethods: aClassScope [ 
+	classScopeForMethods := aClassScope
+]
+
+{ #category : #accessing }
 ClyClassBrowserMode >> currentSideOfClass: aClass [
 	^metaLevelScope metaLevelOf: aClass
 ]
@@ -95,6 +142,19 @@ ClyClassBrowserMode >> isClassSideMetaLevel [
 ClyClassBrowserMode >> isInstanceSideMetaLevel [
 
 	^metaLevelScope = ClyInstanceSideScope
+]
+
+{ #category : #testing }
+ClyClassBrowserMode >> isMethodVisibilityIncreased [
+
+	^classScopeForMethods isIncreasedClassScope 
+]
+
+{ #category : #testing }
+ClyClassBrowserMode >> isOverriddenInheritedMethodsVisible [
+
+	^self isMethodVisibilityIncreased and: [ 
+		classScopeForMethods showsOverriddenMethods ]
 ]
 
 { #category : #accessing }
@@ -155,6 +215,14 @@ ClyClassBrowserMode >> switchMethodVisibilityTo: aClassScope [
 
 	^self copy
 		setUpMethodVisibility: aClassScope
+]
+
+{ #category : #converting }
+ClyClassBrowserMode >> switchOverriddenMethodVisibility [
+	self isMethodVisibilityIncreased ifFalse: [ ^self ].
+	
+	^self copy
+		classScopeForMethods: classScopeForMethods withToggledOverriddenMethodVisibility
 ]
 
 { #category : #converting }

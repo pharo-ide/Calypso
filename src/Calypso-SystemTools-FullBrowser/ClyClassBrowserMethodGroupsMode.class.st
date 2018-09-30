@@ -1,3 +1,9 @@
+"
+I represent browser when it shows method groups (protocols).
+
+I implement special scenario for browsing extended classes.
+When user selects extended class I add extra method group for selected packages to see extensions instead of all methods.
+"
 Class {
 	#name : #ClyClassBrowserMethodGroupsMode,
 	#superclass : #ClyClassBrowserMode,

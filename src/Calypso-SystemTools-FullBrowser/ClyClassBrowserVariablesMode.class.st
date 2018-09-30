@@ -1,3 +1,6 @@
+"
+I represent browser when it shows variables
+"
 Class {
 	#name : #ClyClassBrowserVariablesMode,
 	#superclass : #ClyClassBrowserMode,

@@ -128,6 +128,16 @@ ClyIncreasedClassScopeTests >> testConvertingToReducedScopeByExtraClassScope [
 ]
 
 { #category : #tests }
+ClyIncreasedClassScopeTests >> testHasDefaultValueOfOverriddenMethodVisibility [
+
+	scope := ClyIncreasedClassScope new.
+	
+	self 
+		assert: scope showsOverriddenMethods 
+		equals: ClyIncreasedClassScope showsOverriddenMethodsByDefault
+]
+
+{ #category : #tests }
 ClyIncreasedClassScopeTests >> testIgnoresExtraClassesWhichArePartOfBasis [
 
 	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {ClyClass1FromP1. Array}.
@@ -191,4 +201,19 @@ ClyIncreasedClassScopeTests >> testMethodsEnumerationWhenOverriddenMethodsAreHid
 	expected remove: ClyClass1FromP1 >> #tag1Method1.
 	expected addAll: ClySubclassN1OfClass1FromP1 localMethods.
 	self assert: result asIdentitySet equals: expected
+]
+
+{ #category : #tests }
+ClyIncreasedClassScopeTests >> testToggleOverriddenMethodVisibility [
+
+	| convertedScope |
+	scope := self singleScopeSample.
+	
+	convertedScope := scope withToggledOverriddenMethodVisibility.
+	
+	self deny: scope == convertedScope.
+	self assert: convertedScope showsOverriddenMethods equals: scope showsOverriddenMethods not.
+	
+	convertedScope := convertedScope withToggledOverriddenMethodVisibility.
+	self assert: convertedScope showsOverriddenMethods equals: scope showsOverriddenMethods.
 ]

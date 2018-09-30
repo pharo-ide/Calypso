@@ -364,6 +364,18 @@ ClyFullBrowser >> isInProjectView [
 ]
 
 { #category : #testing }
+ClyFullBrowser >> isMethodVisibilityIncreased [
+
+	^classBrowserMode isMethodVisibilityIncreased
+]
+
+{ #category : #testing }
+ClyFullBrowser >> isOverriddenInheritedMethodsVisible [
+
+	^classBrowserMode isOverriddenInheritedMethodsVisible
+]
+
+{ #category : #testing }
 ClyFullBrowser >> isPackagePartOfSelection: aPackage [
 
 	(self isPackageSelected: aPackage) ifTrue: [ ^true ].
@@ -713,6 +725,13 @@ ClyFullBrowser >> switchMethodVisibilityTo: aClassScope [
 
 	self changeClassBrowserModeBy: [
 		classBrowserMode switchMethodVisibilityTo: aClassScope]
+]
+
+{ #category : #navigation }
+ClyFullBrowser >> switchOverriddenMethodVisibility [
+
+	self changeClassBrowserModeBy: [
+		classBrowserMode switchOverriddenMethodVisibility]
 ]
 
 { #category : #navigation }
