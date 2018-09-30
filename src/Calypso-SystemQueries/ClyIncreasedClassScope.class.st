@@ -53,7 +53,8 @@ ClyIncreasedClassScope >> extraClasses [
 
 { #category : #accessing }
 ClyIncreasedClassScope >> extraClasses: aCollection [
-	extraClasses := aCollection asSet
+	extraClasses := aCollection asSet.
+	extraClasses removeAllFoundIn: basisObjects
 ]
 
 { #category : #comparing }
@@ -142,11 +143,7 @@ ClyIncreasedClassScope >> showsOverriddenMethods: anObject [
 
 { #category : #converting }
 ClyIncreasedClassScope >> withExtraClasses: classes [
-	| newExtraClasses |
-	newExtraClasses := OrderedCollection withAll: extraClasses.
-	classes do: [ :each | 
-		(newExtraClasses identityIncludes: each) ifFalse: [ newExtraClasses add: each ] ].
 
 	^self copy 
-		extraClasses: newExtraClasses
+		extraClasses: extraClasses , classes 
 ]

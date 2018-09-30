@@ -128,6 +128,14 @@ ClyIncreasedClassScopeTests >> testConvertingToReducedScopeByExtraClassScope [
 ]
 
 { #category : #tests }
+ClyIncreasedClassScopeTests >> testIgnoresExtraClassesWhichArePartOfBasis [
+
+	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {ClyClass1FromP1. Array}.
+	
+	self assert: scope extraClasses equals: {Array} asSet
+]
+
+{ #category : #tests }
 ClyIncreasedClassScopeTests >> testIncludesClass [
 
 	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {Array. Object}.
