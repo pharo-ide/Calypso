@@ -4,13 +4,12 @@ Class {
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
-{ #category : #initialization }
+{ #category : #controlling }
 ClyClassBrowserMethodGroupsMode >> adoptForExtendedClass [
 	| extendingPackages extraGroups |
 	browser classSelection isEmpty ifTrue: [ ^self ].
 	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
 
-	self adoptMetaLevelForSelectedClass.
 	extendingPackages := browser packageSelection actualObjects.
 	extraGroups := ClyConstantQuery 
 				returning: extendingPackages as: ClyGroupedExtendingPackages new.
@@ -18,58 +17,37 @@ ClyClassBrowserMethodGroupsMode >> adoptForExtendedClass [
 	methodGroupQuery := methodGroupQuery , extraGroups
 ]
 
-{ #category : #initialization }
-ClyClassBrowserMethodGroupsMode >> adoptForExtendedClassFrom: classSelection [
-	| extendingPackages extraGroups selectedClassItem |
-	classSelection isEmpty ifTrue: [ ^self ].
-	selectedClassItem := classSelection lastSelectedItem.
-	(selectedClassItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
-	
-	self adoptMetaLevelForSelectedClass: selectedClassItem.
-	
-	extendingPackages := browser packageSelection actualObjects.
-	extraGroups := ClyConstantQuery 
-				returning: extendingPackages as: ClyGroupedExtendingPackages new.
-	extraGroups := methodGroupQuery scope adoptQuery: extraGroups.
-	methodGroupQuery := methodGroupQuery , extraGroups
-]
-
-{ #category : #initialization }
-ClyClassBrowserMethodGroupsMode >> adoptMetaLevelForSelectedClass [
+{ #category : #controlling }
+ClyClassBrowserMethodGroupsMode >> adoptMetaLevelForExtendedClass [
 	| selectedClass extendedMetaLevel |
 	browser classSelection isEmpty ifTrue: [ ^self ].
 	selectedClass := browser classSelection lastSelectedItem.
 	(selectedClass isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
 	
-	"First we should always switch to method groups because
-	only in that mode we can show properly extension methods "
 	extendedMetaLevel := selectedClass systemDefinition definingMetaLevelScope.
-	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].
-	
-	"We should switch to the meta level of extended class"
-	metaLevelScope := extendedMetaLevel.
-	methodGroupQuery := methodGroupQuery withMetaLevelScope: metaLevelScope
+	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].	
+	self setUpNewMetaLevelScope: extendedMetaLevel.
 ]
 
-{ #category : #initialization }
-ClyClassBrowserMethodGroupsMode >> initializeFromMode: aBrowserMode [
-	super initializeFromMode: aBrowserMode.
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods
-]
-
-{ #category : #initialization }
+{ #category : #controlling }
 ClyClassBrowserMethodGroupsMode >> restrictMethodVisibilityBy: aClassScope [
 	super restrictMethodVisibilityBy: aClassScope.
 
 	methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope
 ]
 
-{ #category : #initialization }
-ClyClassBrowserMethodGroupsMode >> setUpForSelectedClasses [
-	super setUpForSelectedClasses.
+{ #category : #controlling }
+ClyClassBrowserMethodGroupsMode >> setUpDefaultMethodGroupQuery [
 	
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods.
 	self adoptForExtendedClass
+]
+
+{ #category : #controlling }
+ClyClassBrowserMethodGroupsMode >> setUpForSelectedClasses [
+	super setUpForSelectedClasses.
+	
+	self adoptMetaLevelForExtendedClass.
 ]
 
 { #category : #converting }

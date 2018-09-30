@@ -60,7 +60,8 @@ ClyClassBrowserMode >> initialize [
 ClyClassBrowserMode >> initializeFromMode: aBrowserMode [
 	browser := aBrowserMode browser.
 	metaLevelScope := aBrowserMode metaLevelScope.
-	classScopeForMethods := aBrowserMode classScopeForMethods
+	classScopeForMethods := aBrowserMode classScopeForMethods.
+	self setUpDefaultMethodGroupQuery
 ]
 
 { #category : #testing }
@@ -102,6 +103,11 @@ ClyClassBrowserMode >> restrictMethodVisibilityBy: aClassScope [
 ]
 
 { #category : #controlling }
+ClyClassBrowserMode >> setUpDefaultMethodGroupQuery [
+	self subclassResponsibility 
+]
+
+{ #category : #controlling }
 ClyClassBrowserMode >> setUpDefaultMethodVisibility [
 	
 	ClyMethodVisibilityLevel allSubclassesDo: [ :each | 
@@ -112,7 +118,8 @@ ClyClassBrowserMode >> setUpDefaultMethodVisibility [
 { #category : #controlling }
 ClyClassBrowserMode >> setUpForSelectedClasses [
 	classScopeForMethods := 	browser classSelection asItemsScope: metaLevelScope.
-	self setUpDefaultMethodVisibility
+	self setUpDefaultMethodVisibility.
+	self setUpDefaultMethodGroupQuery
 ]
 
 { #category : #controlling }

@@ -4,21 +4,17 @@ Class {
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
-{ #category : #initialization }
-ClyClassBrowserVariablesMode >> initializeFromMode: aBrowserMode [
-	| classScope |
-	super initializeFromMode: aBrowserMode.
-	classScope := aBrowserMode classScopeForMethods.
-	methodGroupQuery := ClyAllVariables 
-			from: classScope, classScope asInheritedScope 
-			as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
+{ #category : #controlling }
+ClyClassBrowserVariablesMode >> restrictMethodVisibilityBy: aClassScope [
+	super restrictMethodVisibilityBy: aClassScope.
+
+	methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope
 ]
 
-{ #category : #initialization }
-ClyClassBrowserVariablesMode >> setUpForSelectedClasses [
-	| classScope |
-	super setUpForSelectedClasses.
+{ #category : #controlling }
+ClyClassBrowserVariablesMode >> setUpDefaultMethodGroupQuery [
 	
+	| classScope |
 	classScope := browser classSelection asItemsScope: metaLevelScope.	
 	methodGroupQuery := ClyAllVariables 
 			from: classScope, classScope asInheritedScope 
