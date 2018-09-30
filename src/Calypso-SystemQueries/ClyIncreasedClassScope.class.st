@@ -82,6 +82,11 @@ ClyIncreasedClassScope >> initialize [
 ]
 
 { #category : #testing }
+ClyIncreasedClassScope >> isIncreasedClassScope [
+	^true
+]
+
+{ #category : #testing }
 ClyIncreasedClassScope >> isMethod: aMethod overriddenBy: aClass [
 
 	self metaLevelsOf: aClass do: [:eachClassSide | 

@@ -25,6 +25,19 @@ ClyClassBrowserMode class >> switchedFrom: anotherBrowserMode [
 		initializeFromMode: anotherBrowserMode
 ]
 
+{ #category : #comparing }
+ClyClassBrowserMode >> = anObject [
+	"Answer whether the receiver and anObject represent the same object."
+
+	self == anObject
+		ifTrue: [ ^ true ].
+	self class = anObject class
+		ifFalse: [ ^ false ].
+	^ methodGroupQuery = anObject methodGroupQuery
+		and: [ classScopeForMethods = anObject classScopeForMethods
+				and: [ metaLevelScope = anObject metaLevelScope ] ]
+]
+
 { #category : #accessing }
 ClyClassBrowserMode >> allMethodQuery [
 	^ClyAllMethods sortedFrom: classScopeForMethods
@@ -48,6 +61,14 @@ ClyClassBrowserMode >> classScopeForMethods [
 { #category : #accessing }
 ClyClassBrowserMode >> currentSideOfClass: aClass [
 	^metaLevelScope metaLevelOf: aClass
+]
+
+{ #category : #comparing }
+ClyClassBrowserMode >> hash [
+	"Answer an integer value that is related to the identity of the receiver."
+
+	^ methodGroupQuery hash
+		bitXor: (classScopeForMethods hash bitXor: metaLevelScope hash)
 ]
 
 { #category : #initialization }

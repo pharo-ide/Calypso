@@ -65,13 +65,6 @@ ClyGroupedVariables class >> withDefaultHierarchyAndMethodsFrom: aClassScope [
 ]
 
 { #category : #'instance creation' }
-ClyGroupedVariables class >> withHierarchy: aClassHierarchy [
-
-	^self new 
-		hierarchy: aClassHierarchy
-]
-
-{ #category : #'instance creation' }
 ClyGroupedVariables class >> withHierarchy: aClassHierarchy andMethodsFrom: aClassScope [
 
 	^self new 
@@ -87,12 +80,12 @@ ClyGroupedVariables >> = anObject [
 	super = anObject ifFalse: [ ^false ].
 	
 	^ hierarchy = anObject hierarchy 
-		and: [ self classScopeForMethods = anObject classScopeForMethods ]
+		and: [ classScopeForMethods = anObject classScopeForMethods ]
 ]
 
 { #category : #accessing }
 ClyGroupedVariables >> classScopeForMethods [
-	^ classScopeForMethods ifNil: [self queryScope]
+	^ classScopeForMethods
 ]
 
 { #category : #accessing }
@@ -117,7 +110,7 @@ ClyGroupedVariables >> fillWithGroupedVariables: varsPerTypeAndDefiningClass [
 ClyGroupedVariables >> fillWithVariables: varsPerClass type: varTypeClass [
 
 	| classMap vars declarationGroup varItem methodQueryScope |
-	methodQueryScope := self classScopeForMethods asLocalClassScope.
+	methodQueryScope := self classScopeForMethods.
 	classMap := hierarchy buildFrom: varsPerClass keys.
 	classMap doInOrder: [ :eachClass |
 		vars := varsPerClass at: eachClass.
@@ -162,9 +155,4 @@ ClyGroupedVariables >> hierarchy [
 { #category : #accessing }
 ClyGroupedVariables >> hierarchy: anObject [
 	hierarchy := anObject
-]
-
-{ #category : #building }
-ClyGroupedVariables >> queryScope [
-	^buildingQuery scope
 ]

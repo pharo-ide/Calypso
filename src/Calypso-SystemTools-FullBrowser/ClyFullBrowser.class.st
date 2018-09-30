@@ -316,6 +316,7 @@ ClyFullBrowser >> defaultPackageFilter [
 ClyFullBrowser >> initialize [
 	super initialize.
 	
+	
 ]
 
 { #category : #initialization }
@@ -490,9 +491,8 @@ ClyFullBrowser >> prepareDefaultState [
 
 { #category : #initialization }
 ClyFullBrowser >> prepareInitialState [
-
-	classBrowserMode := ClyClassBrowserMethodGroupsMode of: self.
 	
+	classBrowserMode := ClyClassBrowserMethodGroupsMode of: self.
 	self switchToPackages
 ]
 

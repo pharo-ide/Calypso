@@ -14,15 +14,14 @@ Class {
 ClyGroupedInstanceVariables >> addClassVariableGroup [
 
 	| variableQuery methodQuery group |
-	variableQuery := ClyAllClassVariables from: self queryScope.
+	variableQuery := ClyAllClassVariables from: self scope.
 	methodQuery := ClyVariableReferences 
-		from: self classScopeForMethods asLocalClassScope
-		toVariablesFrom: variableQuery.
+		from: self classScopeForMethods toVariablesFrom: variableQuery.
 	
 	group := ClyMethodGroup 
 		named: 'Class variables' priority: 9 
 		on: methodQuery 
-		withSubgroupsFrom: (variableQuery withResult: (ClyGroupedClassVariables withHierarchy: hierarchy andMethodsFrom: self classScopeForMethods asLocalClassScope)).
+		withSubgroupsFrom: (variableQuery withResult: (ClyGroupedClassVariables withHierarchy: hierarchy andMethodsFrom: self classScopeForMethods)).
 	items add: group asCalypsoBrowserItem
 ]
 

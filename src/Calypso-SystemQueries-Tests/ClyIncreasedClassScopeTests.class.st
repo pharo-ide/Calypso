@@ -138,6 +138,14 @@ ClyIncreasedClassScopeTests >> testIncludesClass [
 ]
 
 { #category : #tests }
+ClyIncreasedClassScopeTests >> testIsIncreasedClassScope [
+
+	scope := self singleScopeSample.
+	
+	self assert: scope isIncreasedClassScope
+]
+
+{ #category : #tests }
 ClyIncreasedClassScopeTests >> testMethodsEnumeration [
 	| expected |
 	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {Object}.

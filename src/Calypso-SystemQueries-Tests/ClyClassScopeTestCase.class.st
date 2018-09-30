@@ -27,8 +27,9 @@ ClyClassScopeTestCase >> testConvertingToIncreasedScopeByExtraClassScope [
 	extraClassScope := ClySuperclassScope of: self class in: environment.
 	convertedScope := scope increasedByClassesFrom: extraClassScope.
 	
-	self assert: convertedScope class equals: scope class.
-	self assert: convertedScope basisObjects equals: scope basisObjects, self class allSuperclasses.
+	self assert: convertedScope class equals: ClyIncreasedClassScope.
+	self assert: convertedScope basisObjects equals: scope basisObjects.
+	self assert: convertedScope extraClasses asSet equals: self class allSuperclasses asSet.
 ]
 
 { #category : #tests }
@@ -50,8 +51,8 @@ ClyClassScopeTestCase >> testConvertingToReducedScopeByExtraClassScope [
 	increasedScope := scope increasedByClassesFrom: extraClassScope.
 	convertedScope := increasedScope reducedByClassesFrom: extraClassScope.
 	
-	self assert: convertedScope class equals: scope class.
-	self assert: convertedScope basisObjects equals: (scope basisObjects collect: #instanceSide)
+	self assert: convertedScope class equals: scope localScopeClass.
+	self assert: convertedScope basisObjects equals: scope basisObjects
 ]
 
 { #category : #tests }
@@ -65,4 +66,12 @@ ClyClassScopeTestCase >> testConvertingToSomeHierarchyScope [
 	self assert: convertedScope localScopeClass equals: scope localScopeClass.
 	self assert: convertedScope basisObjects equals: scope basisObjects.
 	self assert: convertedScope environment equals: environment
+]
+
+{ #category : #tests }
+ClyClassScopeTestCase >> testIsIncreasedClassScope [
+
+	scope := self singleScopeSample.
+	
+	self deny: scope isIncreasedClassScope
 ]

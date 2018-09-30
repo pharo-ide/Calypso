@@ -33,7 +33,7 @@ ClyInheritedMethodGroup class >> withMethodQuery: aMethodQuery andClassesInherit
 	| subgroupsQuery |
 	subgroupsQuery := ClyAllClasses 
 		from: aClassScope asInheritedScope, aClassScope asLocalClassScope
-		as: ClyMethodVisibilityGroups withDefaultHierarchy.		
+		as: (ClyMethodVisibilityGroups withDefaultHierarchyAndMethodsFrom: aClassScope).		
 				
 	^(self named: 'inherited methods' priority: 10 on: aMethodQuery withSubgroupsFrom: subgroupsQuery)
 		visibilityLevels: { ClyFullVisibilityLevel of: aClassScope }
