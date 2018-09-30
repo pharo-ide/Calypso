@@ -35,6 +35,8 @@ ClyIncreasedClassScope >> = anObject [
 { #category : #queries }
 ClyIncreasedClassScope >> classesDo: aBlock [
 
+	basisObjects do: [:each | 
+		self metaLevelsOf: each do: aBlock].
 	extraClasses do: [:each | 
 		self metaLevelsOf: each do: aBlock]
 ]
@@ -96,12 +98,15 @@ ClyIncreasedClassScope >> isMethodOverridden: aMethod [
 
 { #category : #queries }
 ClyIncreasedClassScope >> methodsDo: aBlock [
-
 	showsOverriddenMethods ifTrue: [ ^super methodsDo: aBlock ].
 	
-	self classesDo: [ :eachClass | 
-		eachClass localMethods do: [:eachMethod | 
-			(self isMethodOverridden: eachMethod) ifFalse: [ aBlock value: eachMethod ]]]
+	basisObjects do: [:eachClass | 
+		self metaLevelsOf: eachClass do: [:eachClassSide | 
+			eachClassSide localMethods do: aBlock]].	
+	extraClasses do: [:eachClass | 
+		self metaLevelsOf: eachClass do: [:eachClassSide | 
+			eachClassSide localMethods do: [:eachMethod | 
+				(self isMethodOverridden: eachMethod) ifFalse: [ aBlock value: eachMethod ]]]]
 ]
 
 { #category : #converting }
@@ -110,9 +115,9 @@ ClyIncreasedClassScope >> reducedByClassesFrom: aClassScope [
 	| myClasses classesToExclude |
 	myClasses := extraClasses collect: [:each | each instanceSide].
 	classesToExclude := aClassScope collectAllClasses collect: [:each | each instanceSide].
-
-	^self copy
-		extraClasses: (myClasses copyWithoutAll: classesToExclude)
+	^(myClasses copyWithoutAll: classesToExclude)
+		ifEmpty: [ self asLocalClassScope ]
+		ifNotEmpty: [:newExtraClasses | self copy extraClasses: newExtraClasses ]
 ]
 
 { #category : #accessing }

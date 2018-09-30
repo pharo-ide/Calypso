@@ -17,7 +17,7 @@ ClyIncreasedClassScopeTests >> testClassEnumeration [
 	
 	scope classesDo: [ :each | result add: each ].
 	
-	self assert: result asArray equals: {Array. Object}
+	self assert: result asArray equals: {Array. ClyClass1FromP1. Object}
 ]
 
 { #category : #tests }
@@ -27,7 +27,8 @@ ClyIncreasedClassScopeTests >> testClassEnumerationOverInstanceSideBasisWhenBoth
 	
 	scope classesDo: [ :each | result add: each].
 	
-	self assert: result asSet equals: {Object. Object class } asSet
+	self assert: result asSet equals: {ClyClass1FromP1. ClyClass1FromP1 class. 
+		Object. Object class } asSet
 ]
 
 { #category : #tests }
@@ -37,7 +38,7 @@ ClyIncreasedClassScopeTests >> testClassEnumerationOverMetaclassBasisWhenInstanc
 	
 	scope classesDo: [ :each | result add: each].
 	
-	self assert: result asSet equals: { Object } asSet
+	self assert: result asArray equals: { ClyClass1FromP1. Object } 
 ]
 
 { #category : #tests }
@@ -50,7 +51,9 @@ ClyIncreasedClassScopeTests >> testClassSideMethodsEnumerationWhenOverriddenMeth
 	scope methodsDo: [ :each | result add: each ].
 	
 	"overriddenClassSideMethod is overridden in ClySubclassN1OfClass1FromP1"
-	expected := ClyClass1FromP1 class localMethods asIdentitySet copyWithout: ClyClass1FromP1 class >> #overriddenClassSideMethod.
+	expected := ClyClass1FromP1 class localMethods asIdentitySet.
+	expected remove: ClyClass1FromP1 class >> #overriddenClassSideMethod.
+	expected addAll: ClySubclassN1OfClass1FromP1 class localMethods.
 	self assert: result asIdentitySet equals: expected
 ]
 
@@ -95,6 +98,19 @@ ClyIncreasedClassScopeTests >> testConvertingToIncreasedScopeByExtraClassScope [
 ]
 
 { #category : #tests }
+ClyIncreasedClassScopeTests >> testConvertingToReducedScopeByEmptyExtraClassScope [
+	| convertedScope extraClassScope |
+	scope := self multipleScopeSample.
+	scope extraClasses: { Point }.
+	extraClassScope := ClyClassScope ofAll: scope extraClasses.
+	
+	convertedScope := scope reducedByClassesFrom: extraClassScope.
+	
+	self assert: convertedScope class equals: scope localScopeClass.
+	self assert: convertedScope basisObjects equals: scope basisObjects
+]
+
+{ #category : #tests }
 ClyIncreasedClassScopeTests >> testConvertingToReducedScopeByExtraClassScope [
 	| convertedScope extraClassScope increasedScope |
 	scope := self multipleScopeSample.
@@ -112,13 +128,23 @@ ClyIncreasedClassScopeTests >> testConvertingToReducedScopeByExtraClassScope [
 ]
 
 { #category : #tests }
+ClyIncreasedClassScopeTests >> testIncludesClass [
+
+	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {Array. Object}.
+	
+	self assert: (scope includesClass: ClyClass1FromP1).
+	self assert: (scope includesClass: Object).
+	self deny: (scope includesClass: ClySubclassN1OfClass1FromP1)
+]
+
+{ #category : #tests }
 ClyIncreasedClassScopeTests >> testMethodsEnumeration [
 	| expected |
 	scope := ClyIncreasedClassScope of: ClyClass1FromP1 withAll: {Object}.
 	
 	scope methodsDo: [ :each | result add: each ].
 	
-	expected := {Object} flatCollect: #localMethods as: IdentitySet.
+	expected := {ClyClass1FromP1. Object} flatCollect: #localMethods as: IdentitySet.
 	self assert: result asIdentitySet equals: expected
 ]
 
@@ -130,7 +156,7 @@ ClyIncreasedClassScopeTests >> testMethodsEnumerationOverInstanceSideWhenBothMet
 	
 	scope methodsDo: [ :each | result add: each].
 
-	expected := { Object. Object class  }
+	expected := {ClyClass1FromP1. ClyClass1FromP1 class. Object. Object class  }
 		flatCollect: #localMethods as: IdentitySet..
 	self assert: result asIdentitySet equals: expected
 ]
@@ -144,6 +170,8 @@ ClyIncreasedClassScopeTests >> testMethodsEnumerationWhenOverriddenMethodsAreHid
 	scope methodsDo: [ :each | result add: each ].
 	
 	"tag1Method1 is overridden in ClySubclassN1OfClass1FromP1"
-	expected := ClyClass1FromP1 localMethods asIdentitySet copyWithout: ClyClass1FromP1 >> #tag1Method1.
+	expected := ClyClass1FromP1 localMethods asIdentitySet.
+	expected remove: ClyClass1FromP1 >> #tag1Method1.
+	expected addAll: ClySubclassN1OfClass1FromP1 localMethods.
 	self assert: result asIdentitySet equals: expected
 ]
