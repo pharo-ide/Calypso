@@ -4,20 +4,20 @@ Class {
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
-{ #category : #converting }
-ClyBrowseClassMethodsWithVariablesMode >> defaultForSelectedClasses [
-	browser classSelection isEmpty ifTrue: [ ^super defaultForSelectedClasses ].
-	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [
-		 ^self switchToMethodGroups; setUpForSelectedClasses ].
-	
-	^super defaultForSelectedClasses
-]
-
 { #category : #initialization }
 ClyBrowseClassMethodsWithVariablesMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllVariables 
 		from: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
 		as: ClyGroupedInstanceVariables withDefaultHierarchy
+]
+
+{ #category : #converting }
+ClyBrowseClassMethodsWithVariablesMode >> forNewClassSelection [
+	browser classSelection isEmpty ifTrue: [ ^super forNewClassSelection ].
+	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [
+		 ^self switchToMethodGroups; setUpForSelectedClasses ].
+	
+	^super forNewClassSelection
 ]
 
 { #category : #initialization }
@@ -33,11 +33,12 @@ ClyBrowseClassMethodsWithVariablesMode >> initializeFromMode: aBrowserMode [
 { #category : #initialization }
 ClyBrowseClassMethodsWithVariablesMode >> setUpForSelectedClasses [
 	| classScope |
-	classScope := self classScopeForMethods.
+	super setUpForSelectedClasses.
+	
+	classScope := 	browser classSelection asItemsScope: metaLevelScope.	
 	methodGroupQuery := ClyAllVariables 
 			from: classScope, classScope asInheritedScope 
-			as: ClyGroupedInstanceVariables withDefaultHierarchy.
-	methodGroupQuery := methodGroupQuery restrictedByScope: self defaultClassScopeForMethods
+			as: ClyGroupedInstanceVariables withDefaultHierarchy
 ]
 
 { #category : #converting }

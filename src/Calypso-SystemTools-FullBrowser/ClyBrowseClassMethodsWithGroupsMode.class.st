@@ -8,11 +8,9 @@ Class {
 ClyBrowseClassMethodsWithGroupsMode >> adoptForExtendedClass [
 	| extendingPackages extraGroups |
 	browser classSelection isEmpty ifTrue: [ ^self ].
-	"methodGroupQuery := methodGroupQuery withoutItemsOfType: RPackage." "To remove previous package injection"
 	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
-	
-	self adoptMetaLevelForSelectedClass. "it will also ensures method groups mode"
-	
+
+	self adoptMetaLevelForSelectedClass.
 	extendingPackages := browser packageSelection actualObjects.
 	extraGroups := ClyConstantQuery 
 				returning: extendingPackages as: ClyGroupedExtendingPackages new.
@@ -58,6 +56,13 @@ ClyBrowseClassMethodsWithGroupsMode >> emptyMethodGroupQueryFor: aBrowser [
 	^ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: aBrowser navigationEnvironment)
 ]
 
+{ #category : #converting }
+ClyBrowseClassMethodsWithGroupsMode >> forMethodVisibilityRestrictedBy: aClassScope [
+
+	^self copy
+		restrictMethodVisibilityBy: aClassScope
+]
+
 { #category : #initialization }
 ClyBrowseClassMethodsWithGroupsMode >> initializeFromMode: aBrowserMode [
 	metaLevelScope := aBrowserMode metaLevelScope.
@@ -65,9 +70,15 @@ ClyBrowseClassMethodsWithGroupsMode >> initializeFromMode: aBrowserMode [
 ]
 
 { #category : #initialization }
+ClyBrowseClassMethodsWithGroupsMode >> restrictMethodVisibilityBy: aClassScope [
+
+	classScopeForMethods := classScopeForMethods restrictedBy: aClassScope.
+	methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope
+]
+
+{ #category : #initialization }
 ClyBrowseClassMethodsWithGroupsMode >> setUpForSelectedClasses [
-	classScopeForMethods := 	browser classSelection asItemsScope: metaLevelScope.
-	classScopeForMethods := self extendClassScopeForMethods: classScopeForMethods.
+	super setUpForSelectedClasses.
 	
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods.
 	self adoptForExtendedClass
