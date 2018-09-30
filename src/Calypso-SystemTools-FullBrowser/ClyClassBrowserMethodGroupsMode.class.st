@@ -30,13 +30,6 @@ ClyClassBrowserMethodGroupsMode >> adoptMetaLevelForExtendedClass [
 ]
 
 { #category : #controlling }
-ClyClassBrowserMethodGroupsMode >> restrictMethodVisibilityBy: aClassScope [
-	super restrictMethodVisibilityBy: aClassScope.
-
-	methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope
-]
-
-{ #category : #controlling }
 ClyClassBrowserMethodGroupsMode >> setUpDefaultMethodGroupQuery [
 	
 	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods.
@@ -48,6 +41,13 @@ ClyClassBrowserMethodGroupsMode >> setUpForSelectedClasses [
 	super setUpForSelectedClasses.
 	
 	self adoptMetaLevelForExtendedClass.
+]
+
+{ #category : #controlling }
+ClyClassBrowserMethodGroupsMode >> setUpMethodVisibility: aClassScope [
+	super setUpMethodVisibility: aClassScope.
+
+	methodGroupQuery := methodGroupQuery withScope: aClassScope
 ]
 
 { #category : #converting }

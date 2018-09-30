@@ -513,13 +513,6 @@ ClyFullBrowser >> projectSelection [
 ]
 
 { #category : #navigation }
-ClyFullBrowser >> restrictMethodVisibilityBy: aClassScope [
-
-	self changeClassBrowserModeBy: [
-		classBrowserMode switchMethodVisibilityTo: aClassScope]
-]
-
-{ #category : #navigation }
 ClyFullBrowser >> selectClass: aClass [
 	| foundItems classDefinition |
 	self changeStateBy: [ 
@@ -713,6 +706,13 @@ ClyFullBrowser >> switchClassViewTo: aQueryResult inScope: aScope [
 	classes := ClyAllClasses from: aScope as: aQueryResult.
 	
 	classView showQuery: classes
+]
+
+{ #category : #navigation }
+ClyFullBrowser >> switchMethodVisibilityTo: aClassScope [
+
+	self changeClassBrowserModeBy: [
+		classBrowserMode switchMethodVisibilityTo: aClassScope]
 ]
 
 { #category : #navigation }

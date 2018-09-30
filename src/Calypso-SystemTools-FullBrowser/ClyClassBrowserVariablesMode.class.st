@@ -5,13 +5,6 @@ Class {
 }
 
 { #category : #controlling }
-ClyClassBrowserVariablesMode >> restrictMethodVisibilityBy: aClassScope [
-	super restrictMethodVisibilityBy: aClassScope.
-
-	methodGroupQuery := methodGroupQuery restrictedByScope: aClassScope
-]
-
-{ #category : #controlling }
 ClyClassBrowserVariablesMode >> setUpDefaultMethodGroupQuery [
 	
 	| classScope |
@@ -19,6 +12,14 @@ ClyClassBrowserVariablesMode >> setUpDefaultMethodGroupQuery [
 	methodGroupQuery := ClyAllVariables 
 			from: classScope, classScope asInheritedScope 
 			as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
+]
+
+{ #category : #controlling }
+ClyClassBrowserVariablesMode >> setUpMethodVisibility: aClassScope [
+	super setUpMethodVisibility: aClassScope.
+	
+	methodGroupQuery := methodGroupQuery 
+		withResult: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
 ]
 
 { #category : #converting }

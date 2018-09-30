@@ -78,7 +78,7 @@ ClyMethodVisibilityMorph >> showInheritedMethods: aBoolean [
 	
 	newScope := visibilityLevel toggleScope.
 	newScope isBasedOnEmptyBasis ifFalse: [ 
-		browser restrictMethodVisibilityBy: newScope]
+		browser switchMethodVisibilityTo: newScope]
 ]
 
 { #category : #accessing }

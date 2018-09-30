@@ -97,12 +97,6 @@ ClyClassBrowserMode >> methodGroupQuery: anObject [
 ]
 
 { #category : #controlling }
-ClyClassBrowserMode >> restrictMethodVisibilityBy: aClassScope [
-
-	classScopeForMethods := classScopeForMethods restrictedBy: aClassScope
-]
-
-{ #category : #controlling }
 ClyClassBrowserMode >> setUpDefaultMethodGroupQuery [
 	self subclassResponsibility 
 ]
@@ -123,6 +117,12 @@ ClyClassBrowserMode >> setUpForSelectedClasses [
 ]
 
 { #category : #controlling }
+ClyClassBrowserMode >> setUpMethodVisibility: aClassScope [
+
+	classScopeForMethods := aClassScope
+]
+
+{ #category : #controlling }
 ClyClassBrowserMode >> setUpNewMetaLevelScope: aMetaLevelScopeClass [
 	metaLevelScope := aMetaLevelScopeClass.
 	classScopeForMethods := classScopeForMethods withMetaLevel: metaLevelScope.
@@ -133,7 +133,7 @@ ClyClassBrowserMode >> setUpNewMetaLevelScope: aMetaLevelScopeClass [
 ClyClassBrowserMode >> switchMethodVisibilityTo: aClassScope [
 
 	^self copy
-		restrictMethodVisibilityBy: aClassScope
+		setUpMethodVisibility: aClassScope
 ]
 
 { #category : #converting }
