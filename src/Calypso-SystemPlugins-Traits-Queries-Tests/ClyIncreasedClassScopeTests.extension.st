@@ -26,12 +26,26 @@ ClyIncreasedClassScopeTests >> testMethodsEnumerationOfInheritedTraitsOfTraitWhe
 
 { #category : #'*Calypso-SystemPlugins-Traits-Queries-Tests' }
 ClyIncreasedClassScopeTests >> testMethodsEnumerationOfInheritedTraitsWhenOverriddenMethodsAreHidden [
-	"#methodFromRoot1 is overridden by ClySubclassWithTraitsOfClassWithTraits"
+	"#methodFromRoot1 and #methodFromTraitChild2 are overridden 
+	by ClySubclassWithTraitsOfClassWithTraits"
 	scope := ClyIncreasedClassScope of: ClySubclassWithTraitsOfClassWithTraits withAll: {ClyTraitRoot1}.
 	scope hideOverriddenMethods.
 	
 	scope methodsDo: [ :each | result add: each ].
 	
 	self deny: (result asIdentitySet includes: ClyTraitRoot1 >> #methodFromRoot1).
+	self assert: result notEmpty
+]
+
+{ #category : #'*Calypso-SystemPlugins-Traits-Queries-Tests' }
+ClyIncreasedClassScopeTests >> testMethodsEnumerationOfInheritedTraitsWhenOverriddenMethodsAreHidden2 [
+	"#methodFromRoot1 and #methodFromTraitChild2 are overridden 
+	by ClySubclassWithTraitsOfClassWithTraits"
+	scope := ClyIncreasedClassScope of: ClySubclassWithTraitsOfClassWithTraits withAll: {ClyTraitChild2}.
+	scope hideOverriddenMethods.
+	
+	scope methodsDo: [ :each | result add: each ].
+	
+	self deny: (result asIdentitySet includes: 	ClyTraitChild2 >> #methodFromTraitChild2).
 	self assert: result notEmpty
 ]

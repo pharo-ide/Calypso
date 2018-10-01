@@ -6,6 +6,24 @@ Behavior >> calypsoEnvironmentType [
 ]
 
 { #category : #'*Calypso-SystemQueries' }
+Behavior >> canOverrideMethod: aMethod [
+	(self inheritsFrom: aMethod origin) ifTrue: [ ^true ].
+	
+	"Following ugly check is to not break in case when no traits exists.
+	Normal solution would be to delegate logic to metaclass 
+	where traited classes will have own behavior but this mechanizm exists only in Pharo7.
+	For compatibility with pharo6 trait analysis is hardcoded just here"
+	(self respondsTo: #traits) ifFalse: [ ^false ].
+	
+	(self traits anySatisfy: [ :eachTrait | 
+		eachTrait = aMethod origin or: [eachTrait canOverrideMethod: aMethod ]])
+			ifTrue: [ ^true ].
+	
+	self isRootInEnvironment ifTrue: [ ^false ].
+	^superclass canOverrideMethod: aMethod
+]
+
+{ #category : #'*Calypso-SystemQueries' }
 Behavior >> includesMethodsAffectedBy: aSystemAnnouncement [
 	^aSystemAnnouncement affectsMethodsDefinedInClass: self 
 
@@ -19,7 +37,6 @@ Behavior >> metaLevelScope [
 { #category : #'*Calypso-SystemQueries' }
 Behavior >> overridesMethod: aMethod [
 
-	^((self inheritsFrom: aMethod origin) or: [ 
-		self isComposedBy: aMethod origin  ])
+	^(self canOverrideMethod: aMethod)
 			and: [ (self lookupSelector: aMethod selector) originMethod ~~ aMethod]
 ]

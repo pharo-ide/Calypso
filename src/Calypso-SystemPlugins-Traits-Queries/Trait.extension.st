@@ -1,10 +1,20 @@
 Extension { #name : #Trait }
 
 { #category : #'*Calypso-SystemPlugins-Traits-Queries' }
-Trait >> overridesMethod: aMethod [
-	"For compatibility with Pharo6"
+Trait >> canOverrideMethod: aMethod [
+	"It is required for compatibility with Pharo6 where Trait is not kind of Class"
 	
-	^((self inheritsFrom: aMethod origin) or: [ 
-		self isComposedBy: aMethod origin  ])
+	(self traits anySatisfy: [ :eachTrait | 
+		eachTrait = aMethod origin or: [eachTrait canOverrideMethod: aMethod ]])
+			ifTrue: [ ^true ].
+	
+	^false
+]
+
+{ #category : #'*Calypso-SystemPlugins-Traits-Queries' }
+Trait >> overridesMethod: aMethod [
+	"It is copy of Behavior method for compatibility with Pharo6"
+
+	^(self canOverrideMethod: aMethod)
 			and: [ (self lookupSelector: aMethod selector) originMethod ~~ aMethod]
 ]

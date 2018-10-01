@@ -150,7 +150,7 @@ ClyIncreasedClassScope >> increasedByClassesFrom: aClassScope [
 ClyIncreasedClassScope >> initialize [ 	
 	super initialize.
 	
-	showsOverriddenMethods := ShowsOverriddenMethodsByDefault
+	showsOverriddenMethods := self class showsOverriddenMethodsByDefault
 ]
 
 { #category : #testing }
