@@ -32,9 +32,8 @@ ClyClassBrowserVariablesMode >> switchToMethodGroups [
 
 { #category : #converting }
 ClyClassBrowserVariablesMode >> switchToNewClassSelection [
-	(browser classSelection isEmpty not and: [ 
-		browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag]) 
-			ifTrue: [ ^self switchToMethodGroups setUpForSelectedClasses ].
+	browser isExtendedClassSelected ifTrue: [ 
+		^self switchToMethodGroups setUpForSelectedClasses ].
 	
 	^super switchToNewClassSelection
 ]

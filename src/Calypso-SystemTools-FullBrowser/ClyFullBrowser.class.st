@@ -358,9 +358,9 @@ ClyFullBrowser >> isClassSelected: aClass [
 ]
 
 { #category : #testing }
-ClyFullBrowser >> isInProjectView [
-	
-	^ self packageView showsItemsFromQuery: (systemScope projectQueryFor: self systemScope) class
+ClyFullBrowser >> isExtendedClassSelected [
+	self classSelection isEmpty ifTrue: [ ^false ].
+	^self classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag
 ]
 
 { #category : #testing }
@@ -558,11 +558,7 @@ ClyFullBrowser >> selectClass: aClass atMethodTag: tagName [
 { #category : #navigation }
 ClyFullBrowser >> selectCurrentExtensionMethodGroup [
 	
-	self classSelection isEmpty ifTrue: [ ^self ].
-	self classSelection isMultipleSelected ifTrue: [ ^self ].
-	
-	(self classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) 
-		ifFalse: [ ^self].
+	self isExtendedClassSelected ifFalse: [ ^self ].
 		
 	self selectMethodGroupNamed: self packageSelection lastSelectedItem name
 ]
@@ -658,6 +654,12 @@ ClyFullBrowser >> showsFlatClasses [
 { #category : #testing }
 ClyFullBrowser >> showsFullClassHierarchy [
 	^classView showsItemsFromScope: ClySuperclassScope
+]
+
+{ #category : #testing }
+ClyFullBrowser >> showsProjects [
+	
+	^ self packageView showsItemsFromQuery: (systemScope projectQueryFor: self systemScope) class
 ]
 
 { #category : #navigation }

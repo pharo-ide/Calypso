@@ -13,8 +13,7 @@ Class {
 { #category : #controlling }
 ClyClassBrowserMethodGroupsMode >> adoptForExtendedClass [
 	| extendingPackages extraGroups |
-	browser classSelection isEmpty ifTrue: [ ^self ].
-	(browser classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
+	browser isExtendedClassSelected ifFalse: [ ^self ].
 
 	extendingPackages := browser packageSelection actualObjects.
 	extraGroups := ClyConstantQuery 
@@ -25,12 +24,11 @@ ClyClassBrowserMethodGroupsMode >> adoptForExtendedClass [
 
 { #category : #controlling }
 ClyClassBrowserMethodGroupsMode >> adoptMetaLevelForExtendedClass [
-	| selectedClass extendedMetaLevel |
-	browser classSelection isEmpty ifTrue: [ ^self ].
-	selectedClass := browser classSelection lastSelectedItem.
-	(selectedClass isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
+	| extendedMetaLevel selectedClassItem |
+	browser isExtendedClassSelected ifFalse: [ ^self ].
 	
-	extendedMetaLevel := selectedClass systemDefinition definingMetaLevelScope.
+	selectedClassItem := browser classSelection lastSelectedItem.
+	extendedMetaLevel :=  selectedClassItem systemDefinition definingMetaLevelScope.
 	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].	
 	self setUpNewMetaLevelScope: extendedMetaLevel.
 ]
