@@ -7,7 +7,7 @@ Trait {
 
 { #category : #'as yet unclassified' }
 ClyTraitChild3 >> methodFromRoot1 [
-	^#overriddenTraitMethodInMethod
+	^#overriddenTraitMethodInTrait
 ]
 
 { #category : #'as yet unclassified' }
