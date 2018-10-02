@@ -37,6 +37,9 @@ Behavior >> metaLevelScope [
 { #category : #'*Calypso-SystemQueries' }
 Behavior >> overridesMethod: aMethod [
 
-	^(self canOverrideMethod: aMethod)
-			and: [ (self lookupSelector: aMethod selector) originMethod ~~ aMethod]
+	(self canOverrideMethod: aMethod) ifFalse: [ ^false ].
+	
+	^(self lookupSelector: aMethod selector)
+		ifNil: [ true "no selector means that inherited method was somehow removed which is kind of override" ]
+		ifNotNil: [ :actualMethod | actualMethod originMethod ~~ aMethod]
 ]

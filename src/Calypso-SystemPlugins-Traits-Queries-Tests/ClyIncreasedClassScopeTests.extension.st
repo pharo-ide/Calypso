@@ -13,6 +13,17 @@ ClyIncreasedClassScopeTests >> testDoesNotIncludeDuplicatedTraits [
 ]
 
 { #category : #'*Calypso-SystemPlugins-Traits-Queries-Tests' }
+ClyIncreasedClassScopeTests >> testMethodsEnumerationOfInheritedTraitWithSubstractedMethod [
+	"#methodFromRoot2 is substract in trait composition of ClyClassWithSubstractingTraitMethod"
+	scope := ClyIncreasedClassScope of: ClyClassWithSubstractingTraitMethod withAll: {ClyTraitRoot2}.
+	scope hideOverriddenMethods.
+	
+	scope methodsDo: [ :each | result add: each ].
+	
+	self deny: (result asIdentitySet includes: 	ClyTraitRoot2 >> #methodFromRoot2)
+]
+
+{ #category : #'*Calypso-SystemPlugins-Traits-Queries-Tests' }
 ClyIncreasedClassScopeTests >> testMethodsEnumerationOfInheritedTraitsOfTraitWhenOverriddenMethodsAreHidden [
 	"#methodFromRoot1 is overridden by ClyTraitChild3"
 	scope := ClyIncreasedClassScope of: ClyTraitChild3 withAll: {ClyTraitRoot1}.

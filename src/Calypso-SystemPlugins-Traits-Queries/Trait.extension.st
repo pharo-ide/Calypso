@@ -15,6 +15,9 @@ Trait >> canOverrideMethod: aMethod [
 Trait >> overridesMethod: aMethod [
 	"It is copy of Behavior method for compatibility with Pharo6"
 
-	^(self canOverrideMethod: aMethod)
-			and: [ (self lookupSelector: aMethod selector) originMethod ~~ aMethod]
+	(self canOverrideMethod: aMethod) ifFalse: [ ^false ].
+	
+	^(self lookupSelector: aMethod selector)
+		ifNil: [ true "no selector means that inherited method was somehow removed which is kind of override" ]
+		ifNotNil: [ :actualMethod | actualMethod originMethod ~~ aMethod]
 ]
