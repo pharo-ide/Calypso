@@ -6,6 +6,7 @@ SmalltalkCISpec {
       #platforms : [ #pharo ],
 	  #onConflict : #useIncoming,
 	  #onUpgrade : #useIncoming,
+	  #ignoreImage : true,
       #failOn : [ #Warning ]
     }
   ]
