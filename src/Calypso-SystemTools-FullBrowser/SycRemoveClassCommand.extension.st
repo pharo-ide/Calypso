@@ -1,14 +1,14 @@
 Extension { #name : #SycRemoveClassCommand }
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycRemoveClassCommand class >> fullBrowserMenuActivation [
+SycRemoveClassCommand classSide >> fullBrowserMenuActivation [
 	<classAnnotation>
 	
 	^CmdContextMenuActivation byRootGroupItemOrder: 10000 for: ClyClassContextOfFullBrowser 
 ]
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycRemoveClassCommand class >> fullBrowserShortcutActivation [
+SycRemoveClassCommand classSide >> fullBrowserShortcutActivation [
 	<classAnnotation>
 	
 	^CmdShortcutActivation removalFor: ClyClassContextOfFullBrowser 

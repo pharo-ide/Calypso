@@ -93,7 +93,7 @@ ClyMethodDiffTool >> detachFromSystem [
 ClyMethodDiffTool >> isSimilarTo: anotherBrowserTool [
 	(super isSimilarTo: anotherBrowserTool) ifFalse: [ ^false ].
 	
-	^{leftMethod. rightMethod} asIdentitySet = {anotherBrowserTool leftMethod. anotherBrowserTool rightMethod  }
+	^{leftMethod. rightMethod} asIdentitySet = {anotherBrowserTool leftMethod. anotherBrowserTool rightMethod  } asIdentitySet
 ]
 
 { #category : #accessing }
@@ -123,4 +123,16 @@ ClyMethodDiffTool >> setUpModelFromContext [
 
 	leftMethod := context firstSelectedMethod.
 	rightMethod := context lastSelectedMethod
+]
+
+{ #category : #updating }
+ClyMethodDiffTool >> update [
+	leftMethod := leftMethod origin 
+		localMethodNamed: leftMethod selector ifAbsent: [^self].
+	rightMethod := rightMethod origin 
+		localMethodNamed: rightMethod selector ifAbsent: [^self].
+	
+	super update.
+	
+	diffMorph from: leftMethod sourceCode to: rightMethod sourceCode
 ]

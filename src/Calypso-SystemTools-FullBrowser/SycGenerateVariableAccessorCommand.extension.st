@@ -1,7 +1,7 @@
 Extension { #name : #SycGenerateVariableAccessorCommand }
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycGenerateVariableAccessorCommand class >> fullBrowserMenuActivation [
+SycGenerateVariableAccessorCommand classSide >> fullBrowserMenuActivation [
 	<classAnnotation>
 	
 	^CmdContextMenuActivation byRootGroupItemFor: ClyVariableContextOfFullBrowser 

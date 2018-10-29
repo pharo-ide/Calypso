@@ -1,7 +1,7 @@
 Extension { #name : #SycPromotePackageFromTagCommand }
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycPromotePackageFromTagCommand class >> fullBrowserMenuActivation [
+SycPromotePackageFromTagCommand classSide >> fullBrowserMenuActivation [
 	<classAnnotation>
 	
 	^CmdContextMenuActivation byItemOf: CmdExtraMenuGroup for: ClyTaggedClassGroup asCalypsoItemContext

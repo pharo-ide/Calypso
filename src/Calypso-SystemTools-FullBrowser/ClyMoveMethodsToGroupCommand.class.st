@@ -11,7 +11,8 @@ Class {
 	#name : #ClyMoveMethodsToGroupCommand,
 	#superclass : #SycMethodCommand,
 	#instVars : [
-		'methodGroup'
+		'methodGroup',
+		'targetClass'
 	],
 	#category : #'Calypso-SystemTools-FullBrowser-Commands-Methods'
 }
@@ -51,11 +52,42 @@ ClyMoveMethodsToGroupCommand >> defaultMenuItemName [
 { #category : #execution }
 ClyMoveMethodsToGroupCommand >> execute [
 	
+	| methodsOfAnotherClass |
+	methodsOfAnotherClass := methods reject: [ :each | each origin = targetClass ].
+	methodsOfAnotherClass ifNotEmpty: [ 
+		(SycMoveMethodsToClassCommand methods: methodsOfAnotherClass class: targetClass) execute].
+	
 	methodGroup importMethods: methods
+]
+
+{ #category : #accessing }
+ClyMoveMethodsToGroupCommand >> methodGroup [
+	^ methodGroup
+]
+
+{ #category : #accessing }
+ClyMoveMethodsToGroupCommand >> methodGroup: anObject [
+	methodGroup := anObject
 ]
 
 { #category : #'drag and drop support' }
 ClyMoveMethodsToGroupCommand >> prepareExecutionInDropContext: aToolContext [
+	| selectedClasses |
 	super prepareExecutionInDropContext: aToolContext.
-	methodGroup := aToolContext lastSelectedMethodGroup
+	methodGroup := aToolContext lastSelectedMethodGroup.
+	selectedClasses := aToolContext selectedClasses. 
+	targetClass := selectedClasses size > 1 
+		ifTrue: [ aToolContext 
+			requestSingleClass: 'In what class you want to move method?' from: selectedClasses ]
+		ifFalse: [ selectedClasses last ]
+]
+
+{ #category : #accessing }
+ClyMoveMethodsToGroupCommand >> targetClass [
+	^ targetClass
+]
+
+{ #category : #accessing }
+ClyMoveMethodsToGroupCommand >> targetClass: anObject [
+	targetClass := anObject
 ]
