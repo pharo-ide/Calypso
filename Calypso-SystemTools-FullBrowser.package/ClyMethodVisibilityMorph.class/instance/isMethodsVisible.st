@@ -1,4 +1,0 @@
-testing
-isMethodsVisible
-	
-	^visibilityLevel isActive

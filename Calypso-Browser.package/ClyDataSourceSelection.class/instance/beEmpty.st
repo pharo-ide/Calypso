@@ -1,4 +1,0 @@
-controlling
-beEmpty
-
-	self selectItems: { }

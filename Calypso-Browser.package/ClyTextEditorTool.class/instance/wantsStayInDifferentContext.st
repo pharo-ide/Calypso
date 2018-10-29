@@ -1,3 +1,0 @@
-testing
-wantsStayInDifferentContext
-	^super wantsStayInDifferentContext | applyingChanges

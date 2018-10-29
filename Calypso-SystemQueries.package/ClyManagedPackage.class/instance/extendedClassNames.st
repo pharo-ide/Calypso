@@ -1,3 +1,0 @@
-accessing
-extendedClassNames
-	^systemPackage extendedClassNames

@@ -1,4 +1,0 @@
-accessing
-groupItemsByTypeAndDo: typeAndItemsBlock
-
-	self groupItemsByType keysAndValuesDo: typeAndItemsBlock

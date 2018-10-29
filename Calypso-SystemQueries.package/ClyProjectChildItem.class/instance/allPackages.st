@@ -1,3 +1,0 @@
-accessing
-allPackages
-	self subclassResponsibility 

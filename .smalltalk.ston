@@ -1,7 +1,9 @@
 SmalltalkCISpec {
+  #preLoading: 'scripts/preLoading.st',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Calypso',
+      #directory : 'src',
       #platforms : [ #pharo ],
       #failOn : [ #Warning ]
     }

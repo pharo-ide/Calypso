@@ -1,1 +1,0 @@
-I provide "abstract" method group which includes all abstract methods of given classes

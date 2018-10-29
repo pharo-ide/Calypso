@@ -1,1 +1,0 @@
-I am a query of all classes from given scope

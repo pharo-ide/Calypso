@@ -1,3 +1,0 @@
-testing
-enable
-	isAutoActivated := true

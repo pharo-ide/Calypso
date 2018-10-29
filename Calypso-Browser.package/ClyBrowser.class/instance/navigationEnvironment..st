@@ -1,3 +1,0 @@
-accessing
-navigationEnvironment: aNavigationEnvironment
-	navigationEnvironment := aNavigationEnvironment

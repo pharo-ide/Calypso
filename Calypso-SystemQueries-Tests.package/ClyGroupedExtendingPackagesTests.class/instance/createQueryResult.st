@@ -1,3 +1,0 @@
-running
-createQueryResult
-	^ClyGroupedExtendingPackages new

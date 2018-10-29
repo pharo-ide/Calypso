@@ -1,3 +1,0 @@
-testing
-isForbidden
-	^annotatedClass isAbstract

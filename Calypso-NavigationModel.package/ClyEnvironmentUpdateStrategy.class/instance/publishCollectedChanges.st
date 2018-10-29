@@ -1,3 +1,0 @@
-updating
-publishCollectedChanges
-	self subclassResponsibility 

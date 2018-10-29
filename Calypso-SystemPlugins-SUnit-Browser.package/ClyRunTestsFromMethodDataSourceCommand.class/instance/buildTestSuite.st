@@ -1,4 +1,0 @@
-execution
-buildTestSuite
-	
-	self subclassResponsibility 

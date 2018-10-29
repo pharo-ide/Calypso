@@ -1,3 +1,0 @@
-composition
-, anotherTypedScope
-	self subclassResponsibility 

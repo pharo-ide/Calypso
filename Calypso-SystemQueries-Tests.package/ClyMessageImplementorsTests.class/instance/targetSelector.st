@@ -1,3 +1,0 @@
-running
-targetSelector
-	^#clyMessageImplementor1

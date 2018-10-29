@@ -1,4 +1,0 @@
-testing
-isAccessibleFrom: aClass
-
-	^true

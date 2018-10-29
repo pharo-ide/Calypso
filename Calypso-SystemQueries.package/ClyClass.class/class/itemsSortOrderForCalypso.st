@@ -1,3 +1,0 @@
-sorting
-itemsSortOrderForCalypso
-	^2

@@ -1,1 +1,0 @@
-I am example of class which is covered by tests using Test sufix

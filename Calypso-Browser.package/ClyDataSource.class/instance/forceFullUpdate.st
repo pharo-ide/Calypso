@@ -1,4 +1,0 @@
-controlling
-forceFullUpdate
-
-	itemCursor forceFullUpdate

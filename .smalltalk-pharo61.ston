@@ -1,0 +1,13 @@
+SmalltalkCISpec {
+  #preLoading: 'scripts/preLoading61.st',
+  #name : 'Calypso',
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Calypso',
+      #directory : 'src',	  
+      #platforms : [ #pharo ],
+      #failOn : [ #Warning ]
+    }
+    
+  ]
+}

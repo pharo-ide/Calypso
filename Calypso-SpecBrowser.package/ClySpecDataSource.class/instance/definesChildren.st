@@ -1,3 +1,0 @@
-testing
-definesChildren
-	^queryView definesTree

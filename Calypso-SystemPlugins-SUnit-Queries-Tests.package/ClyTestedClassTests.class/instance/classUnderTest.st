@@ -1,3 +1,0 @@
-running
-classUnderTest
-	^ClyTestedClass

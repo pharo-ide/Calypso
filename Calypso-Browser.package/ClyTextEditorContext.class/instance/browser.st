@@ -1,3 +1,0 @@
-public
-browser
-	^tool browser

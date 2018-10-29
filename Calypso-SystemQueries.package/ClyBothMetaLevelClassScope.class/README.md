@@ -1,1 +1,0 @@
-I represent local scope of classes which merges both instance and class sides

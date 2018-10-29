@@ -1,3 +1,0 @@
-testing
-isAbstract
-	^self == ClyScopeTestCase

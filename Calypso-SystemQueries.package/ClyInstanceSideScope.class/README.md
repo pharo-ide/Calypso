@@ -1,1 +1,0 @@
-I represent instance side of classes

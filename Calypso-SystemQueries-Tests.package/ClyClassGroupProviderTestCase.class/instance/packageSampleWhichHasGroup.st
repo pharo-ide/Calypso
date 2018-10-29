@@ -1,3 +1,0 @@
-running
-packageSampleWhichHasGroup
-	self subclassResponsibility 

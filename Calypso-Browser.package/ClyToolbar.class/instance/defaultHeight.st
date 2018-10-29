@@ -1,3 +1,0 @@
-initialization
-defaultHeight
-	^30

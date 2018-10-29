@@ -1,1 +1,0 @@
-I sort methods in the way that binary methods will be first in the ascending list.

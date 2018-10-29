@@ -1,3 +1,0 @@
-accessing
-brokenCount
-	^failureCount + errorCount 

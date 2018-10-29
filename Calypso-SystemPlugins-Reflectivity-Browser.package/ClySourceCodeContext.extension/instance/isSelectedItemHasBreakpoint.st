@@ -1,3 +1,0 @@
-*Calypso-SystemPlugins-Reflectivity-Browser
-isSelectedItemHasBreakpoint
-	^selectedSourceNode hasBreakpoint 

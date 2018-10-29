@@ -1,1 +1,0 @@
-I am example of untested class which is not covered by any test

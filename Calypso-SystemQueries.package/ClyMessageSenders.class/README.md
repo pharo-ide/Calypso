@@ -1,1 +1,0 @@
-I return all senders of any of given selectors

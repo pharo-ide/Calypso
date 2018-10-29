@@ -1,3 +1,0 @@
-testing
-isComplexRefactoring
-	^true

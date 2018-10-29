@@ -1,3 +1,0 @@
-testing
-isScopedModeEnabled
-	^packageView showsItemsFromScope: ClyPackageScope

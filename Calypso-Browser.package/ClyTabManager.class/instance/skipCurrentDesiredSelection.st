@@ -1,3 +1,0 @@
-accessing
-skipCurrentDesiredSelection
-	shouldSkipCurrentDesiredSelection := true

@@ -1,1 +1,0 @@
-I provide "expected failures" method group when test cases include tests marked with <expectedFailure> pragma

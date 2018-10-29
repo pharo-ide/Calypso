@@ -1,3 +1,0 @@
-running
-targetVarName
-	self subclassResponsibility 

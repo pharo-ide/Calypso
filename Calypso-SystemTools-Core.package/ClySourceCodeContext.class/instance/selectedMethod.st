@@ -1,3 +1,0 @@
-selection
-selectedMethod
-	^tool editingMethod

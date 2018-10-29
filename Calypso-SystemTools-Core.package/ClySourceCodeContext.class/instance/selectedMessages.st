@@ -1,4 +1,0 @@
-selection
-selectedMessages
-
-	^{self selectedMessage}

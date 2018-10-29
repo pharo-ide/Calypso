@@ -1,3 +1,0 @@
-accessing
-toolClass
-	^annotatedClass

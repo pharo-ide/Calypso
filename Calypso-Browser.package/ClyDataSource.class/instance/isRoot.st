@@ -1,3 +1,0 @@
-testing
-isRoot
-	^parentItem isNil

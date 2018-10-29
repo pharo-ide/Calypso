@@ -1,3 +1,0 @@
-accessing
-basisSize
-	^ basisObjects size

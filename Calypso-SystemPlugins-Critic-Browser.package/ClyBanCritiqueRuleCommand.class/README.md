@@ -1,1 +1,0 @@
-I am a command to ban given critique rule

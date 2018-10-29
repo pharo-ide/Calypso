@@ -1,3 +1,0 @@
-testing
-retrievesItem: aContext
-	^true

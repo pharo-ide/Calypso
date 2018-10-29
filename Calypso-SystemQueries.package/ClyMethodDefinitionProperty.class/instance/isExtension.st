@@ -1,3 +1,0 @@
-accessing
-isExtension
-	^ isExtension

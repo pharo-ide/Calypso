@@ -1,3 +1,0 @@
-updating
-triggerUpdate
-	self update

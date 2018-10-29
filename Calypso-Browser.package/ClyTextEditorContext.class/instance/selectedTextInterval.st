@@ -1,3 +1,0 @@
-public
-selectedTextInterval
-	^tool selectedTextInterval

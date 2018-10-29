@@ -1,1 +1,0 @@
-I represent class side method #initialize

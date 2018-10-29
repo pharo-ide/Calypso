@@ -1,3 +1,0 @@
-accessing
-defaultMenuItemName 
-	^'go backward'

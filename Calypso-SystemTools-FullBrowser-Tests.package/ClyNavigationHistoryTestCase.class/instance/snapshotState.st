@@ -1,3 +1,0 @@
-running
-snapshotState
-	self subclassResponsibility 

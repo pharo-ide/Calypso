@@ -1,3 +1,0 @@
-accessing
-selectedCritique
-	^self lastSelectedItem actualObject

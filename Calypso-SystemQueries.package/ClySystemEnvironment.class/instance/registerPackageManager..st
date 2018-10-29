@@ -1,4 +1,0 @@
-package management
-registerPackageManager: aPackageManager
-	aPackageManager systemEnvironment: self.
-	projectManager registerPackageManager: aPackageManager

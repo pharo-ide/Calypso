@@ -1,3 +1,0 @@
-decoration
-decorateTableCell: anItemCellMorph of: aDataSourceItem
-	self subclassResponsibility

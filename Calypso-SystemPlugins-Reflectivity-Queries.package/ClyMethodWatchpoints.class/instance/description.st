@@ -1,3 +1,0 @@
-printing
-description
-	^'Method watchpoints'

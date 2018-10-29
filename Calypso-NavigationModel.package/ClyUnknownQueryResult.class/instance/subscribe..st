@@ -1,2 +1,0 @@
-system changes
-subscribe: anObject

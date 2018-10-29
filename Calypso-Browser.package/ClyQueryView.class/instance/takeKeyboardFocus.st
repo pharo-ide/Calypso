@@ -1,3 +1,0 @@
-controlling
-takeKeyboardFocus
-	table takeKeyboardFocus 

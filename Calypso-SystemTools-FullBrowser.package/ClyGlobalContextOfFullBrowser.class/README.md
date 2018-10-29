@@ -1,1 +1,0 @@
-I am a global context of full browser

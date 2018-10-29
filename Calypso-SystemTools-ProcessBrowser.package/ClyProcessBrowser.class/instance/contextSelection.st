@@ -1,3 +1,0 @@
-accessing
-contextSelection
-	^stackView selection

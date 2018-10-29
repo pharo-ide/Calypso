@@ -1,2 +1,0 @@
-decoration
-decorateOwnBrowserItem: myItem

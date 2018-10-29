@@ -1,3 +1,0 @@
-initialization
-prepareInitialState
-	self subclassResponsibility 

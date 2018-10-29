@@ -1,3 +1,0 @@
-copying
-copyForBrowserStateSnapshot
-	^self copyForBrowserStateSnapshotOf: ownerDataSource copyForBrowserStateSnapshot

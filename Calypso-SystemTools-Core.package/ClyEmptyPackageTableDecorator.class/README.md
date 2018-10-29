@@ -1,1 +1,0 @@
-I decorate table with special icon for empty packages which has no classes
