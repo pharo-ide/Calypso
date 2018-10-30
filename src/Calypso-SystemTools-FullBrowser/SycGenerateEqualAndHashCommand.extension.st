@@ -1,7 +1,7 @@
 Extension { #name : #SycGenerateEqualAndHashCommand }
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycGenerateEqualAndHashCommand classSide >> fullBrowserMenuActivation [
+SycGenerateEqualAndHashCommand class >> fullBrowserMenuActivation [
 	<classAnnotation>
 	
 	^CmdContextMenuActivation byItemOf: CmdExtraMenuGroup for: ClyClassContextOfFullBrowser

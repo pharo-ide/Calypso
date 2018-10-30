@@ -1,7 +1,7 @@
 Extension { #name : #SycDemoteToPackageWithTagCommand }
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycDemoteToPackageWithTagCommand classSide >> fullBrowserMenuActivation [
+SycDemoteToPackageWithTagCommand class >> fullBrowserMenuActivation [
 	<classAnnotation>
 	
 	^CmdContextMenuActivation byItemOf: CmdExtraMenuGroup for: RPackage asCalypsoItemContext  

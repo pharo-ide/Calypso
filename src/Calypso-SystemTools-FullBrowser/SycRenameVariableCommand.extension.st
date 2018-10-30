@@ -1,14 +1,14 @@
 Extension { #name : #SycRenameVariableCommand }
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycRenameVariableCommand classSide >> fullBrowserMenuActivation [
+SycRenameVariableCommand class >> fullBrowserMenuActivation [
 	<classAnnotation>
 	
 	^CmdContextMenuActivation byRootGroupItemOrder: 1 for: ClyVariableContextOfFullBrowser 
 ]
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycRenameVariableCommand classSide >> fullBrowserShortcutActivation [
+SycRenameVariableCommand class >> fullBrowserShortcutActivation [
 	<classAnnotation>
 	
 	^CmdShortcutActivation renamingFor: ClyVariableContextOfFullBrowser

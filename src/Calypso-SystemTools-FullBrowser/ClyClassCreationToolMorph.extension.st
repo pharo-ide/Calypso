@@ -8,13 +8,6 @@ ClyClassCreationToolMorph class >> fullBrowserClassGroupActivation [
 ]
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-ClyClassCreationToolMorph class >> fullBrowserManagedPackageActivation [
-	<classAnnotation>
-	
-	^ClyTabActivationStrategy for: ClyManagedPackage asCalypsoItemContext 
-]
-
-{ #category : #'*Calypso-SystemTools-FullBrowser' }
 ClyClassCreationToolMorph class >> fullBrowserPackageActivation [
 	<classAnnotation>
 	

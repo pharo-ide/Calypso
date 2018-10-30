@@ -1,14 +1,14 @@
 Extension { #name : #SycRenamePackageCommand }
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycRenamePackageCommand classSide >> fullBrowserMenuActivation [
+SycRenamePackageCommand class >> fullBrowserMenuActivation [
 	<classAnnotation>
 	
 	^CmdContextMenuActivation byRootGroupItemOrder: 1 for: ClyPackageContextOfFullBrowser 
 ]
 
 { #category : #'*Calypso-SystemTools-FullBrowser' }
-SycRenamePackageCommand classSide >> fullBrowserShortcutActivation [
+SycRenamePackageCommand class >> fullBrowserShortcutActivation [
 	<classAnnotation>
 	
 	^CmdShortcutActivation renamingFor: ClyPackageContextOfFullBrowser

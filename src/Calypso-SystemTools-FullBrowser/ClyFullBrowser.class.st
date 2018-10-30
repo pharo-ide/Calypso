@@ -39,7 +39,7 @@ Class {
 	#classVars : [
 		'DefaultPackageFilter'
 	],
-	#category : 'Calypso-SystemTools-FullBrowser-UI'
+	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
 
 { #category : #'tools registration' }
