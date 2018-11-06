@@ -159,7 +159,7 @@ ClyFullBrowser class >> worldMenuOn: aBuilder [
 		action: [ target open ]
 ]
 
-{ #category : #'selection changes' }
+{ #category : #private }
 ClyFullBrowser >> adoptForExtendedClass [
 	| extendingPackages extraGroups |
 	self classSelection isEmpty ifTrue: [ ^self ].
@@ -175,7 +175,7 @@ ClyFullBrowser >> adoptForExtendedClass [
 	methodGroupQuery := methodGroupQuery , extraGroups
 ]
 
-{ #category : #'selection changes' }
+{ #category : #private }
 ClyFullBrowser >> adoptMetaLevelForSelectedClass [
 	| selectedClass extendedMetaLevel |
 	self classSelection isEmpty ifTrue: [ ^self ].
@@ -269,7 +269,7 @@ ClyFullBrowser >> chooseClassesForNewMethod: aMethod [
 	^selectedClasses, {methodClass}
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> classGroupSelection [
 	^packageView selection asSelectedItemsOf: ClyClassGroup 
 ]
@@ -282,12 +282,12 @@ ClyFullBrowser >> classScopeForMethods [
 	^self extendClassScopeForMethods: currentClassScope
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> classSelection [
 	^classView selection
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> classSelectionChanged [
 	
 	self changeStateBy: [
@@ -302,7 +302,7 @@ ClyFullBrowser >> classSelectionChanged [
 	]
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> classView [
 	^ classView
 ]
@@ -314,12 +314,12 @@ ClyFullBrowser >> compileANewClassFrom: aString notifying: aController startingF
 
 ]
 
-{ #category : #context }
+{ #category : #'accessing context' }
 ClyFullBrowser >> createCommandContext [
 	^ClyGlobalContextOfFullBrowser for: self
 ]
 
-{ #category : #context }
+{ #category : #'accessing context' }
 ClyFullBrowser >> currentMetaLevelOf: aClass [
 	^metaLevelScope metaLevelOf: aClass
 ]
@@ -357,11 +357,12 @@ ClyFullBrowser >> defaultPackageFilter [
 { #category : #accessing }
 ClyFullBrowser >> extendClassScopeForMethods: aClassScope [
 	| resultScope |
+
 	resultScope := aClassScope.
-	
-	ClyMethodVisibilityLevel allSubclassesDo: [ :each | 
-		(each isDefault and: (each canBeAppliedForClasses: self classSelection items))
-			ifTrue: [resultScope := each extendClassScope: resultScope ]].
+	(ClyMethodVisibilityLevel allAvailableFor: self classSelection items)
+		ifNotEmpty: [ :levels | 
+			"It will be likely one, but who knows"
+			resultScope := levels anyOne extendClassScope: resultScope ].
 	
 	^resultScope
 ]
@@ -374,31 +375,13 @@ ClyFullBrowser >> initialize [
 
 { #category : #initialization }
 ClyFullBrowser >> initializeNavigationViews [
+	"Initialize all panes (navigation views) of the browser. 
+	 Regular browsers have four panes: package, class, protocol and method."
 
-	packageView := self newNavigationView
-		treeStructure: 	{ 
-			ClyProjectChildItem -> #prepareProjectItemsQueryFrom:in:.
-			RPackage -> #prepareClassGroupQueryFrom:in: };
-		enableFilterUsing: ClyRegexPattern new;
-		requestNavigationBy: #packageSelectionChanged.
-	packageView filterField announcer when: RubTextChanged send: #updateDefaultPackageFilter to: self.
-	
-	classView := self newNavigationView
-		displayMainColumnBy: [ :cell :item | 
-			self specifyClassItemNameOn: cell label for: item browserItem];
-		enableFilter;
-		requestNavigationBy: #classSelectionChanged.
-
-	methodGroupView := self newNavigationView
-		treeStructure: { 
-			ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: };
-		requestNavigationBy: #methodGroupSelectionChanged;
-		neverRestoreSelection.
-	
-	methodView := self newNavigationView
-		displayMainColumnBy: [ :cell :item | 
-			self specifyMethodItemNameOn: cell label for: item browserItem];
-		requestNavigationBy: #methodSelectionChanged.
+	packageView := self newPackageView.
+	classView := self newClassView.
+	methodGroupView := self newMethodGroupView.
+	methodView := self newMethodView
 ]
 
 { #category : #testing }
@@ -456,12 +439,12 @@ ClyFullBrowser >> methodGroupQuery: aQuery [
 	methodGroupQuery := aQuery
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodGroupSelection [
 	^methodGroupView selection
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodGroupSelectionChanged [
 		
 	| methodQueries |
@@ -476,17 +459,17 @@ ClyFullBrowser >> methodGroupSelectionChanged [
 		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascending)
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> methodGroupView [
 	^ methodGroupView
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodSelection [
 	^methodView selection
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> methodSelectionChanged [
 
 	| actualMethods |
@@ -497,7 +480,7 @@ ClyFullBrowser >> methodSelectionChanged [
 			eachGroup actualObject includesMethod: eachMethod]]
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> methodView [
 	^ methodView
 ]
@@ -517,6 +500,57 @@ ClyFullBrowser >> navigateSpawnedFullBrowser: aFullBrowser [
 		^aFullBrowser selectPackage: self packageSelection lastSelectedItem actualObject]
 ]
 
+{ #category : #initialization }
+ClyFullBrowser >> newClassView [
+	"Creates the class pane"
+
+	^ self newNavigationView
+		displayMainColumnBy: [ :cell :item | 
+			self specifyClassItemNameOn: cell label for: item browserItem];
+		enableFilter;
+		requestNavigationBy: #classSelectionChanged	
+]
+
+{ #category : #initialization }
+ClyFullBrowser >> newMethodGroupView [
+	"Creates the 'method group' pane (this is the protocol [ane])"
+
+	^ self newNavigationView
+		treeStructure: { 
+			ClyMethodGroup -> #prepareSubgroupsQueryFrom:in: };
+		requestNavigationBy: #methodGroupSelectionChanged;
+		neverRestoreSelection
+]
+
+{ #category : #initialization }
+ClyFullBrowser >> newMethodView [
+	"Creates the method pane"
+
+	^ self newNavigationView
+		displayMainColumnBy: [ :cell :item | 
+			self specifyMethodItemNameOn: cell label for: item browserItem];
+		requestNavigationBy: #methodSelectionChanged
+]
+
+{ #category : #initialization }
+ClyFullBrowser >> newPackageView [
+	"Creates the package pane"
+	| newPackageView |
+	
+	newPackageView := self newNavigationView
+		treeStructure: 	{ 
+			ClyProjectChildItem -> #prepareProjectItemsQueryFrom:in:.
+			RPackage -> #prepareClassGroupQueryFrom:in: };
+		enableFilterUsing: ClyRegexPattern new;
+		requestNavigationBy: #packageSelectionChanged.
+	newPackageView filterField announcer 
+		when: RubTextChanged 
+		send: #updateDefaultPackageFilter 
+		to: self.
+		
+	^ newPackageView
+]
+
 { #category : #updating }
 ClyFullBrowser >> newWindowTitle [
 	| newTitle |
@@ -530,18 +564,18 @@ ClyFullBrowser >> newWindowTitle [
 	^newTitle
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> packageSelection [
 	^packageView selection asSelectedParentsOf: RPackage
 ]
 
-{ #category : #'selection changes' }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> packageSelectionChanged [
 	
 	self switchToFlatClasses 
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing view' }
 ClyFullBrowser >> packageView [
 	^ packageView
 ]
@@ -564,7 +598,7 @@ ClyFullBrowser >> prepareInitialState [
 	self switchToPackages
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> projectChildrenSelection [
 	^packageView selection asSelectedParentsOf: ClyProjectChildItem
 ]
@@ -575,7 +609,7 @@ ClyFullBrowser >> projectClass [
 	^ ClyManagedProject
 ]
 
-{ #category : #accessing }
+{ #category : #'accessing selection' }
 ClyFullBrowser >> projectSelection [
 	^packageView selection asSelectedParentsOf: self projectClass
 ]
@@ -747,7 +781,7 @@ ClyFullBrowser >> snapshotState [
 	^ClyFullBrowserState of: self
 ]
 
-{ #category : #initialization }
+{ #category : #private }
 ClyFullBrowser >> specifyClassItemNameOn: nameMorph for: classItem [
 	| definition |
 	nameMorph contents: classItem name.
@@ -760,7 +794,7 @@ ClyFullBrowser >> specifyClassItemNameOn: nameMorph for: classItem [
 		ifFalse: [nameMorph color: Smalltalk ui theme classExtensionColor]
 ]
 
-{ #category : #initialization }
+{ #category : #private }
 ClyFullBrowser >> specifyMethodItemNameOn: nameMorph for: methodItem [
 	| definition |
 	nameMorph contents: methodItem name.
@@ -874,7 +908,7 @@ ClyFullBrowser >> switchToVariables [
 	]
 ]
 
-{ #category : #initialization }
+{ #category : #private }
 ClyFullBrowser >> updateDefaultPackageFilter [
 
 	DefaultPackageFilter := packageView filterField getText ifEmpty: [ nil ]
