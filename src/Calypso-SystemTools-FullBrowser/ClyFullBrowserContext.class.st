@@ -15,7 +15,7 @@ Class {
 	#instVars : [
 		'metaLevelScope'
 	],
-	#category : 'Calypso-SystemTools-FullBrowser-Contexts'
+	#category : #'Calypso-SystemTools-FullBrowser-Contexts'
 }
 
 { #category : #accessing }
