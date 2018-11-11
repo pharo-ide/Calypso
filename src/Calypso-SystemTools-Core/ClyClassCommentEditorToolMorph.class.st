@@ -4,7 +4,7 @@ I am an editor of class comment
 Class {
 	#name : #ClyClassCommentEditorToolMorph,
 	#superclass : #ClyClassEditorToolMorph,
-	#category : 'Calypso-SystemTools-Core-Editors-Classes'
+	#category : #'Calypso-SystemTools-Core-Editors-Classes'
 }
 
 { #category : #activation }

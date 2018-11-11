@@ -25,7 +25,7 @@ Class {
 		'label',
 		'resetButton'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #building }

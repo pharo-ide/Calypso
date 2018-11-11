@@ -30,7 +30,7 @@ Class {
 		'extendingPackage',
 		'targetClasses'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #accessing }
