@@ -13,6 +13,12 @@ ClySubclassN1OfClass1FromP1 class >> classSideMethodFromSubclassN1 [
 ]
 
 { #category : #'as yet unclassified' }
+ClySubclassN1OfClass1FromP1 class >> overriddenClassSideMethod [
+
+	^#overridelassSideMethod
+]
+
+{ #category : #'as yet unclassified' }
 ClySubclassN1OfClass1FromP1 >> noTagMethod [
 ]
 

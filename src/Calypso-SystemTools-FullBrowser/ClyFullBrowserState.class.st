@@ -12,50 +12,36 @@ Class {
 	#name : #ClyFullBrowserState,
 	#superclass : #ClyBrowserState,
 	#instVars : [
-		'metaLevelScope',
-		'methodGroupQuery'
+		'browseMethodsMode'
 	],
 	#category : #'Calypso-SystemTools-FullBrowser-UI'
 }
+
+{ #category : #accessing }
+ClyFullBrowserState >> classBrowserMode [
+	^ browseMethodsMode
+]
+
+{ #category : #accessing }
+ClyFullBrowserState >> classBrowserMode: anObject [
+	browseMethodsMode := anObject
+]
 
 { #category : #private }
 ClyFullBrowserState >> createBrowser [
 	^ClyFullBrowser new
 ]
 
-{ #category : #accessing }
-ClyFullBrowserState >> metaLevelScope [
-	^ metaLevelScope
-]
-
-{ #category : #accessing }
-ClyFullBrowserState >> metaLevelScope: anObject [
-	metaLevelScope := anObject
-]
-
-{ #category : #accessing }
-ClyFullBrowserState >> methodGroupQuery [
-	^ methodGroupQuery
-]
-
-{ #category : #accessing }
-ClyFullBrowserState >> methodGroupQuery: aQuery [
-	methodGroupQuery := aQuery
-]
-
 { #category : #private }
 ClyFullBrowserState >> restoreStateOf: aBrowser [
 	super restoreStateOf: aBrowser.
 	
-	aBrowser 
-		metaLevelScope: metaLevelScope;
-		methodGroupQuery: methodGroupQuery
+	aBrowser classBrowserMode: (browseMethodsMode copy browser: aBrowser)
 ]
 
 { #category : #operations }
 ClyFullBrowserState >> retrieveStateFrom: aBrowser [
 	super retrieveStateFrom: aBrowser.
 	
-	metaLevelScope := aBrowser metaLevelScope.
-	methodGroupQuery := aBrowser methodGroupQuery
+	browseMethodsMode := aBrowser classBrowserMode copy browser: nil
 ]

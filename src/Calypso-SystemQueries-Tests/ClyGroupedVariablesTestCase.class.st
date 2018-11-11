@@ -40,6 +40,16 @@ ClyGroupedVariablesTestCase >> meaningfullObjectToAssert: aBrowserItem [
 ]
 
 { #category : #tests }
+ClyGroupedVariablesTestCase >> testComparisonWithAnotherClassScopeForMethods [
+
+	| queryResult2 |
+	queryResult2 := self createQueryResult. 
+	queryResult2 classScopeForMethods: (ClyClassScope of: Array).
+	
+	self deny: queryResult = queryResult2
+]
+
+{ #category : #tests }
 ClyGroupedVariablesTestCase >> testComparisonWithAnotherHierarchy [
 
 	| queryResult2 |

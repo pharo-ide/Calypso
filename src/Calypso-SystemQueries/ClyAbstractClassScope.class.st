@@ -226,7 +226,8 @@ ClyAbstractClassScope >> includesVariablesAffectedBy: aSystemAnnouncement [
 { #category : #converting }
 ClyAbstractClassScope >> increasedByClassesFrom: aClassScope [
 
-	^self withExtraBasisObjects: aClassScope collectAllClasses
+	^(self asScope: ClyIncreasedClassScope)
+		extraClasses: aClassScope collectAllClasses
 ]
 
 { #category : #queries }
@@ -247,6 +248,11 @@ ClyAbstractClassScope >> instanceVariablesOf: definingClass do: aBlock [
 			ifFalse: [ concreteMetaLevelClass slots ].
 		slots do: [:var | 
 			aBlock value: (ClyInstanceVariable on: var definedIn: definingClass) ]]
+]
+
+{ #category : #testing }
+ClyAbstractClassScope >> isIncreasedClassScope [
+	^false
 ]
 
 { #category : #'meta level' }

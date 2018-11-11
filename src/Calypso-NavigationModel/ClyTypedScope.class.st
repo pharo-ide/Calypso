@@ -185,8 +185,7 @@ ClyTypedScope >> withExtraBasisObjects: extraBasisObjects [
 ClyTypedScope >> withNewBasisObjects: newBasisObjects [
 
 	^self copy 
-		basisObjects: newBasisObjects;
-		bindTo: environment
+		basisObjects: newBasisObjects
 ]
 
 { #category : #converting }

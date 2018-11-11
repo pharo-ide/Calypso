@@ -29,5 +29,5 @@ ClySwitchToProjectsCommand >> execute [
 { #category : #testing }
 ClySwitchToProjectsCommand >> isAppliedToBrowser [
 
-	^ browser isInProjectView
+	^ browser showsProjects
 ]

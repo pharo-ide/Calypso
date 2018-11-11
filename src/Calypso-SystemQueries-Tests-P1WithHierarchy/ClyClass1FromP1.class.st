@@ -12,6 +12,10 @@ Class {
 ClyClass1FromP1 class >> classSideMethodFromClass1 [
 ]
 
+{ #category : #'as yet unclassified' }
+ClyClass1FromP1 class >> overriddenClassSideMethod [
+]
+
 { #category : #'var accessors' }
 ClyClass1FromP1 >> instanceSideVar1ReaderMethod [
 	^instanceSideVar1 

@@ -6,7 +6,9 @@ Class {
 
 { #category : #helpers }
 ClyGroupedInstanceVariablesTests >> createQueryResult [
-	^ClyGroupedInstanceVariables withHierarchy: ClySubclassHierarchy new
+	^ClyGroupedInstanceVariables 
+		withHierarchy: ClySubclassHierarchy new
+		andMethodsFrom: (ClyClassScope of: ClyClass1FromP1 in: environment)
 ]
 
 { #category : #tests }

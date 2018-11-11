@@ -25,6 +25,8 @@ ClyFullVisibilityLevel >> activateExtraScope [
 
 { #category : #testing }
 ClyFullVisibilityLevel >> isRedundant [
+	"the level is not redundant if scope was already increased"
+	visibleClassScope isIncreasedClassScope ifTrue: [ ^false ].
 	"the level is reduntant if there are no interesting classes to show"
 	extraClassScope asInterestingClassScope classesDo: [ :each | ^false ].
 	^true

@@ -12,12 +12,24 @@ ClyMethodVisibilityGroupsTests >> createQuery [
 
 { #category : #running }
 ClyMethodVisibilityGroupsTests >> createQueryResult [
-	^ClyMethodVisibilityGroups withHierarchy: ClySubclassHierarchy new 
+	^ClyMethodVisibilityGroups 
+		withHierarchy: ClySubclassHierarchy new 
+		andMethodsFrom: (ClyClassScope of: ClyClass1FromP1 in: environment)
 ]
 
 { #category : #running }
 ClyMethodVisibilityGroupsTests >> meaningfullObjectToAssert: resultItem [
 	^resultItem actualObject methodQuery scope basisObjects anyOne
+]
+
+{ #category : #tests }
+ClyMethodVisibilityGroupsTests >> testComparisonWithAnotherClassScopeForMethods [
+
+	| queryResult2 |
+	queryResult2 := self createQueryResult. 
+	queryResult2 classScopeForMethods: (ClyClassScope of: Array).
+	
+	self deny: queryResult = queryResult2
 ]
 
 { #category : #tests }
