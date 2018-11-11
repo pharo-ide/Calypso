@@ -1,3 +1,0 @@
-testing
-retrievesItemsOfType: itemTypeClass
-	self subclassResponsibility 

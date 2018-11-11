@@ -1,3 +1,0 @@
-helpers
-meaningfullObjectToAssert: aBrowserItem
-	^aBrowserItem actualObject class

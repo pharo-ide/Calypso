@@ -1,2 +1,0 @@
-tag1
-tag1Method2

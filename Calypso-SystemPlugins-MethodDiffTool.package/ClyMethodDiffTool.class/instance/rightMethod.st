@@ -1,3 +1,0 @@
-accessing
-rightMethod
-	^rightMethod

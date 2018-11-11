@@ -1,4 +1,0 @@
-execution
-checkEmptyResult
-
-	^critiqueQuery hasEmptyResult

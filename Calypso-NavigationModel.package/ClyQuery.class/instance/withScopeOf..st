@@ -1,3 +1,0 @@
-converting
-withScopeOf: newBasisObjects
-	self subclassResponsibility 

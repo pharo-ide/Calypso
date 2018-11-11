@@ -1,2 +1,0 @@
-*Calypso-NavigationModel
-prepareCalypsoItemCopy: aBrowserItem

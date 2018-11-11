@@ -1,3 +1,0 @@
-accessing
-requiredQueryResult
-	self subclassResponsibility 

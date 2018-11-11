@@ -1,3 +1,0 @@
-selection-packages
-selectedPackageItems
-	^#()

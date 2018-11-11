@@ -1,3 +1,0 @@
-operations
-restoreBrowserState
-	ownerTool restoreBrowserState 

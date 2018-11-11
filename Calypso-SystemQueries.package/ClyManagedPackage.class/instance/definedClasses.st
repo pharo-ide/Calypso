@@ -1,3 +1,0 @@
-accessing
-definedClasses
-	^systemPackage definedClasses

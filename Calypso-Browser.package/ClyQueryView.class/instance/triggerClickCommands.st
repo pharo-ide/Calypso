@@ -1,4 +1,0 @@
-event handling
-triggerClickCommands
-
-	CmdClickActivation executeCommandInContext: self createSelectionContext

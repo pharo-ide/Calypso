@@ -1,3 +1,0 @@
-private
-updateExpandingItems
-	self subclassResponsibility 

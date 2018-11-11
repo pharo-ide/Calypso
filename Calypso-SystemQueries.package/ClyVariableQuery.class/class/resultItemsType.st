@@ -1,3 +1,0 @@
-items type
-resultItemsType
-	^ClyVariable

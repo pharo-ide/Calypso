@@ -1,4 +1,0 @@
-accessing
-activeContext
-
-	^activeContextItem actualObject

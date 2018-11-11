@@ -1,3 +1,0 @@
-running
-createSampleScope
-	^self multipleScopeSample 

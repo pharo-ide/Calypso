@@ -1,3 +1,0 @@
-accessing
-containerForChildren
-	^hierarchy containerForChildren

@@ -1,4 +1,0 @@
-printing
-description
-
-	^'class variables'

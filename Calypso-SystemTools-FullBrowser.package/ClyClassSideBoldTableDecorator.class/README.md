@@ -1,1 +1,0 @@
-I decorate table with bold font for method groups and methods when full browser shows the class side

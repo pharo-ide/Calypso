@@ -1,1 +1,0 @@
-I am example of a class which is explicitly definined as abstract by overrideing class side method #isAbstract

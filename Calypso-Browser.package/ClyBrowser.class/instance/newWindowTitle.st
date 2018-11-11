@@ -1,3 +1,0 @@
-updating
-newWindowTitle
-	self subclassResponsibility 

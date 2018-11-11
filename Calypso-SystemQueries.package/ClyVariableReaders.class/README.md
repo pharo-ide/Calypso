@@ -1,1 +1,0 @@
-I return only methods which read given variables

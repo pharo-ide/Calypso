@@ -1,3 +1,0 @@
-execution
-metaLevelScope
-	self subclassResponsibility 

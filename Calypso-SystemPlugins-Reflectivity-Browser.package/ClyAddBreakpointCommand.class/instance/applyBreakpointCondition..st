@@ -1,3 +1,0 @@
-execution
-applyBreakpointCondition: aBreakpoint
-	self subclassResponsibility 

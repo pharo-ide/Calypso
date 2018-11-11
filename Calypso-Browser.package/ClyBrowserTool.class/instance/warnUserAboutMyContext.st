@@ -1,4 +1,0 @@
-controlling
-warnUserAboutMyContext
-
-	self setUpDefaultIcon

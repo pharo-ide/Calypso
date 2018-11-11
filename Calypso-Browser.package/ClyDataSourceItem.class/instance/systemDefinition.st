@@ -1,3 +1,0 @@
-accessing
-systemDefinition
-	^browserItem systemDefinition

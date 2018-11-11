@@ -1,3 +1,0 @@
-controlling
-selectAsExtraTab
-	containerTab addToSelection

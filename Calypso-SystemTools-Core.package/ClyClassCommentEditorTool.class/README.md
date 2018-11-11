@@ -1,1 +1,0 @@
-I am an editor of class comment

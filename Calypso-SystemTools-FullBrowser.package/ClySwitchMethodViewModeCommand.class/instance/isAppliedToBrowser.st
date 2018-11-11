@@ -1,3 +1,0 @@
-testing
-isAppliedToBrowser
-	^browser methodGroupView showsItemsOfType: self methodGroupType

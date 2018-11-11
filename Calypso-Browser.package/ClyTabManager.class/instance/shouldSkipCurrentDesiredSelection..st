@@ -1,3 +1,0 @@
-accessing
-shouldSkipCurrentDesiredSelection: anObject
-	shouldSkipCurrentDesiredSelection := anObject

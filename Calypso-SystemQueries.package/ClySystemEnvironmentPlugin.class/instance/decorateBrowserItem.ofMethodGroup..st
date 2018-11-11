@@ -1,2 +1,0 @@
-item decoration
-decorateBrowserItem: anItem ofMethodGroup: aMethodGroup

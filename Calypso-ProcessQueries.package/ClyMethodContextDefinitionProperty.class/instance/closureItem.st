@@ -1,3 +1,0 @@
-accessing
-closureItem
-	^ closureItem

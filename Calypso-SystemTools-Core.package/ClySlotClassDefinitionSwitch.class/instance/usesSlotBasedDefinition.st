@@ -1,4 +1,0 @@
-testing
-usesSlotBasedDefinition
-	 
-	^ Slot showSlotClassDefinition

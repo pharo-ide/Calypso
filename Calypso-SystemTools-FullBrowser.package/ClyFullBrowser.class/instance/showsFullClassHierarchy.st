@@ -1,3 +1,0 @@
-testing
-showsFullClassHierarchy
-	^classView showsItemsFromScope: ClySuperclassScope

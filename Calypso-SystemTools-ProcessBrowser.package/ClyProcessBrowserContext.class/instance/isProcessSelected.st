@@ -1,3 +1,0 @@
-selection-processes
-isProcessSelected
-	^self selectedProcessItems notEmpty

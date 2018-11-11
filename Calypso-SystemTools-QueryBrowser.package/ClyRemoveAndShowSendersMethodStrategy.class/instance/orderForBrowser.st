@@ -1,3 +1,0 @@
-accessing
-orderForBrowser
-	^2

@@ -1,3 +1,0 @@
-converting
-withNewBasisObjects: aCollection 
-	^self

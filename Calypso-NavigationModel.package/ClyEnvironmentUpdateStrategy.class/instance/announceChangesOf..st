@@ -1,3 +1,0 @@
-updating
-announceChangesOf: aQueryResult
-	self subclassResponsibility 

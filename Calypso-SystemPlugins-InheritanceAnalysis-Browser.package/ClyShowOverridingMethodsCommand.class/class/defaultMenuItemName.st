@@ -1,3 +1,0 @@
-accessing
-defaultMenuItemName 
-	^'Overriding methods'

@@ -1,1 +1,0 @@
-I represent class side of classes

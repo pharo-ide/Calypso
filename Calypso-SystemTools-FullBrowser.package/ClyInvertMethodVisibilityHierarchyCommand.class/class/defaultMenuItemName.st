@@ -1,3 +1,0 @@
-accessing
-defaultMenuItemName 
-	^'Invert hierarchy'

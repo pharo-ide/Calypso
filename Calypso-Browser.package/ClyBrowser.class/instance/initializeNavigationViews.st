@@ -1,3 +1,0 @@
-initialization
-initializeNavigationViews
-	self subclassResponsibility 

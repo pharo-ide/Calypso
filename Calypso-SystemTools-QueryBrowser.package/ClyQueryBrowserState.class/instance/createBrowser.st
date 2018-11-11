@@ -1,3 +1,0 @@
-private
-createBrowser
-	^ClyQueryBrowser new

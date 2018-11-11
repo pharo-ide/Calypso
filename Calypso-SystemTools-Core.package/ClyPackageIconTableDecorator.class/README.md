@@ -1,1 +1,0 @@
-I decorate table with simple constant icon for packages

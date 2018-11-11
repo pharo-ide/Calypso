@@ -1,4 +1,0 @@
-initialization
-packageNameOf: aBrowserItem
-
-	^aBrowserItem systemDefinition definingPackageItem name

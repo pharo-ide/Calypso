@@ -1,4 +1,0 @@
-testing
-shouldBuildGroupWith: aMethodQuery
-	
-	^true

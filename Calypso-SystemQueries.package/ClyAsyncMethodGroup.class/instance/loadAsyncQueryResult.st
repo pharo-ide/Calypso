@@ -1,4 +1,0 @@
-accessing
-loadAsyncQueryResult
-
-	^methodQuery execute
