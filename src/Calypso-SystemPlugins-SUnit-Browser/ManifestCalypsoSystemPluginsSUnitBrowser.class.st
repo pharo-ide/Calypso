@@ -1,5 +1,9 @@
 "
-I store metadata for this package. These meta data are used by other tools such as the SmalllintManifestChecker and the critics Browser
+I am a plugin for Calypso browser.
+
+I add tools and commands to Calypso related to SUnit.
+
+For example I add commands to run tests or commands to generate and jump to tests.
 "
 Class {
 	#name : #ManifestCalypsoSystemPluginsSUnitBrowser,
@@ -9,5 +13,5 @@ Class {
 
 { #category : #'code-critics' }
 ManifestCalypsoSystemPluginsSUnitBrowser class >> ruleRBTempsReadBeforeWrittenRuleV1FalsePositive [
-	^ #(#(#(#RGMethodDefinition #(#ClyJumpToTestClassCommand #testClassFor: #false)) #'2018-11-12T12:01:41.480729+01:00') )
+	^ #(#(#(#RGMethodDefinition #(#TClyGenerateTestClass #testClassFor: #false)) #'2018-11-12T15:00:23.227476+01:00') )
 ]
