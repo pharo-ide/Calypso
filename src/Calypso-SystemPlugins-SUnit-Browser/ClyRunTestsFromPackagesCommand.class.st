@@ -4,7 +4,7 @@ I run all tests from selected packages
 Class {
 	#name : #ClyRunTestsFromPackagesCommand,
 	#superclass : #ClyRunTestsFromSelectedItemsCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #activation }

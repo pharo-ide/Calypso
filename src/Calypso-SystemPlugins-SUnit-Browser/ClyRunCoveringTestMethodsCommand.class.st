@@ -4,7 +4,7 @@ I am a command to run all covering tests of selected methods
 Class {
 	#name : #ClyRunCoveringTestMethodsCommand,
 	#superclass : #ClyRunTestsFromMethodsCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #testing }

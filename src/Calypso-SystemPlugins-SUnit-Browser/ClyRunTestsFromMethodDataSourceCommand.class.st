@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'methodDataSource'
 	],
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #testing }

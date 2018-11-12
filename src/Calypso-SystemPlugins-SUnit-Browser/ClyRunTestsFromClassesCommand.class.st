@@ -4,7 +4,7 @@ I run all selected test cases
 Class {
 	#name : #ClyRunTestsFromClassesCommand,
 	#superclass : #ClyRunTestsFromSelectedItemsCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #activation }

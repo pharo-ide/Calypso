@@ -5,7 +5,7 @@ I install breakpoint to the start of method which opens debugger during followin
 Class {
 	#name : #ClyDebugTestCommand,
 	#superclass : #ClyRunTestsFromMethodsCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #activation }
