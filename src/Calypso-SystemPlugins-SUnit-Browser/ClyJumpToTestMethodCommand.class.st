@@ -55,7 +55,7 @@ ClyJumpToTestMethodCommand >> execute [
 	
 	self methods do: [ :method | self generateTestMethodFor: method ].
 	
-	testMethodToBrowse ifNotNil: [ :testMethod | browser showMethod: testMethod ]
+	testMethodToBrowse ifNotNil: [ :testMethod | browser selectMethod: testMethod ]
 ]
 
 { #category : #execution }
@@ -85,7 +85,7 @@ ClyJumpToTestMethodCommand >> generateTestMethodNamed: aSymbol in: aClass [
 { #category : #execution }
 ClyJumpToTestMethodCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	browser := aToolContext.
+	browser := aToolContext tool.
 	systemEnvironment := aToolContext systemEnvironment
 ]
 

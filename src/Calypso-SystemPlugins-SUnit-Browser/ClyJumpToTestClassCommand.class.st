@@ -45,7 +45,7 @@ ClyJumpToTestClassCommand >> defaultMenuItemName [
 
 { #category : #execution }
 ClyJumpToTestClassCommand >> execute [
-	[ browser showClass: (self testClassFor: targetClass) ]
+	[ browser selectClass: (self testClassFor: targetClass) ]
 		on: InvalidClassForTestClassGeneration
 		do: [ :ex | self inform: 'Cannot generate test class for ' , ex baseClass printString , '.' ]
 ]
@@ -53,7 +53,7 @@ ClyJumpToTestClassCommand >> execute [
 { #category : #execution }
 ClyJumpToTestClassCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	browser := aToolContext.
+	browser := aToolContext tool.
 	systemEnvironment := aToolContext systemEnvironment
 ]
 
