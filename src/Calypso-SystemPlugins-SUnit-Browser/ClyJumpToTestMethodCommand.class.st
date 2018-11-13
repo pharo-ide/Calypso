@@ -21,7 +21,8 @@ Class {
 	#classTraits : 'TClyGenerateTestClass classTrait',
 	#instVars : [
 		'selectedMethods',
-		'testMethodToBrowse'
+		'testMethodToBrowse',
+		'browser'
 	],
 	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
@@ -43,12 +44,6 @@ ClyJumpToTestMethodCommand class >> methodShortcutActivation [
 	^ CmdShortcutActivation by: $h meta , $j meta for: ClyMethod asCalypsoItemContext
 ]
 
-{ #category : #execution }
-ClyJumpToTestMethodCommand >> applyResultInContext: aToolContext [
-	super applyResultInContext: aToolContext.
-	testMethodToBrowse ifNotNil: [ :testMethod | aToolContext showMethod: testMethod ]
-]
-
 { #category : #accessing }
 ClyJumpToTestMethodCommand >> defaultMenuItemName [
 	^ 'Jump to test method'
@@ -58,7 +53,9 @@ ClyJumpToTestMethodCommand >> defaultMenuItemName [
 ClyJumpToTestMethodCommand >> execute [
 	selectedMethods ifEmpty: [ self inform: 'No method selected'. ^ self ].
 	
-	selectedMethods do: [ :method | self generateTestMethodFor: method ]
+	selectedMethods do: [ :method | self generateTestMethodFor: method ].
+	
+	testMethodToBrowse ifNotNil: [ :testMethod | browser showMethod: testMethod ]
 ]
 
 { #category : #execution }
@@ -86,7 +83,8 @@ ClyJumpToTestMethodCommand >> generateTestMethodNamed: aSymbol in: aClass for: a
 { #category : #execution }
 ClyJumpToTestMethodCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	selectedMethods := aToolContext selectedMethods
+	selectedMethods := aToolContext selectedMethods.
+	browser := aToolContext
 ]
 
 { #category : #accessing }

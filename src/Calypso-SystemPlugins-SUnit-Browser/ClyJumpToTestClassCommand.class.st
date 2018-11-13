@@ -18,7 +18,8 @@ Class {
 	#traits : 'TClyGenerateTestClass',
 	#classTraits : 'TClyGenerateTestClass classTrait',
 	#instVars : [
-		'testClass'
+		'testClass',
+		'browser'
 	],
 	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
@@ -37,12 +38,6 @@ ClyJumpToTestClassCommand class >> fullBrowserShortcutActivation [
 	^ CmdShortcutActivation by: $g meta, $j meta for: ClyClassContextOfFullBrowser
 ]
 
-{ #category : #execution }
-ClyJumpToTestClassCommand >> applyResultInContext: aToolContext [
-	super applyResultInContext: aToolContext.
-	testClass ifNotNil: [ :class | aToolContext showClass: class ]
-]
-
 { #category : #accessing }
 ClyJumpToTestClassCommand >> defaultMenuItemName [
 	^ 'Jump to test class'
@@ -50,5 +45,11 @@ ClyJumpToTestClassCommand >> defaultMenuItemName [
 
 { #category : #execution }
 ClyJumpToTestClassCommand >> execute [
-	testClass := self testClassFor: targetClass
+	(self testClassFor: targetClass) ifNotNil: [ :class | browser showClass: class ]
+]
+
+{ #category : #execution }
+ClyJumpToTestClassCommand >> prepareFullExecutionInContext: aToolContext [
+	super prepareFullExecutionInContext: aToolContext.
+	browser := aToolContext
 ]
