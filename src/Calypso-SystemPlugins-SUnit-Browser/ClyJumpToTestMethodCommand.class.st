@@ -85,7 +85,7 @@ ClyJumpToTestMethodCommand >> generateTestMethodNamed: aSymbol in: aClass [
 { #category : #execution }
 ClyJumpToTestMethodCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	browser := aToolContext tool.
+	browser := aToolContext browser.
 	systemEnvironment := aToolContext systemEnvironment
 ]
 

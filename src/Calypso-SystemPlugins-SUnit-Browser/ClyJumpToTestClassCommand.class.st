@@ -53,7 +53,7 @@ ClyJumpToTestClassCommand >> execute [
 { #category : #execution }
 ClyJumpToTestClassCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	browser := aToolContext tool.
+	browser := aToolContext browser.
 	systemEnvironment := aToolContext systemEnvironment
 ]
 
