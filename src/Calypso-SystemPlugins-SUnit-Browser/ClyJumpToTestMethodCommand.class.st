@@ -21,7 +21,8 @@ Class {
 	#classTraits : 'TClyGenerateTestClass classTrait',
 	#instVars : [
 		'testMethodToBrowse',
-		'browser'
+		'browser',
+		'systemEnvironment'
 	],
 	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
@@ -82,7 +83,13 @@ ClyJumpToTestMethodCommand >> generateTestMethodNamed: aSymbol in: aClass [
 { #category : #execution }
 ClyJumpToTestMethodCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	browser := aToolContext
+	browser := aToolContext.
+	systemEnvironment := aToolContext systemEnvironment
+]
+
+{ #category : #accessing }
+ClyJumpToTestMethodCommand >> systemEnvironment [
+	^ systemEnvironment
 ]
 
 { #category : #accessing }

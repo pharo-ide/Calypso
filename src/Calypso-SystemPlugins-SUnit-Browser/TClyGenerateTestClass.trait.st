@@ -49,15 +49,20 @@ TClyGenerateTestClass >> newTestClassCategoryFor: aClass [
 ]
 
 { #category : #accessing }
+TClyGenerateTestClass >> systemEnvironment [
+	^ self explicitRequirement
+]
+
+{ #category : #accessing }
 TClyGenerateTestClass >> testClassFor: inputClass [
 	| className resultClass |
 	className := self testClassNameFor: inputClass.
-	self class environment
-		at: className
+	self systemEnvironment
+		classNamed: className
 		ifPresent: [ :class | resultClass := class ]
 		ifAbsent: [
 			(self isValidClass: inputClass) ifFalse: [ ^ nil ].
-			RPackageOrganizer default ensureExistAndRegisterPackageNamed: inputClass package name asString , '-Tests'.
+			self systemEnvironment ensureExistAndRegisterPackageNamed: inputClass package name asString , '-Tests'.
 			resultClass := TestCase
 				subclass: className
 				instanceVariableNames: ''

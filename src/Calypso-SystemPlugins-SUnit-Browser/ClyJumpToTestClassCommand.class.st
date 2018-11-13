@@ -18,7 +18,8 @@ Class {
 	#traits : 'TClyGenerateTestClass',
 	#classTraits : 'TClyGenerateTestClass classTrait',
 	#instVars : [
-		'browser'
+		'browser',
+		'systemEnvironment'
 	],
 	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
@@ -50,5 +51,11 @@ ClyJumpToTestClassCommand >> execute [
 { #category : #execution }
 ClyJumpToTestClassCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	browser := aToolContext
+	browser := aToolContext.
+	systemEnvironment := aToolContext systemEnvironment
+]
+
+{ #category : #accessing }
+ClyJumpToTestClassCommand >> systemEnvironment [
+	^ systemEnvironment
 ]
