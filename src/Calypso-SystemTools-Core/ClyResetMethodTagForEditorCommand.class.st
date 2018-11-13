@@ -13,7 +13,8 @@ ClyResetMethodTagForEditorCommand class >> methodEditorShorcutActivation [
 
 { #category : #accessing }
 ClyResetMethodTagForEditorCommand >> defaultMenuItemName [
-	^'Unclassify method'
+
+	^ 'Unclassify method'
 ]
 
 { #category : #execution }

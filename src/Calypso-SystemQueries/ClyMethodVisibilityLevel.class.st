@@ -35,13 +35,20 @@ Class {
 	#category : #'Calypso-SystemQueries-Domain'
 }
 
+{ #category : #accessing }
+ClyMethodVisibilityLevel class >> allAvailableFor: items [
+	
+	^ self allSubclasses select: [ :each | 
+		each isActiveByDefault and: (each canBeAppliedForClasses: items) ]
+]
+
 { #category : #testing }
 ClyMethodVisibilityLevel class >> canBeAppliedForClasses: classItems [
 	^true
 ]
 
 { #category : #testing }
-ClyMethodVisibilityLevel class >> isDefault [
+ClyMethodVisibilityLevel class >> isActiveByDefault [
 	^false
 ]
 

@@ -106,7 +106,7 @@ ClyLocalClassScope >> methodsDo: aBlock [
 
 	self classesDo: [ :eachClass | 
 		self metaLevelsOf: eachClass do: [ :concreteMetaLevelClass |
-			concreteMetaLevelClass localMethods do: aBlock ] ]
+			concreteMetaLevelClass methods do: aBlock ] ]
 ]
 
 { #category : #converting }

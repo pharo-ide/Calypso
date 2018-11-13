@@ -25,11 +25,3 @@ ClyTraitEnvironmentPlugin >> decorateBrowserItem: anItem ofMethod: aMethod [
 	aMethod origin isTrait ifTrue: [ 
 		anItem systemDefinition definingClassItem markWith: ClyTraitTag ]
 ]
-
-{ #category : #'item decoration' }
-ClyTraitEnvironmentPlugin >> decorateBrowserItem: anItem ofMethodGroup: aMethodGroup [
-	
-	(aMethodGroup isKindOf: ClyInheritedMethodGroup) ifFalse: [ ^self ]. 
-
-	aMethodGroup addTraitVisibilityLevels
-]
