@@ -16,11 +16,10 @@ Internal Representation and Key Implementation Points.
 "
 Class {
 	#name : #ClyJumpToTestMethodCommand,
-	#superclass : #CmdCommand,
+	#superclass : #SycMethodCommand,
 	#traits : 'TClyGenerateTestClass',
 	#classTraits : 'TClyGenerateTestClass classTrait',
 	#instVars : [
-		'selectedMethods',
 		'testMethodToBrowse',
 		'browser'
 	],
@@ -51,9 +50,9 @@ ClyJumpToTestMethodCommand >> defaultMenuItemName [
 
 { #category : #execution }
 ClyJumpToTestMethodCommand >> execute [
-	selectedMethods ifEmpty: [ self inform: 'No method selected'. ^ self ].
+	self methods ifEmpty: [ self inform: 'No method selected'. ^ self ].
 	
-	selectedMethods do: [ :method | self generateTestMethodFor: method ].
+	self methods do: [ :method | self generateTestMethodFor: method ].
 	
 	testMethodToBrowse ifNotNil: [ :testMethod | browser showMethod: testMethod ]
 ]
@@ -83,7 +82,6 @@ ClyJumpToTestMethodCommand >> generateTestMethodNamed: aSymbol in: aClass for: a
 { #category : #execution }
 ClyJumpToTestMethodCommand >> prepareFullExecutionInContext: aToolContext [
 	super prepareFullExecutionInContext: aToolContext.
-	selectedMethods := aToolContext selectedMethods.
 	browser := aToolContext
 ]
 
