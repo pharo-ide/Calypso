@@ -51,8 +51,6 @@ ClyJumpToTestMethodCommand >> defaultMenuItemName [
 
 { #category : #execution }
 ClyJumpToTestMethodCommand >> execute [
-	self methods ifEmpty: [ self inform: 'No method selected'. ^ self ].
-	
 	self methods do: [ :method | self generateTestMethodFor: method ].
 	
 	testMethodToBrowse ifNotNil: [ :testMethod | browser selectMethod: testMethod ]
