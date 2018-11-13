@@ -68,7 +68,7 @@ ClyJumpToTestMethodCommand >> generateTestMethodFor: aMethod [
 	(testClass includesSelector: selector) ifFalse: [ self generateTestMethodNamed: selector in: testClass ].
 	
 	testMethodToBrowse := testClass >> selector ] 
-		on: InvalidClassForTestClassGeneration
+		on: ClyInvalidClassForTestClassGeneration
 		do: [ :ex | self inform: 'Impossible to create test class for ' , ex baseClass printString , '.' ]
 ]
 
@@ -92,6 +92,25 @@ ClyJumpToTestMethodCommand >> prepareFullExecutionInContext: aToolContext [
 { #category : #accessing }
 ClyJumpToTestMethodCommand >> systemEnvironment [
 	^ systemEnvironment
+]
+
+{ #category : #accessing }
+ClyJumpToTestMethodCommand >> testClassFor: inputClass [
+	| className resultClass |
+	className := self testClassNameFor: inputClass.
+	self systemEnvironment
+		classNamed: className
+		ifPresent: [ :class | resultClass := class ]
+		ifAbsent: [
+			(self isValidClass: inputClass) ifFalse: [ ClyInvalidClassForTestClassGeneration signalFor: inputClass ].
+			self systemEnvironment ensureExistAndRegisterPackageNamed: inputClass package name asString , '-Tests'.
+			resultClass := TestCase
+				subclass: className
+				instanceVariableNames: ''
+				classVariableNames: ''
+				package: (self newTestClassCategoryFor: inputClass).
+			self addNewCommentForTestClass: resultClass basedOn: inputClass ].
+	^ resultClass
 ]
 
 { #category : #accessing }

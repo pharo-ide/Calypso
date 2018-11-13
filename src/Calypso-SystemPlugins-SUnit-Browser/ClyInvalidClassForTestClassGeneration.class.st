@@ -5,7 +5,7 @@ Description
 I am an exception raised when we want to generate a test class from an invalid class. (For example if the class is a metaclass)
 "
 Class {
-	#name : #InvalidClassForTestClassGeneration,
+	#name : #ClyInvalidClassForTestClassGeneration,
 	#superclass : #Error,
 	#instVars : [
 		'baseClass'
@@ -14,31 +14,31 @@ Class {
 }
 
 { #category : #signalling }
-InvalidClassForTestClassGeneration class >> signalFor: aClass [
+ClyInvalidClassForTestClassGeneration class >> signalFor: aClass [
 	^ self new
 		baseClass: aClass;
 		signal
 ]
 
 { #category : #accessing }
-InvalidClassForTestClassGeneration >> baseClass [
+ClyInvalidClassForTestClassGeneration >> baseClass [
 	^ baseClass
 ]
 
 { #category : #accessing }
-InvalidClassForTestClassGeneration >> baseClass: anObject [
+ClyInvalidClassForTestClassGeneration >> baseClass: anObject [
 	baseClass := anObject
 ]
 
 { #category : #accessing }
-InvalidClassForTestClassGeneration >> messageText [
+ClyInvalidClassForTestClassGeneration >> messageText [
 	"Overwritten to initialiaze the message text to a standard text if it has not yet been set"
 	
 	^ messageText ifNil: [ messageText := self standardMessageText ]
 ]
 
 { #category : #printing }
-InvalidClassForTestClassGeneration >> standardMessageText [	
+ClyInvalidClassForTestClassGeneration >> standardMessageText [	
 	^ String streamContents: [ :stream |
 		stream print: self baseClass.
 		stream nextPutAll: ' is not a valid class to generate a test class' ]
