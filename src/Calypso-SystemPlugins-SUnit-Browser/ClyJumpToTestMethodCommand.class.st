@@ -29,7 +29,7 @@ Class {
 
 { #category : #testing }
 ClyJumpToTestMethodCommand class >> canBeExecutedInContext: aBrowserContext [
-	^ aBrowserContext isInstanceSideMethodSelected and: [ aBrowserContext selectedMethods anySatisfy: [ :each | each isTestMethod not ] ]
+	^ aBrowserContext isInstanceSideMethodSelected and: [ aBrowserContext selectedItems anySatisfy: [ :each | (each hasProperty: ClyTestResultProperty) not ] ]
 ]
 
 { #category : #activation }
