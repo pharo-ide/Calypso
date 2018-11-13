@@ -60,14 +60,16 @@ ClyJumpToTestMethodCommand >> execute [
 
 { #category : #execution }
 ClyJumpToTestMethodCommand >> generateTestMethodFor: aMethod [
-	(self testClassFor: aMethod methodClass)
-		ifNotNil: [ :testClass | 
-			| selector |
-			selector := self testMethodNameFor: aMethod.
-			
-			(testClass includesSelector: selector) ifFalse: [ self generateTestMethodNamed: selector in: testClass ].
-			
-			testMethodToBrowse := testClass >> selector ]
+	[
+	| testClass selector |
+	testClass := self testClassFor: aMethod methodClass.
+	
+	selector := self testMethodNameFor: aMethod.
+	(testClass includesSelector: selector) ifFalse: [ self generateTestMethodNamed: selector in: testClass ].
+	
+	testMethodToBrowse := testClass >> selector ] 
+		on: InvalidClassForTestClassGeneration
+		do: [ :ex | self inform: 'Impossible to create test class for ' , ex baseClass printString , '.' ]
 ]
 
 { #category : #action }

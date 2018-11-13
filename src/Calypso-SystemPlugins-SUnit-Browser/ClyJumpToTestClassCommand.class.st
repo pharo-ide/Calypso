@@ -45,7 +45,9 @@ ClyJumpToTestClassCommand >> defaultMenuItemName [
 
 { #category : #execution }
 ClyJumpToTestClassCommand >> execute [
-	(self testClassFor: targetClass) ifNotNil: [ :class | browser showClass: class ]
+	[ browser showClass: (self testClassFor: targetClass) ]
+		on: InvalidClassForTestClassGeneration
+		do: [ :ex | self inform: 'Cannot generate test class for ' , ex baseClass printString , '.' ]
 ]
 
 { #category : #execution }

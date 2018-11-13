@@ -61,7 +61,7 @@ TClyGenerateTestClass >> testClassFor: inputClass [
 		classNamed: className
 		ifPresent: [ :class | resultClass := class ]
 		ifAbsent: [
-			(self isValidClass: inputClass) ifFalse: [ ^ nil ].
+			(self isValidClass: inputClass) ifFalse: [ InvalidClassForTestClassGeneration signalFor: inputClass ].
 			self systemEnvironment ensureExistAndRegisterPackageNamed: inputClass package name asString , '-Tests'.
 			resultClass := TestCase
 				subclass: className
