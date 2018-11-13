@@ -18,7 +18,6 @@ Class {
 	#traits : 'TClyGenerateTestClass',
 	#classTraits : 'TClyGenerateTestClass classTrait',
 	#instVars : [
-		'testClass',
 		'browser'
 	],
 	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
