@@ -64,19 +64,19 @@ ClyJumpToTestMethodCommand >> generateTestMethodFor: aMethod [
 			| selector |
 			selector := self testMethodNameFor: aMethod.
 			
-			(testClass includesSelector: selector) ifFalse: [ self generateTestMethodNamed: selector in: testClass for: aMethod ].
+			(testClass includesSelector: selector) ifFalse: [ self generateTestMethodNamed: selector in: testClass ].
 			
 			testMethodToBrowse := testClass >> selector ]
 ]
 
 { #category : #action }
-ClyJumpToTestMethodCommand >> generateTestMethodNamed: aSymbol in: aClass for: aMethod [
+ClyJumpToTestMethodCommand >> generateTestMethodNamed: aSymbol in: aClass [
 	| body |
 	body := '{1}
 
 	self flag: #toImplement.
 	self assert: false' format: {aSymbol}.
-	aClass compile: body classified: 'test - ' , aMethod category
+	aClass compile: body classified: 'test'
 ]
 
 { #category : #execution }
