@@ -15,7 +15,7 @@ Class {
 	#instVars : [
 		'methodClass'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #testing }
