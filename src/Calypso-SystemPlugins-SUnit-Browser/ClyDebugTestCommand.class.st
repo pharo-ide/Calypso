@@ -12,7 +12,7 @@ Class {
 ClyDebugTestCommand class >> fullBrowserShortcutActivation [
 	<classAnnotation>
 	
-	^CmdShortcutActivation by: $d shift meta for: self contextClass
+	^CmdShortcutActivation by: $d meta for: self contextClass
 ]
 
 { #category : #activation }
