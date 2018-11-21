@@ -115,7 +115,7 @@ ClySystemEnvironment >> compileANewClassFrom: aString notifying: aController sta
 	keywdIx := defTokens findFirst: [:x | x beginsWith: 'category'].
 	keywdIx := defTokens findFirst: [:x | '*subclass*' match: x].
 	newClassName := (defTokens at: keywdIx+1) copyWithoutAll: '#()'.
-	((oldClass isNil or: [oldClass theNonMetaClass name asString ~= newClassName])
+	((oldClass isNil or: [oldClass instanceSide name asString ~= newClassName])
 		and: [self includesClassNamed: newClassName asSymbol]) ifTrue:
 			["Attempting to define new class over existing one when
 				not looking at the original one in this browser..."
