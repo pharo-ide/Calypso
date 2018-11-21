@@ -76,6 +76,7 @@ ClyMoveMethodsToGroupCommand >> prepareExecutionInDropContext: aToolContext [
 	super prepareExecutionInDropContext: aToolContext.
 	methodGroup := aToolContext lastSelectedMethodGroup.
 	selectedClasses := aToolContext selectedClasses. 
+	selectedClasses := selectedClasses collect: [:each | aToolContext currentMetaLevelOf: each].
 	targetClass := selectedClasses size > 1 
 		ifTrue: [ aToolContext 
 			requestSingleClass: 'In what class you want to move method?' from: selectedClasses ]
