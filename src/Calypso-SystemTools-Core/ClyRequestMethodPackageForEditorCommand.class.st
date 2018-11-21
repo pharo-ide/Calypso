@@ -7,6 +7,12 @@ Class {
 	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
+{ #category : #testing }
+ClyRequestMethodPackageForEditorCommand class >> canBeExecutedInMethodEditor: aTool [
+
+	^ true
+]
+
 { #category : #activation }
 ClyRequestMethodPackageForEditorCommand class >> methodEditorShorcutActivation [
 	<classAnnotation>

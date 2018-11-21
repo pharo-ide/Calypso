@@ -25,7 +25,7 @@ Class {
 		'label',
 		'resetButton'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #building }
@@ -113,6 +113,12 @@ ClyMethodTagsAndPackageEditorMorph >> openEditor [
 			ifTrue: [ self requestPackage]
 			ifFalse: [ self requestTag ]
 	]
+]
+
+{ #category : #accessing }
+ClyMethodTagsAndPackageEditorMorph >> ownerTool: anObject [
+
+	super ownerTool: anObject
 ]
 
 { #category : #printing }

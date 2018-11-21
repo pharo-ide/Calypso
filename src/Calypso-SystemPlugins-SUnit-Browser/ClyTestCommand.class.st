@@ -4,7 +4,7 @@ I am a root of hierarchy of commands to run any kind of tests
 Class {
 	#name : #ClyTestCommand,
 	#superclass : #CmdCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #execution }

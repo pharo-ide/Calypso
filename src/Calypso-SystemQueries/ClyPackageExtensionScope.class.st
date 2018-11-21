@@ -11,7 +11,9 @@ Class {
 { #category : #queries }
 ClyPackageExtensionScope >> classesDo: aBlock [ 
 	self packagesDo: [ :package | 
-		package extendedClasses do: aBlock]
+		package extendedClasses 
+			collect: [ :each | each instanceSide ] 
+			thenDo: aBlock]
 ]
 
 { #category : #queries }

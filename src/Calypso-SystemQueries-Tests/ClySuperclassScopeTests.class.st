@@ -145,7 +145,7 @@ ClySuperclassScopeTests >> testMethodsEnumerationOverMetaclassWhenConcreteClassS
 
 	"Now we should see more classes than Object and ProtoObject 
 	because ProtoObject class has more superclasses including Object and ProtoObject itself"
-	expected := ClyClass1FromP1 class allSuperclasses flatCollect: #localMethods as: IdentitySet..
+	expected := ClyClass1FromP1 class allSuperclasses flatCollect: #methods as: IdentitySet.
 	self assert: result asIdentitySet equals: expected
 ]
 

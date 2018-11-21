@@ -30,7 +30,7 @@ Class {
 		'extendingPackage',
 		'targetClasses'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #accessing }
@@ -125,6 +125,12 @@ ClyMethodEditorToolMorph >> initialize [
 	super initialize.
 	
 	methodTags := #()
+]
+
+{ #category : #testing }
+ClyMethodEditorToolMorph >> isCommandAvailable: aCommand [ 
+
+	^ aCommand canBeExecutedInMethodEditor: self
 ]
 
 { #category : #'rubric interaction model' }

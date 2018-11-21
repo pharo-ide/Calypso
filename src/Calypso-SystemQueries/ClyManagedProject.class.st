@@ -19,7 +19,7 @@ Internal Representation and Key Implementation Points.
 Class {
 	#name : #ClyManagedProject,
 	#superclass : #ClyProjectChildItem,
-	#category : 'Calypso-SystemQueries-Domain'
+	#category : #'Calypso-SystemQueries-Domain'
 }
 
 { #category : #testing }

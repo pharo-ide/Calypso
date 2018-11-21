@@ -4,6 +4,9 @@ I am a command to request method tag from the user which should be used to tag e
 Class {
 	#name : #ClyRequestMethodTagForEditorCommand,
 	#superclass : #ClyMethodEditorCommand,
+	#instVars : [
+		'menuItemName'
+	],
 	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
@@ -16,7 +19,8 @@ ClyRequestMethodTagForEditorCommand class >> methodEditorShorcutActivation [
 
 { #category : #accessing }
 ClyRequestMethodTagForEditorCommand >> defaultMenuItemName [
-	^'Classify method'
+
+	^ menuItemName
 ]
 
 { #category : #execution }
@@ -24,4 +28,14 @@ ClyRequestMethodTagForEditorCommand >> execute [
 	| tagEditor |
 	tagEditor := methodEditor tagsAndPackageEditor.
 	tagEditor requestChangeBy: [ tagEditor requestTag] 
+]
+
+{ #category : #'as yet unclassified' }
+ClyRequestMethodTagForEditorCommand >> readParametersFromContext: aToolContext [
+
+	menuItemName := aToolContext tool hasUnacceptedEdits 
+		ifTrue: [ 'Classify currently editing method' ]
+		ifFalse: [ 'Classify method' ]
+
+	
 ]
