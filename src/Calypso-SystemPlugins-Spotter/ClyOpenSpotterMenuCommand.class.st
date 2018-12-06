@@ -14,14 +14,37 @@ Class {
 ClyOpenSpotterMenuCommand class >> browserShortcutActivation [
 	<classAnnotation>
 
-	^ CmdShortcutActivation by: $/ meta for: ClyBrowserContext
+	^ CmdShortcutActivation by: $h meta for: ClyBrowserContext
+]
+
+{ #category : #accessing }
+ClyOpenSpotterMenuCommand class >> defaultMenuIconName [
+
+	^#smallFind
+]
+
+{ #category : #accessing }
+ClyOpenSpotterMenuCommand class >> defaultMenuItemName [
+
+	^ String streamContents: [ :stream |
+		stream 
+			<< 'Open context spotter (' 
+			<< self textToolShortcutActivation keyCombination asString 
+			<< ')' ]
+]
+
+{ #category : #activation }
+ClyOpenSpotterMenuCommand class >> methodBrowserTabActivation [
+	<classAnnotation>
+	
+	^ ClyBrowserTabCommandActivation for: ClyMethod asCalypsoItemContext 
 ]
 
 { #category : #activation }
 ClyOpenSpotterMenuCommand class >> textToolShortcutActivation [
 	<classAnnotation>
 
-	^ CmdShortcutActivation by: $/ meta for: ClyTextEditorContext
+	^ CmdShortcutActivation by: $h meta for: ClyTextEditorContext
 ]
 
 { #category : #execution }
