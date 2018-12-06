@@ -3,12 +3,12 @@ My subclasses represent the navigation context of the browser, the browser state
 
 My tool is always the browser. And I provide the #browser method to use this fact explicitly.
 
-I provide implementation of general logic how to work with selected items in the Calypso browser model:
+I provide default implementations of how to work with selected items in the Calypso browser model:
 - selectedItems, returns the actually selected items.
 - selectedObjects , returns the actual object of selected items.
 - lastSelectedItem
 - lastSelectedObject
-- lastSelectedObjectIn: items, it incapsolates the knowledge about what is the last item in selection.
+- lastSelectedObjectIn: items, encapsulates the knowledge of what is the last item in the selection.
 - firstSelectedObjectIn: items
 - hasSelecteditems
 
