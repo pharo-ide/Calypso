@@ -166,31 +166,15 @@ ClyFullBrowser >> adoptForExtendedClass [
 	methodGroupQuery := methodGroupQuery withoutItemsOfType: RPackage. "To remove previous package injection"
 	(self classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
 	
-	self adoptMetaLevelForSelectedClass. "it will also ensures method groups mode"
+	"it will ensures method groups mode for extended class 
+	to auto select extension methods of selected packages"
+	methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods.
 	
 	extendingPackages := self packageSelection actualObjects.
 	extraGroups := ClyConstantQuery 
 				returning: extendingPackages as: ClyGroupedExtendingPackages new.
 	extraGroups := methodGroupQuery scope adoptQuery: extraGroups.
 	methodGroupQuery := methodGroupQuery , extraGroups
-]
-
-{ #category : #private }
-ClyFullBrowser >> adoptMetaLevelForSelectedClass [
-	| selectedClass extendedMetaLevel |
-	self classSelection isEmpty ifTrue: [ ^self ].
-	selectedClass := self classSelection lastSelectedItem.
-	(selectedClass isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
-	
-	"First we should always switch to method groups because
-	only in that mode we can show properly extension methods "
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods.
-	extendedMetaLevel := selectedClass systemDefinition definingMetaLevelScope.
-	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].
-	
-	"We should switch to the meta level of extended class"
-	metaLevelScope := extendedMetaLevel.
-	methodGroupQuery := methodGroupQuery withMetaLevelScope: metaLevelScope
 ]
 
 { #category : #navigation }
