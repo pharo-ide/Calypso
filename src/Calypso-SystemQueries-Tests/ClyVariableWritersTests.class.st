@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyVariableWritersTests >> queryClass [
-	^ClyVariableWriters
+	^ClyVariableWritersQuery
 ]
 
 { #category : #'methods for tests' }

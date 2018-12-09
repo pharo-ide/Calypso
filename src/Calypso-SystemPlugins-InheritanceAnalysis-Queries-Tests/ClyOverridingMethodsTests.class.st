@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyOverridingMethodsTests >> createQuery [
-	^ClyOverridingMethods from: ClyClassScope of: ClyClassWhichInheritsAbstractClass in: environment
+	^ClyOverridingMethodsQuery from: ClyClassScope of: ClyClassWhichInheritsAbstractClass in: environment
 ]
 
 { #category : #running }
@@ -60,7 +60,7 @@ ClyOverridingMethodsTests >> testIsAffectedByChangeOfSuperclassMethodWhichIsAlre
 ClyOverridingMethodsTests >> testIsAffectedByChangeOfSuperclassMethodWhichOverridesAnotherSuperclassMethod [
 	"this case is important to be affected when override method was removed"
 	
-	query := ClyOverridingMethods 
+	query := ClyOverridingMethodsQuery 
 		from: ClyClassScope of: ClyClassWhichInheritsAbstractSubclass in: environment.
 		
 	self assert: (query isAffectedByChangedMethod: ClyAbstractSubclassExample >> #abstractMethod1)

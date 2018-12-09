@@ -4,8 +4,8 @@ Extension { #name : #ClyUnionQueryTests }
 ClyUnionQueryTests >> testConvertingToNewMetaLevel [
 	| newQuery scopes |
 	query subqueries: {
-		ClyAllMethodGroups from: ClyClassScope of: Object in: environment.
-		ClyAllMethodGroups from: ClySubclassScope of: Array in: environment}.
+		ClyAllMethodGroupsQuery from: ClyClassScope of: Object in: environment.
+		ClyAllMethodGroupsQuery from: ClySubclassScope of: Array in: environment}.
 		
 	newQuery := query withMetaLevelScope: ClyInstanceSideScope.
 	

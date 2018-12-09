@@ -46,7 +46,7 @@ ClyMethodVisibilityGroupsTests >> testFillingWithSingleClasses [
 	self assert: group name equals: ClyClass2FromP1 name.
 	self
 		assert: group methodQuery
-		equals: (ClyAllMethods from: ClyClassScope	of: ClyClass2FromP1 in: environment).
+		equals: (ClyAllMethodsQuery from: ClyClassScope	of: ClyClass2FromP1 in: environment).
 	self assert: group visibilityLevels size equals: 1.
 	visibilityLevel := group visibilityLevels first.
 	self

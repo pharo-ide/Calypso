@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyTaggedMethodsTests >> createQuery [
-	^ ClyTaggedMethods
+	^ ClyTaggedMethodsQuery
 		by: #tag1
 		from: (ClyClassScope of: ClyClass1FromP1 in: environment)
 ]

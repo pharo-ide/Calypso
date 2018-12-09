@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyAllClassGroupsTests >> createQuery [
-	^ClyAllClassGroups from: ClyPackageScope of: Object package in: environment
+	^ClyAllClassGroupsQuery from: ClyPackageScope of: Object package in: environment
 ]
 
 { #category : #running }

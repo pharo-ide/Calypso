@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyOverriddenMethodsTests >> createQuery [
-	^ ClyOverriddenMethods from: ClyClassScope of: ClyAbstractClassExample in: environment
+	^ ClyOverriddenMethodsQuery from: ClyClassScope of: ClyAbstractClassExample in: environment
 ]
 
 { #category : #running }
@@ -44,7 +44,7 @@ ClyOverriddenMethodsTests >> testFromThreeMethods [
 
 { #category : #tests }
 ClyOverriddenMethodsTests >> testIsAffectedByChangeOfOwnMethodWhichIsNotOverridden [
-	query := ClyOverriddenMethods 
+	query := ClyOverriddenMethodsQuery 
 		from: ClyClassScope of: ClyClassWhichInheritsAbstractClass in: environment.
 	
 	self assert: (query isAffectedByChangedMethod: ClyClassWhichInheritsAbstractClass >>#notOverriddenMethod)

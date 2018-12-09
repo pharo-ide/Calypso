@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyUndeclaredMethodsTests >> createQuery [
-	^ ClyUndeclaredMethods
+	^ ClyUndeclaredMethodsQuery
 		from: (ClyClassScope of: ClyClassWithUndeclares in: environment)
 ]
 

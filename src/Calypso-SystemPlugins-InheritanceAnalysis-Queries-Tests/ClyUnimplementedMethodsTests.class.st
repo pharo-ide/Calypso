@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyUnimplementedMethodsTests >> createQuery [
-	^ClyUnimplementedMethods 
+	^ClyUnimplementedMethodsQuery 
 		from: ClyClassScope 
 		of: ClyClassWhichInheritsAbstractSubclass
 		in: environment

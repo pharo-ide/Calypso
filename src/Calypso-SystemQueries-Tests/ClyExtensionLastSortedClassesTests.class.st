@@ -37,7 +37,7 @@ ClyExtensionLastSortedClassesTests >> testCreationSimpleInstance [
 
 { #category : #tests }
 ClyExtensionLastSortedClassesTests >> testFillingHierarchicalInstance [
-	query := ClyAllClasses from: ClyPackageScope of: ClyClass1FromP1 package in: environment.
+	query := ClyAllClassesQuery from: ClyPackageScope of: ClyClass1FromP1 package in: environment.
 	queryResult := ClyExtensionLastSortedClasses hierarchical prepareNewFor: query in: environment..
 	
 	queryResult buildWith: {
@@ -52,7 +52,7 @@ ClyExtensionLastSortedClassesTests >> testFillingHierarchicalInstance [
 
 { #category : #tests }
 ClyExtensionLastSortedClassesTests >> testFillingSimpleInstance [
-	query := ClyAllClasses from: ClyPackageScope of: ClyClass1FromP1 package in: environment.
+	query := ClyAllClassesQuery from: ClyPackageScope of: ClyClass1FromP1 package in: environment.
 	queryResult := ClyExtensionLastSortedClasses simple prepareNewFor: query in: environment.
 
 	queryResult buildWith: {
@@ -67,7 +67,7 @@ ClyExtensionLastSortedClassesTests >> testFillingSimpleInstance [
 
 { #category : #tests }
 ClyExtensionLastSortedClassesTests >> testFillingWithExtendedClassSide [
-	query := ClyAllClasses from: ClyPackageScope of: ClyClass1FromP1 package in: environment.
+	query := ClyAllClassesQuery from: ClyPackageScope of: ClyClass1FromP1 package in: environment.
 	queryResult := ClyExtensionLastSortedClasses simple prepareNewFor: query in: environment.
 	
 	queryResult buildWith: {

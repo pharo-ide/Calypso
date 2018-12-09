@@ -53,9 +53,9 @@ ClyGroupedInstanceVariablesTests >> testFillingWithSingleClassVar [
 	
 	self assertItems: {ClyAllMethodGroup. 0. ClyMethodGroup. 0}.
 	classVarGroup := items last actualObject.
-	self assert: classVarGroup methodQuery class equals: ClyVariableReferences.
-	self assert: classVarGroup methodQuery variableQuery class equals: ClyAllClassVariables.
-	self assert: classVarGroup subgroupsQuery class equals: ClyAllClassVariables.
+	self assert: classVarGroup methodQuery class equals: ClyVariableReferencesQuery.
+	self assert: classVarGroup methodQuery variableQuery class equals: ClyAllClassVariablesQuery.
+	self assert: classVarGroup subgroupsQuery class equals: ClyAllClassVariablesQuery.
 	self assert: classVarGroup subgroupsQuery requiredResult class equals: ClyGroupedClassVariables.
 	self 
 		assert: classVarGroup subgroupsQuery requiredResult hierarchy 
@@ -71,13 +71,13 @@ ClyGroupedInstanceVariablesTests >> testFillingWithSingleInstVar [
 	self assertItems: {ClyAllMethodGroup. 0. 
 		ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1}.
 	classVarGroup := items last actualObject.
-	self assert: classVarGroup methodQuery class equals: ClyVariableReferences.
+	self assert: classVarGroup methodQuery class equals: ClyVariableReferencesQuery.
 	self 
 		assert: classVarGroup methodQuery variableQuery resultItems 
 		equals: {ClyInstanceVariable named: #instVar definedIn: ClyClass2FromP1}.
 	allClassVarGroup :=  items second actualObject.
-	self assert: allClassVarGroup methodQuery class equals: ClyVariableReferences.
-	self assert: allClassVarGroup methodQuery variableQuery class equals: ClyAllInstanceVariables.
+	self assert: allClassVarGroup methodQuery class equals: ClyVariableReferencesQuery.
+	self assert: allClassVarGroup methodQuery variableQuery class equals: ClyAllInstanceVariablesQuery.
 ]
 
 { #category : #tests }

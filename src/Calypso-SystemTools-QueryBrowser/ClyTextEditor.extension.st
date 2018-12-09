@@ -7,7 +7,7 @@ ClyTextEditor >> classCommentsContainingIt [
 	| query |
 	self lineSelectAndEmptyCheck: [^ self].
 
-	query := ClyClassComments withString: self selection string.
+	query := ClyClassCommentsQuery withString: self selection string.
 	self browser spawnQueryBrowserOn: query
 ]
 
@@ -18,7 +18,7 @@ ClyTextEditor >> classNamesContainingIt [
 	| query |
 	self lineSelectAndEmptyCheck: [^self].
 
-	query := ClyAllClasses new filteredBy: (ClyItemNameFilter substringPattern: self selection string).
+	query := ClyAllClassesQuery new filteredBy: (ClyItemNameFilter substringPattern: self selection string).
 	self browser spawnQueryBrowserOn: query
 ]
 
@@ -44,7 +44,7 @@ ClyTextEditor >> methodSourceContainingIt [
 	| query pattern |
 	self lineSelectAndEmptyCheck: [^ self].
 	pattern := self selection string.
-	query := (ClyMethodSources withString: pattern), (ClyClassComments withString: pattern).
+	query := (ClyMethodSourcesQuery withString: pattern), (ClyClassCommentsQuery withString: pattern).
 	self browser spawnQueryBrowserOn: query
 ]
 
@@ -58,7 +58,7 @@ ClyTextEditor >> referencesTo: aVariableName [
 	class isBehavior ifTrue: [ 
 		class slotNamed: aVariableName ifFound: [:slot | 
 			var := ClyInstanceVariable on: slot visibleFrom: class.
-			^self browser spawnQueryBrowserOn: (ClyVariableReferences of: var)]].
+			^self browser spawnQueryBrowserOn: (ClyVariableReferencesQuery of: var)]].
 	
 	self browser browseReferencesTo: aVariableName asSymbol from: class
 ]

@@ -16,5 +16,5 @@ ClyVarDefinitionMethodGroup class >> withMethodsFrom: aClassScope referencedAny:
 		from: (aClassScope asScope: ClyClassScope of: definingClass).
 	^self 
 		named: definingClass name 
-		on: (ClyVariableReferences from: aClassScope toVariablesFrom: variableQuery)
+		on: (ClyVariableReferencesQuery from: aClassScope toVariablesFrom: variableQuery)
 ]

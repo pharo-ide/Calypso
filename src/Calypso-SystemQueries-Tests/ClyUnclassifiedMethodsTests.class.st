@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyUnclassifiedMethodsTests >> createQuery [
-	^ ClyUnclassifiedMethods
+	^ ClyUnclassifiedMethodsQuery
 		from: (ClyClassScope of: ClyClass1FromP1 in: environment)
 ]
 

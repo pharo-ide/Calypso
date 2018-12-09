@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyMethodWatchpointsTests >> createQuery [
-	^ClyMethodWatchpoints from: ClyClassScope of: self class in: environment
+	^ClyMethodWatchpointsQuery from: ClyClassScope of: self class in: environment
 ]
 
 { #category : #running }

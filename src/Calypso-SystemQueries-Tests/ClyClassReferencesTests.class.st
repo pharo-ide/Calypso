@@ -12,7 +12,7 @@ ClyClassReferencesTests class >> classSideReference1OfClass [
 
 { #category : #running }
 ClyClassReferencesTests >> createQuery [
-	^ ClyClassReferences
+	^ ClyClassReferencesQuery
 		to: self referencedClass
 		from: (ClyClassScope of: Object in: environment)
 ]
@@ -75,21 +75,21 @@ ClyClassReferencesTests >> testCheckIfEmpty [
 ClyClassReferencesTests >> testComparison [
 
 	self 
-		assert: (ClyClassReferences to: Point) 
-		equals: (ClyClassReferences to: Point).
+		assert: (ClyClassReferencesQuery to: Point) 
+		equals: (ClyClassReferencesQuery to: Point).
 	
 	self 
-		assert: (ClyClassReferences to: Point) hash 
-		equals: (ClyClassReferences to: Point) hash.
+		assert: (ClyClassReferencesQuery to: Point) hash 
+		equals: (ClyClassReferencesQuery to: Point) hash.
 		
-	self deny: (ClyClassReferences to: Point)
-					 = (ClyClassReferences to: Rectangle)
+	self deny: (ClyClassReferencesQuery to: Point)
+					 = (ClyClassReferencesQuery to: Rectangle)
 ]
 
 { #category : #tests }
 ClyClassReferencesTests >> testDescriptionWhenSimpleClassBindingIsUsed [
 
-	query := ClyClassReferences to: Object binding.
+	query := ClyClassReferencesQuery to: Object binding.
 	
 	self assert: query description equals: 'references to Object'
 ]
@@ -107,7 +107,7 @@ ClyClassReferencesTests >> testForGlobalVariable [
 { #category : #tests }
 ClyClassReferencesTests >> testForMetaclass [
 
-	query := ClyClassReferences to: self referencedClass classSide.
+	query := ClyClassReferencesQuery to: self referencedClass classSide.
 	
 	self queryFromScope: ClyMethodScope of: self class >> #reference1OfClass.
 	

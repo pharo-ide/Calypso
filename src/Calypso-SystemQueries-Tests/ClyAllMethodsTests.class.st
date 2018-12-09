@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyAllMethodsTests >> createQuery [
-	^ ClyAllMethods from: ClyClassScope of: Object in: environment
+	^ ClyAllMethodsQuery from: ClyClassScope of: Object in: environment
 ]
 
 { #category : #tests }

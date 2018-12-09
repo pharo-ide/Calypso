@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyMethodSourcesTests >> createQuery [
-	^ ClyMethodSources
+	^ ClyMethodSourcesQuery
 		withString: self expectedSourceCodeSubstring
 		from: (ClyClassScope of: self class in: environment)
 ]
@@ -35,15 +35,15 @@ ClyMethodSourcesTests >> testCheckIfEmpty [
 ClyMethodSourcesTests >> testComparison [
 
 	self 
-		assert: (ClyMethodSources withString: 'test substring') 
-		equals: (ClyMethodSources withString: 'test ', 'substring').
+		assert: (ClyMethodSourcesQuery withString: 'test substring') 
+		equals: (ClyMethodSourcesQuery withString: 'test ', 'substring').
 		
 	self 
-		assert: (ClyMethodSources withString: 'test substring') hash
-		equals: (ClyMethodSources withString: 'test ', 'substring') hash.
+		assert: (ClyMethodSourcesQuery withString: 'test substring') hash
+		equals: (ClyMethodSourcesQuery withString: 'test ', 'substring') hash.
 		
-	self deny: (ClyMethodSources withString: 'test substring')
-					 = (ClyMethodSources withString: 'another substring')
+	self deny: (ClyMethodSourcesQuery withString: 'test substring')
+					 = (ClyMethodSourcesQuery withString: 'another substring')
 ]
 
 { #category : #tests }

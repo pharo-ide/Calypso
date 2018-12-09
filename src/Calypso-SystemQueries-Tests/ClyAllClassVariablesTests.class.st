@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyAllClassVariablesTests >> createQuery [
-	^ClyAllClassVariables from: ClyClassScope of: ClyClass2FromP1 in: environment
+	^ClyAllClassVariablesQuery from: ClyClassScope of: ClyClass2FromP1 in: environment
 ]
 
 { #category : #tests }

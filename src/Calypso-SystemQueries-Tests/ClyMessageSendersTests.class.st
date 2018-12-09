@@ -16,7 +16,7 @@ ClyMessageSendersTests class >> classSideSender2OfMessage1 [
 
 { #category : #running }
 ClyMessageSendersTests >> createQuery [
-	^ ClyMessageSenders
+	^ ClyMessageSendersQuery
 		of: self referencedSelector
 		from: (ClyClassScope of: Object in: environment)
 ]
@@ -60,20 +60,20 @@ ClyMessageSendersTests >> testCheckIfEmpty [
 ClyMessageSendersTests >> testComparison [
 
 	self 
-		assert: (ClyMessageSenders of: #message1) 
-		equals: (ClyMessageSenders of: #message1).
+		assert: (ClyMessageSendersQuery of: #message1) 
+		equals: (ClyMessageSendersQuery of: #message1).
 	
 	self 
-		assert: (ClyMessageSenders of: #message1) hash 
-		equals: (ClyMessageSenders of: #message1) hash.
+		assert: (ClyMessageSendersQuery of: #message1) hash 
+		equals: (ClyMessageSendersQuery of: #message1) hash.
 		
-	self deny: (ClyMessageSenders of: #message1) = (ClyMessageSenders of: #message2)
+	self deny: (ClyMessageSendersQuery of: #message1) = (ClyMessageSendersQuery of: #message2)
 ]
 
 { #category : #tests }
 ClyMessageSendersTests >> testDetectingSpecialSelectorLikeIfTrue [
 
-	query := ClyMessageSenders of: ##ifTrue:.
+	query := ClyMessageSendersQuery of: ##ifTrue:.
 	
 	self queryFromScope: ClyMethodScope of: self class >> #senderOfIfTrue.
 	

@@ -14,5 +14,5 @@ ClyExtendedClassGroupProvider >> createClassGroupFor: aClassQuery from: aPackage
 
 { #category : #enumerating }
 ClyExtendedClassGroupProvider >> createClassQueryFrom: aPackageScope [
-	^ClyAllClasses from: (aPackageScope asScope: ClyPackageExtensionScope)
+	^ClyAllClassesQuery from: (aPackageScope asScope: ClyPackageExtensionScope)
 ]

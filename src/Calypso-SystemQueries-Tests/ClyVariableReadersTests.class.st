@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyVariableReadersTests >> queryClass [
-	^ClyVariableReaders
+	^ClyVariableReadersQuery
 ]
 
 { #category : #'methods for tests' }

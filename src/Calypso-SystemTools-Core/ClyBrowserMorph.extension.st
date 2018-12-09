@@ -16,7 +16,7 @@ ClyBrowserMorph >> allowSilentlyRemoveMethods: methods whichHaveSenders: senders
 ClyBrowserMorph >> confirmVariableRemoveFor: variables [
 	
 	| refQuery refs showRefs |
-	refQuery := ClyVariableReferences ofAny: variables from: self systemScope.
+	refQuery := ClyVariableReferencesQuery ofAny: variables from: self systemScope.
 	
 	refs := refQuery execute.
 	refs isEmpty ifTrue: [ ^true ].
@@ -42,7 +42,7 @@ ClyBrowserMorph >> requestRemoveMethodStrategyFor: methods [
 	| selectors result strategies caption  senders |
 	selectors := methods collect: [ :each | each selector ] as: IdentitySet.	
 	selectors := selectors asArray.
-	senders := (ClyMessageSenders ofAny: selectors from: self systemScope) execute.
+	senders := (ClyMessageSendersQuery ofAny: selectors from: self systemScope) execute.
 	(self allowSilentlyRemoveMethods: methods whichHaveSenders: senders)
 		ifTrue: [ ^SycSilentlyRemoveMethodStrategy new ].
 

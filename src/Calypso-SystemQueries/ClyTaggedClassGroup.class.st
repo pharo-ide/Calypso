@@ -34,7 +34,7 @@ ClyTaggedClassGroup class >> isEditableGroup [
 { #category : #'instance creation' }
 ClyTaggedClassGroup class >> withClassesFrom: aPackageScope taggedBy: tagName [
 	| classQuery |
-	classQuery := ClyTaggedClasses by: tagName from: aPackageScope.
+	classQuery := ClyTaggedClassesQuery by: tagName from: aPackageScope.
 	^ClyTaggedClassGroup named: tagName on: classQuery.
 ]
 

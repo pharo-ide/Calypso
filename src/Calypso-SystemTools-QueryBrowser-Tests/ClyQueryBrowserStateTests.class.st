@@ -23,7 +23,7 @@ ClyQueryBrowserStateTests >> restoreBrowserInstance [
 ClyQueryBrowserStateTests >> setUp [
 	super setUp.
 	
-	browser showResultOf: (ClyAllMethods sortedFrom: browser queryScopes first)
+	browser showResultOf: (ClyAllMethodsQuery sortedFrom: browser queryScopes first)
 ]
 
 { #category : #tests }
@@ -40,7 +40,7 @@ ClyQueryBrowserStateTests >> testRestoredBrowserInstanceWithActiveScope [
 ClyQueryBrowserStateTests >> testRestoredBrowserInstanceWithMethodQuery [
 
 	| query |
-	query := ClyAllMethods sorted.
+	query := ClyAllMethodsQuery sorted.
 	browser systemQuery: query.
 	
 	self restoreBrowserInstance.

@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyVariableReferencesTests >> queryClass [
-	^ClyVariableReferences 
+	^ClyVariableReferencesQuery 
 ]
 
 { #category : #'methods for tests' }
@@ -49,7 +49,7 @@ ClyVariableReferencesTests >> testForClassVariable [
 
 	| classVar |
 	classVar := ClyClassVariable named: #ClassVar1 definedIn: ClyClass2FromP1.
-	query := ClyVariableReferences of: classVar.
+	query := ClyVariableReferencesQuery of: classVar.
 	self queryFromScope: ClyClassScope of: ClyClass2FromP1.
 	
 	self assert: resultItems size equals: 2.	
@@ -61,7 +61,7 @@ ClyVariableReferencesTests >> testForSharedClassVariable [
 
 	| classVar |
 	classVar := ClyClassVariable named: #DayNames definedIn: ChronologyConstants.
-	query := ClyVariableReferences of: classVar.
+	query := ClyVariableReferencesQuery of: classVar.
 	self queryFromScope: ClyBothMetaLevelClassScope of: Date.
 	
 	self assert: resultItems notEmpty

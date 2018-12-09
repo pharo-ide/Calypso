@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyExpectedFailedTestMethodsTests >> createQuery [
-	^ClyExpectedFailedTestMethods from: ClyClassScope of: ClyTestedClassTests in: environment
+	^ClyExpectedFailedTestMethodsQuery from: ClyClassScope of: ClyTestedClassTests in: environment
 ]
 
 { #category : #tests }

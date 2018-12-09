@@ -14,7 +14,7 @@ ClyMessageImplementorsTests >> clyMessageImplementor1 [
 
 { #category : #running }
 ClyMessageImplementorsTests >> createQuery [
-	^ ClyMessageImplementors
+	^ ClyMessageImplementorsQuery
 		of: self targetSelector
 		from: (ClyClassScope of: Object in: environment)
 ]
@@ -41,14 +41,14 @@ ClyMessageImplementorsTests >> testCheckIfEmpty [
 ClyMessageImplementorsTests >> testComparison [
 
 	self 
-		assert: (ClyMessageImplementors of: #message1) 
-		equals: (ClyMessageImplementors of: #message1).
+		assert: (ClyMessageImplementorsQuery of: #message1) 
+		equals: (ClyMessageImplementorsQuery of: #message1).
 	
 	self 
-		assert: (ClyMessageImplementors of: #message1) hash 
-		equals: (ClyMessageImplementors of: #message1) hash.
+		assert: (ClyMessageImplementorsQuery of: #message1) hash 
+		equals: (ClyMessageImplementorsQuery of: #message1) hash.
 		
-	self deny: (ClyMessageImplementors of: #message1) = (ClyMessageImplementors of: #message2)
+	self deny: (ClyMessageImplementorsQuery of: #message1) = (ClyMessageImplementorsQuery of: #message2)
 ]
 
 { #category : #tests }

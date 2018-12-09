@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyRestUntaggedClassesTests >> createQuery [
-	^ClyRestUntaggedClasses from: ClyPackageScope of: Object package in: environment
+	^ClyRestUntaggedClassesQuery from: ClyPackageScope of: Object package in: environment
 ]
 
 { #category : #tests }

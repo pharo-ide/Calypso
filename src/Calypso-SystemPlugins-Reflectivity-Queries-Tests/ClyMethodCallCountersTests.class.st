@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyMethodCallCountersTests >> createQuery [
-	^ClyMethodCallCounters from: ClyClassScope of: self class in: environment
+	^ClyMethodCallCountersQuery from: ClyClassScope of: self class in: environment
 ]
 
 { #category : #running }

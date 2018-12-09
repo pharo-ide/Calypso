@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyActiveContextOfProcessesTests >> createQuery [
-	^ClyActiveContextOfProcesses from: environment systemScope
+	^ClyActiveContextOfProcessesQuery from: environment systemScope
 ]
 
 { #category : #tests }

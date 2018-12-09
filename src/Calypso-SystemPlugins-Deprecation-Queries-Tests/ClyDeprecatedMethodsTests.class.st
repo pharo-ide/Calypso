@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyDeprecatedMethodsTests >> createQuery [
-	^ ClyDeprecatedMethods from: ClyClassScope of: Object in: environment
+	^ ClyDeprecatedMethodsQuery from: ClyClassScope of: Object in: environment
 ]
 
 { #category : #tests }

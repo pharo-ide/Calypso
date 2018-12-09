@@ -6,7 +6,7 @@ Class {
 
 { #category : #running }
 ClyPackageExtensionMethodsTests >> createQuery [
-	^ ClyPackageExtensionMethods
+	^ ClyPackageExtensionMethodsQuery
 		of: ClyClass1FromP1 package
 		from: (ClyClassScope of: ClyClass1FromP1 in: environment)
 ]

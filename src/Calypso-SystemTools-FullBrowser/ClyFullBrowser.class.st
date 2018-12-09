@@ -184,7 +184,7 @@ ClyFullBrowser >> adoptMetaLevelForSelectedClass [
 	
 	"First we should always switch to method groups because
 	only in that mode we can show properly extension methods "
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods.
+	methodGroupQuery := ClyAllMethodGroupsQuery sortedFrom: self classScopeForMethods.
 	extendedMetaLevel := selectedClass systemDefinition definingMetaLevelScope.
 	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].
 	
@@ -593,7 +593,7 @@ ClyFullBrowser >> prepareDefaultState [
 { #category : #initialization }
 ClyFullBrowser >> prepareInitialState [
 
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: navigationEnvironment).
+	methodGroupQuery := ClyAllMethodGroupsQuery sortedFrom: (metaLevelScope emptyIn: navigationEnvironment).
 	
 	self switchToPackages
 ]
@@ -745,7 +745,7 @@ ClyFullBrowser >> showAllMethods [
 		
 	| methodQuery |
 	
-	methodQuery := ClyAllMethods sortedFrom: self classScopeForMethods.	
+	methodQuery := ClyAllMethodsQuery sortedFrom: self classScopeForMethods.	
 	methodView showQuery: methodQuery
 ]
 
@@ -815,7 +815,7 @@ ClyFullBrowser >> specifyMethodItemNameOn: nameMorph for: methodItem [
 { #category : #navigation }
 ClyFullBrowser >> switchClassViewTo: aQueryResult inScope: aScope [
 	| classes |
-	classes := ClyAllClasses from: aScope as: aQueryResult.
+	classes := ClyAllClassesQuery from: aScope as: aQueryResult.
 	
 	classView showQuery: classes
 ]
@@ -867,7 +867,7 @@ ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
 ClyFullBrowser >> switchToMethodGroups [
 	
 	self changeMethodGroupQueryBy: [ 
-		ClyAllMethodGroups sortedFrom: self classScopeForMethods
+		ClyAllMethodGroupsQuery sortedFrom: self classScopeForMethods
 	]
 ]
 
@@ -877,7 +877,7 @@ ClyFullBrowser >> switchToPackageScopeOf: packages [
 	| query scope |
 	scope := ClyPackageScope ofAll: packages in: navigationEnvironment.
 	scope name: 'Scoped pckg'.
-	query := ClyAllPackages sortedFrom: scope.
+	query := ClyAllPackagesQuery sortedFrom: scope.
 
 	packageView showQuery: query
 ]
@@ -885,7 +885,7 @@ ClyFullBrowser >> switchToPackageScopeOf: packages [
 { #category : #navigation }
 ClyFullBrowser >> switchToPackages [
 	| packages |
-	packages := ClyAllPackages sortedFrom: self systemScope.
+	packages := ClyAllPackagesQuery sortedFrom: self systemScope.
 
 	packageView showQuery: packages
 ]
@@ -902,7 +902,7 @@ ClyFullBrowser >> switchToVariables [
 	
 	self changeMethodGroupQueryBy: [
 		classScope := self classScopeForMethods.
-		ClyAllVariables 
+		ClyAllVariablesQuery 
 			from: classScope, classScope asInheritedScope 
 			as: ClyGroupedInstanceVariables withDefaultHierarchy 
 	]

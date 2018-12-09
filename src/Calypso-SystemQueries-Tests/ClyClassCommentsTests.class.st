@@ -13,7 +13,7 @@ Class {
 
 { #category : #running }
 ClyClassCommentsTests >> createQuery [
-	^ ClyClassComments
+	^ ClyClassCommentsQuery
 		withString: self expectedClassCommentSubstring
 		from: (ClyPackageScope of: Object package in: environment)
 ]
@@ -36,15 +36,15 @@ ClyClassCommentsTests >> testCheckIfEmpty [
 ClyClassCommentsTests >> testComparison [
 
 	self 
-		assert: (ClyClassComments withString: 'test substring') 
-		equals: (ClyClassComments withString: 'test ', 'substring').
+		assert: (ClyClassCommentsQuery withString: 'test substring') 
+		equals: (ClyClassCommentsQuery withString: 'test ', 'substring').
 		
 	self 
-		assert: (ClyClassComments withString: 'test substring') hash
-		equals: (ClyClassComments withString: 'test ', 'substring') hash.
+		assert: (ClyClassCommentsQuery withString: 'test substring') hash
+		equals: (ClyClassCommentsQuery withString: 'test ', 'substring') hash.
 		
-	self deny: (ClyClassComments withString: 'test substring')
-					 = (ClyClassComments withString: 'another substring')
+	self deny: (ClyClassCommentsQuery withString: 'test substring')
+					 = (ClyClassCommentsQuery withString: 'another substring')
 ]
 
 { #category : #tests }

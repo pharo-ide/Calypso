@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyActiveBreakpointsTests >> createQuery [
-	^ClyActiveBreakpoints from: ClyClassScope of: ClyClassWithHalts in: environment
+	^ClyActiveBreakpointsQuery from: ClyClassScope of: ClyClassWithHalts in: environment
 ]
 
 { #category : #running }

@@ -25,13 +25,13 @@ ClyGroupedClassVariablesTests >> testFillingWithSingleClassVar [
 	
 	self assertItems: {ClyVarDefinitionMethodGroup. 0. ClyVariableMethodGroup. 1}.
 	classVarGroup := items last actualObject.
-	self assert: classVarGroup methodQuery class equals: ClyVariableReferences.
+	self assert: classVarGroup methodQuery class equals: ClyVariableReferencesQuery.
 	self 
 		assert: classVarGroup methodQuery variableQuery resultItems 
 		equals: {ClyClassVariable named: #ClassVar1 definedIn: ClyClass2FromP1}.
 	allClassVarGroup :=  items first actualObject.
-	self assert: allClassVarGroup methodQuery class equals: ClyVariableReferences.
-	self assert: allClassVarGroup methodQuery variableQuery class equals: ClyAllClassVariables.
+	self assert: allClassVarGroup methodQuery class equals: ClyVariableReferencesQuery.
+	self assert: allClassVarGroup methodQuery variableQuery class equals: ClyAllClassVariablesQuery.
 ]
 
 { #category : #tests }
