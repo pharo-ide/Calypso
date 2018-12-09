@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyWatchpointMethodGroupProviderTests >> classSampleWhichHasGroup [
-	^ClyMethodWatchpointsTests
+	^ClyMethodWatchpointsQueryTests
 ]
 
 { #category : #running }
@@ -21,7 +21,7 @@ ClyWatchpointMethodGroupProviderTests >> groupProviderClass [
 ClyWatchpointMethodGroupProviderTests >> setUp [
 	super setUp.
 	
-	installedWatchpoint := ClyMethodWatchpointsTests new setUp; installWatchpointInto: #methodWithWatchpoint 
+	installedWatchpoint := ClyMethodWatchpointsQueryTests new setUp; installWatchpointInto: #methodWithWatchpoint 
 ]
 
 { #category : #running }

@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 ClyMethodCounterGroupProviderTests >> classSampleWhichHasGroup [
-	^ClyMethodCallCountersTests 
+	^ClyMethodCallCountersQueryTests 
 ]
 
 { #category : #running }
@@ -21,7 +21,7 @@ ClyMethodCounterGroupProviderTests >> groupProviderClass [
 ClyMethodCounterGroupProviderTests >> setUp [
 	super setUp.
 	
-	installedCounter := ClyMethodCallCountersTests new setUp; installCounterInto: #methodWithCounter
+	installedCounter := ClyMethodCallCountersQueryTests new setUp; installCounterInto: #methodWithCounter
 ]
 
 { #category : #running }
