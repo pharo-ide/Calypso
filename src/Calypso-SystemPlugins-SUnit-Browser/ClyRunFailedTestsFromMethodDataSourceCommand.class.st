@@ -4,7 +4,7 @@ I am a command to run all failed tests available in given data source
 Class {
 	#name : #ClyRunFailedTestsFromMethodDataSourceCommand,
 	#superclass : #ClyRunTestsFromMethodDataSourceCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #testing }
