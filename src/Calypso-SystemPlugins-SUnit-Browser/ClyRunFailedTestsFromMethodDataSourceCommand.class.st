@@ -29,7 +29,7 @@ ClyRunFailedTestsFromMethodDataSourceCommand >> buildTestSuite [
 	
 	self testMethodsDo: [ :eachMethod |
 		eachMethod isFailedTest | eachMethod isErrorTest ifTrue: [ 
-			suite addTest: (eachMethod origin selector: eachMethod selector)]].
+			suite addTest: (eachMethod methodClass selector: eachMethod selector)]].
 
 	^suite
 ]

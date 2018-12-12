@@ -14,7 +14,7 @@ ClyRunAllTestsFromMethodDataSourceCommand >> buildTestSuite [
 	suite := TestSuite new.
 	
 	self testMethodsDo: [ :eachMethod |
-			suite addTest: (eachMethod origin selector: eachMethod selector)].
+			suite addTest: (eachMethod methodClass selector: eachMethod selector)].
 
 	^suite
 ]
