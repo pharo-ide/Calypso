@@ -4,6 +4,9 @@ I return all methods which have installed breakpoints or send the halt message (
 Class {
 	#name : #ClyActiveBreakpoints,
 	#superclass : #ClyMethodQuery,
+	#instVars : [
+		'excludeHaltsForTesting'
+	],
 	#category : #'Calypso-SystemPlugins-Reflectivity-Queries-Breakpoints'
 }
 
@@ -12,7 +15,23 @@ ClyActiveBreakpoints >> description [
 	^'active breakpoints'
 ]
 
+{ #category : #accessing }
+ClyActiveBreakpoints >> excludeHaltsForTesting [
+	excludeHaltsForTesting ifNil: [ self excludeHaltsForTesting: false ].
+	^ excludeHaltsForTesting
+]
+
+{ #category : #accessing }
+ClyActiveBreakpoints >> excludeHaltsForTesting: anObject [
+	excludeHaltsForTesting := anObject
+]
+
 { #category : #testing }
 ClyActiveBreakpoints >> selectsMethod: aMethod [
-	^aMethod hasBreakpoint or: [ aMethod containsHalt ]
+	"If the method does not contain halts or breakpoints, we do not show it"
+	(aMethod hasBreakpoint or: [ aMethod containsHalt ]) ifFalse: [ ^false ].
+	"If the method contains halts or breakpoints and we are not exclude halts for testing, we show it"
+	(self excludeHaltsForTesting) ifFalse: [ ^true ].
+	"If we are excluding methods with halts for testing, we show the method if it has not been marked as containing halts for tests"
+	^ (aMethod hasPragmaNamed: #haltOrBreakpointForTesting) not.
 ]

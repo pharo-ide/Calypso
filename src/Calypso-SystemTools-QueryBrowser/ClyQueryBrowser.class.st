@@ -42,8 +42,15 @@ Class {
 	#classVars : [
 		'DefaultQueryResult'
 	],
-	#category : 'Calypso-SystemTools-QueryBrowser-UI'
+	#category : #'Calypso-SystemTools-QueryBrowser-UI'
 }
+
+{ #category : #'as yet unclassified' }
+ClyQueryBrowser class >> browseBreakpoints [
+	| b |
+	b := ClyQueryBrowser openOn: ClyActiveBreakpoints new.
+	b switchResultTo: (ClySortedQueryResult using: SortMethodsByPackageFunction new).
+]
 
 { #category : #opening }
 ClyQueryBrowser class >> browseImplementorsOf: aSymbol [
