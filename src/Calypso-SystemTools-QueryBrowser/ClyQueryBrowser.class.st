@@ -52,6 +52,13 @@ ClyQueryBrowser class >> browseBreakpoints [
 	b switchResultTo: (ClySortedQueryResult using: SortMethodsByPackageFunction new).
 ]
 
+{ #category : #'as yet unclassified' }
+ClyQueryBrowser class >> browseBreakpointsExcludingHaltsForTesting [
+	| b |
+	b := ClyQueryBrowser openOn: ClyActiveBreakpoints newExcludingHaltsForTesting.
+	b switchResultTo: (ClySortedQueryResult using: SortMethodsByPackageFunction new).
+]
+
 { #category : #opening }
 ClyQueryBrowser class >> browseImplementorsOf: aSymbol [
 	^self openOn: (ClyMessageImplementors of: aSymbol)
