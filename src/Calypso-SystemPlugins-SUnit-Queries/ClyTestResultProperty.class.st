@@ -67,7 +67,7 @@ ClyTestResultProperty >> accumulateTestCase: aClass [
 { #category : #accessing }
 ClyTestResultProperty >> accumulateTestMethod: testMethod [
 
-	self accumulateTest: testMethod selector of: testMethod origin
+	self accumulateTest: testMethod selector of: testMethod methodClass
 ]
 
 { #category : #accessing }
