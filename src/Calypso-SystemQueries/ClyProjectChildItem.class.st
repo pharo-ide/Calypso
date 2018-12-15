@@ -20,7 +20,7 @@ Internal Representation and Key Implementation Points.
 Class {
 	#name : #ClyProjectChildItem,
 	#superclass : #Object,
-	#category : 'Calypso-SystemQueries-Domain'
+	#category : #'Calypso-SystemQueries-Domain'
 }
 
 { #category : #'item convertation' }
