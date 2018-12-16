@@ -51,7 +51,7 @@ ClyRunClassScriptCommand >> defaultMenuItemName [
 
 { #category : #execution }
 ClyRunClassScriptCommand >> execute [
-	script executeBy: targetClass
+	script executedBy: targetClass
 ]
 
 { #category : #execution }

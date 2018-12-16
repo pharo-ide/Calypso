@@ -15,7 +15,14 @@ ClyExampleScript class >> isImplementedByMethod: aMethod [
 
 { #category : #accessing }
 ClyExampleScript >> description [
-	^'Run the example'
+	^ 'Run the example and get an inspector'
+]
+
+{ #category : #execution }
+ClyExampleScript >> executedBy: aClass [
+	"Also inspect the result!"
+	
+	^ (super executedBy: aClass) inspect
 ]
 
 { #category : #accessing }

@@ -15,18 +15,16 @@ ClySampleInstanceScript class >> isImplementedByMethod: aMethod [
 
 { #category : #accessing }
 ClySampleInstanceScript >> description [
-	^'Get the class sample (predefined instance) in a inspector to tweak it and have fun with it'
+	^ 'Get the class sample (predefined instance) in a inspector to tweak it and have fun with it'
 ]
 
 { #category : #execution }
-ClySampleInstanceScript >> executeBy: aClass [
+ClySampleInstanceScript >> executedBy: aClass [
 
-	| sample |
-	sample := super executeBy: aClass.
-	sample inspect
+ 	(super executedBy: aClass) inspect
 ]
 
 { #category : #accessing }
 ClySampleInstanceScript >> iconName [
-	^#smallDoItIcon
+	^ #smallDoItIcon
 ]
