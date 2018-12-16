@@ -1,6 +1,15 @@
 "
-I represent class side methods with pragma <sampleInstance>.
-After method execution I open inspector on the result
+I represent the action of the performed on class side methods marked with pragma <sampleInstance>.
+After method execution I open an inspector on the result.
+Note that if your method is named 
+
+[[[  
+example1
+	<sampleInstance>
+	^ 42
+]]]
+
+It will still open an inspector even if the browser consider them as example (see comments of the ClyExampleScript class)
 "
 Class {
 	#name : #ClySampleInstanceScript,
