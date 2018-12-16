@@ -19,9 +19,9 @@ ClySampleInstanceScript >> description [
 ]
 
 { #category : #execution }
-ClySampleInstanceScript >> executedBy: aClass [
+ClySampleInstanceScript >> executeOn: aClass [
 
- 	(super executedBy: aClass) inspect
+ 	(super executeOn: aClass) inspect
 ]
 
 { #category : #accessing }

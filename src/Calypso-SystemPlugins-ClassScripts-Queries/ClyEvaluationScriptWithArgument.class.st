@@ -23,7 +23,7 @@ ClyEvaluationScriptWithArgument class >> isImplementedByMethod: aMethod [
 ]
 
 { #category : #execution }
-ClyEvaluationScriptWithArgument >> executedBy: aClass [
+ClyEvaluationScriptWithArgument >> executeOn: aClass [
 
 	| pragma |
 	pragma := implementorMethod pragmaAt: #script:.

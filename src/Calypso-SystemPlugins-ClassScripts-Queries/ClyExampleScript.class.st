@@ -19,10 +19,10 @@ ClyExampleScript >> description [
 ]
 
 { #category : #execution }
-ClyExampleScript >> executedBy: aClass [
+ClyExampleScript >> executeOn: aClass [
 	"Also inspect the result!"
 	
-	^ (super executedBy: aClass) inspect
+	^ (super executeOn: aClass) inspect
 ]
 
 { #category : #accessing }

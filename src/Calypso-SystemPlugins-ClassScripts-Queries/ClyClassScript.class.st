@@ -81,7 +81,7 @@ ClyClassScript >> description [
 ]
 
 { #category : #execution }
-ClyClassScript >> executedBy: aClass [
+ClyClassScript >> executeOn: aClass [
 	"Execute the corresponding method of the argument."
 	
 	^ aClass instanceSide perform: implementorMethod selector
