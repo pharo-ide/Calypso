@@ -52,6 +52,19 @@ ClyActiveBreakpointsTests >> testCheckIfEmpty [
 ]
 
 { #category : #tests }
+ClyActiveBreakpointsTests >> testComparison [
+	self
+		assert: (ClyActiveBreakpoints new)
+		equals: (ClyActiveBreakpoints new).
+	
+	self
+		assert: (ClyActiveBreakpoints newIncludingHaltsForTesting)
+		equals: (ClyActiveBreakpoints newIncludingHaltsForTesting).
+		
+	self deny: (ClyActiveBreakpoints new) = (ClyActiveBreakpoints newIncludingHaltsForTesting).
+]
+
+{ #category : #tests }
 ClyActiveBreakpointsTests >> testDecoratingMethodWithBreakpoint [
 
 	| plugin method methodItem |
