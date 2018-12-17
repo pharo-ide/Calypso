@@ -5,7 +5,7 @@ Class {
 	#name : #ClyActiveBreakpoints,
 	#superclass : #ClyMethodQuery,
 	#instVars : [
-		'excludeHaltsForTesting'
+		'excludesHaltsForTesting'
 	],
 	#category : #'Calypso-SystemPlugins-Reflectivity-Queries-Breakpoints'
 }
@@ -14,7 +14,7 @@ Class {
 ClyActiveBreakpoints class >> new [
 	| cab |
 	cab := super new.
-	cab excludeHaltsForTesting: false.
+	cab excludesHaltsForTesting: false.
 	^ cab.
 ]
 
@@ -22,7 +22,7 @@ ClyActiveBreakpoints class >> new [
 ClyActiveBreakpoints class >> newExcludingHaltsForTesting [
 	| cab |
 	cab := super new.
-	cab excludeHaltsForTesting: true.
+	cab excludesHaltsForTesting: true.
 	^ cab.
 ]
 
@@ -32,13 +32,13 @@ ClyActiveBreakpoints >> description [
 ]
 
 { #category : #accessing }
-ClyActiveBreakpoints >> excludeHaltsForTesting [
-	^ excludeHaltsForTesting
+ClyActiveBreakpoints >> excludesHaltsForTesting [
+	^ excludesHaltsForTesting
 ]
 
 { #category : #accessing }
-ClyActiveBreakpoints >> excludeHaltsForTesting: anObject [
-	excludeHaltsForTesting := anObject
+ClyActiveBreakpoints >> excludesHaltsForTesting: anObject [
+	excludesHaltsForTesting := anObject
 ]
 
 { #category : #testing }
@@ -46,7 +46,7 @@ ClyActiveBreakpoints >> selectsMethod: aMethod [
 	"If the method does not contain halts or breakpoints, we do not show it"
 	(aMethod hasBreakpoint or: [ aMethod containsHalt ]) ifFalse: [ ^false ].
 	"If the method contains halts or breakpoints and we are not exclude halts for testing, we show it"
-	(self excludeHaltsForTesting) ifFalse: [ ^true. ].
+	(self excludesHaltsForTesting) ifFalse: [ ^true. ].
 	"If we are excluding methods with halts for testing, we show the method if it has not been marked as containing halts for tests"
 	^ (aMethod hasPragmaNamed: #haltOrBreakpointForTesting) not.
 ]
