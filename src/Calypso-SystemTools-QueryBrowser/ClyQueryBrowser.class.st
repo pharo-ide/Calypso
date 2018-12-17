@@ -45,17 +45,18 @@ Class {
 	#category : #'Calypso-SystemTools-QueryBrowser-UI'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #opening }
 ClyQueryBrowser class >> browseBreakpoints [
+	"Excludes methods that contain halts marked as for testing. To browse all breakpoints, see this class's browseBreakpointsIncludingHaltsForTesting method"
 	| b |
 	b := ClyQueryBrowser openOn: ClyActiveBreakpoints new.
 	b switchResultTo: (ClySortedQueryResult using: SortMethodsByPackageFunction new).
 ]
 
-{ #category : #'as yet unclassified' }
-ClyQueryBrowser class >> browseBreakpointsExcludingHaltsForTesting [
+{ #category : #opening }
+ClyQueryBrowser class >> browseBreakpointsIncludingHaltsForTesting [
 	| b |
-	b := ClyQueryBrowser openOn: ClyActiveBreakpoints newExcludingHaltsForTesting.
+	b := ClyQueryBrowser openOn: ClyActiveBreakpoints newIncludingHaltsForTesting.
 	b switchResultTo: (ClySortedQueryResult using: SortMethodsByPackageFunction new).
 ]
 

@@ -11,18 +11,10 @@ Class {
 }
 
 { #category : #'instance creation' }
-ClyActiveBreakpoints class >> new [
+ClyActiveBreakpoints class >> newIncludingHaltsForTesting [
 	| cab |
-	cab := super new.
+	cab := self new.
 	cab excludesHaltsForTesting: false.
-	^ cab.
-]
-
-{ #category : #'instance creation' }
-ClyActiveBreakpoints class >> newExcludingHaltsForTesting [
-	| cab |
-	cab := super new.
-	cab excludesHaltsForTesting: true.
 	^ cab.
 ]
 
@@ -39,6 +31,12 @@ ClyActiveBreakpoints >> excludesHaltsForTesting [
 { #category : #accessing }
 ClyActiveBreakpoints >> excludesHaltsForTesting: anObject [
 	excludesHaltsForTesting := anObject
+]
+
+{ #category : #initialization }
+ClyActiveBreakpoints >> initialize [
+	super initialize.
+	excludesHaltsForTesting := true.
 ]
 
 { #category : #testing }
