@@ -18,6 +18,15 @@ ClyActiveBreakpoints class >> newIncludingHaltsForTesting [
 	^ cab.
 ]
 
+{ #category : #comparing }
+ClyActiveBreakpoints >> = anObject [
+	"Answer whether the receiver and anObject represent the same object."
+	
+	self == anObject ifTrue: [ ^ true ].
+	super = anObject ifFalse: [ ^ false ].
+	^excludesHaltsForTesting = anObject excludesHaltsForTesting.
+]
+
 { #category : #printing }
 ClyActiveBreakpoints >> description [
 	^'active breakpoints'
@@ -31,6 +40,13 @@ ClyActiveBreakpoints >> excludesHaltsForTesting [
 { #category : #accessing }
 ClyActiveBreakpoints >> excludesHaltsForTesting: anObject [
 	excludesHaltsForTesting := anObject
+]
+
+{ #category : #comparing }
+ClyActiveBreakpoints >> hash [
+	"Answer an integer value that is related to the identity of the receiver."
+
+	^ super hash bitXor: excludesHaltsForTesting hash
 ]
 
 { #category : #initialization }
