@@ -1,11 +1,11 @@
 Class {
-	#name : #ClySortMethodFunctionTests,
+	#name : #ClySortMethodBySelectorFunctionTests,
 	#superclass : #ClySortFunctionTestCase,
 	#category : #'Calypso-SystemQueries-Tests-Queries'
 }
 
 { #category : #tests }
-ClySortMethodFunctionTests >> testAscending [
+ClySortMethodBySelectorFunctionTests >> testAscending [
 
 	function := ClySortMethodBySelectorFunction ascending.
 	
@@ -15,7 +15,7 @@ ClySortMethodFunctionTests >> testAscending [
 ]
 
 { #category : #tests }
-ClySortMethodFunctionTests >> testAscendingForBinaryAndUnarySelectors [
+ClySortMethodBySelectorFunctionTests >> testAscendingForBinaryAndUnarySelectors [
 	"binary selector is always on top when ascending and on botton when descending"
 	function := ClySortMethodBySelectorFunction ascending.
 	
@@ -29,7 +29,7 @@ ClySortMethodFunctionTests >> testAscendingForBinaryAndUnarySelectors [
 ]
 
 { #category : #tests }
-ClySortMethodFunctionTests >> testAscendingMethodsWithSameSelectorButDifferentClass [
+ClySortMethodBySelectorFunctionTests >> testAscendingMethodsWithSameSelectorButDifferentClass [
 
 	function := ClySortMethodBySelectorFunction ascending.
 	
@@ -38,7 +38,7 @@ ClySortMethodFunctionTests >> testAscendingMethodsWithSameSelectorButDifferentCl
 ]
 
 { #category : #tests }
-ClySortMethodFunctionTests >> testDescending [
+ClySortMethodBySelectorFunctionTests >> testDescending [
 
 	function := ClySortMethodBySelectorFunction descending.
 	
@@ -48,7 +48,7 @@ ClySortMethodFunctionTests >> testDescending [
 ]
 
 { #category : #tests }
-ClySortMethodFunctionTests >> testDescendingForBinaryAndUnarySelectors [
+ClySortMethodBySelectorFunctionTests >> testDescendingForBinaryAndUnarySelectors [
 	"binary selector is always on top when ascending and on botton when descending"
 	function := ClySortMethodBySelectorFunction descending.
 	
@@ -62,7 +62,7 @@ ClySortMethodFunctionTests >> testDescendingForBinaryAndUnarySelectors [
 ]
 
 { #category : #tests }
-ClySortMethodFunctionTests >> testDescendingMethodsWithSameSelectorButDifferentClass [
+ClySortMethodBySelectorFunctionTests >> testDescendingMethodsWithSameSelectorButDifferentClass [
 
 	function := ClySortMethodBySelectorFunction descending.
 	
