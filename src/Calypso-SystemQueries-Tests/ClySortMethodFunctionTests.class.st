@@ -7,7 +7,7 @@ Class {
 { #category : #tests }
 ClySortMethodFunctionTests >> testAscending [
 
-	function := ClySortMethodFunction ascending.
+	function := ClySortMethodBySelectorFunction ascending.
 	
 	self deny: (function value: Object >> #size value: Object >> #printString ).
 	self assert: (function value: Object >> #printString value: Object >> #size ).
@@ -17,7 +17,7 @@ ClySortMethodFunctionTests >> testAscending [
 { #category : #tests }
 ClySortMethodFunctionTests >> testAscendingForBinaryAndUnarySelectors [
 	"binary selector is always on top when ascending and on botton when descending"
-	function := ClySortMethodFunction ascending.
+	function := ClySortMethodBySelectorFunction ascending.
 	
 	self assert: #| > #abs. "this should not affect desired sort behaviour"
 	self assert: (function value: Integer >> #| value: Number >> #abs ).
@@ -31,7 +31,7 @@ ClySortMethodFunctionTests >> testAscendingForBinaryAndUnarySelectors [
 { #category : #tests }
 ClySortMethodFunctionTests >> testAscendingMethodsWithSameSelectorButDifferentClass [
 
-	function := ClySortMethodFunction ascending.
+	function := ClySortMethodBySelectorFunction ascending.
 	
 	self deny: (function value: Object >> #printString value: Number >> #printString ).
 	self assert: (function value: Number >> #printString value: Object >> #printString )
@@ -40,7 +40,7 @@ ClySortMethodFunctionTests >> testAscendingMethodsWithSameSelectorButDifferentCl
 { #category : #tests }
 ClySortMethodFunctionTests >> testDescending [
 
-	function := ClySortMethodFunction descending.
+	function := ClySortMethodBySelectorFunction descending.
 	
 	self assert: (function value: Object >> #size value: Object >> #printString ).
 	self deny: (function value: Object >> #printString value: Object >> #size ).
@@ -50,7 +50,7 @@ ClySortMethodFunctionTests >> testDescending [
 { #category : #tests }
 ClySortMethodFunctionTests >> testDescendingForBinaryAndUnarySelectors [
 	"binary selector is always on top when ascending and on botton when descending"
-	function := ClySortMethodFunction descending.
+	function := ClySortMethodBySelectorFunction descending.
 	
 	self assert: #| > #abs. "this should not affect desired sort behaviour"	
 	self deny: (function value: Integer >> #| value: Number >> #abs ).
@@ -64,7 +64,7 @@ ClySortMethodFunctionTests >> testDescendingForBinaryAndUnarySelectors [
 { #category : #tests }
 ClySortMethodFunctionTests >> testDescendingMethodsWithSameSelectorButDifferentClass [
 
-	function := ClySortMethodFunction descending.
+	function := ClySortMethodBySelectorFunction descending.
 	
 	self assert: (function value: Object >> #printString value: Number >> #printString ).
 	self deny: (function value: Number >> #printString value: Object >> #printString )
