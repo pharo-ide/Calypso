@@ -88,11 +88,7 @@ ClySystemEnvironment >> classNamed: aString [
 
 { #category : #'class management' }
 ClySystemEnvironment >> classNamed: aString ifAbsent: aBlockClosure [ 
-	^globals 
-		at: aString
-		ifPresent: [ :existing | 
-			existing isBehavior ifTrue: [ existing ] ifFalse: aBlockClosure] 
-		ifAbsent: aBlockClosure
+	^globals at: aString ifAbsent: aBlockClosure
 ]
 
 { #category : #accessing }
