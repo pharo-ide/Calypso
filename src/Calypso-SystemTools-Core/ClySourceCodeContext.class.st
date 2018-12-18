@@ -112,7 +112,7 @@ ClySourceCodeContext >> isVariableSelected [
 	
 	binding := node binding.
 	
-	^binding isClassVariable | binding isInstance | binding isGlobalVariable
+	^binding isClassVariable | binding isInstance | binding isGlobalVariable | binding isUndeclared
 ]
 
 { #category : #selection }
