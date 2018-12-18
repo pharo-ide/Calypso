@@ -14,21 +14,20 @@ Class {
 ClyEvaluationScriptWithArgument class >> canBeProvidedByMethod: aMethod [
 	"Parametric script can be used in any method. 
 	It is retrieved from pragma argument and method itself is not used for execution"
-	^true
+	^ true
 ]
 
 { #category : #'script detection' }
 ClyEvaluationScriptWithArgument class >> isImplementedByMethod: aMethod [
-	^aMethod hasPragmaNamed: #script:
+	^ aMethod hasPragmaNamed: #script:
 ]
 
 { #category : #execution }
-ClyEvaluationScriptWithArgument >> executeBy: aClass [
+ClyEvaluationScriptWithArgument >> executeOn: aClass [
 
 	| pragma |
 	pragma := implementorMethod pragmaAt: #script:.
-
-	^aClass compiler
+	^ aClass compiler
 		receiver: aClass instanceSide;
 		evaluate: pragma arguments first
 ]
@@ -36,5 +35,5 @@ ClyEvaluationScriptWithArgument >> executeBy: aClass [
 { #category : #testing }
 ClyEvaluationScriptWithArgument >> isImplementedByClass: aClass [
 	
-	^aClass instanceSide includesBehavior: self implementorClass instanceSide
+	^ aClass instanceSide includesBehavior: self implementorClass instanceSide
 ]
