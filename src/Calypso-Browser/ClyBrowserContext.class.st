@@ -25,7 +25,7 @@ Class {
 	#instVars : [
 		'selectedItems'
 	],
-	#category : 'Calypso-Browser-Contexts'
+	#category : #'Calypso-Browser-Contexts'
 }
 
 { #category : #'instance creation' }

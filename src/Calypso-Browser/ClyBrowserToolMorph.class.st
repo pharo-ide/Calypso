@@ -134,7 +134,7 @@ Class {
 		'isManagedByUser',
 		'statusBar'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'instance creation' }

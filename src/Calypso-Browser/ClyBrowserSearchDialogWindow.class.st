@@ -31,7 +31,7 @@ Class {
 		'browser',
 		'itemsView'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'instance creation' }

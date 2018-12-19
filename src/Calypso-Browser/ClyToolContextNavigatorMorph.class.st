@@ -13,7 +13,7 @@ I simply ask the tool:
 Class {
 	#name : #ClyToolContextNavigatorMorph,
 	#superclass : #ClyStatusBarItemMorph,
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #building }
