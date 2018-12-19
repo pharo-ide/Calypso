@@ -4,7 +4,7 @@ I am a toolbar button which executes particular command
 Class {
 	#name : #ClyBrowserButtonMorph,
 	#superclass : #ClyBrowserToolbarItemMorph,
-	#category : 'Calypso-Browser-Toolbar'
+	#category : #'Calypso-Browser-Toolbar'
 }
 
 { #category : #initialization }

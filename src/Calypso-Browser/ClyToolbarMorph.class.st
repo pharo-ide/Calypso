@@ -25,7 +25,7 @@ Class {
 	#instVars : [
 		'browser'
 	],
-	#category : 'Calypso-Browser-Toolbar'
+	#category : #'Calypso-Browser-Toolbar'
 }
 
 { #category : #'instance creation' }
