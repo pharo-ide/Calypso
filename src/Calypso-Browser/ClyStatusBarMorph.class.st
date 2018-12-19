@@ -21,7 +21,7 @@ Class {
 		'contextBar',
 		'commandBar'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #accessing }

@@ -125,7 +125,7 @@ Class {
 		'navigationEnvironment',
 		'systemScope'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'tools registration' }
