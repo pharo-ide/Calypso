@@ -42,7 +42,7 @@ Class {
 	#classVars : [
 		'DefaultQueryResult'
 	],
-	#category : 'Calypso-SystemTools-QueryBrowser-UI'
+	#category : #'Calypso-SystemTools-QueryBrowser-UI'
 }
 
 { #category : #opening }
@@ -350,11 +350,21 @@ ClyQueryBrowser >> showQueryResult [
 
 { #category : #navigation }
 ClyQueryBrowser >> showResultOf: aQuery [
-	
+	"If given query has specific result then browser will show it as requested.
+	Otherwise it will force query to build currently configured required result 
+	(when given query has no explicitly specified result which means it has only default value)"		
 	self changeStateBy: [
-		systemQuery := aQuery withResult: self requiredQueryResult.
+		systemQuery := aQuery buildsDefaultResult 
+			ifTrue: [aQuery withResult: self requiredQueryResult]
+			ifFalse: [ aQuery ].
 		self showQueryResult
 	]
+]
+
+{ #category : #testing }
+ClyQueryBrowser >> showsFlatList [
+
+	^(systemQuery retrievesItemsAs: ClyHierarchicalSystemItems) not
 ]
 
 { #category : #testing }

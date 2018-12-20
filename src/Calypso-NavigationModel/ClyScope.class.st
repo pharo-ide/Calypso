@@ -80,7 +80,7 @@ Class {
 		'basisObjects',
 		'name'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #accessing }

@@ -11,7 +11,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #singleton }

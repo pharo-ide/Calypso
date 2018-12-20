@@ -12,7 +12,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #accessing }

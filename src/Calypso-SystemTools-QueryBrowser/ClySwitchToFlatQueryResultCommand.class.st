@@ -9,6 +9,11 @@ Class {
 	#category : #'Calypso-SystemTools-QueryBrowser-Commands-Controlling'
 }
 
+{ #category : #testing }
+ClySwitchToFlatQueryResultCommand >> isAppliedToBrowser [
+	^browser showsFlatList 
+]
+
 { #category : #execution }
 ClySwitchToFlatQueryResultCommand >> requiredQueryResult [
 	^ClySortedQueryResult using: ClySortSystemItemFunction ascending

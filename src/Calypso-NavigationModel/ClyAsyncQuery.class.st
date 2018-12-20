@@ -39,7 +39,7 @@ Class {
 	#instVars : [
 		'asyncResult'
 	],
-	#category : 'Calypso-NavigationModel-Query'
+	#category : #'Calypso-NavigationModel-Query'
 }
 
 { #category : #comparing }

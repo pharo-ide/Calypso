@@ -5,5 +5,5 @@ My subclasses represent specific information about objects
 Class {
 	#name : #ClyProperty,
 	#superclass : #Object,
-	#category : 'Calypso-NavigationModel-Property'
+	#category : #'Calypso-NavigationModel-Property'
 }

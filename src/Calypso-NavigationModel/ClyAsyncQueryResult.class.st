@@ -38,7 +38,7 @@ Class {
 		'actualResult',
 		'buildProcess'
 	],
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #accessing }

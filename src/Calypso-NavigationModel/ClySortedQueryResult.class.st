@@ -22,7 +22,7 @@ Class {
 	#instVars : [
 		'sortFunction'
 	],
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #'instance creation' }

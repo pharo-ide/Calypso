@@ -12,6 +12,11 @@ Class {
 	#category : #'Calypso-SystemTools-QueryBrowser-Commands-Controlling'
 }
 
+{ #category : #testing }
+ClySwitchQueryResultCommand class >> isAbstract [ 	
+	^self = ClySwitchQueryResultCommand 
+]
+
 { #category : #activation }
 ClySwitchQueryResultCommand class >> queryBrowserToolbarActivation [
 	<classAnnotation>
@@ -27,11 +32,6 @@ ClySwitchQueryResultCommand >> defaultMenuItemName [
 { #category : #execution }
 ClySwitchQueryResultCommand >> execute [
 	browser switchResultTo: self requiredQueryResult
-]
-
-{ #category : #testing }
-ClySwitchQueryResultCommand >> isAppliedToBrowser [
-	^browser showsQueryResultAs: self requiredQueryResult
 ]
 
 { #category : #accessing }

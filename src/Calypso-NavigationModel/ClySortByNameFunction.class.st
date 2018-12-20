@@ -5,7 +5,7 @@ So I am supposed that sorted objects will respond to #name
 Class {
 	#name : #ClySortByNameFunction,
 	#superclass : #ClySortFunction,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #evaluating }

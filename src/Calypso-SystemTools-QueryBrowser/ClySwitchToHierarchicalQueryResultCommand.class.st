@@ -9,6 +9,11 @@ Class {
 	#category : #'Calypso-SystemTools-QueryBrowser-Commands-Controlling'
 }
 
+{ #category : #testing }
+ClySwitchToHierarchicalQueryResultCommand >> isAppliedToBrowser [
+	^browser showsFlatList not
+]
+
 { #category : #execution }
 ClySwitchToHierarchicalQueryResultCommand >> requiredQueryResult [
 	^ClyHierarchicalSystemItems new

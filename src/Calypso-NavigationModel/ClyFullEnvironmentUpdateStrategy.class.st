@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'changes'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #updating }

@@ -10,7 +10,7 @@ When async result retrives another basic result then my superclass is used as ad
 Class {
 	#name : #ClyAsyncBrowserQueryResultAdapter,
 	#superclass : #ClyQueryResultBrowserAdapter,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #queries }

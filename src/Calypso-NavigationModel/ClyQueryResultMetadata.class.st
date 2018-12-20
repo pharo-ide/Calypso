@@ -37,7 +37,7 @@ Class {
 	#instVars : [
 		'properties'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #accessing }
