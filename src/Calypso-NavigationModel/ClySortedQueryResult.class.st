@@ -60,11 +60,6 @@ ClySortedQueryResult >> hash [
 ]
 
 { #category : #accessing }
-ClySortedQueryResult >> shortName [
-	^'Flat'
-]
-
-{ #category : #accessing }
 ClySortedQueryResult >> sortFunction [
 	^ sortFunction
 ]

@@ -9,12 +9,17 @@ Class {
 	#category : #'Calypso-SystemTools-QueryBrowser-Commands-Controlling'
 }
 
-{ #category : #testing }
-ClySwitchToFlatQueryResultCommand >> isAppliedToBrowser [
-	^browser showsFlatList 
+{ #category : #accessing }
+ClySwitchToFlatQueryResultCommand >> defaultMenuItemName [
+	^'Flat'
 ]
 
 { #category : #execution }
-ClySwitchToFlatQueryResultCommand >> requiredQueryResult [
-	^ClySortedQueryResult using: ClySortSystemItemFunction ascending
+ClySwitchToFlatQueryResultCommand >> execute [
+	browser switchToFlatResult
+]
+
+{ #category : #testing }
+ClySwitchToFlatQueryResultCommand >> isAppliedToBrowser [
+	^browser showsFlatResult 
 ]

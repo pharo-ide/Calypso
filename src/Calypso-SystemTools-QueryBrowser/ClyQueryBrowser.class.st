@@ -37,7 +37,8 @@ Class {
 		'resultView',
 		'systemQuery',
 		'queryScopes',
-		'activeScope'
+		'activeScope',
+		'expectedFlatQueryResult'
 	],
 	#classVars : [
 		'DefaultQueryResult'
@@ -147,6 +148,16 @@ ClyQueryBrowser >> defaultNavigationScope [
 ]
 
 { #category : #accessing }
+ClyQueryBrowser >> expectedFlatQueryResult [
+	^ expectedFlatQueryResult
+]
+
+{ #category : #accessing }
+ClyQueryBrowser >> expectedFlatQueryResult: anObject [
+	expectedFlatQueryResult := anObject
+]
+
+{ #category : #accessing }
 ClyQueryBrowser >> extraScopesOfSelectedItems [
 	| classScope |
 	classScope := self classScopeOfSelectedItems.
@@ -161,7 +172,8 @@ ClyQueryBrowser >> extraScopesOfSelectedItems [
 ClyQueryBrowser >> initialize [
 	super initialize.
 	
-	queryScopes := OrderedCollection new
+	queryScopes := OrderedCollection new.
+	expectedFlatQueryResult := ClySortedQueryResult using: ClySortSystemItemFunction ascending
 ]
 
 { #category : #initialization }
@@ -337,14 +349,23 @@ ClyQueryBrowser >> selection [
 	^resultView selection
 ]
 
-{ #category : #navigation }
-ClyQueryBrowser >> showQueryResult [
+{ #category : #initialization }
+ClyQueryBrowser >> setUpActiveScope [
 	systemQuery isBoundToEnvironment ifFalse: [ 
 		systemQuery := systemQuery withScope: self systemScope].
 	(queryScopes includes: systemQuery scope) ifFalse: [ 
 		queryScopes add: systemQuery scope ].	
-	activeScope := systemQuery scope.	
+	activeScope := systemQuery scope
+]
+
+{ #category : #initialization }
+ClyQueryBrowser >> showQueryResult [	
+	self showsFlatResult ifTrue: [ 
+		"Browser keeps flat query result in variable 
+		to be able switch back to it later from hierarchy mode"	
+		expectedFlatQueryResult := systemQuery requiredResult ].
 	
+	self setUpActiveScope.
 	resultView showQuery: systemQuery semiAsync
 ]
 
@@ -362,7 +383,7 @@ ClyQueryBrowser >> showResultOf: aQuery [
 ]
 
 { #category : #testing }
-ClyQueryBrowser >> showsFlatList [
+ClyQueryBrowser >> showsFlatResult [
 
 	^(systemQuery retrievesItemsAs: ClyHierarchicalSystemItems) not
 ]
@@ -417,6 +438,18 @@ ClyQueryBrowser >> switchScopeTo: aScope [
 	self changeStateBy: [
 		systemQuery := systemQuery withScope: aScope.
 		self showQueryResult]
+]
+
+{ #category : #navigation }
+ClyQueryBrowser >> switchToFlatResult [
+
+	self switchResultTo: expectedFlatQueryResult
+]
+
+{ #category : #navigation }
+ClyQueryBrowser >> switchToHierarchicalResult [
+
+	self switchResultTo: ClyHierarchicalSystemItems new
 ]
 
 { #category : #accessing }

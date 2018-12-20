@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'systemEnvironment'
 	],
-	#category : 'Calypso-SystemQueries-Domain'
+	#category : #'Calypso-SystemQueries-Domain'
 }
 
 { #category : #'api - queries' }
