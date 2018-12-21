@@ -142,6 +142,11 @@ ClyQueryBrowser >> decorateMethodEditor: aMethodEditor [
 	systemQuery decorateResultMethodEditor: aMethodEditor
 ]
 
+{ #category : #initialization }
+ClyQueryBrowser >> defaultFlatQueryResult [
+	^ClySortedQueryResult using: ClySortSystemItemFunction ascending
+]
+
 { #category : #navigation }
 ClyQueryBrowser >> defaultNavigationScope [
 	^self activeScope
@@ -173,7 +178,7 @@ ClyQueryBrowser >> initialize [
 	super initialize.
 	
 	queryScopes := OrderedCollection new.
-	expectedFlatQueryResult := ClySortedQueryResult using: ClySortSystemItemFunction ascending
+	expectedFlatQueryResult := self defaultFlatQueryResult
 ]
 
 { #category : #initialization }
@@ -426,7 +431,6 @@ ClyQueryBrowser >> spawnQueryBrowserOn: aQuery withState: navigationState [
 ClyQueryBrowser >> switchResultTo: aQueryResult [
 
 	self changeStateBy: [
-		DefaultQueryResult := aQueryResult.
 		systemQuery := systemQuery withResult: aQueryResult.
 		self showQueryResult
 	]
@@ -442,14 +446,19 @@ ClyQueryBrowser >> switchScopeTo: aScope [
 
 { #category : #navigation }
 ClyQueryBrowser >> switchToFlatResult [
-
+	"There is only type of default flat query result.
+	If user passes query with specific flat result it should not modify default one.
+	So senders and implementors will continue use same type of flat result.
+	But when browser opens on query with special result it will use it localy to switch result mode"
+	DefaultQueryResult := self defaultFlatQueryResult.
 	self switchResultTo: expectedFlatQueryResult
 ]
 
 { #category : #navigation }
 ClyQueryBrowser >> switchToHierarchicalResult [
 
-	self switchResultTo: ClyHierarchicalSystemItems new
+	DefaultQueryResult := ClyHierarchicalSystemItems new.
+	self switchResultTo: DefaultQueryResult
 ]
 
 { #category : #accessing }
