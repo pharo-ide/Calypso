@@ -11,7 +11,7 @@ Before ""$w command"", it keeps an empty tab without closing it.
 Class {
 	#name : #ClyCloseBrowserCommand,
 	#superclass : #ClyBrowserCommand,
-	#category : 'Calypso-Browser-Commands'
+	#category : #'Calypso-Browser-Commands'
 }
 
 { #category : #activation }

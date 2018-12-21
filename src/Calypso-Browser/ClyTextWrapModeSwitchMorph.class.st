@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'wrapModeLabel'
 	],
-	#category : 'Calypso-Browser-TextEditors'
+	#category : #'Calypso-Browser-TextEditors'
 }
 
 { #category : #controlling }

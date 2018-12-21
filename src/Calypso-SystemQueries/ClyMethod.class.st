@@ -36,7 +36,7 @@ ClyMethod class >> decorateBrowserItem: aBrowserItem by: anEnvironmentPlugin [
 
 { #category : #sorting }
 ClyMethod class >> defaultSortFunctionForCalypso [
-	^ClySortMethodFunction ascending
+	^ClySortMethodBySelectorFunction ascending
 ]
 
 { #category : #sorting }

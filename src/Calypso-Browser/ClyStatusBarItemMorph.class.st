@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'ownerTool'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'instance creation' }
