@@ -24,7 +24,6 @@ ClySortMethodByPackageFunction >> collate: aMethod1 with: aMethod2 [
 	
 	comparisonResult := (aMethod1 origin name threeWayCompareTo: aMethod2 origin name).
 	(comparisonResult = 0) ifFalse: [ ^ comparisonResult ].
-	
-	comparisonResult := (aMethod1 name threeWayCompareTo: aMethod2 name).
-	(comparisonResult = 0) ifFalse: [ ^ comparisonResult ].
+
+	^aMethod1 selector threeWayCompareTo: aMethod2 selector
 ]

@@ -10,7 +10,8 @@ ClySortMethodByPackageFunctionTests >> testAscendingDifferentPackage [
 	function := ClySortMethodByPackageFunction ascending.
 	
 	self deny: (function value: Object >> #printString value: Number >> #printString ).
-	self assert: (function value: Number >> #printString value: Object >> #printString )
+	self assert: (function value: Number >> #printString value: Object >> #printString ).
+	self assert: (function value: Object >> #printOn: value: Object >> #printString )
 ]
 
 { #category : #tests }
