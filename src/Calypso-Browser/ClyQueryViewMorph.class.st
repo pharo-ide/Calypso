@@ -115,7 +115,7 @@ Class {
 		'changesWasInitiatedByUser',
 		'navigationSelector'
 	],
-	#category : 'Calypso-Browser-Table'
+	#category : #'Calypso-Browser-Table'
 }
 
 { #category : #'instance creation' }

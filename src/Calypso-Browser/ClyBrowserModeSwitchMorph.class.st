@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'radioButton'
 	],
-	#category : 'Calypso-Browser-Toolbar'
+	#category : #'Calypso-Browser-Toolbar'
 }
 
 { #category : #accessing }
