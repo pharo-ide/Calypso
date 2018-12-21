@@ -19,7 +19,7 @@ Class {
 	#instVars : [
 		'textMorph'
 	],
-	#category : 'Calypso-Browser-TextEditors'
+	#category : #'Calypso-Browser-TextEditors'
 }
 
 { #category : #'instance creation' }

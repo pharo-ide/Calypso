@@ -6,7 +6,7 @@ I am default #requiredResult of any query.
 Class {
 	#name : #ClyRawQueryResult,
 	#superclass : #ClyQueryResult,
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #building }

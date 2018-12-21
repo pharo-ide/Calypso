@@ -134,7 +134,7 @@ Class {
 		'isManagedByUser',
 		'statusBar'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'instance creation' }
@@ -261,9 +261,10 @@ ClyBrowserToolMorph >> buildStatusBar [
 ]
 
 { #category : #controlling }
-ClyBrowserToolMorph >> cleanAfterRemove. [
-	self detachFromSystem.
-	decorators do: [ :each | each toolWasRemoved ]
+ClyBrowserToolMorph >> cleanAfterRemove [
+
+ 	self detachFromSystem.		
+ 	decorators do: [ :each | each toolWasRemoved ]
 ]
 
 { #category : #accessing }
@@ -383,6 +384,14 @@ ClyBrowserToolMorph >> initialize [
 ClyBrowserToolMorph >> isBuilt [
 	containerTab ifNil: [ ^false ].
 	^containerTab morph == self
+]
+
+{ #category : #testing }
+ClyBrowserToolMorph >> isCommandAvailable: aCommand [
+	"A double dispatch mechanism to allow tools to validate commands that can be 
+	 executed on it. Subclasses can override me to perform the proper dispatch."
+	
+	^ aCommand canBeExecutedInTool: self
 ]
 
 { #category : #testing }

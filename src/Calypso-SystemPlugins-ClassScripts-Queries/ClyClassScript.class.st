@@ -1,15 +1,16 @@
 "
-I am abstract class which represent kind of script which can be extracted and executed from from class methods.
-My subclasses define what methods are represent them. They should implement class side method #isImplementedByMethod:.
+I am abstract class which represents kind of script which can be extracted and executed from class methods.
+My subclasses define what methods are representing them. They should implement class side method #isImplementedByMethod:.
+
 For example methods with pragma <sampleInstance> are represented by ClySampeInstanceScript
 
-	ClySampeInstanceScript class>>isImplementedByMethod: aMethod
-		^aMethod hasPragmaNamed: #sampleInstance
+	ClySampeInstanceScript class >> isImplementedByMethod: aMethod
+		^ aMethod hasPragmaNamed: #sampleInstance
 
 In addition I define what kind of methods are able to provide scripts in general. By default it is always class side methods without arguments:
 
-	ClyClassScript class>>canBeProvidedByMethod: aMethod
-		^aMethod origin isClassSide and: [ aMethod numArgs = 0 ]
+	ClyClassScript class >> canBeProvidedByMethod: aMethod
+		^ aMethod origin isClassSide and: [ aMethod numArgs = 0 ]
 
 If subclass define logic for instance side methods or for method arguments it should override method #canBeProvidedByMethod: in addition.
 	
@@ -45,7 +46,8 @@ Class {
 { #category : #'script detection' }
 ClyClassScript class >> canBeProvidedByMethod: aMethod [
 	"This method just checks that method in general can be used for this kind of script"
-	^aMethod origin isClassSide and: [ aMethod numArgs = 0 ]
+
+	^ aMethod origin isClassSide and: [ aMethod numArgs = 0 ]
 ]
 
 { #category : #'instance creation' }
@@ -56,41 +58,43 @@ ClyClassScript class >> createFrom: aMethod [
 
 { #category : #'script detection' }
 ClyClassScript class >> detectInMethod: aMethod ifAbsent: absentBlock [
+	
 
 	self allSubclassesDo: [ :each | 
 		((each canBeProvidedByMethod: aMethod)
 			and: [each isImplementedByMethod: aMethod]) 
-				ifTrue: [ ^each createFrom: aMethod ]].
-	
-	^absentBlock value
+				ifTrue: [ ^ each createFrom: aMethod ]].
+	^ absentBlock value
 ]
 
 { #category : #'script detection' }
 ClyClassScript class >> isImplementedByMethod: aMethod [
 	"Subclasses should override it.
 	The method is not abstract to not corrupt browser if new script is not completelly implemented"
-	^false
+	
+	^ false
 ]
 
 { #category : #accessing }
 ClyClassScript >> description [
-	^'Run the script'
+	^ 'Run the script'
 ]
 
 { #category : #execution }
-ClyClassScript >> executeBy: aClass [
-
-	^aClass instanceSide perform: implementorMethod selector
+ClyClassScript >> executeOn: aClass [
+	"Execute the corresponding method of the argument."
+	
+	^ aClass instanceSide perform: implementorMethod selector
 ]
 
 { #category : #accessing }
 ClyClassScript >> iconName [
-	^#scriptManagerIcon
+	^ #scriptManagerIcon
 ]
 
 { #category : #accessing }
 ClyClassScript >> implementorClass [
-	^implementorMethod origin 
+	^ implementorMethod origin 
 ]
 
 { #category : #accessing }
@@ -106,5 +110,5 @@ ClyClassScript >> implementorMethod: anObject [
 { #category : #testing }
 ClyClassScript >> isImplementedByClass: aClass [
 	
-	^aClass instanceSide isKindOf: self implementorClass
+	^ aClass instanceSide isKindOf: self implementorClass
 ]

@@ -21,7 +21,7 @@ Class {
 		'name',
 		'priority'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #testing }

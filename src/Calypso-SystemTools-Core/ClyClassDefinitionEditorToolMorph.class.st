@@ -7,7 +7,7 @@ And in addition I allow to create new classes by typing new class name
 Class {
 	#name : #ClyClassDefinitionEditorToolMorph,
 	#superclass : #ClyClassEditorToolMorph,
-	#category : 'Calypso-SystemTools-Core-Editors-Classes'
+	#category : #'Calypso-SystemTools-Core-Editors-Classes'
 }
 
 { #category : #operations }

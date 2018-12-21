@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'checkbox'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #initialization }

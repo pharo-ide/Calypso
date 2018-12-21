@@ -26,7 +26,7 @@ ClySUnitEnvironmentPlugin >> collectMetadataOfMethods: aQueryResult [
 	property := 	ClyTestResultProperty new.
 		
 	aQueryResult rawItemsOf: ClyMethod do: [ :method | 
-		(method isTestMethod and: [ method origin isAbstract not ]) ifTrue: [ 
+		(method isTestMethod and: [ method methodClass isAbstract not ]) ifTrue: [ 
 			property accumulateTestMethod: method]].
 	
 	property allCount > 0 ifTrue: [ aQueryResult addMetaProperty: property ]

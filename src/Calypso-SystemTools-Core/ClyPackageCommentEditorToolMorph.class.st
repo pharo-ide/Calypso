@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'editingPackage'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Packages'
+	#category : #'Calypso-SystemTools-Core-Editors-Packages'
 }
 
 { #category : #activation }

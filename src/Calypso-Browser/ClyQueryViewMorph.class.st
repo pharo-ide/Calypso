@@ -115,7 +115,7 @@ Class {
 		'changesWasInitiatedByUser',
 		'navigationSelector'
 	],
-	#category : 'Calypso-Browser-Table'
+	#category : #'Calypso-Browser-Table'
 }
 
 { #category : #'instance creation' }
@@ -522,7 +522,9 @@ ClyQueryViewMorph >> kmDispatcher [
 
 { #category : #accessing }
 ClyQueryViewMorph >> mainColumn [
-	^table columns detect: [:each | each isKindOf: ClyMainTableColumn]
+	"Answer the main column in table"
+
+	^ table columns detect: #isMainColumn
 ]
 
 { #category : #'menu building' }

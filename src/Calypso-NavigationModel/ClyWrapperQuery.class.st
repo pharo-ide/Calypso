@@ -13,7 +13,7 @@ I redefine #description to look like subquery by default.
 Class {
 	#name : #ClyWrapperQuery,
 	#superclass : #ClyCompositeQuery,
-	#category : 'Calypso-NavigationModel-Query'
+	#category : #'Calypso-NavigationModel-Query'
 }
 
 { #category : #'instance creation' }

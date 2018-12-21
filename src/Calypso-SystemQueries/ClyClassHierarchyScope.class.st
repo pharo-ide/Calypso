@@ -160,7 +160,7 @@ ClyClassHierarchyScope >> metaLevelsOf: aClass do: aBlock [
 ClyClassHierarchyScope >> methodsDo: aBlock [
 
 	self classesDo: [ :eachClass | 
-		eachClass localMethods do: aBlock ]
+		eachClass methods do: aBlock ]
 ]
 
 { #category : #converting }

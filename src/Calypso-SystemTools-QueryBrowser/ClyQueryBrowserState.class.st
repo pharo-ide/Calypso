@@ -14,7 +14,8 @@ Class {
 	#instVars : [
 		'activeScope',
 		'methodQuery',
-		'queryScopes'
+		'queryScopes',
+		'expectedFlatQueryResult'
 	],
 	#category : #'Calypso-SystemTools-QueryBrowser-UI'
 }
@@ -35,6 +36,16 @@ ClyQueryBrowserState >> createBrowser [
 ]
 
 { #category : #accessing }
+ClyQueryBrowserState >> expectedFlatQueryResult [
+	^ expectedFlatQueryResult
+]
+
+{ #category : #accessing }
+ClyQueryBrowserState >> expectedFlatQueryResult: anObject [
+	expectedFlatQueryResult := anObject
+]
+
+{ #category : #accessing }
 ClyQueryBrowserState >> queryScopes [
 	^ queryScopes
 ]
@@ -51,7 +62,8 @@ ClyQueryBrowserState >> restoreStateOf: aBrowser [
 	aBrowser  
 		systemQuery: methodQuery;
 		queryScopes: queryScopes;
-		activeScope: activeScope
+		activeScope: activeScope;
+		expectedFlatQueryResult: expectedFlatQueryResult
 ]
 
 { #category : #operations }
@@ -60,7 +72,8 @@ ClyQueryBrowserState >> retrieveStateFrom: aBrowser [
 	
 	queryScopes := aBrowser queryScopes.
 	activeScope := aBrowser activeScope.
-	methodQuery := aBrowser systemQuery
+	methodQuery := aBrowser systemQuery.
+	expectedFlatQueryResult := aBrowser expectedFlatQueryResult
 ]
 
 { #category : #accessing }

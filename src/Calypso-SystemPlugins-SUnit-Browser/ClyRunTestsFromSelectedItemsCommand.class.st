@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'testItems'
 	],
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #testing }
