@@ -23,7 +23,7 @@ Class {
 	#instVars : [
 		'actualResult'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }

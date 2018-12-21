@@ -164,7 +164,7 @@ Class {
 		'announcer',
 		'needsRebuild'
 	],
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #testing }

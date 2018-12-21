@@ -27,7 +27,7 @@ General query concatination using comma message produced my instances. Previous 
 Class {
 	#name : #ClyUnionQuery,
 	#superclass : #ClyCompositeQuery,
-	#category : 'Calypso-NavigationModel-Query'
+	#category : #'Calypso-NavigationModel-Query'
 }
 
 { #category : #'merging queries' }

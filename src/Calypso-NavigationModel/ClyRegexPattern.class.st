@@ -4,7 +4,7 @@ I represent string pattern using regex expression
 Class {
 	#name : #ClyRegexPattern,
 	#superclass : #ClyStringPattern,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #testing }

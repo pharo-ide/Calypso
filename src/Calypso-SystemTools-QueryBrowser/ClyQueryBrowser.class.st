@@ -37,12 +37,13 @@ Class {
 		'resultView',
 		'systemQuery',
 		'queryScopes',
-		'activeScope'
+		'activeScope',
+		'expectedFlatQueryResult'
 	],
 	#classVars : [
 		'DefaultQueryResult'
 	],
-	#category : 'Calypso-SystemTools-QueryBrowser-UI'
+	#category : #'Calypso-SystemTools-QueryBrowser-UI'
 }
 
 { #category : #opening }
@@ -141,9 +142,24 @@ ClyQueryBrowser >> decorateMethodEditor: aMethodEditor [
 	systemQuery decorateResultMethodEditor: aMethodEditor
 ]
 
+{ #category : #initialization }
+ClyQueryBrowser >> defaultFlatQueryResult [
+	^ClySortedQueryResult using: ClySortSystemItemFunction ascending
+]
+
 { #category : #navigation }
 ClyQueryBrowser >> defaultNavigationScope [
 	^self activeScope
+]
+
+{ #category : #accessing }
+ClyQueryBrowser >> expectedFlatQueryResult [
+	^ expectedFlatQueryResult
+]
+
+{ #category : #accessing }
+ClyQueryBrowser >> expectedFlatQueryResult: anObject [
+	expectedFlatQueryResult := anObject
 ]
 
 { #category : #accessing }
@@ -161,7 +177,8 @@ ClyQueryBrowser >> extraScopesOfSelectedItems [
 ClyQueryBrowser >> initialize [
 	super initialize.
 	
-	queryScopes := OrderedCollection new
+	queryScopes := OrderedCollection new.
+	expectedFlatQueryResult := self defaultFlatQueryResult
 ]
 
 { #category : #initialization }
@@ -337,24 +354,43 @@ ClyQueryBrowser >> selection [
 	^resultView selection
 ]
 
-{ #category : #navigation }
-ClyQueryBrowser >> showQueryResult [
+{ #category : #initialization }
+ClyQueryBrowser >> setUpActiveScope [
 	systemQuery isBoundToEnvironment ifFalse: [ 
 		systemQuery := systemQuery withScope: self systemScope].
 	(queryScopes includes: systemQuery scope) ifFalse: [ 
 		queryScopes add: systemQuery scope ].	
-	activeScope := systemQuery scope.	
+	activeScope := systemQuery scope
+]
+
+{ #category : #initialization }
+ClyQueryBrowser >> showQueryResult [	
+	self showsFlatResult ifTrue: [ 
+		"Browser keeps flat query result in variable 
+		to be able switch back to it later from hierarchy mode"	
+		expectedFlatQueryResult := systemQuery requiredResult ].
 	
+	self setUpActiveScope.
 	resultView showQuery: systemQuery semiAsync
 ]
 
 { #category : #navigation }
 ClyQueryBrowser >> showResultOf: aQuery [
-	
+	"If given query has specific result then browser will show it as requested.
+	Otherwise it will force query to build currently configured required result 
+	(when given query has no explicitly specified result which means it has only default value)"		
 	self changeStateBy: [
-		systemQuery := aQuery withResult: self requiredQueryResult.
+		systemQuery := aQuery buildsDefaultResult 
+			ifTrue: [aQuery withResult: self requiredQueryResult]
+			ifFalse: [ aQuery ].
 		self showQueryResult
 	]
+]
+
+{ #category : #testing }
+ClyQueryBrowser >> showsFlatResult [
+
+	^(systemQuery retrievesItemsAs: ClyHierarchicalSystemItems) not
 ]
 
 { #category : #testing }
@@ -395,7 +431,6 @@ ClyQueryBrowser >> spawnQueryBrowserOn: aQuery withState: navigationState [
 ClyQueryBrowser >> switchResultTo: aQueryResult [
 
 	self changeStateBy: [
-		DefaultQueryResult := aQueryResult.
 		systemQuery := systemQuery withResult: aQueryResult.
 		self showQueryResult
 	]
@@ -407,6 +442,23 @@ ClyQueryBrowser >> switchScopeTo: aScope [
 	self changeStateBy: [
 		systemQuery := systemQuery withScope: aScope.
 		self showQueryResult]
+]
+
+{ #category : #navigation }
+ClyQueryBrowser >> switchToFlatResult [
+	"There is only type of default flat query result.
+	If user passes query with specific flat result it should not modify default one.
+	So senders and implementors will continue use same type of flat result.
+	But when browser opens on query with special result it will use it localy to switch result mode"
+	DefaultQueryResult := self defaultFlatQueryResult.
+	self switchResultTo: expectedFlatQueryResult
+]
+
+{ #category : #navigation }
+ClyQueryBrowser >> switchToHierarchicalResult [
+
+	DefaultQueryResult := ClyHierarchicalSystemItems new.
+	self switchResultTo: DefaultQueryResult
 ]
 
 { #category : #accessing }

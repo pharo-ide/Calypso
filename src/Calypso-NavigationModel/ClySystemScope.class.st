@@ -13,7 +13,7 @@ And to access the system I provide simple message #system which just returns sin
 Class {
 	#name : #ClySystemScope,
 	#superclass : #ClyTypedScope,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #private }
