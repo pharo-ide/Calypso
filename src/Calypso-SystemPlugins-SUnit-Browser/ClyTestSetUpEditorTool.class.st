@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'testClass'
 	],
-	#category : 'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser'
 }
 
 { #category : #activation }
