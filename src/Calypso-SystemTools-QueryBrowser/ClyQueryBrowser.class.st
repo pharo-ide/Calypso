@@ -42,7 +42,7 @@ Class {
 	#classVars : [
 		'DefaultQueryResult'
 	],
-	#category : 'Calypso-SystemTools-QueryBrowser-UI'
+	#category : #'Calypso-SystemTools-QueryBrowser-UI'
 }
 
 { #category : #opening }

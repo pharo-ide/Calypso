@@ -440,7 +440,7 @@ ClyFullBrowser >> methodGroupSelectionChanged [
 	methodQueries := self methodGroupSelection actualObjects 
 		collect: [ :eachGroup | eachGroup methodQuery].
 	methodView 
-		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascending)
+		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodBySelectorFunction ascending)
 ]
 
 { #category : #'accessing view' }
