@@ -72,7 +72,7 @@ Class {
 	#classInstVars : [
 		'isAutoActivated'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #initialization }

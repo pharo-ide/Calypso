@@ -22,7 +22,7 @@ Class {
 	#instVars : [
 		'subtreeSize'
 	],
-	#category : 'Calypso-NavigationModel-Property'
+	#category : #'Calypso-NavigationModel-Property'
 }
 
 { #category : #'instance creation' }

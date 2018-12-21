@@ -32,7 +32,7 @@ Look at class side for more options
 Class {
 	#name : #ClyTypedQuery,
 	#superclass : #ClyQuery,
-	#category : 'Calypso-NavigationModel-Query'
+	#category : #'Calypso-NavigationModel-Query'
 }
 
 { #category : #'instance creation' }

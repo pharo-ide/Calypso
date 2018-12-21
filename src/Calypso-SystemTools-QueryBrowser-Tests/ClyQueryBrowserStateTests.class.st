@@ -37,6 +37,15 @@ ClyQueryBrowserStateTests >> testRestoredBrowserInstanceWithActiveScope [
 ]
 
 { #category : #tests }
+ClyQueryBrowserStateTests >> testRestoredBrowserInstanceWithExpectedFlatQueryResult [
+
+	self restoreBrowserInstance.
+	
+	self assert: navigationState expectedFlatQueryResult notNil.
+	self assert: browser expectedFlatQueryResult equals: navigationState expectedFlatQueryResult
+]
+
+{ #category : #tests }
 ClyQueryBrowserStateTests >> testRestoredBrowserInstanceWithMethodQuery [
 
 	| query |
@@ -64,6 +73,14 @@ ClyQueryBrowserStateTests >> testRetrievesActiveScope [
 	self snapshotState.
 	
 	self assert: navigationState activeScope equals: browser activeScope
+]
+
+{ #category : #tests }
+ClyQueryBrowserStateTests >> testRetrievesExpectedFlatQueryResult [
+
+	self snapshotState.
+	
+	self assert: navigationState expectedFlatQueryResult equals: browser expectedFlatQueryResult
 ]
 
 { #category : #tests }

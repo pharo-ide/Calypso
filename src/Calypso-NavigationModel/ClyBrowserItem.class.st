@@ -119,7 +119,7 @@ Class {
 		'type',
 		'isPrepared'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }
