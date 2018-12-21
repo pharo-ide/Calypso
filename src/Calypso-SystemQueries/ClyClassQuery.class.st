@@ -38,7 +38,7 @@ ClyClassQuery class >> resultItemsType [
 { #category : #execution }
 ClyClassQuery >> buildResult: aQueryResult [
 	| filteredClasses |
-	filteredClasses := Set new.
+	filteredClasses := OrderedCollection new.
 	
 	scope classesDo: [ :each | 
 		(self selectsClass: each) ifTrue: [filteredClasses add: each]].

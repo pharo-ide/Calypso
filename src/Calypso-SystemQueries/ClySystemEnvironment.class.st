@@ -88,12 +88,11 @@ ClySystemEnvironment >> classNamed: aString [
 
 { #category : #'class management' }
 ClySystemEnvironment >> classNamed: aString ifAbsent: aBlockClosure [ 
-	^globals at: aString ifAbsent: aBlockClosure
-]
-
-{ #category : #'class management' }
-ClySystemEnvironment >> classNamed: aString ifPresent: aBlockClosure ifAbsent: anotherBlockClosure [
-	^ globals at: aString ifPresent: aBlockClosure ifAbsent: anotherBlockClosure
+	^globals 
+		at: aString
+		ifPresent: [ :existing | 
+			existing isBehavior ifTrue: [ existing ] ifFalse: aBlockClosure] 
+		ifAbsent: aBlockClosure
 ]
 
 { #category : #accessing }
@@ -159,11 +158,6 @@ ClySystemEnvironment >> createPackageNamed: packageName [
 { #category : #'class compilation' }
 ClySystemEnvironment >> defaultClassCompiler [
 	^self class compiler
-]
-
-{ #category : #'package management' }
-ClySystemEnvironment >> ensureExistAndRegisterPackageNamed: packageName [
-	^packageOrganizer ensureExistAndRegisterPackageNamed: packageName
 ]
 
 { #category : #accessing }
