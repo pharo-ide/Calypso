@@ -2,13 +2,13 @@
 I sort methods in the way that binary methods will be first in the ascending list.
 "
 Class {
-	#name : #ClySortMethodFunction,
+	#name : #ClySortMethodBySelectorFunction,
 	#superclass : #ClySortFunction,
 	#category : #'Calypso-SystemQueries-Queries'
 }
 
 { #category : #evaluating }
-ClySortMethodFunction >> collate: aMethod1 with: aMethod2 [
+ClySortMethodBySelectorFunction >> collate: aMethod1 with: aMethod2 [
 
 	(aMethod1 selector isBinary and: [aMethod2 selector isBinary not]) ifTrue: [ ^-1 ].
 	(aMethod1 selector isBinary not and: [aMethod2 selector isBinary]) ifTrue: [ ^1 ].
