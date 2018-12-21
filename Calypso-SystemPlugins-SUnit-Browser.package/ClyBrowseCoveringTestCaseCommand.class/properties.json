@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "PeterUhnak 4/6/2018 19:27",
+	"commentStamp" : "",
 	"super" : "ClyBrowserCommand",
 	"category" : "Calypso-SystemPlugins-SUnit-Browser",
 	"classinstvars" : [ ],
