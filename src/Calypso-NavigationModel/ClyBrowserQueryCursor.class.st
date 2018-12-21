@@ -74,7 +74,7 @@ Class {
 		'itemObserver',
 		'itemCount'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }

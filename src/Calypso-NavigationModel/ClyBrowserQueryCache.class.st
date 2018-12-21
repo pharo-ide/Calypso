@@ -40,7 +40,7 @@ Class {
 		'items',
 		'sizeLimit'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }

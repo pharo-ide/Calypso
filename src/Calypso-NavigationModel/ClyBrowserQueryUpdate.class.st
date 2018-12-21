@@ -21,7 +21,7 @@ Class {
 		'itemCache',
 		'totalItemCount'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }

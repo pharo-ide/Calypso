@@ -21,7 +21,7 @@ Class {
 	#instVars : [
 		'resultItems'
 	],
-	#category : 'Calypso-NavigationModel-Query'
+	#category : #'Calypso-NavigationModel-Query'
 }
 
 { #category : #'items type' }
