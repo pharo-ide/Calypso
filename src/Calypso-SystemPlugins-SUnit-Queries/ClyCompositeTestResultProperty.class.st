@@ -23,7 +23,7 @@ Class {
 ClyCompositeTestResultProperty >> accumulateTestMethod: aMethod [
 	| testSelector result inheritingScope |	
 	testSelector := aMethod selector.
-	inheritingScope := (ClyClassScope of: aMethod origin) withInheritingScope.
+	inheritingScope := (ClyClassScope of: aMethod methodClass) withInheritingScope.
 	inheritingScope classesDo: [ :concreteTestCase | 
 		(concreteTestCase isTestCase and: [concreteTestCase isAbstract not]) ifTrue: [
 			self accumulateTest: testSelector of: concreteTestCase.

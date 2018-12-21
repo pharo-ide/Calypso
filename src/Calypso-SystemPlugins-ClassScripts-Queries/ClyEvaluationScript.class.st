@@ -9,5 +9,5 @@ Class {
 
 { #category : #'script detection' }
 ClyEvaluationScript class >> isImplementedByMethod: aMethod [
-	^aMethod hasPragmaNamed: #script
+	^ aMethod hasPragmaNamed: #script
 ]
