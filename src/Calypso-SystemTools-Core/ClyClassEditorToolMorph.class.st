@@ -15,7 +15,7 @@ Class {
 	#instVars : [
 		'editingClass'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Classes'
+	#category : #'Calypso-SystemTools-Core-Editors-Classes'
 }
 
 { #category : #activation }

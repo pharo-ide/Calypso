@@ -16,7 +16,7 @@ Class {
 		'package',
 		'classTag'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Classes'
+	#category : #'Calypso-SystemTools-Core-Editors-Classes'
 }
 
 { #category : #testing }

@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'textMorph'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #operations }
