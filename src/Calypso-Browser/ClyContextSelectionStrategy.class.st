@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'targetItemType'
 	],
-	#category : 'Calypso-Browser-Contexts'
+	#category : #'Calypso-Browser-Contexts'
 }
 
 { #category : #'instance creation' }

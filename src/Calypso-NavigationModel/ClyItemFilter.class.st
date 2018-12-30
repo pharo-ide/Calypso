@@ -10,7 +10,7 @@ So as part of query I am participate in the environment query cache. And therefo
 Class {
 	#name : #ClyItemFilter,
 	#superclass : #Object,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #testing }

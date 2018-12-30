@@ -9,10 +9,11 @@ Class {
 
 { #category : #'script detection' }
 ClyClassInitializationScript class >> isImplementedByMethod: aMethod [
-	^aMethod selector == #initialize
+
+	^ aMethod selector == #initialize
 ]
 
 { #category : #accessing }
 ClyClassInitializationScript >> description [
-	^'(Re)initialize class'
+	^ '(Re)initialize class'
 ]

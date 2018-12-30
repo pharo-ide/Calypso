@@ -18,7 +18,7 @@ Class {
 	#instVars : [
 		'asyncModeIsActive'
 	],
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #building }

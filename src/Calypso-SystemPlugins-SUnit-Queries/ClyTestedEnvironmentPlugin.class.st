@@ -69,7 +69,7 @@ ClyTestedEnvironmentPlugin >> findTestCaseCovering: aClass ifAbsent: absentBlock
 ClyTestedEnvironmentPlugin >> findTestMethodCovering: aMethod ifAbsent: aBlock [
 	| selectorString testCase |
 	aMethod isTestMethod ifTrue: [ ^ aBlock value ].
-	testCase := self findTestCaseCovering: aMethod origin ifAbsent: [^aBlock value].
+	testCase := self findTestCaseCovering: aMethod methodClass ifAbsent: [^aBlock value].
 	
 	selectorString := 'test', (self normalizeSelectorForComparison: aMethod selector).
 	

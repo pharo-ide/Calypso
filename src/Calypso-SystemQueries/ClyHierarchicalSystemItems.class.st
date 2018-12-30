@@ -17,11 +17,6 @@ Class {
 	#category : #'Calypso-SystemQueries-Results'
 }
 
-{ #category : #accessing }
-ClyHierarchicalSystemItems class >> shortName [
-	^'Hier.'
-]
-
 { #category : #building }
 ClyHierarchicalSystemItems >> buildItemsPerClassFrom: systemObjects [
 	| itemsPerClass item localItems |
@@ -54,9 +49,4 @@ ClyHierarchicalSystemItems >> fillWith: objects [
 		localItems := itemsPerClass at: eachClass.
 		localItems do: [:each | each depth: depth].
 		items addAll: localItems].
-]
-
-{ #category : #printing }
-ClyHierarchicalSystemItems >> shortName [
-	^'Hier.'
 ]

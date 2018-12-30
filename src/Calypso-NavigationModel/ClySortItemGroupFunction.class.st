@@ -6,7 +6,7 @@ I sort them first by priority and after by name
 Class {
 	#name : #ClySortItemGroupFunction,
 	#superclass : #ClySortFunction,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #evaluating }

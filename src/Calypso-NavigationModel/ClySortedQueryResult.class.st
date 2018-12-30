@@ -22,7 +22,7 @@ Class {
 	#instVars : [
 		'sortFunction'
 	],
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #'instance creation' }
@@ -57,11 +57,6 @@ ClySortedQueryResult >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
 
 	^super hash bitXor: sortFunction hash
-]
-
-{ #category : #accessing }
-ClySortedQueryResult >> shortName [
-	^'Flat'
 ]
 
 { #category : #accessing }

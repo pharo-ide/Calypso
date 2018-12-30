@@ -115,6 +115,12 @@ ClyMethodTagsAndPackageEditorMorph >> openEditor [
 	]
 ]
 
+{ #category : #accessing }
+ClyMethodTagsAndPackageEditorMorph >> ownerTool: anObject [
+
+	super ownerTool: anObject
+]
+
 { #category : #printing }
 ClyMethodTagsAndPackageEditorMorph >> printMethodTags [
 

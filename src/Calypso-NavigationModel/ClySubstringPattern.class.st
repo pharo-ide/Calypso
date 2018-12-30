@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'isCaseSensitive'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }

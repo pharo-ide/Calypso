@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'queryResult'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }

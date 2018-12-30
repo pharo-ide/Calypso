@@ -5,14 +5,14 @@ I install breakpoint to the start of method which opens debugger during followin
 Class {
 	#name : #ClyDebugTestCommand,
 	#superclass : #ClyRunTestsFromMethodsCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #activation }
 ClyDebugTestCommand class >> fullBrowserShortcutActivation [
 	<classAnnotation>
 	
-	^CmdShortcutActivation by: $d shift meta for: self contextClass
+	^CmdShortcutActivation by: $d meta for: self contextClass
 ]
 
 { #category : #activation }
@@ -36,7 +36,6 @@ ClyDebugTestCommand >> runTest: testSelector of: testClass [
 	| breakpoint |
 	breakpoint := Breakpoint new
 		node: (testClass lookupSelector: testSelector) ast;
-		once;
 		install.
 	[super runTest: testSelector of: testClass] ensure: [ breakpoint remove ]
 ]

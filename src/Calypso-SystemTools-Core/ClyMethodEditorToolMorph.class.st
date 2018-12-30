@@ -127,6 +127,12 @@ ClyMethodEditorToolMorph >> initialize [
 	methodTags := #()
 ]
 
+{ #category : #testing }
+ClyMethodEditorToolMorph >> isCommandAvailable: aCommand [ 
+
+	^ aCommand canBeExecutedInMethodEditor: self
+]
+
 { #category : #'rubric interaction model' }
 ClyMethodEditorToolMorph >> isForScripting [
 	^false

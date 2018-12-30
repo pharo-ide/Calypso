@@ -25,7 +25,7 @@ Also I implement rawItems methods by returning actual unwrapped objects
 Class {
 	#name : #ClyBrowserQueryResult,
 	#superclass : #ClyQueryResult,
-	#category : 'Calypso-NavigationModel-Result'
+	#category : #'Calypso-NavigationModel-Result'
 }
 
 { #category : #accessing }

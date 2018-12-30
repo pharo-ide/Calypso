@@ -110,7 +110,7 @@ Class {
 	#classVars : [
 		'ShouldBeProtectedByWriteBarrier'
 	],
-	#category : 'Calypso-NavigationModel-Query'
+	#category : #'Calypso-NavigationModel-Query'
 }
 
 { #category : #'instance creation' }
@@ -184,6 +184,12 @@ ClyQuery >> bindTo: aScope in: aNavigationEnvironment [
 { #category : #execution }
 ClyQuery >> buildResult: aQueryResult [
 	self subclassResponsibility 
+]
+
+{ #category : #testing }
+ClyQuery >> buildsDefaultResult [
+
+	^self retrievesItemsAs: self defaultResult class
 ]
 
 { #category : #execution }
