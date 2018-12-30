@@ -12,7 +12,7 @@ here subclasses can publish all collected changes at once when their logic is to
 Class {
 	#name : #ClyEnvironmentUpdateStrategy,
 	#superclass : #Object,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #updating }

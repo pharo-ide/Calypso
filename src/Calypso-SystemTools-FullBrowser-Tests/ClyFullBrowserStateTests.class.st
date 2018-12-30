@@ -20,23 +20,18 @@ ClyFullBrowserStateTests >> setUp [
 ]
 
 { #category : #tests }
-ClyFullBrowserStateTests >> testRestoredBrowserInstanceWithMetaLevelScope [
+ClyFullBrowserStateTests >> testRestoredBrowserInstanceWithClassBrowserMode [
 	
-	browser metaLevelScope: #testScope.
-	
-	self restoreBrowserInstance.
-	
-	self assert: browser metaLevelScope equals: #testScope
-]
-
-{ #category : #tests }
-ClyFullBrowserStateTests >> testRestoredBrowserInstanceWithMethodGroupQuery [
-	
-	browser methodGroupQuery: #testQuery.
+	| mode |
+	mode := ClyClassBrowserMode new.
+	mode metaLevelScope: #testScope.
+	browser classBrowserMode: mode.
 	
 	self restoreBrowserInstance.
 	
-	self assert: browser methodGroupQuery equals: #testQuery
+	self deny: browser classBrowserMode == mode.
+	self assert: browser classBrowserMode equals: mode.
+	self assert: browser classBrowserMode browser equals: browser
 ]
 
 { #category : #tests }
@@ -50,19 +45,13 @@ ClyFullBrowserStateTests >> testRestoredBrowserInstanceWithSystemScope [
 ]
 
 { #category : #tests }
-ClyFullBrowserStateTests >> testRetrievesMetaLevelScope [
+ClyFullBrowserStateTests >> testRetrievesClassBrowserMode [
 
 	self snapshotState.
 	
-	self assert: navigationState metaLevelScope equals: browser metaLevelScope
-]
-
-{ #category : #tests }
-ClyFullBrowserStateTests >> testRetrievesMethodGroupContent [
-
-	self snapshotState.
-	
-	self assert: navigationState methodGroupQuery equals: browser methodGroupQuery
+	self deny: navigationState classBrowserMode == browser classBrowserMode.
+	self assert: navigationState classBrowserMode equals: browser classBrowserMode.
+	self assert: navigationState classBrowserMode browser isNil
 ]
 
 { #category : #tests }

@@ -67,7 +67,7 @@ Also I implement my superclass abstract methods like:
 Class {
 	#name : #ClyTypedScope,
 	#superclass : #ClyScope,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }
@@ -185,8 +185,7 @@ ClyTypedScope >> withExtraBasisObjects: extraBasisObjects [
 ClyTypedScope >> withNewBasisObjects: newBasisObjects [
 
 	^self copy 
-		basisObjects: newBasisObjects;
-		bindTo: environment
+		basisObjects: newBasisObjects
 ]
 
 { #category : #converting }

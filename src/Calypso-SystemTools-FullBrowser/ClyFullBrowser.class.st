@@ -33,8 +33,7 @@ Class {
 		'classView',
 		'methodGroupView',
 		'methodView',
-		'metaLevelScope',
-		'methodGroupQuery'
+		'classBrowserMode'
 	],
 	#classVars : [
 		'DefaultPackageFilter'
@@ -159,40 +158,6 @@ ClyFullBrowser class >> worldMenuOn: aBuilder [
 		action: [ target open ]
 ]
 
-{ #category : #'selection changes' }
-ClyFullBrowser >> adoptForExtendedClass [
-	| extendingPackages extraGroups |
-	self classSelection isEmpty ifTrue: [ ^self ].
-	methodGroupQuery := methodGroupQuery withoutItemsOfType: RPackage. "To remove previous package injection"
-	(self classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
-	
-	self adoptMetaLevelForSelectedClass. "it will also ensures method groups mode"
-	
-	extendingPackages := self packageSelection actualObjects.
-	extraGroups := ClyConstantQuery 
-				returning: extendingPackages as: ClyGroupedExtendingPackages new.
-	extraGroups := methodGroupQuery scope adoptQuery: extraGroups.
-	methodGroupQuery := methodGroupQuery , extraGroups
-]
-
-{ #category : #'selection changes' }
-ClyFullBrowser >> adoptMetaLevelForSelectedClass [
-	| selectedClass extendedMetaLevel |
-	self classSelection isEmpty ifTrue: [ ^self ].
-	selectedClass := self classSelection lastSelectedItem.
-	(selectedClass isMarkedWith: ClyExtendedClassTag) ifFalse: [ ^self ].
-	
-	"First we should always switch to method groups because
-	only in that mode we can show properly extension methods "
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: self classScopeForMethods.
-	extendedMetaLevel := selectedClass systemDefinition definingMetaLevelScope.
-	extendedMetaLevel = metaLevelScope ifTrue: [ ^self].
-	
-	"We should switch to the meta level of extended class"
-	metaLevelScope := extendedMetaLevel.
-	methodGroupQuery := methodGroupQuery withMetaLevelScope: metaLevelScope
-]
-
 { #category : #navigation }
 ClyFullBrowser >> allNavigationScopes [
 	
@@ -221,7 +186,7 @@ ClyFullBrowser >> buildTitleFromSelections [
 		ifFalse: [ self methodSelection lastSelectedItem].
 
 	newTitle := mainItem systemDefinition printDefiningClass.
-	mainItem systemDefinition isInstanceSide & (metaLevelScope = ClyClassSideScope)
+	mainItem systemDefinition isInstanceSide & classBrowserMode isClassSideMetaLevel
 		ifTrue: [ newTitle := newTitle , ' class' ].
 	self methodSelection isEmpty ifFalse: [ 
 		newTitle := newTitle , '>>' , self methodSelection lastSelectedItem name ].
@@ -229,11 +194,13 @@ ClyFullBrowser >> buildTitleFromSelections [
 ]
 
 { #category : #navigation }
-ClyFullBrowser >> changeMethodGroupQueryBy: aBlock [
+ClyFullBrowser >> changeClassBrowserModeBy: aBlock [
 	
-	self changeStateBy: [
-		methodGroupQuery := aBlock value.
-		methodGroupView showQuery: methodGroupQuery.
+	self changeStateBy: [ | newMode |
+		newMode := aBlock value.
+		classBrowserMode == newMode ifTrue: [ ^self ].
+		classBrowserMode := newMode.
+		methodGroupView showQuery: classBrowserMode methodGroupQuery.
 		methodGroupView initiateUIChangeBy: [
 			"view should know that any change here was not requested by user"
 			self methodGroupSelectionChanged] 
@@ -255,7 +222,7 @@ ClyFullBrowser >> chooseClassForEditorOfMethod: aMethod [
 ClyFullBrowser >> chooseClassesForNewMethod [
 
 	^self classSelection actualObjects collect: [ :each | 
-		metaLevelScope metaLevelOf: each]
+		classBrowserMode currentSideOfClass: each]
 ]
 
 { #category : #accessing }
@@ -270,16 +237,18 @@ ClyFullBrowser >> chooseClassesForNewMethod: aMethod [
 ]
 
 { #category : #accessing }
-ClyFullBrowser >> classGroupSelection [
-	^packageView selection asSelectedItemsOf: ClyClassGroup 
+ClyFullBrowser >> classBrowserMode [
+	^ classBrowserMode
 ]
 
 { #category : #accessing }
-ClyFullBrowser >> classScopeForMethods [
-	| currentClassScope |
-	currentClassScope := methodGroupQuery scope asScope: metaLevelScope.
-	
-	^self extendClassScopeForMethods: currentClassScope
+ClyFullBrowser >> classBrowserMode: anObject [
+	classBrowserMode := anObject
+]
+
+{ #category : #accessing }
+ClyFullBrowser >> classGroupSelection [
+	^packageView selection asSelectedItemsOf: ClyClassGroup 
 ]
 
 { #category : #accessing }
@@ -294,9 +263,8 @@ ClyFullBrowser >> classSelectionChanged [
 		self showsFlatClasses ifFalse: [ 
 			self silentlySelectPackageOfSelectedClass].
 		 
-		self changeMethodGroupQueryBy: [ 
-			self adoptForExtendedClass.
-			methodGroupQuery restrictedByScope: self defaultClassScopeForMethods].
+		self changeClassBrowserModeBy: [ 
+			classBrowserMode switchToNewClassSelection].
 		
 		self selectCurrentExtensionMethodGroup
 	]
@@ -321,23 +289,13 @@ ClyFullBrowser >> createCommandContext [
 
 { #category : #context }
 ClyFullBrowser >> currentMetaLevelOf: aClass [
-	^metaLevelScope metaLevelOf: aClass
+	^classBrowserMode currentSideOfClass: aClass
 ]
 
 { #category : #'tools support' }
 ClyFullBrowser >> decorateMethodEditor: aMethodEditor [
 
 	methodView query decorateResultMethodEditor: aMethodEditor
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> defaultClassScopeForMethods [
-
-	| selectedClassScope |
-	selectedClassScope := self classSelection asItemsScope: metaLevelScope.
-	
-	^self extendClassScopeForMethods: selectedClassScope
-	
 ]
 
 { #category : #navigation }
@@ -354,22 +312,11 @@ ClyFullBrowser >> defaultPackageFilter [
 		DefaultPackageFilter := ClyTableFilterFactory of: ClyItemNameFilter using: ClyRegexPattern new]
 ]
 
-{ #category : #accessing }
-ClyFullBrowser >> extendClassScopeForMethods: aClassScope [
-	| resultScope |
-	resultScope := aClassScope.
-	
-	ClyMethodVisibilityLevel allSubclassesDo: [ :each | 
-		(each isDefault and: (each canBeAppliedForClasses: self classSelection items))
-			ifTrue: [resultScope := each extendClassScope: resultScope ]].
-	
-	^resultScope
-]
-
 { #category : #initialization }
 ClyFullBrowser >> initialize [
 	super initialize.
-	metaLevelScope := ClyInstanceSideScope
+	
+	
 ]
 
 { #category : #initialization }
@@ -411,9 +358,21 @@ ClyFullBrowser >> isClassSelected: aClass [
 ]
 
 { #category : #testing }
-ClyFullBrowser >> isInProjectView [
-	
-	^ self packageView showsItemsFromQuery: (systemScope projectQueryFor: self systemScope) class
+ClyFullBrowser >> isExtendedClassSelected [
+	self classSelection isEmpty ifTrue: [ ^false ].
+	^self classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag
+]
+
+{ #category : #testing }
+ClyFullBrowser >> isMethodVisibilityIncreased [
+
+	^classBrowserMode isMethodVisibilityIncreased
+]
+
+{ #category : #testing }
+ClyFullBrowser >> isOverriddenInheritedMethodsVisible [
+
+	^classBrowserMode isOverriddenInheritedMethodsVisible
 ]
 
 { #category : #testing }
@@ -438,22 +397,8 @@ ClyFullBrowser >> isScopedModeEnabled [
 
 { #category : #accessing }
 ClyFullBrowser >> metaLevelScope [
-	^metaLevelScope 
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> metaLevelScope: aMetaLevelScopeClass [
-	metaLevelScope := aMetaLevelScopeClass 
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> methodGroupQuery [
-	^methodGroupQuery
-]
-
-{ #category : #accessing }
-ClyFullBrowser >> methodGroupQuery: aQuery [
-	methodGroupQuery := aQuery
+	
+	^classBrowserMode metaLevelScope 
 ]
 
 { #category : #accessing }
@@ -473,7 +418,7 @@ ClyFullBrowser >> methodGroupSelectionChanged [
 	methodQueries := self methodGroupSelection actualObjects 
 		collect: [ :eachGroup | eachGroup methodQuery].
 	methodView 
-		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodFunction ascending)
+		showQueries: methodQueries as: (ClySortedQueryResult using: ClySortMethodBySelectorFunction ascending)
 ]
 
 { #category : #accessing }
@@ -558,9 +503,8 @@ ClyFullBrowser >> prepareDefaultState [
 
 { #category : #initialization }
 ClyFullBrowser >> prepareInitialState [
-
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: (metaLevelScope emptyIn: navigationEnvironment).
 	
+	classBrowserMode := ClyClassBrowserMethodGroupsMode of: self.
 	self switchToPackages
 ]
 
@@ -578,13 +522,6 @@ ClyFullBrowser >> projectClass [
 { #category : #accessing }
 ClyFullBrowser >> projectSelection [
 	^packageView selection asSelectedParentsOf: self projectClass
-]
-
-{ #category : #navigation }
-ClyFullBrowser >> restrictMethodVisibilityBy: aClassScope [
-
-	self changeMethodGroupQueryBy: [
-		methodGroupQuery restrictedByScope: aClassScope]
 ]
 
 { #category : #navigation }
@@ -621,11 +558,7 @@ ClyFullBrowser >> selectClass: aClass atMethodTag: tagName [
 { #category : #navigation }
 ClyFullBrowser >> selectCurrentExtensionMethodGroup [
 	
-	self classSelection isEmpty ifTrue: [ ^self ].
-	self classSelection isMultipleSelected ifTrue: [ ^self ].
-	
-	(self classSelection lastSelectedItem isMarkedWith: ClyExtendedClassTag) 
-		ifFalse: [ ^self].
+	self isExtendedClassSelected ifFalse: [ ^self ].
 		
 	self selectMethodGroupNamed: self packageSelection lastSelectedItem name
 ]
@@ -701,7 +634,7 @@ ClyFullBrowser >> setWindowTitle: aString in: aWindow [
 	super setWindowTitle: aString in: aWindow.
 	
 	aWindow basicLabel ifNotNil: [:label |
-		emphasis := metaLevelScope = ClyInstanceSideScope 
+		emphasis := classBrowserMode isInstanceSideMetaLevel
 			ifTrue: [ TextEmphasis normal ] ifFalse: [ TextEmphasis bold ].
 		label emphasis: emphasis emphasisCode]
 ]
@@ -709,10 +642,7 @@ ClyFullBrowser >> setWindowTitle: aString in: aWindow [
 { #category : #navigation }
 ClyFullBrowser >> showAllMethods [
 		
-	| methodQuery |
-	
-	methodQuery := ClyAllMethods sortedFrom: self classScopeForMethods.	
-	methodView showQuery: methodQuery
+	methodView showQuery: classBrowserMode allMethodQuery
 ]
 
 { #category : #testing }
@@ -724,6 +654,12 @@ ClyFullBrowser >> showsFlatClasses [
 { #category : #testing }
 ClyFullBrowser >> showsFullClassHierarchy [
 	^classView showsItemsFromScope: ClySuperclassScope
+]
+
+{ #category : #testing }
+ClyFullBrowser >> showsProjects [
+	
+	^ self packageView showsItemsFromQuery: (systemScope projectQueryFor: self systemScope) class
 ]
 
 { #category : #navigation }
@@ -787,6 +723,20 @@ ClyFullBrowser >> switchClassViewTo: aQueryResult inScope: aScope [
 ]
 
 { #category : #navigation }
+ClyFullBrowser >> switchMethodVisibilityTo: aClassScope [
+
+	self changeClassBrowserModeBy: [
+		classBrowserMode switchMethodVisibilityTo: aClassScope]
+]
+
+{ #category : #navigation }
+ClyFullBrowser >> switchOverriddenMethodVisibility [
+
+	self changeClassBrowserModeBy: [
+		classBrowserMode switchOverriddenMethodVisibility]
+]
+
+{ #category : #navigation }
 ClyFullBrowser >> switchToFlatClasses [
 	
 	| classQueries |
@@ -821,19 +771,17 @@ ClyFullBrowser >> switchToFullClassHierarchyOf: aClass [
 
 { #category : #navigation }
 ClyFullBrowser >> switchToMetaLevelScope: aMetaLevelScopeClass [
-	metaLevelScope = aMetaLevelScopeClass ifTrue: [ ^self ].
 	
-	self changeMethodGroupQueryBy: [
-		metaLevelScope := aMetaLevelScopeClass.				
-		methodGroupQuery withMetaLevelScope: metaLevelScope
+	self changeClassBrowserModeBy: [
+		classBrowserMode switchToMetaLevelScope: aMetaLevelScopeClass
 	]
 ]
 
 { #category : #navigation }
 ClyFullBrowser >> switchToMethodGroups [
 	
-	self changeMethodGroupQueryBy: [ 
-		ClyAllMethodGroups sortedFrom: self classScopeForMethods
+	self changeClassBrowserModeBy: [ 
+		classBrowserMode switchToMethodGroups
 	]
 ]
 
@@ -864,13 +812,9 @@ ClyFullBrowser >> switchToProjects [
 
 { #category : #navigation }
 ClyFullBrowser >> switchToVariables [
-	| classScope |
 	
-	self changeMethodGroupQueryBy: [
-		classScope := self classScopeForMethods.
-		ClyAllVariables 
-			from: classScope, classScope asInheritedScope 
-			as: ClyGroupedInstanceVariables withDefaultHierarchy 
+	self changeClassBrowserModeBy: [
+		classBrowserMode switchToVariables
 	]
 ]
 

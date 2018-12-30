@@ -16,7 +16,8 @@ ClyNavigationHistoryTestCase class >> isAbstract [
 
 { #category : #running }
 ClyNavigationHistoryTestCase >> createBrowser [
-	^ClyFullBrowser new
+	^(ClyFullBrowser on: environment)
+		prepareInitialState 
 ]
 
 { #category : #running }

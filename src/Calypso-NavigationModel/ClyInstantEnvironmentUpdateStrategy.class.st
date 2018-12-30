@@ -4,7 +4,7 @@ I am default updating strategy for navigation environment. I force query result 
 Class {
 	#name : #ClyInstantEnvironmentUpdateStrategy,
 	#superclass : #ClyEnvironmentUpdateStrategy,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #updating }

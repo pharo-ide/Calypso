@@ -34,6 +34,12 @@ ClyQueryTestCase >> setUp [
 ]
 
 { #category : #tests }
+ClyQueryTestCase >> testBuildsDefaultResultByDefault [
+
+	self assert: query buildsDefaultResult
+]
+
+{ #category : #tests }
 ClyQueryTestCase >> testComparisonOfSameQueries [
 
 	| query2 |

@@ -23,7 +23,8 @@ Class {
 	#name : #ClyMethodVisibilityGroups,
 	#superclass : #ClyBrowserQueryResult,
 	#instVars : [
-		'hierarchy'
+		'hierarchy',
+		'classScopeForMethods'
 	],
 	#category : #'Calypso-SystemQueries-Results'
 }
@@ -35,16 +36,17 @@ ClyMethodVisibilityGroups class >> defaultHierarchy [
 ]
 
 { #category : #'instance creation' }
-ClyMethodVisibilityGroups class >> withDefaultHierarchy [
+ClyMethodVisibilityGroups class >> withDefaultHierarchyAndMethodsFrom: aClassScope [
 
-	^self withHierarchy: self defaultHierarchy 
+	^self withHierarchy: self defaultHierarchy andMethodsFrom: aClassScope
 ]
 
 { #category : #'instance creation' }
-ClyMethodVisibilityGroups class >> withHierarchy: aClassHierarchy [
+ClyMethodVisibilityGroups class >> withHierarchy: aClassHierarchy andMethodsFrom: aClassScope [
 
 	^self new 
-		hierarchy: aClassHierarchy
+		hierarchy: aClassHierarchy;
+		classScopeForMethods: aClassScope
 ]
 
 { #category : #comparing }
@@ -55,6 +57,7 @@ ClyMethodVisibilityGroups >> = anObject [
 	super = anObject ifFalse: [ ^false ].
 	
 	^ hierarchy = anObject hierarchy
+		and: [ classScopeForMethods = anObject classScopeForMethods ]
 ]
 
 { #category : #building }
@@ -67,10 +70,20 @@ ClyMethodVisibilityGroups >> buildGroupFor: aClass depth: depth toShowMethodsFro
 	items add: item
 ]
 
+{ #category : #accessing }
+ClyMethodVisibilityGroups >> classScopeForMethods [
+	^ classScopeForMethods
+]
+
+{ #category : #accessing }
+ClyMethodVisibilityGroups >> classScopeForMethods: anObject [
+	classScopeForMethods := anObject
+]
+
 { #category : #building }
 ClyMethodVisibilityGroups >> fillWith: classes [
 	| actualClassScope classMap addedClasses |
-	actualClassScope := self scope asLocalClassScope. 
+	actualClassScope := self classScopeForMethods. 
 	classMap := hierarchy buildFrom: classes.
 	addedClasses := Set new.
 	classMap doInOrderWithDepth: [ :each :depth |
@@ -83,7 +96,8 @@ ClyMethodVisibilityGroups >> fillWith: classes [
 ClyMethodVisibilityGroups >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
 
-	^super hash bitXor: hierarchy hash
+	^(super hash bitXor: hierarchy hash)
+		bitXor: classScopeForMethods hash
 ]
 
 { #category : #accessing }

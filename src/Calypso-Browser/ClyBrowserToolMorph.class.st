@@ -134,7 +134,7 @@ Class {
 		'isManagedByUser',
 		'statusBar'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'instance creation' }
@@ -261,7 +261,7 @@ ClyBrowserToolMorph >> buildStatusBar [
 ]
 
 { #category : #controlling }
-ClyBrowserToolMorph >> cleanAfterRemove. [
+ClyBrowserToolMorph >> cleanAfterRemove [
 	self detachFromSystem.
 	decorators do: [ :each | each toolWasRemoved ]
 ]

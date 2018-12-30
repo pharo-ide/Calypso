@@ -31,7 +31,7 @@ Class {
 	#instVars : [
 		'subscopes'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #'instance creation' }

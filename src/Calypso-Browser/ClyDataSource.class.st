@@ -440,7 +440,7 @@ ClyDataSource >> query: anObject [
 
 { #category : #accessing }
 ClyDataSource >> queryEnvironment [
-	^query environment
+	^query environment ifNil: [ queryView browser navigationEnvironment ]
 ]
 
 { #category : #accessing }
