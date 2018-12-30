@@ -18,7 +18,7 @@ BaselineOfCalypso >> baseline: spec [
 			baseline: 'Commander' with: [
 				spec repository: 'github://pharo-ide/Commander:v0.7.x/src' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://pharo-ide/SystemCommands:v0.10.x/src' ].			
+				spec repository: 'github://pharo-ide/SystemCommands:v0.11.x/src' ].			
 
 		spec 
 			package: #'Calypso-NavigationModel';
