@@ -4,7 +4,7 @@ sudo: false
 os: linux
 
 smalltalk_edge:
-  source: estebanlm/smalltalkCI
+  source: hpi-swa/smalltalkCI
   branch: master
 jobs:
   include:
