@@ -24,7 +24,7 @@ ClyVariableMethodGroup class >> isEditableGroup [
 ClyVariableMethodGroup class >> withMethodsFrom: aClassScope referencedVar: aVariable [
 	^self 
 		named: aVariable name 
-		on: (ClyVariableReferences of: aVariable from: aClassScope)
+		on: (ClyVariableReferencesQuery of: aVariable from: aClassScope)
 ]
 
 { #category : #accessing }

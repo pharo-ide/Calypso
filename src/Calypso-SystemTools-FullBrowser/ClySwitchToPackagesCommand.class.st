@@ -40,5 +40,5 @@ ClySwitchToPackagesCommand >> execute [
 { #category : #testing }
 ClySwitchToPackagesCommand >> isAppliedToBrowser [
 
-	^browser packageView showsItemsFromQuery: ClyAllPackages
+	^browser packageView showsItemsFromQuery: ClyAllPackagesQuery
 ]

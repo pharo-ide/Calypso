@@ -14,5 +14,5 @@ ClyUndeclaredMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aCl
 
 { #category : #'building groups' }
 ClyUndeclaredMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyUndeclaredMethods from: aClassScope
+	^ClyUndeclaredMethodsQuery from: aClassScope
 ]

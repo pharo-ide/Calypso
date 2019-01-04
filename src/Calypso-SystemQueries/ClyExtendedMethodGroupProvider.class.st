@@ -11,7 +11,7 @@ Class {
 ClyExtendedMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aClassScope [
 	
 	| subgroupsQuery |
-	subgroupsQuery := ClyExtendingPackages 
+	subgroupsQuery := ClyExtendingPackagesQuery 
 		from: aClassScope as: ClyGroupedExtendingPackages new.
 		
 	^ClyMethodGroup 
@@ -21,5 +21,5 @@ ClyExtendedMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aClas
 
 { #category : #'building groups' }
 ClyExtendedMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyAllExtensionMethods from: aClassScope
+	^ClyAllExtensionMethodsQuery from: aClassScope
 ]

@@ -93,7 +93,7 @@ ClyProcessBrowser >> newWindowTitle [
 ClyProcessBrowser >> prepareInitialState [
 	
 	| query |
-	query := ClyAllProcesses from: self systemScope.
+	query := ClyAllProcessesQuery from: self systemScope.
 
 	processView showQuery: query
 ]
@@ -145,7 +145,7 @@ ClyProcessBrowser >> processSelection [
 ClyProcessBrowser >> showStackOfProcesses: processes [
 
 	| stackQuery |
-	stackQuery := ClyActiveContextOfProcesses 
+	stackQuery := ClyActiveContextOfProcessesQuery 
 		from: (ClyProcessScope ofAll: processes actualObjects in: navigationEnvironment)
 		as: ClyProcessStack new.
 	

@@ -74,7 +74,7 @@ ClyShowClassRefCommand >> defaultMenuItemName [
 { #category : #execution }
 ClyShowClassRefCommand >> execute [
 
-	browser spawnQueryBrowserOn: (ClyClassReferences toAny: classes)
+	browser spawnQueryBrowserOn: (ClyClassReferencesQuery toAny: classes)
 ]
 
 { #category : #execution }
