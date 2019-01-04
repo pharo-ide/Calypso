@@ -5,7 +5,7 @@ os: linux
 
 smalltalk_edge:
   source: estebanlm/smalltalkCI
-  branch: dev
+  branch: master
 jobs:
   include:
     - stage: Versions
