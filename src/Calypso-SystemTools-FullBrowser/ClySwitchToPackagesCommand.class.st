@@ -14,31 +14,25 @@ ClySwitchToPackagesCommand class >> toolbarOrder [
 
 { #category : #accessing }
 ClySwitchToPackagesCommand >> defaultMenuItemName [
-	^browser isScopedModeEnabled 
-		ifTrue: [ 'Scoped pckg' ]
-		ifFalse: [ 'Packages' ]
+	
+	^ 'All Packages' 
 ]
 
 { #category : #accessing }
 ClySwitchToPackagesCommand >> description [
-	self isAppliedToBrowser ifFalse: [ ^'Click to show packages' ].
-	
-	^browser isScopedModeEnabled 
-		ifTrue: [ 'Click to reset scope' ]
-		ifFalse: [ 'Click to scope by selected packages' ]
+	^ 'Click to show all packages'.
 ]
 
 { #category : #execution }
 ClySwitchToPackagesCommand >> execute [
-	self isAppliedToBrowser ifFalse: [ ^browser switchToPackages].
-	browser isScopedModeEnabled ifTrue: [ ^browser switchToPackages ].
+	^browser switchToPackages
 
-	browser packageSelection actualObjects ifNotEmpty: [ :packages |
-		browser switchToPackageScopeOf: packages]
+"	browser packageSelection actualObjects ifNotEmpty: [ :packages |
+		browser switchToPackageScopeOf: packages]"
 ]
 
 { #category : #testing }
 ClySwitchToPackagesCommand >> isAppliedToBrowser [
 
-	^browser packageView showsItemsFromQuery: ClyAllPackages
+	^ (browser packageView showsItemsFromQuery: ClyAllPackages) and: [ browser isScopedModeEnabled not ]
 ]
