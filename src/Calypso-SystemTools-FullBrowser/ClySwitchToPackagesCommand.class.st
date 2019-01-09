@@ -26,9 +26,6 @@ ClySwitchToPackagesCommand >> description [
 { #category : #execution }
 ClySwitchToPackagesCommand >> execute [
 	^browser switchToPackages
-
-"	browser packageSelection actualObjects ifNotEmpty: [ :packages |
-		browser switchToPackageScopeOf: packages]"
 ]
 
 { #category : #testing }
