@@ -11,6 +11,12 @@ Class {
 	#category : #'Calypso-SystemTools-FullBrowser-Commands-Packages'
 }
 
+{ #category : #testing }
+ClySwitchToProjectsCommand class >> canBeExecutedInContext: aContext [
+
+	^ ClySystemEnvironment currentImage projectManager projectManagers notEmpty 
+]
+
 { #category : #accessing }
 ClySwitchToProjectsCommand >> defaultMenuItemName [
 	^'Projects'
