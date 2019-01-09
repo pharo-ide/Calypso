@@ -49,8 +49,18 @@ Class {
 }
 
 { #category : #'user requests' }
-ClySystemBrowserContext >> confirmVariableRemoveFor: variables [
-	^tool confirmVariableRemoveFor: variables
+ClySystemBrowserContext >> confirmUnusedClasses: variables [
+	^tool confirmUnusedClasses: variables
+]
+
+{ #category : #'user requests' }
+ClySystemBrowserContext >> confirmUnusedVariables: variables [
+	^tool confirmUnusedVariables: variables
+]
+
+{ #category : #'user requests' }
+ClySystemBrowserContext >> confirmUnusedVariablesInDefiningClass: variables [
+	^tool confirmUnusedVariablesInDefiningClass: variables
 ]
 
 { #category : #'command execution' }

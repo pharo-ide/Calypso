@@ -13,18 +13,45 @@ ClyBrowserMorph >> allowSilentlyRemoveMethods: methods whichHaveSenders: senders
 ]
 
 { #category : #'*Calypso-SystemTools-Core' }
-ClyBrowserMorph >> confirmVariableRemoveFor: variables [
+ClyBrowserMorph >> confirmEmptySystemQuery: aQuery [
 	
-	| refQuery refs showRefs |
+	| showResult result |
+	
+	result := aQuery execute.
+	result isEmpty ifTrue: [ ^true ].
+	
+	showResult := UIManager default confirm: 'There are '
+		, result size asString, ' ', aQuery description, '. Show them?'.
+	showResult ifTrue: [self spawnQueryBrowserOn: aQuery].
+	^false
+]
+
+{ #category : #'*Calypso-SystemTools-Core' }
+ClyBrowserMorph >> confirmUnusedClasses: classes [
+	
+	| refQuery |
+	refQuery := ClyClassReferences toAny: classes from: self systemScope.
+	
+	^self confirmEmptySystemQuery: refQuery
+]
+
+{ #category : #'*Calypso-SystemTools-Core' }
+ClyBrowserMorph >> confirmUnusedVariables: variables [
+	
+	| refQuery |
 	refQuery := ClyVariableReferences ofAny: variables from: self systemScope.
 	
-	refs := refQuery execute.
-	refs isEmpty ifTrue: [ ^true ].
+	^self confirmEmptySystemQuery: refQuery
+]
+
+{ #category : #'*Calypso-SystemTools-Core' }
+ClyBrowserMorph >> confirmUnusedVariablesInDefiningClass: variables [
 	
-	showRefs := UIManager default confirm: 'There are '
-		, refs size asString, ' ', refQuery description, '. Show them?'.
-	showRefs ifTrue: [self spawnQueryBrowserOn: refQuery].
-	^false
+	| refQuery classScope |
+	classScope := ClyBothMetaLevelClassScope ofAll: (variables collect: [:each | each definingClass]) in: navigationEnvironment. 
+	refQuery := ClyVariableReferences ofAny: variables from: classScope.
+	
+	^self confirmEmptySystemQuery: refQuery
 ]
 
 { #category : #'*Calypso-SystemTools-Core' }
