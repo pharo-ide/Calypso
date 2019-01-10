@@ -19,7 +19,7 @@ ClyTaggedMethodGroup class >> isEditableGroup [
 
 { #category : #'instance creation' }
 ClyTaggedMethodGroup class >> withMethodsFrom: aClassScope taggedBy: tagName [
-	^ClyTaggedMethodGroup named: tagName on: (ClyTaggedMethods by: tagName from: aClassScope)
+	^ClyTaggedMethodGroup named: tagName on: (ClyTaggedMethodsQuery by: tagName from: aClassScope)
 ]
 
 { #category : #operations }
