@@ -38,7 +38,7 @@ ClyProjectChildItem class >> defaultSortFunctionForCalypso [
 
 { #category : #queries }
 ClyProjectChildItem class >> prepareClassQueriesFrom: projectItems in: aNavigationEnvironment [ 
-	^{ClyAllClasses from: ClyProjectScope ofAll: projectItems in: aNavigationEnvironment }
+	^{ClyAllClassesQuery from: ClyProjectScope ofAll: projectItems in: aNavigationEnvironment }
 ]
 
 { #category : #queries }

@@ -25,7 +25,7 @@ ClyAllMethodGroup class >> withMethodQuery: aMethodQuery andClassesInheritedFrom
 ClyAllMethodGroup class >> withMethodsInheritedFrom: aClassScope [
 
 	^self  
-		withMethodQuery: (ClyAllMethods from: aClassScope asLocalClassScope)
+		withMethodQuery: (ClyAllMethodsQuery from: aClassScope asLocalClassScope)
 		andClassesInheritedFrom: aClassScope
 ]
 

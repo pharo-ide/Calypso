@@ -14,5 +14,5 @@ ClyBreakpointMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aCl
 
 { #category : #'building groups' }
 ClyBreakpointMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyActiveBreakpoints from: aClassScope
+	^ClyActiveBreakpointsQuery from: aClassScope
 ]

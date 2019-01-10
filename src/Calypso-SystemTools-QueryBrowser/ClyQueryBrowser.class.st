@@ -48,7 +48,7 @@ Class {
 
 { #category : #opening }
 ClyQueryBrowser class >> browseImplementorsOf: aSymbol [
-	^self openOn: (ClyMessageImplementors of: aSymbol)
+	^self openOn: (ClyMessageImplementorsQuery of: aSymbol)
 
 ]
 
@@ -64,7 +64,7 @@ ClyQueryBrowser class >> browseMethods: methods withTitle: aString [
 
 { #category : #opening }
 ClyQueryBrowser class >> browseSendersOf: aSymbol [
-	^self openOn: (ClyMessageSenders of: aSymbol)
+	^self openOn: (ClyMessageSendersQuery of: aSymbol)
 ]
 
 { #category : #default }

@@ -14,5 +14,5 @@ ClyOverridingMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aCl
 
 { #category : #'building groups' }
 ClyOverridingMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyOverridingMethods from: aClassScope
+	^ClyOverridingMethodsQuery from: aClassScope
 ]

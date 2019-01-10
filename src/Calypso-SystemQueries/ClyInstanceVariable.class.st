@@ -21,7 +21,7 @@ ClyInstanceVariable class >> named: aSymbol definedIn: aClass [
 
 { #category : #queries }
 ClyInstanceVariable class >> queryClass [
-	^ClyAllInstanceVariables
+	^ClyAllInstanceVariablesQuery
 ]
 
 { #category : #accessing }

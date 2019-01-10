@@ -41,6 +41,6 @@ ClySwitchToScopedModeCommand >> prepareFullExecutionInContext: aBrowserContext [
 	
 	packages := browser searchDialog 
 		requestMultipleObjects: 'Select package scope' 
-		from: ClyAllPackages sorted.
+		from: ClyAllPackagesQuery sorted.
 	packages ifEmpty: [ CmdCommandAborted signal ]
 ]

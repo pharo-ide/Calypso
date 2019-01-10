@@ -46,7 +46,7 @@ ClyShowVariableRefCommand >> defaultMenuItemName [
 { #category : #execution }
 ClyShowVariableRefCommand >> execute [
 	
-	browser spawnQueryBrowserOn: (ClyVariableReferences ofAny: variables)
+	browser spawnQueryBrowserOn: (ClyVariableReferencesQuery ofAny: variables)
 ]
 
 { #category : #execution }

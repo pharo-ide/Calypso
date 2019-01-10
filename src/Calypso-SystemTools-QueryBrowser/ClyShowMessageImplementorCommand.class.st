@@ -65,7 +65,7 @@ ClyShowMessageImplementorCommand >> execute [
 	| selectors |
 	selectors := messages collect: [ :each | each selector].
 	
-	browser spawnQueryBrowserOn: (ClyMessageImplementors ofAny: selectors)
+	browser spawnQueryBrowserOn: (ClyMessageImplementorsQuery ofAny: selectors)
 ]
 
 { #category : #execution }
