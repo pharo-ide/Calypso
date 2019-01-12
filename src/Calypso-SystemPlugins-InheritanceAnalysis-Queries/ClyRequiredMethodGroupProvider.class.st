@@ -15,7 +15,7 @@ ClyRequiredMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aClas
 
 { #category : #'building groups' }
 ClyRequiredMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyUnimplementedMethods from: aClassScope
+	^ClyUnimplementedMethodsQuery from: aClassScope
 ]
 
 { #category : #testing }

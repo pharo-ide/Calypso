@@ -14,5 +14,5 @@ ClyWatchpointMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aCl
 
 { #category : #'building groups' }
 ClyWatchpointMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyMethodWatchpoints from: aClassScope
+	^ClyMethodWatchpointsQuery from: aClassScope
 ]

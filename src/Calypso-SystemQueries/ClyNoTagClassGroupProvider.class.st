@@ -16,5 +16,5 @@ ClyNoTagClassGroupProvider >> createClassGroupFor: aClassQuery from: aPackageSco
 
 { #category : #'building groups' }
 ClyNoTagClassGroupProvider >> createClassQueryFrom: aPackageScope [
-	^ClyRestUntaggedClasses from: aPackageScope
+	^ClyRestUntaggedClassesQuery from: aPackageScope
 ]

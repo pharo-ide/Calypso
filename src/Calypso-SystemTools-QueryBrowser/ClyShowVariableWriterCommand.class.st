@@ -46,7 +46,7 @@ ClyShowVariableWriterCommand >> defaultMenuItemName [
 { #category : #execution }
 ClyShowVariableWriterCommand >> execute [
 	
-	browser spawnQueryBrowserOn: (ClyVariableWriters ofAny: variables)
+	browser spawnQueryBrowserOn: (ClyVariableWritersQuery ofAny: variables)
 ]
 
 { #category : #execution }
