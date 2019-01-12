@@ -14,5 +14,5 @@ ClyFlagMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aClassSco
 
 { #category : #'building groups' }
 ClyFlagMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyFlaggingMethods from: aClassScope
+	^ClyFlaggingMethodsQuery from: aClassScope
 ]

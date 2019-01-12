@@ -31,5 +31,5 @@ ClySwitchToPackagesCommand >> execute [
 { #category : #testing }
 ClySwitchToPackagesCommand >> isAppliedToBrowser [
 
-	^ (browser packageView showsItemsFromQuery: ClyAllPackages) and: [ browser isScopedModeEnabled not ]
+	^ (browser packageView showsItemsFromQuery: ClyAllPackagesQuery) and: [ browser isScopedModeEnabled not ]
 ]

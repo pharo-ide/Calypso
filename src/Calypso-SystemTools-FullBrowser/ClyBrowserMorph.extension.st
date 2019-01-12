@@ -17,7 +17,7 @@ ClyBrowserMorph >> browseClassNamed: aString [
 { #category : #'*Calypso-SystemTools-FullBrowser' }
 ClyBrowserMorph >> chooseClassToBrowseFrom: aClassNamePattern [
 	| query result |
-	query := (ClyAllClasses sortedFrom: self systemScope)
+	query := (ClyAllClassesQuery sortedFrom: self systemScope)
 		 filteredBy: (ClyItemNameFilter substringPattern: aClassNamePattern).
 	result := query execute.
 	result isEmpty ifTrue: [ ^nil ].

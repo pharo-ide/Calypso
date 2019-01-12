@@ -14,5 +14,5 @@ ClyMethodCounterGroupProvider >> createMethodGroupFor: aMethodQuery from: aClass
 
 { #category : #'building groups' }
 ClyMethodCounterGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyMethodCallCounters from: aClassScope
+	^ClyMethodCallCountersQuery from: aClassScope
 ]
