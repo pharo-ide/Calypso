@@ -82,7 +82,7 @@ ClyClassBrowserMode >> = anObject [
 
 { #category : #accessing }
 ClyClassBrowserMode >> allMethodQuery [
-	^ClyAllMethods sortedFrom: classScopeForMethods
+	^ClyAllMethodsQuery sortedFrom: classScopeForMethods
 ]
 
 { #category : #accessing }

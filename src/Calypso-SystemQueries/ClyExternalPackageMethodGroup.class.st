@@ -23,7 +23,7 @@ ClyExternalPackageMethodGroup class >> isEditableGroup [
 ClyExternalPackageMethodGroup class >> withMethodsFrom: aClassScope packagedIn: aPackage [
 
 	| methodQuery |
-	methodQuery := ClyPackageExtensionMethods of: aPackage from: aClassScope.
+	methodQuery := ClyPackageExtensionMethodsQuery of: aPackage from: aClassScope.
 	
 	"Priority is the value to be greater than all extensions group 
 	in case when they are in same list (when extended class is selected)"

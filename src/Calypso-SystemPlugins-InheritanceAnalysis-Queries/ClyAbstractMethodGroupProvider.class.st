@@ -14,5 +14,5 @@ ClyAbstractMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aClas
 
 { #category : #'building groups' }
 ClyAbstractMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyAbstractMethods from: aClassScope
+	^ClyAbstractMethodsQuery from: aClassScope
 ]

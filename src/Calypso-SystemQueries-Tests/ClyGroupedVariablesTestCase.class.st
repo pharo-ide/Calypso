@@ -31,7 +31,7 @@ ClyGroupedVariablesTestCase >> createQuery [
 
 	| scope |
 	scope := ClyInstanceSideScope ofAll: {Object. Array. String} in: environment.
-	^ ClyAllClasses from: scope
+	^ ClyAllClassesQuery from: scope
 ]
 
 { #category : #helpers }

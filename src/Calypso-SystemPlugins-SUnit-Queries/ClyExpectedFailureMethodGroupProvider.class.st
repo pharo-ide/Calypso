@@ -14,5 +14,5 @@ ClyExpectedFailureMethodGroupProvider >> createMethodGroupFor: aMethodQuery from
 
 { #category : #'building groups' }
 ClyExpectedFailureMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyExpectedFailedTestMethods from: aClassScope
+	^ClyExpectedFailedTestMethodsQuery from: aClassScope
 ]
