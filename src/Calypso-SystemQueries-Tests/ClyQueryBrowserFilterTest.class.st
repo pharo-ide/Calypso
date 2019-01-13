@@ -25,7 +25,7 @@ ClyQueryBrowserFilterTest >> testMatchesClassOfPackageWhichMatchesIt [
 { #category : #'tests-filter classes' }
 ClyQueryBrowserFilterTest >> testMatchesClassWhichNameMatchesIt [
 
-	filter := ClyQueryBrowserFilter substringPattern: 'FilterTests'.
+	filter := ClyQueryBrowserFilter substringPattern: 'FilterTest'.
 	
 	self assert: (filter matches: self itemOfThisTestClass)
 ]
@@ -33,7 +33,7 @@ ClyQueryBrowserFilterTest >> testMatchesClassWhichNameMatchesIt [
 { #category : #'tests-filter methods' }
 ClyQueryBrowserFilterTest >> testMatchesMethodOfClassWhichMatchesIt [
 
-	filter := ClyQueryBrowserFilter substringPattern: 'FilterTests'.
+	filter := ClyQueryBrowserFilter substringPattern: 'FilterTest'.
 	
 	self assert: (filter matches: self itemOfThisTestMethod)
 ]
