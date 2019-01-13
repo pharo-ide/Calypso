@@ -22,7 +22,7 @@ ClyClassVariable class >> named: aSymbol definedIn: aClass [
 
 { #category : #queries }
 ClyClassVariable class >> queryClass [
-	^ClyAllClassVariables
+	^ClyAllClassVariablesQuery
 ]
 
 { #category : #accessing }

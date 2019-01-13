@@ -30,7 +30,7 @@ ClyBrowserMorph >> confirmEmptySystemQuery: aQuery [
 ClyBrowserMorph >> confirmUnusedClasses: classes [
 	
 	| refQuery |
-	refQuery := ClyClassReferences toAny: classes from: self systemScope.
+	refQuery := ClyClassReferencesQuery toAny: classes from: self systemScope.
 	
 	^self confirmEmptySystemQuery: refQuery
 ]
@@ -39,7 +39,7 @@ ClyBrowserMorph >> confirmUnusedClasses: classes [
 ClyBrowserMorph >> confirmUnusedVariables: variables [
 	
 	| refQuery |
-	refQuery := ClyVariableReferences ofAny: variables from: self systemScope.
+	refQuery := ClyVariableReferencesQuery ofAny: variables from: self systemScope.
 	
 	^self confirmEmptySystemQuery: refQuery
 ]
@@ -49,7 +49,7 @@ ClyBrowserMorph >> confirmUnusedVariablesInDefiningClass: variables [
 	
 	| refQuery classScope |
 	classScope := ClyBothMetaLevelClassScope ofAll: (variables collect: [:each | each definingClass]) in: navigationEnvironment. 
-	refQuery := ClyVariableReferences ofAny: variables from: classScope.
+	refQuery := ClyVariableReferencesQuery ofAny: variables from: classScope.
 	
 	^self confirmEmptySystemQuery: refQuery
 ]
@@ -69,7 +69,7 @@ ClyBrowserMorph >> requestRemoveMethodStrategyFor: methods [
 	| selectors result strategies caption  senders |
 	selectors := methods collect: [ :each | each selector ] as: IdentitySet.	
 	selectors := selectors asArray.
-	senders := (ClyMessageSenders ofAny: selectors from: self systemScope) execute.
+	senders := (ClyMessageSendersQuery ofAny: selectors from: self systemScope) execute.
 	(self allowSilentlyRemoveMethods: methods whichHaveSenders: senders)
 		ifTrue: [ ^SycSilentlyRemoveMethodStrategy new ].
 

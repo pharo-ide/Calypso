@@ -12,7 +12,7 @@ ClyClassBrowserVariablesMode >> setUpDefaultMethodGroupQuery [
 	
 	| classScope |
 	classScope := browser classSelection asItemsScope: metaLevelScope.	
-	methodGroupQuery := ClyAllVariables 
+	methodGroupQuery := ClyAllVariablesQuery 
 			from: classScope, classScope asInheritedScope 
 			as: (ClyGroupedInstanceVariables withDefaultHierarchyAndMethodsFrom: classScopeForMethods)
 ]

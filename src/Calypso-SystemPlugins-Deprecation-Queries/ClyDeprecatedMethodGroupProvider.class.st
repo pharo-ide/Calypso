@@ -14,5 +14,5 @@ ClyDeprecatedMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aCl
 
 { #category : #'building groups' }
 ClyDeprecatedMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyDeprecatedMethods from: aClassScope
+	^ClyDeprecatedMethodsQuery from: aClassScope
 ]

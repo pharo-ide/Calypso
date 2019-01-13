@@ -11,7 +11,7 @@ ClyBrowserMorph >> browseImplementorsOf: aSymbol [
 			^self spawnBrowser: ClyFullBrowser withState: [ :browser | 
 				browser selectClass: classToBrowse]]].
 	
-	self spawnQueryBrowserOn: (ClyMessageImplementors of: aSymbol)
+	self spawnQueryBrowserOn: (ClyMessageImplementorsQuery of: aSymbol)
 ]
 
 { #category : #'*Calypso-SystemTools-QueryBrowser' }
@@ -27,7 +27,7 @@ ClyBrowserMorph >> browseReferencesTo: aSymbol from: anEnvironment [
 	aSymbol first isUppercase ifTrue: [ 
 		classBinding := anEnvironment bindingOf: aSymbol.
 		classBinding ifNotNil: [ 
-			^self spawnQueryBrowserOn: (ClyClassReferences of: classBinding)]].
+			^self spawnQueryBrowserOn: (ClyClassReferencesQuery of: classBinding)]].
 		
 	self browseSendersOf: aSymbol
 ]
@@ -35,7 +35,7 @@ ClyBrowserMorph >> browseReferencesTo: aSymbol from: anEnvironment [
 { #category : #'*Calypso-SystemTools-QueryBrowser' }
 ClyBrowserMorph >> browseSendersOf: aSymbol [
 	
-	self spawnQueryBrowserOn: (ClyMessageSenders of: aSymbol)
+	self spawnQueryBrowserOn: (ClyMessageSendersQuery of: aSymbol)
 ]
 
 { #category : #'*Calypso-SystemTools-QueryBrowser' }

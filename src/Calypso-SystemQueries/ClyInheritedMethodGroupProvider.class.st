@@ -18,7 +18,7 @@ ClyInheritedMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: aCla
 
 { #category : #'building groups' }
 ClyInheritedMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyAllMethods from: aClassScope
+	^ClyAllMethodsQuery from: aClassScope
 ]
 
 { #category : #testing }

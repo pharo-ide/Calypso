@@ -36,7 +36,7 @@ ClyClassBrowserMethodGroupsMode >> adoptMetaLevelForExtendedClass [
 { #category : #controlling }
 ClyClassBrowserMethodGroupsMode >> setUpDefaultMethodGroupQuery [
 	
-	methodGroupQuery := ClyAllMethodGroups sortedFrom: classScopeForMethods.
+	methodGroupQuery := ClyAllMethodGroupsQuery sortedFrom: classScopeForMethods.
 	self adoptForExtendedClass
 ]
 
