@@ -77,7 +77,7 @@ ClyTestSetUpEditorTool >> setUpModelFromContext [
 ClyTestSetUpEditorTool >> setUpParametersFromModel [
 
 	editingMethod := testClass lookupSelector: #setUp.
-	self updateMethodTagsAndPackage
+	super setUpParametersFromModel
 ]
 
 { #category : #controlling }
