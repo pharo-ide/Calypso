@@ -29,10 +29,23 @@ ClyBrowserMorph >> confirmEmptySystemQuery: aQuery [
 { #category : #'*Calypso-SystemTools-Core' }
 ClyBrowserMorph >> confirmUnusedClasses: classes [
 	
-	| refQuery |
-	refQuery := ClyClassReferencesQuery toAny: classes from: self systemScope.
+	| refQuery noUsers answer subclasses users |
+	refQuery := ClyClassReferencesQuery toAny: classes from: self systemScope.	
+	noUsers := self confirmEmptySystemQuery: refQuery.
 	
-	^self confirmEmptySystemQuery: refQuery
+	(classes anySatisfy: [ :each | each hasSubclasses ]) ifTrue: [
+		noUsers := false.
+		answer := UIManager default confirm: 'There are subclasses. Show them?'.
+		subclasses := classes flatCollect: [ :each | each subclasses ].
+		answer ifTrue: [ self spawnQueryBrowserOn: (ClyConstantQuery returning: subclasses) ]].
+		
+	(classes anySatisfy: [ :each | each users notEmpty]) ifTrue: [
+		noUsers := false.
+		answer := UIManager default confirm: 'There are users of trait. Show them?'.
+		users := classes flatCollect: [ :each | each users ].
+		answer ifTrue: [ self spawnQueryBrowserOn: (ClyConstantQuery returning: users) ]].
+	
+	^noUsers
 ]
 
 { #category : #'*Calypso-SystemTools-Core' }
