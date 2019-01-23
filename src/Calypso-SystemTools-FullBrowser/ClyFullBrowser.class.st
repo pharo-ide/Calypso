@@ -874,6 +874,12 @@ ClyFullBrowser >> switchToVariables [
 	]
 ]
 
+{ #category : #accessing }
+ClyFullBrowser >> taskbarIcon [
+
+	^ self iconNamed: #smallSystemBrowser
+]
+
 { #category : #initialization }
 ClyFullBrowser >> updateDefaultPackageFilter [
 
