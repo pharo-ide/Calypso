@@ -41,7 +41,7 @@ ClyBrowserMorph >> browseSendersOf: aSymbol [
 { #category : #'*Calypso-SystemTools-QueryBrowser' }
 ClyBrowserMorph >> spawnQueryBrowserOn: aQuery [
 	
-	^self spawnQueryBrowserOn: aQuery withState: []
+	self spawnQueryBrowserOn: aQuery withState: []
 ]
 
 { #category : #'*Calypso-SystemTools-QueryBrowser' }
@@ -50,8 +50,11 @@ ClyBrowserMorph >> spawnQueryBrowserOn: aQuery withState: navigationBlock [
 	targetQuery := aQuery.
 	aQuery isBoundToEnvironment ifFalse: [ 
 		targetQuery := aQuery withScope: self defaultNavigationScope].
+	targetQuery scope = self systemScope ifTrue: [ 
+		targetQuery semiAsync hasEmptyResult ifTrue: [ 
+			^self inform: 'There are no ', targetQuery description ]  ].
 	
-	^self spawnBrowser: ClyQueryBrowser withState: [ :browser | 
+	self spawnBrowser: ClyQueryBrowser withState: [ :browser | 
 		browser queryScopes: self allNavigationScopes.
 		browser showResultOf: targetQuery.
 		navigationBlock valueWithPossibleArgs: {browser}]

@@ -424,7 +424,7 @@ ClyQueryBrowser >> spawnQueryBrowserOn: aQuery withState: navigationState [
 		ifTrue: [ aQuery ]
 		ifFalse: [ aQuery withScope: activeScope].
 	
-	^super spawnQueryBrowserOn: actualQuery withState: navigationState
+	super spawnQueryBrowserOn: actualQuery withState: navigationState
 ]
 
 { #category : #navigation }
