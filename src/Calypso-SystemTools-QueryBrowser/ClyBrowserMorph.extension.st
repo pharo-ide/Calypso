@@ -53,10 +53,9 @@ ClyBrowserMorph >> spawnQueryBrowserOn: aQuery withState: navigationBlock [
 	
 	targetQuery scope = self systemScope ifTrue: [ 
 		"If query is empty in system (global) scope then it is empty in any other scope.
-		In that case do not need a query browser because it will be always empty and useless"
+		In that case we do not need a query browser because it will be always empty and useless"
 		targetQuery semiAsync hasEmptyResult ifTrue: [ 
-			"For slow queries we will not wait 
-			and open show a browser which will indicate execution progress"
+			"For slow queries we will not wait and open a browser to indicate execution progress"
 			^self inform: 'There are no ', targetQuery description ]  ].
 	
 	self spawnBrowser: ClyQueryBrowser withState: [ :browser | 
