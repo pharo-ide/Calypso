@@ -48,7 +48,7 @@ ClyRemoveExecutionCounterCommand >> metalinkManagerClass [
 
 { #category : #'table decoration' }
 ClyRemoveExecutionCounterCommand >> tableCellIcon [
-	^Smalltalk ui iconNamed: #classIcon
+	^self iconNamed: #classIcon
 ]
 
 { #category : #accessing }

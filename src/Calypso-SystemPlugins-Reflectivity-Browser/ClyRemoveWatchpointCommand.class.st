@@ -25,5 +25,5 @@ ClyRemoveWatchpointCommand >> metalinkManagerClass [
 
 { #category : #'table decoration' }
 ClyRemoveWatchpointCommand >> tableCellIcon [
-	^Smalltalk ui iconNamed: #haloView
+	^self iconNamed: #haloView
 ]

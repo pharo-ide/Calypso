@@ -398,12 +398,12 @@ ClyQueryViewMorph >> findItemsWith: actualObjects [
 { #category : #accessing }
 ClyQueryViewMorph >> grabSelectionAt: rowIndex [
 	| selectedItems |
-	(table isRowIndexSelected: rowIndex) ifTrue: [^self selection].
-	
-	selectedItems := rowIndex = 0 
-		ifTrue: [ #() ] ifFalse: [{self itemAt: rowIndex}].
-		
-	^self newSelectionWith: selectedItems.
+	(table isIndexSelected: rowIndex)
+		ifTrue: [ ^ self selection ].
+	selectedItems := rowIndex = 0
+		ifTrue: [ #() ]
+		ifFalse: [ {(self itemAt: rowIndex)} ].
+	^ self newSelectionWith: selectedItems
 ]
 
 { #category : #testing }
@@ -778,20 +778,18 @@ ClyQueryViewMorph >> updateSelectedItemsOf: aDataSource [
 
 { #category : #controlling }
 ClyQueryViewMorph >> updateSelection [
-
 	| selectedItems |
 	"in some conditions table returnes bad index 0 which should not happens normaly.
 	Following select protects from this case"
-	selectedItems := table selectedRowIndexes 
-		select: [ :i | i between: 1 and: self dataSource numberOfRows ] 
-		thenCollect: [:each | self itemAt: each].
+	selectedItems := table selectedIndexes
+		select: [ :i | i between: 1 and: self dataSource numberOfRows ]
+		thenCollect: [ :each | self itemAt: each ].
 	selection := self newSelectionWith: selectedItems.
-
-	shouldRestoreSelection ifTrue: [ 
-		changesWasInitiatedByUser 
-			ifTrue: [desiredSelection := selection asDesiredSelection]
-			ifFalse: [ desiredSelection ifNotNil: [
-						desiredSelection checkItemsOfCurrentSelection: selection] ]]
+	shouldRestoreSelection
+		ifTrue: [ changesWasInitiatedByUser
+				ifTrue: [ desiredSelection := selection asDesiredSelection ]
+				ifFalse: [ desiredSelection
+						ifNotNil: [ desiredSelection checkItemsOfCurrentSelection: selection ] ] ]
 ]
 
 { #category : #'event handling' }

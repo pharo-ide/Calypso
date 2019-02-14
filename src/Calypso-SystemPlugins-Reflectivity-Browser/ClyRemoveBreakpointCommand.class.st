@@ -25,5 +25,5 @@ ClyRemoveBreakpointCommand >> metalinkManagerClass [
 
 { #category : #'table decoration' }
 ClyRemoveBreakpointCommand >> tableCellIcon [
-	^Smalltalk ui iconNamed: #halt
+	^self iconNamed: #halt
 ]
