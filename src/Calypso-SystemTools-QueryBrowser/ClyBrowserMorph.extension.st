@@ -41,7 +41,7 @@ ClyBrowserMorph >> browseSendersOf: aSymbol [
 { #category : #'*Calypso-SystemTools-QueryBrowser' }
 ClyBrowserMorph >> spawnQueryBrowserOn: aQuery [
 	
-	^self spawnQueryBrowserOn: aQuery withState: []
+	self spawnQueryBrowserOn: aQuery withState: []
 ]
 
 { #category : #'*Calypso-SystemTools-QueryBrowser' }
@@ -51,7 +51,14 @@ ClyBrowserMorph >> spawnQueryBrowserOn: aQuery withState: navigationBlock [
 	aQuery isBoundToEnvironment ifFalse: [ 
 		targetQuery := aQuery withScope: self defaultNavigationScope].
 	
-	^self spawnBrowser: ClyQueryBrowser withState: [ :browser | 
+	targetQuery scope = self systemScope ifTrue: [ 
+		"If query is empty in system (global) scope then it is empty in any other scope.
+		In that case we do not need a query browser because it will be always empty and useless"
+		targetQuery semiAsync hasEmptyResult ifTrue: [ 
+			"For slow queries we will not wait and open a browser to indicate execution progress"
+			^self inform: 'There are no ', targetQuery description ]  ].
+	
+	self spawnBrowser: ClyQueryBrowser withState: [ :browser | 
 		browser queryScopes: self allNavigationScopes.
 		browser showResultOf: targetQuery.
 		navigationBlock valueWithPossibleArgs: {browser}]
