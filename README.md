@@ -35,7 +35,7 @@ Metacello new
   load
 ```
 ### Pharo 6 installation
-To install Calypso properly on Windows check that Iceberg intergation is disabled (it is enabled by default):
+To install Calypso in Pharo 6 use following script (which disables Iceberg intergation):
 ```Smalltalk
 Iceberg enableMetacelloIntegration: false.
 Metacello new
