@@ -26,28 +26,32 @@ Consists of:
   - variable view as special mode for method group view.  
   - and more
 
-## Installation
+## Contribution (Pharo 7 and higher)
+Use dev branch of Calypso for contribution:
 ```Smalltalk
 Metacello new
   baseline: 'Calypso';
-  repository: 'github://dionisiydk/Calypso';
+  repository: 'github://pharo-ide/Calypso:dev/src';
+  load
+```
+### Pharo 6 installation
+To install Calypso properly on Windows check that Iceberg intergation is disabled (it is enabled by default):
+```Smalltalk
+Iceberg enableMetacelloIntegration: false.
+Metacello new
+  baseline: 'Calypso';
+  repository: 'github://pharo-ide/Calypso:pharo6';
   load
 ```
 To make Calypso default toolset evaluate:
 ```Smalltalk
-ClyBrowser beAllDefault
+ClyBrowserMorph beAllDefault
 ```
 And to open browser evaluate: 
 ```Smalltalk
 ClyFullBrowser open.
 ```
-### Pharo 6 installation on Windows
-To install Calypso properly on Windows check that Iceberg intergation is disabled (it is disabled by default):
-```Smalltalk
-Iceberg enableMetacelloIntegration: false
-```
-There are long package and methods names in Calypso (related to tests) which are the problem of FileTree format on Windows.
-
+Or use World menu Calypso item
 ## Documentation
 
 If you want to learn more about the architecture of Calypso, refer to the the [Pharo Infrascture mini booklet](https://github.com/SquareBracketAssociates/Booklet-Infrastructure) as well as the [ClassAnnotation project](https://github.com/pharo-ide/ClassAnnotation). 
@@ -68,9 +72,4 @@ ClyCriticBrowserPlugin disable.
 ClyCriticEnvironmentPlugin disable.
 ClyNavigationEnvironment reset.
 ```
-And please report this problem on issue tracker or with direct mail to me or Pharo mailing list.
-## FAQ
-
-### What is a "Project" (as opposed to a "Package")?
-While project mode will become the default view in the future, for now it is more like a stub. 
-Some of the current directions are integration with a new package management [Cargo](https://github.com/demarey/cargo) (Christophe is working on it) and a possible Metacello backend.
+And please report this problem on issue tracker or with direct mail or Pharo mailing list.
