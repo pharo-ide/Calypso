@@ -79,18 +79,24 @@ ClyBrowserMorph >> isMethodSelected: aMethod [
 
 { #category : #'*Calypso-SystemTools-Core' }
 ClyBrowserMorph >> requestRemoveMethodStrategyFor: methods [
-	| selectors result strategies caption  senders |
-	selectors := methods collect: [ :each | each selector ] as: IdentitySet.	
-	selectors := selectors asArray.
+	| selectors result strategies caption  senders senderCount plural |
+	
+	selectors := (methods collect: [ :each | each selector ] as: IdentitySet) asArray.	
+	
 	senders := (ClyMessageSendersQuery ofAny: selectors from: self systemScope) execute.
 	(self allowSilentlyRemoveMethods: methods whichHaveSenders: senders)
 		ifTrue: [ ^SycSilentlyRemoveMethodStrategy new ].
 
 	strategies := SycRemoveMethodStrategy createAllForBrowser: self.
+	senderCount := senders size.
+	plural := '' asPluralBasedOn: senderCount.
+	
 	caption := selectors size > 1 
-		ifTrue: [ 'There are ', senders size asString, ' senders']
-		ifFalse: ['The message ', selectors anyOne printString ,' has ' , senders size asString , ' sender'].	
+		ifTrue: [ 'There are {1} sender{2}' format: {senderCount. plural}]
+		ifFalse: ['The message #{1} has {2} sender{3}' format: {selectors anyOne. senderCount. plural}].	
+			
 	result := UIManager default 
 		chooseFrom: (strategies collect: #userRequestString) values: strategies title: caption.
+		
 	^result ifNil: [ SycNotRemoveMethodStrategy new ]
 ]
