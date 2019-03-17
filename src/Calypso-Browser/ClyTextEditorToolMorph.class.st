@@ -268,11 +268,6 @@ ClyTextEditorToolMorph >> selectedClassOrMetaClass [
 	^nil
 ]
 
-{ #category : #'smart suggestions support' }
-ClyTextEditorToolMorph >> selectedMessage [
-	^nil
-]
-
 { #category : #accessing }
 ClyTextEditorToolMorph >> selectedTextInterval [
 	^textMorph selectionInterval

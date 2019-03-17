@@ -81,6 +81,11 @@ ClyMethodEditorToolMorph >> chooseClassForNewMethodIfNone: aBlock [
 ]
 
 { #category : #accessing }
+ClyMethodEditorToolMorph >> editingClass [ 
+	^self methodClass
+]
+
+{ #category : #accessing }
 ClyMethodEditorToolMorph >> extendingPackage [
 	^ extendingPackage
 ]

@@ -23,6 +23,13 @@ ClyClassDefinitionEditorToolMorph >> applyChanges [
 	
 ]
 
+{ #category : #accessing }
+ClyClassDefinitionEditorToolMorph >> createTextContext [
+	^self selectedSourceNode
+		ifNil: [super createTextContext]
+		ifNotNil: [ :astNode | ClySourceCodeContext for: self selectedNode: astNode]
+]
+
 { #category : #building }
 ClyClassDefinitionEditorToolMorph >> decorateContainerTab [
 	| title |
@@ -52,6 +59,26 @@ ClyClassDefinitionEditorToolMorph >> fillStatusBar [
 	super fillStatusBar.
 	
 	statusBar addCommandItem: (ClySlotClassDefinitionSwitchMorph for: self)
+]
+
+{ #category : #accessing }
+ClyClassDefinitionEditorToolMorph >> parseClassDefinition [
+	^CDClassDefinitionParser parse: self editingText
+]
+
+{ #category : #'selecting text' }
+ClyClassDefinitionEditorToolMorph >> selectSourceNode: aCDNode [ 
+	textMorph setSelection: aCDNode sourceInterval
+]
+
+{ #category : #accessing }
+ClyClassDefinitionEditorToolMorph >> selectedSourceNode [
+	| selectedInterval definitionNode |
+	selectedInterval := self selectedTextInterval.
+	definitionNode := self parseClassDefinition.
+	
+	^(definitionNode bestNodeFor: selectedInterval)
+		ifNil: [ definitionNode ]
 ]
 
 { #category : #initialization }

@@ -4,5 +4,5 @@ Extension { #name : #SycSourceCodeCommand }
 SycSourceCodeCommand class >> sourceCodeMenuActivation [
 	<classAnnotation>
 	
-	^SycSourceCodeMenuActivation byRootGroupItemOrder: 1.4 for: ClySourceCodeContext
+	^SycSourceCodeMenuActivation byRootGroupItemOrder: 1.4 for: ClyMethodSourceCodeContext
 ]

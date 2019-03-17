@@ -26,7 +26,7 @@ ClyMetalinkCommand class >> methodEditorLeftBarMenuActivation [
 	<classAnnotation>
 	
 	^CmdTextLeftBarMenuActivation 
-		byItemOf: ClyMetalinkMenuGroup order: self contextMenuOrder for: ClySourceCodeContext
+		byItemOf: ClyMetalinkMenuGroup order: self contextMenuOrder for: ClyMethodSourceCodeContext
 ]
 
 { #category : #activation }
@@ -34,5 +34,5 @@ ClyMetalinkCommand class >> sourceCodeMenuActivation [
 	<classAnnotation>
 	
 	^SycSourceCodeMenuActivation 
-		byItemOf: ClyMetalinkMenuGroup order: self contextMenuOrder for: ClySourceCodeContext
+		byItemOf: ClyMetalinkMenuGroup order: self contextMenuOrder for: ClyMethodSourceCodeContext
 ]
