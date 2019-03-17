@@ -323,6 +323,7 @@ ClyTabManager >> tabSelected: aTab [
 	updatingStarted ifTrue: [ ^self ].
 	"ifNone case happens somehow during tabs rebuild".
 	newTab := tools detect: [ :each | each containerTab == aTab ] ifNone: [^self]. 
+	newTab takeKeyboardFocus.
 	oldTabs := tools select: [:each | each isTabSelected & (each containerTab ~~ aTab)].
 	oldTabs ifEmpty: [ ^self ].
 	desiredSelection removeAll.
