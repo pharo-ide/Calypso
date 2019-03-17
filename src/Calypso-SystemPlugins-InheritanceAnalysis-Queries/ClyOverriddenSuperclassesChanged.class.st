@@ -26,7 +26,7 @@ ClyOverriddenSuperclassesChanged class >> overridingSubclass: aClass [
 { #category : #testing }
 ClyOverriddenSuperclassesChanged >> affectsMethodsDefinedInClass: aClass [
 
-	^overridingSubclass inheritsFrom: aClass
+	^overridingSubclass inheritsFrom: aClass instanceSide
 ]
 
 { #category : #testing }
