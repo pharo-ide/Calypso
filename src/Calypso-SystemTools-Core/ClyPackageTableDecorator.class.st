@@ -16,3 +16,8 @@ ClyPackageTableDecorator class >> decorationStrategy [
 	
 	^ClyTableDecorationStrategy for: RPackage asCalypsoItemContext
 ]
+
+{ #category : #testing }
+ClyPackageTableDecorator class >> isAbstract [
+	^self = ClyPackageTableDecorator 
+]

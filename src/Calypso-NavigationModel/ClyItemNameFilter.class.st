@@ -6,7 +6,7 @@ So I am compatible with objects which respond to the #name
 Class {
 	#name : #ClyItemNameFilter,
 	#superclass : #ClyItemStringFilter,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #testing }

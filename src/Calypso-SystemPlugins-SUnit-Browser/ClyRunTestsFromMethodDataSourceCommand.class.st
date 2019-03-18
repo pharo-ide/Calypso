@@ -23,6 +23,11 @@ ClyRunTestsFromMethodDataSourceCommand class >> canBeExecutedInContext: aBrowser
 	^aBrowserContext browser resultView dataSource hasMetaProperty: ClyTestResultProperty 
 ]
 
+{ #category : #testing }
+ClyRunTestsFromMethodDataSourceCommand class >> isAbstract [
+	^self = ClyRunTestsFromMethodDataSourceCommand 
+]
+
 { #category : #activation }
 ClyRunTestsFromMethodDataSourceCommand class >> menuOrder [
 	<classAnnotationDependency>

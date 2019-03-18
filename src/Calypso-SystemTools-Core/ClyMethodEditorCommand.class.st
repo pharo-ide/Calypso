@@ -22,6 +22,11 @@ ClyMethodEditorCommand class >> canBeExecutedInContext: aToolContext [
 	^aToolContext tool isKindOf: ClyMethodEditorToolMorph 
 ]
 
+{ #category : #testing }
+ClyMethodEditorCommand class >> isAbstract [
+	^self = ClyMethodEditorCommand 
+]
+
 { #category : #activation }
 ClyMethodEditorCommand class >> sourceCodeMenuActivation [
 	<classAnnotation>

@@ -83,7 +83,7 @@ ClyTableDecorator class >> decorateTableCell: anItemCellMorph of: aDataSourceIte
 
 { #category : #testing }
 ClyTableDecorator class >> isAbstract [
-	^self subclasses notEmpty
+	^self = ClyTableDecorator 
 ]
 
 { #category : #decoration }

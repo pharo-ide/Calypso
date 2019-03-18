@@ -13,6 +13,11 @@ Class {
 	#category : #'Calypso-Browser-Commands'
 }
 
+{ #category : #testing }
+ClySwitchBrowserModeCommand class >> isAbstract [
+	^self = ClySwitchBrowserModeCommand 
+]
+
 { #category : #execution }
 ClySwitchBrowserModeCommand >> applyResultInContext: aToolContext [
 	super applyResultInContext: aToolContext.

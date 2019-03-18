@@ -7,6 +7,11 @@ Class {
 	#category : #'Calypso-SystemPlugins-SUnit-Browser'
 }
 
+{ #category : #testing }
+ClyTestCommand class >> isAbstract [
+	^self = ClyTestCommand 
+]
+
 { #category : #execution }
 ClyTestCommand >> applyResultInContext: aToolContext [
 	super applyResultInContext: aToolContext.

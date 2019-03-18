@@ -24,6 +24,11 @@ ClySwitchClassMetaLevelCommand class >> fullBrowserToolbarActivation [
 	^ClyToolbarActivation byItemOf: ClyMetaLevelToolbarGroup order: self toolbarOrder for: ClyClass asCalypsoItemContext  
 ]
 
+{ #category : #testing }
+ClySwitchClassMetaLevelCommand class >> isAbstract [
+	^self = ClySwitchClassMetaLevelCommand 
+]
+
 { #category : #activation }
 ClySwitchClassMetaLevelCommand class >> toolbarOrder [
 	<classAnnotationDependency>

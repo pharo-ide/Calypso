@@ -38,6 +38,11 @@ ClySwitchPackageViewModeCommand class >> fullBrowserToolbarActivation3 [
 		for: ClyProjectContextOfFullBrowser
 ]
 
+{ #category : #testing }
+ClySwitchPackageViewModeCommand class >> isAbstract [
+	^self = ClySwitchPackageViewModeCommand 
+]
+
 { #category : #activation }
 ClySwitchPackageViewModeCommand class >> toolbarOrder [
 	<classAnnotationDependency>

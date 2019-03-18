@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'iconName'
 	],
-	#category : 'Calypso-NavigationModel-Property'
+	#category : #'Calypso-NavigationModel-Property'
 }
 
 { #category : #'instance creation' }

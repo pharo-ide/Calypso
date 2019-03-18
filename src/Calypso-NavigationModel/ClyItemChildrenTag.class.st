@@ -25,7 +25,7 @@ Class {
 	#classVars : [
 		'Types'
 	],
-	#category : 'Calypso-NavigationModel-Tag'
+	#category : #'Calypso-NavigationModel-Tag'
 }
 
 { #category : #'instance creation' }

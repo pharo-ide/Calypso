@@ -125,7 +125,7 @@ Class {
 	#classInstVars : [
 		'defaultGlobalEnvironments'
 	],
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }
 
 { #category : #default }

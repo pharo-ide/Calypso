@@ -6,5 +6,5 @@ Tools can indicate it with special animation
 Class {
 	#name : #ClyBackgroundProcessingTag,
 	#superclass : #ClySimpleTag,
-	#category : 'Calypso-NavigationModel-Model'
+	#category : #'Calypso-NavigationModel-Model'
 }

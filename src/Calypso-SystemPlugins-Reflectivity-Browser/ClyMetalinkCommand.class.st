@@ -13,6 +13,11 @@ ClyMetalinkCommand class >> contextMenuOrder [
 	self subclassResponsibility
 ]
 
+{ #category : #testing }
+ClyMetalinkCommand class >> isAbstract [
+	^self = ClyMetalinkCommand 
+]
+
 { #category : #activation }
 ClyMetalinkCommand class >> methodContextMenuActivation [
 	<classAnnotation>

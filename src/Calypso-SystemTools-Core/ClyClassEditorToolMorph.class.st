@@ -26,6 +26,11 @@ ClyClassEditorToolMorph class >> classTabActivation [
 ]
 
 { #category : #testing }
+ClyClassEditorToolMorph class >> isAbstract [
+	^self = ClyClassEditorToolMorph 
+]
+
+{ #category : #testing }
 ClyClassEditorToolMorph class >> shouldBeActivatedInContext: aBrowserContext [
 	^aBrowserContext isClassSelected
 ]

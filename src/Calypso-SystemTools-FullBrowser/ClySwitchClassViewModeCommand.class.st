@@ -19,3 +19,8 @@ ClySwitchClassViewModeCommand class >> fullBrowserToolbarActivation [
 	
 	^ClyToolbarActivation byItemOf: ClyClassHierarchyToolbarGroup for: ClyClassContextOfFullBrowser 
 ]
+
+{ #category : #testing }
+ClySwitchClassViewModeCommand class >> isAbstract [
+	^self = ClySwitchClassViewModeCommand 
+]

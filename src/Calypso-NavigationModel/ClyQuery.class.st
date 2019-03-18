@@ -110,7 +110,7 @@ Class {
 	#classVars : [
 		'ShouldBeProtectedByWriteBarrier'
 	],
-	#category : 'Calypso-NavigationModel-Query'
+	#category : #'Calypso-NavigationModel-Query'
 }
 
 { #category : #'instance creation' }

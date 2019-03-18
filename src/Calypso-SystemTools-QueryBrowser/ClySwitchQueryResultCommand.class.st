@@ -12,6 +12,11 @@ Class {
 	#category : #'Calypso-SystemTools-QueryBrowser-Commands-Controlling'
 }
 
+{ #category : #testing }
+ClySwitchQueryResultCommand class >> isAbstract [
+	^self = ClySwitchQueryResultCommand 
+]
+
 { #category : #activation }
 ClySwitchQueryResultCommand class >> queryBrowserToolbarActivation [
 	<classAnnotation>
