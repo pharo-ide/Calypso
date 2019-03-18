@@ -71,6 +71,16 @@ ClyClassDefinitionEditorToolMorph >> selectSourceNode: aCDNode [
 	textMorph setSelection: aCDNode sourceInterval
 ]
 
+{ #category : #'text selection' }
+ClyClassDefinitionEditorToolMorph >> selectVariableNamed: aString [ 
+	| classDefinition varNode |
+	classDefinition := self parseClassDefinition.
+	varNode := classDefinition children 
+		detect: [ :each | each isVariable and: [each name = aString]]
+		ifNone: [ ^self ].
+	self selectSourceNode: varNode
+]
+
 { #category : #accessing }
 ClyClassDefinitionEditorToolMorph >> selectedSourceNode [
 	| selectedInterval definitionNode |
