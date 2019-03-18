@@ -1,8 +1,8 @@
-Extension { #name : #CDSharedSlotNode }
+Extension { #name : #CDSharedVariableNode }
 
 { #category : #'*Calypso-SystemTools-Core' }
-CDSharedSlotNode >> asCalypsoVariableOf: aClass [ 
-	
+CDSharedVariableNode >> asCalypsoVariableOf: aClass [
+
 	| actualClass classVar |
 	actualClass := self classDefinitionNode existingClassIfAbsent: [
 		self error: 'Class is not exists yet'].
