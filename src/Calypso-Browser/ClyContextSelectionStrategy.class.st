@@ -1,5 +1,5 @@
 "
-I describe the way the context of browser selection should be active
+I describe the way the context of browser selection should be actived
 
 
 "
@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'targetItemType'
 	],
-	#category : 'Calypso-Browser-Contexts'
+	#category : #'Calypso-Browser-Contexts'
 }
 
 { #category : #'instance creation' }
