@@ -82,7 +82,7 @@ ClyDebugger >> selectMethod: aMethod [
 { #category : #navigation }
 ClyDebugger >> showStackOf: aProcess [
 	| stackQuery |
-	stackQuery := ClyActiveContextOfProcesses 
+	stackQuery := ClyActiveContextOfProcessesQuery 
 		from: (ClyProcessScope of: aProcess in: navigationEnvironment)
 		as: ClyProcessStack new.
 		

@@ -186,6 +186,12 @@ ClyQuery >> buildResult: aQueryResult [
 	self subclassResponsibility 
 ]
 
+{ #category : #testing }
+ClyQuery >> buildsDefaultResult [
+
+	^self retrievesItemsAs: self defaultResult class
+]
+
 { #category : #execution }
 ClyQuery >> checkEmptyResult [
 	self subclassResponsibility 

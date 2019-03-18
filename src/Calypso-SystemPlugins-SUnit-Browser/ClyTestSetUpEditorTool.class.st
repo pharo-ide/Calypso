@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'testClass'
 	],
-	#category : 'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Tools'
 }
 
 { #category : #activation }
@@ -77,7 +77,7 @@ ClyTestSetUpEditorTool >> setUpModelFromContext [
 ClyTestSetUpEditorTool >> setUpParametersFromModel [
 
 	editingMethod := testClass lookupSelector: #setUp.
-	self updateMethodTagsAndPackage
+	super setUpParametersFromModel
 ]
 
 { #category : #controlling }

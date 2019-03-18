@@ -11,14 +11,14 @@ BaselineOfCalypso >> baseline: spec [
 		spec 
 			baseline: 'ClassAnnotation' with: [
 				spec
-					repository: 'github://pharo-ide/ClassAnnotation:v0.4.0/src';
+					repository: 'github://pharo-ide/ClassAnnotation:v0.4.x/src';
 					loads: 'Core' ];
 			project: 'ClassAnnotationTests' copyFrom: 'ClassAnnotation' with: [
 				spec loads: 'Tests'];
 			baseline: 'Commander' with: [
-				spec repository: 'github://pharo-ide/Commander:v0.7.1/src' ];
+				spec repository: 'github://pharo-ide/Commander:v0.7.x/src' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://pharo-ide/SystemCommands:v0.10.1/src' ].			
+				spec repository: 'github://pharo-ide/SystemCommands:v0.11.x/src' ].			
 
 		spec 
 			package: #'Calypso-NavigationModel';
@@ -91,7 +91,7 @@ BaselineOfCalypso >> baseline: spec [
 				spec requires: #(#'Calypso-SystemQueries' ). ];
 				
 			package: #'Calypso-SystemPlugins-Reflectivity-Browser' with: [
-				spec requires: #(#'Calypso-SystemPlugins-Reflectivity-Queries' #'Calypso-SystemTools-FullBrowser' ) ];
+				spec requires: #(#'Calypso-SystemPlugins-Reflectivity-Queries' #'Calypso-SystemTools-FullBrowser' #'Calypso-SystemTools-QueryBrowser' ) ];
 			package: #'Calypso-SystemPlugins-Reflectivity-Browser-Tests' with: [
 				spec requires: #(#'Calypso-SystemPlugins-Reflectivity-Browser' ) ];
 			package: #'Calypso-SystemPlugins-Reflectivity-Queries' with: [

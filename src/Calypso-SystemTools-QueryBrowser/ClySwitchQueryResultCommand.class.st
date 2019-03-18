@@ -23,23 +23,3 @@ ClySwitchQueryResultCommand class >> queryBrowserToolbarActivation [
 	
 	^ClyToolbarActivation byItemOf: ClyQueryResultToolbarGroup for: ClyQueryBrowserContext 
 ]
-
-{ #category : #accessing }
-ClySwitchQueryResultCommand >> defaultMenuItemName [
-	^self requiredQueryResult shortName
-]
-
-{ #category : #execution }
-ClySwitchQueryResultCommand >> execute [
-	browser switchResultTo: self requiredQueryResult
-]
-
-{ #category : #testing }
-ClySwitchQueryResultCommand >> isAppliedToBrowser [
-	^browser showsQueryResultAs: self requiredQueryResult
-]
-
-{ #category : #accessing }
-ClySwitchQueryResultCommand >> requiredQueryResult [
-	self subclassResponsibility 
-]

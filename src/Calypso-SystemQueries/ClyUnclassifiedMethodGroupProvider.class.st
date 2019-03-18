@@ -15,5 +15,5 @@ ClyUnclassifiedMethodGroupProvider >> createMethodGroupFor: aMethodQuery from: a
 
 { #category : #'building groups' }
 ClyUnclassifiedMethodGroupProvider >> createMethodQueryFrom: aClassScope [
-	^ClyUnclassifiedMethods from: aClassScope
+	^ClyUnclassifiedMethodsQuery from: aClassScope
 ]

@@ -31,7 +31,7 @@ Class {
 		'browser',
 		'itemsView'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'instance creation' }
@@ -103,8 +103,20 @@ ClyBrowserSearchDialogWindow >> openOn: aQuery withTitle: dialogTitle thenDo: re
 	self title: dialogTitle.
 
 	browser openModal: self.
+
+	^["Following two lines should prevent special condition 
+	when filter background process modifies current table data source.
+	During this process it first closes existing data source 
+	and only after that it sets up new filtered data source"
+	itemsView table cleanupFilter. "it ensures that filter process will not affect table anymore" 
+	itemsView dataSource isClosed ifTrue: [  
+		"This branch is consiquence of corner case when filter logic closes current data source 
+		but does not yet set up new filtered data source.
+		In that case any query of items from closed data source will fail.
+		And to avoid it we simply abort search request"
+		CmdCommandAborted signal ].
 	
-	^[self cancelled ifTrue: [ CmdCommandAborted signal ].
+	self cancelled ifTrue: [ CmdCommandAborted signal ].
 	resultActionBlock value]	
 		ensure: [ itemsView closeDataSource]
 ]

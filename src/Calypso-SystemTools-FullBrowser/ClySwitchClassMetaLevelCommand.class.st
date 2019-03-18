@@ -21,7 +21,10 @@ Class {
 ClySwitchClassMetaLevelCommand class >> fullBrowserToolbarActivation [
 	<classAnnotation>
 	
-	^ClyToolbarActivation byItemOf: ClyMetaLevelToolbarGroup order: self toolbarOrder for: ClyClass asCalypsoItemContext  
+	^ClyToolbarActivation 
+		byItemOf: ClyMetaLevelToolbarGroup 
+		order: self toolbarOrder 
+		for: ClyClassContextOfFullBrowser 
 ]
 
 { #category : #testing }

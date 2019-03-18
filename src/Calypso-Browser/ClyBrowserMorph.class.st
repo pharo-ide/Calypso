@@ -125,7 +125,7 @@ Class {
 		'navigationEnvironment',
 		'systemScope'
 	],
-	#category : 'Calypso-Browser-UI'
+	#category : #'Calypso-Browser-UI'
 }
 
 { #category : #'tools registration' }
@@ -671,7 +671,8 @@ ClyBrowserMorph >> updateWindowTitle [
 		"in the case when window is managed as tab by window group
 		we should set up top group window label too"
 		(self ownerThatIsA: GroupWindowMorph) ifNotNil: [:group | 
-			self setWindowTitle: w labelString in: group window]
+			group window ifNotNil: [:mainWindow |
+				self setWindowTitle: w labelString in: mainWindow]]
 	]
 ]
 

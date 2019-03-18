@@ -62,7 +62,7 @@ ClyVariable class >> on: aVariableOrSlot visibleFrom: aClass [
 
 { #category : #queries }
 ClyVariable class >> queryClass [
-	^ClyAllVariables
+	^ClyAllVariablesQuery
 ]
 
 { #category : #queries }

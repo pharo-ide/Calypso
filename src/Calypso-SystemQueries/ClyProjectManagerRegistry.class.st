@@ -19,7 +19,7 @@ Class {
 	#instVars : [
 		'projectManagers'
 	],
-	#category : 'Calypso-SystemQueries-Domain'
+	#category : #'Calypso-SystemQueries-Domain'
 }
 
 { #category : #initialization }

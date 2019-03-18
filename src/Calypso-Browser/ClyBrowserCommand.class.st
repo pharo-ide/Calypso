@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'browser'
 	],
-	#category : 'Calypso-Browser-Commands'
+	#category : #'Calypso-Browser-Commands'
 }
 
 { #category : #testing }

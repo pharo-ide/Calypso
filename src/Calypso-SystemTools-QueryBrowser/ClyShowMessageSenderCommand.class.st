@@ -83,7 +83,7 @@ ClyShowMessageSenderCommand >> execute [
 	| selectors |
 	selectors := messages collect: [ :each | each selector].
 	
-	browser spawnQueryBrowserOn: (ClyMessageSenders ofAny: selectors)
+	browser spawnQueryBrowserOn: (ClyMessageSendersQuery ofAny: selectors)
 ]
 
 { #category : #execution }

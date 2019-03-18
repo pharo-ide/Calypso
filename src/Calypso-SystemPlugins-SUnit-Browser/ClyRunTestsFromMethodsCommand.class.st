@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'runTestCases'
 	],
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #activation }

@@ -49,8 +49,18 @@ Class {
 }
 
 { #category : #'user requests' }
-ClySystemBrowserContext >> confirmVariableRemoveFor: variables [
-	^tool confirmVariableRemoveFor: variables
+ClySystemBrowserContext >> confirmUnusedClasses: variables [
+	^tool confirmUnusedClasses: variables
+]
+
+{ #category : #'user requests' }
+ClySystemBrowserContext >> confirmUnusedVariables: variables [
+	^tool confirmUnusedVariables: variables
+]
+
+{ #category : #'user requests' }
+ClySystemBrowserContext >> confirmUnusedVariablesInDefiningClass: variables [
+	^tool confirmUnusedVariablesInDefiningClass: variables
 ]
 
 { #category : #'command execution' }
@@ -161,7 +171,7 @@ ClySystemBrowserContext >> requestMultipleVariables: queryTitle from: classes [
 
 	^tool searchDialog 
 		requestMultipleObjects: queryTitle 
-		from: ClyAllInstanceVariables sorted
+		from: ClyAllInstanceVariablesQuery sorted
 		inScope: (ClyClassScope ofAll: classes) withInheritedScope
 ]
 
@@ -173,14 +183,14 @@ ClySystemBrowserContext >> requestRemoveMethodStrategyFor: methods [
 { #category : #'user requests' }
 ClySystemBrowserContext >> requestSingleClass: queryTitle [
 
-	^tool searchDialog requestSingleObject: queryTitle from: ClyAllClasses sorted
+	^tool searchDialog requestSingleObject: queryTitle from: ClyAllClassesQuery sorted
 ]
 
 { #category : #'user requests' }
 ClySystemBrowserContext >> requestSingleClass: queryTitle from: classCollection [
 	^tool searchDialog 
 		requestSingleObject: queryTitle
-		from: ClyAllClasses hierarchical 
+		from: ClyAllClassesQuery hierarchical 
 		inScope: (ClyClassScope ofAll: classCollection)
 ]
 
@@ -213,7 +223,7 @@ ClySystemBrowserContext >> requestSingleMethodTag: queryTitle suggesting: sugges
 
 { #category : #'user requests' }
 ClySystemBrowserContext >> requestSinglePackage: queryTitle [
-	^tool searchDialog requestSingleObject: queryTitle from: ClyAllPackages sorted
+	^tool searchDialog requestSingleObject: queryTitle from: ClyAllPackagesQuery sorted
 ]
 
 { #category : #'selection-classes' }

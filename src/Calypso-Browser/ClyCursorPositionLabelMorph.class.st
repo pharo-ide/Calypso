@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'labelMorph'
 	],
-	#category : 'Calypso-Browser-TextEditors'
+	#category : #'Calypso-Browser-TextEditors'
 }
 
 { #category : #controlling }

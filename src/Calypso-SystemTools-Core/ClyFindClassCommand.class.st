@@ -24,7 +24,7 @@ ClyFindClassCommand >> execute [
 
 	| class |
 	class := browser searchDialog 
-		requestSingleObject: 'Choose class' from: ClyAllClasses sorted.
+		requestSingleObject: 'Choose class' from: ClyAllClassesQuery sorted.
 	
 	browser selectClass: class
 ]

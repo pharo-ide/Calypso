@@ -20,7 +20,7 @@ Internal Representation and Key Implementation Points.
 Class {
 	#name : #ClyProjectChildItem,
 	#superclass : #Object,
-	#category : 'Calypso-SystemQueries-Domain'
+	#category : #'Calypso-SystemQueries-Domain'
 }
 
 { #category : #'item convertation' }
@@ -38,7 +38,7 @@ ClyProjectChildItem class >> defaultSortFunctionForCalypso [
 
 { #category : #queries }
 ClyProjectChildItem class >> prepareClassQueriesFrom: projectItems in: aNavigationEnvironment [ 
-	^{ClyAllClasses from: ClyProjectScope ofAll: projectItems in: aNavigationEnvironment }
+	^{ClyAllClassesQuery from: ClyProjectScope ofAll: projectItems in: aNavigationEnvironment }
 ]
 
 { #category : #queries }

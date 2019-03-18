@@ -14,8 +14,8 @@ Class {
 ClyGroupedInstanceVariables >> addClassVariableGroup [
 
 	| variableQuery methodQuery group |
-	variableQuery := ClyAllClassVariables from: self queryScope.
-	methodQuery := ClyVariableReferences 
+	variableQuery := ClyAllClassVariablesQuery from: self queryScope.
+	methodQuery := ClyVariableReferencesQuery 
 		from: self queryScope asLocalClassScope
 		toVariablesFrom: variableQuery.
 	

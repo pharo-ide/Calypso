@@ -4,7 +4,7 @@ I am a command to run all tests available in given data source
 Class {
 	#name : #ClyRunAllTestsFromMethodDataSourceCommand,
 	#superclass : #ClyRunTestsFromMethodDataSourceCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #execution }
@@ -14,7 +14,7 @@ ClyRunAllTestsFromMethodDataSourceCommand >> buildTestSuite [
 	suite := TestSuite new.
 	
 	self testMethodsDo: [ :eachMethod |
-			suite addTest: (eachMethod origin selector: eachMethod selector)].
+			suite addTest: (eachMethod methodClass selector: eachMethod selector)].
 
 	^suite
 ]

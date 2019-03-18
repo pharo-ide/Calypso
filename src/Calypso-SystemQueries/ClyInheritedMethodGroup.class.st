@@ -31,7 +31,7 @@ ClyInheritedMethodGroup class >> priority [
 { #category : #'instance creation' }
 ClyInheritedMethodGroup class >> withMethodQuery: aMethodQuery andClassesInheritedFrom: aClassScope [
 	| subgroupsQuery |
-	subgroupsQuery := ClyAllClasses 
+	subgroupsQuery := ClyAllClassesQuery 
 		from: aClassScope asInheritedScope, aClassScope asLocalClassScope
 		as: ClyMethodVisibilityGroups withDefaultHierarchy.		
 				
@@ -43,7 +43,7 @@ ClyInheritedMethodGroup class >> withMethodQuery: aMethodQuery andClassesInherit
 ClyInheritedMethodGroup class >> withMethodsInheritedFrom: aClassScope [
 
 	^self  
-		withMethodQuery: (ClyAllMethods from: aClassScope asInheritedScope)
+		withMethodQuery: (ClyAllMethodsQuery from: aClassScope asInheritedScope)
 		andClassesInheritedFrom: aClassScope
 ]
 
@@ -51,7 +51,7 @@ ClyInheritedMethodGroup class >> withMethodsInheritedFrom: aClassScope [
 ClyInheritedMethodGroup class >> withMethodsOf: aClass toShowIn: aClassScope [
 	
 	| methodQuery |
-	methodQuery := ClyAllMethods 
+	methodQuery := ClyAllMethodsQuery 
 		from: (aClassScope asScope: ClyClassScope of: aClass).
 				
 	^(self named: aClass name on: methodQuery)
@@ -65,7 +65,8 @@ ClyInheritedMethodGroup >> includesMethod: aMethod [
 	shows bad logic behind #retrievesItem: method. It do not take into account scope of the query.
 	It can be addressed in future. 
 	Now we just think that argument here could not be inherited method. So the group never include it"
-	^false
+	
+	^ true
 ]
 
 { #category : #operations }

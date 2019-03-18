@@ -42,6 +42,21 @@ ClySourceCodeContext class >> for: anEditorTool selectedNode: aProgramNode [
 		selectedSourceNode: aProgramNode
 ]
 
+{ #category : #'user requests' }
+ClySourceCodeContext >> confirmUnusedClasses: variables [
+	^self browser confirmUnusedClasses: variables
+]
+
+{ #category : #'user requests' }
+ClySourceCodeContext >> confirmUnusedVariables: variables [
+	^self browser confirmUnusedVariables: variables
+]
+
+{ #category : #'user requests' }
+ClySourceCodeContext >> confirmUnusedVariablesInDefiningClass: variables [
+	^self browser confirmUnusedVariablesInDefiningClass: variables
+]
+
 { #category : #'command execution' }
 ClySourceCodeContext >> executeCommand: aCommand by: aCommandActivator [
 
@@ -112,7 +127,7 @@ ClySourceCodeContext >> isVariableSelected [
 	
 	binding := node binding.
 	
-	^binding isClassVariable | binding isInstance | binding isGlobalVariable
+	^binding isClassVariable | binding isInstance | binding isGlobalVariable | binding isUndeclared
 ]
 
 { #category : #selection }

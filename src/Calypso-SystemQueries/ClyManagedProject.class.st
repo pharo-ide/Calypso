@@ -19,7 +19,7 @@ Internal Representation and Key Implementation Points.
 Class {
 	#name : #ClyManagedProject,
 	#superclass : #ClyProjectChildItem,
-	#category : 'Calypso-SystemQueries-Domain'
+	#category : #'Calypso-SystemQueries-Domain'
 }
 
 { #category : #testing }
@@ -43,5 +43,5 @@ ClyManagedProject class >> for: aProject named: aString managedBy: aPackageManag
 
 { #category : #'as yet unclassified' }
 ClyManagedProject class >> prepareClassQueriesFrom: projects in: aNavigationEnvironment [ 
-	^{ClyAllClasses from: ClyProjectScope ofAll: projects in: aNavigationEnvironment }
+	^{ClyAllClassesQuery from: ClyProjectScope ofAll: projects in: aNavigationEnvironment }
 ]

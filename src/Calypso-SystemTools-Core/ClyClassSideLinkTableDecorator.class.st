@@ -44,6 +44,11 @@ ClyClassSideLinkTableDecorator class >> methodGroupDecorationStrategy [
 ]
 
 { #category : #decoration }
+ClyClassSideLinkTableDecorator class >> priority [
+	^100000
+]
+
+{ #category : #decoration }
 ClyClassSideLinkTableDecorator class >> wantsDecorateTableCellOf: aDataSourceItem [
 	
 	| tagName |

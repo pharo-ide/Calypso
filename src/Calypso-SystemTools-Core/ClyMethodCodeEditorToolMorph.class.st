@@ -16,7 +16,7 @@ Class {
 	#instVars : [
 		'editingMethod'
 	],
-	#category : 'Calypso-SystemTools-Core-Editors-Methods'
+	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
 { #category : #activation }
@@ -210,6 +210,12 @@ ClyMethodCodeEditorToolMorph >> findSourceNodeAt: aCursorPoint [
 	
 	ast := self editingMethod astForStylingInCalypso.	
 	^(ast bestNodeFor: (startPosition to: endPosition)) ifNil: [ ast ]
+]
+
+{ #category : #testing }
+ClyMethodCodeEditorToolMorph >> isCommandAvailable: aCommand [ 
+
+	^ aCommand canBeExecutedInCodeMethodEditor: self
 ]
 
 { #category : #testing }

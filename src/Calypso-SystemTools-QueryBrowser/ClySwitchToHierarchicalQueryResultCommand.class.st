@@ -9,7 +9,17 @@ Class {
 	#category : #'Calypso-SystemTools-QueryBrowser-Commands-Controlling'
 }
 
+{ #category : #accessing }
+ClySwitchToHierarchicalQueryResultCommand >> defaultMenuItemName [
+	^'Hier.'
+]
+
 { #category : #execution }
-ClySwitchToHierarchicalQueryResultCommand >> requiredQueryResult [
-	^ClyHierarchicalSystemItems new
+ClySwitchToHierarchicalQueryResultCommand >> execute [
+	browser switchToHierarchicalResult
+]
+
+{ #category : #testing }
+ClySwitchToHierarchicalQueryResultCommand >> isAppliedToBrowser [
+	^browser showsFlatResult not
 ]

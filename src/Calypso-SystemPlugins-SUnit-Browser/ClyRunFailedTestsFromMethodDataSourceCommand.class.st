@@ -4,7 +4,7 @@ I am a command to run all failed tests available in given data source
 Class {
 	#name : #ClyRunFailedTestsFromMethodDataSourceCommand,
 	#superclass : #ClyRunTestsFromMethodDataSourceCommand,
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #testing }
@@ -29,7 +29,7 @@ ClyRunFailedTestsFromMethodDataSourceCommand >> buildTestSuite [
 	
 	self testMethodsDo: [ :eachMethod |
 		eachMethod isFailedTest | eachMethod isErrorTest ifTrue: [ 
-			suite addTest: (eachMethod origin selector: eachMethod selector)]].
+			suite addTest: (eachMethod methodClass selector: eachMethod selector)]].
 
 	^suite
 ]

@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'methodDataSource'
 	],
-	#category : #'Calypso-SystemPlugins-SUnit-Browser'
+	#category : #'Calypso-SystemPlugins-SUnit-Browser-Commands'
 }
 
 { #category : #testing }
@@ -79,7 +79,7 @@ ClyRunTestsFromMethodDataSourceCommand >> readParametersFromContext: aBrowserCon
 ClyRunTestsFromMethodDataSourceCommand >> testMethodsDo: aBlock [
 
 	methodDataSource queryResult rawItemsDo: [ :eachMethod | 
-		(eachMethod isTestMethod and: [ eachMethod origin isAbstract not]) 
+		(eachMethod isTestMethod and: [ eachMethod methodClass isAbstract not]) 
 			ifTrue: [ aBlock value: eachMethod]]
 ]
 
