@@ -14,6 +14,11 @@ Class {
 	#category : #'Calypso-SystemPlugins-Reflectivity-Browser-Commands'
 }
 
+{ #category : #testing }
+ClyRemoveMetalinkCommand class >> isAbstract [
+	^self = ClyRemoveMetalinkCommand 
+]
+
 { #category : #activation }
 ClyRemoveMetalinkCommand class >> methodBrowserTableIconActivation [
 	<classAnnotation>

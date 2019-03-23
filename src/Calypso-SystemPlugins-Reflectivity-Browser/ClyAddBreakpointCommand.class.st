@@ -23,6 +23,11 @@ ClyAddBreakpointCommand class >> contextMenuOrder [
 	^1
 ]
 
+{ #category : #testing }
+ClyAddBreakpointCommand class >> isAbstract [
+	^self = ClyAddBreakpointCommand
+]
+
 { #category : #execution }
 ClyAddBreakpointCommand >> applyBreakpointCondition: aBreakpoint [
 	self subclassResponsibility 

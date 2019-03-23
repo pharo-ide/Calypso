@@ -35,6 +35,11 @@ ClyMethodEditorCommand class >> canBeExecutedInMethodEditor: aTool [
 	^ false
 ]
 
+{ #category : #testing }
+ClyMethodEditorCommand class >> isAbstract [
+	^self = ClyMethodEditorCommand 
+]
+
 { #category : #activation }
 ClyMethodEditorCommand class >> sourceCodeMenuActivation [
 	<classAnnotation>

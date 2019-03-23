@@ -13,6 +13,11 @@ Class {
 	#category : #'Calypso-Browser-Commands'
 }
 
+{ #category : #testing }
+ClyBrowserCommand class >> isAbstract [
+	^self = ClyBrowserCommand 
+]
+
 { #category : #accessing }
 ClyBrowserCommand >> browser [
 	^ browser

@@ -31,6 +31,11 @@ Class {
 	#category : #'Calypso-Browser-TextEditors'
 }
 
+{ #category : #testing }
+ClyTextEditorToolMorph class >> isAbstract [
+	^self = ClyTextEditorToolMorph 
+]
+
 { #category : #accessing }
 ClyTextEditorToolMorph >> activationPriorityInNonActiveContext [ 
 
@@ -265,11 +270,6 @@ ClyTextEditorToolMorph >> selectAnyString: strings [
 
 { #category : #'rubric interaction model' }
 ClyTextEditorToolMorph >> selectedClassOrMetaClass [
-	^nil
-]
-
-{ #category : #'smart suggestions support' }
-ClyTextEditorToolMorph >> selectedMessage [
 	^nil
 ]
 

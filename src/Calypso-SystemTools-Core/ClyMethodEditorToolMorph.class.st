@@ -33,6 +33,11 @@ Class {
 	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
+{ #category : #testing }
+ClyMethodEditorToolMorph class >> isAbstract [
+	^self = ClyMethodEditorToolMorph 
+]
+
 { #category : #accessing }
 ClyMethodEditorToolMorph class >> tabOrder [
 	^20
@@ -78,6 +83,11 @@ ClyMethodEditorToolMorph >> chooseClassForNewMethodIfNone: aBlock [
 			from: (ClyAllClassesQuery as: ClyMethodVisibilityProvider defaultHierarchy asQueryResult) 
 			inScope: (ClyClassScope ofAll: targetClasses)]
 		on: CmdCommandAborted do: [:err | aBlock value ]
+]
+
+{ #category : #accessing }
+ClyMethodEditorToolMorph >> editingClass [ 
+	^self methodClass
 ]
 
 { #category : #accessing }

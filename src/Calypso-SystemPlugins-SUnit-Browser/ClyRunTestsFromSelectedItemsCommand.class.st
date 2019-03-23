@@ -50,6 +50,11 @@ ClyRunTestsFromSelectedItemsCommand class >> fullBrowserTableIconActivation [
 	^ClyTableIconCommandActivation priority: 1000 for: self contextClass
 ]
 
+{ #category : #testing }
+ClyRunTestsFromSelectedItemsCommand class >> isAbstract [
+	^self = ClyRunTestsFromSelectedItemsCommand 
+]
+
 { #category : #accessing }
 ClyRunTestsFromSelectedItemsCommand >> defaultMenuItemName [ 
 	^'Run tests'

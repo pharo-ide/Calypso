@@ -111,8 +111,9 @@ ClyInheritanceAnalysisEnvironmentPlugin >> detachFromSystem [
 ClyInheritanceAnalysisEnvironmentPlugin >> doesClassCache: classCache includesOverridesOf: aClass [
 
 	classCache keysDo: [ :eachClass | 
-		((eachClass includesBehavior: aClass) or: [ aClass includesBehavior: eachClass ])
-			ifTrue: [ ^true ]].
+		((eachClass instanceSide includesBehavior: aClass instanceSide) 
+			or: [ aClass instanceSide includesBehavior: eachClass instanceSide ])
+				ifTrue: [ ^true ]].
 		
 	^false
 ]

@@ -27,6 +27,11 @@ ClySwitchClassMetaLevelCommand class >> fullBrowserToolbarActivation [
 		for: ClyClassContextOfFullBrowser 
 ]
 
+{ #category : #testing }
+ClySwitchClassMetaLevelCommand class >> isAbstract [
+	^self = ClySwitchClassMetaLevelCommand 
+]
+
 { #category : #activation }
 ClySwitchClassMetaLevelCommand class >> toolbarOrder [
 	<classAnnotationDependency>

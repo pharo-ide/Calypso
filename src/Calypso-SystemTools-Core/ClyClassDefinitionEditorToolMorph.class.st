@@ -23,6 +23,13 @@ ClyClassDefinitionEditorToolMorph >> applyChanges [
 	
 ]
 
+{ #category : #contexts }
+ClyClassDefinitionEditorToolMorph >> createTextContext [
+	^self selectedSourceNode
+		ifNil: [super createTextContext]
+		ifNotNil: [ :astNode | ClySourceCodeContext for: self selectedNode: astNode]
+]
+
 { #category : #building }
 ClyClassDefinitionEditorToolMorph >> decorateContainerTab [
 	| title |
@@ -52,6 +59,27 @@ ClyClassDefinitionEditorToolMorph >> fillStatusBar [
 	super fillStatusBar.
 	
 	statusBar addCommandItem: (ClySlotClassDefinitionSwitchMorph for: self)
+]
+
+{ #category : #'selecting text' }
+ClyClassDefinitionEditorToolMorph >> selectSourceNode: aCDNode [ 
+	textMorph setSelection: aCDNode sourceInterval
+]
+
+{ #category : #'selecting text' }
+ClyClassDefinitionEditorToolMorph >> selectVariableNamed: aString [ 
+	| classDefinition varNode |
+	classDefinition := self parseClassDefinition.
+	varNode := classDefinition children 
+		detect: [ :each | each isVariable and: [each name = aString]]
+		ifNone: [ ^self ].
+	self selectSourceNode: varNode
+]
+
+{ #category : #accessing }
+ClyClassDefinitionEditorToolMorph >> selectedSourceNode [
+	self flag: 'Future class parser should be used here'.
+	^nil
 ]
 
 { #category : #initialization }

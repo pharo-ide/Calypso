@@ -45,6 +45,11 @@ ClySystemEnvironmentPlugin class >> enableSlowPlugins [
 ]
 
 { #category : #testing }
+ClySystemEnvironmentPlugin class >> isAbstract [
+	^self = ClySystemEnvironmentPlugin 
+]
+
+{ #category : #testing }
 ClySystemEnvironmentPlugin class >> isAutoActivated [
 	(SlowPluginsAreDisabled = true and: [ self isSlow ]) ifTrue: [ ^false ].
 	

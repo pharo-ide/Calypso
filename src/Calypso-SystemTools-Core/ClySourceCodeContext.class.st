@@ -105,9 +105,8 @@ ClySourceCodeContext >> isMessageSelected [
 ]
 
 { #category : #testing }
-ClySourceCodeContext >> isMethodSelected [
-
-	^self selectedSourceNode isMethod
+ClySourceCodeContext >> isMethodSelected [ 
+	^false
 ]
 
 { #category : #testing }
@@ -143,11 +142,6 @@ ClySourceCodeContext >> lastSelectedMessage [
 ]
 
 { #category : #selection }
-ClySourceCodeContext >> lastSelectedMethod [
-	^self selectedMethod
-]
-
-{ #category : #selection }
 ClySourceCodeContext >> lastSelectedSourceNode [
 
 	^self selectedSourceNode
@@ -157,11 +151,6 @@ ClySourceCodeContext >> lastSelectedSourceNode [
 ClySourceCodeContext >> lastSelectedVariable [
 
 	^self selectedVariable 
-]
-
-{ #category : #accessing }
-ClySourceCodeContext >> methodEditor [
-	^tool
 ]
 
 { #category : #'refactoring support' }
@@ -192,16 +181,6 @@ ClySourceCodeContext >> selectedMessages [
 	^{self selectedMessage}
 ]
 
-{ #category : #selection }
-ClySourceCodeContext >> selectedMethod [
-	^tool editingMethod
-]
-
-{ #category : #selection }
-ClySourceCodeContext >> selectedMethods [
-	^{self selectedMethod}
-]
-
 { #category : #accessing }
 ClySourceCodeContext >> selectedSourceNode [
 	^selectedSourceNode
@@ -215,21 +194,13 @@ ClySourceCodeContext >> selectedSourceNode: anObject [
 { #category : #selection }
 ClySourceCodeContext >> selectedVariable [
 
-	^self selectedSourceNode binding asCalypsoVariableOf: tool methodClass
+	^self selectedSourceNode binding asCalypsoVariableOf: tool editingClass
 ]
 
 { #category : #selection }
 ClySourceCodeContext >> selectedVariables [
 
 	^{self selectedVariable}
-]
-
-{ #category : #'tool controlling' }
-ClySourceCodeContext >> showMessage: aMessageDescription renamedTo: newSelector [
-	"here we expect only messages which was created from ast-nodes"
-	tool editingMethod selector == aMessageDescription selector 
-		ifTrue: [ tool switchToMethod: tool methodClass >> newSelector]
-		ifFalse: [ tool selectAnySelector: { newSelector } ]
 ]
 
 { #category : #'tool controlling' }

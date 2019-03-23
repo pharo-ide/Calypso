@@ -107,8 +107,13 @@ ClyClassScript >> implementorMethod: anObject [
 	implementorMethod := anObject
 ]
 
+{ #category : #accessing }
+ClyClassScript >> implementorSelector [
+	^ implementorMethod selector
+]
+
 { #category : #testing }
 ClyClassScript >> isImplementedByClass: aClass [
 	
-	^ aClass instanceSide isKindOf: self implementorClass
+	^ aClass instanceSide respondsTo: self implementorSelector
 ]

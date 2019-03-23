@@ -15,6 +15,13 @@ ClyVariableContextOfFullBrowser class >> selectionStrategy [
 		priority: 1000 "variable context should be with more priority than basic method group context"
 ]
 
+{ #category : #'selection strategy' }
+ClyVariableContextOfFullBrowser class >> selectionStrategy2 [
+	<classAnnotation>
+	
+	^(ClyContextSelectionStrategy for: ClyFullBrowser selectionType: ClyVariable)
+]
+
 { #category : #'selection-variables' }
 ClyVariableContextOfFullBrowser >> isGlobalVariableSelected [
 	^false

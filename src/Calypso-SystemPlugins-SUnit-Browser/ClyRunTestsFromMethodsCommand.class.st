@@ -21,11 +21,6 @@ ClyRunTestsFromMethodsCommand class >> contextClass [
 	^ClyMethod asCalypsoItemContext 
 ]
 
-{ #category : #testing }
-ClyRunTestsFromMethodsCommand class >> isAbstract [
-	^false
-]
-
 { #category : #execution }
 ClyRunTestsFromMethodsCommand >> defaultMenuIcon [
 

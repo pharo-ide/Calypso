@@ -20,6 +20,11 @@ ClyMethodGroupCommand class >> canBeExecutedInContext: aToolContext [
 	^aToolContext isMethodGroupSelected
 ]
 
+{ #category : #testing }
+ClyMethodGroupCommand class >> isAbstract [
+	^self = ClyMethodGroupCommand 
+]
+
 { #category : #accessing }
 ClyMethodGroupCommand >> methodGroups [
 	^ methodGroups

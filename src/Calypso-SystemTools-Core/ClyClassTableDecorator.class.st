@@ -16,3 +16,8 @@ ClyClassTableDecorator class >> decorationStrategy [
 	
 	^ClyTableDecorationStrategy for: ClyClass asCalypsoItemContext
 ]
+
+{ #category : #testing }
+ClyClassTableDecorator class >> isAbstract [
+	^self = ClyClassTableDecorator 
+]

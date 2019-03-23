@@ -18,5 +18,5 @@ SycChangeMessageSignatureCommand class >> methodMenuActivation [
 SycChangeMessageSignatureCommand class >> sourceCodeMenuActivation [
 	<classAnnotation>
 	
-	^SycSourceCodeMenuActivation byRootGroupItemOrder: 1.3 for: ClySourceCodeContext
+	^SycSourceCodeMenuActivation byRootGroupItemOrder: 1.3 for: ClyMethodSourceCodeContext
 ]
