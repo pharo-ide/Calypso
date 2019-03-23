@@ -9,6 +9,7 @@ smalltalk_edge:
 jobs:
   include:
     - stage: Versions
+      smalltalk: Pharo-8.0
       smalltalk: Pharo-7.0
     - smalltalk: Pharo-6.1
       smalltalk_config: .smalltalk-pharo61.ston
