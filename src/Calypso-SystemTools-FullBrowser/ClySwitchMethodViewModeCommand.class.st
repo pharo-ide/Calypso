@@ -24,6 +24,11 @@ ClySwitchMethodViewModeCommand class >> fullBrowserToolbarActivation [
 	^ClyToolbarActivation byItemOf: ClyMethodViewToolbarGroup for: ClyClassContextOfFullBrowser 
 ]
 
+{ #category : #testing }
+ClySwitchMethodViewModeCommand class >> isAbstract [
+	^self = ClySwitchMethodViewModeCommand 
+]
+
 { #category : #accessing }
 ClySwitchMethodViewModeCommand >> defaultMenuItemName [
 	^self methodGroupType shortName

@@ -31,6 +31,11 @@ Class {
 	#category : #'Calypso-Browser-TextEditors'
 }
 
+{ #category : #testing }
+ClyTextEditorToolMorph class >> isAbstract [
+	^self = ClyTextEditorToolMorph 
+]
+
 { #category : #accessing }
 ClyTextEditorToolMorph >> activationPriorityInNonActiveContext [ 
 

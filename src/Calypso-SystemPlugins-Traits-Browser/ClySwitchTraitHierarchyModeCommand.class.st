@@ -15,6 +15,11 @@ Class {
 	#category : #'Calypso-SystemPlugins-Traits-Browser'
 }
 
+{ #category : #testing }
+ClySwitchTraitHierarchyModeCommand class >> isAbstract [
+	^self = ClySwitchTraitHierarchyModeCommand 
+]
+
 { #category : #execution }
 ClySwitchTraitHierarchyModeCommand >> execute [
 	| classScope |

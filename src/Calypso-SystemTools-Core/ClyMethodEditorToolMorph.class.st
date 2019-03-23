@@ -33,6 +33,11 @@ Class {
 	#category : #'Calypso-SystemTools-Core-Editors-Methods'
 }
 
+{ #category : #testing }
+ClyMethodEditorToolMorph class >> isAbstract [
+	^self = ClyMethodEditorToolMorph 
+]
+
 { #category : #accessing }
 ClyMethodEditorToolMorph class >> tabOrder [
 	^20

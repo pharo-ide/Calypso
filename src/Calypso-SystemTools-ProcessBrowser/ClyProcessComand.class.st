@@ -18,6 +18,11 @@ ClyProcessComand class >> for: processes [
 		processes: processes
 ]
 
+{ #category : #testing }
+ClyProcessComand class >> isAbstract [
+	^self = ClyProcessComand 
+]
+
 { #category : #execution }
 ClyProcessComand >> applyResultInContext: aToolContext [
 	super applyResultInContext: aToolContext.

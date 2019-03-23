@@ -19,6 +19,11 @@ ClyDebugProcessComand class >> for: aProcessStack [
 		process: aProcessStack
 ]
 
+{ #category : #testing }
+ClyDebugProcessComand class >> isAbstract [
+	^self = ClyDebugProcessComand 
+]
+
 { #category : #execution }
 ClyDebugProcessComand >> applyResultInContext: aToolContext [
 	super applyResultInContext: aToolContext.

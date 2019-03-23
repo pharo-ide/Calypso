@@ -31,6 +31,11 @@ ClyBrowserNavigationCommand class >> defaultShortcut [
 	self subclassResponsibility 
 ]
 
+{ #category : #testing }
+ClyBrowserNavigationCommand class >> isAbstract [
+	^self = ClyBrowserNavigationCommand
+]
+
 { #category : #activation }
 ClyBrowserNavigationCommand class >> textEditorShortcutActivation [
 	<classAnnotation>

@@ -33,6 +33,11 @@ ClyCritiqueCommand class >> criticTableIconActivation [
 	^ClyTableIconCommandActivation for: ReAbstractCritique asCalypsoItemContext 
 ]
 
+{ #category : #testing }
+ClyCritiqueCommand class >> isAbstract [
+	^self = ClyCritiqueCommand 
+]
+
 { #category : #accessing }
 ClyCritiqueCommand >> analyzedObject [
 	^ analyzedObject

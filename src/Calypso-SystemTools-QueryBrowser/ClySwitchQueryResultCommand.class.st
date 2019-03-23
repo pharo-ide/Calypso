@@ -13,7 +13,7 @@ Class {
 }
 
 { #category : #testing }
-ClySwitchQueryResultCommand class >> isAbstract [ 	
+ClySwitchQueryResultCommand class >> isAbstract [
 	^self = ClySwitchQueryResultCommand 
 ]
 

@@ -28,11 +28,6 @@ ClyMethodCodeEditorToolMorph class >> browserTabActivation [
 ]
 
 { #category : #testing }
-ClyMethodCodeEditorToolMorph class >> isAbstract [
-	^false
-]
-
-{ #category : #testing }
 ClyMethodCodeEditorToolMorph class >> shouldBeActivatedInContext: aBrowserContext [
 	^aBrowserContext isMethodSelected
 ]

@@ -25,6 +25,11 @@ Class {
 	#category : #'Calypso-SystemPlugins-InheritanceAnalysis-Browser'
 }
 
+{ #category : #testing }
+ClyShowLocalImplementorsCommand class >> isAbstract [
+	^self = ClyShowLocalImplementorsCommand 
+]
+
 { #category : #execution }
 ClyShowLocalImplementorsCommand >> createInheritanceScopeFrom: classes [
 
