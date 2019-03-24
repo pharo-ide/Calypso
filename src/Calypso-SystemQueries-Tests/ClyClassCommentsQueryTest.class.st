@@ -61,7 +61,7 @@ ClyClassCommentsQueryTest >> testFromClassScope [
 ClyClassCommentsQueryTest >> testFromClassWithoutCommentWhenPatternSatisfiesCommentTemplate [
 
 	| noCommentClass substring |
-	noCommentClass := self class superclass.
+	noCommentClass := Object newAnonymousSubclass.
 	self deny: noCommentClass hasComment.
 	substring := noCommentClass comment copyFrom: 4 to: 30.
 	
