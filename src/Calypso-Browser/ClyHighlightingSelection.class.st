@@ -20,9 +20,9 @@ ClyHighlightingSelection >> ensureVisibleLastItem [
 { #category : #initialization }
 ClyHighlightingSelection >> setUpSelectedRows: indexes in: aTableMorph silently: silentSelection [
 	silentSelection
-		ifTrue: [ aTableMorph basicHighlightRowIndexes: indexes]
+		ifTrue: [ aTableMorph basicHighlightIndexes: indexes]
 		ifFalse: [ 
 			"we should prevent ignoring new selection if indexes are still same"
-			aTableMorph basicHighlightRowIndexes: #(-1000). 
-			aTableMorph highlightRowIndexes: indexes ]
+			aTableMorph basicHighlightIndexes: #(-1000). 
+			aTableMorph highlightIndexes: indexes ]
 ]
