@@ -63,6 +63,11 @@ ClyOldMessageBrowserAdapter class >> browse: methods title: aString autoSelect: 
 ]
 
 { #category : #opening }
+ClyOldMessageBrowserAdapter class >> browseClasses: classes [ 
+	^ClyQueryBrowser browseClasses: classes
+]
+
+{ #category : #opening }
 ClyOldMessageBrowserAdapter class >> browseImplementorsOf: aSymbol [ 
 	^ClyQueryBrowser browseImplementorsOf: aSymbol 
 

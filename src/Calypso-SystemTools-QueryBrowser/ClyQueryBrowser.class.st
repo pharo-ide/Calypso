@@ -47,6 +47,11 @@ Class {
 }
 
 { #category : #opening }
+ClyQueryBrowser class >> browseClasses: classes [
+	^self openOn: (ClyConstantQuery returning: classes)
+]
+
+{ #category : #opening }
 ClyQueryBrowser class >> browseImplementorsOf: aSymbol [
 	^self openOn: (ClyMessageImplementorsQuery of: aSymbol)
 
