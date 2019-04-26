@@ -34,6 +34,11 @@ ClyProcessBrowser >> chooseClassForEditorOfMethod: aMethod [
 ]
 
 { #category : #accessing }
+ClyProcessBrowser >> chooseClassesForNewMethod: aMethod [
+	^ self chooseClassForEditorOfMethod: aMethod
+]
+
+{ #category : #accessing }
 ClyProcessBrowser >> contextSelection [
 	^stackView selection
 ]
