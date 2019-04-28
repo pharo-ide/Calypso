@@ -652,6 +652,16 @@ ClyBrowserMorph >> tabManager [
 	^tabManager 
 ]
 
+{ #category : #'tools support' }
+ClyBrowserMorph >> toggleFullWindowTabs [
+	
+	| tabMorph |
+	tabMorph := tabManager tabMorph.
+	(submorphs includes: tabMorph ) 
+		ifFalse: [ self addMorph: tabMorph fullFrame: LayoutFrame identity]
+		ifTrue: [ toolPanel addMorphBack: tabMorph ]
+]
+
 { #category : #accessing }
 ClyBrowserMorph >> toolbar [
 	^toolbar
