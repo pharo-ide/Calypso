@@ -27,6 +27,11 @@ ClyDebugger >> chooseClassForEditorOfMethod: aMethod [
 ]
 
 { #category : #accessing }
+ClyDebugger >> chooseClassesForNewMethod: aMethod [
+	^ self chooseClassForEditorOfMethod: aMethod
+]
+
+{ #category : #accessing }
 ClyDebugger >> contextSelection [
 	^stackView selection
 ]
