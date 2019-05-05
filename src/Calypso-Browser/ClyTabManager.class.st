@@ -96,6 +96,7 @@ ClyTabManager >> addTool: aBrowserTool [
 	tab := aBrowserTool createTab.
 	tab when: #tabDeleted send: #tabDeleted: to: self.
 	tab when: #tabSelected send: #tabSelected: to: self.
+	tab label on: #doubleClick send: #toggleFullWindowTabs to: browser.
 	tabMorph addTab: tab
 ]
 
