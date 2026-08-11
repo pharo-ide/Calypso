@@ -1,65 +1,77 @@
 Class {
-	#name : #ClyProcessBrowserContext,
-	#superclass : #ClySystemBrowserContext,
-	#category : 'Calypso-SystemTools-ProcessBrowser'
+	#name : 'ClyProcessBrowserContext',
+	#superclass : 'ClySystemBrowserContext',
+	#category : 'Calypso-SystemTools-ProcessBrowser',
+	#package : 'Calypso-SystemTools-ProcessBrowser'
 }
 
-{ #category : #'selection-contexts' }
+{ #category : 'selection-contexts' }
 ClyProcessBrowserContext >> isContextSelected [
-	^self selectedContextItems notEmpty 
+
+	^ self selectedContextItems notEmpty
 ]
 
-{ #category : #'selection-processes' }
+{ #category : 'selection-processes' }
 ClyProcessBrowserContext >> isProcessSelected [
-	^self selectedProcessItems notEmpty
+
+	^ self selectedProcessItems notEmpty
 ]
 
-{ #category : #'selection-contexts' }
+{ #category : 'selection-contexts' }
 ClyProcessBrowserContext >> lastSelectedContext [
-	^self lastSelectedObjectIn: self selectedContexts
+
+	^ self lastSelectedObjectIn: self selectedContexts
 ]
 
-{ #category : #'selection-processes' }
+{ #category : 'selection-processes' }
 ClyProcessBrowserContext >> lastSelectedProcess [
-	^self lastSelectedObjectIn: self selectedProcesses
+
+	^ self lastSelectedObjectIn: self selectedProcesses
 ]
 
-{ #category : #'selection-classes' }
+{ #category : 'selection-classes' }
 ClyProcessBrowserContext >> selectedClassItems [
-	
-	^self selectedMethodItems collect: [:each | 
-		each systemDefinition definingClassItem]
+
+	^ self selectedMethodItems collect: [ :each |
+		  each systemDefinition definingClassItem ]
 ]
 
-{ #category : #'selection-contexts' }
+{ #category : 'selection-contexts' }
 ClyProcessBrowserContext >> selectedContextItems [
-	^tool contextSelection items
+
+	^ tool contextSelection items
 ]
 
-{ #category : #'selection-contexts' }
+{ #category : 'selection-contexts' }
 ClyProcessBrowserContext >> selectedContexts [
-	^self actualSelectionFrom: self selectedContextItems
+
+	^ self actualSelectionFrom: self selectedContextItems
 ]
 
-{ #category : #'selection-methods' }
+{ #category : 'selection-methods' }
 ClyProcessBrowserContext >> selectedMethodItems [
+
 	| contextDefinition |
-	^self selectedContextItems collect: [:contextItem | 
-		contextDefinition := contextItem getProperty: ClyMethodContextDefinitionProperty.
-		contextDefinition definitionMethodItem]
+	^ self selectedContextItems collect: [ :contextItem |
+			  contextDefinition := contextItem getProperty:
+				                       ClyMethodContextDefinitionProperty.
+			  contextDefinition definitionMethodItem ]
 ]
 
-{ #category : #'selection-packages' }
+{ #category : 'selection-packages' }
 ClyProcessBrowserContext >> selectedPackageItems [
-	^#()
+
+	^ #(  )
 ]
 
-{ #category : #'selection-processes' }
+{ #category : 'selection-processes' }
 ClyProcessBrowserContext >> selectedProcessItems [
-	^tool processSelection items
+
+	^ tool processSelection items
 ]
 
-{ #category : #'selection-processes' }
+{ #category : 'selection-processes' }
 ClyProcessBrowserContext >> selectedProcesses [
-	^self actualSelectionFrom: self selectedProcessItems 
+
+	^ self actualSelectionFrom: self selectedProcessItems
 ]

@@ -1,1 +1,1 @@
-Package { #name : #'Calypso-SystemTools-ProcessBrowser' }
+Package { #name : 'Calypso-SystemTools-ProcessBrowser' }

@@ -1,17 +1,21 @@
 Class {
-	#name : #ClyProcessContextOfProcessBrowser,
-	#superclass : #ClyProcessBrowserContext,
-	#category : 'Calypso-SystemTools-ProcessBrowser'
+	#name : 'ClyProcessContextOfProcessBrowser',
+	#superclass : 'ClyProcessBrowserContext',
+	#category : 'Calypso-SystemTools-ProcessBrowser',
+	#package : 'Calypso-SystemTools-ProcessBrowser'
 }
 
-{ #category : #'selection strategy' }
+{ #category : 'selection strategy' }
 ClyProcessContextOfProcessBrowser class >> selectionStrategy [
+
 	<classAnnotation>
-	
-	^ClyContextSelectionStrategy for: ClyProcessBrowser selectionType: Process
+	^ ClyContextSelectionStrategyAnnotation
+		  for: ClyProcessBrowser
+		  selectionType: Process
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessContextOfProcessBrowser >> selectedProcessItems [
-	^selectedItems
+
+	^ selectedItems
 ]

@@ -1,22 +1,27 @@
-Extension { #name : #ClyShowMessageSenderCommand }
+Extension { #name : 'ClyShowMessageSenderCommand' }
 
-{ #category : #'*Calypso-SystemTools-ProcessBrowser' }
+{ #category : '*Calypso-SystemTools-ProcessBrowser' }
 ClyShowMessageSenderCommand class >> processBrowserMenuActivation [
+
 	<classAnnotation>
-	
-	^CmdContextMenuActivation byRootGroupItemFor: ClyStackContextOfProcessBrowser 
+	^ CmdContextMenuActivation byRootGroupItemFor:
+		  ClyStackContextOfProcessBrowser
 ]
 
-{ #category : #'*Calypso-SystemTools-ProcessBrowser' }
+{ #category : '*Calypso-SystemTools-ProcessBrowser' }
 ClyShowMessageSenderCommand class >> processBrowserShortcutActivation [
+
 	<classAnnotation>
-	
-	^CmdShortcutActivation by: $n meta for: ClyStackContextOfProcessBrowser
+	^ CmdShortcutActivation
+		  by: $n meta
+		  for: ClyStackContextOfProcessBrowser
 ]
 
-{ #category : #'*Calypso-SystemTools-ProcessBrowser' }
+{ #category : '*Calypso-SystemTools-ProcessBrowser' }
 ClyShowMessageSenderCommand class >> processBrowserToolbarActivation [
+
 	<classAnnotation>
-	
-	^ClyToolbarActivation byItemOf: ClyButtonToolbarGroup for: ClyStackContextOfProcessBrowser 
+	^ ClyToolbarActivation
+		  byItemOf: ClyButtonToolbarGroup
+		  for: ClyStackContextOfProcessBrowser
 ]

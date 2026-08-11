@@ -1,41 +1,48 @@
 Class {
-	#name : #ClyOpenProcessDebuggerComand,
-	#superclass : #ClyDebugProcessComand,
-	#category : 'Calypso-SystemTools-ProcessBrowser'
+	#name : 'ClyOpenProcessDebuggerComand',
+	#superclass : 'ClyDebugProcessComand',
+	#category : 'Calypso-SystemTools-ProcessBrowser',
+	#package : 'Calypso-SystemTools-ProcessBrowser'
 }
 
-{ #category : #activation }
+{ #category : 'activation' }
 ClyOpenProcessDebuggerComand class >> processBrowserContextMenuActivation [
+
 	<classAnnotation>
-	
-	^CmdContextMenuActivation byRootGroupItemFor: ClyProcessContextOfProcessBrowser
+	^ CmdContextMenuActivation byRootGroupItemFor:
+		  ClyProcessContextOfProcessBrowser
 ]
 
-{ #category : #activation }
+{ #category : 'activation' }
 ClyOpenProcessDebuggerComand class >> processBrowserShortcutActivation [
+
 	<classAnnotation>
-	
-	^CmdShortcutActivation by: $d meta for: ClyProcessContextOfProcessBrowser
+	^ CmdShortcutActivation
+		  by: $d meta
+		  for: ClyProcessContextOfProcessBrowser
 ]
 
-{ #category : #activation }
+{ #category : 'activation' }
 ClyOpenProcessDebuggerComand class >> processBrowserToolbarActivation [
+
 	<classAnnotation>
-	
-	^ClyToolbarActivation byRootGroupItemFor: ClyProcessContextOfProcessBrowser
+	^ ClyToolbarActivation byRootGroupItemFor:
+		  ClyProcessContextOfProcessBrowser
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyOpenProcessDebuggerComand >> defaultMenuIconName [
-	^#repair
+
+	^ #repair
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyOpenProcessDebuggerComand >> defaultMenuItemName [
-	^'Debug'
+
+	^ 'Debug'
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyOpenProcessDebuggerComand >> execute [
 
 	ClyDebugger openOn: process from: environment

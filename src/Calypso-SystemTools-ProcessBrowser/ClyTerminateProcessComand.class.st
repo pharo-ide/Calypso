@@ -1,42 +1,49 @@
 Class {
-	#name : #ClyTerminateProcessComand,
-	#superclass : #ClyProcessComand,
-	#category : 'Calypso-SystemTools-ProcessBrowser'
+	#name : 'ClyTerminateProcessComand',
+	#superclass : 'ClyProcessComand',
+	#category : 'Calypso-SystemTools-ProcessBrowser',
+	#package : 'Calypso-SystemTools-ProcessBrowser'
 }
 
-{ #category : #activation }
+{ #category : 'activation' }
 ClyTerminateProcessComand class >> processBrowserContextMenuActivation [
+
 	<classAnnotation>
-	
-	^CmdContextMenuActivation byRootGroupItemFor: ClyProcessContextOfProcessBrowser
+	^ CmdContextMenuActivation byRootGroupItemFor:
+		  ClyProcessContextOfProcessBrowser
 ]
 
-{ #category : #activation }
+{ #category : 'activation' }
 ClyTerminateProcessComand class >> processBrowserShortcutActivation [
+
 	<classAnnotation>
-	
-	^CmdShortcutActivation by: $t meta for: ClyProcessContextOfProcessBrowser
+	^ CmdShortcutActivation
+		  by: $t meta
+		  for: ClyProcessContextOfProcessBrowser
 ]
 
-{ #category : #activation }
+{ #category : 'activation' }
 ClyTerminateProcessComand class >> processBrowserToolbarActivation [
+
 	<classAnnotation>
-	
-	^ClyToolbarActivation byRootGroupItemFor: ClyProcessContextOfProcessBrowser
+	^ ClyToolbarActivation byRootGroupItemFor:
+		  ClyProcessContextOfProcessBrowser
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyTerminateProcessComand >> defaultMenuIconName [
-	^#remove
+
+	^ #remove
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyTerminateProcessComand >> defaultMenuItemName [
-	^'Terminate'
+
+	^ 'Terminate'
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyTerminateProcessComand >> execute [
-	
+
 	processes do: #terminate
 ]

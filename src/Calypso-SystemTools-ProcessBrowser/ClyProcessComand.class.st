@@ -1,48 +1,55 @@
 Class {
-	#name : #ClyProcessComand,
-	#superclass : #CmdCommand,
+	#name : 'ClyProcessComand',
+	#superclass : 'CmdCommand',
 	#instVars : [
 		'processes'
 	],
-	#category : 'Calypso-SystemTools-ProcessBrowser'
+	#category : 'Calypso-SystemTools-ProcessBrowser',
+	#package : 'Calypso-SystemTools-ProcessBrowser'
 }
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyProcessComand class >> canBeExecutedInContext: aToolContext [
-	^aToolContext isProcessSelected
+
+	^ aToolContext isProcessSelected
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 ClyProcessComand class >> for: processes [
-	^self new 
-		processes: processes
+
+	^ self new processes: processes
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyProcessComand class >> isAbstract [
-	^self = ClyProcessComand 
+
+	^ self = ClyProcessComand
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyProcessComand >> applyResultInContext: aToolContext [
+
 	super applyResultInContext: aToolContext.
-	
+
 	aToolContext updateBrowser
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyProcessComand >> prepareFullExecutionInContext: aToolContext [
+
 	super prepareFullExecutionInContext: aToolContext.
-	
+
 	processes := aToolContext selectedProcesses
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessComand >> processes [
+
 	^ processes
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessComand >> processes: anObject [
+
 	processes := anObject
 ]

@@ -1,8 +1,10 @@
-Extension { #name : #ClySpawnFullBrowserCommand }
+Extension { #name : 'ClySpawnFullBrowserCommand' }
 
-{ #category : #'*Calypso-SystemTools-ProcessBrowser' }
+{ #category : '*Calypso-SystemTools-ProcessBrowser' }
 ClySpawnFullBrowserCommand class >> processBrowserToolbarActivation [
+
 	<classAnnotation>
-	
-	^ClyToolbarActivation byItemOf: ClyButtonToolbarGroup for: ClyStackContextOfProcessBrowser 
+	^ ClyToolbarActivation
+		  byItemOf: ClyButtonToolbarGroup
+		  for: ClyStackContextOfProcessBrowser
 ]

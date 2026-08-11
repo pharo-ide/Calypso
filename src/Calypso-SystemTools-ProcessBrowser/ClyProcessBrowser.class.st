@@ -1,158 +1,183 @@
 Class {
-	#name : #ClyProcessBrowser,
-	#superclass : #ClyBrowserMorph,
+	#name : 'ClyProcessBrowser',
+	#superclass : 'ClyBrowserMorph',
 	#instVars : [
 		'processView',
 		'stackView'
 	],
-	#category : 'Calypso-SystemTools-ProcessBrowser'
+	#category : 'Calypso-SystemTools-ProcessBrowser',
+	#package : 'Calypso-SystemTools-ProcessBrowser'
 }
 
-{ #category : #opening }
+{ #category : 'opening' }
 ClyProcessBrowser class >> open [
+
 	<script>
-	^self openOn: ClyNavigationEnvironment currentImage
+	^ self openOn: ClyNavigationEnvironment currentImage
 ]
 
-{ #category : #opening }
+{ #category : 'opening' }
 ClyProcessBrowser class >> openOn: aNavigationEnvironment [
-	^self openOn: aNavigationEnvironment systemScope: aNavigationEnvironment systemScope.
 
+	^ self
+		  openOn: aNavigationEnvironment
+		  systemScope: aNavigationEnvironment systemScope
 ]
 
-{ #category : #opening }
+{ #category : 'opening' }
 ClyProcessBrowser class >> openOn: aNavigationEnvironment systemScope: aSystemScope [
+
 	| browser |
 	browser := self on: aNavigationEnvironment systemScope: aSystemScope.
 	browser open.
-	^browser
+	^ browser
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessBrowser >> chooseClassForEditorOfMethod: aMethod [
-	^aMethod origin
+
+	^ aMethod origin
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessBrowser >> chooseClassesForNewMethod: aMethod [
+
 	^ self chooseClassForEditorOfMethod: aMethod
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessBrowser >> contextSelection [
-	^stackView selection
+
+	^ stackView selection
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyProcessBrowser >> initialExtent [
+
 	^ RealEstateAgent standardWindowExtent
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyProcessBrowser >> initializeNavigationViews [
+
 	processView := self newNavigationView.
-	(processView addColumn: #priority) 
+	(processView addColumn: #priority)
 		width: 15;
-		displayItemPropertyBy: [:processItem | (self processPriorityOf: processItem) asString].
-	processView moveMainColumnAtTheEnd.	
-	(processView mainColumn)
+		displayItemPropertyBy: [ :processItem |
+			(self processPriorityOf: processItem) asString ].
+	processView moveMainColumnAtTheEnd.
+	processView mainColumn
 		width: 400;
-		displayItemPropertyBy: [:processItem | self printProcessPreview: processItem].
+		displayItemPropertyBy: [ :processItem |
+			self printProcessPreview: processItem ].
 	processView requestNavigationBy: #showStackOfProcesses:.
-	
+
 	stackView := self newNavigationView.
-	stackView allowsDeselection: false.	
-	stackView mainColumn 
+	stackView allowsDeselection: false.
+	stackView mainColumn
 		width: 200;
-		displayItemPropertyBy: [:contextItem | self printReceiverOf: contextItem].
-	(stackView addColumn: #method) 
+		displayItemPropertyBy: [ :contextItem |
+			self printReceiverOf: contextItem ].
+	(stackView addColumn: #method)
 		width: 250;
 		displayItemName.
-	(stackView addColumn: #details) 
+	(stackView addColumn: #details)
 		width: 100;
-		displayItemPropertyBy: [:contextItem | self printContextDetailsOf: contextItem]
+		displayItemPropertyBy: [ :contextItem |
+			self printContextDetailsOf: contextItem ]
 ]
 
-{ #category : #testing }
-ClyProcessBrowser >> isProcessContextSelected: aContext [ 
-	^self contextSelection includesActualObject: aContext
+{ #category : 'testing' }
+ClyProcessBrowser >> isProcessContextSelected: aContext [
+
+	^ self contextSelection includesActualObject: aContext
 ]
 
-{ #category : #navigation }
+{ #category : 'navigation' }
 ClyProcessBrowser >> navigateSpawnedFullBrowser: aFullBrowser [
+
 	| context |
 	context := stackView createSelectionContext.
-	
-	context isMethodSelected ifTrue: [ 
-		aFullBrowser selectMethod: context lastSelectedMethod]
+
+	context isMethodSelected ifTrue: [
+		aFullBrowser selectMethod: context lastSelectedMethod ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 ClyProcessBrowser >> newWindowTitle [
-	^self systemScope isCurrentImage 
-		ifTrue: [ 'ProcessBrowser' ]
-		ifFalse: [ 'ProcessBrowser' , ' in ', self systemScope description ]
+
+	^ self systemScope isCurrentImage
+		  ifTrue: [ 'ProcessBrowser' ]
+		  ifFalse: [
+		  'ProcessBrowser' , ' in ' , self systemScope description ]
 ]
 
-{ #category : #navigation }
+{ #category : 'navigation' }
 ClyProcessBrowser >> prepareInitialState [
-	
+
 	| query |
 	query := ClyAllProcessesQuery from: self systemScope.
 
 	processView showQuery: query
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyProcessBrowser >> printContextDetailsOf: contextItem [
+
 	| definition |
-	definition := contextItem getProperty: ClyMethodContextDefinitionProperty.
-	^definition closureItem 
-		ifNil: [ '' ] 
-		ifNotNil: [ :closureItem | closureItem name ]
+	definition := contextItem getProperty:
+		              ClyMethodContextDefinitionProperty.
+	^ definition closureItem
+		  ifNil: [ '' ]
+		  ifNotNil: [ :closureItem | closureItem name ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyProcessBrowser >> printCurrentContextOf: processItem [
 
 	| definition |
 	definition := processItem getProperty: ClyProcessDefinitionProperty.
-	^definition printProcessContext
+	^ definition printProcessContext
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyProcessBrowser >> printProcessPreview: processItem [
 
-	^processItem name, ': ', (self printCurrentContextOf: processItem)
+	^ processItem name , ': ' , (self printCurrentContextOf: processItem)
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyProcessBrowser >> printReceiverOf: contextItem [
+
 	| definition |
-	definition := contextItem getProperty: ClyMethodContextDefinitionProperty.
-	^definition receiverItem name
+	definition := contextItem getProperty:
+		              ClyMethodContextDefinitionProperty.
+	^ definition receiverItem name
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyProcessBrowser >> processPriorityOf: processItem [
 
 	| definition |
 	definition := processItem getProperty: ClyProcessDefinitionProperty.
-	^definition priority
+	^ definition priority
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessBrowser >> processSelection [
-	^processView selection
+
+	^ processView selection
 ]
 
-{ #category : #navigation }
+{ #category : 'navigation' }
 ClyProcessBrowser >> showStackOfProcesses: processes [
 
 	| stackQuery |
-	stackQuery := ClyActiveContextOfProcessesQuery 
-		from: (ClyProcessScope ofAll: processes actualObjects in: navigationEnvironment)
-		as: ClyProcessStack new.
-	
+	stackQuery := ClyActiveContextOfProcessesQuery
+		              from: (ClyProcessScope
+				               ofAll: processes actualObjects
+				               in: navigationEnvironment)
+		              as: ClyProcessStack new.
+
 	stackView showQuery: stackQuery
 ]

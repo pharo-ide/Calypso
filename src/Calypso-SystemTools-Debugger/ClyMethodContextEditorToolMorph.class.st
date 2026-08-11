@@ -10,9 +10,10 @@ Class {
 
 { #category : 'activation' }
 ClyMethodContextEditorToolMorph class >> browserTabActivation [
+
 	<classAnnotation>
-	
-	^ClyTabActivationStrategy for: Context asCalypsoItemContext
+	^ ClyTabActivationStrategyAnnotation for:
+		  Context asCalypsoItemContext
 ]
 
 { #category : 'testing' }
