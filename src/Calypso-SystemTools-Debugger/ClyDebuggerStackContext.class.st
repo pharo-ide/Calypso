@@ -1,39 +1,40 @@
 Class {
-	#name : #ClyDebuggerStackContext,
-	#superclass : #ClySystemBrowserContext,
-	#category : 'Calypso-SystemTools-Debugger'
+	#name : 'ClyDebuggerStackContext',
+	#superclass : 'ClySystemBrowserContext',
+	#category : 'Calypso-SystemTools-Debugger',
+	#package : 'Calypso-SystemTools-Debugger'
 }
 
-{ #category : #'selection strategy' }
+{ #category : 'selection strategy' }
 ClyDebuggerStackContext class >> selectionStrategy [
 	<classAnnotation>
 	
-	^ClyContextSelectionStrategy for: ClyDebugger selectionType: Context
+	^ClyContextSelectionStrategyAnnotation for: ClyDebugger selectionType: Context
 ]
 
-{ #category : #'selection-contexts' }
+{ #category : 'selection-contexts' }
 ClyDebuggerStackContext >> lastSelectedContext [
 	^self lastSelectedObject
 ]
 
-{ #category : #'selection-classes' }
+{ #category : 'selection-classes' }
 ClyDebuggerStackContext >> selectedClassItems [
 
 	^self selectedMethodItems collect: [:each | 
 		each systemDefinition definingClassItem]
 ]
 
-{ #category : #'selection-contexts' }
+{ #category : 'selection-contexts' }
 ClyDebuggerStackContext >> selectedContextItems [
 	^selectedItems
 ]
 
-{ #category : #'selection-contexts' }
+{ #category : 'selection-contexts' }
 ClyDebuggerStackContext >> selectedContexts [
 	^self actualSelectionFrom: self selectedContextItems
 ]
 
-{ #category : #'selection-methods' }
+{ #category : 'selection-methods' }
 ClyDebuggerStackContext >> selectedMethodItems [
 	| contextDefinition |
 	^selectedItems collect: [:contextItem | 
@@ -41,7 +42,7 @@ ClyDebuggerStackContext >> selectedMethodItems [
 		contextDefinition definitionMethodItem]
 ]
 
-{ #category : #'selection-packages' }
+{ #category : 'selection-packages' }
 ClyDebuggerStackContext >> selectedPackageItems [
 	^#()
 ]

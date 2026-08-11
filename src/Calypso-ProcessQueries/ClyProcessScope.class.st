@@ -1,10 +1,11 @@
 Class {
-	#name : #ClyProcessScope,
-	#superclass : #ClyTypedScope,
-	#category : 'Calypso-ProcessQueries'
+	#name : 'ClyProcessScope',
+	#superclass : 'ClyTypedScope',
+	#category : 'Calypso-ProcessQueries',
+	#package : 'Calypso-ProcessQueries'
 }
 
-{ #category : #queries }
+{ #category : 'queries' }
 ClyProcessScope >> processesDo: aBlock [
 
 	basisObjects do: aBlock

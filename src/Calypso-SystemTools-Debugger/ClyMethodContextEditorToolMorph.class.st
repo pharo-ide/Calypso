@@ -1,42 +1,43 @@
 Class {
-	#name : #ClyMethodContextEditorToolMorph,
-	#superclass : #ClyMethodCodeEditorToolMorph,
+	#name : 'ClyMethodContextEditorToolMorph',
+	#superclass : 'ClyMethodCodeEditorToolMorph',
 	#instVars : [
 		'methodContext'
 	],
-	#category : 'Calypso-SystemTools-Debugger'
+	#category : 'Calypso-SystemTools-Debugger',
+	#package : 'Calypso-SystemTools-Debugger'
 }
 
-{ #category : #activation }
+{ #category : 'activation' }
 ClyMethodContextEditorToolMorph class >> browserTabActivation [
 	<classAnnotation>
 	
 	^ClyTabActivationStrategy for: Context asCalypsoItemContext
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyMethodContextEditorToolMorph class >> shouldBeActivatedInContext: aBrowserContext [
 	^aBrowserContext hasSelectedItems
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyMethodContextEditorToolMorph >> belongsToCurrentBrowserContext [
 	^browser isProcessContextSelected: methodContext
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyMethodContextEditorToolMorph >> belongsToRemovedBrowserContext [
 	super belongsToRemovedBrowserContext ifTrue: [ ^true ].
 	self flag: #todo.
 	^methodContext sender isNil "it should be improved by analyzing editing process contexts"
 ]
 
-{ #category : #building }
+{ #category : 'building' }
 ClyMethodContextEditorToolMorph >> doItReceiver [
 	^methodContext receiver
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyMethodContextEditorToolMorph >> setUpModelFromContext [
 	super setUpModelFromContext.
 

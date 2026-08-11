@@ -1,49 +1,55 @@
 Class {
-	#name : #ClyAllProcessesQuery,
-	#superclass : #ClyTypedQuery,
-	#category : #'Calypso-ProcessQueries'
+	#name : 'ClyAllProcessesQuery',
+	#superclass : 'ClyTypedQuery',
+	#category : 'Calypso-ProcessQueries',
+	#package : 'Calypso-ProcessQueries'
 }
 
-{ #category : #'items type' }
+{ #category : 'items type' }
 ClyAllProcessesQuery class >> resultItemsType [
-	^Process
+
+	^ Process
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyAllProcessesQuery >> buildResult: aQueryResult [
-	
+
 	| processes |
 	processes := OrderedCollection new.
-	scope processesDo: [ :each | 
-		each isTerminated ifFalse: [ processes add: each ]].
-	
+	scope processesDo: [ :each |
+		each isTerminated ifFalse: [ processes add: each ] ].
+
 	aQueryResult fillWith: processes
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyAllProcessesQuery >> checkEmptyResult [
-	scope processesDo: [ :each | ^false].
-	^true
+
+	scope processesDo: [ :each | ^ false ].
+	^ true
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyAllProcessesQuery >> collectMetadataOf: aQueryResult by: anEnvironmentPlugin [
+
 	anEnvironmentPlugin collectMetadataOfProcesses: aQueryResult
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 ClyAllProcessesQuery >> description [
 
-	^'all processes'
+	^ 'all processes'
 ]
 
-{ #category : #'system changes' }
+{ #category : 'system changes' }
 ClyAllProcessesQuery >> isResult: aQueryResult affectedBy: aSystemAnnouncement [
+
 	self flag: #todo.
-	^false
+	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyAllProcessesQuery >> retrievesItem: aProcess [
-	^true
+
+	^ true
 ]

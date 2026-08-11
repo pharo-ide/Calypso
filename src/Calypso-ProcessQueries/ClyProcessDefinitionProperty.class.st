@@ -1,62 +1,72 @@
 Class {
-	#name : #ClyProcessDefinitionProperty,
-	#superclass : #ClyItemDefinitionProperty,
+	#name : 'ClyProcessDefinitionProperty',
+	#superclass : 'ClyItemDefinitionProperty',
 	#instVars : [
 		'priority',
 		'activeContextItem'
 	],
-	#category : 'Calypso-ProcessQueries'
+	#category : 'Calypso-ProcessQueries',
+	#package : 'Calypso-ProcessQueries'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 ClyProcessDefinitionProperty class >> of: aProcess [
+
 	| context |
 	context := aProcess suspendedContext.
-	context ifNil: [ 
-		aProcess == Processor activeProcess 
-			ifTrue: [ context := thisContext sender ] 
-			ifFalse: [ self error: 'should not happen' ] ].
-		
-	^self new
-		activeContext: context;
-		priority: aProcess priority
+	context ifNil: [
+			aProcess == Processor activeProcess
+				ifTrue: [ context := thisContext sender ]
+				ifFalse: [ self error: 'should not happen' ] ].
+
+	^ self new
+		  activeContext: context;
+		  priority: aProcess priority
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessDefinitionProperty >> activeContext [
 
-	^activeContextItem actualObject
+	^ activeContextItem actualObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessDefinitionProperty >> activeContext: aContext [
 
-	activeContextItem := ClyBrowserItem named: aContext selector with: aContext
+	activeContextItem := ClyBrowserItem
+		                     named: aContext selector
+		                     with: aContext
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessDefinitionProperty >> activeContextItem [
+
 	^ activeContextItem
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessDefinitionProperty >> activeContextItem: anObject [
+
 	activeContextItem := anObject
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 ClyProcessDefinitionProperty >> printProcessContext [
+
 	| contextDefinition |
-	contextDefinition := activeContextItem getProperty: ClyMethodContextDefinitionProperty.
-	^contextDefinition printDefinition
+	contextDefinition := activeContextItem getProperty:
+		                     ClyMethodContextDefinitionProperty.
+	^ contextDefinition printDefinition
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessDefinitionProperty >> priority [
+
 	^ priority
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyProcessDefinitionProperty >> priority: anObject [
+
 	priority := anObject
 ]

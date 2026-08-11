@@ -1,1 +1,1 @@
-Package { #name : #'Calypso-SystemTools-Debugger' }
+Package { #name : 'Calypso-SystemTools-Debugger' }

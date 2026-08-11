@@ -1,53 +1,59 @@
 Class {
-	#name : #ClyActiveContextOfProcessesQuery,
-	#superclass : #ClyTypedQuery,
-	#category : #'Calypso-ProcessQueries'
+	#name : 'ClyActiveContextOfProcessesQuery',
+	#superclass : 'ClyTypedQuery',
+	#category : 'Calypso-ProcessQueries',
+	#package : 'Calypso-ProcessQueries'
 }
 
-{ #category : #'items type' }
+{ #category : 'items type' }
 ClyActiveContextOfProcessesQuery class >> resultItemsType [
-	^Context
+
+	^ Context
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyActiveContextOfProcessesQuery >> buildResult: aQueryResult [
-	
+
 	| contexts activeContext |
 	contexts := OrderedCollection new.
-	scope processesDo: [ :each | 
-		activeContext := each suspendedContext ifNil: [
-			each == Processor activeProcess 
-				ifTrue: [thisContext sender]
-				ifFalse: [ self error: 'should not happen' ]].
-		contexts add: activeContext	].
-		
+	scope processesDo: [ :each |
+			activeContext := each suspendedContext ifNil: [
+					                 each == Processor activeProcess
+						                 ifTrue: [ thisContext sender ]
+						                 ifFalse: [ self error: 'should not happen' ] ].
+			contexts add: activeContext ].
+
 	aQueryResult fillWith: contexts
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyActiveContextOfProcessesQuery >> checkEmptyResult [
-	scope processesDo: [ :each | ^false].
-	^true
+
+	scope processesDo: [ :each | ^ false ].
+	^ true
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyActiveContextOfProcessesQuery >> collectMetadataOf: aQueryResult by: anEnvironmentPlugin [
+
 	anEnvironmentPlugin collectMetadataOfContexts: aQueryResult
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 ClyActiveContextOfProcessesQuery >> description [
 
-	^'active contexts'
+	^ 'active contexts'
 ]
 
-{ #category : #'system changes' }
+{ #category : 'system changes' }
 ClyActiveContextOfProcessesQuery >> isResult: aQueryResult affectedBy: aSystemAnnouncement [
+
 	self flag: #todo.
-	^false
+	^ false
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyActiveContextOfProcessesQuery >> retrievesItem: aContext [
-	^true
+
+	^ true
 ]

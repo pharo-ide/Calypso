@@ -1,24 +1,26 @@
 Class {
-	#name : #ClyProcessStack,
-	#superclass : #ClyBrowserQueryResult,
-	#category : 'Calypso-ProcessQueries'
+	#name : 'ClyProcessStack',
+	#superclass : 'ClyBrowserQueryResult',
+	#category : 'Calypso-ProcessQueries',
+	#package : 'Calypso-ProcessQueries'
 }
 
-{ #category : #building }
+{ #category : 'building' }
 ClyProcessStack >> buildFromContext: aContext [
-	
+
 	| sender |
 	sender := aContext.
-	[ sender notNil ] whileTrue: [ 
-		items add: sender asCalypsoBrowserItem.
-		sender := sender sender
-	 ] 
+	[ sender notNil ] whileTrue: [
+			items add: sender asCalypsoBrowserItem.
+			sender := sender sender ]
 ]
 
-{ #category : #building }
+{ #category : 'building' }
 ClyProcessStack >> fillWith: contexts [
-	contexts ifEmpty: [ ^self ].
-	contexts size = 1 ifFalse: [ self error: 'Multiple contexts are not supported' ].
 
-	self buildFromContext: contexts first.
+	contexts ifEmpty: [ ^ self ].
+	contexts size = 1 ifFalse: [
+		self error: 'Multiple contexts are not supported' ].
+
+	self buildFromContext: contexts first
 ]

@@ -1,37 +1,38 @@
 Class {
-	#name : #ClyDebugProcessComand,
-	#superclass : #CmdCommand,
+	#name : 'ClyDebugProcessComand',
+	#superclass : 'CmdCommand',
 	#instVars : [
 		'environment',
 		'process'
 	],
-	#category : 'Calypso-SystemTools-Debugger'
+	#category : 'Calypso-SystemTools-Debugger',
+	#package : 'Calypso-SystemTools-Debugger'
 }
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyDebugProcessComand class >> canBeExecutedInContext: aToolContext [
 	^aToolContext isProcessSelected
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 ClyDebugProcessComand class >> for: aProcessStack [
 	^self new 
 		process: aProcessStack
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyDebugProcessComand class >> isAbstract [
 	^self = ClyDebugProcessComand 
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyDebugProcessComand >> applyResultInContext: aToolContext [
 	super applyResultInContext: aToolContext.
 	
 	aToolContext updateBrowser
 ]
 
-{ #category : #execution }
+{ #category : 'execution' }
 ClyDebugProcessComand >> prepareFullExecutionInContext: aBrowserContext [
 	super prepareFullExecutionInContext: aBrowserContext.
 	
@@ -39,12 +40,12 @@ ClyDebugProcessComand >> prepareFullExecutionInContext: aBrowserContext [
 	process := aBrowserContext lastSelectedProcess
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyDebugProcessComand >> process [
 	^ process
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyDebugProcessComand >> process: anObject [
 	process := anObject
 ]

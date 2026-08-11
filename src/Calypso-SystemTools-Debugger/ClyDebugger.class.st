@@ -1,19 +1,20 @@
 Class {
-	#name : #ClyDebugger,
-	#superclass : #ClyBrowserMorph,
+	#name : 'ClyDebugger',
+	#superclass : 'ClyBrowserMorph',
 	#instVars : [
 		'stackView'
 	],
-	#category : 'Calypso-SystemTools-Debugger'
+	#category : 'Calypso-SystemTools-Debugger',
+	#package : 'Calypso-SystemTools-Debugger'
 }
 
-{ #category : #opening }
+{ #category : 'opening' }
 ClyDebugger class >> openOn: aProcess [
 
 	^self openOn: aProcess from: ClyNavigationEnvironment currentImage
 ]
 
-{ #category : #opening }
+{ #category : 'opening' }
 ClyDebugger class >> openOn: aProcess from: aNavigationEnvironment [
 
 	^(self on: aNavigationEnvironment)
@@ -21,22 +22,22 @@ ClyDebugger class >> openOn: aProcess from: aNavigationEnvironment [
 		open
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyDebugger >> chooseClassForEditorOfMethod: aMethod [
 	^aMethod origin
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyDebugger >> chooseClassesForNewMethod: aMethod [
 	^ self chooseClassForEditorOfMethod: aMethod
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyDebugger >> contextSelection [
 	^stackView selection
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyDebugger >> initializeNavigationViews [
 	stackView := self newNavigationView.
 	stackView allowsDeselection: false.	
@@ -52,18 +53,18 @@ ClyDebugger >> initializeNavigationViews [
 		
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 ClyDebugger >> isProcessContextSelected: aMethodContext [
 
 	^self contextSelection includesActualObject: aMethodContext 	
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 ClyDebugger >> newWindowTitle [
 	^'Debugger'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyDebugger >> printContextDetailsOf: contextItem [
 	| definition |
 	definition := contextItem getProperty: ClyMethodContextDefinitionProperty.
@@ -72,19 +73,19 @@ ClyDebugger >> printContextDetailsOf: contextItem [
 		ifNotNil: [ :closureItem | closureItem name ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 ClyDebugger >> printReceiverOf: contextItem [
 	| definition |
 	definition := contextItem getProperty: ClyMethodContextDefinitionProperty.
 	^definition receiverItem name
 ]
 
-{ #category : #navigation }
+{ #category : 'navigation' }
 ClyDebugger >> selectMethod: aMethod [
 	"debugger do not allow method selection"
 ]
 
-{ #category : #navigation }
+{ #category : 'navigation' }
 ClyDebugger >> showStackOf: aProcess [
 	| stackQuery |
 	stackQuery := ClyActiveContextOfProcessesQuery 

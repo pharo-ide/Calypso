@@ -1,10 +1,12 @@
 Class {
-	#name : #ClySortProcessByPriorityFunction,
-	#superclass : #ClySortFunction,
-	#category : 'Calypso-ProcessQueries'
+	#name : 'ClySortProcessByPriorityFunction',
+	#superclass : 'ClySortFunction',
+	#category : 'Calypso-ProcessQueries',
+	#package : 'Calypso-ProcessQueries'
 }
 
-{ #category : #evaluating }
+{ #category : 'evaluating' }
 ClySortProcessByPriorityFunction >> collate: aProcess1 with: aProcess2 [
-	^aProcess1 priority threeWayCompareTo: aProcess2 priority
+
+	^ aProcess1 priority threeWayCompareTo: aProcess2 priority
 ]

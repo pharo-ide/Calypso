@@ -1,66 +1,78 @@
 Class {
-	#name : #ClyProcessStackTest,
-	#superclass : #ClyBrowserQueryResultTestCase,
+	#name : 'ClyProcessStackTest',
+	#superclass : 'ClyBrowserQueryResultTest',
 	#instVars : [
 		'process',
-		'contexts'
+		'contexts',
+		'actualObjects'
 	],
-	#category : #'Calypso-ProcessQueries-Tests-Results'
+	#category : 'Calypso-ProcessQueries-Tests-Results',
+	#package : 'Calypso-ProcessQueries-Tests',
+	#tag : 'Results'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 ClyProcessStackTest >> bottomMethodInStack [
-	^#bottomMethod
+
+	^ #bottomMethod
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 ClyProcessStackTest >> buildStackFrom: processStackSelectors [
-	
+
 	self createProcessWith: processStackSelectors.
-	
-	queryResult fillWith: {process suspendedContext}.
+
+	queryResult fillWith: { process suspendedContext }.
 	actualObjects := queryResult items collect: #actualObject
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 ClyProcessStackTest >> createProcessWith: selectors [
 
 	| eachContext |
 	contexts := OrderedCollection new.
-	selectors do: [ :each | 
-		eachContext := self newContextFor: each.
-		contexts ifNotEmpty: [ contexts last privSender: eachContext ].
-		contexts add: eachContext].
+	selectors do: [ :each |
+			eachContext := self newContextFor: each.
+			contexts ifNotEmpty: [ contexts last privSender: eachContext ].
+			contexts add: eachContext ].
 
 	process := Process new.
 	process suspendedContext: contexts first
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 ClyProcessStackTest >> createQueryResult [
-	^ClyProcessStack new
+
+	^ ClyProcessStack new
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 ClyProcessStackTest >> method1InStack [
-	^#method1
+
+	^ #method1
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 ClyProcessStackTest >> newContextFor: aSelector [
 
-	^Context sender: nil receiver: self method: self class >> aSelector arguments: #()
+	^ Context
+		  sender: nil
+		  receiver: self
+		  method: self class >> aSelector
+		  arguments: #(  )
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 ClyProcessStackTest >> testIncludesAllContextsWhenTheyFitInCache [
-	
-	self buildStackFrom: #(topMethodInStack method1InStack bottomMethodInStack).
-		
+
+	self buildStackFrom:
+		#( topMethodInStack method1InStack bottomMethodInStack ).
+
 	self assert: actualObjects asArray equals: contexts asArray
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 ClyProcessStackTest >> topMethodInStack [
-	^#topMethod
+
+	^ #topMethod
 ]

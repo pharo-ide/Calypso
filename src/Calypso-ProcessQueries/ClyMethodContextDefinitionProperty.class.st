@@ -1,60 +1,72 @@
 Class {
-	#name : #ClyMethodContextDefinitionProperty,
-	#superclass : #ClyItemDefinitionProperty,
+	#name : 'ClyMethodContextDefinitionProperty',
+	#superclass : 'ClyItemDefinitionProperty',
 	#instVars : [
 		'receiverItem',
 		'closureItem',
 		'definitionMethodItem'
 	],
-	#category : 'Calypso-ProcessQueries'
+	#category : 'Calypso-ProcessQueries',
+	#package : 'Calypso-ProcessQueries'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 ClyMethodContextDefinitionProperty class >> of: aContext [
 
-	^self new
-		definitionMethodItem: (ClyBrowserItem named: aContext selector with: aContext method);
-		receiverItem: (ClyBrowserItem named: aContext receiver class name with: aContext receiver);
-		closureItem: (aContext closure ifNotNil: [:c | ClyBrowserItem named: c printString with: c]) 
+	^ self new
+		  definitionMethodItem:
+			  (ClyBrowserItem named: aContext selector with: aContext method);
+		  receiverItem: (ClyBrowserItem
+				   named: aContext receiver class name
+				   with: aContext receiver);
+		  closureItem: (aContext closure ifNotNil: [ :c |
+					   ClyBrowserItem named: c printString with: c ])
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyMethodContextDefinitionProperty >> closureItem [
+
 	^ closureItem
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyMethodContextDefinitionProperty >> closureItem: anObject [
+
 	closureItem := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyMethodContextDefinitionProperty >> definitionMethod [
-	^self definitionMethodItem actualObject
+
+	^ self definitionMethodItem actualObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyMethodContextDefinitionProperty >> definitionMethodItem [
-	^definitionMethodItem
+
+	^ definitionMethodItem
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyMethodContextDefinitionProperty >> definitionMethodItem: anEnvironmentItem [
+
 	definitionMethodItem := anEnvironmentItem
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 ClyMethodContextDefinitionProperty >> printDefinition [
 
-	^receiverItem name, '>>', definitionMethodItem name
+	^ receiverItem name , '>>' , definitionMethodItem name
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyMethodContextDefinitionProperty >> receiverItem [
+
 	^ receiverItem
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 ClyMethodContextDefinitionProperty >> receiverItem: anObject [
+
 	receiverItem := anObject
 ]

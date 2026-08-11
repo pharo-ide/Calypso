@@ -1,47 +1,51 @@
 Class {
-	#name : #ClyAllProcessesQueryTest,
-	#superclass : #ClyTypedQueryTestCase,
-	#category : #'Calypso-ProcessQueries-Tests-Results'
+	#name : 'ClyAllProcessesQueryTest',
+	#superclass : 'ClyTypedQueryTest',
+	#category : 'Calypso-ProcessQueries-Tests-Results',
+	#package : 'Calypso-ProcessQueries-Tests',
+	#tag : 'Results'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 ClyAllProcessesQueryTest >> createQuery [
-	^ClyAllProcessesQuery from: environment systemScope
+
+	^ ClyAllProcessesQuery from: environment systemScope
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 ClyAllProcessesQueryTest >> setUpEnvironment [
+
 	super setUpEnvironment.
-	
+
 	environment system: ClySystemEnvironment currentImage
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 ClyAllProcessesQueryTest >> testIncludesActiveProcess [
-		
+
 	self executeQuery.
-		
+
 	self assert: (resultItems includes: Processor activeProcess)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 ClyAllProcessesQueryTest >> testIncludesNewProcess [
-		
+
 	| process1 |
-	process1 := [  ] newProcess.
+	process1 := [ ] newProcess.
 	self executeQuery.
-		
+
 	self assert: (resultItems includes: process1)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 ClyAllProcessesQueryTest >> testNotIncludesTerminatedProcesses [
-	
+
 	| process |
-	process := [  ] forkAt: Processor activePriority + 1.
+	process := [ ] forkAt: Processor activePriority + 1.
 	self assert: process isTerminated.
-	
+
 	self executeQuery.
-		
+
 	self deny: (resultItems includes: process)
 ]

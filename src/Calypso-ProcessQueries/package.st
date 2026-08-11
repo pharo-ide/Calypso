@@ -1,1 +1,1 @@
-Package { #name : #'Calypso-ProcessQueries' }
+Package { #name : 'Calypso-ProcessQueries' }
