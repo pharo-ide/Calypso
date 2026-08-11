@@ -96,6 +96,11 @@ ClyTabManager >> addTool: aBrowserTool [
 	tab := aBrowserTool createTab.
 	tab when: #tabDeleted send: #tabDeleted: to: self.
 	tab when: #tabSelected send: #tabSelected: to: self.
+	tab label on: #doubleClick send: #toggleFullWindowTabs to: browser.
+	"Following code is required to fix the problem 
+	when doubleClick handler of tab label disables event processing by its parent, TabMorph"
+	tab label on: #mouseDown send: #mouseDown: to: tab.
+	tab label on: #mouseUp send: #mouseUp: to: tab.
 	tabMorph addTab: tab
 ]
 

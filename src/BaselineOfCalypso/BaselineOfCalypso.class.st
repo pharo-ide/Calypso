@@ -16,9 +16,9 @@ BaselineOfCalypso >> baseline: spec [
 			project: 'ClassAnnotationTests' copyFrom: 'ClassAnnotation' with: [
 				spec loads: 'Tests'];
 			baseline: 'Commander' with: [
-				spec repository: 'github://pharo-ide/Commander:v0.8.0/src' ];
+				spec repository: 'github://pharo-ide/Commander:v0.8.1/src' ];
 			baseline: 'SystemCommands' with: [
-				spec repository: 'github://pharo-ide/SystemCommands:v0.12.1/src' ].			
+				spec repository: 'github://pharo-ide/SystemCommands:v0.12.2/src' ].			
 
 		spec 
 			package: #'Calypso-NavigationModel';
