@@ -59,6 +59,16 @@ ClyDebugger >> isProcessContextSelected: aMethodContext [
 	^self contextSelection includesActualObject: aMethodContext 	
 ]
 
+{ #category : 'navigation' }
+ClyDebugger >> navigateSpawnedFullBrowser: aFullBrowser [
+
+	| context |
+	context := stackView createSelectionContext.
+
+	context isMethodSelected ifTrue: [
+		aFullBrowser selectMethod: context lastSelectedMethod ]
+]
+
 { #category : 'updating' }
 ClyDebugger >> newWindowTitle [
 	^'Debugger'
